@@ -1,5 +1,7 @@
 // 定数
 const CHANGE_EVENT = 'change'
+const MOUSEWHEEL_EVENT = 'mousewheel'
+const TOUCHMOVE_EVENT = 'touchmove'
 const TEXT_TRIGGER_ID = 'sp_nav'
 
 /**
@@ -28,11 +30,11 @@ class MobileNavigation {
     // checkboxをトリガーにスクロールを制御
     this.triggerElement.addEventListener(CHANGE_EVENT, () => {
       if (this.triggerElement.checked) {
-        document.addEventListener('mousewheel', scrollHandler, {passive: false})
-        document.addEventListener('touchmove', scrollHandler, {passive: false})
+        document.addEventListener(MOUSEWHEEL_EVENT, scrollHandler, {passive: false})
+        document.addEventListener(TOUCHMOVE_EVENT, scrollHandler, {passive: false})
       } else {
-        document.removeEventListener('mousewheel', scrollHandler, {passive: false})
-        document.removeEventListener('touchmove', scrollHandler, {passive: false})
+        document.removeEventListener(MOUSEWHEEL_EVENT, scrollHandler, {passive: false})
+        document.removeEventListener(TOUCHMOVE_EVENT, scrollHandler, {passive: false})
       }
     })
   }
