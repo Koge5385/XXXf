@@ -1,0 +1,27 @@
+// media query
+$breakpoints: (
+  "sp": "screen and (max-width: 768px)",
+  "pc": "screen and (min-width: 769px)"
+) !default;
+
+@mixin media($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// font size
+@mixin fontsize($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+  line-height: 1.6;
+}
+
+// width 980px
+@mixin _baseContentsWidth {
+  width: 980px;
+  margin: 0 auto;
+  @include media(sp) {
+    width: 100%;
+  }
+}

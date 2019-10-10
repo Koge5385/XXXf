@@ -1,0 +1,44 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'pagelist' -%}
+{%- set pageName = 'top' -%}
+{%- set pageLevel = '1' -%}
+{%- set pageTitle = '画面一覧' -%}
+{%- set en_pageTitle = 'PAGE LIST' -%}
+{%- set pageDescription = '' -%}
+{%- set breadcrumbs = [{item: '画面一覧'}]-%}
+
+{% block content %}
+
+<style>
+.pageList {
+  width: 500px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+.pageList a {
+  display: inline;
+}
+.lv1 {
+  margin-top: 1em;
+}
+.lv2 {
+  margin-top: 0.4em;
+  margin-left: 2em;
+  list-style-type: circle;
+}
+</style>
+
+<div class="container">
+  <section class="pageList">
+    <ul>
+      <li class="lv1"><a href="./index.html">トップページ</a></li>
+
+      <li class="lv1"><a href="./job/index.html">求人一覧ページ</a></li>
+        <li class="lv2"><a href="./job/detail.html">求人詳細ページ</a></li>
+
+      <li class="lv1"><a href="./mypage/index.html">マイページ</a></li>
+    </ul>
+  </section>
+</div>
+
+{% endblock %}

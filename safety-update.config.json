@@ -1,0 +1,23 @@
+{
+  "prepare": [
+    "yarn build",
+    "rm -rf tmp/",
+    "cp -fR dist/ tmp/",
+    "mkdir -p log/",
+    "touch log/failed_package.txt",
+    ": > log/failed_package.txt"
+  ],
+  "testCommand": [
+    "yarn fix",
+    "yarn build",
+    "yarn lint",
+    "diff -qr dist/ tmp/"
+  ],
+  "onlySuccess": [
+    "git add package.json yarn.lock",
+    "git commit -m 'update(ci): %PACKAGE_NAME% %CURRENT_VERSION% to %GOTO_VERSION%'"
+  ],
+  "onlyFailed": [
+    "echo '%PACKAGE_NAME%_%CURRENT_VERSION%_to_%GOTO_VERSION%' >> log/failed_package.txt"
+  ]
+}

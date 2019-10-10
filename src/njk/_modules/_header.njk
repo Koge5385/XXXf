@@ -1,0 +1,75 @@
+<header class="globalHeader">
+  <div class="globalHeader__inner">
+    <div class="globalHeader__logo">
+      <a href="{{ basePath }}">
+        <img src="{{ basePath }}img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT">
+      </a>
+    </div>
+    <nav class="globalNav pc-view">
+      <ul class="globalNav__list">
+        <li class="globalNav__item">
+          <a href="{{ basePath }}job/">
+            <span class="globalNav__icon globalNav__icon--list">{{ macro.svg_code_list() }}</span>
+            <p class="globalNav__label">求人一覧</p>
+          </a>
+        </li>
+        <li class="globalNav__item">
+          <a href="#">
+            <span class="globalNav__icon globalNav__icon--login">{{ macro.svg_code_login() }}</span>
+            <p class="globalNav__label">ログイン</p>
+          </a>
+        </li>
+        <li class="globalNav__item globalNav__item--regist">
+          <a href="#">
+            <span class="globalNav__icon globalNav__icon--regist">{{ macro.svg_code_human() }}</span>
+            <p class="globalNav__label globalNav__label--regist">会員登録</p>
+          </a>
+        </li>
+      </ul>
+      <!--
+      <ul class="globalNav__list">
+        <li class="globalNav__item">
+          <a href="{{ basePath }}job/">
+            <span class="globalNav__icon globalNav__icon--list globalNav__icon--loggedin">{{ macro.svg_code_list() }}</span>
+            <p class="globalNav__label">求人一覧</p>
+          </a>
+        </li>
+        <li class="globalNav__item">
+          <a href="#">
+            <span class="globalNav__icon globalNav__icon--regist globalNav__icon--loggedin">{{ macro.svg_code_human() }}</span>
+            <p class="globalNav__label">マイページ</p>
+          </a>
+        </li>
+      </ul>
+      -->
+    </nav>
+    <nav class="globalMobileNav sp-view">
+      <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger">
+      <label for="sp_nav" class="globalMobileNav__openLabel"><span class="globalMobileNav__menuIcon">{{ macro.svg_code_menu() }}</span>メニュー</label>
+      <label for="sp_nav" class="globalMobileNav__closeLabel"><span class="globalMobileNav__closeIcon">{{ macro.svg_code_close() }}</span>閉じる</label>
+      <div class="globalMobileNavBlock">
+        <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
+        <div class="globalMobileNavContents">
+          <ul class="globalMobileNavTileList">
+            <li class="globalMobileNavTileList__item"><a href="{{ basePath }}job/" class="globalMobileNavTileList__link"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧</a></li>
+            <li class="globalMobileNavTileList__item"><a href="#" class="globalMobileNavTileList__link"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--login">{{ macro.svg_code_login_sp() }}</span>ログイン</a></li>
+            <li class="globalMobileNavTileList__item"><a href="#" class="globalMobileNavTileList__link"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--regist">{{ macro.svg_code_human_sp() }}</span>会員登録</a></li>
+          </ul>
+          <!--
+          <ul class="globalMobileNavTileList">
+            <li class="globalMobileNavTileList__item"><a href="{{ basePath }}job/" class="globalMobileNavTileList__link globalMobileNavTileList__link--loggedin"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧</a></li>
+            <li class="globalMobileNavTileList__item"><a href="#" class="globalMobileNavTileList__link globalMobileNavTileList__link--loggedin"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--regist">{{ macro.svg_code_human_sp() }}</span>マイページ</a></li>
+          </ul>
+          -->
+          <ul class="globalMobileNavLinkList">
+            <li class="globalMobileNavLinkList__item globalMobileNavLinkList__item--bold m-frontLink"><a href="#">初めての方へ</a></li>
+            <li class="globalMobileNavLinkList__item globalMobileNavLinkList__item--bold m-frontLink"><a href="#">医療機関採用担当者の方へ</a></li>
+            <li class="globalMobileNavLinkList__item"><a href="#">会社概要</a></li>
+            <li class="globalMobileNavLinkList__item"><a href="#">個人情報保護方針</a></li>
+            <li class="globalMobileNavLinkList__item"><a href="#">利用規約</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

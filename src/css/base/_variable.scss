@@ -1,0 +1,21 @@
+:root {
+  /* color */
+  --color_fff: #fff;
+  --color_aaa: #aaa;
+  --color_333: #333;
+  --color_555: #555;
+  --color_20aee5: #20aee5;
+  --color_fc6356: #fc6356;
+  --color_0892c7: #0892c7;
+  --color_1b457e: #1b457e;
+
+  /* text */
+  --fontFamily: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", -apple-system,
+    BlinkMacSystemFont, Roboto, "游ゴシック体", YuGothic, "Yu Gothic Medium",
+    sans-serif;
+  --font-feature-settings: "pkna" 1;
+  --fontSize: 16px;
+  --lineHeight: 1.6;
+  --fontWeight: 400;
+  --color: var(--color_333);
+}
