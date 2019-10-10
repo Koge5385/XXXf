@@ -61,7 +61,7 @@
     height: 50px;
   }
 }
-.searchButtonBlockAreaBlock {
+.searchButtonBlockArea {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -70,10 +70,10 @@
     margin-bottom: 25px;
   }
 }
-.searchButtonBlockAreaBlock__toggleTrigger {
+.searchButtonBlockArea__toggleTrigger {
   display: none;
 }
-.searchButtonBlockAreaBlock__heading {
+.searchButtonBlockArea__heading {
   color: #5d687c;
   line-height: 1.6;
   font-weight: bold;
@@ -119,12 +119,12 @@
     padding: 0 10px;
   }
 }
-.searchButtonBlockAreaBlock__toggleTrigger:checked
+.searchButtonBlockArea__toggleTrigger:checked
   ~ .searchButtonBlockAreaList {
   display: flex;
 }
-.searchButtonBlockAreaBlock__toggleTrigger:checked
-  ~ .searchButtonBlockAreaBlock__heading {
+.searchButtonBlockArea__toggleTrigger:checked
+  ~ .searchButtonBlockArea__heading {
   @include media(sp) {
     &::after {
       height: 1px;

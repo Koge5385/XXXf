@@ -988,19 +988,19 @@ a {
       width: 172px;
       height: 50px; } }
 
-.searchButtonBlockAreaBlock {
+.searchButtonBlockArea {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px; }
   @media screen and (max-width: 768px) {
-    .searchButtonBlockAreaBlock {
+    .searchButtonBlockArea {
       margin-bottom: 25px; } }
 
-.searchButtonBlockAreaBlock__toggleTrigger {
+.searchButtonBlockArea__toggleTrigger {
   display: none; }
 
-.searchButtonBlockAreaBlock__heading {
+.searchButtonBlockArea__heading {
   color: #5d687c;
   line-height: 1.6;
   font-weight: bold;
@@ -1008,7 +1008,7 @@ a {
   align-items: center;
   width: 110px; }
   @media screen and (max-width: 768px) {
-    .searchButtonBlockAreaBlock__heading {
+    .searchButtonBlockArea__heading {
       position: relative;
       display: block;
       width: 100%;
@@ -1019,7 +1019,7 @@ a {
       border-top: 1px solid #d3d9e0;
       background-color: #f7f8f9;
       cursor: pointer; }
-      .searchButtonBlockAreaBlock__heading::before, .searchButtonBlockAreaBlock__heading::after {
+      .searchButtonBlockArea__heading::before, .searchButtonBlockArea__heading::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -1028,7 +1028,7 @@ a {
         height: 2px;
         background-color: #1b457e;
         transform: translateY(-50%); }
-      .searchButtonBlockAreaBlock__heading::after {
+      .searchButtonBlockArea__heading::after {
         transform: translateY(-50%) rotate(90deg);
         transition: transform 0.4s; } }
 
@@ -1043,11 +1043,11 @@ a {
       justify-content: space-between;
       padding: 0 10px; } }
 
-.searchButtonBlockAreaBlock__toggleTrigger:checked ~ .searchButtonBlockAreaList {
+.searchButtonBlockArea__toggleTrigger:checked ~ .searchButtonBlockAreaList {
   display: flex; }
 
 @media screen and (max-width: 768px) {
-  .searchButtonBlockAreaBlock__toggleTrigger:checked ~ .searchButtonBlockAreaBlock__heading::after {
+  .searchButtonBlockArea__toggleTrigger:checked ~ .searchButtonBlockArea__heading::after {
     height: 1px;
     transform: rotate(0deg);
     transition: transform 0.4s; } }
