@@ -1,0 +1,28 @@
+{%- import '_modules/_svg.njk' as macro -%}
+{%- set basePath = '/' -%}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    {% include '_modules/_meta.njk' %}
+
+    <link rel="stylesheet" type="text/css" href="{{ basePath }}css/pages/{{ pageName }}.css">
+  </head>
+  <body>
+    <div class="contentsWrap">
+      {% include '_modules/_header.njk' %}
+
+      {%- if pageName !== 'job_detail' and pageName !== 'hoge' %}
+      {% include '_modules/_keyVisual.njk' %}
+      {% endif -%}
+
+      {% block content %}{% endblock %}
+
+      {% include '_modules/_breadcrumb.njk' %}
+
+      {% include '_modules/_footer.njk' %}
+    </div>
+
+    <script src="{{ basePath }}js/pages/{{ pageName }}.js"></script>
+  </body>
+</html>

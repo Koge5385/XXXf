@@ -1,0 +1,84 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'index' -%}
+{%- set pageName = 'job_list' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '求人一覧' -%}
+{%- set en_pageTitle = 'JOB LIST' -%}
+{%- set pageDescription = '求人一覧ディスクリプション' -%}
+{%- set breadcrumbs = [{item: '求人一覧'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <div class="container__hasSide">
+    <main class="container__main">
+      <section class="jobListWrap">
+        <ul class="jobList">
+          {% for i in [1,2,3,4,5,6,7,8,9,10] -%}
+          <li class="jobListItem">
+            <a href="{{ basePath }}job/detail.html" class="jobListItem__link">
+              <div class="jobListItemHeader">
+                <div class="jobListItemHeaderCategory">
+                  <span class="jobListItemHeaderCategory__icon">{{ macro.svg_code_hospital() }}</span>
+                  <p class="jobListItemHeaderCategory__name">一般</p>
+                </div>
+                <div class="jobListItemHeaderStatus">
+                  <span class="jobListItemHeaderStatus__new m-fontFamilyMontserrat">NEW</span>
+                  <p class="jobListItemHeaderStatus__date">2019.00.00 公開</p>
+                </div>
+              </div>
+              <div class="jobListContent">
+                <h2 class="jobListContent__title">【新宿区】病院事務長/高年収可能/病院経営に携われる</h2>
+                <p class="jobListContent__buildingName">施設名：非公開</p>
+                <div class="jobListContentPickup">
+                  <ul class="jobListContentPickup__list">
+                    <li class="jobListContentPickup__item">
+                      <div class="jobListContentPickup__itemLabel">
+                        <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_bag() }}</span>職　種
+                      </div>
+                      <p class="jobListContentPickup__itemContent">総務課管理職候補</p>
+                    </li>
+                    <li class="jobListContentPickup__item">
+                      <div class="jobListContentPickup__itemLabel">
+                        <span class="jobListContentPickup__itemLabelIcon jobListContentPickup__itemLabelIcon--place">{{ macro.svg_code_place() }}</span>勤務地
+                      </div>
+                      <p class="jobListContentPickup__itemContent">東京都千代田区</p>
+                    </li>
+                    <li class="jobListContentPickup__item">
+                      <div class="jobListContentPickup__itemLabel">
+                        <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_money() }}</span>年　収
+                      </div>
+                      <p class="jobListContentPickup__itemContent jobListContentPickup__itemContent--salary">1,000～2,000<span>万円</span></p>
+                    </li>
+                  </ul>
+                </div>
+
+                <table class="m-flextable jobListContentTable">
+                  <tbody>
+                    <tr>
+                      <th class="jobListContentTable__heading">仕事内容</th>
+                      <td>人事・採用、労務などダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミダミーダミーダミーダミーダミー…</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="m-frontLink jobListContentLink">この求人の詳細を見る</p>
+              </div>
+            </a>
+          </li>
+          {%- endfor %}
+        </ul>
+      </section>
+    </main>
+    <aside class="container__side">
+      <div class="serchSideBox">
+        <p>サイドバーが付いてきます。</p>
+      </div>
+    </aside>
+  </div>
+  <div class="sp-view mobileSerchBox">
+  </div>
+</div>
+
+{% include '_modules/_searchButtonBlock.njk' %}
+
+{% endblock %}
