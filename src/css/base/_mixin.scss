@@ -10,6 +10,13 @@ $breakpoints: (
   }
 }
 
+// media query 横持ちの場合
+@mixin landscape($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} and (orientation: landscape) {
+    @content;
+  }
+}
+
 // font size
 @mixin fontsize($size, $base: 16) {
   font-size: $size + px;
