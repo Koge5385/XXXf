@@ -1,0 +1,119 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'detail' -%}
+{%- set pageName = 'job_detail' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '求人詳細' -%}
+{%- set en_pageTitle = 'JOB DETAIL' -%}
+{%- set pageDescription = '求人詳細ディスクリプション' -%}
+{%- set breadcrumbs = [{item: '求人一覧', href: 'job/'}, {item: '【関東・関西・東海エリアに配属】支援先病院のマネージャー（事務長クラス）/完全週休2日制/事務長職として経営支援を行います'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <section class="jobDetailWrap">
+    <div class="jobDetailBox">
+      <div class="jobDetailHeader">
+        <div class="jobDetailHeaderCategory">
+          <span class="jobDetailHeaderCategory__icon">{{ macro.svg_code_hospital() }}</span>
+          <p class="jobDetailHeaderCategory__name">一般</p>
+        </div>
+        <div class="jobDetailHeaderStatus">
+          <span class="jobDetailHeaderStatus__new m-fontFamilyMontserrat">NEW</span>
+          <p class="jobDetailHeaderStatus__date">2019.00.00 公開</p>
+        </div>
+      </div>
+      <div class="jobDetailContent">
+        <h1 class="jobDetailContent__title">【関東・関西・東海エリアに配属】支援先病院のマネージャー（事務長クラス）/完全週休2日制/事務長職として経営支援を行います</h1>
+        <p class="jobDetailContent__buildingName">施設名：非公開</p>
+        <div class="jobDetailContentPickup">
+          <ul class="jobDetailContentPickup__list">
+            <li class="jobDetailContentPickup__item">
+              <div class="jobDetailContentPickup__itemLabel">
+                <span class="jobDetailContentPickup__itemLabelIcon">{{ macro.svg_code_bag() }}</span>職　種
+              </div>
+              <p class="jobDetailContentPickup__itemContent">総務課管理職候補</p>
+            </li>
+            <li class="jobDetailContentPickup__item">
+              <div class="jobDetailContentPickup__itemLabel">
+                <span class="jobDetailContentPickup__itemLabelIcon jobDetailContentPickup__itemLabelIcon--place">{{ macro.svg_code_place() }}</span>勤務地
+              </div>
+              <p class="jobDetailContentPickup__itemContent">東京都千代田区</p>
+            </li>
+            <li class="jobDetailContentPickup__item">
+              <div class="jobDetailContentPickup__itemLabel">
+                <span class="jobDetailContentPickup__itemLabelIcon">{{ macro.svg_code_money() }}</span>年　収
+              </div>
+              <p class="jobDetailContentPickup__itemContent jobDetailContentPickup__itemContent--salary">1,000～2,000<span>万円</span></p>
+            </li>
+          </ul>
+        </div>
+
+        <table class="m-flextable jobDetailContentTable">
+          <tbody>
+            <tr>
+              <th class="jobDetailContentTable__heading">仕事内容</th>
+              <td>人事・採用、労務などダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">雇用形態</th>
+              <td>正社員</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">勤務時間</th>
+              <td>8:30～17:30</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">休日</th>
+              <td>日曜日・祝日・シフト制 ※年間休日120日</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">休暇</th>
+              <td>・有給休暇：法定通り付与 ・特別休暇 ・産前産後休暇</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">固定残業</th>
+              <td>無</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">試用期間</th>
+              <td>有 (期間：  3か月)<br>
+              試用期間中の給与： 同条件<br>
+              試用期間中の職務内容： 同条件</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">福利厚生</th>
+              <td>交通費、退職金制度、財形貯蓄制度、育児休業<br>
+              各種保険完備<br>
+              退職金制度（勤続3年以上）<br>
+              家族（扶養）手当（配偶者5,000円、子3,000円/人）</td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">その他備考</th>
+              <td>平均残業時間：30時間程度/月(各施設により変動あり)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="jobDetailContentButtonWrap">
+          <a href="#" class="m-button m-button--blue jobDetailContent__actionButton"><span>この求人に</span><br class="sp-view">問い合わせる</a>
+          <a href="#" class="m-button m-button--orange jobDetailContent__actionButton"><span>この求人に</span><br class="sp-view">応募する</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="jobDetailBackLink">
+    <a href="#" class="m-backLink m-button m-button--white jobDetailBackLink__item">求人一覧に戻る</a>
+  </div>
+</div>
+
+{% include '_modules/_searchButtonBlock.njk' %}
+
+{% endblock %}

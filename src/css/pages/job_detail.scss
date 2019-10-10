@@ -1,0 +1,230 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 30px 0 90px;
+  background-color: #f7f8f9;
+  @include media(sp) {
+    min-width: auto;
+    padding: 26.8px 10px 59.2px;
+  }
+}
+.jobDetailWrap {
+  @include _baseContentsWidth;
+  margin-bottom: 30px;
+}
+.jobDetailBox {
+  width: 100%;
+  background-color: #fff;
+  padding: 2px 2px 60px;
+  box-shadow: 0 0 7px 0 #d3d9e0;
+  border-radius: 6px;
+  @include media(sp) {
+    padding-bottom: 40px;
+  }
+}
+.jobDetailHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 36px;
+}
+.jobDetailHeaderCategory {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 121px;
+  background-color: #0091d3;
+  border-radius: 6px 0 0 0 / 6px 0 0 0;
+}
+.jobDetailHeaderCategory__icon {
+  margin: 0 8px 0 10px;
+  svg {
+    width: auto;
+    height: 18px;
+  }
+}
+.jobDetailHeaderCategory__name {
+  @include fontsize(14, 16);
+  color: #fff;
+}
+.jobDetailHeaderStatus {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: calc(100% - 121px);
+  background-color: #1b457e;
+  border-radius: 0 6px 0 0 / 0 6px 0 0;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 18px solid #0091d3;
+    border-left: 18px solid #0091d3;
+    border-right: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+  }
+}
+.jobDetailHeaderStatus__new {
+  @include fontsize(10, 16);
+  color: #1b457e;
+  display: block;
+  width: 43px;
+  height: 17px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.jobDetailHeaderStatus__date {
+  @include fontsize(12, 16);
+  color: #fff;
+  margin-right: 10px;
+}
+.jobDetailContent {
+  width: 92.21311475%;
+  margin: 33px auto 0;
+  @include media(sp) {
+    margin: 20px auto 0;
+  }
+}
+.jobDetailContent__title {
+  @include fontsize(24, 16);
+  color: #1b457e;
+  margin-bottom: 9px;
+}
+.jobDetailContent__buildingName {
+  @include fontsize(14, 16);
+  color: #444;
+  margin-bottom: 15px;
+}
+.jobDetailContentPickup {
+  padding: 20px 0 17px;
+  border-top: 1px solid #b3c1d3;
+  @include media(sp) {
+    padding: 12px 0 0px;
+  }
+}
+.jobDetailContentPickup__list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include media(sp) {
+    display: block;
+  }
+}
+.jobDetailContentPickup__item {
+  display: flex;
+  align-items: center;
+  @include media(sp) {
+    margin-bottom: 10px;
+  }
+  &:nth-child(2) {
+    margin-right: 15px;
+    @include media(sp) {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+}
+.jobDetailContentPickup__itemLabel {
+  @include fontsize(14, 16);
+  display: flex;
+  align-items: center;
+  color: #5d687c;
+  margin-right: 10px;
+  @include media(sp) {
+    margin-right: 12px;
+  }
+}
+.jobDetailContentPickup__itemLabelIcon {
+  margin-right: 10px;
+  @include media(sp) {
+    width: 24px;
+    text-align: center;
+    margin-right: 12px;
+  }
+  svg {
+    fill: #8da2bf;
+    width: auto;
+    height: 24px;
+    vertical-align: middle;
+  }
+  &--place {
+    svg {
+      width: auto;
+      height: 30px;
+    }
+  }
+}
+.jobDetailContentPickup__itemContent {
+  @include fontsize(14, 16);
+  &--salary {
+    @include fontsize(22, 16);
+    font-weight: bold;
+    color: #ec652b;
+    span {
+      @include fontsize(16, 16);
+      @include media(sp) {
+        @include fontsize(22, 16);
+      }
+    }
+  }
+}
+.jobDetailContentTable {
+  margin-bottom: 40px;
+  @include media(sp) {
+    margin-bottom: 29.8px;
+  }
+}
+.jobDetailContentTable__heading {
+  width: 160px;
+  @include media(sp) {
+    width: 100px;
+  }
+}
+.jobDetailContentButtonWrap {
+  display: flex;
+  justify-content: center;
+}
+.jobDetailContent__actionButton {
+  @include fontsize(18, 16);
+  line-height: 1;
+  width: 320px;
+  padding: 26px 0;
+  &:first-child {
+    margin-right: 20px;
+  }
+  @include media(sp) {
+    @include fontsize(20, 16);
+    line-height: 1.4;
+    width: 150px;
+    padding: 8px 0 11px;
+    span {
+      @include fontsize(16, 16);
+    }
+  }
+}
+.jobDetailBackLink {
+  @include _baseContentsWidth;
+}
+.jobDetailBackLink__item {
+  @include fontsize(16, 16);
+  line-height: 1;
+  font-weight: normal;
+  width: 200px;
+  padding: 12px 0;
+  &::before {
+    left: 10px;
+    top: 16px;
+  }
+  @include media(sp) {
+    margin: 0 auto;
+  }
+}
