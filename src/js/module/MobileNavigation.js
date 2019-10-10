@@ -1,3 +1,5 @@
+// 定数
+const CHANGE_EVENT = 'change'
 const TEXT_TRIGGER_ID = 'sp_nav'
 
 /**
@@ -24,7 +26,7 @@ class MobileNavigation {
     }
 
     // checkboxをトリガーにスクロールを制御
-    this.triggerElement.addEventListener('change', () => {
+    this.triggerElement.addEventListener(CHANGE_EVENT, () => {
       if (this.triggerElement.checked) {
         document.addEventListener('mousewheel', scrollHandler, {passive: false})
         document.addEventListener('touchmove', scrollHandler, {passive: false})
