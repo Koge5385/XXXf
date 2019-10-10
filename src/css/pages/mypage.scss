@@ -1,0 +1,86 @@
+@import "../_index";
+
+.keyVisual {
+  margin-bottom: 0;
+}
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 10px 0 80px;
+  background-color: #f7f8f9;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 10px;
+  }
+}
+.mypage {
+  @include _baseContentsWidth;
+  @include media(sp) {
+    padding: 0 10px 60px;
+  }
+}
+.mypageMainMenu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-bottom: 30px;
+  @include media(sp) {
+    display: block;
+  }
+}
+.mypageMainMenu__item {
+  @include media(sp) {
+    margin-bottom: 10px;
+  }
+}
+.mypageMainMenu__link {
+  @include fontsize(22, 16);
+  font-weight: bold;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 315px;
+  height: 250px;
+  background-color: #fff;
+  border: 1px solid #b3c1d3;
+  border-radius: 6px;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.6;
+  }
+  @include media(sp) {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 335px;
+    height: 120px;
+  }
+}
+.mypageMainMenu__icon {
+  margin-bottom: 33px;
+  @include media(sp) {
+    margin: 0 25px 0 25px;
+    svg {
+      width: 60px;
+    }
+  }
+}
+.mypageSubMenu {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  @include media(sp) {
+    justify-content: space-around;
+  }
+}
+.mypageSubMenu__item {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+  @include media(sp) {
+    margin-right: 0;
+  }
+}
