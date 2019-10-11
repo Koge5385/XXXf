@@ -1,0 +1,40 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'index' -%}
+{%- set pageName = 'mypage' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = 'マイページ' -%}
+{%- set en_pageTitle = 'MY PAGE' -%}
+{%- set pageDescription = 'マイページディスクリプション' -%}
+{%- set breadcrumbs = [{item: 'マイページ'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <section class="mypage">
+    <ul class="mypageMainMenu">
+      <li class="mypageMainMenu__item">
+        <a href="#" class="mypageMainMenu__link">
+          <span class="mypageMainMenu__icon">{{ macro.svg_code_resume() }}</span>レジュメ編集
+        </a>
+      </li>
+      <li class="mypageMainMenu__item">
+        <a href="#" class="mypageMainMenu__link">
+          <span class="mypageMainMenu__icon">{{ macro.svg_code_profile() }}</span>プロフィール編集
+        </a>
+      </li>
+      <li class="mypageMainMenu__item">
+        <a href="#" class="mypageMainMenu__link">
+          <span class="mypageMainMenu__icon">{{ macro.svg_code_lock() }}</span>パスワード変更
+        </a>
+      </li>
+    </ul>
+    <ul class="mypageSubMenu">
+      <li class="mypageSubMenu__item"><a href="#" class="mypageSubMenu__link">ログアウト</a></li>
+      <li class="mypageSubMenu__item"><a href="#" class="mypageSubMenu__link">サービスの退会はこちら</a></li>
+    </ul>
+  </section>
+</div>
+
+{% include '_modules/_searchButtonBlock.njk' %}
+
+{% endblock %}
