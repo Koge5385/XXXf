@@ -2,7 +2,7 @@
 const CHANGE_EVENT = 'change'
 const MOUSEWHEEL_EVENT = 'mousewheel'
 const TOUCHMOVE_EVENT = 'touchmove'
-const TEXT_TRIGGER_ID = 'sp_nav'
+const TEXT_TRIGGER_CLASS = '.js-navigation-trigger'
 
 /**
  * @class MobileNavigation
@@ -20,7 +20,7 @@ class MobileNavigation {
    * @desc SP時ナビゲーションが開いた状態にスクロールを禁止する
    */
   scrollControl() {
-    this.triggerElement = document.getElementById(TEXT_TRIGGER_ID)
+    this.triggerElement = document.getElementsByClassName(TEXT_TRIGGER_CLASS)
 
     // 初期設定関数の設定
     function scrollHandler(event) {
@@ -29,7 +29,7 @@ class MobileNavigation {
 
     // checkboxをトリガーにスクロールを制御
     this.triggerElement.addEventListener(CHANGE_EVENT, () => {
-      if (this.triggerElement.checked) {
+      if (this.triggerElement[0].checked) {
         document.addEventListener(MOUSEWHEEL_EVENT, scrollHandler, {passive: false})
         document.addEventListener(TOUCHMOVE_EVENT, scrollHandler, {passive: false})
       } else {
