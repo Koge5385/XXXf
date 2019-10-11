@@ -1,0 +1,30 @@
+.keyVisual {
+  width: 100%;
+  min-width: 980px;
+  background-color: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 187px;
+  margin-bottom: 80px;
+  @include media(sp) {
+    min-width: auto;
+    height: auto;
+    padding: 28px 0;
+    margin-bottom: 50px;
+  }
+}
+.keyVisual__title {
+  @include fontsize(36, 16);
+  line-height: 1.4;
+  color: #5d687c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.keyVisual__enTitle {
+  @extend .m-fontFamilyMontserrat;
+  @include fontsize(16, 16);
+  line-height: 1;
+  color: #0091d4;
+}
