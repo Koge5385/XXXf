@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700");
+
+body {
+  color: var(--color);
+  font-family: var(--fontFamily);
+  font-size: var(--fontSize);
+  font-weight: var(--fontWeight);
+  line-height: var(--lineHeight);
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+}
+
+a {
+  color: var(--color_1b457e);
+  text-decoration: none;
+  display: block;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@include media(pc) {
+  .sp-view {
+    display: none;
+  }
+}
+@include media(sp) {
+  img {
+    width: 100%;
+  }
+  .pc-view {
+    display: none;
+  }
+}
+
+.contentsWrap {
+  background-color: #fff;
+  position: relative;
+  width: 100%;
+
+  img {
+    vertical-align: bottom;
+  }
+}

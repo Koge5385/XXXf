@@ -1,0 +1,16 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "block-no-empty": null,
+    "declaration-colon-newline-after": null,
+    "selector-pseudo-class-no-unknown": null,
+    "number-leading-zero": null,
+    "order/properties-alphabetical-order": true,
+    "value-list-comma-newline-after": null
+  }
+}
+
+

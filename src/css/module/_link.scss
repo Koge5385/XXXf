@@ -1,0 +1,29 @@
+// font-size 16pxの場合
+.m-frontLink {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 0;
+    width: 9px;
+    height: 9px;
+    border-left: 2px solid #1b457e;
+    border-bottom: 2px solid #1b457e;
+    transform: rotate(-135deg);
+  }
+}
+.m-backLink {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-left: 2px solid #1b457e;
+    border-bottom: 2px solid #1b457e;
+    transform: rotate(45deg);
+  }
+}

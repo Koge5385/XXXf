@@ -1,0 +1,29 @@
+{%- import '_modules/_svg.njk' as macro -%}
+{%- set basePath = '/dist/' -%}
+{%- set pageName = 'top' -%}
+{%- set pageTitle = 'トップページ' -%}
+{%- set pageDescription = 'ディスクリプション' -%}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    {% include '_modules/_meta.njk' %}
+
+    <link rel="stylesheet" type="text/css" href="./css/pages/top.css">
+  </head>
+  <body>
+    <div class="contentsWrap">
+      {% include '_modules/_header.njk' %}
+
+      <div class="mainVisual">
+        <h1 class="mainVisual__catchCopy">医療経営を<br>一つ上のステージへ</h1>
+      </div>
+      <div class="container">
+      </div>
+
+      {% include '_modules/_footer.njk' %}
+    </div>
+
+    <script src="./js/pages/top.js"></script>
+  </body>
+</html>

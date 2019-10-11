@@ -1,0 +1,266 @@
+.globalNav {
+  margin: 0;
+}
+.globalNav__list {
+  display: flex;
+  justify-content: flex-end;
+}
+.globalNav__item {
+  width: 90px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @include media(sp) {
+    width: 60px;
+    height: 60px;
+  }
+  a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+      background-color: #d3d9e0;
+    }
+  }
+  &--regist {
+    background-color: #1b457e;
+  }
+}
+.globalNav__icon {
+  display: block;
+  margin-bottom: 11px;
+  height: 24px;
+  @include media(sp) {
+    height: 20px;
+    margin-bottom: 9px;
+  }
+  svg {
+    fill: #1b457e;
+  }
+  &--list svg {
+    height: 20px;
+    @include media(sp) {
+      height: 17px;
+    }
+  }
+  &--login svg {
+    height: 24px;
+    @include media(sp) {
+      height: 20px;
+    }
+  }
+  &--regist svg {
+    fill: #fff;
+    height: 22px;
+    @include media(sp) {
+      height: 20px;
+    }
+  }
+  &--loggedin svg {
+    fill: #1b457e;
+  }
+}
+.globalNav__label {
+  @include fontsize(14, 16);
+  line-height: 1;
+  color: #1b457e;
+  @include media(sp) {
+    @include fontsize(10, 16);
+  }
+  &--regist {
+    color: #fff;
+  }
+}
+.globalNav__item--regist a:hover {
+  background-color: #fff;
+  .globalNav__icon svg {
+    fill: #1b457e;
+  }
+  .globalNav__label {
+    color: #1b457e;
+  }
+}
+
+.globalMobileNav {
+  margin: 0;
+}
+.globalMobileNav__toggleTrigger {
+  display: none;
+}
+.globalMobileNav__openLabel {
+  @include fontsize(12, 16);
+  width: 90px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b457e;
+  color: #fff;
+  cursor: pointer;
+}
+.globalMobileNav__menuIcon {
+  width: 14px;
+  margin-right: 7px;
+  padding-bottom: 1px;
+  svg {
+    fill: #fff;
+    vertical-align: middle;
+  }
+}
+.globalMobileNav__closeLabel {
+  @include fontsize(12, 16);
+  width: 90px;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b457e;
+  color: #fff;
+  cursor: pointer;
+  padding-right: 6px;
+}
+.globalMobileNav__closeIcon {
+  width: 11px;
+  margin-right: 11px;
+  padding-bottom: 2px;
+  svg {
+    fill: #fff;
+    vertical-align: middle;
+  }
+}
+.globalMobileNavBlock {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 45px;
+  left: 0;
+  width: 100%;
+}
+.globalMobileNav__toggleTrigger:checked ~ .globalMobileNav__openLabel {
+  display: none;
+}
+.globalMobileNav__toggleTrigger:checked ~ .globalMobileNavBlock {
+  display: block;
+}
+.globalMobileNav__toggleTrigger:checked ~ .globalMobileNav__closeLabel {
+  display: flex;
+}
+.globalMobileNavContents {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1b457e;
+  padding: 20px 0 30px;
+}
+.globalMobileNavTileList {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 10px;
+}
+.globalMobileNavTileList__item {
+  margin: 0;
+}
+.globalMobileNavTileList__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #1b457e;
+  background-color: #fff;
+  width: 110px;
+  height: 110px;
+  border-radius: 6px;
+  &--loggedin {
+    width: 170px;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+.globalMobileNavTileList__icon {
+  margin-top: 10px;
+  margin-bottom: 14px;
+  &--list {
+    width: 40.61px;
+  }
+  &--login {
+    width: 28px;
+  }
+  &--regist {
+    width: 31.66px;
+  }
+  svg {
+    fill: #1b457e;
+  }
+}
+.globalMobileNavLinkList {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+.globalMobileNavLinkList__item {
+  @include fontsize(14, 16);
+  margin-right: 40px;
+  &:last-child {
+    margin-right: 0;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  &--bold {
+    @include fontsize(16, 16);
+    margin-right: 30px;
+    position: relative;
+    font-weight: bold;
+    width: 100%;
+    line-height: 50px;
+    height: 50px;
+    margin: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 20px;
+      right: 17px;
+      width: 9px;
+      height: 9px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      transform: rotate(-135deg);
+    }
+    &:nth-child(2) {
+      margin-bottom: 32px;
+      border-top: none;
+    }
+    a {
+      padding-left: 21px;
+    }
+  }
+}
+.globalMobileNav__closeBackground {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 45px);
+  background-color: rgba(51, 51, 51, 0.6);
+  cursor: pointer;
+}

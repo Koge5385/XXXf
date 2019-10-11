@@ -1,0 +1,34 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 10px;
+  }
+}
+.mainVisual {
+  width: 100%;
+  min-width: 980px;
+  height: 73.75979112vh;
+  background: url(../../img/top/bg_mainvisual.jpg) no-repeat center;
+  background-size: cover;
+  text-align: center;
+  @include media(sp) {
+    min-width: auto;
+    height: 34.43113772vh;
+  }
+}
+.mainVisual__catchCopy {
+  @include fontsize(62, 16);
+  line-height: 1.2741935484;
+  color: #fff;
+  text-shadow: 0 0 14px #0091d3;
+  padding-top: calc(22.99089727vh - 71px);
+  @include media(sp) {
+    @include fontsize(34, 16);
+    line-height: 1.2058823529;
+    padding-top: calc(12.69461078vh - 46px);
+  }
+}

@@ -1,0 +1,29 @@
+.globalHeader {
+  min-width: 980px;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 999;
+  background-color: #fff;
+  border-bottom: 1px solid #d3d9e0;
+  top: 0;
+  @include media(sp) {
+    width: 100%;
+    min-width: auto;
+  }
+}
+.globalHeader__inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.globalHeader__logo {
+  box-sizing: content-box;
+  padding: 20px 0 21px 18px;
+  @include media(sp) {
+    width: 265px;
+    padding: 7px 0 13px 9px;
+  }
+  a:hover {
+    opacity: 0.6;
+  }
+}
