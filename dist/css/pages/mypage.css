@@ -330,37 +330,6 @@ a {
     border-bottom: 2px solid #1b457e;
     transform: rotate(45deg); }
 
-.m-flextable {
-  width: 100%;
-  table-layout: fixed;
-  word-break: break-all; }
-  .m-flextable tr {
-    border-top: 1px solid #b3c1d3; }
-    .m-flextable tr:last-child {
-      border-bottom: 1px solid #b3c1d3; }
-  .m-flextable th {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    font-weight: bold;
-    color: #5d687c;
-    background-color: #f7f8f9;
-    padding: 0 20px;
-    text-align: left;
-    vertical-align: middle; }
-    @media screen and (max-width: 768px) {
-      .m-flextable th {
-        padding: 0 14px; } }
-  .m-flextable td {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    font-weight: normal;
-    padding: 10px 10px 10px 20px; }
-    @media screen and (max-width: 768px) {
-      .m-flextable td {
-        padding: 10px 0 10px 15px; } }
-
 .globalHeader {
   min-width: 980px;
   position: -webkit-sticky;
@@ -988,19 +957,19 @@ a {
       width: 172px;
       height: 50px; } }
 
-.searchButtonBlockAreaBlock {
+.searchButtonBlockArea {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin-bottom: 10px; }
   @media screen and (max-width: 768px) {
-    .searchButtonBlockAreaBlock {
+    .searchButtonBlockArea {
       margin-bottom: 25px; } }
 
-.searchButtonBlockAreaBlock__toggleTrigger {
+.searchButtonBlockArea__toggleTrigger {
   display: none; }
 
-.searchButtonBlockAreaBlock__heading {
+.searchButtonBlockArea__heading {
   color: #5d687c;
   line-height: 1.6;
   font-weight: bold;
@@ -1008,7 +977,7 @@ a {
   align-items: center;
   width: 110px; }
   @media screen and (max-width: 768px) {
-    .searchButtonBlockAreaBlock__heading {
+    .searchButtonBlockArea__heading {
       position: relative;
       display: block;
       width: 100%;
@@ -1019,7 +988,7 @@ a {
       border-top: 1px solid #d3d9e0;
       background-color: #f7f8f9;
       cursor: pointer; }
-      .searchButtonBlockAreaBlock__heading::before, .searchButtonBlockAreaBlock__heading::after {
+      .searchButtonBlockArea__heading::before, .searchButtonBlockArea__heading::after {
         content: "";
         position: absolute;
         top: 50%;
@@ -1028,7 +997,7 @@ a {
         height: 2px;
         background-color: #1b457e;
         transform: translateY(-50%); }
-      .searchButtonBlockAreaBlock__heading::after {
+      .searchButtonBlockArea__heading::after {
         transform: translateY(-50%) rotate(90deg);
         transition: transform 0.4s; } }
 
@@ -1043,11 +1012,11 @@ a {
       justify-content: space-between;
       padding: 0 10px; } }
 
-.searchButtonBlockAreaBlock__toggleTrigger:checked ~ .searchButtonBlockAreaList {
+.searchButtonBlockArea__toggleTrigger:checked ~ .searchButtonBlockAreaList {
   display: flex; }
 
 @media screen and (max-width: 768px) {
-  .searchButtonBlockAreaBlock__toggleTrigger:checked ~ .searchButtonBlockAreaBlock__heading::after {
+  .searchButtonBlockArea__toggleTrigger:checked ~ .searchButtonBlockArea__heading::after {
     height: 1px;
     transform: rotate(0deg);
     transition: transform 0.4s; } }
@@ -1095,6 +1064,37 @@ a {
     .searchButtonBlockAreaList__link {
       width: 111px;
       height: 50px; } }
+
+.flexTable {
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-all; }
+  .flexTable tr {
+    border-top: 1px solid #b3c1d3; }
+    .flexTable tr:last-child {
+      border-bottom: 1px solid #b3c1d3; }
+  .flexTable th {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #5d687c;
+    background-color: #f7f8f9;
+    padding: 0 20px;
+    text-align: left;
+    vertical-align: middle; }
+    @media screen and (max-width: 768px) {
+      .flexTable th {
+        padding: 0 14px; } }
+  .flexTable td {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-weight: normal;
+    padding: 10px 10px 10px 20px; }
+    @media screen and (max-width: 768px) {
+      .flexTable td {
+        padding: 10px 0 10px 15px; } }
 
 .keyVisual {
   margin-bottom: 0; }
@@ -1155,14 +1155,17 @@ a {
       flex-direction: row;
       justify-content: flex-start;
       align-items: center;
-      width: 335px;
+      width: 100%;
       height: 120px; } }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .mypageMainMenu__link {
+      padding-left: 26%; } }
 
 .mypageMainMenu__icon {
   margin-bottom: 33px; }
   @media screen and (max-width: 768px) {
     .mypageMainMenu__icon {
-      margin: 0 25px 0 25px; }
+      margin: 0 25px 0 30px; }
       .mypageMainMenu__icon svg {
         width: 60px; } }
 

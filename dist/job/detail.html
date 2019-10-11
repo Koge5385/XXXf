@@ -15,9 +15,9 @@
     <meta property="og:image" content="https://job.mplat.co.jp/img/pre/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
-    <link rel="icon" href="/img/common/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="/img/common/apple_icon.png" />
-    <link rel="icon" type="image/png" href="/img/common/android_icon.png" />
+    <link rel="icon" href="/dist/img/common/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/dist/img/common/apple_icon.png" />
+    <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
 
     <link rel="stylesheet" type="text/css" href="/dist/css/pages/job_detail.css" />
   </head>
@@ -26,14 +26,14 @@
       <header class="globalHeader">
         <div class="globalHeader__inner">
           <div class="globalHeader__logo">
-            <a href="/">
-              <img src="/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
+            <a href="/dist/">
+              <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
             </a>
           </div>
           <nav class="globalNav pc-view">
             <ul class="globalNav__list">
               <li class="globalNav__item">
-                <a href="/job/">
+                <a href="/dist/job/">
                   <span class="globalNav__icon globalNav__icon--list"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
                       <g transform="translate(11.603 10)">
@@ -87,10 +87,10 @@
                 </a>
               </li>
             </ul>
-            <!--
+            <!-- ログイン後のナビゲーションソース
       <ul class="globalNav__list">
         <li class="globalNav__item">
-          <a href="/job/">
+          <a href="/dist/job/">
             <span class="globalNav__icon globalNav__icon--list globalNav__icon--loggedin"><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20"><g transform="translate(11.603 10)"><g transform="translate(-11.603 -10)"><rect width="18.38" height="2.309" transform="translate(4.825)"/><rect width="18.38" height="2.309" transform="translate(4.825 5.859)"/><rect width="18.38" height="2.309" transform="translate(4.825 11.832)"/><rect width="18.38" height="2.309" transform="translate(4.825 17.691)"/><rect width="2.298" height="2.309"/><rect width="2.298" height="2.309" transform="translate(0 5.859)"/><rect width="2.298" height="2.309" transform="translate(0 11.832)"/><rect width="2.298" height="2.309" transform="translate(0 17.691)"/></g></g></svg></span>
             <p class="globalNav__label">求人一覧</p>
           </a>
@@ -102,7 +102,7 @@
           </a>
         </li>
       </ul>
-      -->
+      ログイン後のナビゲーションソース -->
           </nav>
           <nav class="globalMobileNav sp-view">
             <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger" />
@@ -134,7 +134,7 @@
               <div class="globalMobileNavContents">
                 <ul class="globalMobileNavTileList">
                   <li class="globalMobileNavTileList__item">
-                    <a href="/job/" class="globalMobileNavTileList__link"
+                    <a href="/dist/job/" class="globalMobileNavTileList__link"
                       ><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--list"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
                           <g transform="translate(20.304 17.5)">
@@ -185,12 +185,12 @@
                     >
                   </li>
                 </ul>
-                <!--
+                <!-- ログイン後のナビゲーションソース
           <ul class="globalMobileNavTileList">
-            <li class="globalMobileNavTileList__item"><a href="/job/" class="globalMobileNavTileList__link globalMobileNavTileList__link--loggedin"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--list"><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35"><g transform="translate(20.304 17.5)"><g transform="translate(-20.304 -17.5)"><rect width="32.165" height="4.041" transform="translate(8.443)"/><rect width="32.165" height="4.041" transform="translate(8.443 10.253)"/><rect width="32.165" height="4.041" transform="translate(8.443 20.706)"/><rect width="32.165" height="4.041" transform="translate(8.443 30.959)"/><rect width="4.021" height="4.041"/><rect width="4.021" height="4.041" transform="translate(0 10.253)"/><rect width="4.021" height="4.041" transform="translate(0 20.706)"/><rect width="4.021" height="4.041" transform="translate(0 30.959)"/></g></g></svg></span>求人一覧</a></li>
+            <li class="globalMobileNavTileList__item"><a href="/dist/job/" class="globalMobileNavTileList__link globalMobileNavTileList__link--loggedin"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--list"><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35"><g transform="translate(20.304 17.5)"><g transform="translate(-20.304 -17.5)"><rect width="32.165" height="4.041" transform="translate(8.443)"/><rect width="32.165" height="4.041" transform="translate(8.443 10.253)"/><rect width="32.165" height="4.041" transform="translate(8.443 20.706)"/><rect width="32.165" height="4.041" transform="translate(8.443 30.959)"/><rect width="4.021" height="4.041"/><rect width="4.021" height="4.041" transform="translate(0 10.253)"/><rect width="4.021" height="4.041" transform="translate(0 20.706)"/><rect width="4.021" height="4.041" transform="translate(0 30.959)"/></g></g></svg></span>求人一覧</a></li>
             <li class="globalMobileNavTileList__item"><a href="#" class="globalMobileNavTileList__link globalMobileNavTileList__link--loggedin"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--regist"><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z" transform="translate(1.739 -0.601)"/><path d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z" transform="translate(-1 9.171)"/></g></g></svg></span>マイページ</a></li>
           </ul>
-          -->
+          ログイン後のナビゲーションソース -->
                 <ul class="globalMobileNavLinkList">
                   <li class="globalMobileNavLinkList__item globalMobileNavLinkList__item--bold m-frontLink">
                     <a href="#">初めての方へ</a>
@@ -443,9 +443,9 @@
                   </g></svg></span
               >勤務地から探す
             </h3>
-            <div class="searchButtonBlockAreaBlock">
-              <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockAreaBlock__toggleTrigger" checked />
-              <label for="sp_areaList_kanto" class="searchButtonBlockAreaBlock__heading">関東</label>
+            <div class="searchButtonBlockArea">
+              <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked />
+              <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
               <ul class="searchButtonBlockAreaList">
                 <li class="searchButtonBlockAreaList__item">
                   <a href="#" class="searchButtonBlockAreaList__link">茨城</a>
@@ -470,9 +470,9 @@
                 </li>
               </ul>
             </div>
-            <div class="searchButtonBlockAreaBlock">
-              <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockAreaBlock__toggleTrigger" />
-              <label for="sp_areaList_kansai" class="searchButtonBlockAreaBlock__heading">関西</label>
+            <div class="searchButtonBlockArea">
+              <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockArea__toggleTrigger" />
+              <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
               <ul class="searchButtonBlockAreaList">
                 <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable">三重</li>
                 <li class="searchButtonBlockAreaList__item">
@@ -509,7 +509,7 @@
               <meta itemprop="position" content="1" />
             </li>
             <li class="breadcrumb__listItem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <a href="/job/" itemprop="item">
+              <a href="/dist/job/" itemprop="item">
                 <span itemprop="name">求人一覧</span>
               </a>
               <meta itemprop="position" content="2" />
@@ -529,7 +529,7 @@
           <div class="globalFooter__guideBlock">
             <p class="globalFooter__guideText pc-view">ご不明点などお問い合わせはこちらから</p>
             <p class="globalFooter__guideText sp-view">お問い合わせはこちらから</p>
-            <a class="globalFooter__contactButton" href="/contact.html"
+            <a class="globalFooter__contactButton" href="/dist/contact.html"
               ><span class="globalFooter__contactIcon"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
                   <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />

@@ -330,37 +330,6 @@ a {
     border-bottom: 2px solid #1b457e;
     transform: rotate(45deg); }
 
-.m-flextable {
-  width: 100%;
-  table-layout: fixed;
-  word-break: break-all; }
-  .m-flextable tr {
-    border-top: 1px solid #b3c1d3; }
-    .m-flextable tr:last-child {
-      border-bottom: 1px solid #b3c1d3; }
-  .m-flextable th {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    font-weight: bold;
-    color: #5d687c;
-    background-color: #f7f8f9;
-    padding: 0 20px;
-    text-align: left;
-    vertical-align: middle; }
-    @media screen and (max-width: 768px) {
-      .m-flextable th {
-        padding: 0 14px; } }
-  .m-flextable td {
-    font-size: 14px;
-    font-size: 0.875rem;
-    line-height: 1.6;
-    font-weight: normal;
-    padding: 10px 10px 10px 20px; }
-    @media screen and (max-width: 768px) {
-      .m-flextable td {
-        padding: 10px 0 10px 15px; } }
-
 .globalHeader {
   min-width: 980px;
   position: -webkit-sticky;
@@ -1095,6 +1064,37 @@ a {
     .searchButtonBlockAreaList__link {
       width: 111px;
       height: 50px; } }
+
+.flexTable {
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-all; }
+  .flexTable tr {
+    border-top: 1px solid #b3c1d3; }
+    .flexTable tr:last-child {
+      border-bottom: 1px solid #b3c1d3; }
+  .flexTable th {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-weight: bold;
+    color: #5d687c;
+    background-color: #f7f8f9;
+    padding: 0 20px;
+    text-align: left;
+    vertical-align: middle; }
+    @media screen and (max-width: 768px) {
+      .flexTable th {
+        padding: 0 14px; } }
+  .flexTable td {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-weight: normal;
+    padding: 10px 10px 10px 20px; }
+    @media screen and (max-width: 768px) {
+      .flexTable td {
+        padding: 10px 0 10px 15px; } }
 
 .keyVisual {
   margin-bottom: 0; }
