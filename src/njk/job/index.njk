@@ -53,7 +53,7 @@
                   </ul>
                 </div>
 
-                <table class="m-flextable jobListContentTable">
+                <table class="flexTable jobListContentTable">
                   <tbody>
                     <tr>
                       <th class="jobListContentTable__heading">仕事内容</th>
@@ -104,7 +104,7 @@
                   </ul>
                 </div>
 
-                <table class="m-flextable jobListContentTable">
+                <table class="flexTable jobListContentTable">
                   <tbody>
                     <tr>
                       <th class="jobListContentTable__heading">仕事内容</th>
@@ -121,12 +121,170 @@
       </section>
     </main>
     <aside class="container__side">
-      <div class="serchSideBox">
-        <p>サイドバーが付いてきます。</p>
+      <div class="searchSideBox">
+        <p class="searchResultText">絞り込みの結果：<span>295</span>件</p>
+        <div class="searchSelectArea">
+          <ul class="searchSelectList">
+            <li class="searchSelectList__item m-inputSelectArrow">
+              <select name="jobList_selectJob" class="m-inputSelect searchSelectList__searchSelect searchSelectList__searchSelect--job">
+                <option value="">職種から探す</option>
+                {%- set selectJob = [
+                  {job: '事務長（候補含む）'},
+                  {job: '経営企画室'},
+                  {job: '医事課長（候補含む）'},
+                  {job: '総務'},
+                  {job: '財務・経理'},
+                  {job: '人事・労務'},
+                  {job: '情報管理'},
+                  {job: '広報'},
+                  {job: '地域連携室'},
+                  {job: 'その他'}
+                ] -%}
+                {%- for item in selectJob %}
+                <option value="{{ loop.index }}">{{ item.job }}</option>
+                {%- endfor %}
+              </select>
+            </li>
+            <li class="searchSelectList__item m-inputSelectArrow">
+              <select name="jobList_selectPlace" class="m-inputSelect searchSelectList__searchSelect searchSelectList__searchSelect--place">
+                <option value="">勤務地から探す</option>
+                {%- set selectPlace = [
+                  {place: '茨城'},
+                  {place: '栃木'},
+                  {place: '群馬'},
+                  {place: '埼玉'},
+                  {place: '千葉'},
+                  {place: '東京'},
+                  {place: '神奈川'},
+                  {place: '三重'},
+                  {place: '滋賀'},
+                  {place: '京都'},
+                  {place: '大阪'},
+                  {place: '兵庫'},
+                  {place: '奈良'},
+                  {place: '和歌山'}
+                ] -%}
+                {%- for item in selectPlace %}
+                <option value="{{ loop.index }}">{{ item.place }}</option>
+                {%- endfor %}
+              </select>
+            </li>
+            <li class="searchSelectList__item m-inputSelectArrow">
+              <select name="jobList_selectSalary" class="m-inputSelect searchSelectList__searchSelect searchSelectList__searchSelect--salary">
+                <option value="">年収から探す</option>
+                {%- set selectSalary = [
+                  {salary: '300万〜'},
+                  {salary: '400万〜'},
+                  {salary: '500万〜'},
+                  {salary: '600万〜'},
+                  {salary: '700万〜'},
+                  {salary: '800万〜'}
+                ] -%}
+                {%- for item in selectSalary %}
+                <option value="{{ loop.index }}">{{ item.salary }}</option>
+                {%- endfor %}
+              </select>
+            </li>
+            <li class="searchSelectList__item">
+              <input name="jobList_freeWord" type="text" class="m-inputText searchSelectList__searchText searchSelectList__searchText--freeWord" placeholder="キーワードで探す">
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="m-button m-button--blue search__submit">この条件で再検索</a>
       </div>
     </aside>
   </div>
-  <div class="sp-view mobileSerchBox">
+  <div class="jobListPagenationWrap">
+    <ul class="jobListPagenation">
+      <li class="jobListPagenation__item"><a href="#" class="jobListPagenation__link jobListPagenation__link--active">1</a></li>
+      <li class="jobListPagenation__item"><a href="#" class="jobListPagenation__link">2</a></li>
+      <li class="jobListPagenation__item"><a href="#" class="jobListPagenation__link">3</a></li>
+      <li class="jobListPagenation__item pc-view"><a href="#" class="jobListPagenation__link">4</a></li>
+      <li class="jobListPagenation__item pc-view"><a href="#" class="jobListPagenation__link">5</a></li>
+      <li class="jobListPagenation__item jobListPagenation__item--dot">…</li>
+      <li class="jobListPagenation__item"><a href="#" class="jobListPagenation__link">20</a></li>
+    </ul>
+  </div>
+</div>
+<div class="sp-view mobilesearchWrap">
+  <div class="mobilesearchInner">
+    <p class="mobilesearch__resultText">絞り込みの結果<br><span>795</span>件</p>
+    <input type="checkbox" id="jobList_search" class="mobilesearch__toggleTrigger">
+    <label for="jobList_search" class="mobilesearch__openLabel">検索条件を確認・再検索</label>
+    <label for="jobList_search" class="mobilesearch__closeLabel">検索を閉じる</label>
+    <div class="mobilesearchBoxWrap">
+      <label for="jobList_search" class="mobilesearch__closeBackground"></label>
+      <div class="mobilesearchBox">
+        <div class="mobilesearchBoxInner">
+          <ul class="mobilesearchList">
+            <li class="mobilesearchList__item m-inputSelectArrow">
+              <select name="jobList_selectJob" class="m-inputSelect mobilesearchList__searchSelect mobilesearchList__searchSelect--job">
+                <option value="">職種から探す</option>
+                {%- set selectJob = [
+                  {job: '事務長（候補含む）'},
+                  {job: '経営企画室'},
+                  {job: '医事課長（候補含む）'},
+                  {job: '総務'},
+                  {job: '財務・経理'},
+                  {job: '人事・労務'},
+                  {job: '情報管理'},
+                  {job: '広報'},
+                  {job: '地域連携室'},
+                  {job: 'その他'}
+                ] -%}
+                {%- for item in selectJob %}
+                <option value="{{ loop.index }}">{{ item.job }}</option>
+                {%- endfor %}
+              </select>
+            </li>
+            <li class="mobilesearchList__item m-inputSelectArrow">
+              <select name="jobList_selectPlace" class="m-inputSelect mobilesearchList__searchSelect mobilesearchList__searchSelect--place">
+                <option value="">勤務地から探す</option>
+                {%- set selectPlace = [
+                  {place: '茨城'},
+                  {place: '栃木'},
+                  {place: '群馬'},
+                  {place: '埼玉'},
+                  {place: '千葉'},
+                  {place: '東京'},
+                  {place: '神奈川'},
+                  {place: '三重'},
+                  {place: '滋賀'},
+                  {place: '京都'},
+                  {place: '大阪'},
+                  {place: '兵庫'},
+                  {place: '奈良'},
+                  {place: '和歌山'}
+                ] -%}
+                {%- for item in selectPlace %}
+                <option value="{{ loop.index }}">{{ item.place }}</option>
+                {%- endfor %}
+              </select>
+            </li>
+            <li class="mobilesearchList__item m-inputSelectArrow">
+              <select name="jobList_selectSalary" class="m-inputSelect mobilesearchList__searchSelect mobilesearchList__searchSelect--salary">
+                <option value="">年収から探す</option>
+                {%- set selectSalary = [
+                  {salary: '300万〜'},
+                  {salary: '400万〜'},
+                  {salary: '500万〜'},
+                  {salary: '600万〜'},
+                  {salary: '700万〜'},
+                  {salary: '800万〜'}
+                ] -%}
+                {%- for item in selectSalary %}
+                <option value="{{ loop.index }}">{{ item.salary }}</option>
+                {%- endfor %}
+              </select>
+            </li>
+            <li class="mobilesearchList__item">
+              <input name="jobList_freeWord" type="text" class="m-inputText mobilesearchList__searchText mobilesearchList__searchText--freeWord" placeholder="キーワードで探す">
+            </li>
+          </ul>
+          <a href="#" class="m-button m-button--blue search__submit">この条件で再検索</a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
