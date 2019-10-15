@@ -1,5 +1,5 @@
 {%- import '_modules/_svg.njk' as macro -%}
-{%- set basePath = '/dist/' -%}
+{%- set basePath = '/' -%}
 {%- set pageName = 'top' -%}
 {%- set pageTitle = 'トップページ' -%}
 {%- set pageDescription = 'ディスクリプション' -%}
@@ -19,6 +19,139 @@
         <h1 class="mainVisual__catchCopy">医療経営を<br>一つ上のステージへ</h1>
       </div>
       <div class="container">
+        <section class="searchBox">
+          <div class="searchBoxInner">
+            <p class="searchBox__title"><span class="searchBox__titleIcon">{{ macro.svg_code_search() }}</span>希望条件から求人を探す</p>
+          </div>
+        </section>
+        <section class="suggestJob">
+          <div class="sectionHeading">
+            <h1 class="sectionHeading__title">おすすめ求人</h1>
+            <small class="sectionHeading__enTitle">JOB INFORMATION</small>
+          </div>
+          <div class="jobcardWrap">
+            <div class="jobcardInner swiper-container">
+              <div class="jobcardList swiper-wrapper">
+
+                {%- set jobcarditems = [
+                  {heading: '500床規模の総合病院／DPC経験者優遇', place: '埼玉県', job: '医事課長・医事課長候補', money: '400～700'},
+                  {heading: '医事課のマネジメント業務／ケアミックス', place: '神奈川県', job: '医事課長・医事課長候補', money: '450～550'},
+                  {heading: '小規模病院（100床規模）でのマネジメント職', place: '東京都', job: '医事課長・医事課主任', money: '420～550'},
+                  {heading: 'DPC経験者優遇／プロジェクトリーダーの募集', place: '神奈川県', job: '医事課長・医事課長候補', money: '600～700'},
+                  {heading: 'マネジメント経験のある方歓迎／年収600万円以上', place: '神奈川県', job: '総務課長', money: '600～700'},
+                  {heading: '公立病院／世代交代／若手幹部候補の求人', place: '千葉県', job: '医事課長', money: '400～500'},
+                  {heading: '運営戦略の立案・実行／経営分析・経営会議の企画運営', place: '千葉県', job: '事務長（候補）', money: '450～550'},
+                  {heading: '100床規模の小規模病院／医事課員のマネジメント業務', place: '埼玉県', job: '医事課長', money: '500～550'},
+                  {heading: '300床規模のケアミックス／総務課業務全般', place: '埼玉県', job: '総務課長（候補）', money: '400～450'}
+                ] -%}
+                {%- for item in jobcarditems %}
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">{{ item.heading }}</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>{{ item.place }}</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">{{ item.job }}</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>{{ item.money }}<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                {%- endfor %}
+
+              </div>
+              <div class="jobcardList__control jobcardList__control--prev swiper-button-prev"></div>
+              <div class="jobcardList__control jobcardList__control--next swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
+        <section class="searchJob searchButtonBlock">
+          <div class="sectionHeading">
+            <h1 class="sectionHeading__title">求人を探す</h1>
+            <small class="sectionHeading__enTitle">SEARCH</small>
+          </div>
+          <div class="searchButtonBlockInner">
+            <div class="searchButtonBlockContent">
+              <h3 class="m-heading__lv3 m-heading__lv3--center"><span class="searchButtonBlockContent__icon">{{ macro.svg_code_bag() }}</span>職種から探す</h3>
+              <ul class="searchButtonBlockJobList">
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">事務長<span>（候補含む）</span></a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">経営企画室</a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">医事課長<span>（候補含む）</span></a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">総務</a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">財務・経理</a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">人事・労務</a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">情報管理</a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">広報</a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">地域連携室</a></li>
+                <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">その他</a></li>
+              </ul>
+            </div>
+            <div class="searchButtonBlockContent">
+              <h3 class="m-heading__lv3 m-heading__lv3--center"><span class="searchButtonBlockContent__icon">{{ macro.svg_code_place() }}</span>勤務地から探す</h3>
+              <div class="searchButtonBlockArea">
+                <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked>
+                <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
+                <ul class="searchButtonBlockAreaList">
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">茨城</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">栃木</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">群馬</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">埼玉</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">千葉</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">東京</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">神奈川</a></li>
+                </ul>
+              </div>
+              <div class="searchButtonBlockArea">
+                <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockArea__toggleTrigger">
+                <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
+                <ul class="searchButtonBlockAreaList">
+                  <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable">三重</li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">滋賀</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">京都</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">大阪</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">兵庫</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">奈良</a></li>
+                  <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">和歌山</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="service">
+          <div class="sectionHeading">
+            <h1 class="sectionHeading__title">サービスの特長</h1>
+            <small class="sectionHeading__enTitle">FEATURE</small>
+          </div>
+          <div class="serviceInner">
+            <div class="serviceContent">
+              <p class="serviceContent__image"><img src="./img/top/img_service_01.jpg" alt="マネジメント層の求人が豊富"></p>
+              <div class="serviceContentText">
+                <p class="serviceContent__heading"><span class="serviceContent__step m-fontFamilyMontserrat">1</span>マネジメント層の<br>求人が豊富</p>
+                <p class="serviceContent__outline">M.PLATは医療機関経営に参画する管理職の求人を多数掲載しています。経営に関心のある方、キャリアアップを図りたい方等は必見です。</p>
+              </div>
+            </div>
+            <div class="serviceContent">
+              <p class="serviceContent__image"><img src="./img/top/img_service_02.jpg" alt="医療系の専門資格をもつコンサルタントがサポート"></p>
+              <div class="serviceContentText">
+                <p class="serviceContent__heading"><span class="serviceContent__step m-fontFamilyMontserrat">2</span>医療系の専門資格をもつ<br>コンサルタントがサポート</p>
+                <p class="serviceContent__outline">M.PLATでは医療経営士や医療系専門職の資格をもつコンサルタントがあなたの求職活動を全面的にサポートいたします。</p>
+              </div>
+            </div>
+            <div class="serviceContent">
+              <p class="serviceContent__image"><img src="./img/top/img_service_03.jpg" alt="医療機関との豊富なネットワーク"></p>
+              <div class="serviceContentText">
+                <p class="serviceContent__heading"><span class="serviceContent__step m-fontFamilyMontserrat">3</span>医療機関との<br>豊富なネットワーク</p>
+                <p class="serviceContent__outline">当社エムステージは、16年の歴史と医師紹介事業で年間約30,000件のマッチング実績があり、医療機関との豊富なネットワークがあります。</p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
 
       {% include '_modules/_footer.njk' %}

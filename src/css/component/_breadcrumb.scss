@@ -5,7 +5,7 @@
     min-width: auto;
   }
 }
-.breadcrumb__inner {
+.breadcrumbInner {
   @include _baseContentsWidth;
   padding: 10px 0;
   overflow-y: hidden;
@@ -16,7 +16,7 @@
     height: 40px;
   }
 }
-.breadcrumb__list {
+.breadcrumbList {
   list-style: none;
   display: flex;
   overflow-x: scroll;
@@ -30,7 +30,7 @@
     display: none;
   }
 }
-.breadcrumb__listItem {
+.breadcrumbList__item {
   @include fontsize(14, 16);
   line-height: 25px;
   display: block;

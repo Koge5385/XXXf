@@ -15,26 +15,26 @@
     <meta property="og:image" content="https://job.mplat.co.jp/img/pre/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
-    <link rel="icon" href="/dist/img/common/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="/dist/img/common/apple_icon.png" />
-    <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
+    <link rel="icon" href="/img/common/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/img/common/apple_icon.png" />
+    <link rel="icon" type="image/png" href="/img/common/android_icon.png" />
 
     <link rel="stylesheet" type="text/css" href="./css/pages/top.css" />
   </head>
   <body>
     <div class="contentsWrap">
       <header class="globalHeader">
-        <div class="globalHeader__inner">
+        <div class="globalHeaderInner">
           <div class="globalHeader__logo">
-            <a href="/dist/">
-              <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
+            <a href="/">
+              <img src="/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
             </a>
           </div>
           <nav class="globalNav pc-view">
-            <ul class="globalNav__list">
-              <li class="globalNav__item">
-                <a href="/dist/job/">
-                  <span class="globalNav__icon globalNav__icon--list"
+            <ul class="globalNavList">
+              <li class="globalNavItem">
+                <a href="/job/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--list"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
                       <g transform="translate(11.603 10)">
                         <g transform="translate(-11.603 -10)">
@@ -49,12 +49,12 @@
                         </g>
                       </g></svg
                   ></span>
-                  <p class="globalNav__label">求人一覧</p>
+                  <p class="globalNavItem__label">求人一覧</p>
                 </a>
               </li>
-              <li class="globalNav__item">
-                <a href="#">
-                  <span class="globalNav__icon globalNav__icon--login"
+              <li class="globalNavItem">
+                <a href="#" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--login"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.2" height="24" viewBox="0 0 19.2 24">
                       <g transform="translate(9.6 12)">
                         <path
@@ -63,12 +63,12 @@
                         />
                       </g></svg
                   ></span>
-                  <p class="globalNav__label">ログイン</p>
+                  <p class="globalNavItem__label">ログイン</p>
                 </a>
               </li>
-              <li class="globalNav__item globalNav__item--regist">
-                <a href="#">
-                  <span class="globalNav__icon globalNav__icon--regist"
+              <li class="globalNavItem">
+                <a href="#" class="globalNavItem__link globalNavItem__link--regist">
+                  <span class="globalNavItem__icon globalNavItem__icon--regist"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
                       <g transform="translate(9.95 11)">
                         <g transform="translate(-9.95 -11)">
@@ -83,22 +83,22 @@
                         </g>
                       </g></svg
                   ></span>
-                  <p class="globalNav__label globalNav__label--regist">会員登録</p>
+                  <p class="globalNavItem__label">会員登録</p>
                 </a>
               </li>
             </ul>
             <!-- ログイン後のナビゲーションソース
-      <ul class="globalNav__list">
-        <li class="globalNav__item">
-          <a href="/dist/job/">
-            <span class="globalNav__icon globalNav__icon--list globalNav__icon--loggedin"><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20"><g transform="translate(11.603 10)"><g transform="translate(-11.603 -10)"><rect width="18.38" height="2.309" transform="translate(4.825)"/><rect width="18.38" height="2.309" transform="translate(4.825 5.859)"/><rect width="18.38" height="2.309" transform="translate(4.825 11.832)"/><rect width="18.38" height="2.309" transform="translate(4.825 17.691)"/><rect width="2.298" height="2.309"/><rect width="2.298" height="2.309" transform="translate(0 5.859)"/><rect width="2.298" height="2.309" transform="translate(0 11.832)"/><rect width="2.298" height="2.309" transform="translate(0 17.691)"/></g></g></svg></span>
-            <p class="globalNav__label">求人一覧</p>
+      <ul class="globalNavList">
+        <li class="globalNavItem">
+          <a href="/job/" class="globalNavItem__link">
+            <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20"><g transform="translate(11.603 10)"><g transform="translate(-11.603 -10)"><rect width="18.38" height="2.309" transform="translate(4.825)"/><rect width="18.38" height="2.309" transform="translate(4.825 5.859)"/><rect width="18.38" height="2.309" transform="translate(4.825 11.832)"/><rect width="18.38" height="2.309" transform="translate(4.825 17.691)"/><rect width="2.298" height="2.309"/><rect width="2.298" height="2.309" transform="translate(0 5.859)"/><rect width="2.298" height="2.309" transform="translate(0 11.832)"/><rect width="2.298" height="2.309" transform="translate(0 17.691)"/></g></g></svg></span>
+            <p class="globalNavItem__label">求人一覧</p>
           </a>
         </li>
-        <li class="globalNav__item">
-          <a href="#">
-            <span class="globalNav__icon globalNav__icon--regist globalNav__icon--loggedin"><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z" transform="translate(-0.62 -0.601)"/><path d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z" transform="translate(-1 0.761)"/></g></g></svg></span>
-            <p class="globalNav__label">マイページ</p>
+        <li class="globalNavItem">
+          <a href="#" class="globalNavItem__link">
+            <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z" transform="translate(-0.62 -0.601)"/><path d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z" transform="translate(-1 0.761)"/></g></g></svg></span>
+            <p class="globalNavItem__label">マイページ</p>
           </a>
         </li>
       </ul>
@@ -132,10 +132,10 @@
             <div class="globalMobileNavBlock">
               <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
               <div class="globalMobileNavContents">
-                <ul class="globalMobileNavTileList">
-                  <li class="globalMobileNavTileList__item">
-                    <a href="/dist/job/" class="globalMobileNavTileList__link"
-                      ><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--list"
+                <ul class="globalMobileNavTile">
+                  <li class="globalMobileNavTileItem">
+                    <a href="/job/" class="globalMobileNavTileItem__link">
+                      <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--list"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
                           <g transform="translate(20.304 17.5)">
                             <g transform="translate(-20.304 -17.5)">
@@ -149,12 +149,12 @@
                               <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
                             </g>
                           </g></svg></span
-                      >求人一覧</a
-                    >
+                      >求人一覧
+                    </a>
                   </li>
-                  <li class="globalMobileNavTileList__item">
-                    <a href="#" class="globalMobileNavTileList__link"
-                      ><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--login"
+                  <li class="globalMobileNavTileItem">
+                    <a href="#" class="globalMobileNavTileItem__link">
+                      <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--login"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 28 35">
                           <g transform="translate(14 17.5)">
                             <path
@@ -162,12 +162,12 @@
                               transform="translate(-14 -17.5)"
                             />
                           </g></svg></span
-                      >ログイン</a
-                    >
+                      >ログイン
+                    </a>
                   </li>
-                  <li class="globalMobileNavTileList__item">
-                    <a href="#" class="globalMobileNavTileList__link"
-                      ><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--regist"
+                  <li class="globalMobileNavTileItem">
+                    <a href="#" class="globalMobileNavTileItem__link">
+                      <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--regist"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
                           <g transform="translate(9.95 11)">
                             <g transform="translate(-9.95 -11)">
@@ -181,26 +181,34 @@
                               />
                             </g>
                           </g></svg></span
-                      >会員登録</a
-                    >
+                      >会員登録
+                    </a>
                   </li>
                 </ul>
                 <!-- ログイン後のナビゲーションソース
-          <ul class="globalMobileNavTileList">
-            <li class="globalMobileNavTileList__item"><a href="/dist/job/" class="globalMobileNavTileList__link globalMobileNavTileList__link--loggedin"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--list"><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35"><g transform="translate(20.304 17.5)"><g transform="translate(-20.304 -17.5)"><rect width="32.165" height="4.041" transform="translate(8.443)"/><rect width="32.165" height="4.041" transform="translate(8.443 10.253)"/><rect width="32.165" height="4.041" transform="translate(8.443 20.706)"/><rect width="32.165" height="4.041" transform="translate(8.443 30.959)"/><rect width="4.021" height="4.041"/><rect width="4.021" height="4.041" transform="translate(0 10.253)"/><rect width="4.021" height="4.041" transform="translate(0 20.706)"/><rect width="4.021" height="4.041" transform="translate(0 30.959)"/></g></g></svg></span>求人一覧</a></li>
-            <li class="globalMobileNavTileList__item"><a href="#" class="globalMobileNavTileList__link globalMobileNavTileList__link--loggedin"><span class="globalMobileNavTileList__icon globalMobileNavTileList__icon--regist"><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z" transform="translate(1.739 -0.601)"/><path d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z" transform="translate(-1 9.171)"/></g></g></svg></span>マイページ</a></li>
+          <ul class="globalMobileNavTile">
+            <li class="globalMobileNavTileItem">
+              <a href="/job/" class="globalMobileNavTileItem__link globalMobileNavTileItem__link--loggedin">
+                <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--list"><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35"><g transform="translate(20.304 17.5)"><g transform="translate(-20.304 -17.5)"><rect width="32.165" height="4.041" transform="translate(8.443)"/><rect width="32.165" height="4.041" transform="translate(8.443 10.253)"/><rect width="32.165" height="4.041" transform="translate(8.443 20.706)"/><rect width="32.165" height="4.041" transform="translate(8.443 30.959)"/><rect width="4.021" height="4.041"/><rect width="4.021" height="4.041" transform="translate(0 10.253)"/><rect width="4.021" height="4.041" transform="translate(0 20.706)"/><rect width="4.021" height="4.041" transform="translate(0 30.959)"/></g></g></svg></span>求人一覧
+              </a>
+            </li>
+            <li class="globalMobileNavTileItem">
+              <a href="#" class="globalMobileNavTileItem__link globalMobileNavTileItem__link--loggedin">
+                <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--regist"><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z" transform="translate(1.739 -0.601)"/><path d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z" transform="translate(-1 9.171)"/></g></g></svg></span>マイページ
+              </a>
+            </li>
           </ul>
           ログイン後のナビゲーションソース -->
-                <ul class="globalMobileNavLinkList">
-                  <li class="globalMobileNavLinkList__item globalMobileNavLinkList__item--bold m-frontLink">
+                <ul class="globalMobileNavLink">
+                  <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
                     <a href="#">初めての方へ</a>
                   </li>
-                  <li class="globalMobileNavLinkList__item globalMobileNavLinkList__item--bold m-frontLink">
+                  <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
                     <a href="#">医療機関採用担当者の方へ</a>
                   </li>
-                  <li class="globalMobileNavLinkList__item"><a href="#">会社概要</a></li>
-                  <li class="globalMobileNavLinkList__item"><a href="#">個人情報保護方針</a></li>
-                  <li class="globalMobileNavLinkList__item"><a href="#">利用規約</a></li>
+                  <li class="globalMobileNavLink__item"><a href="#">会社概要</a></li>
+                  <li class="globalMobileNavLink__item"><a href="#">個人情報保護方針</a></li>
+                  <li class="globalMobileNavLink__item"><a href="#">利用規約</a></li>
                 </ul>
               </div>
             </div>
@@ -211,15 +219,391 @@
       <div class="mainVisual">
         <h1 class="mainVisual__catchCopy">医療経営を<br />一つ上のステージへ</h1>
       </div>
-      <div class="container"></div>
+      <div class="container">
+        <section class="searchBox">
+          <div class="searchBoxInner">
+            <p class="searchBox__title">
+              <span class="searchBox__titleIcon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="26.985" height="26.841" viewBox="0 0 26.985 26.841">
+                  <g transform="translate(0)">
+                    <path
+                      d="M19.764,18.329l-.431-.431.431-.431a10.981,10.981,0,1,0-2.3,2.3l.431-.431.431.431,7.177,7.177,1.579-1.579Zm-8.9,1.435a8.756,8.756,0,1,1,8.756-8.756,8.756,8.756,0,0,1-8.756,8.612Z"
+                      transform="translate(-0.1 -0.1)"
+                    />
+                    <path
+                      d="M19.764,18.329l-.431-.431.431-.431a10.981,10.981,0,1,0-2.3,2.3l.431-.431.431.431,7.177,7.177,1.579-1.579Zm-8.9,1.435a8.756,8.756,0,1,1,8.756-8.756,8.756,8.756,0,0,1-8.756,8.612Z"
+                      transform="translate(-0.1 -0.1)"
+                    />
+                  </g></svg></span
+              >希望条件から求人を探す
+            </p>
+          </div>
+        </section>
+        <section class="suggestJob">
+          <div class="sectionHeading">
+            <h1 class="sectionHeading__title">おすすめ求人</h1>
+            <small class="sectionHeading__enTitle">JOB INFORMATION</small>
+          </div>
+          <div class="jobcardWrap">
+            <div class="jobcardInner swiper-container">
+              <div class="jobcardList swiper-wrapper">
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">500床規模の総合病院／DPC経験者優遇</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>埼玉県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">医事課長・医事課長候補</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>400～700<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">医事課のマネジメント業務／ケアミックス</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>神奈川県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">医事課長・医事課長候補</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>450～550<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">小規模病院（100床規模）でのマネジメント職</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>東京都</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">医事課長・医事課主任</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>420～550<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">DPC経験者優遇／プロジェクトリーダーの募集</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>神奈川県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">医事課長・医事課長候補</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>600～700<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">マネジメント経験のある方歓迎／年収600万円以上</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>神奈川県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">総務課長</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>600～700<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">公立病院／世代交代／若手幹部候補の求人</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>千葉県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">医事課長</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>400～500<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">運営戦略の立案・実行／経営分析・経営会議の企画運営</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>千葉県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">事務長（候補）</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>450～550<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">100床規模の小規模病院／医事課員のマネジメント業務</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>埼玉県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">医事課長</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>500～550<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+                <div class="jobcard__item swiper-slide">
+                  <a href="" class="jobcard__link">
+                    <p class="jobcard__title">300床規模のケアミックス／総務課業務全般</p>
+                    <dl class="jobcard__line jobcard__line--location">
+                      <dt>勤務地</dt>
+                      <dd>埼玉県</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--work">
+                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dd class="js-adjustHeight-work-target">総務課長（候補）</dd>
+                    </dl>
+                    <dl class="jobcard__line jobcard__line--income">
+                      <dt><span class="jobcard__firstText">年</span>収</dt>
+                      <dd>400～450<span>万円</span></dd>
+                    </dl>
+                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                  </a>
+                </div>
+              </div>
+              <div class="jobcardList__control jobcardList__control--prev swiper-button-prev"></div>
+              <div class="jobcardList__control jobcardList__control--next swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
+        <section class="searchJob searchButtonBlock">
+          <div class="sectionHeading">
+            <h1 class="sectionHeading__title">求人を探す</h1>
+            <small class="sectionHeading__enTitle">SEARCH</small>
+          </div>
+          <div class="searchButtonBlockInner">
+            <div class="searchButtonBlockContent">
+              <h3 class="m-heading__lv3 m-heading__lv3--center">
+                <span class="searchButtonBlockContent__icon"
+                  ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g transform="translate(12 12)">
+                      <g transform="translate(-12 -12)">
+                        <path
+                          d="M21.647,145.5H2.353A2.358,2.358,0,0,0,0,147.858V152a.7.7,0,0,0,.534.684l8.709,2.175v-2a1.406,1.406,0,0,1,1.406-1.406h2.709a1.406,1.406,0,0,1,1.406,1.406v2l8.709-2.175A.7.7,0,0,0,24,152v-4.139a2.358,2.358,0,0,0-2.353-2.358Z"
+                          transform="translate(0 -138.68)"
+                        />
+                        <path
+                          d="M33.823,334.345a1.406,1.406,0,0,1-.6,1.158l-1.355.942a1.406,1.406,0,0,1-1.6,0l-1.355-.942a1.406,1.406,0,0,1-.6-1.158v-.473L20,331.8v6.089a2.358,2.358,0,0,0,2.353,2.358H39.772a2.358,2.358,0,0,0,2.353-2.358V331.8l-8.3,2.072Z"
+                          transform="translate(-19.062 -316.247)"
+                        />
+                        <path
+                          d="M229.809,306.323V302.4H227.1v3.923l1.355.938Z"
+                          transform="translate(-216.455 -288.225)"
+                        />
+                        <path
+                          d="M119.712,4.8a1.711,1.711,0,0,0-.994-1.552,2.03,2.03,0,0,1,2.016-1.833H125.3a2.03,2.03,0,0,1,2.016,1.833,1.711,1.711,0,0,0-.994,1.552v.572h3.412V4.8a1.711,1.711,0,0,0-1.008-1.561A3.441,3.441,0,0,0,125.3,0h-4.566a3.441,3.441,0,0,0-3.427,3.234A1.711,1.711,0,0,0,116.3,4.8v.572h3.413Z"
+                          transform="translate(-110.848)"
+                        />
+                      </g>
+                    </g></svg></span
+                >職種から探す
+              </h3>
+              <ul class="searchButtonBlockJobList">
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">事務長<span>（候補含む）</span></a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">経営企画室</a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">医事課長<span>（候補含む）</span></a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">総務</a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">財務・経理</a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">人事・労務</a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">情報管理</a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">広報</a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">地域連携室</a>
+                </li>
+                <li class="searchButtonBlockJobList__item">
+                  <a href="#" class="searchButtonBlockJobList__link">その他</a>
+                </li>
+              </ul>
+            </div>
+            <div class="searchButtonBlockContent">
+              <h3 class="m-heading__lv3 m-heading__lv3--center">
+                <span class="searchButtonBlockContent__icon"
+                  ><svg xmlns="http://www.w3.org/2000/svg" width="17.284" height="25" viewBox="0 0 17.284 25">
+                    <g transform="translate(5.6 8.1)">
+                      <path
+                        d="M8.642,0A8.642,8.642,0,0,0,0,8.642C0,13.426,8.642,25,8.642,25s8.642-11.574,8.642-16.358A8.642,8.642,0,0,0,8.642,0Zm0,12.191a3.7,3.7,0,1,1,3.549-3.549A3.7,3.7,0,0,1,8.642,12.191Z"
+                        transform="translate(-5.6 -8.1)"
+                      />
+                    </g></svg></span
+                >勤務地から探す
+              </h3>
+              <div class="searchButtonBlockArea">
+                <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked />
+                <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
+                <ul class="searchButtonBlockAreaList">
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">茨城</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">栃木</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">群馬</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">埼玉</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">千葉</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">東京</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">神奈川</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="searchButtonBlockArea">
+                <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockArea__toggleTrigger" />
+                <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
+                <ul class="searchButtonBlockAreaList">
+                  <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable">三重</li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">滋賀</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">京都</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">大阪</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">兵庫</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">奈良</a>
+                  </li>
+                  <li class="searchButtonBlockAreaList__item">
+                    <a href="#" class="searchButtonBlockAreaList__link">和歌山</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="service">
+          <div class="sectionHeading">
+            <h1 class="sectionHeading__title">サービスの特長</h1>
+            <small class="sectionHeading__enTitle">FEATURE</small>
+          </div>
+          <div class="serviceInner">
+            <div class="serviceContent">
+              <p class="serviceContent__image">
+                <img src="./img/top/img_service_01.jpg" alt="マネジメント層の求人が豊富" />
+              </p>
+              <div class="serviceContentText">
+                <p class="serviceContent__heading">
+                  <span class="serviceContent__step m-fontFamilyMontserrat">1</span>マネジメント層の<br />求人が豊富
+                </p>
+                <p class="serviceContent__outline">
+                  M.PLATは医療機関経営に参画する管理職の求人を多数掲載しています。経営に関心のある方、キャリアアップを図りたい方等は必見です。
+                </p>
+              </div>
+            </div>
+            <div class="serviceContent">
+              <p class="serviceContent__image">
+                <img src="./img/top/img_service_02.jpg" alt="医療系の専門資格をもつコンサルタントがサポート" />
+              </p>
+              <div class="serviceContentText">
+                <p class="serviceContent__heading">
+                  <span class="serviceContent__step m-fontFamilyMontserrat">2</span
+                  >医療系の専門資格をもつ<br />コンサルタントがサポート
+                </p>
+                <p class="serviceContent__outline">
+                  M.PLATでは医療経営士や医療系専門職の資格をもつコンサルタントがあなたの求職活動を全面的にサポートいたします。
+                </p>
+              </div>
+            </div>
+            <div class="serviceContent">
+              <p class="serviceContent__image">
+                <img src="./img/top/img_service_03.jpg" alt="医療機関との豊富なネットワーク" />
+              </p>
+              <div class="serviceContentText">
+                <p class="serviceContent__heading">
+                  <span class="serviceContent__step m-fontFamilyMontserrat">3</span>医療機関との<br />豊富なネットワーク
+                </p>
+                <p class="serviceContent__outline">
+                  当社エムステージは、16年の歴史と医師紹介事業で年間約30,000件のマッチング実績があり、医療機関との豊富なネットワークがあります。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <footer class="globalFooter">
-        <div class="globalFooter__inner">
-          <div class="globalFooter__guideBlock">
-            <p class="globalFooter__guideText pc-view">ご不明点などお問い合わせはこちらから</p>
-            <p class="globalFooter__guideText sp-view">お問い合わせはこちらから</p>
-            <a class="globalFooter__contactButton" href="/dist/contact.html"
-              ><span class="globalFooter__contactIcon"
+        <div class="globalFooterInner">
+          <div class="globalFooterGuideBlock">
+            <p class="globalFooterGuide__text pc-view">ご不明点などお問い合わせはこちらから</p>
+            <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
+            <a class="globalFooterGuide__contactButton" href="/contact.html"
+              ><span class="globalFooterGuide__contactIcon"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
                   <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
                   <path d="M8.3,7.836,0,14.971V.7Z" transform="translate(0 0.208)" />
@@ -227,10 +611,10 @@
                   <path d="M13.6,7.836,21.9.7V14.971Z" transform="translate(3.63 0.208)" /></svg></span
               >お問い合わせフォーム</a
             >
-            <div class="globalFooter__telBox">
-              <a href="tel:03-9999-9999" class="globalFooter__telBoxInner">
-                <p class="globalFooter__number">
-                  <span class="globalFooter__numberIcon"
+            <div class="globalFooterTelBox">
+              <a href="tel:03-9999-9999" class="globalFooterTelBoxInner">
+                <p class="globalFooterTelBox__number">
+                  <span class="globalFooterTelBox__numberIcon"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.986" viewBox="0 0 25 24.986">
                       <g transform="translate(12.5 12.493)">
                         <g transform="translate(-12.5 -12.493)">
@@ -250,23 +634,23 @@
                       </g></svg></span
                   >03-9999-9999
                 </p>
-                <p class="globalFooter__reception">受付時間　平日10:00~18:00 （土日祝日を除く）</p>
+                <p class="globalFooterTelBox__reception">受付時間　平日10:00~18:00 （土日祝日を除く）</p>
               </a>
             </div>
           </div>
-          <div class="globalFooter__naviBlock">
-            <ul class="globalFooter__linkList">
-              <li class="globalFooter__linkItem globalFooter__linkItem--bold m-frontLink">
+          <div class="globalFooterNavBlock">
+            <ul class="globalFooterNavList">
+              <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
                 <a href="#">初めての方へ</a>
               </li>
-              <li class="globalFooter__linkItem globalFooter__linkItem--bold m-frontLink">
+              <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
                 <a href="#">医療機関採用担当者の方へ</a>
               </li>
-              <li class="globalFooter__linkItem"><a href="#">会社概要</a></li>
-              <li class="globalFooter__linkItem"><a href="#">個人情報保護方針</a></li>
-              <li class="globalFooter__linkItem"><a href="#">利用規約</a></li>
+              <li class="globalFooterNavList__item"><a href="#">会社概要</a></li>
+              <li class="globalFooterNavList__item"><a href="#">個人情報保護方針</a></li>
+              <li class="globalFooterNavList__item"><a href="#">利用規約</a></li>
             </ul>
-            <div class="globalFooter__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
+            <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
           </div>
         </div>
       </footer>

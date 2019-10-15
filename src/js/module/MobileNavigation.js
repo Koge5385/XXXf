@@ -20,16 +20,16 @@ class MobileNavigation {
    * @desc SP時ナビゲーションが開いた状態にスクロールを禁止する
    */
   scrollControl() {
-    this.triggerElement = document.getElementsByClassName(TEXT_TRIGGER_CLASS)
+    this.triggerElement = document.querySelector(TEXT_TRIGGER_CLASS)
 
-    // 初期設定関数の設定
+    // 関数の初期セット
     function scrollHandler(event) {
       event.preventDefault()
     }
 
     // checkboxをトリガーにスクロールを制御
     this.triggerElement.addEventListener(CHANGE_EVENT, () => {
-      if (this.triggerElement[0].checked) {
+      if (this.triggerElement.checked) {
         document.addEventListener(MOUSEWHEEL_EVENT, scrollHandler, {passive: false})
         document.addEventListener(TOUCHMOVE_EVENT, scrollHandler, {passive: false})
       } else {

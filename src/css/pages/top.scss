@@ -1,11 +1,12 @@
 @import "../_index";
 
+@import url("https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css");
+
 .container {
   width: 100%;
   min-width: 980px;
   @include media(sp) {
     min-width: auto;
-    padding: 0 10px;
   }
 }
 .mainVisual {
@@ -19,6 +20,9 @@
     min-width: auto;
     height: 34.43113772vh;
   }
+  @include landscape(sp) {
+    height: calc(100vh - 46px);
+  }
 }
 .mainVisual__catchCopy {
   @include fontsize(62, 16);
@@ -31,4 +35,322 @@
     line-height: 1.2058823529;
     padding-top: calc(12.69461078vh - 46px);
   }
+  @include landscape(sp) {
+    padding-top: 20vh;
+  }
+}
+.sectionHeading {
+  width: 100%;
+  min-width: 980px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 36px;
+  @include media(sp) {
+    min-width: auto;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+.sectionHeading__title {
+  @include fontsize(36, 16);
+  line-height: 1.4;
+  color: #5d687c;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.sectionHeading__enTitle {
+  @extend .m-fontFamilyMontserrat;
+  @include fontsize(16, 16);
+  line-height: 1;
+  color: #0091d4;
+}
+.searchBox {
+  @include _baseContentsWidth;
+  position: relative;
+}
+.searchBoxInner {
+  @include _baseContentsWidth;
+  height: 243px;
+  position: absolute;
+  top: -136px;
+  left: 0;
+  background: url(../../img/top/bg_serchbox.png) no-repeat center center;
+}
+.searchBox__title {
+  @include fontsize(24, 16);
+  color: #5d687c;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin: 28px 0 0 33px;
+}
+.searchBox__titleIcon {
+  height: 26.84px;
+  margin-right: 10px;
+  svg {
+    fill: #8da2bf;
+  }
+}
+.suggestJob {
+  width: 100%;
+  background-color: #f7f8f9;
+  padding: 164px 0 64px;
+}
+.jobcardWrap {
+  width: 100%;
+}
+.jobcardInner {
+  padding: 7px 0;
+}
+.jobcardList {
+  position: relative;
+}
+.jobcard__item {
+  @include fontsize(16, 16);
+  line-height: 1;
+  width: 350px;
+  padding: 30px;
+  margin: 0 11px 1px 0;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.16);
+  border-radius: 6px;
+  @include media(sp) {
+    padding: 20px;
+    width: 280px;
+  }
+}
+.jobcard__title {
+  @include fontsize(20, 16);
+  line-height: 1;
+  color: #1b457e;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 17.6px;
+  font-weight: bold;
+  border-bottom: 1px solid #b3c1d3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  @include media(sp) {
+    line-height: 1.6;
+    padding-bottom: 13px;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+  }
+}
+.jobcard__line {
+  @include fontsize(16, 16);
+  display: flex;
+  margin-bottom: 5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include media(sp) {
+    display: block;
+  }
+  dt {
+    color: #5d687c;
+    margin-right: 16px;
+    padding-left: 30px;
+    white-space: nowrap;
+    @include media(sp) {
+      padding-left: 26px;
+      margin-right: 0;
+    }
+  }
+  dd {
+    flex: 1;
+    color: #000;
+    @include media(sp) {
+      margin: 0 0 15px 26px;
+    }
+  }
+  &--location {
+    background: url(../../img/common/icon/icon_place.svg) no-repeat 2px top;
+    margin-bottom: 10px;
+    align-items: center;
+    @include media(sp) {
+      background-size: 14.85px;
+    }
+  }
+  &--work {
+    background: url(../../img/common/icon/icon_bag.svg) no-repeat left top;
+    @include media(sp) {
+      background-size: 18.3px;
+    }
+  }
+  &--income {
+    background: url(../../img/common/icon/icon_money.svg) no-repeat left 4px;
+    align-items: center;
+    @include media(sp) {
+      background-position-y: top;
+      background-size: 20px;
+    }
+    dd {
+      @include fontsize(22, 16);
+      color: #ec652b;
+      font-weight: bold;
+      letter-spacing: -1px;
+      @include media(sp) {
+        margin: 0 0 0 25px;
+        white-space: nowrap;
+        letter-spacing: -2px;
+      }
+      span {
+        @include fontsize(16, 16);
+      }
+    }
+  }
+}
+.jobcard__linkText {
+  @include fontsize(16, 16);
+  font-weight: bold;
+  line-height: 1;
+  color: #1b457e;
+  text-align: center;
+  margin-top: 13px;
+  padding-top: 20px;
+  border-top: 1px solid #b3c1d3;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    right: 45px;
+    width: 9px;
+    height: 9px;
+    border-left: 2px solid #1b457e;
+    border-bottom: 2px solid #1b457e;
+    transform: rotate(-135deg);
+    @include media(sp) {
+      right: 25px;
+    }
+  }
+}
+.jobcard__link {
+  display: block;
+  &:hover {
+    text-decoration: none;
+    .jobcard__linkText {
+      text-decoration: underline;
+    }
+  }
+}
+.jobcard__firstText {
+  margin-right: 1em;
+  @include media(sp) {
+    margin-right: 0;
+  }
+}
+.jobcardList__control {
+  position: absolute;
+  top: 21px;
+  bottom: 0;
+  width: 60px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  @include media(sp) {
+    display: none;
+  }
+  &--prev {
+    left: 0;
+  }
+  &--next {
+    right: 0;
+  }
+}
+.searchJob {
+  width: 100%;
+}
+.service {
+  width: 100%;
+  background-color: #f7f8f9;
+  padding: 80px 0 129px;
+  @include media(sp) {
+    padding-bottom: 90px;
+  }
+}
+.serviceInner {
+  @include _baseContentsWidth;
+  display: flex;
+  justify-content: space-between;
+  @include media(sp) {
+    display: block;
+    padding: 0 10px;
+  }
+}
+.serviceContent {
+  width: calc(100% / 3);
+  background-color: #fff;
+  margin-right: 1px;
+  &:last-child {
+    margin-right: 0;
+  }
+  @include media(sp) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.serviceContent__image {
+  img {
+    width: 100%;
+  }
+}
+.serviceContentText {
+  padding: 21px 20px 18px;
+}
+.serviceContent__heading {
+  @include fontsize(20, 16);
+  color: #5d687c;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding-left: 57px;
+  position: relative;
+  @include media(sp) {
+    margin-bottom: 8px;
+  }
+}
+.serviceContent__step {
+  @include fontsize(35, 16);
+  font-weight: 300;
+  color: #0091d4;
+  position: absolute;
+  left: 0;
+  top: -10px;
+  @include media(sp) {
+    left: 5px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    width: 70px;
+    height: 70px;
+    border: 1px solid transparent;
+    border-right: 1px solid #0091d4;
+    transform: rotate(44deg);
+  }
+}
+.serviceContent__outline {
+  @include fontsize(16, 16);
+}
+
+// swiper CSS
+.swiper-slide {
+  width: 350px !important;
+  @include media(sp) {
+    width: 280px !important;
+  }
+}
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%231b457e'%2F%3E%3C%2Fsvg%3E");
+}
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%231b457e'%2F%3E%3C%2Fsvg%3E");
 }
