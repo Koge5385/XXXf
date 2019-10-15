@@ -1,11 +1,14 @@
 import AxiosBase from '../module/AxiosBase'
 import MobileNavigation from '../module/MobileNavigation'
 import AdjustHeightJobCardLine from '../module/AdjustHeightJobCardLine'
+import AutoTextOmit from '../module/AutoTextOmit'
 import Swiper from '../lib/vendor/swiper/swiper'
 
 // 定数
 const LOAD_EVENT = 'DOMContentLoaded'
 const TEXT_WORK_TARGET_CLASS = '.js-adjustHeight-work-target'
+const TEXT_TARGET_CLASS = '.js-autoTextOmit-target'
+const TEXT_OMIT_SIZE = 23
 const TEXT_SWIPER_TARGET_CLASS = '.swiper-container'
 const TEXT_SWIPER_OPTION = {
   loop: true,
@@ -30,7 +33,10 @@ window.addEventListener(LOAD_EVENT, () => {
   // jobcardスライダーの定義
   new Swiper(TEXT_SWIPER_TARGET_CLASS, TEXT_SWIPER_OPTION)
 
-  // jobcard内「見出し」と「仕事内容」の高さを揃える
+  // jobcard内の「見出し」の文字数制限
+  new AutoTextOmit(TEXT_TARGET_CLASS, TEXT_OMIT_SIZE)
+
+  // jobcard内の「仕事内容」の高さを揃える
   new AdjustHeightJobCardLine(TEXT_WORK_TARGET_CLASS)
 
   // API連携テスト

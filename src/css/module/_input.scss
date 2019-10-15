@@ -3,13 +3,12 @@
   appearance: none;
   @include fontsize(16, 16);
   line-height: 1;
-  color: #333;
-  font-weight: bold;
+  color: #5d687c;
+  position: relative;
   width: 100%;
-  padding: 0 16.5px 0 50px;
-  background-color: #fff;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
+  background: transparent;
   &::placeholder {
     color: #5d687c;
     font-weight: normal;
@@ -23,26 +22,13 @@
   color: #5d687c;
   position: relative;
   width: 100%;
-  padding: 0 25px 0 50px;
-  background-color: #fff;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
+  background: url(../../img/common/icon/icon_arrow_down.svg) no-repeat right
+    11.5px center;
   option {
     &:first-child {
       display: none;
     }
-  }
-}
-.m-inputSelectArrow {
-  &::after {
-    content: "";
-    position: absolute;
-    top: calc(50% - 5.5px);
-    right: 16.5px;
-    width: 8px;
-    height: 8px;
-    border-left: 2px solid #1b457e;
-    border-bottom: 2px solid #1b457e;
-    transform: rotate(-45deg);
   }
 }

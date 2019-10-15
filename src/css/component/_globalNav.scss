@@ -156,7 +156,7 @@
   background-color: #1b457e;
   padding: 20px 0 30px;
 }
-.globalMobileNavTile {
+.globalMobileNavCell {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -165,13 +165,13 @@
     justify-content: space-around;
   }
 }
-.globalMobileNavTileItem {
+.globalMobileNavCellItem {
   margin: 0;
   @include landscape(sp) {
     width: 30%;
   }
 }
-.globalMobileNavTileItem__link {
+.globalMobileNavCellItem__link {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -192,7 +192,7 @@
     width: 100%;
   }
 }
-.globalMobileNavTileItem__icon {
+.globalMobileNavCellItem__icon {
   margin-top: 10px;
   margin-bottom: 14px;
   &--list {

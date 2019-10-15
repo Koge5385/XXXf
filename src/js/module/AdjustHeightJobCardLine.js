@@ -5,6 +5,7 @@
 class AdjustHeightJobCardLine {
   /**
    * @constructor
+   * @param {String} targetClass 対象のクラス名
    */
   constructor(targetClass) {
     this.setParameter(targetClass)
@@ -13,6 +14,7 @@ class AdjustHeightJobCardLine {
 
   /**
    * @desc 取得した全要素の最大の高さの取得処理
+   * @param {String} targetClass 対象のクラス名
    */
   setParameter(targetClass) {
     this.targetElements = document.querySelectorAll(targetClass)

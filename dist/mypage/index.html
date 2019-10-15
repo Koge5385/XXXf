@@ -20,6 +20,18 @@
     <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
 
     <link rel="stylesheet" type="text/css" href="/dist/css/pages/mypage.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150115128-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-150115128-1");
+    </script>
   </head>
   <body>
     <div class="contentsWrap">
@@ -132,10 +144,10 @@
             <div class="globalMobileNavBlock">
               <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
               <div class="globalMobileNavContents">
-                <ul class="globalMobileNavTile">
-                  <li class="globalMobileNavTileItem">
-                    <a href="/dist/job/" class="globalMobileNavTileItem__link">
-                      <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--list"
+                <ul class="globalMobileNavCell">
+                  <li class="globalMobileNavCellItem">
+                    <a href="/dist/job/" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
                           <g transform="translate(20.304 17.5)">
                             <g transform="translate(-20.304 -17.5)">
@@ -152,9 +164,9 @@
                       >求人一覧
                     </a>
                   </li>
-                  <li class="globalMobileNavTileItem">
-                    <a href="#" class="globalMobileNavTileItem__link">
-                      <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--login"
+                  <li class="globalMobileNavCellItem">
+                    <a href="#" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--login"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 28 35">
                           <g transform="translate(14 17.5)">
                             <path
@@ -165,9 +177,9 @@
                       >ログイン
                     </a>
                   </li>
-                  <li class="globalMobileNavTileItem">
-                    <a href="#" class="globalMobileNavTileItem__link">
-                      <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--regist"
+                  <li class="globalMobileNavCellItem">
+                    <a href="#" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
                           <g transform="translate(9.95 11)">
                             <g transform="translate(-9.95 -11)">
@@ -186,15 +198,15 @@
                   </li>
                 </ul>
                 <!-- ログイン後のナビゲーションソース
-          <ul class="globalMobileNavTile">
-            <li class="globalMobileNavTileItem">
-              <a href="/dist/job/" class="globalMobileNavTileItem__link globalMobileNavTileItem__link--loggedin">
-                <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--list"><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35"><g transform="translate(20.304 17.5)"><g transform="translate(-20.304 -17.5)"><rect width="32.165" height="4.041" transform="translate(8.443)"/><rect width="32.165" height="4.041" transform="translate(8.443 10.253)"/><rect width="32.165" height="4.041" transform="translate(8.443 20.706)"/><rect width="32.165" height="4.041" transform="translate(8.443 30.959)"/><rect width="4.021" height="4.041"/><rect width="4.021" height="4.041" transform="translate(0 10.253)"/><rect width="4.021" height="4.041" transform="translate(0 20.706)"/><rect width="4.021" height="4.041" transform="translate(0 30.959)"/></g></g></svg></span>求人一覧
+          <ul class="globalMobileNavCell">
+            <li class="globalMobileNavCellItem">
+              <a href="/dist/job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35"><g transform="translate(20.304 17.5)"><g transform="translate(-20.304 -17.5)"><rect width="32.165" height="4.041" transform="translate(8.443)"/><rect width="32.165" height="4.041" transform="translate(8.443 10.253)"/><rect width="32.165" height="4.041" transform="translate(8.443 20.706)"/><rect width="32.165" height="4.041" transform="translate(8.443 30.959)"/><rect width="4.021" height="4.041"/><rect width="4.021" height="4.041" transform="translate(0 10.253)"/><rect width="4.021" height="4.041" transform="translate(0 20.706)"/><rect width="4.021" height="4.041" transform="translate(0 30.959)"/></g></g></svg></span>求人一覧
               </a>
             </li>
-            <li class="globalMobileNavTileItem">
-              <a href="#" class="globalMobileNavTileItem__link globalMobileNavTileItem__link--loggedin">
-                <span class="globalMobileNavTileItem__icon globalMobileNavTileItem__icon--regist"><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z" transform="translate(1.739 -0.601)"/><path d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z" transform="translate(-1 9.171)"/></g></g></svg></span>マイページ
+            <li class="globalMobileNavCellItem">
+              <a href="#" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z" transform="translate(1.739 -0.601)"/><path d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z" transform="translate(-1 9.171)"/></g></g></svg></span>マイページ
               </a>
             </li>
           </ul>

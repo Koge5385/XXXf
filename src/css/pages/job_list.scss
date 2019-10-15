@@ -258,7 +258,7 @@
 .searchSideBox {
   border-top: 2px solid #1b457e;
   background-color: #fff;
-  padding: 20px 30px 30px;
+  padding: 20px 25px 30px;
   position: -webkit-sticky;
   position: sticky;
   top: 125px;
@@ -269,21 +269,18 @@
     @include fontsize(33, 16);
     color: #ec652b;
     font-weight: bold;
+    letter-spacing: -2px;
   }
 }
-.searchSelectArea {
+.searchInputArea {
   margin: 18px 0 20px;
 }
-.searchSelectList {
+.searchInputList {
   list-style-type: none;
 }
-.searchSelectList__item {
+.searchInputList__item {
   position: relative;
   margin-bottom: 10px;
-  background-color: #fff;
-}
-.searchSelectList__searchSelect {
-  height: 50px;
   &--job {
     background: url(../../img/common/icon/icon_bag.svg) no-repeat 13px center;
   }
@@ -294,18 +291,22 @@
   &--salary {
     background: url(../../img/common/icon/icon_money.svg) no-repeat 13px center;
   }
-}
-.searchSelectList__searchText {
-  height: 50px;
   &--freeWord {
     background: url(../../img/common/icon/icon_talk.svg) no-repeat 14px center;
   }
 }
+.searchInputList__input {
+  height: 50px;
+  padding: 0 25px 0 50px;
+  &--freeWord {
+    padding: 0 16.5px 0 50px;
+  }
+}
 .search__submit {
   @include fontsize(16, 16);
-  line-height: 50px;
   width: 200px;
   margin: 0 auto;
+  padding: 11px 0 10px;
 }
 .pagenationWrap {
   @include _baseContentsWidth;
@@ -344,11 +345,11 @@
   @include fontsize(14, 16);
   color: #1b457e;
   text-align: center;
-  line-height: 40px;
   width: 40px;
+  padding: 9px 0;
   @include media(sp) {
-    line-height: 50px;
     width: 50px;
+    padding: 14px 0;
   }
   &:hover {
     text-decoration: none;
@@ -363,7 +364,7 @@
     margin-bottom: 70px;
   }
 }
-.mobilesearchWrap {
+.mobileSearchWrap {
   width: 100%;
   height: 70px;
   padding: 10px;
@@ -374,12 +375,12 @@
   z-index: 100;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
 }
-.mobilesearchInner {
+.mobileSearchInner {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.mobilesearch__resultText {
+.mobileSearch__resultText {
   @include fontsize(14, 16);
   line-height: 1;
   text-align: right;
@@ -389,15 +390,15 @@
     color: #ec652b;
   }
 }
-.mobilesearch__toggleTrigger {
+.mobileSearch__toggleTrigger {
   display: none;
 }
-.mobilesearch__openLabel {
+.mobileSearch__openLabel {
   @include fontsize(16, 16);
-  line-height: 50px;
   color: #1b457e;
   text-align: center;
   width: 61.33%;
+  padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
   cursor: pointer;
@@ -405,13 +406,13 @@
     width: 80%;
   }
 }
-.mobilesearch__closeLabel {
+.mobileSearch__closeLabel {
   display: none;
   @include fontsize(16, 16);
-  line-height: 50px;
   color: #1b457e;
   text-align: center;
   width: 61.33%;
+  padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
   cursor: pointer;
@@ -419,7 +420,7 @@
     width: 80%;
   }
 }
-.mobilesearchBoxWrap {
+.mobileSearchBoxWrap {
   display: none;
   position: absolute;
   z-index: 10;
@@ -427,16 +428,16 @@
   left: 0;
   width: 100%;
 }
-.mobilesearch__toggleTrigger:checked ~ .mobilesearch__openLabel {
+.mobileSearch__toggleTrigger:checked ~ .mobileSearch__openLabel {
   display: none;
 }
-.mobilesearch__toggleTrigger:checked ~ .mobilesearch__closeLabel {
+.mobileSearch__toggleTrigger:checked ~ .mobileSearch__closeLabel {
   display: block;
 }
-.mobilesearch__toggleTrigger:checked ~ .mobilesearchBoxWrap {
+.mobileSearch__toggleTrigger:checked ~ .mobileSearchBoxWrap {
   display: block;
 }
-.mobilesearch__closeBackground {
+.mobileSearch__closeBackground {
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -446,7 +447,7 @@
   background-color: rgba(51, 51, 51, 0.6);
   cursor: pointer;
 }
-.mobilesearchBox {
+.mobileSearchBox {
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -455,48 +456,49 @@
   background-color: #fff;
   padding: 10px;
 }
-.mobilesearchBoxInner {
+.mobileSearchBoxInner {
   width: 100%;
   background-color: rgba(247, 248, 249, 0.9);
   padding: 20px;
 }
-.mobilesearchList {
+.mobileSearchList {
   list-style-type: none;
 }
-.mobilesearchList__item {
+.mobileSearchList__item {
   position: relative;
   margin-bottom: 10px;
-  background-color: #fff;
   &:last-child {
     margin-bottom: 20px;
   }
-}
-.mobilesearchList__searchSelect {
-  @include fontsize(14, 16);
-  color: #5d687c;
-  height: 50px;
   &--job {
-    background: url(../../img/common/icon/icon_bag.svg) no-repeat 13px center;
+    background: #fff url(../../img/common/icon/icon_bag.svg) no-repeat 13px
+      center;
   }
   &--place {
-    background: url(../../img/common/icon/icon_place.svg) no-repeat 16.4px
+    background: #fff url(../../img/common/icon/icon_place.svg) no-repeat 16.4px
       center;
   }
   &--salary {
-    background: url(../../img/common/icon/icon_money.svg) no-repeat 13px center;
+    background: #fff url(../../img/common/icon/icon_money.svg) no-repeat 13px
+      center;
+  }
+  &--freeWord {
+    background: #fff url(../../img/common/icon/icon_talk.svg) no-repeat 14px
+      center;
   }
 }
-.mobilesearchList__searchText {
+.mobileSearchList__input {
   @include fontsize(14, 16);
   color: #5d687c;
   height: 50px;
+  padding: 0 25px 0 50px;
   &--freeWord {
-    background: url(../../img/common/icon/icon_talk.svg) no-repeat 14px center;
+    padding: 0 16.5px 0 50px;
   }
 }
-.mobilesearch__submit {
+.mobileSearch__submit {
   @include fontsize(18, 16);
-  line-height: 60px;
   width: 230px;
   margin: 0 auto;
+  padding: 14px 0;
 }

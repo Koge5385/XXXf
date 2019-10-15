@@ -10,6 +10,8 @@
     {% include '_modules/_meta.njk' %}
 
     <link rel="stylesheet" type="text/css" href="./css/pages/top.css">
+
+    {% include '_modules/_ga.njk' %}
   </head>
   <body>
     <div class="contentsWrap">
@@ -19,9 +21,77 @@
         <h1 class="mainVisual__catchCopy">医療経営を<br>一つ上のステージへ</h1>
       </div>
       <div class="container">
-        <section class="searchBox">
-          <div class="searchBoxInner">
-            <p class="searchBox__title"><span class="searchBox__titleIcon">{{ macro.svg_code_search() }}</span>希望条件から求人を探す</p>
+        <section class="topSearchBox">
+          <div class="topSearchBoxInner">
+            <p class="topSearchBox__title"><span class="topSearchBox__titleIcon">{{ macro.svg_code_search() }}</span>希望条件から求人を探す</p>
+            <div class="topSearchBoxContent">
+              <ul class="topSearchBoxList">
+                <li class="topSearchBoxList__item topSearchBoxList__item--job">
+                  <select name="top_selectJob" class="m-inputSelect topSearchBoxList__input">
+                    <option value="">職種から探す</option>
+                    {%- set selectJob = [
+                      {job: '事務長（候補含む）'},
+                      {job: '経営企画室'},
+                      {job: '医事課長（候補含む）'},
+                      {job: '総務'},
+                      {job: '財務・経理'},
+                      {job: '人事・労務'},
+                      {job: '情報管理'},
+                      {job: '広報'},
+                      {job: '地域連携室'},
+                      {job: 'その他'}
+                    ] -%}
+                    {%- for item in selectJob %}
+                    <option value="{{ loop.index }}">{{ item.job }}</option>
+                    {%- endfor %}
+                  </select>
+                </li>
+                <li class="topSearchBoxList__item topSearchBoxList__item--place">
+                  <select name="top_selectPlace" class="m-inputSelect topSearchBoxList__input">
+                    <option value="">勤務地から探す</option>
+                    {%- set selectPlace = [
+                      {place: '茨城'},
+                      {place: '栃木'},
+                      {place: '群馬'},
+                      {place: '埼玉'},
+                      {place: '千葉'},
+                      {place: '東京'},
+                      {place: '神奈川'},
+                      {place: '三重'},
+                      {place: '滋賀'},
+                      {place: '京都'},
+                      {place: '大阪'},
+                      {place: '兵庫'},
+                      {place: '奈良'},
+                      {place: '和歌山'}
+                    ] -%}
+                    {%- for item in selectPlace %}
+                    <option value="{{ loop.index }}">{{ item.place }}</option>
+                    {%- endfor %}
+                  </select>
+                </li>
+                <li class="topSearchBoxList__item topSearchBoxList__item--salary">
+                  <select name="top_selectSalary" class="m-inputSelect topSearchBoxList__input">
+                    <option value="">年収から探す</option>
+                    {%- set selectSalary = [
+                      {salary: '300万〜'},
+                      {salary: '400万〜'},
+                      {salary: '500万〜'},
+                      {salary: '600万〜'},
+                      {salary: '700万〜'},
+                      {salary: '800万〜'}
+                    ] -%}
+                    {%- for item in selectSalary %}
+                    <option value="{{ loop.index }}">{{ item.salary }}</option>
+                    {%- endfor %}
+                  </select>
+                </li>
+                <li class="topSearchBoxList__item topSearchBoxList__item--freeWord">
+                  <input name="top_freeWord" type="text" class="m-inputText topSearchBoxList__input topSearchBoxList__input--freeWord" placeholder="キーワードで探す">
+                </li>
+              </ul>
+              <a href="#" class="m-button m-button--blue topSearchBox__submit">この条件で<br class="pc-view"><span>検索</span></a>
+            </div>
           </div>
         </section>
         <section class="suggestJob">
@@ -47,7 +117,7 @@
                 {%- for item in jobcarditems %}
                 <div class="jobcard__item swiper-slide">
                   <a href="" class="jobcard__link">
-                    <p class="jobcard__title">{{ item.heading }}</p>
+                    <p class="jobcard__title js-autoTextOmit-target">{{ item.heading }}</p>
                     <dl class="jobcard__line jobcard__line--location">
                       <dt>勤務地</dt>
                       <dd>{{ item.place }}</dd>
