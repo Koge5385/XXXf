@@ -408,15 +408,9 @@ a {
 .globalNavItem__link {
   color: #1b457e;
   width: 90px;
-  height: 70px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  @media screen and (max-width: 768px) {
-    .globalNavItem__link {
-      width: 60px;
-      height: 60px; } }
+  padding: 10px 0 9px; }
   .globalNavItem__link:hover {
     background-color: #d3d9e0;
     text-decoration: none; }
@@ -432,43 +426,24 @@ a {
 
 .globalNavItem__icon {
   display: block;
-  margin-bottom: 11px;
+  margin-bottom: 5px;
   height: 24px; }
-  @media screen and (max-width: 768px) {
-    .globalNavItem__icon {
-      height: 20px;
-      margin-bottom: 9px; } }
   .globalNavItem__icon svg {
     fill: #1b457e; }
   .globalNavItem__icon--list svg {
     height: 20px; }
-    @media screen and (max-width: 768px) {
-      .globalNavItem__icon--list svg {
-        height: 17px; } }
   .globalNavItem__icon--login svg {
     height: 24px; }
-    @media screen and (max-width: 768px) {
-      .globalNavItem__icon--login svg {
-        height: 20px; } }
   .globalNavItem__icon--regist svg {
     fill: #fff;
     height: 22px; }
-    @media screen and (max-width: 768px) {
-      .globalNavItem__icon--regist svg {
-        height: 20px; } }
   .globalNavItem__icon--loggedin svg {
     fill: #1b457e; }
 
 .globalNavItem__label {
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 1.6;
-  line-height: 1; }
-  @media screen and (max-width: 768px) {
-    .globalNavItem__label {
-      font-size: 10px;
-      font-size: 0.625rem;
-      line-height: 1.6; } }
+  line-height: 1.6; }
 
 .globalMobileNav {
   margin: 0; }
@@ -732,16 +707,13 @@ a {
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 1.6;
-  line-height: 1.4;
   color: #5d687c;
-  font-weight: bold;
-  margin-bottom: 5px; }
+  font-weight: bold; }
 
 .keyVisual__enTitle {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
-  line-height: 1;
   color: #0091d4; }
 
 .globalFooter {
@@ -789,10 +761,9 @@ a {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.6;
-  line-height: 1;
   width: 280px;
   height: 70px;
-  padding: 25px 0; }
+  padding: 18px 0; }
   @media screen and (max-width: 768px) {
     .globalFooterGuide__contactButton {
       display: block;
@@ -1213,7 +1184,7 @@ a {
   background-color: #1b457e;
   border-radius: 0 6px 0 0 / 0 6px 0 0; }
   .jobDetailHeaderStatus::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -1362,9 +1333,8 @@ a {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6;
-  line-height: 1;
   width: 320px;
-  padding: 26px 0; }
+  padding: 21px 0; }
   .jobDetailContent__actionButton:first-child {
     margin-right: 20px; }
   @media screen and (max-width: 768px) {
@@ -1372,9 +1342,8 @@ a {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 1.6;
-      line-height: 1.4;
       width: 50%;
-      padding: 8px 0 11px; }
+      padding: 8px 0; }
       .jobDetailContent__actionButton span {
         font-size: 16px;
         font-size: 1rem;
@@ -1391,10 +1360,9 @@ a {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
-  line-height: 1;
   font-weight: normal;
   width: 200px;
-  padding: 12px 0; }
+  padding: 8px 0 7px; }
   .jobDetailBackLink__item::before {
     left: 10px;
     top: 16px; }

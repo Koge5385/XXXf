@@ -37,10 +37,9 @@
   @extend .m-button;
   @extend .m-button--gray;
   @include fontsize(20, 16);
-  line-height: 1;
   width: 280px;
   height: 70px;
-  padding: 25px 0;
+  padding: 18px 0;
   @include media(sp) {
     display: block;
     width: 90%;

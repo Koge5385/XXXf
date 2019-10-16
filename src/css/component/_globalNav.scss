@@ -15,15 +15,9 @@
 .globalNavItem__link {
   color: #1b457e;
   width: 90px;
-  height: 70px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  @include media(sp) {
-    width: 60px;
-    height: 60px;
-  }
+  padding: 10px 0 9px;
   &:hover {
     background-color: #d3d9e0;
     text-decoration: none;
@@ -43,33 +37,20 @@
 }
 .globalNavItem__icon {
   display: block;
-  margin-bottom: 11px;
+  margin-bottom: 5px;
   height: 24px;
-  @include media(sp) {
-    height: 20px;
-    margin-bottom: 9px;
-  }
   svg {
     fill: #1b457e;
   }
   &--list svg {
     height: 20px;
-    @include media(sp) {
-      height: 17px;
-    }
   }
   &--login svg {
     height: 24px;
-    @include media(sp) {
-      height: 20px;
-    }
   }
   &--regist svg {
     fill: #fff;
     height: 22px;
-    @include media(sp) {
-      height: 20px;
-    }
   }
   &--loggedin svg {
     fill: #1b457e;
@@ -77,10 +58,6 @@
 }
 .globalNavItem__label {
   @include fontsize(14, 16);
-  line-height: 1;
-  @include media(sp) {
-    @include fontsize(10, 16);
-  }
 }
 
 .globalMobileNav {

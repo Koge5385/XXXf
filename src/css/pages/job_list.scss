@@ -130,7 +130,7 @@
   color: #333;
   width: 92.21311475%;
   margin: 30px auto 0;
-  padding-bottom: 31px;
+  padding-bottom: 25px;
   @include media(sp) {
     margin: 20px auto 0;
   }
@@ -233,7 +233,7 @@
   }
 }
 .jobListContentTable {
-  margin-bottom: 29px;
+  margin-bottom: 25px;
   @include media(sp) {
     margin-bottom: 31px;
   }
@@ -251,15 +251,16 @@
   @include fontsize(16, 16);
   color: #1b457e;
   font-weight: bold;
-  line-height: 1;
   width: 175px;
   margin: 0 auto;
+  &::after {
+    top: 7px;
+  }
 }
 .searchSideBox {
   border-top: 2px solid #1b457e;
   background-color: #fff;
   padding: 20px 25px 30px;
-  position: -webkit-sticky;
   position: sticky;
   top: 125px;
 }

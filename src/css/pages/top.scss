@@ -57,12 +57,10 @@
   line-height: 1.4;
   color: #5d687c;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 .sectionHeading__enTitle {
   @extend .m-fontFamilyMontserrat;
   @include fontsize(16, 16);
-  line-height: 1;
   color: #0091d4;
 }
 .topSearchBox {
@@ -209,7 +207,6 @@
 }
 .jobcard__item {
   @include fontsize(16, 16);
-  line-height: 1;
   width: 350px;
   margin: 0 11px 1px 0;
   box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.16);
@@ -304,7 +301,6 @@
 .jobcard__linkText {
   @include fontsize(16, 16);
   font-weight: bold;
-  line-height: 1;
   color: #1b457e;
   text-align: center;
   margin-top: 13px;
@@ -314,7 +310,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 4px;
+    bottom: 8px;
     right: 45px;
     width: 9px;
     height: 9px;
@@ -328,7 +324,7 @@
 }
 .jobcard__link {
   display: block;
-  padding: 24px 30px 30px 30px;
+  padding: 24px 30px;
   @include media(sp) {
     padding: 20px;
   }
