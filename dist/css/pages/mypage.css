@@ -332,7 +332,8 @@ a {
 
 .m-inputText {
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
@@ -343,13 +344,20 @@ a {
   border: 1px solid #b3c1d3;
   border-radius: 6px;
   background: transparent; }
+  .m-inputText::-webkit-input-placeholder {
+    color: #5d687c;
+    font-weight: normal; }
+  .m-inputText::-ms-input-placeholder {
+    color: #5d687c;
+    font-weight: normal; }
   .m-inputText::placeholder {
     color: #5d687c;
     font-weight: normal; }
 
 .m-inputSelect {
   -webkit-appearance: none;
-  appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
