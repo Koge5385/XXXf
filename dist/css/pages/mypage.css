@@ -266,40 +266,29 @@ a {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading__lv2 {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.6;
+.m-heading {
   font-weight: bold;
-  color: #5d687c;
-  margin-bottom: 40px; }
-  @media screen and (max-width: 768px) {
-    .m-heading__lv2 {
-      font-size: 26px;
-      font-size: 1.625rem;
-      line-height: 1.6; } }
-  .m-heading__lv2--center {
-    text-align: center; }
-
-.m-heading__lv3 {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  font-weight: bold;
-  color: #5d687c;
-  margin-bottom: 30px; }
-  .m-heading__lv3--center {
-    text-align: center; }
-
-.m-heading__lv4 {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  font-weight: bold;
-  color: #5d687c;
-  margin-bottom: 15px; }
-  .m-heading__lv4--center {
-    text-align: center; }
+  color: #5d687c; }
+  .m-heading--lv2 {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.6;
+    margin-bottom: 40px; }
+    @media screen and (max-width: 768px) {
+      .m-heading--lv2 {
+        font-size: 26px;
+        font-size: 1.625rem;
+        line-height: 1.6; } }
+  .m-heading--lv3 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 30px; }
+  .m-heading--lv4 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 10px; }
 
 .m-fontFamilyMontserrat, .keyVisual__enTitle {
   font-family: "Montserrat"; }
@@ -930,6 +919,9 @@ a {
   margin-bottom: 40px; }
   .searchButtonBlockContent:last-child {
     margin-bottom: 0; }
+
+.searchButtonBlockContent__title {
+  text-align: center; }
 
 .searchButtonBlockContent__icon {
   margin-right: 10px; }
