@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "build": "run-s build:prod",
-    "build:common:css": "node-sass ./src/css --output ./dist/css --importer node_modules/node-sass-import",
+    "build:common:css": "node-sass ./src/css --output ./dist/css --importer node_modules/node-sass-import && yarn fix:autoprefix",
     "build:common:html": "nunjucks '**/[^_]*.njk' --path ./src/njk --out ./dist && prettier --write './dist/**/*.html'",
     "build:common:ico": "cpx \"./src/img/common/favicon.ico\" dist/img/common",
     "build:common:img": "node imagemin.config.js",
@@ -15,6 +15,7 @@
     "copy:lib:js": "cpx \"./src/js/lib/vendor/**/*.js\" dist/js/lib/vendor",
     "fix": "run-s fix:*",
     "fix:css": "prettier './src/css/**/*.scss' --write && stylelint './src/css/**/*.scss' --fix",
+    "fix:autoprefix": "postcss --use autoprefixer --no-map './dist/css/**/*.css' --dir './dist/css/pages'",
     "fix:js": "eslint './src/js/**/*.js' --fix",
     "fix:pack": "fixpack",
     "lint": "run-s lint:*",
