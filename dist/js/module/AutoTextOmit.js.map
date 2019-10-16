@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../node_modules/browser-pack/_prelude.js",
+    "../../../src/js/module/AutoTextOmit.js"
+  ],
+  "names": [
+    "r",
+    "e",
+    "n",
+    "t",
+    "o",
+    "i",
+    "f",
+    "c",
+    "require",
+    "u",
+    "a",
+    "Error",
+    "code",
+    "p",
+    "exports",
+    "call",
+    "length",
+    "1",
+    "module",
+    "AutoTextOmit",
+    "_classCallCheck",
+    "this",
+    "getTextArray",
+    "textOmit",
+    "_createClass",
+    "key",
+    "value",
+    "targetElement",
+    "document",
+    "querySelectorAll",
+    "targetArray",
+    "forEach",
+    "push",
+    "innerText",
+    "substr",
+    "append",
+    "default"
+  ],
+  "mappings": "CAAA,WAAA,QAAAA,GAAAC,EAAAC,EAAAC,GAAA,QAAAC,GAAAC,EAAAC,GAAA,IAAAJ,EAAAG,GAAA,CAAA,IAAAJ,EAAAI,GAAA,CAAA,GAAAE,GAAA,kBAAAC,UAAAA,OAAA,KAAAF,GAAAC,EAAA,MAAAA,GAAAF,GAAA,EAAA,IAAAI,EAAA,MAAAA,GAAAJ,GAAA,EAAA,IAAAK,GAAA,GAAAC,OAAA,uBAAAN,EAAA,IAAA,MAAAK,GAAAE,KAAA,mBAAAF,EAAA,GAAAG,GAAAX,EAAAG,IAAAS,WAAAb,GAAAI,GAAA,GAAAU,KAAAF,EAAAC,QAAA,SAAAd,GAAA,GAAAE,GAAAD,EAAAI,GAAA,GAAAL,EAAA,OAAAI,GAAAF,GAAAF,IAAAa,EAAAA,EAAAC,QAAAd,EAAAC,EAAAC,EAAAC,GAAA,MAAAD,GAAAG,GAAAS,QAAA,IAAA,GAAAL,GAAA,kBAAAD,UAAAA,QAAAH,EAAA,EAAAA,EAAAF,EAAAa,OAAAX,IAAAD,EAAAD,EAAAE,GAAA,OAAAD,GAAA,MAAAJ,QAAAiB,GAAA,SAAAT,QAAAU,OAAAJ,6bCIMK,aAAA,WAMJ,QAAAhB,GAAAF,EAAAD,GAAmCoB,gBAAAC,KAAAlB,GACjCkB,KAAAC,aAAArB,GACAoB,KAAAE,SAAAvB,GAAA,MAAAwB,cAAArB,IAAAsB,IAAA,eAAAC,MAAA,SAOWvB,GAAa,GAAAF,GAAAoB,IACxBA,MAAAM,cAAqBC,SAAAC,iBAArB1B,GACAkB,KAAAS,eACAT,KAAAM,cAAAI,QAA2B,SAAA5B,GACzBF,EAAA6B,YAAAE,KAAA7B,QAAAsB,IAAA,WAAAC,MAAA,SAOKvB,GACPkB,KAAAS,YAAAC,QAAyB,SAAA9B,GACJA,EAAAgC,UAAnBjB,OACAb,IACEF,EAAAgC,UAAiBhC,EAAAgC,UAAAC,OAAA,EAAjB/B,GACAF,EAAAkC,OAAA,YAAAhC,IAAAW,SAAAsB,QAMOjB",
+  "file": "AutoTextOmit.js",
+  "sourcesContent": [
+    "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()",
+    "/**\n * @class AutoTextOmit\n * @desc 3点リーダー処理\n */\nclass AutoTextOmit {\n  /**\n   * @constructor\n   * @param {String} targetClass 対象のクラス名\n   * @param {Number} textSize 制限する文字数\n   */\n  constructor(targetClass, textSize) {\n    this.getTextArray(targetClass)\n    this.textOmit(textSize)\n  }\n\n  /**\n   * @desc 対象のテキストを取得して配列化\n   * @param {String} targetClass 対象のクラス名\n   */\n  getTextArray(targetClass) {\n    this.targetElement = document.querySelectorAll(targetClass)\n    this.targetArray = []\n    this.targetElement.forEach(elem => {\n      this.targetArray.push(elem)\n    })\n  }\n  /**\n   * @desc 指定の文字数以上だった場合は3点リーダーを適用\n   * @param {Number} textSize 制限する文字数\n   */\n  textOmit(textSize) {\n    this.targetArray.forEach(elem => {\n      const textLength = elem.innerText.length\n      if (textLength > textSize) {\n        elem.innerText = elem.innerText.substr(0, textSize)\n        elem.append('…')\n      }\n    })\n  }\n}\n\nexport default AutoTextOmit\n"
+  ]
+}

@@ -1,6 +1,5 @@
 .globalHeader {
   min-width: 980px;
-  position: -webkit-sticky;
   position: sticky;
   z-index: 999;
   background-color: #fff;
@@ -11,7 +10,7 @@
     min-width: auto;
   }
 }
-.globalHeader__inner {
+.globalHeaderInner {
   width: 100%;
   display: flex;
   justify-content: space-between;

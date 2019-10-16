@@ -1,91 +1,63 @@
 .globalNav {
   margin: 0;
 }
-.globalNav__list {
+.globalNavList {
   display: flex;
   justify-content: flex-end;
 }
-.globalNav__item {
-  width: 90px;
-  height: 70px;
+.globalNavItem {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  @include media(sp) {
-    width: 60px;
-    height: 60px;
-  }
-  a {
+}
+.globalNavItem__link {
+  color: #1b457e;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 9px;
+  &:hover {
+    background-color: #d3d9e0;
     text-decoration: none;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    &:hover {
-      background-color: #d3d9e0;
-    }
   }
   &--regist {
+    color: #fff;
     background-color: #1b457e;
+    &:hover {
+      background-color: #fff;
+      text-decoration: none;
+      color: #1b457e;
+      svg {
+        fill: #1b457e;
+      }
+    }
   }
 }
-.globalNav__icon {
+.globalNavItem__icon {
   display: block;
-  margin-bottom: 11px;
+  margin-bottom: 5px;
   height: 24px;
-  @include media(sp) {
-    height: 20px;
-    margin-bottom: 9px;
-  }
   svg {
     fill: #1b457e;
   }
   &--list svg {
     height: 20px;
-    @include media(sp) {
-      height: 17px;
-    }
   }
   &--login svg {
     height: 24px;
-    @include media(sp) {
-      height: 20px;
-    }
   }
   &--regist svg {
     fill: #fff;
     height: 22px;
-    @include media(sp) {
-      height: 20px;
-    }
   }
   &--loggedin svg {
     fill: #1b457e;
   }
 }
-.globalNav__label {
+.globalNavItem__label {
   @include fontsize(14, 16);
-  line-height: 1;
-  color: #1b457e;
-  @include media(sp) {
-    @include fontsize(10, 16);
-  }
-  &--regist {
-    color: #fff;
-  }
-}
-.globalNav__item--regist a:hover {
-  background-color: #fff;
-  .globalNav__icon svg {
-    fill: #1b457e;
-  }
-  .globalNav__label {
-    color: #1b457e;
-  }
 }
 
 .globalMobileNav {
@@ -161,16 +133,22 @@
   background-color: #1b457e;
   padding: 20px 0 30px;
 }
-.globalMobileNavTileList {
+.globalMobileNavCell {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 0 10px;
+  @include landscape(sp) {
+    justify-content: space-around;
+  }
 }
-.globalMobileNavTileList__item {
+.globalMobileNavCellItem {
   margin: 0;
+  @include landscape(sp) {
+    width: 30%;
+  }
 }
-.globalMobileNavTileList__link {
+.globalMobileNavCellItem__link {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -187,8 +165,11 @@
   &:hover {
     text-decoration: none;
   }
+  @include landscape(sp) {
+    width: 100%;
+  }
 }
-.globalMobileNavTileList__icon {
+.globalMobileNavCellItem__icon {
   margin-top: 10px;
   margin-bottom: 14px;
   &--list {
@@ -204,7 +185,7 @@
     fill: #1b457e;
   }
 }
-.globalMobileNavLinkList {
+.globalMobileNavLink {
   list-style-type: none;
   display: flex;
   align-items: flex-end;
@@ -212,7 +193,7 @@
   justify-content: center;
   margin-top: 30px;
 }
-.globalMobileNavLinkList__item {
+.globalMobileNavLink__item {
   @include fontsize(14, 16);
   margin-right: 40px;
   &:last-child {
