@@ -321,8 +321,8 @@ a {
 
 .m-inputText {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
@@ -345,8 +345,8 @@ a {
 
 .m-inputSelect {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
@@ -359,6 +359,32 @@ a {
   background: url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
   .m-inputSelect option:first-child {
     display: none; }
+
+.m-inputCheck {
+  display: none; }
+
+.m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_check.svg) no-repeat left center;
+  padding: 4px 0 4px 39px;
+  cursor: pointer; }
+  .m-inputCheckLabel a {
+    display: inline; }
+
+.m-inputCheck:checked + .m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_checked.svg) no-repeat left center; }
+
+.m-inputIcon {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #fff;
+  vertical-align: middle;
+  padding: 4px 6px;
+  margin-left: 9px; }
+  .m-inputIcon--must {
+    background-color: #f03f3f; }
+  .m-inputIcon--want {
+    background-color: #5d687c; }
 
 .globalHeader {
   min-width: 980px;

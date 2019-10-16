@@ -1,5 +1,4 @@
 .m-inputText {
-  -webkit-appearance: none;
   appearance: none;
   @include fontsize(16, 16);
   line-height: 1;
@@ -15,7 +14,6 @@
   }
 }
 .m-inputSelect {
-  -webkit-appearance: none;
   appearance: none;
   @include fontsize(16, 16);
   line-height: 1;
@@ -30,5 +28,32 @@
     &:first-child {
       display: none;
     }
+  }
+}
+.m-inputCheck {
+  display: none;
+}
+.m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_check.svg) no-repeat left center;
+  padding: 4px 0 4px 39px;
+  cursor: pointer;
+  a {
+    display: inline;
+  }
+}
+.m-inputCheck:checked + .m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_checked.svg) no-repeat left center;
+}
+.m-inputIcon {
+  @include fontsize(12, 16);
+  color: #fff;
+  vertical-align: middle;
+  padding: 4px 6px;
+  margin-left: 9px;
+  &--must {
+    background-color: #f03f3f;
+  }
+  &--want {
+    background-color: #5d687c;
   }
 }
