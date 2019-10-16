@@ -1,0 +1,104 @@
+.registStep {
+  @include _baseContentsWidth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  text-align: center;
+  @include media(sp) {
+    align-items: flex-start;
+    margin-bottom: 40px;
+  }
+}
+.registStepBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: calc(100% / 5);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0;
+    transform: translate(-50%, -50%);
+    @include media(sp) {
+      top: 16px;
+    }
+  }
+  &:first-child {
+    &::before {
+      display: none;
+    }
+  }
+}
+.registStepCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 10px;
+  background-color: #e0e0e0;
+  border-radius: 100%;
+}
+.registStepCircle__number {
+  color: #9d9d9d;
+  position: relative;
+}
+.registStepCircle__symbol {
+  display: none;
+  position: relative;
+  svg {
+    fill: #fff;
+  }
+}
+.registStep__stepText {
+  @include fontsize(16, 16);
+  @include media(sp) {
+    display: none;
+  }
+}
+.registStepBlock.is-done {
+  &::before {
+    background-color: #1b457e;
+  }
+  .registStepCircle {
+    background-color: #1b457e;
+  }
+  .registStepCircle__number {
+    display: none;
+  }
+  .registStepCircle__symbol {
+    display: block;
+  }
+}
+.registStepBlock.is-active {
+  &::before {
+    background-color: #1b457e;
+  }
+  .registStepCircle {
+    background-color: #1b457e;
+  }
+  .registStepCircle__number {
+    color: #fff;
+    display: block;
+  }
+  .registStepCircle__symbol {
+    display: none;
+  }
+  .registStep__stepText {
+    font-weight: bold;
+    @include media(sp) {
+      @include fontsize(12, 16);
+      display: flex;
+      justify-content: center;
+      white-space: nowrap;
+    }
+  }
+}
