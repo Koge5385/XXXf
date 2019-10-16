@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>画面一覧｜医療経営を一つ上のステージへ M.PLAT 求職支援</title>
-    <meta name="description" content="" />
+    <title>ログイン｜医療経営を一つ上のステージへ M.PLAT 求職支援</title>
+    <meta name="description" content="ログインディスクリプション" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
 
-    <meta property="og:url" content="https://job.mplat.co.jp/pagelist.html" />
-    <meta property="og:title" content="画面一覧｜医療経営を一つ上のステージへ M.PLAT 求職支援" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://job.mplat.co.jp/" />
+    <meta property="og:title" content="ログイン｜医療経営を一つ上のステージへ M.PLAT 求職支援" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="ログインディスクリプション" />
     <meta property="og:image" content="https://job.mplat.co.jp/img/pre/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon-precomposed" href="/dist/img/common/apple_icon.png" />
     <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="/dist/css/pages/top.css" />
+    <link rel="stylesheet" type="text/css" href="/dist/css/pages/login.css" />
   </head>
   <body>
     <div class="contentsWrap">
@@ -208,41 +208,25 @@
         </div>
       </header>
       <div class="keyVisual">
-        <h1 class="keyVisual__title">画面一覧</h1>
-        <small class="keyVisual__enTitle">PAGE LIST</small>
+        <h1 class="keyVisual__title">ログイン</h1>
+        <small class="keyVisual__enTitle">LOGIN</small>
       </div>
 
-      <style>
-        .pageList {
-          width: 500px;
-          margin: 0 auto;
-          padding-bottom: 80px;
-        }
-        .pageList a {
-          display: inline;
-        }
-        .lv1 {
-          margin-top: 1em;
-        }
-        .lv2 {
-          margin-top: 0.4em;
-          margin-left: 2em;
-          list-style-type: circle;
-        }
-      </style>
-
       <div class="container">
-        <section class="pageList">
-          <ul>
-            <li class="lv1"><a href="./index.html">トップページ</a></li>
-
-            <li class="lv1"><a href="./job/index.html">求人一覧ページ</a></li>
-            <li class="lv2"><a href="./job/detail.html">求人詳細ページ</a></li>
-
-            <li class="lv1"><a href="./login/index.html">ログイン</a></li>
-
-            <li class="lv1"><a href="./mypage/index.html">マイページ</a></li>
-          </ul>
+        <section class="login">
+          <div class="loginInputRow">
+            <h3 class="m-heading__lv4">メールアドレス</h3>
+            <input type="text" name="login_mail" class="m-inputText login__input" placeholder="example@example.co.jp" />
+          </div>
+          <div class="loginInputRow">
+            <h3 class="m-heading__lv4">パスワード</h3>
+            <input type="password" name="login_password" class="m-inputText login__input login__input--password" />
+          </div>
+          <p class="m-note">※パスワードを忘れた方は<a href="#" class="login__textLink">こちら</a></p>
+          <p class="m-note">
+            ※会員登録がまだお済みでない場合は、まず<a href="#" class="login__textLink">会員登録</a>を行ってください
+          </p>
+          <a href="#" class="m-button m-button--blue login__submit">ログイン</a>
         </section>
       </div>
 
@@ -256,7 +240,7 @@
               <meta itemprop="position" content="1" />
             </li>
             <li class="breadcrumb__listItem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <span itemprop="name">画面一覧</span> <meta itemprop="position" content="2" />
+              <span itemprop="name">ログイン</span> <meta itemprop="position" content="2" />
             </li>
           </ul>
         </div>
@@ -321,6 +305,6 @@
       </footer>
     </div>
 
-    <script src="/dist/js/pages/top.js"></script>
+    <script src="/dist/js/pages/login.js"></script>
   </body>
 </html>
