@@ -1,14 +1,14 @@
 <div class="breadcrumb">
-  <div class="breadcrumb__inner">
-    <ul class="breadcrumb__list js-breadcrumb-target" itemscope itemtype="http://schema.org/BreadcrumbList">
-      <li class="breadcrumb__listItem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+  <div class="breadcrumbInner">
+    <ul class="breadcrumbList js-breadcrumb-target" itemscope itemtype="http://schema.org/BreadcrumbList">
+      <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         <a href="/" itemprop="item">
           <span itemprop="name">HOME</span>
         </a>
         <meta itemprop="position" content="1" />
       </li>
       {%- for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb__listItem" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         {%- if loop.last %}
         <span itemprop="name">{{ breadcrumb.item }}</span>
         <meta itemprop="position" content="{{ loop.index + 1 }}" />

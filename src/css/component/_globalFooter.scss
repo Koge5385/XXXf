@@ -7,10 +7,10 @@
     padding: 55px 0 20px;
   }
 }
-.globalFooter__inner {
+.globalFooterInner {
   @include _baseContentsWidth;
 }
-.globalFooter__guideBlock {
+.globalFooterGuideBlock {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@
     padding-bottom: 0;
   }
 }
-.globalFooter__guideText {
+.globalFooterGuide__text {
   @include fontsize(20, 16);
   font-weight: bold;
   color: #fff;
@@ -33,21 +33,20 @@
     margin-bottom: 19px;
   }
 }
-.globalFooter__contactButton {
+.globalFooterGuide__contactButton {
   @extend .m-button;
   @extend .m-button--gray;
   @include fontsize(20, 16);
-  line-height: 1;
   width: 280px;
   height: 70px;
-  padding: 25px 0;
+  padding: 18px 0;
   @include media(sp) {
     display: block;
     width: 90%;
     margin: 0 auto 10px;
   }
 }
-.globalFooter__contactIcon {
+.globalFooterGuide__contactIcon {
   margin-right: 6px;
   svg {
     fill: #aeb4be;
@@ -57,7 +56,7 @@
     }
   }
 }
-.globalFooter__telBox {
+.globalFooterTelBox {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,7 +68,7 @@
     text-align: center;
   }
 }
-.globalFooter__telBoxInner {
+.globalFooterTelBoxInner {
   width: 290px;
   pointer-events: none;
   @include media(sp) {
@@ -81,14 +80,14 @@
     text-decoration: none;
   }
 }
-.globalFooter__number {
+.globalFooterTelBox__number {
   @include fontsize(28, 16);
   color: #fff;
   line-height: 1.25;
   text-align: center;
   font-weight: bold;
 }
-.globalFooter__numberIcon {
+.globalFooterTelBox__numberIcon {
   margin-right: 15px;
   svg {
     fill: #aeb4be;
@@ -98,12 +97,12 @@
     }
   }
 }
-.globalFooter__reception {
+.globalFooterTelBox__reception {
   @include fontsize(12, 16);
   color: #fff;
   text-align: center;
 }
-.globalFooter__naviBlock {
+.globalFooterNavBlock {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -111,7 +110,7 @@
     display: block;
   }
 }
-.globalFooter__linkList {
+.globalFooterNavList {
   list-style-type: none;
   display: flex;
   align-items: flex-end;
@@ -121,7 +120,7 @@
     margin-bottom: 38px;
   }
 }
-.globalFooter__linkItem {
+.globalFooterNavList__item {
   @include fontsize(14, 16);
   margin-right: 20px;
   @include media(sp) {
@@ -171,7 +170,7 @@
     }
   }
 }
-.globalFooter__copyright {
+.globalFooterNav__copyright {
   @include fontsize(12, 16);
   font-weight: lighter;
   color: #b3c1d3;
