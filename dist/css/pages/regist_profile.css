@@ -1284,11 +1284,11 @@ a {
       min-width: auto;
       padding: 0 20px 60px; } }
 
-.regist_profile {
+.registProfile {
   width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .regist_profile {
+    .registProfile {
       width: 100%; } }
 
 .registProfileRow {
