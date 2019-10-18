@@ -14,7 +14,7 @@
 }
 .registProfileRow {
   width: 720px;
-  margin: 0 auto 40px;
+  margin: 0 auto 33px;
   &--center {
     text-align: center;
   }
@@ -23,7 +23,7 @@
   }
 }
 .registProfile__heading {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .registProfile__confirmText {
   margin: 16px 0 6px;
@@ -42,10 +42,6 @@
     width: calc(50% - 5px);
     @include media(sp) {
       width: 100%;
-      margin-bottom: 15px;
-      &:last-child {
-        margin-bottom: 0;
-      }
     }
   }
 }
@@ -54,6 +50,21 @@
   justify-content: space-between;
   @include media(sp) {
     display: block;
+  }
+}
+.registProfileInputFlex__item {
+  width: 50%;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+  @include media(sp) {
+    width: 100%;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
   }
 }
 .registProfile__submit {

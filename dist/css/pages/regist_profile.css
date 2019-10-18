@@ -342,6 +342,16 @@ a {
   .m-inputText::placeholder {
     color: #5d687c;
     font-weight: normal; }
+  .m-inputText.is-error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background: #fff2f2; }
+    .m-inputText.is-error::-webkit-input-placeholder {
+      visibility: hidden; }
+    .m-inputText.is-error::-ms-input-placeholder {
+      visibility: hidden; }
+    .m-inputText.is-error::placeholder {
+      visibility: hidden; }
 
 .m-inputSelect {
   -webkit-appearance: none;
@@ -385,6 +395,20 @@ a {
     background-color: #f03f3f; }
   .m-inputIcon--want {
     background-color: #5d687c; }
+
+.m-inputErrorText {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 4px;
+  display: none; }
+
+.m-inputText.is-error + .m-inputErrorText,
+.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputCheckLabel.is-error + .m-inputErrorText {
+  display: block; }
 
 .globalHeader {
   min-width: 980px;
@@ -1161,7 +1185,8 @@ a {
   @media screen and (max-width: 768px) {
     .registStep {
       align-items: flex-start;
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      padding: 0 25px; } }
 
 .registStepBlock {
   display: flex;
@@ -1268,7 +1293,7 @@ a {
 
 .registProfileRow {
   width: 720px;
-  margin: 0 auto 40px; }
+  margin: 0 auto 33px; }
   .registProfileRow--center {
     text-align: center; }
   @media screen and (max-width: 768px) {
@@ -1276,7 +1301,7 @@ a {
       width: 100%; } }
 
 .registProfile__heading {
-  margin-bottom: 20px; }
+  margin-bottom: 12px; }
 
 .registProfile__confirmText {
   margin: 16px 0 6px; }
@@ -1298,10 +1323,7 @@ a {
     width: calc(50% - 5px); }
     @media screen and (max-width: 768px) {
       .registProfile__input--half {
-        width: 100%;
-        margin-bottom: 15px; }
-        .registProfile__input--half:last-child {
-          margin-bottom: 0; } }
+        width: 100%; } }
 
 .registProfileInputFlex {
   display: flex;
@@ -1309,6 +1331,19 @@ a {
   @media screen and (max-width: 768px) {
     .registProfileInputFlex {
       display: block; } }
+
+.registProfileInputFlex__item {
+  width: 50%;
+  margin-right: 10px; }
+  .registProfileInputFlex__item:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .registProfileInputFlex__item {
+      width: 100%;
+      margin-bottom: 15px; }
+      .registProfileInputFlex__item:last-child {
+        margin-right: 0;
+        margin-bottom: 0; } }
 
 .registProfile__submit {
   font-size: 26px;

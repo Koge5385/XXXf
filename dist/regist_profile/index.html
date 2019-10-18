@@ -79,7 +79,11 @@
                 </a>
               </li>
               <li class="globalNavItem">
-                <a href="#" class="globalNavItem__link globalNavItem__link--regist">
+                <a
+                  href="#"
+                  class="globalNavItem__link globalNavItem__link--regist"
+                  onclick="gtag('event', 'click', {'event_category': 'regist_profile_header_regist','event_label': 'header_regist'});"
+                >
                   <span class="globalNavItem__icon globalNavItem__icon--regist"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
                       <g transform="translate(9.95 11)">
@@ -99,22 +103,6 @@
                 </a>
               </li>
             </ul>
-            <!-- ログイン後のナビゲーションソース
-      <ul class="globalNavList">
-        <li class="globalNavItem">
-          <a href="/dist/job/" class="globalNavItem__link">
-            <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20"><g transform="translate(11.603 10)"><g transform="translate(-11.603 -10)"><rect width="18.38" height="2.309" transform="translate(4.825)"/><rect width="18.38" height="2.309" transform="translate(4.825 5.859)"/><rect width="18.38" height="2.309" transform="translate(4.825 11.832)"/><rect width="18.38" height="2.309" transform="translate(4.825 17.691)"/><rect width="2.298" height="2.309"/><rect width="2.298" height="2.309" transform="translate(0 5.859)"/><rect width="2.298" height="2.309" transform="translate(0 11.832)"/><rect width="2.298" height="2.309" transform="translate(0 17.691)"/></g></g></svg></span>
-            <p class="globalNavItem__label">求人一覧</p>
-          </a>
-        </li>
-        <li class="globalNavItem">
-          <a href="/dist/mypage/" class="globalNavItem__link">
-            <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z" transform="translate(-0.62 -0.601)"/><path d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z" transform="translate(-1 0.761)"/></g></g></svg></span>
-            <p class="globalNavItem__label">マイページ</p>
-          </a>
-        </li>
-      </ul>
-      ログイン後のナビゲーションソース -->
           </nav>
           <nav class="globalMobileNav sp-view">
             <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger" />
@@ -178,7 +166,11 @@
                     </a>
                   </li>
                   <li class="globalMobileNavCellItem">
-                    <a href="#" class="globalMobileNavCellItem__link">
+                    <a
+                      href="#"
+                      class="globalMobileNavCellItem__link"
+                      onclick="gtag('event', 'click', {'event_category': 'regist_profile_header_regist','event_label': 'header_regist'});"
+                    >
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
                           <g transform="translate(9.95 11)">
@@ -197,20 +189,6 @@
                     </a>
                   </li>
                 </ul>
-                <!-- ログイン後のナビゲーションソース
-          <ul class="globalMobileNavCell">
-            <li class="globalMobileNavCellItem">
-              <a href="/dist/job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
-                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35"><g transform="translate(20.304 17.5)"><g transform="translate(-20.304 -17.5)"><rect width="32.165" height="4.041" transform="translate(8.443)"/><rect width="32.165" height="4.041" transform="translate(8.443 10.253)"/><rect width="32.165" height="4.041" transform="translate(8.443 20.706)"/><rect width="32.165" height="4.041" transform="translate(8.443 30.959)"/><rect width="4.021" height="4.041"/><rect width="4.021" height="4.041" transform="translate(0 10.253)"/><rect width="4.021" height="4.041" transform="translate(0 20.706)"/><rect width="4.021" height="4.041" transform="translate(0 30.959)"/></g></g></svg></span>求人一覧
-              </a>
-            </li>
-            <li class="globalMobileNavCellItem">
-              <a href="/dist/mypage/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
-                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35"><g transform="translate(9.95 11)"><g transform="translate(-9.95 -11)"><path d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z" transform="translate(1.739 -0.601)"/><path d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z" transform="translate(-1 9.171)"/></g></g></svg></span>マイページ
-              </a>
-            </li>
-          </ul>
-          ログイン後のナビゲーションソース -->
                 <ul class="globalMobileNavLink">
                   <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
                     <a href="#">初めての方へ</a>
@@ -307,18 +285,26 @@
               個人氏名<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
             <div class="registProfileInputFlex">
-              <input
-                type="text"
-                name="registProfile_lastName"
-                class="m-inputText registProfile__input registProfile__input--half"
-                placeholder="性"
-              />
-              <input
-                type="text"
-                name="registProfile_firstName"
-                class="m-inputText registProfile__input registProfile__input--half"
-                placeholder="名"
-              />
+              <div class="registProfileInputFlex__item">
+                <input
+                  type="text"
+                  name="registProfile_lastName"
+                  class="m-inputText registProfile__input"
+                  placeholder="性"
+                  value=""
+                />
+                <p class="m-inputErrorText"></p>
+              </div>
+              <div class="registProfileInputFlex__item">
+                <input
+                  type="text"
+                  name="registProfile_firstName"
+                  class="m-inputText registProfile__input"
+                  placeholder="名"
+                  value=""
+                />
+                <p class="m-inputErrorText"></p>
+              </div>
             </div>
           </div>
           <div class="registProfileRow">
@@ -326,18 +312,30 @@
               フリガナ<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
             <div class="registProfileInputFlex">
-              <input
-                type="text"
-                name="registProfile_lastName_kana"
-                class="m-inputText registProfile__input registProfile__input--half"
-                placeholder="セイ"
-              />
-              <input
-                type="text"
-                name="registProfile_firstName_kana"
-                class="m-inputText registProfile__input registProfile__input--half"
-                placeholder="メイ"
-              />
+              <div class="registProfileInputFlex__item">
+                <input
+                  type="text"
+                  name="registProfile_lastName_kana"
+                  class="m-inputText registProfile__input is-error"
+                  placeholder="セイ"
+                  value="鈴木"
+                />
+                <p class="m-inputErrorText">
+                  エラーテキストエラーテキストエラーテキストエラーテキストエラーテキストエラーテキスト
+                </p>
+              </div>
+              <div class="registProfileInputFlex__item">
+                <input
+                  type="text"
+                  name="registProfile_firstName_kana"
+                  class="m-inputText registProfile__input is-error"
+                  placeholder="メイ"
+                  value="一郎"
+                />
+                <p class="m-inputErrorText">
+                  エラーテキストエラーテキストエラーテキストエラーテキストエラーテキストエラーテキスト
+                </p>
+              </div>
             </div>
           </div>
           <div class="registProfileRow">
@@ -361,6 +359,7 @@
               <option value="13">奈良</option>
               <option value="14">和歌山</option>
             </select>
+            <p class="m-inputErrorText"></p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
@@ -369,9 +368,13 @@
             <input
               type="text"
               name="registProfile_postal"
-              class="m-inputText registProfile__input registProfile__input--half"
+              class="m-inputText registProfile__input registProfile__input--half is-error"
               placeholder="141-6005"
+              value="1411-6005"
             />
+            <p class="m-inputErrorText">
+              エラーテキストエラーテキストエラーテキストエラーテキストエラーテキストエラーテキスト
+            </p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
@@ -380,9 +383,13 @@
             <input
               type="text"
               name="registProfile_city"
-              class="m-inputText registProfile__input"
+              class="m-inputText registProfile__input is-error"
               placeholder="品川区"
+              value="03-5437-2950"
             />
+            <p class="m-inputErrorText">
+              エラーテキストエラーテキストエラーテキストエラーテキストエラーテキストエラーテキスト
+            </p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
@@ -393,7 +400,9 @@
               name="registProfile_address"
               class="m-inputText registProfile__input"
               placeholder="大崎2-1-1 ThinkPark Tower 5F"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
@@ -404,7 +413,9 @@
               name="registProfile_tel"
               class="m-inputText registProfile__input registProfile__input--half"
               placeholder="03-5437-2950"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
@@ -415,7 +426,9 @@
               name="registProfile_fax"
               class="m-inputText registProfile__input registProfile__input--half"
               placeholder="03-5437-2951"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
@@ -426,7 +439,9 @@
               name="registProfile_mail"
               class="m-inputText registProfile__input"
               placeholder="example@example.co.jp"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
             <p class="m-note registProfile__note">※半角英数字</p>
             <p class="registProfile__confirmText">確認のためもう一度メールアドレスを入力してください</p>
             <input
@@ -434,7 +449,9 @@
               name="registProfile_mail_confirm"
               class="m-inputText registProfile__input"
               placeholder="example@example.co.jp"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
             <p class="m-note registProfile__note">※半角英数字</p>
           </div>
           <div class="registProfileRow">
@@ -446,7 +463,9 @@
               name="registProfile_mobile"
               class="m-inputText registProfile__input registProfile__input--half"
               placeholder="03-5437-2950"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
@@ -457,7 +476,9 @@
               name="registProfile_mobileMail"
               class="m-inputText registProfile__input"
               placeholder="example@example.co.jp"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
             <p class="m-note registProfile__note">※半角英数字</p>
             <p class="registProfile__confirmText">確認のためもう一度メールアドレスを入力してください</p>
             <input
@@ -465,23 +486,33 @@
               name="registProfile_mobileMail_confirm"
               class="m-inputText registProfile__input"
               placeholder="example@example.co.jp"
+              value=""
             />
+            <p class="m-inputErrorText"></p>
             <p class="m-note registProfile__note">※半角英数字</p>
           </div>
           <div class="registProfileRow">
             <h3 class="m-heading m-heading--lv4 registProfile__heading">
               パスワード<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
-            <input type="password" name="registProfile_mobileMail" class="m-inputText registProfile__input" />
+            <input type="password" name="registProfile_mobileMail" class="m-inputText registProfile__input" value="" />
+            <p class="m-inputErrorText"></p>
             <p class="m-note registProfile__note">※半角英数●文字以上を使用してください</p>
             <p class="registProfile__confirmText">確認のためもう一度パスワードを入力してください</p>
-            <input type="password" name="registProfile_mobileMail_confirm" class="m-inputText registProfile__input" />
+            <input
+              type="password"
+              name="registProfile_mobileMail_confirm"
+              class="m-inputText registProfile__input"
+              value=""
+            />
+            <p class="m-inputErrorText"></p>
             <p class="m-note registProfile__note">※半角英数●文字以上を使用してください</p>
           </div>
 
           <div class="registProfileRow registProfileRow--center">
             <input type="checkbox" name="registProfile_termAgree" id="registProfile_termAgree" class="m-inputCheck" />
             <label for="registProfile_termAgree" class="m-inputCheckLabel"><a href="#">利用規約</a>に同意する</label>
+            <p class="m-inputErrorText"></p>
           </div>
 
           <button
@@ -516,7 +547,10 @@
           <div class="globalFooterGuideBlock">
             <p class="globalFooterGuide__text pc-view">ご不明点などお問い合わせはこちらから</p>
             <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
-            <a class="globalFooterGuide__contactButton" href="/dist/contact.html"
+            <a
+              class="globalFooterGuide__contactButton"
+              href="/dist/contact.html"
+              onclick="gtag('event', 'click', {'event_category': 'regist_profile_footer_contact','event_label': 'footer_contact'});"
               ><span class="globalFooterGuide__contactIcon"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
                   <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
@@ -526,7 +560,11 @@
               >お問い合わせフォーム</a
             >
             <div class="globalFooterTelBox">
-              <a href="tel:03-9999-9999" class="globalFooterTelBoxInner">
+              <a
+                href="tel:03-9999-9999"
+                class="globalFooterTelBoxInner"
+                onclick="gtag('event', 'click', {'event_category': 'regist_profile_footer_tel','event_label': 'footer_tel'});"
+              >
                 <p class="globalFooterTelBox__number">
                   <span class="globalFooterTelBox__numberIcon"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.986" viewBox="0 0 25 24.986">

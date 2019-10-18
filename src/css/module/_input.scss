@@ -12,6 +12,14 @@
     color: #5d687c;
     font-weight: normal;
   }
+  &.is-error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background: #fff2f2;
+    &::placeholder {
+      visibility: hidden;
+    }
+  }
 }
 .m-inputSelect {
   appearance: none;
@@ -56,4 +64,16 @@
   &--want {
     background-color: #5d687c;
   }
+}
+.m-inputErrorText {
+  @include fontsize(14, 16);
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 4px;
+  display: none;
+}
+.m-inputText.is-error + .m-inputErrorText,
+.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputCheckLabel.is-error + .m-inputErrorText {
+  display: block;
 }

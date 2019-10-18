@@ -342,6 +342,16 @@ a {
   .m-inputText::placeholder {
     color: #5d687c;
     font-weight: normal; }
+  .m-inputText.is-error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background: #fff2f2; }
+    .m-inputText.is-error::-webkit-input-placeholder {
+      visibility: hidden; }
+    .m-inputText.is-error::-ms-input-placeholder {
+      visibility: hidden; }
+    .m-inputText.is-error::placeholder {
+      visibility: hidden; }
 
 .m-inputSelect {
   -webkit-appearance: none;
@@ -385,6 +395,20 @@ a {
     background-color: #f03f3f; }
   .m-inputIcon--want {
     background-color: #5d687c; }
+
+.m-inputErrorText {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 4px;
+  display: none; }
+
+.m-inputText.is-error + .m-inputErrorText,
+.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputCheckLabel.is-error + .m-inputErrorText {
+  display: block; }
 
 .globalHeader {
   min-width: 980px;
@@ -1161,7 +1185,8 @@ a {
   @media screen and (max-width: 768px) {
     .registStep {
       align-items: flex-start;
-      margin-bottom: 40px; } }
+      margin-bottom: 40px;
+      padding: 0 25px; } }
 
 .registStepBlock {
   display: flex;
