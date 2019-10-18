@@ -9,10 +9,10 @@
     padding: 0 20px 60px;
   }
 }
-.registProfile {
+.registResume {
   @include _baseContentsWidth;
 }
-.registProfileRow {
+.registResumeRow {
   width: 720px;
   margin: 0 auto 33px;
   &--center {
@@ -22,16 +22,19 @@
     width: 100%;
   }
 }
-.registProfile__heading {
+.registResume__heading {
   margin-bottom: 12px;
 }
-.registProfile__confirmText {
+.registResume__confirmText {
   margin: 16px 0 6px;
 }
-.registProfile__note {
+.registResume__note {
   margin-top: 6px;
 }
-.registProfile__input {
+.registResume__supportText {
+  white-space: nowrap;
+}
+.registResume__input {
   color: #333;
   height: 50px;
   padding: 0 12px;
@@ -44,18 +47,32 @@
       width: 100%;
     }
   }
+  &--mini {
+    width: 140px;
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
-.registProfile__inputCheck {
-  display: inline-block;
-}
-.registProfileInputFlex {
+.registResumeInputFlex {
   display: flex;
   justify-content: space-between;
   @include media(sp) {
     display: block;
   }
+  &--support {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &--mini {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
-.registProfileInputFlex__item {
+.registResumeInputFlex__item {
   width: 50%;
   margin-right: 10px;
   &:last-child {
@@ -70,7 +87,7 @@
     }
   }
 }
-.registProfile__submit {
+.registResume__submit {
   @include fontsize(26, 16);
   display: block;
   width: 320px;

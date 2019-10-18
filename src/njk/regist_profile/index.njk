@@ -11,6 +11,13 @@
 
 <div class="container">
 
+  {%- set registSteps = [
+    {number: '1', text: 'メールアドレス登録', class: ' is-done'},
+    {number: '2', text: 'メール認証', class: ' is-done'},
+    {number: '3', text: 'プロフィール登録', class: ' is-active'},
+    {number: '4', text: 'レジュメ登録', class: ''},
+    {number: '5', text: '完了', class: ''}
+  ] -%}
   {% include '_modules/_registStep.njk' %}
 
   <section class="registProfile">
@@ -129,7 +136,7 @@
 
     <div class="registProfileRow registProfileRow--center">
       <input type="checkbox" name="registProfile_termAgree" id="registProfile_termAgree" class="m-inputCheck">
-      <label for="registProfile_termAgree" class="m-inputCheckLabel"><a href="#">利用規約</a>に同意する</label>
+      <label for="registProfile_termAgree" class="m-inputCheckLabel registProfile__inputCheck"><a href="#">利用規約</a>に同意する</label>
       <p class="m-inputErrorText"></p>
     </div>
 

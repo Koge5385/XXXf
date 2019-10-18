@@ -1,0 +1,154 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'index' -%}
+{%- set pageName = 'regist_resume' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = 'レジュメ登録' -%}
+{%- set en_pageTitle = 'SIGN UP' -%}
+{%- set pageDescription = 'レジュメ登録ディスクリプション' -%}
+{%- set breadcrumbs = [{item: 'レジュメ登録'}]-%}
+
+{% block content %}
+
+<div class="container">
+
+  {%- set registSteps = [
+    {number: '1', text: 'メールアドレス登録', class: ' is-done'},
+    {number: '2', text: 'メール認証', class: ' is-done'},
+    {number: '3', text: 'プロフィール登録', class: ' is-done'},
+    {number: '4', text: 'レジュメ登録', class: ' is-active'},
+    {number: '5', text: '完了', class: ''}
+  ] -%}
+  {% include '_modules/_registStep.njk' %}
+
+  <section class="registResume">
+
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_now" class="m-inputText registResume__input" placeholder="現在の就業状況を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_schoolCareer" class="m-inputText registResume__input" placeholder="学歴を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_career" class="m-inputText registResume__input" placeholder="職務経歴を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の年収<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <div class="registResumeInputFlex registResumeInputFlex--support">
+        <input type="text" name="registResume_income" class="m-inputText registResume__input registResume__input--mini" placeholder="現在の年収を記入してください" value="">
+        <p class="registResume__supportText">万円</p>
+      </div>
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">経験職種<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_occupation" class="m-inputText registResume__input" placeholder="経験職種を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">経験業種<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_industry" class="m-inputText registResume__input" placeholder="経験業種を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">転職回数<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_changeNumber" class="m-inputText registResume__input" placeholder="転職回数を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">性別<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <div class="registResumeInputFlex">
+        <div class="registResumeInputFlex__item">
+          <input type="radio" id="registResume_sex_man" name="registResume_sex" class="m-inputRadio registResume__input" value="man">
+          <label for="registResume_sex_man" class="m-inputRadioLabel">男性</label>
+        </div>
+        <div class="registResumeInputFlex__item">
+          <input type="radio" id="registResume_sex_woman" name="registResume_sex" class="m-inputRadio registResume__input" value="woman">
+          <label for="registResume_sex_woman" class="m-inputRadioLabel">女性</label>
+        </div>
+      </div>
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">生年月日<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <div class="registResumeInputFlex registResumeInputFlex--mini">
+        <select name="registResume_birthYear" class="m-inputSelect registResume__input registResume__input--mini">
+          <option value="">年</option>
+            {%- set selectYear = [
+              {year: '1999'},
+              {year: '1998'},
+              {year: '1997'}
+            ] -%}
+            {%- for item in selectYear %}
+            <option value="{{ loop.index }}">{{ item.year }}</option>
+            {%- endfor %}
+        </select>
+        <select name="registResume_birthMonth" class="m-inputSelect registResume__input registResume__input--mini">
+          <option value="">月</option>
+            {%- set selectMonth = [
+              {month: '1'},
+              {month: '2'},
+              {month: '3'}
+            ] -%}
+            {%- for item in selectMonth %}
+            <option value="{{ loop.index }}">{{ item.month }}</option>
+            {%- endfor %}
+        </select>
+        <select name="registResume_birthDay" class="m-inputSelect registResume__input registResume__input--mini">
+          <option value="">日</option>
+            {%- set selectDay = [
+              {day: '1'},
+              {day: '2'},
+              {day: '3'}
+            ] -%}
+            {%- for item in selectDay %}
+            <option value="{{ loop.index }}">{{ item.day }}</option>
+            {%- endfor %}
+        </select>
+      </div>
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_hopeStatus" class="m-inputText registResume__input" placeholder="希望雇用形態を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望勤務地<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_hopePlace" class="m-inputText registResume__input" placeholder="希望勤務地を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望職種<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_hopeOccupation" class="m-inputText registResume__input" placeholder="希望職種を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望業種<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_hopeIndustry" class="m-inputText registResume__input" placeholder="希望業種を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望条件(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <input type="text" name="registResume_hopeContract" class="m-inputText registResume__input" placeholder="希望条件(詳細)を記入してください" value="">
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望の年収<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <div class="registResumeInputFlex registResumeInputFlex--support">
+        <input type="text" name="registResume_hopeIncome" class="m-inputText registResume__input registResume__input--mini" placeholder="希望の年収を記入してください" value="">
+        <p class="registResume__supportText">万円</p>
+      </div>
+      <p class="m-inputErrorText"></p>
+    </div>
+
+    <button type="submit" name="registResume_submit" class="m-button m-button--blue registResume__submit" disabled>確認画面へ</button>
+  </section>
+</div>
+
+{% endblock %}
