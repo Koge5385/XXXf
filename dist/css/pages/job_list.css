@@ -321,8 +321,8 @@ a {
 
 .m-inputText {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
@@ -342,11 +342,21 @@ a {
   .m-inputText::placeholder {
     color: #5d687c;
     font-weight: normal; }
+  .m-inputText.is-error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background: #fff2f2; }
+    .m-inputText.is-error::-webkit-input-placeholder {
+      visibility: hidden; }
+    .m-inputText.is-error::-ms-input-placeholder {
+      visibility: hidden; }
+    .m-inputText.is-error::placeholder {
+      visibility: hidden; }
 
 .m-inputSelect {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
@@ -359,6 +369,46 @@ a {
   background: url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
   .m-inputSelect option:first-child {
     display: none; }
+
+.m-inputCheck {
+  display: none; }
+
+.m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_check.svg) no-repeat left center;
+  padding: 4px 0 4px 39px;
+  cursor: pointer; }
+  .m-inputCheckLabel a {
+    display: inline; }
+
+.m-inputCheck:checked + .m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_checked.svg) no-repeat left center; }
+
+.m-inputIcon {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #fff;
+  vertical-align: middle;
+  padding: 4px 6px;
+  margin-left: 9px; }
+  .m-inputIcon--must {
+    background-color: #f03f3f; }
+  .m-inputIcon--want {
+    background-color: #5d687c; }
+
+.m-inputErrorText {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 4px;
+  display: none; }
+
+.m-inputText.is-error + .m-inputErrorText,
+.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputCheckLabel.is-error + .m-inputErrorText {
+  display: block; }
 
 .globalHeader {
   min-width: 980px;
@@ -1120,6 +1170,110 @@ a {
     @media screen and (max-width: 768px) {
       .flexTable td {
         padding: 10px 0 10px 15px; } }
+
+.registStep {
+  width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .registStep {
+      width: 100%; } }
+  @media screen and (max-width: 768px) {
+    .registStep {
+      align-items: flex-start;
+      margin-bottom: 40px;
+      padding: 0 25px; } }
+
+.registStepBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: calc(100% / 5); }
+  .registStepBlock::before {
+    content: "";
+    position: absolute;
+    top: 23%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #e0e0e0;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 768px) {
+      .registStepBlock::before {
+        top: 16px; } }
+  .registStepBlock:first-child::before {
+    display: none; }
+
+.registStepCircle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 10px;
+  background-color: #e0e0e0;
+  border-radius: 100%; }
+
+.registStepCircle__number {
+  color: #9d9d9d;
+  position: relative; }
+
+.registStepCircle__symbol {
+  display: none;
+  position: relative; }
+  .registStepCircle__symbol svg {
+    fill: #fff; }
+
+.registStep__stepText {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6; }
+  @media screen and (max-width: 768px) {
+    .registStep__stepText {
+      display: none; } }
+
+.registStepBlock.is-done::before {
+  background-color: #1b457e; }
+
+.registStepBlock.is-done .registStepCircle {
+  background-color: #1b457e; }
+
+.registStepBlock.is-done .registStepCircle__number {
+  display: none; }
+
+.registStepBlock.is-done .registStepCircle__symbol {
+  display: block; }
+
+.registStepBlock.is-active::before {
+  background-color: #1b457e; }
+
+.registStepBlock.is-active .registStepCircle {
+  background-color: #1b457e; }
+
+.registStepBlock.is-active .registStepCircle__number {
+  color: #fff;
+  display: block; }
+
+.registStepBlock.is-active .registStepCircle__symbol {
+  display: none; }
+
+.registStepBlock.is-active .registStep__stepText {
+  font-weight: bold; }
+  @media screen and (max-width: 768px) {
+    .registStepBlock.is-active .registStep__stepText {
+      font-size: 12px;
+      font-size: 0.75rem;
+      line-height: 1.6;
+      display: flex;
+      justify-content: center;
+      white-space: nowrap; } }
 
 .keyVisual {
   margin-bottom: 0; }

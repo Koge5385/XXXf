@@ -1,5 +1,4 @@
 .m-inputText {
-  -webkit-appearance: none;
   appearance: none;
   @include fontsize(16, 16);
   line-height: 1;
@@ -13,9 +12,16 @@
     color: #5d687c;
     font-weight: normal;
   }
+  &.is-error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background: #fff2f2;
+    &::placeholder {
+      visibility: hidden;
+    }
+  }
 }
 .m-inputSelect {
-  -webkit-appearance: none;
   appearance: none;
   @include fontsize(16, 16);
   line-height: 1;
@@ -31,4 +37,43 @@
       display: none;
     }
   }
+}
+.m-inputCheck {
+  display: none;
+}
+.m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_check.svg) no-repeat left center;
+  padding: 4px 0 4px 39px;
+  cursor: pointer;
+  a {
+    display: inline;
+  }
+}
+.m-inputCheck:checked + .m-inputCheckLabel {
+  background: url(../../img/common/icon/icon_checked.svg) no-repeat left center;
+}
+.m-inputIcon {
+  @include fontsize(12, 16);
+  color: #fff;
+  vertical-align: middle;
+  padding: 4px 6px;
+  margin-left: 9px;
+  &--must {
+    background-color: #f03f3f;
+  }
+  &--want {
+    background-color: #5d687c;
+  }
+}
+.m-inputErrorText {
+  @include fontsize(14, 16);
+  font-weight: bold;
+  color: #ff0000;
+  margin-top: 4px;
+  display: none;
+}
+.m-inputText.is-error + .m-inputErrorText,
+.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputCheckLabel.is-error + .m-inputErrorText {
+  display: block;
 }

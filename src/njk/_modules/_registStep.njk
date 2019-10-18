@@ -1,0 +1,17 @@
+<div class="registStep">
+  {% for item in [
+    {number: '1', text: 'メールアドレス登録', class: ' is-done'},
+    {number: '2', text: 'メール認証', class: ' is-done'},
+    {number: '3', text: 'プロフィール登録', class: ' is-active'},
+    {number: '4', text: 'レジュメ登録', class: ''},
+    {number: '5', text: '完了', class: ''}
+  ] %}
+  <div class="registStepBlock{{ item.class }}">
+    <div class="registStepCircle{{ item.class }}">
+      <span class="registStepCircle__number{{ item.class }}">{{ item.number }}</span>
+      <span class="registStepCircle__symbol{{ item.class }}">{{ macro.svg_code_checkSymbol() }}</span>
+    </div>
+    <p class="registStep__stepText{{ item.class }}">{{ item.text }}</p>
+  </div>
+  {% endfor %}
+</div>
