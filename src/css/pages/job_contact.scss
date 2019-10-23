@@ -1,0 +1,94 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 20px 60px;
+  }
+}
+.jobContact {
+  @include _baseContentsWidth;
+}
+.jobContactRow {
+  width: 720px;
+  margin: 0 auto 33px;
+  &--center {
+    text-align: center;
+  }
+  @include media(sp) {
+    width: 100%;
+  }
+}
+.jobContact__heading {
+  margin-bottom: 12px;
+}
+.jobContact__confirmText {
+  margin: 16px 0 6px;
+}
+.jobContact__note {
+  margin-top: 6px;
+}
+.jobContact__input {
+  color: #333;
+  height: 50px;
+  padding: 0 12px;
+  &::placeholder {
+    color: #c9c9c9;
+  }
+  &--half {
+    width: calc(50% - 5px);
+    @include media(sp) {
+      width: 100%;
+    }
+  }
+}
+.jobContact__inputTextArea {
+  color: #333;
+  height: 180px;
+  &::placeholder {
+    color: #c9c9c9;
+  }
+}
+.jobContactInputFlex {
+  display: flex;
+  justify-content: space-between;
+  @include media(sp) {
+    display: block;
+  }
+}
+.jobContactInputFlex__item {
+  width: 50%;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+  @include media(sp) {
+    width: 100%;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+.jobContact__submit {
+  @include fontsize(26, 16);
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding: 13px 0 12px;
+  &:disabled {
+    color: #fff;
+    border: 2px solid #333;
+    background-color: #333;
+    opacity: 0.3;
+    &:hover {
+      color: #fff;
+      border: 2px solid #333;
+      background-color: #333;
+    }
+  }
+}
