@@ -282,19 +282,6 @@
         <section class="registResume">
           <div class="registResumeRow">
             <h3 class="m-heading m-heading--lv4 registResume__heading">
-              現在の就業状況<span class="m-inputIcon m-inputIcon--must">必須</span>
-            </h3>
-            <input
-              type="text"
-              name="registResume_now"
-              class="m-inputText registResume__input"
-              placeholder="現在の就業状況を記入してください"
-              value=""
-            />
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="registResumeRow">
-            <h3 class="m-heading m-heading--lv4 registResume__heading">
               学歴(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
             <input
@@ -321,42 +308,131 @@
           </div>
           <div class="registResumeRow">
             <h3 class="m-heading m-heading--lv4 registResume__heading">
-              現在の年収<span class="m-inputIcon m-inputIcon--must">必須</span>
-            </h3>
-            <div class="registResumeInputFlex registResumeInputFlex--support">
-              <input
-                type="text"
-                name="registResume_income"
-                class="m-inputText registResume__input registResume__input--mini"
-                placeholder="現在の年収を記入してください"
-                value=""
-              />
-              <p class="registResume__supportText">万円</p>
-            </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="registResumeRow">
-            <h3 class="m-heading m-heading--lv4 registResume__heading">
-              経験職種<span class="m-inputIcon m-inputIcon--must">必須</span>
+              現在の勤務先<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
             <input
               type="text"
-              name="registResume_occupation"
+              name="registResume_now"
               class="m-inputText registResume__input"
-              placeholder="経験職種を記入してください"
+              placeholder="現在の就業状況を記入してください"
               value=""
             />
             <p class="m-inputErrorText"></p>
           </div>
           <div class="registResumeRow">
             <h3 class="m-heading m-heading--lv4 registResume__heading">
-              経験業種<span class="m-inputIcon m-inputIcon--must">必須</span>
+              現在の役職<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
             <input
               type="text"
-              name="registResume_industry"
+              name="registResume_nowPosition"
               class="m-inputText registResume__input"
-              placeholder="経験業種を記入してください"
+              placeholder="現在の役職を記入してください"
+              value=""
+            />
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              現在の年収<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <select name="registResume_income" class="m-inputSelect registResume__input registResume__input--half">
+              <option value="">現在の年収を選択してください</option>
+              <option value="1">400万円〜</option>
+              <option value="2">500万円〜</option>
+              <option value="3">600万円〜</option>
+              <option value="4">700万円〜</option>
+              <option value="5">800万円〜</option>
+            </select>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              経験職種<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <select name="registResume_occupation" class="m-inputSelect registResume__input registResume__input--half">
+              <option value="">経験職種を選択してください</option>
+              <option value="1">事務</option>
+              <option value="2">医事課長</option>
+            </select>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              経験業種<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <select name="registResume_industry" class="m-inputSelect registResume__input registResume__input--half">
+              <option value="">経験業種を選択してください</option>
+              <option value="1">医療</option>
+              <option value="2">IT</option>
+            </select>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              英語スキル<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <select name="registResume_english" class="m-inputSelect registResume__input registResume__input--half">
+              <option value="">英語スキルを選択してください</option>
+              <option value="1">日常会話</option>
+              <option value="2">ビジネス英語</option>
+            </select>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              TOEIC<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <div class="registResumeInputFlex registResumeInputFlex--support">
+              <input
+                type="text"
+                name="registResume_toeic"
+                class="m-inputText registResume__input registResume__input--mini"
+                placeholder="400"
+                value=""
+              />
+              <p class="registResume__supportText">点</p>
+            </div>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              TOEFL<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <div class="registResumeInputFlex registResumeInputFlex--support">
+              <input
+                type="text"
+                name="registResume_toefl"
+                class="m-inputText registResume__input registResume__input--mini"
+                placeholder="350"
+                value=""
+              />
+              <p class="registResume__supportText">点</p>
+            </div>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              その他の言語・備考<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <input
+              type="text"
+              name="registResume_otherLanguage"
+              class="m-inputText registResume__input registResume__input--half"
+              placeholder="ドイツ語、フランス語"
+              value=""
+            />
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              保有資格・スキル<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <input
+              type="text"
+              name="registResume_qualification"
+              class="m-inputText registResume__input"
+              placeholder="普通自動車運転免許"
               value=""
             />
             <p class="m-inputErrorText"></p>
@@ -365,11 +441,27 @@
             <h3 class="m-heading m-heading--lv4 registResume__heading">
               転職回数<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
+            <div class="registResumeInputFlex registResumeInputFlex--support">
+              <input
+                type="text"
+                name="registResume_changeNumber"
+                class="m-inputText registResume__input registResume__input--mini"
+                placeholder="1"
+                value=""
+              />
+              <p class="registResume__supportText">回</p>
+            </div>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              転職理由<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
             <input
               type="text"
-              name="registResume_changeNumber"
+              name="registResume_reason"
               class="m-inputText registResume__input"
-              placeholder="転職回数を記入してください"
+              placeholder="転職理由を記入してください"
               value=""
             />
             <p class="m-inputErrorText"></p>
@@ -433,54 +525,79 @@
           </div>
           <div class="registResumeRow">
             <h3 class="m-heading m-heading--lv4 registResume__heading">
-              希望雇用形態<span class="m-inputIcon m-inputIcon--must">必須</span>
+              配偶者<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <div class="registResumeInputFlex">
+              <div class="registResumeInputFlex__item">
+                <input
+                  type="radio"
+                  id="registResume_spouse_yes"
+                  name="registResume_spouse"
+                  class="m-inputRadio registResume__input"
+                  value="yes"
+                />
+                <label for="registResume_spouse_yes" class="m-inputRadioLabel">有</label>
+              </div>
+              <div class="registResumeInputFlex__item">
+                <input
+                  type="radio"
+                  id="registResume_spouse_no"
+                  name="registResume_spouse"
+                  class="m-inputRadio registResume__input"
+                  value="no"
+                />
+                <label for="registResume_spouse_no" class="m-inputRadioLabel">無</label>
+              </div>
+            </div>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              最寄り駅<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
             <input
               type="text"
-              name="registResume_hopeStatus"
-              class="m-inputText registResume__input"
-              placeholder="希望雇用形態を記入してください"
+              name="registResume_station"
+              class="m-inputText registResume__input registResume__input--half"
+              placeholder="最寄り駅を記入してください"
               value=""
             />
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              希望雇用形態<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <select name="registResume_hopeStatus" class="m-inputSelect registResume__input registResume__input--half">
+              <option value="">希望雇用形態を選択してください</option>
+              <option value="1">正社員</option>
+              <option value="2">契約社員</option>
+            </select>
             <p class="m-inputErrorText"></p>
           </div>
           <div class="registResumeRow">
             <h3 class="m-heading m-heading--lv4 registResume__heading">
               希望勤務地<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
-            <input
-              type="text"
-              name="registResume_hopePlace"
-              class="m-inputText registResume__input"
-              placeholder="希望勤務地を記入してください"
-              value=""
-            />
+            <select name="registResume_hopePlace" class="m-inputSelect registResume__input registResume__input--half">
+              <option value="">希望勤務地を選択してください</option>
+              <option value="1">東京都</option>
+              <option value="2">神奈川県</option>
+            </select>
             <p class="m-inputErrorText"></p>
           </div>
           <div class="registResumeRow">
             <h3 class="m-heading m-heading--lv4 registResume__heading">
               希望職種<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
-            <input
-              type="text"
+            <select
               name="registResume_hopeOccupation"
-              class="m-inputText registResume__input"
-              placeholder="希望職種を記入してください"
-              value=""
-            />
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="registResumeRow">
-            <h3 class="m-heading m-heading--lv4 registResume__heading">
-              希望業種<span class="m-inputIcon m-inputIcon--must">必須</span>
-            </h3>
-            <input
-              type="text"
-              name="registResume_hopeIndustry"
-              class="m-inputText registResume__input"
-              placeholder="希望業種を記入してください"
-              value=""
-            />
+              class="m-inputSelect registResume__input registResume__input--half"
+            >
+              <option value="">希望職種を選択してください</option>
+              <option value="1">事務</option>
+              <option value="2">医事課長</option>
+            </select>
             <p class="m-inputErrorText"></p>
           </div>
           <div class="registResumeRow">
@@ -500,15 +617,53 @@
             <h3 class="m-heading m-heading--lv4 registResume__heading">
               希望の年収<span class="m-inputIcon m-inputIcon--must">必須</span>
             </h3>
-            <div class="registResumeInputFlex registResumeInputFlex--support">
-              <input
-                type="text"
-                name="registResume_hopeIncome"
-                class="m-inputText registResume__input registResume__input--mini"
-                placeholder="希望の年収を記入してください"
-                value=""
-              />
-              <p class="registResume__supportText">万円</p>
+            <select name="registResume_hopeIncome" class="m-inputSelect registResume__input registResume__input--half">
+              <option value="">希望の年収を選択してください</option>
+              <option value="1">400万円〜</option>
+              <option value="2">500万円〜</option>
+              <option value="3">600万円〜</option>
+              <option value="4">700万円〜</option>
+              <option value="5">800万円〜</option>
+            </select>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              転職に対する意欲<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <textarea
+              name="registResume_motivation"
+              class="m-inputTextArea registResume__inputTextArea"
+              placeholder="お問い合わせ内容を記入してください"
+              value=""
+            ></textarea>
+            <p class="m-inputErrorText"></p>
+          </div>
+          <div class="registResumeRow">
+            <h3 class="m-heading m-heading--lv4 registResume__heading">
+              連絡方法に関する希望<span class="m-inputIcon m-inputIcon--must">必須</span>
+            </h3>
+            <div class="registResumeInputFlex">
+              <div class="registResumeInputFlex__item">
+                <input
+                  type="radio"
+                  id="registResume_contact_tel"
+                  name="registResume_contact"
+                  class="m-inputRadio registResume__input"
+                  value="tel"
+                />
+                <label for="registResume_contact_tel" class="m-inputRadioLabel">電話</label>
+              </div>
+              <div class="registResumeInputFlex__item">
+                <input
+                  type="radio"
+                  id="registResume_contact_mail"
+                  name="registResume_contact"
+                  class="m-inputRadio registResume__input"
+                  value="mail"
+                />
+                <label for="registResume_contact_mail" class="m-inputRadioLabel">メール</label>
+              </div>
             </div>
             <p class="m-inputErrorText"></p>
           </div>

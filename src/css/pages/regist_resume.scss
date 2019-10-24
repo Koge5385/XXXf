@@ -55,6 +55,16 @@
     }
   }
 }
+select.registResume__input {
+  padding: 0 32px 0 12px;
+}
+.registResume__inputTextArea {
+  color: #333;
+  height: 180px;
+  &::placeholder {
+    color: #c9c9c9;
+  }
+}
 .registResumeInputFlex {
   display: flex;
   justify-content: space-between;

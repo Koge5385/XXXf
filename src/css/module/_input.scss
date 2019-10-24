@@ -30,12 +30,17 @@
   width: 100%;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background: url(../../img/common/icon/icon_arrow_down.svg) no-repeat right
-    11.5px center;
+  background: #fff url(../../img/common/icon/icon_arrow_down.svg) no-repeat
+    right 11.5px center;
   option {
     &:first-child {
       display: none;
     }
+  }
+  &.is-error {
+    border: 1px solid #ff0000;
+    background: #fff2f2 url(../../img/common/icon/icon_arrow_down.svg) no-repeat
+      right 11.5px center;
   }
 }
 .m-inputCheck {
