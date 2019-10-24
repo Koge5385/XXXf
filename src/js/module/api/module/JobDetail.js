@@ -17,7 +17,7 @@ class JobDetail {
    */
   getData() {
     const baseInstance = new AxiosBase('get', '/jobs/1', '')
-    console.log(baseInstance._setBase())
+    console.log(baseInstance.setBase())
   }
 }
 

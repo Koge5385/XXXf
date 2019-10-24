@@ -3,9 +3,9 @@ const axios = api.create({
   baseURL: 'http://54.168.137.34:3001/v1',
   headers: {
     'Content-Type': 'application/json',
-    'X-Requested-With': 'XMLHttpRequest'
+    'X-Requested-With': 'XMLHttpRequest',
   },
-  responseType: 'json'
+  responseType: 'json',
 })
 
 /**
@@ -28,20 +28,24 @@ class AxiosBase {
   /**
    * @desc APIのベース関数
    */
-  _setBase() {
+  setBase() {
     const addOptions = this.options
     const params = { timeout: 5000, addOptions }
-    if (this.method === 'get') {
-      axios.get(this.url, params)
+    if (`${this.method}` === 'get') {
+      axios.get(`${this.url}`, params)
         .then(response => {
           console.log(response.data)
-          response.data
+          return response.data
         })
         .catch(error => error)
       console.log('get test')
-    } else if (this.method === 'post') {
-      axios.post(this.url, params)
-        .then(response => response.data)
+    }
+    if (`${this.method}` === 'post') {
+      axios.post(`${this.url}`, params)
+        .then(response => {
+          console.log(response.data)
+          return response.data
+        })
         .catch(error => error)
       console.log('post test')
     }
