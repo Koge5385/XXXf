@@ -1,4 +1,4 @@
-import AxiosBase from '../module/AxiosBase'
+import AxiosBase from '../module/api/_base'
 import MobileNavigation from '../module/MobileNavigation'
 import AdjustHeightJobCardLine from '../module/AdjustHeightJobCardLine'
 import AutoTextOmit from '../module/AutoTextOmit'
@@ -38,7 +38,4 @@ window.addEventListener(LOAD_EVENT, () => {
 
   // jobcard内の「仕事内容」の高さを揃える
   new AdjustHeightJobCardLine(TEXT_WORK_TARGET_CLASS)
-
-  // API連携テスト
-  new AxiosBase()
 })
