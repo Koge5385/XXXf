@@ -15,7 +15,7 @@
   &.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
-    background: #fff2f2;
+    background-color: #fff2f2;
     &::placeholder {
       visibility: hidden;
     }
@@ -72,7 +72,7 @@
   cursor: pointer;
 }
 .m-inputRadio:checked + .m-inputRadioLabel {
-  background: #f7f8f9 url(../../img/common/icon/icon_radioCecked.svg) no-repeat
+  background: #f7f8f9 url(../../img/common/icon/icon_radioChecked.svg) no-repeat
     12px 15px;
   border: 1px solid #5d687c;
 }

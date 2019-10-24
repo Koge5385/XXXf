@@ -104,7 +104,7 @@
     <div class="registResumeRow">
       <h3 class="m-heading m-heading--lv4 registResume__heading">TOEIC<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
       <div class="registResumeInputFlex registResumeInputFlex--support">
-        <input type="text" name="registResume_toeic" class="m-inputText registResume__input registResume__input--mini" placeholder="400" value="">
+        <input type="text" name="registResume_toeic" class="m-inputText registResume__input registResume__input--small" placeholder="400" value="">
         <p class="registResume__supportText">点</p>
       </div>
       <p class="m-inputErrorText"></p>
@@ -112,7 +112,7 @@
     <div class="registResumeRow">
       <h3 class="m-heading m-heading--lv4 registResume__heading">TOEFL<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
       <div class="registResumeInputFlex registResumeInputFlex--support">
-        <input type="text" name="registResume_toefl" class="m-inputText registResume__input registResume__input--mini" placeholder="350" value="">
+        <input type="text" name="registResume_toefl" class="m-inputText registResume__input registResume__input--small" placeholder="350" value="">
         <p class="registResume__supportText">点</p>
       </div>
       <p class="m-inputErrorText"></p>
@@ -130,7 +130,7 @@
     <div class="registResumeRow">
       <h3 class="m-heading m-heading--lv4 registResume__heading">転職回数<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
       <div class="registResumeInputFlex registResumeInputFlex--support">
-        <input type="text" name="registResume_changeNumber" class="m-inputText registResume__input registResume__input--mini" placeholder="1" value="">
+        <input type="text" name="registResume_changeNumber" class="m-inputText registResume__input registResume__input--small" placeholder="1" value="">
         <p class="registResume__supportText">回</p>
       </div>
       <p class="m-inputErrorText"></p>
@@ -156,8 +156,8 @@
     </div>
     <div class="registResumeRow">
       <h3 class="m-heading m-heading--lv4 registResume__heading">生年月日<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-      <div class="registResumeInputFlex registResumeInputFlex--mini">
-        <select name="registResume_birthYear" class="m-inputSelect registResume__input registResume__input--mini">
+      <div class="registResumeInputFlex registResumeInputFlex--small">
+        <select name="registResume_birthYear" class="m-inputSelect registResume__input registResume__input--small">
           <option value="">年</option>
             {%- set selectYear = [
               {year: '1999'},
@@ -168,7 +168,7 @@
             <option value="{{ loop.index }}">{{ item.year }}</option>
             {%- endfor %}
         </select>
-        <select name="registResume_birthMonth" class="m-inputSelect registResume__input registResume__input--mini">
+        <select name="registResume_birthMonth" class="m-inputSelect registResume__input registResume__input--small">
           <option value="">月</option>
             {%- set selectMonth = [
               {month: '1'},
@@ -179,7 +179,7 @@
             <option value="{{ loop.index }}">{{ item.month }}</option>
             {%- endfor %}
         </select>
-        <select name="registResume_birthDay" class="m-inputSelect registResume__input registResume__input--mini">
+        <select name="registResume_birthDay" class="m-inputSelect registResume__input registResume__input--small">
           <option value="">日</option>
             {%- set selectDay = [
               {day: '1'},
