@@ -1,4 +1,4 @@
-import AxiosBase from '../AxiosBase'
+import { getAxiosBase } from '../AxiosBase'
 
 /**
  * @class JobDetail
@@ -9,6 +9,8 @@ class JobDetail {
    * @constructor
    */
   constructor() {
+    this.axios = new getAxiosBase('/jobs/1', '')
+    console.log(this.axios)
     this.getData()
   }
 
@@ -16,8 +18,8 @@ class JobDetail {
    * @desc 受け取ったデータの反映
    */
   getData() {
-    const baseInstance = new AxiosBase('get', '/jobs/1', '')
-    console.log(baseInstance)
+    const getData = this.axios
+    console.log(getData)
   }
 }
 
