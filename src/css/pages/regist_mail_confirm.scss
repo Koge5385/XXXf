@@ -1,0 +1,25 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 20px 60px;
+  }
+}
+.registMailConfirm {
+  @include _baseContentsWidth;
+}
+.registMailConfirm__textLine {
+  @include fontsize(16, 16);
+  margin-bottom: 40px;
+}
+.registMailConfirmInner {
+  width: 720px;
+  margin: 0 auto 33px;
+  @include media(sp) {
+    width: 100%;
+  }
+}
