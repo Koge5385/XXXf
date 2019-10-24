@@ -19,4 +19,7 @@
 .registMailConfirmInner {
   width: 720px;
   margin: 0 auto 33px;
+  @include media(sp) {
+    width: 100%;
+  }
 }

@@ -1300,3 +1300,6 @@ a {
 .registMailConfirmInner {
   width: 720px;
   margin: 0 auto 33px; }
+  @media screen and (max-width: 768px) {
+    .registMailConfirmInner {
+      width: 100%; } }
