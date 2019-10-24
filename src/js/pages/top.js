@@ -1,4 +1,3 @@
-import AxiosBase from '../module/api/_base'
 import MobileNavigation from '../module/MobileNavigation'
 import AdjustHeightJobCardLine from '../module/AdjustHeightJobCardLine'
 import AutoTextOmit from '../module/AutoTextOmit'

@@ -1,5 +1,5 @@
-import api from 'axios'
-const axios = api.create({
+import axios from 'axios'
+const api = axios.create({
   baseURL: 'http://54.168.137.34:3001/v1',
   headers: {
     'Content-Type': 'application/json',
@@ -23,6 +23,7 @@ class AxiosBase {
     this.method = method
     this.url = url
     this.options = options
+    this.setBase()
   }
 
   /**
@@ -31,8 +32,8 @@ class AxiosBase {
   setBase() {
     const addOptions = this.options
     const params = { timeout: 5000, addOptions }
-    if (`${this.method}` === 'get') {
-      axios.get(`${this.url}`, params)
+    if (this.method === 'get') {
+      api.get(this.url, params)
         .then(response => {
           console.log(response.data)
           return response.data
@@ -40,10 +41,9 @@ class AxiosBase {
         .catch(error => error)
       console.log('get test')
     }
-    if (`${this.method}` === 'post') {
-      axios.post(`${this.url}`, params)
+    if (this.method === 'post') {
+      api.post(this.url, params)
         .then(response => {
-          console.log(response.data)
           return response.data
         })
         .catch(error => error)

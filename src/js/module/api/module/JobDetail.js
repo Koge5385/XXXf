@@ -1,4 +1,4 @@
-import AxiosBase from '../_Base'
+import AxiosBase from '../AxiosBase'
 
 /**
  * @class JobDetail
@@ -17,7 +17,7 @@ class JobDetail {
    */
   getData() {
     const baseInstance = new AxiosBase('get', '/jobs/1', '')
-    console.log(baseInstance.setBase())
+    console.log(baseInstance)
   }
 }
 
