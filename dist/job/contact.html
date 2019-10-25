@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
-    <meta name="description" content="" />
+    <title>求人問い合わせ｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
+    <meta name="description" content="求人問い合わせディスクリプション" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
 
-    <meta property="og:url" content="https://job.mplat.jp/pagelist.html" />
-    <meta property="og:title" content="画面一覧｜医療事務職の求人サービスなら【M.PLAT 求職支援】" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://job.mplat.jp/job/job/detail.htmlcontact.html" />
+    <meta property="og:title" content="求人問い合わせ｜医療事務職の求人サービスなら【M.PLAT 求職支援】" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="求人問い合わせディスクリプション" />
     <meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
@@ -19,7 +19,7 @@
     <link rel="apple-touch-icon-precomposed" href="/dist/img/common/apple_icon.png" />
     <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="/dist/css/pages/top.css" />
+    <link rel="stylesheet" type="text/css" href="/dist/css/pages/job_contact.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150115128-1"></script>
@@ -83,7 +83,7 @@
                   <a
                     href="#"
                     class="globalNavItem__link globalNavItem__link--regist"
-                    onclick="gtag('event', 'click', {'event_category': 'top_header_regist','event_label': 'header_regist'});"
+                    onclick="gtag('event', 'click', {'event_category': 'job_contact_header_regist','event_label': 'header_regist'});"
                   >
                     <span class="globalNavItem__icon globalNavItem__icon--regist"
                       ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
@@ -170,7 +170,7 @@
                       <a
                         href="#"
                         class="globalMobileNavCellItem__link"
-                        onclick="gtag('event', 'click', {'event_category': 'top_header_regist','event_label': 'header_regist'});"
+                        onclick="gtag('event', 'click', {'event_category': 'job_contact_header_regist','event_label': 'header_regist'});"
                       >
                         <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
                           ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
@@ -207,56 +207,120 @@
           </div>
         </header>
         <div class="keyVisual">
-          <h1 class="keyVisual__title">画面一覧</h1>
-          <small class="keyVisual__enTitle">PAGE LIST</small>
+          <h1 class="keyVisual__title">求人問い合わせ</h1>
+          <small class="keyVisual__enTitle">JOB CONTACT</small>
         </div>
 
-        <style>
-          .pageList {
-            width: 500px;
-            margin: 0 auto;
-            padding-bottom: 80px;
-          }
-          .pageList a {
-            display: inline;
-          }
-          .lv1 {
-            margin-top: 1em;
-          }
-          .lv2 {
-            margin-top: 0.4em;
-            margin-left: 2em;
-            list-style-type: circle;
-          }
-          @media screen and (max-width: 768px) {
-            .pageList {
-              width: 90%;
-            }
-            .lv1 {
-              margin-left: 1em;
-            }
-            .lv2 {
-              margin-left: 3em;
-            }
-          }
-        </style>
-
         <div class="container">
-          <section class="pageList">
-            <ul>
-              <li class="lv1"><a href="./">トップページ</a></li>
+          <section class="jobContact">
+            <div class="jobContactRow">
+              <h3 class="m-heading m-heading--lv4 jobContact__heading">
+                お名前<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h3>
+              <div class="jobContactInputFlex">
+                <div class="jobContactInputFlex__item">
+                  <input
+                    type="text"
+                    name="jobContact_lastName"
+                    class="m-inputText jobContact__input"
+                    placeholder="性"
+                    value=""
+                  />
+                  <p class="m-inputErrorText"></p>
+                </div>
+                <div class="jobContactInputFlex__item">
+                  <input
+                    type="text"
+                    name="jobContact_firstName"
+                    class="m-inputText jobContact__input"
+                    placeholder="名"
+                    value=""
+                  />
+                  <p class="m-inputErrorText"></p>
+                </div>
+              </div>
+            </div>
+            <div class="jobContactRow">
+              <h3 class="m-heading m-heading--lv4 jobContact__heading">
+                連絡先電話番号<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h3>
+              <input
+                type="text"
+                name="jobContact_tel"
+                class="m-inputText jobContact__input jobContact__input--half"
+                placeholder="03-5437-2950"
+                value=""
+              />
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="jobContactRow">
+              <h3 class="m-heading m-heading--lv4 jobContact__heading">
+                メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h3>
+              <input
+                type="text"
+                name="jobContact_mail"
+                class="m-inputText jobContact__input"
+                placeholder="example@example.co.jp"
+                value=""
+              />
+              <p class="m-inputErrorText"></p>
+              <p class="m-note jobContact__note">※半角英数字</p>
+              <p class="jobContact__confirmText">確認のためもう一度メールアドレスを入力してください</p>
+              <input
+                type="text"
+                name="jobContact_mail_confirm"
+                class="m-inputText jobContact__input"
+                placeholder="example@example.co.jp"
+                value=""
+              />
+              <p class="m-inputErrorText"></p>
+              <p class="m-note jobContact__note">※半角英数字</p>
+            </div>
+            <div class="jobContactRow">
+              <h3 class="m-heading m-heading--lv4 jobContact__heading">
+                お問い合わせ種別<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h3>
+              <div class="jobContactInputFlex">
+                <div class="jobContactInputFlex__item">
+                  <input
+                    type="radio"
+                    id="jobContact_type_job"
+                    name="jobContact_type"
+                    class="m-inputRadio jobContact__input"
+                    value="job"
+                  />
+                  <label for="jobContact_type_job" class="m-inputRadioLabel">対象求人への問い合わせ</label>
+                </div>
+                <div class="jobContactInputFlex__item">
+                  <input
+                    type="radio"
+                    id="jobContact_type_service"
+                    name="jobContact_type"
+                    class="m-inputRadio jobContact__input"
+                    value="service"
+                  />
+                  <label for="jobContact_type_service" class="m-inputRadioLabel">サービスへの問い合わせ</label>
+                </div>
+              </div>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="jobContactRow">
+              <h3 class="m-heading m-heading--lv4 jobContact__heading">
+                お問い合わせ内容<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h3>
+              <textarea
+                name="jobContact_detail"
+                class="m-inputTextArea jobContact__inputTextArea"
+                placeholder="お問い合わせ内容を記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
 
-              <li class="lv1"><a href="./job/">求人一覧ページ</a></li>
-              <li class="lv2"><a href="./job/detail.html">求人詳細ページ</a></li>
-
-              <li class="lv1">会員登録導線</li>
-              <li class="lv2"><a href="./regist_profile/">プロフィール登録</a></li>
-              <li class="lv2"><a href="./regist_resume/">レジュメ登録</a></li>
-
-              <li class="lv1"><a href="./login/">ログイン</a></li>
-
-              <li class="lv1"><a href="./mypage/">マイページ</a></li>
-            </ul>
+            <button type="submit" name="jobContact_submit" class="m-button m-button--blue jobContact__submit" disabled>
+              確認画面へ
+            </button>
           </section>
         </div>
 
@@ -280,7 +344,29 @@
                 itemscope
                 itemtype="http://schema.org/ListItem"
               >
-                <span itemprop="name">画面一覧</span> <meta itemprop="position" content="2" />
+                <a href="/dist/job/" itemprop="item">
+                  <span itemprop="name">求人一覧</span>
+                </a>
+                <meta itemprop="position" content="2" />
+              </li>
+              <li
+                class="breadcrumbList__item"
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/ListItem"
+              >
+                <a href="/dist/job/detail.html" itemprop="item">
+                  <span itemprop="name">求人詳細</span>
+                </a>
+                <meta itemprop="position" content="3" />
+              </li>
+              <li
+                class="breadcrumbList__item"
+                itemprop="itemListElement"
+                itemscope
+                itemtype="http://schema.org/ListItem"
+              >
+                <span itemprop="name">求人問い合わせ</span> <meta itemprop="position" content="4" />
               </li>
             </ul>
           </div>
@@ -294,7 +380,7 @@
               <a
                 class="globalFooterGuide__contactButton"
                 href="/dist/contact.html"
-                onclick="gtag('event', 'click', {'event_category': 'top_footer_contact','event_label': 'footer_contact'});"
+                onclick="gtag('event', 'click', {'event_category': 'job_contact_footer_contact','event_label': 'footer_contact'});"
                 ><span class="globalFooterGuide__contactIcon"
                   ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
                     <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
@@ -307,7 +393,7 @@
                 <a
                   href="tel:03-5437-2950"
                   class="globalFooterTelBoxInner"
-                  onclick="gtag('event', 'click', {'event_category': 'top_footer_tel','event_label': 'footer_tel'});"
+                  onclick="gtag('event', 'click', {'event_category': 'job_contact_footer_tel','event_label': 'footer_tel'});"
                 >
                   <p class="globalFooterTelBox__number">
                     <span class="globalFooterTelBox__numberIcon"
@@ -353,6 +439,6 @@
       </form>
     </div>
 
-    <script src="/dist/js/pages/top.js"></script>
+    <script src="/dist/js/pages/job_contact.js"></script>
   </body>
 </html>

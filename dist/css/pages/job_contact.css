@@ -1427,248 +1427,97 @@ a {
 .container {
   width: 100%;
   min-width: 980px;
-  padding: 30px 0 90px;
-  background-color: #f7f8f9; }
+  padding: 0 0 100px; }
   @media screen and (max-width: 768px) {
     .container {
       min-width: auto;
-      padding: 26.8px 10px 59.2px; } }
+      padding: 0 20px 60px; } }
 
-.jobDetailWrap {
-  width: 980px;
-  margin: 0 auto;
-  margin-bottom: 30px; }
-  @media screen and (max-width: 768px) {
-    .jobDetailWrap {
-      width: 100%; } }
-
-.jobDetailBox {
-  width: 100%;
-  background-color: #fff;
-  padding: 2px 2px 60px;
-  box-shadow: 0 0 7px 0 #d3d9e0;
-  border-radius: 6px; }
-  @media screen and (max-width: 768px) {
-    .jobDetailBox {
-      padding-bottom: 40px; } }
-
-.jobDetailHeader {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 36px; }
-
-.jobDetailHeaderCategory {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 121px;
-  background-color: #0091d3;
-  border-radius: 6px 0 0 0 / 6px 0 0 0; }
-
-.jobDetailHeaderCategory__icon {
-  margin: 0 8px 0 10px; }
-  .jobDetailHeaderCategory__icon svg {
-    width: auto;
-    height: 18px; }
-
-.jobDetailHeaderCategory__name {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: #fff; }
-
-.jobDetailHeaderStatus {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: calc(100% - 121px);
-  background-color: #1b457e;
-  border-radius: 0 6px 0 0 / 0 6px 0 0; }
-  .jobDetailHeaderStatus::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-top: 18px solid #0091d3;
-    border-left: 18px solid #0091d3;
-    border-right: 18px solid transparent;
-    border-bottom: 18px solid transparent; }
-
-.jobDetailHeaderStatus__new {
-  font-size: 10px;
-  font-size: 0.625rem;
-  line-height: 1.6;
-  color: #1b457e;
-  display: block;
-  width: 43px;
-  height: 17px;
-  text-align: center;
-  background-color: #fff;
-  border-radius: 100px;
-  margin-right: 10px; }
-
-.jobDetailHeaderStatus__date {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: #fff;
-  margin-right: 10px; }
-
-.jobDetailContent {
-  width: 92.21311475%;
-  margin: 33px auto 0; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContent {
-      margin: 20px auto 0; } }
-
-.jobDetailContent__title {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: #1b457e;
-  margin-bottom: 9px; }
-
-.jobDetailContent__buildingName {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 15px; }
-
-.jobDetailContentPickup {
-  padding: 20px 0 17px;
-  border-top: 1px solid #b3c1d3; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContentPickup {
-      padding: 12px 0 0px; } }
-
-.jobDetailContentPickup__list {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContentPickup__list {
-      display: block; } }
-
-.jobDetailContentPickup__item {
-  display: flex;
-  align-items: center; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContentPickup__item {
-      margin-bottom: 10px; } }
-  .jobDetailContentPickup__item:nth-child(2) {
-    margin-right: 15px; }
-    @media screen and (max-width: 768px) {
-      .jobDetailContentPickup__item:nth-child(2) {
-        margin-right: 0;
-        margin-bottom: 5px; } }
-
-.jobDetailContentPickup__itemLabel {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  display: flex;
-  align-items: center;
-  color: #5d687c;
-  margin-right: 10px; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContentPickup__itemLabel {
-      margin-right: 12px; } }
-
-.jobDetailContentPickup__itemLabelIcon {
-  margin-right: 10px; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContentPickup__itemLabelIcon {
-      width: 24px;
-      text-align: center;
-      margin-right: 12px; } }
-  .jobDetailContentPickup__itemLabelIcon svg {
-    fill: #8da2bf;
-    width: auto;
-    height: 24px;
-    vertical-align: middle; }
-  .jobDetailContentPickup__itemLabelIcon--place svg {
-    width: auto;
-    height: 30px; }
-
-.jobDetailContentPickup__itemContent {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.6; }
-  .jobDetailContentPickup__itemContent--salary {
-    font-size: 22px;
-    font-size: 1.375rem;
-    line-height: 1.6;
-    font-weight: bold;
-    color: #ec652b; }
-    .jobDetailContentPickup__itemContent--salary span {
-      font-size: 16px;
-      font-size: 1rem;
-      line-height: 1.6; }
-      @media screen and (max-width: 768px) {
-        .jobDetailContentPickup__itemContent--salary span {
-          font-size: 22px;
-          font-size: 1.375rem;
-          line-height: 1.6; } }
-
-.jobDetailContentTable {
-  margin-bottom: 40px; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContentTable {
-      margin-bottom: 29.8px; } }
-
-.jobDetailContentTable__heading {
-  width: 160px; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContentTable__heading {
-      width: 100px; } }
-
-.jobDetailContentButtonWrap {
-  display: flex;
-  justify-content: center; }
-
-.jobDetailContent__actionButton {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.6;
-  width: 320px;
-  padding: 21px 0; }
-  .jobDetailContent__actionButton:first-child {
-    margin-right: 20px; }
-  @media screen and (max-width: 768px) {
-    .jobDetailContent__actionButton {
-      font-size: 20px;
-      font-size: 1.25rem;
-      line-height: 1.6;
-      width: 50%;
-      padding: 8px 0; }
-      .jobDetailContent__actionButton span {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.6; } }
-
-.jobDetailBackLink {
+.jobContact {
   width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .jobDetailBackLink {
+    .jobContact {
       width: 100%; } }
 
-.jobDetailBackLink__item {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: normal;
-  width: 200px;
-  padding: 8px 0 7px; }
-  .jobDetailBackLink__item::before {
-    left: 10px;
-    top: 16px; }
+.jobContactRow {
+  width: 720px;
+  margin: 0 auto 33px; }
+  .jobContactRow--center {
+    text-align: center; }
   @media screen and (max-width: 768px) {
-    .jobDetailBackLink__item {
-      margin: 0 auto; } }
+    .jobContactRow {
+      width: 100%; } }
+
+.jobContact__heading {
+  margin-bottom: 12px; }
+
+.jobContact__confirmText {
+  margin: 16px 0 6px; }
+
+.jobContact__note {
+  margin-top: 6px; }
+
+.jobContact__input {
+  color: #333;
+  height: 50px;
+  padding: 0 12px; }
+  .jobContact__input::-webkit-input-placeholder {
+    color: #c9c9c9; }
+  .jobContact__input::-ms-input-placeholder {
+    color: #c9c9c9; }
+  .jobContact__input::placeholder {
+    color: #c9c9c9; }
+  .jobContact__input--half {
+    width: calc(50% - 5px); }
+    @media screen and (max-width: 768px) {
+      .jobContact__input--half {
+        width: 100%; } }
+
+.jobContact__inputTextArea {
+  color: #333;
+  height: 180px; }
+  .jobContact__inputTextArea::-webkit-input-placeholder {
+    color: #c9c9c9; }
+  .jobContact__inputTextArea::-ms-input-placeholder {
+    color: #c9c9c9; }
+  .jobContact__inputTextArea::placeholder {
+    color: #c9c9c9; }
+
+.jobContactInputFlex {
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 768px) {
+    .jobContactInputFlex {
+      display: block; } }
+
+.jobContactInputFlex__item {
+  width: 50%;
+  margin-right: 10px; }
+  .jobContactInputFlex__item:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .jobContactInputFlex__item {
+      width: 100%;
+      margin-bottom: 15px; }
+      .jobContactInputFlex__item:last-child {
+        margin-right: 0;
+        margin-bottom: 0; } }
+
+.jobContact__submit {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding: 13px 0 12px; }
+  .jobContact__submit:disabled {
+    color: #fff;
+    border: 2px solid #333;
+    background-color: #333;
+    opacity: 0.3; }
+    .jobContact__submit:disabled:hover {
+      color: #fff;
+      border: 2px solid #333;
+      background-color: #333; }
