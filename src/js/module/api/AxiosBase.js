@@ -1,26 +1,57 @@
+import 'regenerator-runtime'
 import axios from 'axios'
 
 /**
- * @param {String} method get または post
- * @param {String} url 対象のURLパラメーター
- * @param {String} options 呼び出し時のオプション設定
+ * @class AxiosBase
+ * @desc API連携のベースファイル
  */
+class AxiosBase {
+  /**
+   * @constructor
+   */
+  constructor() {
+    this.setBase()
+  }
 
-export function getAxiosBase(url, options) {
-  const api = axios.create({
-    baseURL: 'http://54.168.137.34:3001/v1',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
-    },
-    responseType: 'json',
-  })
-  const params = { timeout: 5000, options }
-
-  api.get(url, params)
-    .then(response => {
-      console.log(response.data)
-      response.data
+  /**
+   * @desc プロパティを定義する
+   */
+  setBase() {
+    this.axios = axios.create({
+      baseURL: 'http://54.168.137.34:3001/v1',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      responseType: 'json',
     })
-    .catch(error => error)
+  }
+
+  /**
+   * @desc GETメソッドのaxios関数を返す
+   * @param {String} path 対象のURLパラメーター
+   * @param {String} callback コールバック関数
+   */
+  getMethod(path, callback) {
+    const params = { timeout: 10000 }
+    return this.axios
+      .get(path, params)
+      .then(response => callback(response.status, response.data))
+      .catch(error => callback(error.message, error.type, error.code))
+  }
+
+  /**
+   * @desc POSTメソッドのaxios関数を返す
+   * @param {String} path 対象のURLパラメーター
+   * @param {String} callback コールバック関数
+   */
+  postMethod(path, callback) {
+    const params = { timeout: 10000 }
+    return this.axios
+      .post(path, params)
+      .then(response => callback(response.status, response.data))
+      .catch(error => callback(error.message, error.type, error.code))
+  }
 }
+
+export default AxiosBase
