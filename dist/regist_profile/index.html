@@ -281,43 +281,27 @@
           </div>
 
           <section class="registProfile">
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                個人氏名<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <div class="registProfileInputFlex">
-                <div class="registProfileInputFlex__item">
-                  <input
-                    type="text"
-                    name="registProfile_lastName"
-                    class="m-inputText registProfile__input"
-                    placeholder="性"
-                    value=""
-                  />
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">個人氏名<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+              <div class="inputBlockFlex">
+                <div class="inputBlockFlex__item">
+                  <input type="text" name="registProfile_lastName" class="m-inputText" placeholder="性" value="" />
                   <p class="m-inputErrorText"></p>
                 </div>
-                <div class="registProfileInputFlex__item">
-                  <input
-                    type="text"
-                    name="registProfile_firstName"
-                    class="m-inputText registProfile__input"
-                    placeholder="名"
-                    value=""
-                  />
+                <div class="inputBlockFlex__item">
+                  <input type="text" name="registProfile_firstName" class="m-inputText" placeholder="名" value="" />
                   <p class="m-inputErrorText"></p>
                 </div>
               </div>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                フリガナ<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <div class="registProfileInputFlex">
-                <div class="registProfileInputFlex__item">
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">フリガナ<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+              <div class="inputBlockFlex">
+                <div class="inputBlockFlex__item">
                   <input
                     type="text"
                     name="registProfile_lastName_kana"
-                    class="m-inputText registProfile__input is-error"
+                    class="m-inputText is-error"
                     placeholder="セイ"
                     value="鈴木"
                   />
@@ -325,11 +309,11 @@
                     エラーテキストエラーテキストエラーテキストエラーテキストエラーテキストエラーテキスト
                   </p>
                 </div>
-                <div class="registProfileInputFlex__item">
+                <div class="inputBlockFlex__item">
                   <input
                     type="text"
                     name="registProfile_firstName_kana"
-                    class="m-inputText registProfile__input is-error"
+                    class="m-inputText is-error"
                     placeholder="メイ"
                     value="一郎"
                   />
@@ -339,61 +323,48 @@
                 </div>
               </div>
             </div>
-            <div class="registResumeRow">
-              <h3 class="m-heading m-heading--lv4 registResume__heading">
-                性別<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <div class="registResumeInputFlex">
-                <div class="registResumeInputFlex__item">
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">性別<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+              <div class="inputBlockFlex">
+                <div class="inputBlockFlex__item">
                   <input
                     type="radio"
-                    id="registResume_sex_man"
-                    name="registResume_sex"
-                    class="m-inputRadio registResume__input"
+                    id="registProfile_sex_man"
+                    name="registProfile_sex"
+                    class="m-inputRadio"
                     value="man"
                   />
-                  <label for="registResume_sex_man" class="m-inputRadioLabel">男性</label>
+                  <label for="registProfile_sex_man" class="m-inputRadioLabel">男性</label>
                 </div>
-                <div class="registResumeInputFlex__item">
+                <div class="inputBlockFlex__item">
                   <input
                     type="radio"
-                    id="registResume_sex_woman"
-                    name="registResume_sex"
-                    class="m-inputRadio registResume__input"
+                    id="registProfile_sex_woman"
+                    name="registProfile_sex"
+                    class="m-inputRadio"
                     value="woman"
                   />
-                  <label for="registResume_sex_woman" class="m-inputRadioLabel">女性</label>
+                  <label for="registProfile_sex_woman" class="m-inputRadioLabel">女性</label>
                 </div>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
-            <div class="registResumeRow">
-              <h3 class="m-heading m-heading--lv4 registResume__heading">
-                生年月日<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <div class="registResumeInputFlex registResumeInputFlex--small">
-                <select
-                  name="registResume_birthYear"
-                  class="m-inputSelect registResume__input registResume__input--small"
-                >
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">生年月日<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+              <div class="inputBlockFlex inputBlockFlex--always">
+                <select name="registProfile_birthYear" class="m-inputSelect inputBlock__inputSmall">
                   <option value="">年</option>
                   <option value="1">1999</option>
                   <option value="2">1998</option>
                   <option value="3">1997</option>
                 </select>
-                <select
-                  name="registResume_birthMonth"
-                  class="m-inputSelect registResume__input registResume__input--small"
-                >
+                <select name="registProfile_birthMonth" class="m-inputSelect inputBlock__inputSmall">
                   <option value="">月</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
                 </select>
-                <select
-                  name="registResume_birthDay"
-                  class="m-inputSelect registResume__input registResume__input--small"
-                >
+                <select name="registProfile_birthDay" class="m-inputSelect inputBlock__inputSmall">
                   <option value="">日</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -402,11 +373,9 @@
               </div>
               <p class="m-inputErrorText"></p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                都道府県<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <select name="registProfile_place" class="m-inputSelect registProfile__input registProfile__input--half">
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">都道府県<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+              <select name="registProfile_place" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">都道府県を選択してください</option>
                 <option value="1">茨城</option>
                 <option value="2">栃木</option>
@@ -425,14 +394,12 @@
               </select>
               <p class="m-inputErrorText"></p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                郵便番号<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">郵便番号<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
               <input
                 type="text"
                 name="registProfile_postal"
-                class="m-inputText registProfile__input registProfile__input--half is-error"
+                class="m-inputText inputBlock__inputHalf is-error"
                 placeholder="141-6005"
                 value="1411-6005"
               />
@@ -440,14 +407,12 @@
                 エラーテキストエラーテキストエラーテキストエラーテキストエラーテキストエラーテキスト
               </p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                市区群<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">市区群<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
               <input
                 type="text"
                 name="registProfile_city"
-                class="m-inputText registProfile__input is-error"
+                class="m-inputText is-error"
                 placeholder="品川区"
                 value="03-5437-2950"
               />
@@ -455,145 +420,114 @@
                 エラーテキストエラーテキストエラーテキストエラーテキストエラーテキストエラーテキスト
               </p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                住所詳細<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">住所詳細<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
               <input
                 type="text"
                 name="registProfile_address"
-                class="m-inputText registProfile__input"
+                class="m-inputText"
                 placeholder="大崎2-1-1 ThinkPark Tower 5F"
                 value=""
               />
               <p class="m-inputErrorText"></p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                電話番号<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">電話番号<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
               <input
                 type="text"
                 name="registProfile_tel"
-                class="m-inputText registProfile__input registProfile__input--half"
+                class="m-inputText inputBlock__inputHalf"
                 placeholder="03-5437-2950"
                 value=""
               />
               <p class="m-inputErrorText"></p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                FAX<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">FAX<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
               <input
                 type="text"
                 name="registProfile_fax"
-                class="m-inputText registProfile__input registProfile__input--half"
+                class="m-inputText inputBlock__inputHalf"
                 placeholder="03-5437-2951"
                 value=""
               />
               <p class="m-inputErrorText"></p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
               <input
                 type="text"
                 name="registProfile_mail"
-                class="m-inputText registProfile__input"
+                class="m-inputText"
                 placeholder="example@example.co.jp"
                 value=""
               />
               <p class="m-inputErrorText"></p>
-              <p class="m-note registProfile__note">※半角英数字</p>
-              <p class="registProfile__confirmText">確認のためもう一度メールアドレスを入力してください</p>
+              <p class="inputBlock__note">※半角英数字</p>
+              <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
               <input
                 type="text"
                 name="registProfile_mail_confirm"
-                class="m-inputText registProfile__input"
+                class="m-inputText"
                 placeholder="example@example.co.jp"
                 value=""
               />
               <p class="m-inputErrorText"></p>
-              <p class="m-note registProfile__note">※半角英数字</p>
+              <p class="inputBlock__note">※半角英数字</p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                携帯電話<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">携帯電話<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
               <input
                 type="text"
                 name="registProfile_mobile"
-                class="m-inputText registProfile__input registProfile__input--half"
+                class="m-inputText inputBlock__inputHalf"
                 placeholder="03-5437-2950"
                 value=""
               />
               <p class="m-inputErrorText"></p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">
                 携帯メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span>
               </h3>
               <input
                 type="text"
                 name="registProfile_mobileMail"
-                class="m-inputText registProfile__input"
+                class="m-inputText"
                 placeholder="example@example.co.jp"
                 value=""
               />
               <p class="m-inputErrorText"></p>
-              <p class="m-note registProfile__note">※半角英数字</p>
-              <p class="registProfile__confirmText">確認のためもう一度メールアドレスを入力してください</p>
+              <p class="inputBlock__note">※半角英数字</p>
+              <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
               <input
                 type="text"
                 name="registProfile_mobileMail_confirm"
-                class="m-inputText registProfile__input"
+                class="m-inputText"
                 placeholder="example@example.co.jp"
                 value=""
               />
               <p class="m-inputErrorText"></p>
-              <p class="m-note registProfile__note">※半角英数字</p>
+              <p class="inputBlock__note">※半角英数字</p>
             </div>
-            <div class="registProfileRow">
-              <h3 class="m-heading m-heading--lv4 registProfile__heading">
-                パスワード<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <input
-                type="password"
-                name="registProfile_mobileMail"
-                class="m-inputText registProfile__input"
-                value=""
-              />
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">パスワード<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+              <input type="password" name="registProfile_mobileMail" class="m-inputText" value="" />
               <p class="m-inputErrorText"></p>
-              <p class="m-note registProfile__note">※半角英数●文字以上を使用してください</p>
-              <p class="registProfile__confirmText">確認のためもう一度パスワードを入力してください</p>
-              <input
-                type="password"
-                name="registProfile_mobileMail_confirm"
-                class="m-inputText registProfile__input"
-                value=""
-              />
+              <p class="inputBlock__note">※半角英数●文字以上を使用してください</p>
+              <p class="inputBlock__confirmText">確認のためもう一度パスワードを入力してください</p>
+              <input type="password" name="registProfile_mobileMail_confirm" class="m-inputText" value="" />
               <p class="m-inputErrorText"></p>
-              <p class="m-note registProfile__note">※半角英数●文字以上を使用してください</p>
+              <p class="inputBlock__note">※半角英数●文字以上を使用してください</p>
             </div>
 
-            <div class="registProfileRow registProfileRow--center">
+            <div class="inputBlock inputBlock--center">
               <input type="checkbox" name="registProfile_termAgree" id="registProfile_termAgree" class="m-inputCheck" />
-              <label for="registProfile_termAgree" class="m-inputCheckLabel registProfile__inputCheck"
-                ><a href="#">利用規約</a>に同意する</label
-              >
+              <label for="registProfile_termAgree" class="m-inputCheckLabel"><a href="#">利用規約</a>に同意する</label>
               <p class="m-inputErrorText"></p>
             </div>
 
-            <button
-              type="submit"
-              name="registProfile_submit"
-              class="m-button m-button--blue registProfile__submit"
-              disabled
-            >
-              確認画面へ
-            </button>
+            <button type="submit" name="registProfile_submit" class="inputBlock__submit" disabled>確認画面へ</button>
           </section>
         </div>
 

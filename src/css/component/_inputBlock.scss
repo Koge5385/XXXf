@@ -9,30 +9,71 @@
   }
 }
 .inputBlock__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv4;
+  margin-bottom: 12px;
+}
+.inputBlock__guideText {
+  @include fontsize(16, 16);
   margin-bottom: 12px;
 }
 .inputBlock__note {
+  @extend .m-note;
   margin-top: 6px;
 }
 .inputBlock__confirmText {
+  @include fontsize(16, 16);
   margin: 16px 0 6px;
 }
 .inputBlock__supportText {
+  @include fontsize(16, 16);
   white-space: nowrap;
 }
-.inputBlock__input {
-  width: 100%;
-  &--half {
-    width: calc(50% - 5px);
-    @include media(sp) {
-      width: 100%;
-    }
+.inputBlock__inputHalf {
+  width: calc(50% - 5px);
+  @include media(sp) {
+    width: 100%;
   }
-  &--small {
-    width: 140px;
-    margin-right: 10px;
+}
+.inputBlock__inputSmall {
+  width: 140px;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.inputBlock__submit {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(26, 16);
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding: 13px 0 12px;
+}
+.inputBlockFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  @include media(sp) {
+    display: block;
+  }
+  &--always {
+    display: flex;
+  }
+}
+.inputBlockFlex__item {
+  width: 50%;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+  @include media(sp) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
     &:last-child {
-      margin-right: 0;
+      margin-bottom: 0;
     }
   }
 }
