@@ -327,21 +327,20 @@ a {
   font-size: 1rem;
   line-height: 1.6;
   line-height: 1;
-  color: #5d687c;
+  color: #333;
   position: relative;
   width: 100%;
+  height: 50px;
+  padding: 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background: transparent; }
+  background-color: #fff; }
   .m-inputText::-webkit-input-placeholder {
-    color: #5d687c;
-    font-weight: normal; }
+    color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
-    color: #5d687c;
-    font-weight: normal; }
+    color: #c9c9c9; }
   .m-inputText::placeholder {
-    color: #5d687c;
-    font-weight: normal; }
+    color: #c9c9c9; }
   .m-inputText.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
@@ -361,9 +360,11 @@ a {
   font-size: 1rem;
   line-height: 1.6;
   line-height: 1;
-  color: #5d687c;
+  color: #333;
   position: relative;
   width: 100%;
+  height: 50px;
+  padding: 0 32px 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
   background: #fff url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
@@ -1300,6 +1301,40 @@ a {
       justify-content: center;
       white-space: nowrap; } }
 
+.inputBlock {
+  width: 720px;
+  margin: 0 auto 33px; }
+  .inputBlock--center {
+    text-align: center; }
+  @media screen and (max-width: 768px) {
+    .inputBlock {
+      width: 100%; } }
+
+.inputBlock__heading {
+  margin-bottom: 12px; }
+
+.inputBlock__note {
+  margin-top: 6px; }
+
+.inputBlock__confirmText {
+  margin: 16px 0 6px; }
+
+.inputBlock__supportText {
+  white-space: nowrap; }
+
+.inputBlock__input {
+  width: 100%; }
+  .inputBlock__input--half {
+    width: calc(50% - 5px); }
+    @media screen and (max-width: 768px) {
+      .inputBlock__input--half {
+        width: 100%; } }
+  .inputBlock__input--small {
+    width: 140px;
+    margin-right: 10px; }
+    .inputBlock__input--small:last-child {
+      margin-right: 0; }
+
 .container {
   width: 100%;
   min-width: 980px;
@@ -1337,26 +1372,17 @@ a {
 .registResume__supportText {
   white-space: nowrap; }
 
-.registResume__input {
-  color: #333;
-  height: 50px;
-  padding: 0 12px; }
-  .registResume__input::-webkit-input-placeholder {
-    color: #c9c9c9; }
-  .registResume__input::-ms-input-placeholder {
-    color: #c9c9c9; }
-  .registResume__input::placeholder {
-    color: #c9c9c9; }
-  .registResume__input--half {
-    width: calc(50% - 5px); }
-    @media screen and (max-width: 768px) {
-      .registResume__input--half {
-        width: 100%; } }
-  .registResume__input--small {
-    width: 140px;
-    margin-right: 10px; }
-    .registResume__input--small:last-child {
-      margin-right: 0; }
+.registResume__input--half {
+  width: calc(50% - 5px); }
+  @media screen and (max-width: 768px) {
+    .registResume__input--half {
+      width: 100%; } }
+
+.registResume__input--small {
+  width: 140px;
+  margin-right: 10px; }
+  .registResume__input--small:last-child {
+    margin-right: 0; }
 
 select.registResume__input {
   padding: 0 32px 0 12px; }

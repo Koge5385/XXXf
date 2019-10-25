@@ -22,28 +22,28 @@
 
   <section class="registResume">
 
-    <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+    <div class="inputBlock">
+      <h3 class="m-heading m-heading--lv4 inputBlock__heading">学歴(詳細){{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_schoolCareer" class="m-inputText registResume__input" placeholder="学歴を記入してください" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">職務経歴(詳細){{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_career" class="m-inputText registResume__input" placeholder="職務経歴を記入してください" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の勤務先<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の勤務先{{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_now" class="m-inputText registResume__input" placeholder="現在の就業状況を記入してください" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の役職<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の役職{{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_nowPosition" class="m-inputText registResume__input" placeholder="現在の役職を記入してください" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の年収<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">現在の年収{{ macro.inputWant() }}</h3>
       <select name="registResume_income" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">現在の年収を選択してください</option>
           {%- set selectIncome = [
@@ -60,7 +60,7 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">経験職種<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">経験職種{{ macro.inputWant() }}</h3>
       <select name="registResume_occupation" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">経験職種を選択してください</option>
           {%- set selectOccupation = [
@@ -74,7 +74,7 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">経験業種<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">経験業種{{ macro.inputWant() }}</h3>
       <select name="registResume_industry" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">経験業種を選択してください</option>
           {%- set selectIndustry = [
@@ -88,7 +88,7 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">英語スキル<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">英語スキル{{ macro.inputWant() }}</h3>
       <select name="registResume_english" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">英語スキルを選択してください</option>
           {%- set selectEnglish = [
@@ -102,7 +102,7 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">TOEIC<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">TOEIC{{ macro.inputWant() }}</h3>
       <div class="registResumeInputFlex registResumeInputFlex--support">
         <input type="text" name="registResume_toeic" class="m-inputText registResume__input registResume__input--small" placeholder="400" value="">
         <p class="registResume__supportText">点</p>
@@ -110,7 +110,7 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">TOEFL<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">TOEFL{{ macro.inputWant() }}</h3>
       <div class="registResumeInputFlex registResumeInputFlex--support">
         <input type="text" name="registResume_toefl" class="m-inputText registResume__input registResume__input--small" placeholder="350" value="">
         <p class="registResume__supportText">点</p>
@@ -118,17 +118,17 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">その他の言語・備考<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">その他の言語・備考{{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_otherLanguage" class="m-inputText registResume__input registResume__input--half" placeholder="ドイツ語、フランス語" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">保有資格・スキル<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">保有資格・スキル{{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_qualification" class="m-inputText registResume__input" placeholder="普通自動車運転免許" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">転職回数<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">転職回数{{ macro.inputWant() }}</h3>
       <div class="registResumeInputFlex registResumeInputFlex--support">
         <input type="text" name="registResume_changeNumber" class="m-inputText registResume__input registResume__input--small" placeholder="1" value="">
         <p class="registResume__supportText">回</p>
@@ -136,65 +136,12 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">転職理由<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">転職理由{{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_reason" class="m-inputText registResume__input" placeholder="転職理由を記入してください" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">性別<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-      <div class="registResumeInputFlex">
-        <div class="registResumeInputFlex__item">
-          <input type="radio" id="registResume_sex_man" name="registResume_sex" class="m-inputRadio registResume__input" value="man">
-          <label for="registResume_sex_man" class="m-inputRadioLabel">男性</label>
-        </div>
-        <div class="registResumeInputFlex__item">
-          <input type="radio" id="registResume_sex_woman" name="registResume_sex" class="m-inputRadio registResume__input" value="woman">
-          <label for="registResume_sex_woman" class="m-inputRadioLabel">女性</label>
-        </div>
-      </div>
-      <p class="m-inputErrorText"></p>
-    </div>
-    <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">生年月日<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-      <div class="registResumeInputFlex registResumeInputFlex--small">
-        <select name="registResume_birthYear" class="m-inputSelect registResume__input registResume__input--small">
-          <option value="">年</option>
-            {%- set selectYear = [
-              {year: '1999'},
-              {year: '1998'},
-              {year: '1997'}
-            ] -%}
-            {%- for item in selectYear %}
-            <option value="{{ loop.index }}">{{ item.year }}</option>
-            {%- endfor %}
-        </select>
-        <select name="registResume_birthMonth" class="m-inputSelect registResume__input registResume__input--small">
-          <option value="">月</option>
-            {%- set selectMonth = [
-              {month: '1'},
-              {month: '2'},
-              {month: '3'}
-            ] -%}
-            {%- for item in selectMonth %}
-            <option value="{{ loop.index }}">{{ item.month }}</option>
-            {%- endfor %}
-        </select>
-        <select name="registResume_birthDay" class="m-inputSelect registResume__input registResume__input--small">
-          <option value="">日</option>
-            {%- set selectDay = [
-              {day: '1'},
-              {day: '2'},
-              {day: '3'}
-            ] -%}
-            {%- for item in selectDay %}
-            <option value="{{ loop.index }}">{{ item.day }}</option>
-            {%- endfor %}
-        </select>
-      </div>
-      <p class="m-inputErrorText"></p>
-    </div>
-    <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">配偶者<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">配偶者{{ macro.inputWant() }}</h3>
       <div class="registResumeInputFlex">
         <div class="registResumeInputFlex__item">
           <input type="radio" id="registResume_spouse_yes" name="registResume_spouse" class="m-inputRadio registResume__input" value="yes">
@@ -208,12 +155,12 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">最寄り駅<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">最寄り駅{{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_station" class="m-inputText registResume__input registResume__input--half" placeholder="最寄り駅を記入してください" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望雇用形態{{ macro.inputWant() }}</h3>
       <select name="registResume_hopeStatus" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">希望雇用形態を選択してください</option>
           {%- set selectHopeStatus = [
@@ -227,7 +174,7 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">希望勤務地<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望勤務地{{ macro.inputWant() }}</h3>
       <select name="registResume_hopePlace" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">希望勤務地を選択してください</option>
           {%- set selectHopePlace = [
@@ -241,7 +188,7 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">希望職種<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望職種{{ macro.inputWant() }}</h3>
       <select name="registResume_hopeOccupation" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">希望職種を選択してください</option>
           {%- set selectHopeOccupation = [
@@ -255,12 +202,12 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">希望条件(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望条件(詳細){{ macro.inputWant() }}</h3>
       <input type="text" name="registResume_hopeContract" class="m-inputText registResume__input" placeholder="希望条件(詳細)を記入してください" value="">
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">希望の年収<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">希望の年収{{ macro.inputWant() }}</h3>
       <select name="registResume_hopeIncome" class="m-inputSelect registResume__input registResume__input--half">
         <option value="">希望の年収を選択してください</option>
           {%- set selectHopeIncome = [
@@ -277,12 +224,12 @@
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">転職に対する意欲<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">転職に対する意欲{{ macro.inputWant() }}</h3>
       <textarea name="registResume_motivation" class="m-inputTextArea registResume__inputTextArea" placeholder="お問い合わせ内容を記入してください" value=""></textarea>
       <p class="m-inputErrorText"></p>
     </div>
     <div class="registResumeRow">
-      <h3 class="m-heading m-heading--lv4 registResume__heading">連絡方法に関する希望<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <h3 class="m-heading m-heading--lv4 registResume__heading">連絡方法に関する希望{{ macro.inputWant() }}</h3>
       <div class="registResumeInputFlex">
         <div class="registResumeInputFlex__item">
           <input type="radio" id="registResume_contact_tel" name="registResume_contact" class="m-inputRadio registResume__input" value="tel">

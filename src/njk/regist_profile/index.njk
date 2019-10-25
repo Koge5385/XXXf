@@ -47,6 +47,59 @@
         </div>
       </div>
     </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">性別<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <div class="registResumeInputFlex">
+        <div class="registResumeInputFlex__item">
+          <input type="radio" id="registResume_sex_man" name="registResume_sex" class="m-inputRadio registResume__input" value="man">
+          <label for="registResume_sex_man" class="m-inputRadioLabel">男性</label>
+        </div>
+        <div class="registResumeInputFlex__item">
+          <input type="radio" id="registResume_sex_woman" name="registResume_sex" class="m-inputRadio registResume__input" value="woman">
+          <label for="registResume_sex_woman" class="m-inputRadioLabel">女性</label>
+        </div>
+      </div>
+      <p class="m-inputErrorText"></p>
+    </div>
+    <div class="registResumeRow">
+      <h3 class="m-heading m-heading--lv4 registResume__heading">生年月日<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+      <div class="registResumeInputFlex registResumeInputFlex--small">
+        <select name="registResume_birthYear" class="m-inputSelect registResume__input registResume__input--small">
+          <option value="">年</option>
+            {%- set selectYear = [
+              {year: '1999'},
+              {year: '1998'},
+              {year: '1997'}
+            ] -%}
+            {%- for item in selectYear %}
+            <option value="{{ loop.index }}">{{ item.year }}</option>
+            {%- endfor %}
+        </select>
+        <select name="registResume_birthMonth" class="m-inputSelect registResume__input registResume__input--small">
+          <option value="">月</option>
+            {%- set selectMonth = [
+              {month: '1'},
+              {month: '2'},
+              {month: '3'}
+            ] -%}
+            {%- for item in selectMonth %}
+            <option value="{{ loop.index }}">{{ item.month }}</option>
+            {%- endfor %}
+        </select>
+        <select name="registResume_birthDay" class="m-inputSelect registResume__input registResume__input--small">
+          <option value="">日</option>
+            {%- set selectDay = [
+              {day: '1'},
+              {day: '2'},
+              {day: '3'}
+            ] -%}
+            {%- for item in selectDay %}
+            <option value="{{ loop.index }}">{{ item.day }}</option>
+            {%- endfor %}
+        </select>
+      </div>
+      <p class="m-inputErrorText"></p>
+    </div>
     <div class="registProfileRow">
       <h3 class="m-heading m-heading--lv4 registProfile__heading">都道府県<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
       <select name="registProfile_place" class="m-inputSelect registProfile__input registProfile__input--half">

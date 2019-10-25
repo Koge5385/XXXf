@@ -35,12 +35,6 @@
   white-space: nowrap;
 }
 .registResume__input {
-  color: #333;
-  height: 50px;
-  padding: 0 12px;
-  &::placeholder {
-    color: #c9c9c9;
-  }
   &--half {
     width: calc(50% - 5px);
     @include media(sp) {

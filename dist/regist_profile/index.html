@@ -339,6 +339,69 @@
                 </div>
               </div>
             </div>
+            <div class="registResumeRow">
+              <h3 class="m-heading m-heading--lv4 registResume__heading">
+                性別<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h3>
+              <div class="registResumeInputFlex">
+                <div class="registResumeInputFlex__item">
+                  <input
+                    type="radio"
+                    id="registResume_sex_man"
+                    name="registResume_sex"
+                    class="m-inputRadio registResume__input"
+                    value="man"
+                  />
+                  <label for="registResume_sex_man" class="m-inputRadioLabel">男性</label>
+                </div>
+                <div class="registResumeInputFlex__item">
+                  <input
+                    type="radio"
+                    id="registResume_sex_woman"
+                    name="registResume_sex"
+                    class="m-inputRadio registResume__input"
+                    value="woman"
+                  />
+                  <label for="registResume_sex_woman" class="m-inputRadioLabel">女性</label>
+                </div>
+              </div>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="registResumeRow">
+              <h3 class="m-heading m-heading--lv4 registResume__heading">
+                生年月日<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h3>
+              <div class="registResumeInputFlex registResumeInputFlex--small">
+                <select
+                  name="registResume_birthYear"
+                  class="m-inputSelect registResume__input registResume__input--small"
+                >
+                  <option value="">年</option>
+                  <option value="1">1999</option>
+                  <option value="2">1998</option>
+                  <option value="3">1997</option>
+                </select>
+                <select
+                  name="registResume_birthMonth"
+                  class="m-inputSelect registResume__input registResume__input--small"
+                >
+                  <option value="">月</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <select
+                  name="registResume_birthDay"
+                  class="m-inputSelect registResume__input registResume__input--small"
+                >
+                  <option value="">日</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <p class="m-inputErrorText"></p>
+            </div>
             <div class="registProfileRow">
               <h3 class="m-heading m-heading--lv4 registProfile__heading">
                 都道府県<span class="m-inputIcon m-inputIcon--must">必須</span>
