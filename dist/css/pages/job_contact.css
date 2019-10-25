@@ -204,6 +204,9 @@ a {
   a:hover {
     text-decoration: underline; }
 
+ul {
+  list-style-type: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -686,7 +689,6 @@ a {
     fill: #1b457e; }
 
 .globalMobileNavLink {
-  list-style-type: none;
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -955,7 +957,6 @@ a {
       display: block; } }
 
 .globalFooterNavList {
-  list-style-type: none;
   display: flex;
   align-items: flex-end; }
   @media screen and (max-width: 768px) {
@@ -1053,8 +1054,7 @@ a {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  list-style-type: none; }
+  justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
       padding: 0 10px; } }
@@ -1142,8 +1142,7 @@ a {
 .searchButtonBlockAreaList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style-type: none; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockAreaList {
       display: none;
@@ -1439,85 +1438,3 @@ a {
   @media screen and (max-width: 768px) {
     .jobContact {
       width: 100%; } }
-
-.jobContactRow {
-  width: 720px;
-  margin: 0 auto 33px; }
-  .jobContactRow--center {
-    text-align: center; }
-  @media screen and (max-width: 768px) {
-    .jobContactRow {
-      width: 100%; } }
-
-.jobContact__heading {
-  margin-bottom: 12px; }
-
-.jobContact__confirmText {
-  margin: 16px 0 6px; }
-
-.jobContact__note {
-  margin-top: 6px; }
-
-.jobContact__input {
-  color: #333;
-  height: 50px;
-  padding: 0 12px; }
-  .jobContact__input::-webkit-input-placeholder {
-    color: #c9c9c9; }
-  .jobContact__input::-ms-input-placeholder {
-    color: #c9c9c9; }
-  .jobContact__input::placeholder {
-    color: #c9c9c9; }
-  .jobContact__input--half {
-    width: calc(50% - 5px); }
-    @media screen and (max-width: 768px) {
-      .jobContact__input--half {
-        width: 100%; } }
-
-.jobContact__inputTextArea {
-  color: #333;
-  height: 180px; }
-  .jobContact__inputTextArea::-webkit-input-placeholder {
-    color: #c9c9c9; }
-  .jobContact__inputTextArea::-ms-input-placeholder {
-    color: #c9c9c9; }
-  .jobContact__inputTextArea::placeholder {
-    color: #c9c9c9; }
-
-.jobContactInputFlex {
-  display: flex;
-  justify-content: space-between; }
-  @media screen and (max-width: 768px) {
-    .jobContactInputFlex {
-      display: block; } }
-
-.jobContactInputFlex__item {
-  width: 50%;
-  margin-right: 10px; }
-  .jobContactInputFlex__item:last-child {
-    margin-right: 0; }
-  @media screen and (max-width: 768px) {
-    .jobContactInputFlex__item {
-      width: 100%;
-      margin-bottom: 15px; }
-      .jobContactInputFlex__item:last-child {
-        margin-right: 0;
-        margin-bottom: 0; } }
-
-.jobContact__submit {
-  font-size: 26px;
-  font-size: 1.625rem;
-  line-height: 1.6;
-  display: block;
-  width: 320px;
-  margin: 0 auto;
-  padding: 13px 0 12px; }
-  .jobContact__submit:disabled {
-    color: #fff;
-    border: 2px solid #333;
-    background-color: #333;
-    opacity: 0.3; }
-    .jobContact__submit:disabled:hover {
-      color: #fff;
-      border: 2px solid #333;
-      background-color: #333; }

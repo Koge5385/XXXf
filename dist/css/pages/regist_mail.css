@@ -204,6 +204,9 @@ a {
   a:hover {
     text-decoration: underline; }
 
+ul {
+  list-style-type: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -686,7 +689,6 @@ a {
     fill: #1b457e; }
 
 .globalMobileNavLink {
-  list-style-type: none;
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -955,7 +957,6 @@ a {
       display: block; } }
 
 .globalFooterNavList {
-  list-style-type: none;
   display: flex;
   align-items: flex-end; }
   @media screen and (max-width: 768px) {
@@ -1053,8 +1054,7 @@ a {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  list-style-type: none; }
+  justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
       padding: 0 10px; } }
@@ -1142,8 +1142,7 @@ a {
 .searchButtonBlockAreaList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style-type: none; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockAreaList {
       display: none;
@@ -1442,8 +1441,7 @@ a {
 
 .registMailCaution {
   width: 720px;
-  margin: 0 auto 33px;
-  list-style-type: none; }
+  margin: 0 auto 33px; }
   @media screen and (max-width: 768px) {
     .registMailCaution {
       width: 100%; } }

@@ -204,6 +204,9 @@ a {
   a:hover {
     text-decoration: underline; }
 
+ul {
+  list-style-type: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -686,7 +689,6 @@ a {
     fill: #1b457e; }
 
 .globalMobileNavLink {
-  list-style-type: none;
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -955,7 +957,6 @@ a {
       display: block; } }
 
 .globalFooterNavList {
-  list-style-type: none;
   display: flex;
   align-items: flex-end; }
   @media screen and (max-width: 768px) {
@@ -1053,8 +1054,7 @@ a {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  list-style-type: none; }
+  justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
       padding: 0 10px; } }
@@ -1142,8 +1142,7 @@ a {
 .searchButtonBlockAreaList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style-type: none; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockAreaList {
       display: none;
@@ -1466,9 +1465,6 @@ a {
 .jobListWrap {
   width: 100%; }
 
-.jobList {
-  list-style-type: none; }
-
 .jobListItem {
   width: 100%;
   background-color: #fff;
@@ -1586,7 +1582,6 @@ a {
       padding: 12px 0 0px; } }
 
 .jobListContentPickup__list {
-  list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1713,9 +1708,6 @@ a {
 .searchInputArea {
   margin: 18px 0 20px; }
 
-.searchInputList {
-  list-style-type: none; }
-
 .searchInputList__item {
   position: relative;
   margin-bottom: 10px; }
@@ -1750,7 +1742,6 @@ a {
       width: 100%; } }
 
 .jobListPagenation {
-  list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -1902,9 +1893,6 @@ a {
   width: 100%;
   background-color: rgba(247, 248, 249, 0.9);
   padding: 20px; }
-
-.mobileSearchList {
-  list-style-type: none; }
 
 .mobileSearchList__item {
   position: relative;
