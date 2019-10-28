@@ -166,14 +166,14 @@
 .jobDetailContentPickup__itemContent {
   @include fontsize(14, 16);
   &--salary {
-    @include fontsize(22, 16);
+    @include fontsize(16, 16);
     font-weight: bold;
     color: #ec652b;
+    @include media(sp) {
+      @include fontsize(22, 16);
+    }
     span {
-      @include fontsize(16, 16);
-      @include media(sp) {
-        @include fontsize(22, 16);
-      }
+      @include fontsize(22, 16);
     }
   }
 }
