@@ -67,16 +67,16 @@ class JobDetail {
           document.querySelector('.js-jobDetail-workTime-target').textContent = jobData[key]
         }
         if (key === 'job_p_holidays') {
-          document.querySelector('.js-jobDetail-holiday-target').textContent = jobData[key]
+          document.querySelector('.js-jobDetail-holiday-target').innerHTML = jobData[key].replace(/\r?\n/g, '<br>')
         }
         if (key === 'job_u_shiyoukikannoumu') {
           document.querySelector('.js-jobDetail-overtime-target').textContent = jobData[key]
         }
         if (key === 'job_u_siyoukikanshousai') {
-          document.querySelector('.js-jobDetail-trial-target').textContent = jobData[key]
+          document.querySelector('.js-jobDetail-trial-target').innerHTML = jobData[key].replace(/\r?\n/g, '<br>')
         }
         if (key === 'job_p_benefits') {
-          document.querySelector('.js-jobDetail-benefit-target').textContent = jobData[key]
+          document.querySelector('.js-jobDetail-benefit-target').innerHTML = jobData[key].replace(/\r?\n/g, '<br>')
         }
         if (key === 'job_u_sonotabikou') {
           document.querySelector('.js-jobDetail-other-target').textContent = jobData[key]
