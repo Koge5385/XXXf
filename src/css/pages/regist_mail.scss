@@ -12,63 +12,16 @@
 .registMail {
   @include _baseContentsWidth;
 }
-.registMailRow {
+.registMailCaution {
   width: 720px;
   margin: 0 auto 33px;
-  &--center {
-    text-align: center;
-  }
   @include media(sp) {
     width: 100%;
   }
 }
-.registMail__guideText {
-  margin-bottom: 12px;
-}
-.registMail__confirmText {
-  margin: 16px 0 6px;
-}
-.registMail__note {
-  margin-top: 6px;
-}
-.registMail__input {
-  color: #333;
-  height: 50px;
-  padding: 0 12px;
-  &::placeholder {
-    color: #c9c9c9;
-  }
-  &--half {
-    width: calc(50% - 5px);
-    @include media(sp) {
-      width: 100%;
-    }
-  }
-}
-.registMail__submit {
-  @include fontsize(26, 16);
-  display: block;
-  width: 320px;
-  margin: 0 auto;
-  padding: 13px 0 12px;
-  &:disabled {
-    color: #fff;
-    border: 2px solid #333;
-    background-color: #333;
-    opacity: 0.3;
-    &:hover {
-      color: #fff;
-      border: 2px solid #333;
-      background-color: #333;
-    }
-  }
-}
-.registMailCaution {
-  margin-top: 20px;
-  list-style-type: none;
-}
 .registMailCaution__item {
   @include fontsize(14, 16);
+  margin-bottom: 2px;
   padding-left: 1em;
   text-indent: -1em;
   color: #666;

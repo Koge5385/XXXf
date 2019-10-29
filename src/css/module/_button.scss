@@ -12,6 +12,17 @@
       color: #1b457e;
       text-decoration: none;
     }
+    &:disabled {
+      color: #fff;
+      border: 2px solid #333;
+      background-color: #333;
+      opacity: 0.3;
+      &:hover {
+        color: #fff;
+        border: 2px solid #333;
+        background-color: #333;
+      }
+    }
   }
   &--white {
     background-color: #fff;
