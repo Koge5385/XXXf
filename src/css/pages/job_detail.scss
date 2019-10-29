@@ -225,3 +225,14 @@
     margin: 0 auto;
   }
 }
+.jobDetailError {
+  display: none;
+  margin-top: 80px;
+}
+.jobDetailError__text {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  font-weight: normal;
+  color: #f00;
+  text-align: center;
+}

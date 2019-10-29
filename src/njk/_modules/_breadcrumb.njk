@@ -9,17 +9,21 @@
       </li>
       {%- for breadcrumb in breadcrumbs %}
       <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-        {%- if loop.last %}
+        {%- if loop.last -%}
+        {%- if pageName === 'job_detail' -%}
+        <span itemprop="name" class="js-async-breadcrumbText-target"></span>
+        {%- else -%}
         <span itemprop="name">{{ breadcrumb.item }}</span>
+        {%- endif -%}
         <meta itemprop="position" content="{{ loop.index + 1 }}" />
-        {%- else %}
+        {%- else -%}
         <a href="{{ basePath }}{{ breadcrumb.href }}" itemprop="item">
           <span itemprop="name">{{ breadcrumb.item }}</span>
         </a>
         <meta itemprop="position" content="{{ loop.index + 1 }}" />
-        {%- endif %}
+        {%- endif -%}
       </li>
-      {%- endfor %}
+      {%- endfor -%}
     </ul>
   </div>
 </div>

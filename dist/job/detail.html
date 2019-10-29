@@ -206,7 +206,7 @@
         </div>
       </header>
 
-      <div class="container">
+      <div class="container js-success-target">
         <section class="jobDetailWrap">
           <div class="jobDetailBox">
             <div class="jobDetailHeader">
@@ -218,17 +218,17 @@
                       fill="#fff"
                     /></svg
                 ></span>
-                <p class="jobDetailHeaderCategory__name js-jobDetail-category-target"></p>
+                <p class="jobDetailHeaderCategory__name js-async-jobDetailCategory-target"></p>
               </div>
               <div class="jobDetailHeaderStatus">
                 <span class="jobDetailHeaderStatus__new m-fontFamilyMontserrat">NEW</span>
-                <p class="jobDetailHeaderStatus__date"><span class="js-jobDetail-date-target"></span> 公開</p>
+                <p class="jobDetailHeaderStatus__date"><span class="js-async-jobDetailDate-target"></span> 公開</p>
               </div>
             </div>
             <div class="jobDetailContent">
-              <h1 class="jobDetailContent__title js-jobDetail-title-target"></h1>
+              <h1 class="jobDetailContent__title js-async-jobDetailTitle-target"></h1>
               <p class="jobDetailContent__buildingName">
-                施設名：<span class="js-jobDetail-buildingName-target"></span>
+                施設名：<span class="js-async-jobDetailBuildingName-target"></span>
               </p>
               <div class="jobDetailContentPickup">
                 <ul class="jobDetailContentPickup__list">
@@ -258,7 +258,7 @@
                           </g></svg></span
                       >職　種
                     </div>
-                    <p class="jobDetailContentPickup__itemContent js-jobDetail-occupation-target"></p>
+                    <p class="jobDetailContentPickup__itemContent js-async-jobDetailOccupation-target"></p>
                   </li>
                   <li class="jobDetailContentPickup__item">
                     <div class="jobDetailContentPickup__itemLabel">
@@ -272,7 +272,7 @@
                           </g></svg></span
                       >勤務地
                     </div>
-                    <p class="jobDetailContentPickup__itemContent js-jobDetail-place-target"></p>
+                    <p class="jobDetailContentPickup__itemContent js-async-jobDetailPlace-target"></p>
                   </li>
                   <li class="jobDetailContentPickup__item">
                     <div class="jobDetailContentPickup__itemLabel">
@@ -287,8 +287,8 @@
                     </div>
                     <p class="jobDetailContentPickup__itemContent jobDetailContentPickup__itemContent--salary">
                       <span
-                        ><span class="js-jobDetail-minSalary-target"></span>～<span
-                          class="js-jobDetail-maxSalary-target"
+                        ><span class="js-async-jobDetailMinSalary-target"></span>～<span
+                          class="js-async-jobDetailMaxSalary-target"
                         ></span></span
                       >万円
                     </p>
@@ -300,47 +300,47 @@
                 <tbody>
                   <tr>
                     <th class="jobDetailContentTable__heading">仕事内容</th>
-                    <td class="js-jobDetail-sumally-target"></td>
+                    <td class="js-async-jobDetailSumally-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">雇用形態</th>
-                    <td class="js-jobDetail-position-target"></td>
+                    <td class="js-async-jobDetailPosition-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">勤務時間</th>
-                    <td class="js-jobDetail-workTime-target"></td>
+                    <td class="js-async-jobDetailWorkTime-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">休日</th>
-                    <td class="js-jobDetail-holiday-target"></td>
+                    <td class="js-async-jobDetailHoliday-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">休暇</th>
-                    <td class="js-jobDetail-dayOff-target"></td>
+                    <td class="js-async-jobDetailDayOff-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">固定残業</th>
-                    <td class="js-jobDetail-overtime-target"></td>
+                    <td class="js-async-jobDetailOvertime-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">試用期間</th>
-                    <td class="js-jobDetail-trial-target"></td>
+                    <td class="js-async-jobDetailTrial-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">福利厚生</th>
-                    <td class="js-jobDetail-benefit-target"></td>
+                    <td class="js-async-jobDetailBenefit-target"></td>
                   </tr>
 
                   <tr>
                     <th class="jobDetailContentTable__heading">その他備考</th>
-                    <td class="js-jobDetail-other-target"></td>
+                    <td class="js-async-jobDetailOther-target"></td>
                   </tr>
                 </tbody>
               </table>
@@ -359,6 +359,10 @@
         <div class="jobDetailBackLink">
           <a href="#" class="m-backLink m-button m-button--white jobDetailBackLink__item">求人一覧に戻る</a>
         </div>
+      </div>
+
+      <div class="jobDetailError js-error-target">
+        <p class="jobDetailError__text">エラー：再度検索してください。</p>
       </div>
 
       <section class="searchButtonBlock">
@@ -506,10 +510,8 @@
               <meta itemprop="position" content="2" />
             </li>
             <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <span itemprop="name"
-                >【関東・関西・東海エリアに配属】支援先病院のマネージャー（事務長クラス）/完全週休2日制/事務長職として経営支援を行います</span
-              >
-              <meta itemprop="position" content="3" />
+              <span itemprop="name" class="js-async-breadcrumbText-target"></span
+              ><meta itemprop="position" content="3" />
             </li>
           </ul>
         </div>
@@ -581,6 +583,7 @@
       </footer>
     </div>
 
+    <script src="/dist/js/common.js"></script>
     <script src="/dist/js/pages/job_detail.js"></script>
   </body>
 </html>

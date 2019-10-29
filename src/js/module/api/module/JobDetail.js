@@ -1,4 +1,5 @@
 import AxiosBase from '../AxiosBase'
+import DataReflect from './DataReflect'
 
 /**
  * @class JobDetail
@@ -23,65 +24,43 @@ class JobDetail {
 
   /**
    * @desc APIの実行
+   * @param {Number} status コールバックで返却されたステータスコード
+   * @param {Object} data コールバックで返却されたデータオブジェクト
    */
   async setDataToPage(status, data) {
     if (status === 200) {
       const jobData = data.data.job
-      console.log(jobData)
+      const createElement = new DataReflect()
+      const pageName = 'jobDetail'
       Object.keys(jobData).forEach(key => {
-        if (key === 'job_p_position') {
-          document.querySelector('.js-jobDetail-category-target').textContent = jobData[key]
-          console.log(jobData[key])
-        }
-        if (key === 'job_p_phasedate') {
-          document.querySelector('.js-jobDetail-date-target').textContent = jobData[key]
-        }
-        if (key === 'job_u_kyuujinnnoosusumepointo') {
-          document.querySelector('.js-jobDetail-title-target').textContent = jobData[key]
-        }
-        if (key === 'job_p_publish') {
-          document.querySelector('.js-jobDetail-buildingName-target').textContent = jobData[key].option_p_nondisclosure.option_p_name
-        }
-        if (key === 'job_p_job_category') {
-          document.querySelector('.js-jobDetail-occupation-target').textContent = jobData[key].option_u_010895.option_p_name
-        }
-        if (key === 'job_p_area') {
-          document.querySelector('.js-jobDetail-place-target').textContent = jobData[key]
-        }
-        if (key === 'job_p_max_salary') {
-          console.log(jobData[key])
-          const convert = String(jobData[key]).slice(0, -4)
-          document.querySelector('.js-jobDetail-maxSalary-target').textContent = Number(convert).toLocaleString()
-        }
-        if (key === 'job_p_min_salary') {
-          const convert = String(jobData[key]).slice(0, -4)
-          document.querySelector('.js-jobDetail-minSalary-target').textContent = Number(convert).toLocaleString()
-        }
-        if (key === 'job_p_job_category_summary') {
-          document.querySelector('.js-jobDetail-sumally-target').textContent = jobData[key]
-        }
-        if (key === 'job_p_employment_type') {
-          document.querySelector('.js-jobDetail-position-target').textContent = jobData[key].option_p_fullTime.option_p_name
-        }
-        if (key === 'job_p_woking_hours') {
-          document.querySelector('.js-jobDetail-workTime-target').textContent = jobData[key]
-        }
-        if (key === 'job_p_holidays') {
-          document.querySelector('.js-jobDetail-holiday-target').innerHTML = jobData[key].replace(/\r?\n/g, '<br>')
-        }
-        if (key === 'job_u_shiyoukikannoumu') {
-          document.querySelector('.js-jobDetail-overtime-target').textContent = jobData[key]
-        }
-        if (key === 'job_u_siyoukikanshousai') {
-          document.querySelector('.js-jobDetail-trial-target').innerHTML = jobData[key].replace(/\r?\n/g, '<br>')
-        }
-        if (key === 'job_p_benefits') {
-          document.querySelector('.js-jobDetail-benefit-target').innerHTML = jobData[key].replace(/\r?\n/g, '<br>')
-        }
-        if (key === 'job_u_sonotabikou') {
-          document.querySelector('.js-jobDetail-other-target').textContent = jobData[key]
-        }
+
+        // APIからの返却データをそのまま反映
+        createElement.reflect(key, 'job_p_position', `${pageName}Category`, jobData[key])
+        createElement.reflect(key, 'job_p_phasedate', `${pageName}Date`, jobData[key])
+        createElement.reflect(key, 'job_u_kyuujinnnoosusumepointo', `${pageName}Title`, jobData[key])
+        createElement.reflect(key, 'job_p_publish', `${pageName}BuildingName`, jobData['job_p_publish'].option_p_nondisclosure.option_p_name)
+        createElement.reflect(key, 'job_p_job_category', `${pageName}Occupation`, jobData['job_p_job_category'].option_u_010895.option_p_name)
+        createElement.reflect(key, 'job_p_area', `${pageName}Place`, jobData[key])
+        createElement.reflect(key, 'job_p_job_category_summary', `${pageName}Sumally`, jobData[key])
+        createElement.reflect(key, 'job_p_employment_type', `${pageName}Position`, jobData['job_p_employment_type'].option_p_fullTime.option_p_name)
+        createElement.reflect(key, 'job_p_woking_hours', `${pageName}WorkTime`, jobData[key])
+        createElement.reflect(key, 'job_p_holidays', `${pageName}Holiday`, jobData[key])
+        createElement.reflect(key, 'job_u_shiyoukikannoumu', `${pageName}Overtime`, jobData[key])
+        createElement.reflect(key, 'job_u_siyoukikanshousai', `${pageName}Trial`, jobData[key])
+        createElement.reflect(key, 'job_p_benefits', `${pageName}Benefit`, jobData[key])
+        createElement.reflect(key, 'job_u_sonotabikou', `${pageName}Other`, jobData[key])
+
+        // パンくずリストにタイトルを反映
+        createElement.reflect(key, 'job_u_kyuujinnnoosusumepointo', 'breadcrumbText', jobData[key])
+
+        // 年収のみ「万円」の単位に変換する処理を追加
+        createElement.reflect(key, 'job_p_max_salary', `${pageName}MaxSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString().replace(/\r?\n/g, '<br>'))
+        createElement.reflect(key, 'job_p_min_salary', `${pageName}MinSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString().replace(/\r?\n/g, '<br>'))
       })
+    }
+    if (status.match(/400/) || status.match(/401/)) {
+      document.querySelector('.js-success-target').style.display = 'none'
+      document.querySelector('.js-error-target').style.display = 'block'
     }
   }
 }

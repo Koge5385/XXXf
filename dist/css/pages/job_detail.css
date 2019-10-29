@@ -266,7 +266,7 @@ a {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading {
+.m-heading, .jobDetailError__text {
   font-weight: bold;
   color: #5d687c; }
   .m-heading--lv2 {
@@ -279,7 +279,7 @@ a {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
-  .m-heading--lv3 {
+  .m-heading--lv3, .jobDetailError__text {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -1523,3 +1523,12 @@ a {
   @media screen and (max-width: 768px) {
     .jobDetailBackLink__item {
       margin: 0 auto; } }
+
+.jobDetailError {
+  display: none;
+  margin-top: 80px; }
+
+.jobDetailError__text {
+  font-weight: normal;
+  color: #f00;
+  text-align: center; }
