@@ -29,14 +29,14 @@
         ] -%}
         {%- for item in serviceFeature -%}
         <div class="serviceInfoFeatureItem">
-          <p class="serviceInfoFeatureLeft">
+          <div class="serviceInfoFeatureLeft">
             <img src="{{ basePath }}img/forrecruiter/img_serviceInfoFeature_0{{ item.number }}.jpg" alt="FEATURE 0{{ item.number }}　{{ item.title }}" class="pc-view">
             <img src="{{ basePath }}img/forrecruiter/sp/img_serviceInfoFeature_0{{ item.number }}.jpg" alt="FEATURE 0{{ item.number }}　{{ item.title }}" class="sp-view">
-          </p>
+          </div>
           <div class="serviceInfoFeatureRight">
             <div class="serviceInfoFeatureTitle">
-              <p class="serviceInfoFeature__step">FEATURE <span class="serviceInfoFeature__number">{{ item.number }}</span></p>
-              <p class="serviceInfoFeature__titile">{{ item.title }}</p>
+              <div class="serviceInfoFeature__step">FEATURE <span class="serviceInfoFeature__number">{{ item.number }}</span></div>
+              <div class="serviceInfoFeature__titile">{{ item.title }}</div>
             </div>
             <p class="serviceInfoFeature__flowText">{{ item.description }}</p>
             {%- if loop.first -%}
@@ -68,8 +68,8 @@
           ] -%}
           {%- for item in serviceFlow -%}
           <div class="serviceProcessFlowItem">
-            <p class="serviceProcessFlowItem__step">STEP.<span class="serviceProcessFlowItem__number">{{ item.number }}</span></p>
-            <p class="serviceProcessFlowItem__text">{{ item.text | safe }}</p>
+            <div class="serviceProcessFlowItem__step">STEP.<span class="serviceProcessFlowItem__number">{{ item.number }}</span></div>
+            <div class="serviceProcessFlowItem__text">{{ item.text | safe }}</div>
           </div>
           {%- endfor -%}
 
