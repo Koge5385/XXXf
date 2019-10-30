@@ -1,0 +1,255 @@
+@import "../_index";
+
+.keyVisual {
+  margin-bottom: 0;
+}
+.container {
+  width: 100%;
+  min-width: 980px;
+  @include media(sp) {
+    min-width: auto;
+  }
+}
+.forrecruiter__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv2;
+  text-align: center;
+}
+.serviceInfo {
+  @include _baseContentsWidth;
+  padding: 80px 0;
+  @include media(sp) {
+    padding: 60px 0;
+  }
+}
+.serviceInfoInner {
+  @include media(sp) {
+    padding: 0 20px;
+  }
+}
+.serviceInfo__text {
+  @include fontsize(16, 16);
+  text-align: center;
+  margin-bottom: 20px;
+  @include media(sp) {
+    text-align: left;
+  }
+}
+.serviceInfo__note {
+  @extend .m-note;
+  text-align: center;
+  margin-bottom: 80px;
+  @include media(sp) {
+    text-align: left;
+    margin-bottom: 60px;
+  }
+}
+.serviceInfoFeature {
+  width: 100%;
+  @include media(sp) {
+    padding: 0 10px;
+  }
+}
+.serviceInfoFeatureItem {
+  background-color: #fff;
+  border-top: 2px solid #5d687c;
+  border-right: 1px solid #b3c1d3;
+  border-bottom: 1px solid #b3c1d3;
+  border-left: 1px solid #b3c1d3;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include media(sp) {
+    border-top: 1px solid #b3c1d3;
+    display: block;
+  }
+  @include landscape(sp) {
+    width: 70%;
+    margin: 0 auto 15px;
+  }
+}
+.serviceInfoFeatureLeft {
+  font-size: 0;
+  padding: 50px 40px 50px 50px;
+  @include media(sp) {
+    margin-bottom: 22px;
+    padding: 0;
+  }
+}
+.serviceInfoFeatureRight {
+  padding: 50px 50px 50px 0;
+  @include media(sp) {
+    padding: 0 20px 20px;
+  }
+}
+.serviceInfoFeatureTitle {
+  display: flex;
+  align-items: baseline;
+  margin-top: 3px;
+  margin-bottom: 22px;
+  @include media(sp) {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+}
+.serviceInfoFeature__step {
+  @extend .m-fontFamilyMontserrat;
+  @include fontsize(20, 16);
+  color: #0091d4;
+  padding-right: 45px;
+  position: relative;
+  font-weight: 500;
+  @include media(sp) {
+    padding-right: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: 7px;
+    width: 74px;
+    height: 74px;
+    border: 1px solid transparent;
+    border-right: 1px solid #0091d4;
+    transform: rotate(45deg);
+    @include media(sp) {
+      display: none;
+    }
+  }
+}
+.serviceInfoFeature__number {
+  @include fontsize(30, 16);
+  font-weight: 400;
+}
+.serviceInfoFeature__titile {
+  @include fontsize(24, 16);
+  color: #5d687c;
+  font-weight: bold;
+}
+.serviceInfoFeature__flowText {
+  @include fontsize(16, 16);
+}
+.serviceInfoFeatureScope {
+  margin-top: 13px;
+}
+.serviceInfoFeature__subTitle {
+  @include fontsize(16, 16);
+  font-weight: bold;
+  color: #5d687c;
+  margin-bottom: 6px;
+}
+.serviceInfoFeature__subText {
+  @include fontsize(16, 16);
+}
+.serviceProcess {
+  width: 100%;
+  background-color: #f7f8f9;
+}
+.serviceProcessInner {
+  @include _baseContentsWidth;
+  padding: 80px 0;
+  @include media(sp) {
+    padding: 60px 20px;
+  }
+}
+.serviceProcess__text {
+  @include fontsize(16, 16);
+  text-align: center;
+  margin-bottom: 40px;
+  @include media(sp) {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+.serviceProcessFlow {
+  display: flex;
+  justify-content: space-between;
+  @include media(sp) {
+    display: block;
+  }
+}
+.serviceProcessFlowItem {
+  text-align: center;
+  padding-top: 19px;
+  border-top: 2px solid #1b457e;
+  background-color: #fff;
+  width: 172px;
+  height: 155px;
+  position: relative;
+  @include media(sp) {
+    margin-bottom: 25px;
+    padding: 9px 0 13px;
+    width: 100%;
+    height: auto;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include landscape(sp) {
+    width: 70%;
+    margin: 0 auto 25px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -34.62px;
+    background: url(../../img/forrecruiter/icon_processArrow_next.svg) no-repeat
+      center center;
+    width: 23.08px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+    @include media(sp) {
+      background: url(../../img/forrecruiter/icon_processArrow_down.svg)
+        no-repeat center center;
+      width: 16px;
+      height: 23.08px;
+      top: auto;
+      bottom: -34.62px;
+      right: auto;
+      left: 50%;
+    }
+  }
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+.serviceProcessFlowItem__step {
+  @include fontsize(14, 16);
+  font-weight: 500;
+  color: #0091d4;
+  margin-bottom: 7px;
+  @include media(sp) {
+    margin-bottom: 0;
+  }
+}
+.serviceProcessFlowItem__number {
+  @include fontsize(24, 16);
+  font-weight: 400;
+}
+.serviceProcessFlowItem__text {
+  @include fontsize(20, 16);
+  font-weight: bold;
+  color: #5d687c;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media(sp) {
+    height: auto;
+    display: block;
+  }
+}
+.serviceContact {
+  @include _baseContentsWidth;
+  padding: 80px 0;
+  @include media(sp) {
+    padding: 60px 20px;
+  }
+}
