@@ -207,7 +207,7 @@
           </div>
         </header>
 
-        <div class="container">
+        <div class="container js-success-target">
           <section class="jobDetailWrap">
             <div class="jobDetailBox">
               <div class="jobDetailHeader">
@@ -219,18 +219,18 @@
                         fill="#fff"
                       /></svg
                   ></span>
-                  <p class="jobDetailHeaderCategory__name">一般</p>
+                  <p class="jobDetailHeaderCategory__name js-async-jobDetailCategory-target"></p>
                 </div>
                 <div class="jobDetailHeaderStatus">
                   <span class="jobDetailHeaderStatus__new m-fontFamilyMontserrat">NEW</span>
-                  <p class="jobDetailHeaderStatus__date">2019.00.00 公開</p>
+                  <p class="jobDetailHeaderStatus__date"><span class="js-async-jobDetailDate-target"></span> 公開</p>
                 </div>
               </div>
               <div class="jobDetailContent">
-                <h1 class="jobDetailContent__title">
-                  【関東・関西・東海エリアに配属】支援先病院のマネージャー（事務長クラス）/完全週休2日制/事務長職として経営支援を行います
-                </h1>
-                <p class="jobDetailContent__buildingName">施設名：非公開</p>
+                <h1 class="jobDetailContent__title js-async-jobDetailTitle-target"></h1>
+                <p class="jobDetailContent__buildingName">
+                  施設名：<span class="js-async-jobDetailBuildingName-target"></span>
+                </p>
                 <div class="jobDetailContentPickup">
                   <ul class="jobDetailContentPickup__list">
                     <li class="jobDetailContentPickup__item">
@@ -259,7 +259,7 @@
                             </g></svg></span
                         >職　種
                       </div>
-                      <p class="jobDetailContentPickup__itemContent">総務課管理職候補</p>
+                      <p class="jobDetailContentPickup__itemContent js-async-jobDetailOccupation-target"></p>
                     </li>
                     <li class="jobDetailContentPickup__item">
                       <div class="jobDetailContentPickup__itemLabel">
@@ -273,7 +273,7 @@
                             </g></svg></span
                         >勤務地
                       </div>
-                      <p class="jobDetailContentPickup__itemContent">東京都千代田区</p>
+                      <p class="jobDetailContentPickup__itemContent js-async-jobDetailPlace-target"></p>
                     </li>
                     <li class="jobDetailContentPickup__item">
                       <div class="jobDetailContentPickup__itemLabel">
@@ -287,7 +287,11 @@
                         >年　収
                       </div>
                       <p class="jobDetailContentPickup__itemContent jobDetailContentPickup__itemContent--salary">
-                        1,000～2,000<span>万円</span>
+                        <span
+                          ><span class="js-async-jobDetailMinSalary-target"></span>～<span
+                            class="js-async-jobDetailMaxSalary-target"
+                          ></span></span
+                        >万円
                       </p>
                     </li>
                   </ul>
@@ -297,58 +301,47 @@
                   <tbody>
                     <tr>
                       <th class="jobDetailContentTable__heading">仕事内容</th>
-                      <td>
-                        人事・採用、労務などダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミーダミー
-                      </td>
+                      <td class="js-async-jobDetailSumally-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">雇用形態</th>
-                      <td>正社員</td>
+                      <td class="js-async-jobDetailPosition-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">勤務時間</th>
-                      <td>8:30～17:30</td>
+                      <td class="js-async-jobDetailWorkTime-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">休日</th>
-                      <td>日曜日・祝日・シフト制 ※年間休日120日</td>
+                      <td class="js-async-jobDetailHoliday-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">休暇</th>
-                      <td>・有給休暇：法定通り付与 ・特別休暇 ・産前産後休暇</td>
+                      <td class="js-async-jobDetailDayOff-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">固定残業</th>
-                      <td>無</td>
+                      <td class="js-async-jobDetailOvertime-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">試用期間</th>
-                      <td>
-                        有 (期間： 3か月)<br />
-                        試用期間中の給与： 同条件<br />
-                        試用期間中の職務内容： 同条件
-                      </td>
+                      <td class="js-async-jobDetailTrial-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">福利厚生</th>
-                      <td>
-                        交通費、退職金制度、財形貯蓄制度、育児休業<br />
-                        各種保険完備<br />
-                        退職金制度（勤続3年以上）<br />
-                        家族（扶養）手当（配偶者5,000円、子3,000円/人）
-                      </td>
+                      <td class="js-async-jobDetailBenefit-target"></td>
                     </tr>
 
                     <tr>
                       <th class="jobDetailContentTable__heading">その他備考</th>
-                      <td>平均残業時間：30時間程度/月(各施設により変動あり)</td>
+                      <td class="js-async-jobDetailOther-target"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -367,6 +360,10 @@
           <div class="jobDetailBackLink">
             <a href="#" class="m-backLink m-button m-button--white jobDetailBackLink__item">求人一覧に戻る</a>
           </div>
+        </div>
+
+        <div class="jobDetailError js-error-target">
+          <p class="jobDetailError__text">エラー：再度検索してください。</p>
         </div>
 
         <section class="searchButtonBlock">
@@ -529,10 +526,8 @@
                 itemscope
                 itemtype="http://schema.org/ListItem"
               >
-                <span itemprop="name"
-                  >【関東・関西・東海エリアに配属】支援先病院のマネージャー（事務長クラス）/完全週休2日制/事務長職として経営支援を行います</span
-                >
-                <meta itemprop="position" content="3" />
+                <span itemprop="name" class="js-async-breadcrumbText-target"></span
+                ><meta itemprop="position" content="3" />
               </li>
             </ul>
           </div>
@@ -605,6 +600,7 @@
       </form>
     </div>
 
+    <script src="/dist/js/common.js"></script>
     <script src="/dist/js/pages/job_detail.js"></script>
   </body>
 </html>

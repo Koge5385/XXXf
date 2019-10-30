@@ -278,7 +278,7 @@ ul {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .inputBlock__heading {
+.m-heading, .inputBlock__heading, .jobDetailError__text {
   font-weight: bold;
   color: #5d687c; }
   .m-heading--lv2 {
@@ -291,7 +291,7 @@ ul {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
-  .m-heading--lv3 {
+  .m-heading--lv3, .jobDetailError__text {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -1579,6 +1579,7 @@ ul {
       margin-right: 12px; } }
 
 .jobDetailContentPickup__itemLabelIcon {
+  width: 24px;
   margin-right: 10px; }
   @media screen and (max-width: 768px) {
     .jobDetailContentPickup__itemLabelIcon {
@@ -1590,29 +1591,31 @@ ul {
     width: auto;
     height: 24px;
     vertical-align: middle; }
-  .jobDetailContentPickup__itemLabelIcon--place svg {
-    width: auto;
-    height: 30px; }
+  .jobDetailContentPickup__itemLabelIcon--place {
+    width: 21px; }
+    .jobDetailContentPickup__itemLabelIcon--place svg {
+      width: auto;
+      height: 30px; }
 
 .jobDetailContentPickup__itemContent {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.6; }
   .jobDetailContentPickup__itemContent--salary {
-    font-size: 22px;
-    font-size: 1.375rem;
+    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     font-weight: bold;
     color: #ec652b; }
+    @media screen and (max-width: 768px) {
+      .jobDetailContentPickup__itemContent--salary {
+        font-size: 22px;
+        font-size: 1.375rem;
+        line-height: 1.6; } }
     .jobDetailContentPickup__itemContent--salary span {
-      font-size: 16px;
-      font-size: 1rem;
+      font-size: 22px;
+      font-size: 1.375rem;
       line-height: 1.6; }
-      @media screen and (max-width: 768px) {
-        .jobDetailContentPickup__itemContent--salary span {
-          font-size: 22px;
-          font-size: 1.375rem;
-          line-height: 1.6; } }
 
 .jobDetailContentTable {
   margin-bottom: 40px; }
@@ -1670,3 +1673,12 @@ ul {
   @media screen and (max-width: 768px) {
     .jobDetailBackLink__item {
       margin: 0 auto; } }
+
+.jobDetailError {
+  display: none;
+  margin-top: 80px; }
+
+.jobDetailError__text {
+  font-weight: normal;
+  color: #f00;
+  text-align: center; }
