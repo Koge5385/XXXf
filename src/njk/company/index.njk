@@ -1,0 +1,58 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'index' -%}
+{%- set pageName = 'company' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '会社概要' -%}
+{%- set en_pageTitle = 'COMPANY' -%}
+{%- set pageDescription = '会社概要ディスクリプション' -%}
+{%- set breadcrumbs = [{item: '会社概要'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <section class="company">
+    <table class="flexTable companyTable">
+      <tbody>
+        <tr>
+          <th class="companyTable__heading">社名</th>
+          <td>株式会社エムステージ</td>
+        </tr>
+        <tr>
+          <th class="companyTable__heading">事業内容</th>
+          <td>医師向け人材総合サービス（厚生労働大臣許可13-ユ-010928）<br>
+          医療機関向け採用支援<br>
+          企業向け健康経営支援</td>
+        </tr>
+        <tr>
+          <th class="companyTable__heading">設立</th>
+          <td>2003年5月</td>
+        </tr>
+        <tr>
+          <th class="companyTable__heading">資本金</th>
+          <td>6,250万円</td>
+        </tr>
+        <tr>
+          <th class="companyTable__heading">代表取締役</th>
+          <td>杉田 雄二</td>
+        </tr>
+        <tr>
+          <th class="companyTable__heading">本社</th>
+          <td>東京都品川区大崎2-1-1 ThinkPark Tower 5F</td>
+        </tr>
+        <tr>
+          <th class="companyTable__heading">事業拠点</th>
+          <td>東京･札幌･仙台･大宮･名古屋･金沢･大阪･広島･高松･福岡･那覇</td>
+        </tr>
+        <tr>
+          <th class="companyTable__heading">URL</th>
+          <td><a href="https://www.mstage-corp.jp/" target="_blank">https://www.mstage-corp.jp/</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="companyMap">
+      <iframe class="companyMap__iframe" src="https://www.google.com/maps?output=embed&q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E5%A4%A7%E5%B4%8E2-1-1%20ThinkPark%20Tower%205F&z=17" width="100%" height="auto" seamless="seamless"></iframe>
+    </div>
+  </section>
+</div>
+
+{% endblock %}
