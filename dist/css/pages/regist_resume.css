@@ -755,9 +755,9 @@ ul {
 .breadcrumbInner {
   width: 980px;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 5px 0;
   overflow-y: hidden;
-  height: 45px; }
+  height: 35px; }
   @media screen and (max-width: 768px) {
     .breadcrumbInner {
       width: 100%; } }
@@ -1241,6 +1241,8 @@ ul {
     @media screen and (max-width: 768px) {
       .flexTable td {
         padding: 10px 0 10px 15px; } }
+  .flexTable a {
+    display: inline; }
 
 .registStep {
   width: 980px;

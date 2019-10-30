@@ -1,0 +1,42 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 20px 60px;
+  }
+}
+.company {
+  @include _baseContentsWidth;
+}
+.companyTable {
+  margin-bottom: 60px;
+}
+.companyTable__heading {
+  width: 200px;
+  @include media(sp) {
+    width: 105px;
+  }
+}
+.companyMap {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  @include media(sp) {
+    padding-bottom: 100%;
+  }
+  @include landscape(sp) {
+    padding-bottom: 56.25%;
+  }
+}
+.companyMap__iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
