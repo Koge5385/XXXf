@@ -1,9 +1,18 @@
 {
   "presets": [
-    ["env", {
-      "useBuiltIns": true
-    }]
+    [
+      "env",
+      {
+        "useBuiltIns": "usage"
+      }
+    ],
+    [
+      "babel-preset-env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
   ]
 }
-
-
