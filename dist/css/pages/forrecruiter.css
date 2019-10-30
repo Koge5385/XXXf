@@ -1514,6 +1514,10 @@ ul {
     .serviceInfoFeatureItem {
       border-top: 1px solid #b3c1d3;
       display: block; } }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .serviceInfoFeatureItem {
+      width: 70%;
+      margin: 0 auto 15px; } }
 
 .serviceInfoFeatureLeft {
   font-size: 0;
@@ -1645,7 +1649,13 @@ ul {
       margin-bottom: 25px;
       padding: 9px 0 13px;
       width: 100%;
-      height: auto; } }
+      height: auto; }
+      .serviceProcessFlowItem:last-child {
+        margin-bottom: 0; } }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .serviceProcessFlowItem {
+      width: 70%;
+      margin: 0 auto 25px; } }
   .serviceProcessFlowItem::after {
     content: "";
     position: absolute;

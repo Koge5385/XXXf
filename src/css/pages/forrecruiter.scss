@@ -66,6 +66,10 @@
     border-top: 1px solid #b3c1d3;
     display: block;
   }
+  @include landscape(sp) {
+    width: 70%;
+    margin: 0 auto 15px;
+  }
 }
 .serviceInfoFeatureLeft {
   font-size: 0;
@@ -181,6 +185,13 @@
     padding: 9px 0 13px;
     width: 100%;
     height: auto;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @include landscape(sp) {
+    width: 70%;
+    margin: 0 auto 25px;
   }
   &::after {
     content: "";
