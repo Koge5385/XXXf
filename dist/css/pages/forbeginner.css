@@ -1481,6 +1481,11 @@ ul {
     .serviceStructure__text {
       text-align: left; } }
 
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .serviceStructure__img {
+    width: 70%;
+    margin: 0 auto; } }
+
 .serviceFlow {
   background-color: #f7f8f9;
   padding: 80px 0; }
@@ -1502,7 +1507,7 @@ ul {
   display: flex;
   align-items: center; }
   .serviceFlowBox:last-child {
-    margin-bottom: 20px; }
+    margin-bottom: 0; }
   @media screen and (max-width: 768px) {
     .serviceFlowBox {
       display: block;
@@ -1611,6 +1616,10 @@ ul {
   line-height: 1.6;
   display: block;
   padding: 17px 0; }
+  @media screen and (max-width: 768px) and (orientation: landscape) {
+    .serviceFlowRegistForm__button {
+      width: 60%;
+      margin: 0 auto; } }
 
 .serviceFlowRegistTel {
   width: 275px;

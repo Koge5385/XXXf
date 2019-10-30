@@ -43,7 +43,7 @@
               <p class="serviceFlowTitle__step">STEP.<span class="serviceFlowTitle__number">{{ item.number }}</span></p>
               <p class="serviceFlowTitle__titile">{{ item.title }}</p>
             </div>
-            <p class="serviceFlow__flowText">{{ item.description }}</p>
+            <p class="serviceFlow__flowText">{{ item.description | safe }}</p>
             {%- if loop.first -%}
             <div class="serviceFlowRegist">
               <div class="serviceFlowRegistForm">
