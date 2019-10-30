@@ -13,11 +13,14 @@ window.addEventListener(LOAD_EVENT, () => {
 
 // ブラウザバック時のイベント処理
 window.addEventListener(BEFOREUNLOAD_EVENT, () => {
+  // IE用
 })
 window.addEventListener(UNLOAD_EVENT, () => {
+  // IE以外用
 })
 window.addEventListener(PAGESHOW_EVENT, event =>{
   if (event.persisted) {
-    window.location.reload()
+    // ページ表示の際に再発火
+    new JobDetail()
   }
 })
