@@ -36,7 +36,7 @@
           </a>
         </li>
         <li class="globalNavItem">
-          <a href="#" class="globalNavItem__link globalNavItem__link--regist" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
+          <a href="{{ basePath }}regist_mail/" class="globalNavItem__link globalNavItem__link--regist" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
             <span class="globalNavItem__icon globalNavItem__icon--regist">{{ macro.svg_code_human() }}</span>
             <p class="globalNavItem__label">会員登録</p>
           </a>
@@ -77,15 +77,15 @@
               </a>
             </li>
             <li class="globalMobileNavCellItem">
-              <a href="#" class="globalMobileNavCellItem__link" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
+              <a href="{{ basePath }}regist_mail/" class="globalMobileNavCellItem__link" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
                 <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist">{{ macro.svg_code_human_sp() }}</span>会員登録
               </a>
             </li>
           </ul>
           {%- endif -%}
           <ul class="globalMobileNavLink">
-            <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="#">初めての方へ</a></li>
-            <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="#">医療機関採用担当者の方へ</a></li>
+            <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="{{ basePath }}forbeginner/">初めての方へ</a></li>
+            <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="{{ basePath }}forrecruiter/">医療機関採用担当者の方へ</a></li>
             <li class="globalMobileNavLink__item"><a href="{{ basePath }}company/">会社概要</a></li>
             <li class="globalMobileNavLink__item"><a href="#">個人情報保護方針</a></li>
             <li class="globalMobileNavLink__item"><a href="#">利用規約</a></li>

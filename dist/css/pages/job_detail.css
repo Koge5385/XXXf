@@ -231,25 +231,25 @@ ul {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .inputBlock__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1; }
-  .m-button--blue, .inputBlock__submit {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .inputBlock__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .inputBlock__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3; }
-      .m-button--blue:disabled:hover, .inputBlock__submit:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -278,20 +278,20 @@ ul {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .inputBlock__heading, .jobDetailError__text {
+.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .jobDetailError__text {
   font-weight: bold;
   color: #5d687c; }
-  .m-heading--lv2 {
+  .m-heading--lv2, .searchButtonBlock__heading {
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.6;
     margin-bottom: 40px; }
     @media screen and (max-width: 768px) {
-      .m-heading--lv2 {
+      .m-heading--lv2, .searchButtonBlock__heading {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
-  .m-heading--lv3, .jobDetailError__text {
+  .m-heading--lv3, .searchButtonBlockRegist__text, .jobDetailError__text {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -1031,6 +1031,12 @@ ul {
       min-width: auto;
       margin: 60px 0 80px; } }
 
+.searchButtonBlock__heading {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .searchButtonBlock__heading {
+      margin-bottom: 30px; } }
+
 .searchButtonBlockInner {
   width: 980px;
   margin: 0 auto; }
@@ -1210,6 +1216,24 @@ ul {
     .searchButtonBlockAreaList__link {
       width: 111px;
       height: 50px; } }
+
+.searchButtonBlockRegist {
+  margin-top: 40px; }
+
+.searchButtonBlockRegist__text {
+  text-align: center; }
+  @media screen and (max-width: 768px) {
+    .searchButtonBlockRegist__text {
+      margin-bottom: 20px; } }
+
+.searchButtonBlockRegist__button {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 17px 0; }
 
 .flexTable {
   width: 100%;

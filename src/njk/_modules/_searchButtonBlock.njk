@@ -1,4 +1,13 @@
 <section class="searchButtonBlock">
+  {%- if pageName === 'top' -%}
+  <div class="sectionHeading">
+    <h1 class="sectionHeading__title">求人を探す</h1>
+    <small class="sectionHeading__enTitle">SEARCH</small>
+  </div>
+  {%- endif -%}
+  {%- if pageName === 'forbeginner' -%}
+  <h2 class="searchButtonBlock__heading">希望条件から<br class="sp-view">求人を探す</h2>
+  {%- endif -%}
   <div class="searchButtonBlockInner">
     <div class="searchButtonBlockContent">
       <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title"><span class="searchButtonBlockContent__icon">{{ macro.svg_code_bag() }}</span>職種から探す</h3>
@@ -45,4 +54,10 @@
       </div>
     </div>
   </div>
+  {%- if pageName === 'forbeginner' -%}
+  <div class="searchButtonBlockRegist">
+    <p class="searchButtonBlockRegist__text">会員登録が<br class="sp-view">お済みでない方はこちら</p>
+    <a href="{{ basePath }}regist_mail/" class="searchButtonBlockRegist__button" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_searchBlock_regist','event_label': 'searchBlock_regist'});">無料会員登録</a>
+  </div>
+  {%- endif -%}
 </section>

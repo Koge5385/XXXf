@@ -7,6 +7,14 @@
     margin: 60px 0 80px;
   }
 }
+.searchButtonBlock__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv2;
+  text-align: center;
+  @include media(sp) {
+    margin-bottom: 30px;
+  }
+}
 .searchButtonBlockInner {
   @include _baseContentsWidth;
 }
@@ -192,4 +200,24 @@
     width: 111px;
     height: 50px;
   }
+}
+.searchButtonBlockRegist {
+  margin-top: 40px;
+}
+.searchButtonBlockRegist__text {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  text-align: center;
+  @include media(sp) {
+    margin-bottom: 20px;
+  }
+}
+.searchButtonBlockRegist__button {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(20, 16);
+  display: block;
+  width: 280px;
+  margin: 0 auto;
+  padding: 17px 0;
 }

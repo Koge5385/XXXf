@@ -4,13 +4,13 @@
 {% if pageName === 'top' %}
 <title>医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
 {% else %}
-<title>{{ pageTitle }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
+<title>{{ pageTitle | striptags(false) }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
 {% endif %}
 <meta name="description" content="{{ pageDescription }}">
 <meta name="format-detection" content="email=no,telephone=no,address=no">
 
 <meta property="og:url" content="https://job.mplat.jp/{%- for breadcrumb in breadcrumbs %}{%- if loop.last %}{{ '' if fileName === 'index' else fileName + '.html' }}{%- else %}{{ breadcrumb.href }}{%- endif %}{%- endfor %}">
-<meta property="og:title" content="{{ pageTitle }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】">
+<meta property="og:title" content="{{ pageTitle | striptags(false) }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】">
 <meta property="og:type" content="{{ 'website' if pageName === 'top' else 'article' }}">
 <meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png">

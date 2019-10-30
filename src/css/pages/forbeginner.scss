@@ -1,0 +1,207 @@
+@import "../_index";
+
+.keyVisual {
+  margin-bottom: 0;
+}
+.container {
+  width: 100%;
+  min-width: 980px;
+  @include media(sp) {
+    min-width: auto;
+  }
+}
+.forbeginner__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv2;
+  text-align: center;
+}
+.serviceStructure {
+  @include _baseContentsWidth;
+  padding: 80px 0;
+  @include media(sp) {
+    padding: 60px 20px;
+  }
+}
+.serviceStructure__text {
+  @include fontsize(16, 16);
+  text-align: center;
+  margin-bottom: 40px;
+  @include media(sp) {
+    text-align: left;
+  }
+}
+.serviceStructure__img {
+  @include landscape(sp) {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.serviceFlow {
+  background-color: #f7f8f9;
+  padding: 80px 0;
+  @include media(sp) {
+    padding: 60px 10px;
+  }
+}
+.serviceFlowInner {
+  @include _baseContentsWidth;
+}
+.serviceFlowBox {
+  background-color: #fff;
+  border-top: 2px solid #5d687c;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include media(sp) {
+    display: block;
+    padding: 18px;
+    position: relative;
+  }
+}
+.serviceFlowBoxLeft {
+  width: 330px;
+  margin-right: 55px;
+  @include media(sp) {
+    position: absolute;
+    margin-right: 0;
+    width: 130px;
+    top: 20px;
+    left: 18px;
+  }
+}
+.serviceFlowBoxRight {
+  padding-right: 55px;
+  @include media(sp) {
+    padding-right: 0;
+  }
+}
+.serviceFlowTitle {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 22px;
+  @include media(sp) {
+    display: block;
+    margin-left: 150px;
+  }
+}
+.serviceFlowTitle__step {
+  @extend .m-fontFamilyMontserrat;
+  @include fontsize(20, 16);
+  color: #0091d4;
+  padding-right: 40px;
+  position: relative;
+  font-weight: 500;
+  @include media(sp) {
+    padding-right: 0;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -38px;
+    right: 8px;
+    width: 74px;
+    height: 74px;
+    border: 1px solid transparent;
+    border-right: 1px solid #0091d4;
+    transform: rotate(42deg);
+    @include media(sp) {
+      display: none;
+    }
+  }
+}
+.serviceFlowTitle__number {
+  @include fontsize(30, 16);
+  font-weight: 400;
+}
+.serviceFlowTitle__titile {
+  @include fontsize(24, 16);
+  color: #5d687c;
+  font-weight: bold;
+  @include media(sp) {
+    height: 80px;
+  }
+}
+.serviceFlow__text {
+  @include fontsize(16, 16);
+}
+.serviceFlowRegist {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  @include media(sp) {
+    display: block;
+    margin-top: 30px;
+  }
+}
+.serviceFlowRegistForm {
+  width: 240px;
+  text-align: center;
+  @include media(sp) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.serviceFlowRegistForm__text {
+  @include fontsize(16, 16);
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.serviceFlowRegistForm__button {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(20, 16);
+  display: block;
+  padding: 17px 0;
+  @include landscape(sp) {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.serviceFlowRegistTel {
+  width: 275px;
+  text-align: center;
+  @include media(sp) {
+    width: 100%;
+  }
+}
+.serviceFlowRegistTel__text {
+  @include fontsize(16, 16);
+  font-weight: bold;
+  margin-bottom: 15px;
+  @include media(sp) {
+    margin-bottom: 5px;
+  }
+}
+.serviceFlowRegistTelBoxInner {
+  pointer-events: none;
+  @include media(sp) {
+    pointer-events: auto;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+.serviceFlowRegistTelBox__number {
+  @include fontsize(28, 16);
+  color: #1b457e;
+  text-align: center;
+  font-weight: bold;
+}
+.serviceFlowRegistTelBox__numberIcon {
+  margin-right: 15px;
+  svg {
+    fill: rgba(27, 69, 126, 0.5);
+    vertical-align: baseline;
+    @include media(sp) {
+      width: auto;
+    }
+  }
+}
+.serviceFlowRegistTelBox__reception {
+  @include fontsize(12, 16);
+  color: #333;
+  text-align: center;
+}
