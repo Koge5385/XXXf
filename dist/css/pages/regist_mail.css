@@ -1432,9 +1432,27 @@ ul {
       min-width: auto;
       padding: 0 20px 60px; } }
 
-.registProfile {
+.registMail {
   width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .registProfile {
+    .registMail {
       width: 100%; } }
+
+.registMailCaution {
+  width: 720px;
+  margin: 0 auto 33px; }
+  @media screen and (max-width: 768px) {
+    .registMailCaution {
+      width: 100%; } }
+
+.registMailCaution__item {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 2px;
+  padding-left: 1em;
+  text-indent: -1em;
+  color: #666; }
+  .registMailCaution__item a {
+    display: inline; }

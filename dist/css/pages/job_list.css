@@ -204,6 +204,9 @@ a {
   a:hover {
     text-decoration: underline; }
 
+ul {
+  list-style-type: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -221,26 +224,35 @@ a {
   .contentsWrap img {
     vertical-align: bottom; }
 
-.m-note {
+.m-note, .inputBlock__note {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.6;
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .inputBlock__submit {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1; }
-  .m-button--blue {
+  .m-button--blue, .inputBlock__submit {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover {
+    .m-button--blue:hover, .inputBlock__submit:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
+    .m-button--blue:disabled, .inputBlock__submit:disabled {
+      color: #fff;
+      border: 2px solid #333;
+      background-color: #333;
+      opacity: 0.3; }
+      .m-button--blue:disabled:hover, .inputBlock__submit:disabled:hover {
+        color: #fff;
+        border: 2px solid #333;
+        background-color: #333; }
   .m-button--white, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link {
     background-color: #fff;
     color: #1b457e;
@@ -266,7 +278,7 @@ a {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading {
+.m-heading, .inputBlock__heading {
   font-weight: bold;
   color: #5d687c; }
   .m-heading--lv2 {
@@ -284,7 +296,7 @@ a {
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 30px; }
-  .m-heading--lv4 {
+  .m-heading--lv4, .inputBlock__heading {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6;
@@ -327,25 +339,24 @@ a {
   font-size: 1rem;
   line-height: 1.6;
   line-height: 1;
-  color: #5d687c;
+  color: #333;
   position: relative;
   width: 100%;
+  height: 50px;
+  padding: 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background: transparent; }
+  background-color: #fff; }
   .m-inputText::-webkit-input-placeholder {
-    color: #5d687c;
-    font-weight: normal; }
+    color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
-    color: #5d687c;
-    font-weight: normal; }
+    color: #c9c9c9; }
   .m-inputText::placeholder {
-    color: #5d687c;
-    font-weight: normal; }
+    color: #c9c9c9; }
   .m-inputText.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
-    background: #fff2f2; }
+    background-color: #fff2f2; }
     .m-inputText.is-error::-webkit-input-placeholder {
       visibility: hidden; }
     .m-inputText.is-error::-ms-input-placeholder {
@@ -361,27 +372,90 @@ a {
   font-size: 1rem;
   line-height: 1.6;
   line-height: 1;
-  color: #5d687c;
+  color: #333;
   position: relative;
   width: 100%;
+  height: 50px;
+  padding: 0 32px 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background: url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
+  background: #fff url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
   .m-inputSelect option:first-child {
     display: none; }
+  .m-inputSelect.is-error {
+    border: 1px solid #ff0000;
+    background: #fff2f2 url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
 
 .m-inputCheck {
   display: none; }
 
 .m-inputCheckLabel {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
   background: url(../../img/common/icon/icon_check.svg) no-repeat left center;
   padding: 4px 0 4px 39px;
+  display: inline-block;
   cursor: pointer; }
   .m-inputCheckLabel a {
     display: inline; }
 
 .m-inputCheck:checked + .m-inputCheckLabel {
   background: url(../../img/common/icon/icon_checked.svg) no-repeat left center; }
+
+.m-inputRadio {
+  display: none; }
+
+.m-inputRadioLabel {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: #fff url(../../img/common/icon/icon_radio.svg) no-repeat 12px 15px;
+  padding: 12px 12px 11px 38px;
+  border: 1px solid #b3c1d3;
+  border-radius: 6px;
+  display: block;
+  cursor: pointer; }
+
+.m-inputRadio:checked + .m-inputRadioLabel {
+  background: #f7f8f9 url(../../img/common/icon/icon_radioChecked.svg) no-repeat 12px 15px;
+  border: 1px solid #5d687c; }
+
+.m-inputTextArea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  line-height: 1;
+  color: #333;
+  width: 100%;
+  height: 180px;
+  padding: 17px 12px;
+  border: 1px solid #b3c1d3;
+  border-radius: 6px;
+  background: transparent;
+  resize: vertical; }
+  .m-inputTextArea::-webkit-input-placeholder {
+    color: #c9c9c9; }
+  .m-inputTextArea::-ms-input-placeholder {
+    color: #c9c9c9; }
+  .m-inputTextArea::placeholder {
+    color: #c9c9c9; }
+  .m-inputTextArea.is-error {
+    color: #ff0000;
+    border: 1px solid #ff0000;
+    background: #fff2f2; }
+    .m-inputTextArea.is-error::-webkit-input-placeholder {
+      visibility: hidden; }
+    .m-inputTextArea.is-error::-ms-input-placeholder {
+      visibility: hidden; }
+    .m-inputTextArea.is-error::placeholder {
+      visibility: hidden; }
+  @media screen and (max-width: 768px) {
+    .m-inputTextArea {
+      resize: none; } }
 
 .m-inputIcon {
   font-size: 12px;
@@ -407,7 +481,8 @@ a {
 
 .m-inputText.is-error + .m-inputErrorText,
 .m-inputSelect.is-error + .m-inputErrorText,
-.m-inputCheckLabel.is-error + .m-inputErrorText {
+.m-inputCheckLabel.is-error + .m-inputErrorText,
+.m-inputTextArea.is-error + .m-inputErrorText {
   display: block; }
 
 .globalHeader {
@@ -614,7 +689,6 @@ a {
     fill: #1b457e; }
 
 .globalMobileNavLink {
-  list-style-type: none;
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -883,7 +957,6 @@ a {
       display: block; } }
 
 .globalFooterNavList {
-  list-style-type: none;
   display: flex;
   align-items: flex-end; }
   @media screen and (max-width: 768px) {
@@ -981,8 +1054,7 @@ a {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  list-style-type: none; }
+  justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
       padding: 0 10px; } }
@@ -1070,8 +1142,7 @@ a {
 .searchButtonBlockAreaList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  list-style-type: none; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockAreaList {
       display: none;
@@ -1275,6 +1346,83 @@ a {
       justify-content: center;
       white-space: nowrap; } }
 
+.inputBlock {
+  width: 720px;
+  margin: 0 auto 33px; }
+  .inputBlock--center {
+    text-align: center; }
+  @media screen and (max-width: 768px) {
+    .inputBlock {
+      width: 100%; } }
+
+.inputBlock__heading {
+  margin-bottom: 12px; }
+
+.inputBlock__guideText {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px; }
+
+.inputBlock__note {
+  margin-top: 6px; }
+
+.inputBlock__confirmText {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 16px 0 6px; }
+
+.inputBlock__supportText {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  white-space: nowrap; }
+
+.inputBlock__inputHalf {
+  width: calc(50% - 5px); }
+  @media screen and (max-width: 768px) {
+    .inputBlock__inputHalf {
+      width: 100%; } }
+
+.inputBlock__inputSmall {
+  width: 140px;
+  margin-right: 10px; }
+  .inputBlock__inputSmall:last-child {
+    margin-right: 0; }
+
+.inputBlock__submit {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding: 13px 0 12px; }
+
+.inputBlockFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .inputBlockFlex {
+      display: block; } }
+  .inputBlockFlex--always {
+    display: flex; }
+
+.inputBlockFlex__item {
+  width: 50%;
+  margin-right: 10px; }
+  .inputBlockFlex__item:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .inputBlockFlex__item {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px; }
+      .inputBlockFlex__item:last-child {
+        margin-bottom: 0; } }
+
 .keyVisual {
   margin-bottom: 0; }
 
@@ -1316,9 +1464,6 @@ a {
 
 .jobListWrap {
   width: 100%; }
-
-.jobList {
-  list-style-type: none; }
 
 .jobListItem {
   width: 100%;
@@ -1437,7 +1582,6 @@ a {
       padding: 12px 0 0px; } }
 
 .jobListContentPickup__list {
-  list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1564,9 +1708,6 @@ a {
 .searchInputArea {
   margin: 18px 0 20px; }
 
-.searchInputList {
-  list-style-type: none; }
-
 .searchInputList__item {
   position: relative;
   margin-bottom: 10px; }
@@ -1601,7 +1742,6 @@ a {
       width: 100%; } }
 
 .jobListPagenation {
-  list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -1753,9 +1893,6 @@ a {
   width: 100%;
   background-color: rgba(247, 248, 249, 0.9);
   padding: 20px; }
-
-.mobileSearchList {
-  list-style-type: none; }
 
 .mobileSearchList__item {
   position: relative;

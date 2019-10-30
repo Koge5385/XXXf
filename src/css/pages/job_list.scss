@@ -38,9 +38,6 @@
 .jobListWrap {
   width: 100%;
 }
-.jobList {
-  list-style-type: none;
-}
 .jobListItem {
   width: 100%;
   background-color: #fff;
@@ -153,7 +150,6 @@
   }
 }
 .jobListContentPickup__list {
-  list-style-type: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -276,9 +272,6 @@
 .searchInputArea {
   margin: 18px 0 20px;
 }
-.searchInputList {
-  list-style-type: none;
-}
 .searchInputList__item {
   position: relative;
   margin-bottom: 10px;
@@ -313,7 +306,6 @@
   @include _baseContentsWidth;
 }
 .jobListPagenation {
-  list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -461,9 +453,6 @@
   width: 100%;
   background-color: rgba(247, 248, 249, 0.9);
   padding: 20px;
-}
-.mobileSearchList {
-  list-style-type: none;
 }
 .mobileSearchList__item {
   position: relative;

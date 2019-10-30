@@ -1,0 +1,31 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 20px 60px;
+  }
+}
+.registMail {
+  @include _baseContentsWidth;
+}
+.registMailCaution {
+  width: 720px;
+  margin: 0 auto 33px;
+  @include media(sp) {
+    width: 100%;
+  }
+}
+.registMailCaution__item {
+  @include fontsize(14, 16);
+  margin-bottom: 2px;
+  padding-left: 1em;
+  text-indent: -1em;
+  color: #666;
+  a {
+    display: inline;
+  }
+}

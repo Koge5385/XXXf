@@ -1,0 +1,37 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 20px 60px;
+  }
+}
+.registMailConfirm {
+  @include _baseContentsWidth;
+}
+.registMailConfirmInner {
+  width: 720px;
+  margin: 0 auto 33px;
+  @include media(sp) {
+    width: 100%;
+  }
+}
+.registMailConfirm__textLine {
+  @include fontsize(16, 16);
+  margin-bottom: 40px;
+  @include media(sp) {
+    margin-bottom: 30px;
+  }
+}
+.registMailConfirm__mail {
+  margin-left: 2em;
+  @include media(sp) {
+    display: block;
+    margin-top: 10px;
+    margin-left: 0;
+    text-align: center;
+  }
+}

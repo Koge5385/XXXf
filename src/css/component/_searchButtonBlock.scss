@@ -29,7 +29,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  list-style-type: none;
   @include media(sp) {
     padding: 0 10px;
   }
@@ -121,7 +120,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  list-style-type: none;
   @include media(sp) {
     display: none;
     justify-content: space-between;
