@@ -1,0 +1,50 @@
+{
+  "version": 3,
+  "sources": [
+    "../../../../../node_modules/browser-pack/_prelude.js",
+    "../../../../../src/js/module/api/module/DataReflect.js"
+  ],
+  "names": [
+    "r",
+    "e",
+    "n",
+    "t",
+    "o",
+    "i",
+    "f",
+    "c",
+    "require",
+    "u",
+    "a",
+    "Error",
+    "code",
+    "p",
+    "exports",
+    "call",
+    "length",
+    "1",
+    "module",
+    "DataReflect",
+    "_classCallCheck",
+    "this",
+    "reflect",
+    "_createClass",
+    "key",
+    "value",
+    "render",
+    "replace",
+    "document",
+    "querySelector",
+    "classList",
+    "contains",
+    "slice",
+    "innerHTML",
+    "default"
+  ],
+  "mappings": "CAAA,WAAA,QAAAA,GAAAC,EAAAC,EAAAC,GAAA,QAAAC,GAAAC,EAAAC,GAAA,IAAAJ,EAAAG,GAAA,CAAA,IAAAJ,EAAAI,GAAA,CAAA,GAAAE,GAAA,kBAAAC,UAAAA,OAAA,KAAAF,GAAAC,EAAA,MAAAA,GAAAF,GAAA,EAAA,IAAAI,EAAA,MAAAA,GAAAJ,GAAA,EAAA,IAAAK,GAAA,GAAAC,OAAA,uBAAAN,EAAA,IAAA,MAAAK,GAAAE,KAAA,mBAAAF,EAAA,GAAAG,GAAAX,EAAAG,IAAAS,WAAAb,GAAAI,GAAA,GAAAU,KAAAF,EAAAC,QAAA,SAAAd,GAAA,GAAAE,GAAAD,EAAAI,GAAA,GAAAL,EAAA,OAAAI,GAAAF,GAAAF,IAAAa,EAAAA,EAAAC,QAAAd,EAAAC,EAAAC,EAAAC,GAAA,MAAAD,GAAAG,GAAAS,QAAA,IAAA,GAAAL,GAAA,kBAAAD,UAAAA,QAAAH,EAAA,EAAAA,EAAAF,EAAAa,OAAAX,IAAAD,EAAAD,EAAAE,GAAA,OAAAD,GAAA,MAAAJ,QAAAiB,GAAA,SAAAT,QAAAU,OAAAJ,6bCIMK,YAAA,WAIJ,QAAAlB,KAAcmB,gBAAAC,KAAApB,GACZoB,KAAAC,UAAA,MAAAC,cAAAtB,IAAAuB,IAAA,UAAAC,MAAA,SAUMxB,EAAME,EAAUD,EAAYF,GAClC,OAAAC,GACE,IAAA,GAAAE,EACEkB,KAAAK,OAAA,aAAAxB,EAAA,UAA8CF,EAAA2B,QAAA,SAA9C,aAAAH,IAAA,SAAAC,MAAA,SAUCxB,EAAWE,GACZyB,SAAAC,cAAA5B,GAAA6B,UAAAC,SAAqD9B,EAAA+B,MAAzD,MACAJ,SAAAC,cAAA5B,GAAAgC,UAAA9B,OAAAF,IAAAa,SAAAoB,QAIWf",
+  "file": "DataReflect.js",
+  "sourcesContent": [
+    "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()",
+    "/**\n * @class DataReflect\n * @desc APIからのデータをページに反映する\n */\nclass DataReflect {\n  /**\n   * @constructor\n   */\n  constructor() {\n    this.reflect()\n  }\n\n  /**\n   * @desc 指定した要素に値を反映する\n   * @param {string} keys ループの引数（key）を入れる\n   * @param {string} dataName 処理したい対象のJSONデータ名\n   * @param {string} targetName ターゲットのクラス名\n   * @param {string} value ページに反映したい値\n   */\n  reflect(keys, dataName, targetName, value) {\n    switch (keys) {\n      case `${dataName}`:\n        this.render(`.js-async-${targetName}-target`, value.replace(/\\r?\\n/g, '<br>'))\n        break\n    }\n  }\n\n  /**\n   * @desc 指定した要素に値を反映する\n   * @param {string} className ターゲットの要素名\n   * @param {string} result 表示する最終のテキスト\n  */\n  render(className, result) {\n    if(!document.querySelector(className).classList.contains(className.slice(1))) return\n    document.querySelector(className).innerHTML = result\n  }\n}\n\nexport default DataReflect\n"
+  ]
+}

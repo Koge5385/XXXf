@@ -143,6 +143,7 @@
   }
 }
 .jobDetailContentPickup__itemLabelIcon {
+  width: 24px;
   margin-right: 10px;
   @include media(sp) {
     width: 24px;
@@ -156,6 +157,7 @@
     vertical-align: middle;
   }
   &--place {
+    width: 21px;
     svg {
       width: auto;
       height: 30px;
@@ -165,14 +167,14 @@
 .jobDetailContentPickup__itemContent {
   @include fontsize(14, 16);
   &--salary {
-    @include fontsize(22, 16);
+    @include fontsize(16, 16);
     font-weight: bold;
     color: #ec652b;
+    @include media(sp) {
+      @include fontsize(22, 16);
+    }
     span {
-      @include fontsize(16, 16);
-      @include media(sp) {
-        @include fontsize(22, 16);
-      }
+      @include fontsize(22, 16);
     }
   }
 }
@@ -223,4 +225,15 @@
   @include media(sp) {
     margin: 0 auto;
   }
+}
+.jobDetailError {
+  display: none;
+  margin-top: 80px;
+}
+.jobDetailError__text {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  font-weight: normal;
+  color: #f00;
+  text-align: center;
 }
