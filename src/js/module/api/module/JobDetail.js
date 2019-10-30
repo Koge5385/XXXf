@@ -58,7 +58,7 @@ class JobDetail {
         createElement.reflect(key, 'job_p_min_salary', `${pageName}MinSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString().replace(/\r?\n/g, '<br>'))
       })
     }
-    if (status.match(/400/) || status.match(/401/)) {
+    if (status === 400 || status === 401) {
       document.querySelector('.js-success-target').style.display = 'none'
       document.querySelector('.js-error-target').style.display = 'block'
     }

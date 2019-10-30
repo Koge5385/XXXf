@@ -38,10 +38,12 @@
   "dependencies": {
     "axios": "0.17.1",
     "core-js": "^3.1.4",
+    "es6-promise": "^4.2.8",
     "node-sass": "^4.12.0",
     "node-sass-import": "^2.0.1",
     "regenerator-runtime": "^0.13.2",
-    "remeda": "^0.0.11"
+    "remeda": "^0.0.11",
+    "url-search-params-polyfill": "^7.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

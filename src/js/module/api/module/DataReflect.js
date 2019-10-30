@@ -13,6 +13,7 @@ class DataReflect {
   /**
    * @desc 指定した要素に値を反映する
    * @param {string} keys ループの引数（key）を入れる
+   * @param {string} dataName 処理したい対象のJSONデータ名
    * @param {string} targetName ターゲットのクラス名
    * @param {string} value ページに反映したい値
    */

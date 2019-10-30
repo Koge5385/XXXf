@@ -1432,6 +1432,7 @@ a {
       margin-right: 12px; } }
 
 .jobDetailContentPickup__itemLabelIcon {
+  width: 24px;
   margin-right: 10px; }
   @media screen and (max-width: 768px) {
     .jobDetailContentPickup__itemLabelIcon {
@@ -1443,9 +1444,11 @@ a {
     width: auto;
     height: 24px;
     vertical-align: middle; }
-  .jobDetailContentPickup__itemLabelIcon--place svg {
-    width: auto;
-    height: 30px; }
+  .jobDetailContentPickup__itemLabelIcon--place {
+    width: 21px; }
+    .jobDetailContentPickup__itemLabelIcon--place svg {
+      width: auto;
+      height: 30px; }
 
 .jobDetailContentPickup__itemContent {
   font-size: 14px;
