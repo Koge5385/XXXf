@@ -22,16 +22,17 @@ class DataReflect {
       case `${dataName}`:
         this.render(`.js-async-${targetName}-target`, value.replace(/\r?\n/g, '<br>'))
         break
+      default:
+        break
     }
   }
-
   /**
    * @desc 指定した要素に値を反映する
    * @param {string} className ターゲットの要素名
    * @param {string} result 表示する最終のテキスト
-  */
+   */
   render(className, result) {
-    if(!document.querySelector(className).classList.contains(className.slice(1))) return
+    if (!document.querySelector(className).classList.contains(className.slice(1))) return
     document.querySelector(className).innerHTML = result
   }
 }

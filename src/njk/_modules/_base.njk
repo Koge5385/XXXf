@@ -2,6 +2,9 @@
 {%- set basePath = '/dist/' -%}
 
 <!DOCTYPE html>
+{% if pageName === 'pagelist' %}
+<!-- htmllint tag-bans="false" -->
+{% endif %}
 <html lang="ja">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     {% include '_modules/_meta.njk' %}
@@ -28,7 +31,7 @@
     </div>
 
     <script src="{{ basePath }}js/common.js"></script>
-    {%- if pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' %}
+    {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' %}
     <script src="{{ basePath }}js/pages/{{ pageName }}.js"></script>
     {% endif -%}
   </body>

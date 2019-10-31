@@ -1,0 +1,9 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  @include media(sp) {
+    min-width: auto;
+  }
+}

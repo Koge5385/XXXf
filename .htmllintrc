@@ -1,7 +1,20 @@
 {
-    "id-class-style": "camel",
-    "class-style": "none",
-    "img-req-alt": "allowNull",
-    "indent-style": "nonmixed",
-    "indent-width": 2
+  "id-class-style": "camel",
+  "class-style": "none",
+  "img-req-alt": "allowNull",
+  "indent-style": "nonmixed",
+  "indent-width": 2,
+  "attr-bans": [
+    "align",
+    "background",
+    "bgcolor",
+    "border",
+    "frameborder",
+    "longdesc",
+    "marginwidth",
+    "marginheight",
+    "scrolling",
+    "style"
+  ],
+  "tag-bans": ["style", "b", "i"]
 }

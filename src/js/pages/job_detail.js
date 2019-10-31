@@ -18,7 +18,7 @@ window.addEventListener(BEFOREUNLOAD_EVENT, () => {
 window.addEventListener(UNLOAD_EVENT, () => {
   // IE以外用
 })
-window.addEventListener(PAGESHOW_EVENT, event =>{
+window.addEventListener(PAGESHOW_EVENT, event => {
   if (event.persisted) {
     // ページ表示の際に再発火
     new JobDetail()

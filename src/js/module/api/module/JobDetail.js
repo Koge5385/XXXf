@@ -33,7 +33,6 @@ class JobDetail {
       const createElement = new DataReflect()
       const pageName = 'jobDetail'
       Object.keys(jobData).forEach(key => {
-
         // APIからの返却データをそのまま反映
         createElement.reflect(key, 'job_p_position', `${pageName}Category`, jobData[key])
         createElement.reflect(key, 'job_p_phasedate', `${pageName}Date`, jobData[key])
