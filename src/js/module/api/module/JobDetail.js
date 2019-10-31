@@ -1,5 +1,6 @@
 import AxiosBase from '../AxiosBase'
 import DataReflect from './DataReflect'
+import MetaReplace from './MetaReplace'
 
 /**
  * @class JobDetail
@@ -32,6 +33,7 @@ class JobDetail {
       const jobData = data.data.job
       const createElement = new DataReflect()
       const pageName = 'jobDetail'
+
       Object.keys(jobData).forEach(key => {
         // APIからの返却データをそのまま反映
         createElement.reflect(key, 'job_p_position', `${pageName}Category`, jobData[key])
@@ -49,13 +51,19 @@ class JobDetail {
         createElement.reflect(key, 'job_p_benefits', `${pageName}Benefit`, jobData[key])
         createElement.reflect(key, 'job_u_sonotabikou', `${pageName}Other`, jobData[key])
 
-        // パンくずリストにタイトルを反映
+        // パンくずリストに求人件名を反映
         createElement.reflect(key, 'job_u_kyuujinnnoosusumepointo', 'breadcrumbText', jobData[key])
 
         // 年収のみ「万円」の単位に変換する処理を追加
         createElement.reflect(key, 'job_p_max_salary', `${pageName}MaxSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString().replace(/\r?\n/g, '<br>'))
         createElement.reflect(key, 'job_p_min_salary', `${pageName}MinSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString().replace(/\r?\n/g, '<br>'))
       })
+
+      // meta情報の変更
+      MetaReplace.titleReplace(jobData['job_u_kyuujinnnoosusumepointo'])
+      MetaReplace.descriptionReplace(`＜求人件名＞${jobData['job_u_kyuujinnnoosusumepointo']}＜仕事内容＞${jobData['job_p_job_category_summary']}`)
+      MetaReplace.ogpReplace(jobData['job_u_kyuujinnnoosusumepointo'], `＜求人件名＞${jobData['job_u_kyuujinnnoosusumepointo']}＜仕事内容＞${jobData['job_p_job_category_summary']}`
+      )
     }
     if (status === 400 || status === 401) {
       document.querySelector('.js-success-target').style.display = 'none'
