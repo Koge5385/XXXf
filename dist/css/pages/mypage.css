@@ -1060,9 +1060,10 @@ ul {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
+      justify-content: space-between;
       padding: 0 10px; } }
 
 .searchButtonBlockJobList__item {

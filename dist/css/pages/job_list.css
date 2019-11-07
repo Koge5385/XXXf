@@ -231,25 +231,25 @@ ul {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .searchSubmit__button, .mobileSearchSubmit__button {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .searchSubmit__button, .mobileSearchSubmit__button {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover, .searchSubmit__button:hover, .mobileSearchSubmit__button:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled, .searchSubmit__button:disabled, .mobileSearchSubmit__button:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .searchSubmit__button:disabled:hover, .mobileSearchSubmit__button:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -1060,9 +1060,10 @@ ul {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
+      justify-content: space-between;
       padding: 0 10px; } }
 
 .searchButtonBlockJobList__item {
@@ -1672,20 +1673,15 @@ ul {
   font-size: 0.875rem;
   line-height: 1.6; }
   .jobListContentPickup__itemContent--salary {
-    font-size: 22px;
-    font-size: 1.375rem;
+    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     font-weight: bold;
     color: #ec652b; }
     .jobListContentPickup__itemContent--salary span {
-      font-size: 16px;
-      font-size: 1rem;
+      font-size: 22px;
+      font-size: 1.375rem;
       line-height: 1.6; }
-      @media screen and (max-width: 768px) {
-        .jobListContentPickup__itemContent--salary span {
-          font-size: 22px;
-          font-size: 1.375rem;
-          line-height: 1.6; } }
 
 .jobListContentTable {
   margin-bottom: 25px; }
@@ -1752,13 +1748,17 @@ ul {
   .searchInputList__input--freeWord {
     padding: 0 16.5px 0 50px; }
 
-.search__submit {
+.searchSubmit {
+  width: 200px;
+  margin: 0 auto; }
+
+.searchSubmit__button {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
-  width: 200px;
-  margin: 0 auto;
-  padding: 11px 0 10px; }
+  width: 100%;
+  padding: 11px 0 10px;
+  cursor: pointer; }
 
 .pagenationWrap {
   width: 980px;
@@ -1779,8 +1779,6 @@ ul {
       justify-content: center; } }
 
 .jobListPagenation__item {
-  border: 1px solid #b3c1d3;
-  border-radius: 6px;
   margin-right: 5px; }
   @media screen and (max-width: 768px) {
     .jobListPagenation__item {
@@ -1793,22 +1791,31 @@ ul {
   .jobListPagenation__item--dot {
     border: none;
     width: auto; }
+  .jobListPagenation__item.is-active .jobListPagenation__link {
+    background-color: #b3c1d3;
+    color: #fff; }
 
 .jobListPagenation__link {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.6;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   color: #1b457e;
   text-align: center;
   width: 40px;
-  padding: 9px 0; }
+  padding: 9px 0;
+  border: 1px solid #b3c1d3;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer; }
   @media screen and (max-width: 768px) {
     .jobListPagenation__link {
       width: 50px;
       padding: 14px 0; } }
   .jobListPagenation__link:hover {
-    text-decoration: none; }
-  .jobListPagenation__link--active {
+    text-decoration: none;
     background-color: #b3c1d3;
     color: #fff; }
 
@@ -1944,10 +1951,13 @@ ul {
   .mobileSearchList__input--freeWord {
     padding: 0 16.5px 0 50px; }
 
-.mobileSearch__submit {
+.mobileSearchSubmit {
+  width: 230px;
+  margin: 0 auto; }
+
+.mobileSearchSubmit__button {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6;
-  width: 230px;
-  margin: 0 auto;
+  width: 100%;
   padding: 14px 0; }

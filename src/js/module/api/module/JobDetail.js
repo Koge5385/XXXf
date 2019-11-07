@@ -20,16 +20,19 @@ class JobDetail {
   async doAxios() {
     const params = new URLSearchParams(window.location.search)
     this.jobId = params.get('id')
-    await new AxiosBase().getMethod(`/jobs/${this.jobId}`, this.setDataToPage)
+    await new AxiosBase().getMethod(`/jobs/${this.jobId}?time=${new Date().getTime()}`, this.setDataToPage)
   }
 
   /**
-   * @desc APIの実行
+   * @desc 画面反映処理
    * @param {Number} status コールバックで返却されたステータスコード
    * @param {Object} data コールバックで返却されたデータオブジェクト
    */
   async setDataToPage(status, data) {
     if (status === 200) {
+      document.querySelector('.js-success-target').style.display = 'block'
+      document.querySelector('.js-error-target').style.display = 'none'
+
       const jobData = data.data.job
       const createElement = new DataReflect()
       const pageName = 'jobDetail'
@@ -55,15 +58,17 @@ class JobDetail {
         createElement.reflect(key, 'job_u_kyuujinnnoosusumepointo', 'breadcrumbText', jobData[key])
 
         // 年収のみ「万円」の単位に変換する処理を追加
-        createElement.reflect(key, 'job_p_max_salary', `${pageName}MaxSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString().replace(/\r?\n/g, '<br>'))
-        createElement.reflect(key, 'job_p_min_salary', `${pageName}MinSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString().replace(/\r?\n/g, '<br>'))
+        createElement.reflect(key, 'job_p_max_salary', `${pageName}MaxSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+        createElement.reflect(key, 'job_p_min_salary', `${pageName}MinSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString())
       })
 
       // meta情報の変更
-      MetaReplace.titleReplace(jobData['job_u_kyuujinnnoosusumepointo'])
-      MetaReplace.descriptionReplace(`＜求人件名＞${jobData['job_u_kyuujinnnoosusumepointo']}＜仕事内容＞${jobData['job_p_job_category_summary']}`)
-      MetaReplace.ogpReplace(jobData['job_u_kyuujinnnoosusumepointo'], `＜求人件名＞${jobData['job_u_kyuujinnnoosusumepointo']}＜仕事内容＞${jobData['job_p_job_category_summary']}`
-      )
+      const pageTitle = jobData['job_u_kyuujinnnoosusumepointo']
+      const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary']}`
+      const metaChange = new MetaReplace(pageTitle, pageDescription)
+      metaChange.titleReplace()
+      metaChange.descriptionReplace()
+      metaChange.ogpReplace()
     }
     if (status === 400 || status === 401) {
       document.querySelector('.js-success-target').style.display = 'none'

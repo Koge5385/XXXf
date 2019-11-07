@@ -217,14 +217,11 @@
 .jobListContentPickup__itemContent {
   @include fontsize(14, 16);
   &--salary {
-    @include fontsize(22, 16);
+    @include fontsize(16, 16);
     font-weight: bold;
     color: #ec652b;
     span {
-      @include fontsize(16, 16);
-      @include media(sp) {
-        @include fontsize(22, 16);
-      }
+      @include fontsize(22, 16);
     }
   }
 }
@@ -296,11 +293,17 @@
     padding: 0 16.5px 0 50px;
   }
 }
-.search__submit {
-  @include fontsize(16, 16);
+.searchSubmit {
   width: 200px;
   margin: 0 auto;
+}
+.searchSubmit__button {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(16, 16);
+  width: 100%;
   padding: 11px 0 10px;
+  cursor: pointer;
 }
 .pagenationWrap {
   @include _baseContentsWidth;
@@ -317,8 +320,6 @@
   }
 }
 .jobListPagenation__item {
-  border: 1px solid #b3c1d3;
-  border-radius: 6px;
   margin-right: 5px;
   @include media(sp) {
     margin-right: 10px;
@@ -333,21 +334,28 @@
     border: none;
     width: auto;
   }
+  &.is-active .jobListPagenation__link {
+    background-color: #b3c1d3;
+    color: #fff;
+  }
 }
 .jobListPagenation__link {
   @include fontsize(14, 16);
+  appearance: none;
   color: #1b457e;
   text-align: center;
   width: 40px;
   padding: 9px 0;
+  border: 1px solid #b3c1d3;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
   @include media(sp) {
     width: 50px;
     padding: 14px 0;
   }
   &:hover {
     text-decoration: none;
-  }
-  &--active {
     background-color: #b3c1d3;
     color: #fff;
   }
@@ -486,9 +494,14 @@
     padding: 0 16.5px 0 50px;
   }
 }
-.mobileSearch__submit {
-  @include fontsize(18, 16);
+.mobileSearchSubmit {
   width: 230px;
   margin: 0 auto;
+}
+.mobileSearchSubmit__button {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(18, 16);
+  width: 100%;
   padding: 14px 0;
 }

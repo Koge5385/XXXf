@@ -1,8 +1,8 @@
 /**
- * @class DataReflect
+ * @class JobListDomCreate
  * @desc APIからのデータをページに反映する
  */
-class DataReflect {
+class JobListDomCreate {
   /**
    * @constructor
    */
@@ -22,14 +22,13 @@ class DataReflect {
       case `${dataName}`:
         this.render(`.js-async-${targetName}-target`, value.replace(/\r?\n/g, '<br>'))
         break
-
       default:
         break
     }
   }
   /**
    * @desc 指定した要素に値を反映する
-   * @param {string} className ターゲットの要素名
+   * @param {string} className ターゲットのクラス名
    * @param {string} result 表示する最終のテキスト
    */
   render(className, result) {
@@ -38,4 +37,4 @@ class DataReflect {
   }
 }
 
-export default DataReflect
+export default JobListDomCreate
