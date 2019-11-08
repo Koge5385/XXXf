@@ -211,94 +211,96 @@
       </div>
       <div class="container">
         <section class="topSearchBox">
-          <div class="topSearchBoxInner">
-            <p class="topSearchBox__title">
-              <span class="topSearchBox__titleIcon"
-                ><svg xmlns="http://www.w3.org/2000/svg" width="26.985" height="26.841" viewBox="0 0 26.985 26.841">
-                  <g transform="translate(0)">
-                    <path
-                      d="M19.764,18.329l-.431-.431.431-.431a10.981,10.981,0,1,0-2.3,2.3l.431-.431.431.431,7.177,7.177,1.579-1.579Zm-8.9,1.435a8.756,8.756,0,1,1,8.756-8.756,8.756,8.756,0,0,1-8.756,8.612Z"
-                      transform="translate(-0.1 -0.1)"
+          <form method="get" action="/dist/job/">
+            <div class="topSearchBoxInner">
+              <p class="topSearchBox__title">
+                <span class="topSearchBox__titleIcon"
+                  ><svg xmlns="http://www.w3.org/2000/svg" width="26.985" height="26.841" viewBox="0 0 26.985 26.841">
+                    <g transform="translate(0)">
+                      <path
+                        d="M19.764,18.329l-.431-.431.431-.431a10.981,10.981,0,1,0-2.3,2.3l.431-.431.431.431,7.177,7.177,1.579-1.579Zm-8.9,1.435a8.756,8.756,0,1,1,8.756-8.756,8.756,8.756,0,0,1-8.756,8.612Z"
+                        transform="translate(-0.1 -0.1)"
+                      />
+                      <path
+                        d="M19.764,18.329l-.431-.431.431-.431a10.981,10.981,0,1,0-2.3,2.3l.431-.431.431.431,7.177,7.177,1.579-1.579Zm-8.9,1.435a8.756,8.756,0,1,1,8.756-8.756,8.756,8.756,0,0,1-8.756,8.612Z"
+                        transform="translate(-0.1 -0.1)"
+                      />
+                    </g></svg></span
+                >希望条件から求人を探す
+              </p>
+              <div class="topSearchBoxContent">
+                <ul class="topSearchBoxList">
+                  <li class="topSearchBoxList__item topSearchBoxList__item--job">
+                    <select name="job_p_job_category" class="m-inputSelect topSearchBoxList__input">
+                      <option value="">職種から探す</option>
+                      <option value="">指定しない</option
+                      ><option value="事務長">事務長</option
+                      ><option value="事務長候補">事務長候補</option
+                      ><option value="経営企画">経営企画</option
+                      ><option value="医事課長（候補含む）">医事課長（候補含む）</option
+                      ><option value="医事課員">医事課員</option
+                      ><option value="総務課長（候補含む）">総務課長（候補含む）</option
+                      ><option value="総務課員">総務課員</option
+                      ><option value="人事課長（候補含む）">人事課長（候補含む）</option
+                      ><option value="人事課員">人事課員</option
+                      ><option value="財務・経理">財務・経理</option
+                      ><option value="地域連携室・渉外">地域連携室・渉外</option
+                      ><option value="広報">広報</option
+                      ><option value="情報管理室">情報管理室</option
+                      ><option value="事務総合職">事務総合職</option
+                      ><option value="健診総合職">健診総合職</option
+                      ><option value="診療情報管理士">診療情報管理士</option
+                      ><option value="社会福祉士">社会福祉士</option
+                      ><option value="その他">その他</option>
+                    </select>
+                  </li>
+                  <li class="topSearchBoxList__item topSearchBoxList__item--place">
+                    <select name="job_p_area" class="m-inputSelect topSearchBoxList__input">
+                      <option value="">勤務地から探す</option>
+                      <option value="">指定しない</option
+                      ><option value="茨城">茨城</option
+                      ><option value="栃木">栃木</option
+                      ><option value="群馬">群馬</option
+                      ><option value="埼玉">埼玉</option
+                      ><option value="千葉">千葉</option
+                      ><option value="東京">東京</option
+                      ><option value="神奈川">神奈川</option
+                      ><option value="三重">三重</option
+                      ><option value="滋賀">滋賀</option
+                      ><option value="京都">京都</option
+                      ><option value="大阪">大阪</option
+                      ><option value="兵庫">兵庫</option
+                      ><option value="奈良">奈良</option
+                      ><option value="和歌山">和歌山</option>
+                    </select>
+                  </li>
+                  <li class="topSearchBoxList__item topSearchBoxList__item--salary">
+                    <select name="job_p_min_salary" class="m-inputSelect topSearchBoxList__input">
+                      <option value="">年収から探す</option>
+                      <option value="">指定しない</option
+                      ><option value="3000000">300万〜</option
+                      ><option value="4000000">400万〜</option
+                      ><option value="5000000">500万〜</option
+                      ><option value="6000000">600万〜</option
+                      ><option value="7000000">700万〜</option
+                      ><option value="8000000">800万〜</option>
+                    </select>
+                  </li>
+                  <li class="topSearchBoxList__item topSearchBoxList__item--freeWord">
+                    <input
+                      name="keywords"
+                      type="text"
+                      class="m-inputText topSearchBoxList__input topSearchBoxList__input--freeWord"
+                      placeholder="キーワードで探す"
                     />
-                    <path
-                      d="M19.764,18.329l-.431-.431.431-.431a10.981,10.981,0,1,0-2.3,2.3l.431-.431.431.431,7.177,7.177,1.579-1.579Zm-8.9,1.435a8.756,8.756,0,1,1,8.756-8.756,8.756,8.756,0,0,1-8.756,8.612Z"
-                      transform="translate(-0.1 -0.1)"
-                    />
-                  </g></svg></span
-              >希望条件から求人を探す
-            </p>
-            <div class="topSearchBoxContent">
-              <ul class="topSearchBoxList">
-                <li class="topSearchBoxList__item topSearchBoxList__item--job">
-                  <select name="job_p_job_category" class="m-inputSelect topSearchBoxList__input">
-                    <option value="">職種から探す</option>
-                    <option value="">指定しない</option
-                    ><option value="事務長">事務長</option
-                    ><option value="事務長候補">事務長候補</option
-                    ><option value="経営企画">経営企画</option
-                    ><option value="医事課長（候補含む）">医事課長（候補含む）</option
-                    ><option value="医事課員">医事課員</option
-                    ><option value="総務課長（候補含む）">総務課長（候補含む）</option
-                    ><option value="総務課員">総務課員</option
-                    ><option value="人事課長（候補含む）">人事課長（候補含む）</option
-                    ><option value="人事課員">人事課員</option
-                    ><option value="財務・経理">財務・経理</option
-                    ><option value="地域連携室・渉外">地域連携室・渉外</option
-                    ><option value="広報">広報</option
-                    ><option value="情報管理室">情報管理室</option
-                    ><option value="事務総合職">事務総合職</option
-                    ><option value="健診総合職">健診総合職</option
-                    ><option value="診療情報管理士">診療情報管理士</option
-                    ><option value="社会福祉士">社会福祉士</option
-                    ><option value="その他">その他</option>
-                  </select>
-                </li>
-                <li class="topSearchBoxList__item topSearchBoxList__item--place">
-                  <select name="job_p_area" class="m-inputSelect topSearchBoxList__input">
-                    <option value="">勤務地から探す</option>
-                    <option value="">指定しない</option
-                    ><option value="茨城">茨城</option
-                    ><option value="栃木">栃木</option
-                    ><option value="群馬">群馬</option
-                    ><option value="埼玉">埼玉</option
-                    ><option value="千葉">千葉</option
-                    ><option value="東京">東京</option
-                    ><option value="神奈川">神奈川</option
-                    ><option value="三重">三重</option
-                    ><option value="滋賀">滋賀</option
-                    ><option value="京都">京都</option
-                    ><option value="大阪">大阪</option
-                    ><option value="兵庫">兵庫</option
-                    ><option value="奈良">奈良</option
-                    ><option value="和歌山">和歌山</option>
-                  </select>
-                </li>
-                <li class="topSearchBoxList__item topSearchBoxList__item--salary">
-                  <select name="job_p_min_salary" class="m-inputSelect topSearchBoxList__input">
-                    <option value="">年収から探す</option>
-                    <option value="">指定しない</option
-                    ><option value="3000000">300万〜</option
-                    ><option value="4000000">400万〜</option
-                    ><option value="5000000">500万〜</option
-                    ><option value="6000000">600万〜</option
-                    ><option value="7000000">700万〜</option
-                    ><option value="8000000">800万〜</option>
-                  </select>
-                </li>
-                <li class="topSearchBoxList__item topSearchBoxList__item--freeWord">
-                  <input
-                    name="keywords"
-                    type="text"
-                    class="m-inputText topSearchBoxList__input topSearchBoxList__input--freeWord"
-                    placeholder="キーワードで探す"
-                  />
-                </li>
-              </ul>
-              <a href="#" class="m-button m-button--blue topSearchBox__submit"
-                >この条件で<br class="pc-view" /><span>検索</span></a
-              >
+                  </li>
+                </ul>
+                <button type="submit" class="topSearchBox__submit">
+                  この条件で<br class="pc-view" /><span>検索</span>
+                </button>
+              </div>
             </div>
-          </div>
+          </form>
         </section>
         <section class="suggestJob">
           <div class="sectionHeading">
