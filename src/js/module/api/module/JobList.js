@@ -55,8 +55,6 @@ class JobList {
     if (status === 200) {
       const jobListArray = data.data.jobs
       const pageName = 'jobList'
-      console.log(jobListArray)
-      console.log(jobListArray[0])
 
       // 検索結果件数の反映
       document.querySelectorAll('.js-async-jobListResult-target').forEach(target => {
@@ -64,7 +62,6 @@ class JobList {
       })
 
       // ページネーションの生成
-      console.log(data.attributes)
       const pagenationTarget = document.querySelector('.js-async-jobListPagenation-target')
       const maxPageNumber = Math.ceil(data.attributes.total / 10)
       const activeNumber = Math.ceil(data.attributes.start / 10)
