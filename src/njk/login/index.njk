@@ -19,8 +19,8 @@
       <h3 class="m-heading m-heading--lv4">パスワード</h3>
       <input type="password" name="login_password" class="m-inputText login__input login__input--password">
     </div>
-    <p class="m-note">※パスワードを忘れた方は<a href="#" class="login__textLink">こちら</a></p>
-    <p class="m-note">※会員登録がまだお済みでない場合は、まず<a href="#" class="login__textLink">会員登録</a>を行ってください</p>
+    <p class="m-note">※パスワードを忘れた方は<a href="{{ basePath }}login/password_reminder.html" class="login__textLink">こちら</a></p>
+    <p class="m-note">※会員登録がまだお済みでない場合は、まず<a href="{{ basePath }}regist_mail/" class="login__textLink">会員登録</a>を行ってください</p>
     <a href="{{ basePath }}mypage/" class="m-button m-button--blue login__submit">ログイン</a>
   </section>
 </div>
