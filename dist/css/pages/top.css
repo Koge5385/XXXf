@@ -358,11 +358,11 @@ ul {
     border: 1px solid #ff0000;
     background-color: #fff2f2; }
     .m-inputText.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
 
 .m-inputSelect {
   -webkit-appearance: none;
@@ -448,11 +448,11 @@ ul {
     border: 1px solid #ff0000;
     background: #fff2f2; }
     .m-inputTextArea.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
   @media screen and (max-width: 768px) {
     .m-inputTextArea {
       resize: none; } }
@@ -481,7 +481,7 @@ ul {
 
 .m-inputText.is-error + .m-inputErrorText,
 .m-inputSelect.is-error + .m-inputErrorText,
-.m-inputCheckLabel.is-error + .m-inputErrorText,
+.m-inputCheck.is-error ~ .m-inputErrorText,
 .m-inputTextArea.is-error + .m-inputErrorText {
   display: block; }
 
@@ -1428,8 +1428,7 @@ ul {
 
 .inputBlockFlex {
   display: flex;
-  justify-content: flex-start;
-  align-items: center; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .inputBlockFlex {
       display: block; } }
