@@ -31,7 +31,7 @@
     </div>
 
     <script src="{{ basePath }}js/common.js"></script>
-    {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' %}
+    {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' and pageName !== 'contact' %}
     <script src="{{ basePath }}js/pages/{{ pageName }}.js"></script>
     {% endif -%}
   </body>
