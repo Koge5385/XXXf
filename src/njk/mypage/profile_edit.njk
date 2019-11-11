@@ -1,26 +1,17 @@
 {% extends '_modules/_base.njk' %}
-{%- set fileName = 'index' -%}
-{%- set pageName = 'regist_profile' -%}
+{%- set fileName = 'profile_edit' -%}
+{%- set pageName = 'profile_edit' -%}
 {%- set pageLevel = '2' -%}
-{%- set pageTitle = 'プロフィール登録' -%}
-{%- set en_pageTitle = 'SIGN UP' -%}
-{%- set pageDescription = 'プロフィール登録ディスクリプション' -%}
-{%- set breadcrumbs = [{item: 'プロフィール登録'}]-%}
+{%- set pageTitle = 'プロフィール編集' -%}
+{%- set en_pageTitle = 'EDIT PROFILE' -%}
+{%- set pageDescription = 'プロフィール編集ディスクリプション' -%}
+{%- set breadcrumbs = [{item: 'プロフィール編集'}]-%}
 
 {% block content %}
 
 <div class="container">
 
-  {%- set registSteps = [
-    {number: '1', text: 'メールアドレス登録', class: ' is-done'},
-    {number: '2', text: 'メール認証', class: ' is-done'},
-    {number: '3', text: 'プロフィール登録', class: ' is-active'},
-    {number: '4', text: 'レジュメ登録', class: ''},
-    {number: '5', text: '完了', class: ''}
-  ] -%}
-  {% include '_modules/_registStep.njk' %}
-
-  <section class="registProfile">
+  <section class="editProfile">
     <div class="inputBlock">
       <h3 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h3>
       <div class="inputBlockFlex">
@@ -152,10 +143,15 @@
       <p class="inputBlock__note">※半角英数●文字以上を使用してください</p>
     </div>
 
-    <div class="inputBlock inputBlock--center">
-      <input type="checkbox" name="registProfile_termAgree" id="registProfile_termAgree" class="m-inputCheck">
-      <label for="registProfile_termAgree" class="m-inputCheckLabel"><a href="#">利用規約</a>に同意する</label>
-      <p class="m-inputErrorText"></p>
+    <div class="inputBlock">
+      <p class="inputBlock__guideText">※確認メールに記載されたURLをクリックするまで、メールアドレスは変更されていません。</p>
+    </div>
+
+    <div class="inputBlock">
+      <div class="inputBlockNotice">
+        <p class="inputBlockNotice__heading">確認メールが届かない場合</p>
+        <p class="inputBlockNotice__text">メール到着までに時間がかかる場合があります。数分後に再度受信してみてください。<br>メーラーによっては迷惑メールとして処理されている可能性もありますので、ご注意ください。</p>
+      </div>
     </div>
 
     <button type="submit" name="registProfile_submit" class="inputBlock__submit" disabled>確認画面へ</button>

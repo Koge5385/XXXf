@@ -1475,9 +1475,9 @@ ul {
       min-width: auto;
       padding: 0 20px 60px; } }
 
-.jobContact {
+.editProfile {
   width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .jobContact {
+    .editProfile {
       width: 100%; } }

@@ -1449,6 +1449,23 @@ ul {
       .inputBlockFlex__item:last-child {
         margin-bottom: 0; } }
 
+.inputBlockNotice {
+  display: block;
+  border: 1px solid #5d687c;
+  padding: 20px; }
+
+.inputBlockNotice__heading {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: bold;
+  margin-bottom: 5px; }
+
+.inputBlockNotice__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6; }
+
 .container {
   width: 100%;
   min-width: 980px; }

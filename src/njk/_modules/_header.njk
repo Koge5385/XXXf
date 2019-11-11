@@ -6,7 +6,7 @@
       </a>
     </div>
     <nav class="globalNav pc-view">
-      {%- if pageName === 'mypage' -%}
+      {%- if pageName === 'mypage' or pageName === 'profile_edit' -%}
       <ul class="globalNavList">
         <li class="globalNavItem">
           <a href="{{ basePath }}job/" class="globalNavItem__link">
@@ -51,7 +51,7 @@
       <div class="globalMobileNavBlock">
         <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
         <div class="globalMobileNavContents">
-          {%- if pageName === 'mypage' -%}
+          {%- if pageName === 'mypage' or pageName === 'profile_edit' -%}
           <ul class="globalMobileNavCell">
             <li class="globalMobileNavCellItem">
               <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">

@@ -77,3 +77,16 @@
     }
   }
 }
+.inputBlockNotice {
+  display: block;
+  border: 1px solid #5d687c;
+  padding: 20px;
+}
+.inputBlockNotice__heading {
+  @include fontsize(14, 16);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.inputBlockNotice__text {
+  @include fontsize(14, 16);
+}
