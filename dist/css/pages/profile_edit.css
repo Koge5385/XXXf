@@ -1496,34 +1496,9 @@ select::-ms-expand {
       min-width: auto;
       padding: 0 20px 60px; } }
 
-.registMailConfirm {
+.editProfile {
   width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .registMailConfirm {
+    .editProfile {
       width: 100%; } }
-
-.registMailConfirmInner {
-  width: 720px;
-  margin: 0 auto 33px; }
-  @media screen and (max-width: 768px) {
-    .registMailConfirmInner {
-      width: 100%; } }
-
-.registMailConfirm__textLine {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 40px; }
-  @media screen and (max-width: 768px) {
-    .registMailConfirm__textLine {
-      margin-bottom: 30px; } }
-
-.registMailConfirm__mail {
-  margin-left: 2em; }
-  @media screen and (max-width: 768px) {
-    .registMailConfirm__mail {
-      display: block;
-      margin-top: 10px;
-      margin-left: 0;
-      text-align: center; } }
