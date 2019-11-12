@@ -1,6 +1,7 @@
 import 'regenerator-runtime'
 import 'es6-promise/auto'
 import 'url-search-params-polyfill'
+import 'formdata-polyfill'
 import axios from 'axios'
 
 /**
