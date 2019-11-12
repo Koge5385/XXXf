@@ -20,7 +20,7 @@ class ActivateSubmit {
   isValueEmpty() {
     const targetInput = document.querySelectorAll('.js-valueEmptyCheck-target')
     const checkList = new Array(targetInput.length)
-    targetInput.forEach((elem, i) => {
+    Array.prototype.slice.call(targetInput,0).forEach((elem, i) => {
       elem.addEventListener(BLUR_EVENT, () => {
         if (elem.value === '') {
           elem.classList.add('is-error')
@@ -43,7 +43,7 @@ class ActivateSubmit {
   isChecked() {
     const targetCheckbox = document.querySelectorAll('.js-hasChecked-target')
     const checkList = new Array(targetCheckbox.length)
-    targetCheckbox.forEach((elem, i) => {
+    Array.prototype.slice.call(targetCheckbox,0).forEach((elem, i) => {
       elem.addEventListener(CHANGE_EVENT, () => {
         if (elem.checked === false) {
           elem.classList.add('is-error')
@@ -54,8 +54,8 @@ class ActivateSubmit {
           checkList[i] = true
         }
         checkList.filter(x => x === true).length !== targetCheckbox.length
-          ? this.checkResult.checked = false
-          : this.checkResult.checked = true
+          ? this.checkResult.checkbox = false
+          : this.checkResult.checkbox = true
       })
     })
   }
@@ -103,7 +103,7 @@ class ActivateSubmit {
    */
   activeSubmit() {
     const targetSubmit = document.querySelector('.js-formSubmit-target')
-    this.checkResult = { 'empty': false, 'checked': false, 'mail': false }
+    this.checkResult = { 'empty': false, 'checkbox': false, 'mail': false }
     this.isValueEmpty()
     this.isChecked()
     this.mailValidate()
@@ -114,7 +114,7 @@ class ActivateSubmit {
         get: () => this[key],
         set: (newValue) => {
           this[key] = newValue
-          checkObject.empty === true && checkObject.checked === true && checkObject.mail === true
+          checkObject.empty === true && checkObject.checkbox === true && checkObject.mail === true
             ? targetSubmit.disabled = false
             : targetSubmit.disabled = true
         }
