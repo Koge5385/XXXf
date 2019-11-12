@@ -36,6 +36,7 @@
     "watch:js": "chokidar './src/js/**/*.js' --command 'yarn copy:lib:js & yarn build:dev:js && yarn reload'"
   },
   "dependencies": {
+    "array-from-polyfill": "^1.0.1",
     "axios": "0.17.1",
     "core-js": "^3.1.4",
     "es6-promise": "^4.2.8",

@@ -23,6 +23,9 @@ a {
 ul {
   list-style-type: none;
 }
+select::-ms-expand {
+  display: none;
+}
 
 @include media(pc) {
   .sp-view {

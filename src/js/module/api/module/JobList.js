@@ -28,7 +28,9 @@ class JobList {
 
     // 検索した値の引き継ぎ
     const inputValueTransfer = (target, inputValue) => {
-      document.querySelectorAll(target).forEach(input => {
+      const targetNode = document.querySelectorAll(target)
+      const targetArray = Array.prototype.slice.call(targetNode, 0)
+      targetArray.forEach(input => {
         if (inputValue !== null) input.value = inputValue
       })
     }
@@ -38,7 +40,9 @@ class JobList {
     inputValueTransfer('.js-async-formKeywords-target', this.jobSearch)
 
     // ページネーションクリック時、パラメーターを維持する
-    document.querySelectorAll('.js-async-pagenationItem-target').forEach(elem => {
+    const pagenationNode = document.querySelectorAll('.js-async-pagenationItem-target')
+    const pagenationArray = Array.prototype.slice.call(pagenationNode, 0)
+    pagenationArray.forEach(elem => {
       elem.addEventListener('click', () => {
         params.set('start', elem.value)
         document.location.search = params
@@ -57,7 +61,9 @@ class JobList {
       const pageName = 'jobList'
 
       // 検索結果件数の反映
-      document.querySelectorAll('.js-async-jobListResult-target').forEach(target => {
+      const resultNode = document.querySelectorAll('.js-async-jobListResult-target')
+      const resultArray = Array.prototype.slice.call(resultNode, 0)
+      resultArray.forEach(target => {
         target.innerText = Number(data.attributes.total).toLocaleString()
       })
 
