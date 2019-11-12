@@ -18,7 +18,7 @@ class LoginCheck {
   async doAxios() {
     const callToken = localStorage.getItem('access_token')
     console.log(callToken)
-    await new AxiosBase().postMethod('/user/sessions/login', JSON.stringify({}), this.setDataToPage)
+    await new AxiosBase().getMethod(`/user/sessions/${callToken}?time=${new Date().getTime()}`, this.setDataToPage)
   }
 
   /**
@@ -28,9 +28,7 @@ class LoginCheck {
    */
   async setDataToPage(status, data) {
     if (status === 200) {
-      localStorage.setItem('access_token', data.data.access_token)
       console.log(data)
-      document.location.href = '../mypage/'
     }
     if (status === 400 || status === 401) {
       console.log('error')
