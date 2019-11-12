@@ -35,632 +35,614 @@
   </head>
   <body>
     <div class="contentsWrap">
-      <form>
-        <header class="globalHeader">
-          <div class="globalHeaderInner">
-            <div class="globalHeader__logo">
-              <a href="/dist/">
-                <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
-              </a>
+      <header class="globalHeader">
+        <div class="globalHeaderInner">
+          <div class="globalHeader__logo">
+            <a href="/dist/">
+              <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
+            </a>
+          </div>
+          <nav class="globalNav pc-view">
+            <ul class="globalNavList">
+              <li class="globalNavItem">
+                <a href="/dist/job/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
+                      <g transform="translate(11.603 10)">
+                        <g transform="translate(-11.603 -10)">
+                          <rect width="18.38" height="2.309" transform="translate(4.825)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
+                          <rect width="2.298" height="2.309" />
+                          <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">求人一覧</p>
+                </a>
+              </li>
+              <li class="globalNavItem">
+                <a
+                  href="/dist/mypage/"
+                  class="globalNavItem__link"
+                  onclick="gtag('event', 'click', {'event_category': 'mypage_header_regist','event_label': 'header_regist'});"
+                >
+                  <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
+                      <g transform="translate(9.95 11)">
+                        <g transform="translate(-9.95 -11)">
+                          <path
+                            d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
+                            transform="translate(-0.62 -0.601)"
+                          />
+                          <path
+                            d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
+                            transform="translate(-1 0.761)"
+                          />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">マイページ</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="globalMobileNav sp-view">
+            <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger" />
+            <label for="sp_nav" class="globalMobileNav__openLabel"
+              ><span class="globalMobileNav__menuIcon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12.188" viewBox="0 0 14 12.188">
+                  <g transform="translate(0)">
+                    <g transform="translate(0 0)">
+                      <rect width="14" height="1.99" />
+                      <rect width="14" height="1.99" transform="translate(0 5.05)" />
+                      <rect width="14" height="1.99" transform="translate(0 10.198)" />
+                    </g>
+                  </g></svg></span
+              >メニュー</label
+            >
+            <label for="sp_nav" class="globalMobileNav__closeLabel"
+              ><span class="globalMobileNav__closeIcon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="11.307" height="11.306" viewBox="0 0 11.307 11.306">
+                  <g transform="translate(-1.346 -0.391)">
+                    <path
+                      d="M-9203.6-9.384l-4.246,4.246-1.407-1.405L-9205-10.79l-4.246-4.246,1.407-1.408,4.246,4.247,4.245-4.247,1.408,1.408-4.247,4.246,4.247,4.247-1.408,1.405Z"
+                      transform="translate(9210.598 16.835)"
+                    />
+                  </g></svg></span
+              >閉じる</label
+            >
+            <div class="globalMobileNavBlock">
+              <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
+              <div class="globalMobileNavContents">
+                <ul class="globalMobileNavCell">
+                  <li class="globalMobileNavCellItem">
+                    <a href="/dist/job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
+                          <g transform="translate(20.304 17.5)">
+                            <g transform="translate(-20.304 -17.5)">
+                              <rect width="32.165" height="4.041" transform="translate(8.443)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
+                              <rect width="4.021" height="4.041" />
+                              <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
+                            </g>
+                          </g></svg></span
+                      >求人一覧
+                    </a>
+                  </li>
+                  <li class="globalMobileNavCellItem">
+                    <a
+                      href="/dist/mypage/"
+                      class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin"
+                    >
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
+                          <g transform="translate(9.95 11)">
+                            <g transform="translate(-9.95 -11)">
+                              <path
+                                d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
+                                transform="translate(1.739 -0.601)"
+                              />
+                              <path
+                                d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
+                                transform="translate(-1 9.171)"
+                              />
+                            </g>
+                          </g></svg></span
+                      >マイページ
+                    </a>
+                  </li>
+                </ul>
+                <ul class="globalMobileNavLink">
+                  <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
+                    <a href="/dist/forbeginner/">初めての方へ</a>
+                  </li>
+                  <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
+                    <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                  </li>
+                  <li class="globalMobileNavLink__item"><a href="/dist/company/">会社概要</a></li>
+                  <li class="globalMobileNavLink__item"><a href="#">個人情報保護方針</a></li>
+                  <li class="globalMobileNavLink__item"><a href="#">利用規約</a></li>
+                </ul>
+              </div>
             </div>
-            <nav class="globalNav pc-view">
-              <ul class="globalNavList">
-                <li class="globalNavItem">
-                  <a href="/dist/job/" class="globalNavItem__link">
-                    <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
-                        <g transform="translate(11.603 10)">
-                          <g transform="translate(-11.603 -10)">
-                            <rect width="18.38" height="2.309" transform="translate(4.825)" />
-                            <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
-                            <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
-                            <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
-                            <rect width="2.298" height="2.309" />
-                            <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
-                            <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
-                            <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
-                          </g>
-                        </g></svg
-                    ></span>
-                    <p class="globalNavItem__label">求人一覧</p>
-                  </a>
-                </li>
-                <li class="globalNavItem">
-                  <a
-                    href="/dist/mypage/"
-                    class="globalNavItem__link"
-                    onclick="gtag('event', 'click', {'event_category': 'mypage_header_regist','event_label': 'header_regist'});"
+          </nav>
+        </div>
+      </header>
+      <div class="keyVisual">
+        <h1 class="keyVisual__title">マイページ</h1>
+        <small class="keyVisual__enTitle">MY PAGE</small>
+      </div>
+
+      <div class="container">
+        <section class="mypage">
+          <ul class="mypageMainMenu">
+            <li class="mypageMainMenu__item">
+              <a href="#" class="mypageMainMenu__link">
+                <span class="mypageMainMenu__icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="108.322"
+                    height="129.997"
+                    viewBox="0 0 108.322 129.997"
                   >
-                    <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
-                        <g transform="translate(9.95 11)">
-                          <g transform="translate(-9.95 -11)">
-                            <path
-                              d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
-                              transform="translate(-0.62 -0.601)"
-                            />
-                            <path
-                              d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
-                              transform="translate(-1 0.761)"
-                            />
-                          </g>
-                        </g></svg
-                    ></span>
-                    <p class="globalNavItem__label">マイページ</p>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <nav class="globalMobileNav sp-view">
-              <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger" />
-              <label for="sp_nav" class="globalMobileNav__openLabel"
-                ><span class="globalMobileNav__menuIcon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12.188" viewBox="0 0 14 12.188">
-                    <g transform="translate(0)">
-                      <g transform="translate(0 0)">
-                        <rect width="14" height="1.99" />
-                        <rect width="14" height="1.99" transform="translate(0 5.05)" />
-                        <rect width="14" height="1.99" transform="translate(0 10.198)" />
+                    <g transform="translate(-334.776 -153.982)">
+                      <rect
+                        width="75"
+                        height="106"
+                        transform="translate(342.776 162.982)"
+                        fill="#0091d4"
+                        opacity="0.145"
+                      />
+                      <rect
+                        width="9"
+                        height="106"
+                        transform="translate(422.776 165.982)"
+                        fill="#0091d4"
+                        opacity="0.145"
+                      />
+                      <rect
+                        width="70"
+                        height="7"
+                        transform="translate(347.776 272.982)"
+                        fill="#0091d4"
+                        opacity="0.145"
+                      />
+                      <path
+                        d="M427.217,280.984l-76.27.169a3.033,3.033,0,0,1-.014-6.065l75.246-.167L425.942,168.4a3.032,3.032,0,1,1,6.064-.014l.239,107.55A5.045,5.045,0,0,1,427.217,280.984Z"
+                        fill="#0091d4"
+                      />
+                      <path
+                        d="M412.3,271.62l-72.234.16a5.046,5.046,0,0,1-5.051-5.028l-.239-107.55a5.046,5.046,0,0,1,5.029-5.051l76.27-.169a5.045,5.045,0,0,1,5.051,5.028l.171,77.231-6.064.014-.17-76.206-74.22.164.235,105.5,71.209-.158Z"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="53.065"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(351.528 208.606) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="30.955"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(373.684 228.817) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="17.9"
+                        height="6.065"
+                        rx="2.674"
+                        transform="matrix(1, -0.002, 0.002, 1, 386.611, 171.209)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="17.9"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(386.666 196.088) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="17.9"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(386.638 183.649) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="29.705"
+                        height="30.444"
+                        rx="2.201"
+                        transform="translate(351.445 171.219) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <path
+                        d="M357.92,239.468l-.124,0a3.032,3.032,0,0,1-2.246-1.131l-3.963-4.931a3.033,3.033,0,0,1,4.728-3.8l1.778,2.213,5.989-6.369A3.032,3.032,0,1,1,368.5,229.6l-8.377,8.91A3.034,3.034,0,0,1,357.92,239.468Z"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="30.955"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(373.726 247.916) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <path
+                        d="M25.775,0A25.775,25.775,0,1,1,0,25.775,25.775,25.775,0,0,1,25.775,0Z"
+                        transform="translate(391.549 232.43)"
+                        fill="#ec652b"
+                      />
+                      <path
+                        d="M357.962,258.567c-.041,0-.082,0-.124,0a3.03,3.03,0,0,1-2.246-1.131l-3.962-4.93a3.032,3.032,0,1,1,4.727-3.8l1.778,2.213,5.989-6.37a3.032,3.032,0,0,1,4.419,4.154l-8.378,8.91A3.034,3.034,0,0,1,357.962,258.567Z"
+                        fill="#0091d4"
+                      />
+                      <path
+                        d="M420.412,249.59l-8.434,2.722-5.637,15.165,6.75-6.781a3.493,3.493,0,1,1,1.731,1.736l-6.794,6.824,15.212-5.732,2.685-8.445Z"
+                        fill="#fff"
+                      />
+                      <path d="M424.192,246.6l-1.84,1.848,4.885,4.863,2.022-1.667Z" fill="#fff" />
+                    </g></svg></span
+                >レジュメ編集
+              </a>
+            </li>
+            <li class="mypageMainMenu__item">
+              <a href="/dist/mypage/profile_edit.html" class="mypageMainMenu__link">
+                <span class="mypageMainMenu__icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="108.321"
+                    height="129.997"
+                    viewBox="0 0 108.321 129.997"
+                  >
+                    <g transform="translate(-190.609 -154.302)">
+                      <rect
+                        width="75"
+                        height="106"
+                        transform="translate(199.609 163.302)"
+                        fill="#0091d4"
+                        opacity="0.153"
+                      />
+                      <path
+                        d="M268.133,271.94l-72.234.16a5.044,5.044,0,0,1-5.051-5.028l-.239-107.55a5.046,5.046,0,0,1,5.028-5.051l76.271-.169a5.044,5.044,0,0,1,5.05,5.028l.172,77.232-6.065.013-.169-76.206-74.22.165.235,105.5,71.208-.159Z"
+                        fill="#0091d4"
+                      />
+                      <path d="M233.792,187.822a9,9,0,1,0-9.038-9A9.018,9.018,0,0,0,233.792,187.822Z" fill="#0091d4" />
+                      <path
+                        d="M219.91,203.618l27.944-.062a1.158,1.158,0,0,0,1.187-1.143c-.013-5.964-5.086-10.641-11.337-10.627l-7.7.017c-6.224.014-11.3,4.687-11.29,10.678A1.157,1.157,0,0,0,219.91,203.618Z"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="53.065"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(207.368 212.181) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="53.065"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(207.45 248.871) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="53.065"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(207.423 236.641) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="53.065"
+                        height="6.065"
+                        rx="2.674"
+                        transform="translate(207.395 224.411) rotate(-0.127)"
+                        fill="#0091d4"
+                      />
+                      <path
+                        d="M25.775,0A25.775,25.775,0,1,1,0,25.775,25.775,25.775,0,0,1,25.775,0Z"
+                        transform="translate(247.382 232.75)"
+                        fill="#ec652b"
+                      />
+                      <path
+                        d="M275.773,250.189l-8.434,2.722L261.7,268.075l6.75-6.78a3.493,3.493,0,1,1,1.731,1.736l-6.794,6.824,15.212-5.732,2.685-8.446Z"
+                        fill="#fff"
+                      />
+                      <path d="M279.553,247.2l-1.84,1.848,4.885,4.863,2.022-1.667Z" fill="#fff" />
+                    </g></svg></span
+                >プロフィール編集
+              </a>
+            </li>
+            <li class="mypageMainMenu__item">
+              <a href="/dist/mypage/password_change.html" class="mypageMainMenu__link">
+                <span class="mypageMainMenu__icon"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="113.796"
+                    height="130.126"
+                    viewBox="0 0 113.796 130.126"
+                  >
+                    <g transform="translate(-480.602 -153.712)">
+                      <rect
+                        width="72"
+                        height="59"
+                        rx="5"
+                        transform="translate(503.602 196.712)"
+                        fill="#0091d4"
+                        opacity="0.15"
+                      />
+                      <path
+                        d="M568.9,194.821a4.077,4.077,0,0,1,4.082,4.064l.107,47.951a4.078,4.078,0,0,1-4.065,4.082l-63.112.14a4.077,4.077,0,0,1-4.082-4.064l-.107-47.95a4.079,4.079,0,0,1,4.065-4.083l63.112-.14m-.014-6.065-63.112.14a10.138,10.138,0,0,0-10.115,10.161l.106,47.95a10.138,10.138,0,0,0,10.161,10.116l63.112-.14a10.138,10.138,0,0,0,10.115-10.161l-.106-47.95a10.14,10.14,0,0,0-10.161-10.116Z"
+                        fill="#0091d4"
+                      />
+                      <path
+                        d="M558.993,192.261a3.033,3.033,0,0,1-3.039-3.026l-.024-10.877a18.623,18.623,0,1,0-37.245.083,3.033,3.033,0,0,1-6.065.014,24.687,24.687,0,1,1,49.374-.11l.025,10.877A3.034,3.034,0,0,1,558.993,192.261Z"
+                        fill="#0091d4"
+                      />
+                      <path
+                        d="M546.828,219.084a9.431,9.431,0,1,0-13.295,8.616l.016,7.558a3.884,3.884,0,1,0,7.768-.017l-.016-7.558A9.427,9.427,0,0,0,546.828,219.084Z"
+                        fill="#0091d4"
+                      />
+                      <rect
+                        width="113.712"
+                        height="37.904"
+                        rx="6.565"
+                        transform="translate(480.601 245.935) rotate(-0.127)"
+                        fill="#ec652b"
+                      />
+                      <g transform="translate(0 -2)">
+                        <path
+                          d="M508.762,263.223a2.183,2.183,0,0,0-2.617-.466l-1.991,1.023-.006-1.9a1.939,1.939,0,0,0-3.79.006l.005,1.9-2-1.015a2.18,2.18,0,0,0-2.615.475,1.364,1.364,0,0,0,.591,2.106l2.386,1.213-2.379,1.222a1.362,1.362,0,0,0-.579,2.108,2.039,2.039,0,0,0,1.6.706,2.234,2.234,0,0,0,1.012-.239l1.992-1.023.005,1.9a1.939,1.939,0,0,0,3.79-.007l-.005-1.9,2,1.015a2.236,2.236,0,0,0,1.014.236,2.036,2.036,0,0,0,1.6-.711,1.364,1.364,0,0,0-.59-2.107l-2.386-1.212,2.379-1.222A1.363,1.363,0,0,0,508.762,263.223Z"
+                          transform="translate(0.142 1)"
+                          fill="#fff"
+                        />
+                        <path
+                          d="M532.582,263.17a2.183,2.183,0,0,0-2.617-.466l-1.991,1.023-.005-1.9a1.939,1.939,0,0,0-3.79.006l.005,1.9-2-1.015a2.18,2.18,0,0,0-2.615.475,1.364,1.364,0,0,0,.591,2.106l2.386,1.213-2.379,1.222a1.363,1.363,0,0,0-.579,2.108,2.039,2.039,0,0,0,1.6.706,2.241,2.241,0,0,0,1.013-.239l1.991-1.023.005,1.9a1.94,1.94,0,0,0,3.791-.006l-.005-1.9,2,1.015a2.225,2.225,0,0,0,1.015.236,2.039,2.039,0,0,0,1.6-.711,1.365,1.365,0,0,0-.591-2.107l-2.386-1.212L532,265.278A1.362,1.362,0,0,0,532.582,263.17Z"
+                          transform="translate(0.322 1)"
+                          fill="#fff"
+                        />
+                        <path
+                          d="M556.4,263.117a2.184,2.184,0,0,0-2.617-.466l-1.991,1.023-.005-1.9a1.94,1.94,0,0,0-3.791.007l.005,1.9-2-1.015a2.179,2.179,0,0,0-2.614.475,1.364,1.364,0,0,0,.591,2.107l2.385,1.212-2.379,1.222a1.363,1.363,0,0,0-.579,2.108,2.04,2.04,0,0,0,1.6.706,2.225,2.225,0,0,0,1.013-.239l1.992-1.023.005,1.9a1.939,1.939,0,0,0,3.79-.006l-.005-1.9,2,1.015a2.232,2.232,0,0,0,1.014.237,2.039,2.039,0,0,0,1.6-.712,1.364,1.364,0,0,0-.591-2.106l-2.385-1.213,2.379-1.222A1.363,1.363,0,0,0,556.4,263.117Z"
+                          transform="translate(-0.498 1)"
+                          fill="#fff"
+                        />
+                        <path
+                          d="M579.651,267.608l-2.386-1.213,2.379-1.222a1.361,1.361,0,0,0,.579-2.107,2.182,2.182,0,0,0-2.617-.467l-1.991,1.023-.005-1.9a1.94,1.94,0,0,0-3.791.007l.006,1.9-2-1.015a2.178,2.178,0,0,0-2.614.475,1.364,1.364,0,0,0,.59,2.106l2.386,1.212-2.379,1.222a1.363,1.363,0,0,0-.579,2.108,2.039,2.039,0,0,0,1.6.706,2.231,2.231,0,0,0,1.013-.239l1.991-1.023,0,1.9a1.94,1.94,0,0,0,3.79-.006l-.005-1.9,2,1.016a2.246,2.246,0,0,0,1.015.236,2.039,2.039,0,0,0,1.6-.712A1.364,1.364,0,0,0,579.651,267.608Z"
+                          transform="translate(-0.32 1)"
+                          fill="#fff"
+                        />
                       </g>
                     </g></svg></span
-                >メニュー</label
-              >
-              <label for="sp_nav" class="globalMobileNav__closeLabel"
-                ><span class="globalMobileNav__closeIcon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="11.307" height="11.306" viewBox="0 0 11.307 11.306">
-                    <g transform="translate(-1.346 -0.391)">
-                      <path
-                        d="M-9203.6-9.384l-4.246,4.246-1.407-1.405L-9205-10.79l-4.246-4.246,1.407-1.408,4.246,4.247,4.245-4.247,1.408,1.408-4.247,4.246,4.247,4.247-1.408,1.405Z"
-                        transform="translate(9210.598 16.835)"
-                      />
-                    </g></svg></span
-                >閉じる</label
-              >
-              <div class="globalMobileNavBlock">
-                <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
-                <div class="globalMobileNavContents">
-                  <ul class="globalMobileNavCell">
-                    <li class="globalMobileNavCellItem">
-                      <a
-                        href="/dist/job/"
-                        class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin"
-                      >
-                        <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
-                          ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
-                            <g transform="translate(20.304 17.5)">
-                              <g transform="translate(-20.304 -17.5)">
-                                <rect width="32.165" height="4.041" transform="translate(8.443)" />
-                                <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
-                                <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
-                                <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
-                                <rect width="4.021" height="4.041" />
-                                <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
-                                <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
-                                <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
-                              </g>
-                            </g></svg></span
-                        >求人一覧
-                      </a>
-                    </li>
-                    <li class="globalMobileNavCellItem">
-                      <a
-                        href="/dist/mypage/"
-                        class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin"
-                      >
-                        <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
-                          ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
-                            <g transform="translate(9.95 11)">
-                              <g transform="translate(-9.95 -11)">
-                                <path
-                                  d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
-                                  transform="translate(1.739 -0.601)"
-                                />
-                                <path
-                                  d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
-                                  transform="translate(-1 9.171)"
-                                />
-                              </g>
-                            </g></svg></span
-                        >マイページ
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="globalMobileNavLink">
-                    <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                      <a href="/dist/forbeginner/">初めての方へ</a>
-                    </li>
-                    <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                      <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
-                    </li>
-                    <li class="globalMobileNavLink__item"><a href="/dist/company/">会社概要</a></li>
-                    <li class="globalMobileNavLink__item"><a href="#">個人情報保護方針</a></li>
-                    <li class="globalMobileNavLink__item"><a href="#">利用規約</a></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-          </div>
-        </header>
-        <div class="keyVisual">
-          <h1 class="keyVisual__title">マイページ</h1>
-          <small class="keyVisual__enTitle">MY PAGE</small>
-        </div>
+                >パスワード変更
+              </a>
+            </li>
+          </ul>
+          <ul class="mypageSubMenu">
+            <li class="mypageSubMenu__item"><a href="#" class="mypageSubMenu__link">ログアウト</a></li>
+            <li class="mypageSubMenu__item"><a href="#" class="mypageSubMenu__link">サービスの退会はこちら</a></li>
+          </ul>
+        </section>
+      </div>
 
-        <div class="container">
-          <section class="mypage">
-            <ul class="mypageMainMenu">
-              <li class="mypageMainMenu__item">
-                <a href="#" class="mypageMainMenu__link">
-                  <span class="mypageMainMenu__icon"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="108.322"
-                      height="129.997"
-                      viewBox="0 0 108.322 129.997"
-                    >
-                      <g transform="translate(-334.776 -153.982)">
-                        <rect
-                          width="75"
-                          height="106"
-                          transform="translate(342.776 162.982)"
-                          fill="#0091d4"
-                          opacity="0.145"
-                        />
-                        <rect
-                          width="9"
-                          height="106"
-                          transform="translate(422.776 165.982)"
-                          fill="#0091d4"
-                          opacity="0.145"
-                        />
-                        <rect
-                          width="70"
-                          height="7"
-                          transform="translate(347.776 272.982)"
-                          fill="#0091d4"
-                          opacity="0.145"
-                        />
-                        <path
-                          d="M427.217,280.984l-76.27.169a3.033,3.033,0,0,1-.014-6.065l75.246-.167L425.942,168.4a3.032,3.032,0,1,1,6.064-.014l.239,107.55A5.045,5.045,0,0,1,427.217,280.984Z"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M412.3,271.62l-72.234.16a5.046,5.046,0,0,1-5.051-5.028l-.239-107.55a5.046,5.046,0,0,1,5.029-5.051l76.27-.169a5.045,5.045,0,0,1,5.051,5.028l.171,77.231-6.064.014-.17-76.206-74.22.164.235,105.5,71.209-.158Z"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="53.065"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(351.528 208.606) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="30.955"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(373.684 228.817) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="17.9"
-                          height="6.065"
-                          rx="2.674"
-                          transform="matrix(1, -0.002, 0.002, 1, 386.611, 171.209)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="17.9"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(386.666 196.088) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="17.9"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(386.638 183.649) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="29.705"
-                          height="30.444"
-                          rx="2.201"
-                          transform="translate(351.445 171.219) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M357.92,239.468l-.124,0a3.032,3.032,0,0,1-2.246-1.131l-3.963-4.931a3.033,3.033,0,0,1,4.728-3.8l1.778,2.213,5.989-6.369A3.032,3.032,0,1,1,368.5,229.6l-8.377,8.91A3.034,3.034,0,0,1,357.92,239.468Z"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="30.955"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(373.726 247.916) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M25.775,0A25.775,25.775,0,1,1,0,25.775,25.775,25.775,0,0,1,25.775,0Z"
-                          transform="translate(391.549 232.43)"
-                          fill="#ec652b"
-                        />
-                        <path
-                          d="M357.962,258.567c-.041,0-.082,0-.124,0a3.03,3.03,0,0,1-2.246-1.131l-3.962-4.93a3.032,3.032,0,1,1,4.727-3.8l1.778,2.213,5.989-6.37a3.032,3.032,0,0,1,4.419,4.154l-8.378,8.91A3.034,3.034,0,0,1,357.962,258.567Z"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M420.412,249.59l-8.434,2.722-5.637,15.165,6.75-6.781a3.493,3.493,0,1,1,1.731,1.736l-6.794,6.824,15.212-5.732,2.685-8.445Z"
-                          fill="#fff"
-                        />
-                        <path d="M424.192,246.6l-1.84,1.848,4.885,4.863,2.022-1.667Z" fill="#fff" />
-                      </g></svg></span
-                  >レジュメ編集
-                </a>
+      <section class="searchButtonBlock">
+        <div class="searchButtonBlockInner">
+          <div class="searchButtonBlockContent">
+            <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title">
+              <span class="searchButtonBlockContent__icon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g transform="translate(12 12)">
+                    <g transform="translate(-12 -12)">
+                      <path
+                        d="M21.647,145.5H2.353A2.358,2.358,0,0,0,0,147.858V152a.7.7,0,0,0,.534.684l8.709,2.175v-2a1.406,1.406,0,0,1,1.406-1.406h2.709a1.406,1.406,0,0,1,1.406,1.406v2l8.709-2.175A.7.7,0,0,0,24,152v-4.139a2.358,2.358,0,0,0-2.353-2.358Z"
+                        transform="translate(0 -138.68)"
+                      />
+                      <path
+                        d="M33.823,334.345a1.406,1.406,0,0,1-.6,1.158l-1.355.942a1.406,1.406,0,0,1-1.6,0l-1.355-.942a1.406,1.406,0,0,1-.6-1.158v-.473L20,331.8v6.089a2.358,2.358,0,0,0,2.353,2.358H39.772a2.358,2.358,0,0,0,2.353-2.358V331.8l-8.3,2.072Z"
+                        transform="translate(-19.062 -316.247)"
+                      />
+                      <path
+                        d="M229.809,306.323V302.4H227.1v3.923l1.355.938Z"
+                        transform="translate(-216.455 -288.225)"
+                      />
+                      <path
+                        d="M119.712,4.8a1.711,1.711,0,0,0-.994-1.552,2.03,2.03,0,0,1,2.016-1.833H125.3a2.03,2.03,0,0,1,2.016,1.833,1.711,1.711,0,0,0-.994,1.552v.572h3.412V4.8a1.711,1.711,0,0,0-1.008-1.561A3.441,3.441,0,0,0,125.3,0h-4.566a3.441,3.441,0,0,0-3.427,3.234A1.711,1.711,0,0,0,116.3,4.8v.572h3.413Z"
+                        transform="translate(-110.848)"
+                      />
+                    </g>
+                  </g></svg></span
+              >職種から探す
+            </h3>
+            <ul class="searchButtonBlockJobList">
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">事務長<span>（候補含む）</span></a>
               </li>
-              <li class="mypageMainMenu__item">
-                <a href="/dist/mypage/profile_edit.html" class="mypageMainMenu__link">
-                  <span class="mypageMainMenu__icon"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="108.321"
-                      height="129.997"
-                      viewBox="0 0 108.321 129.997"
-                    >
-                      <g transform="translate(-190.609 -154.302)">
-                        <rect
-                          width="75"
-                          height="106"
-                          transform="translate(199.609 163.302)"
-                          fill="#0091d4"
-                          opacity="0.153"
-                        />
-                        <path
-                          d="M268.133,271.94l-72.234.16a5.044,5.044,0,0,1-5.051-5.028l-.239-107.55a5.046,5.046,0,0,1,5.028-5.051l76.271-.169a5.044,5.044,0,0,1,5.05,5.028l.172,77.232-6.065.013-.169-76.206-74.22.165.235,105.5,71.208-.159Z"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M233.792,187.822a9,9,0,1,0-9.038-9A9.018,9.018,0,0,0,233.792,187.822Z"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M219.91,203.618l27.944-.062a1.158,1.158,0,0,0,1.187-1.143c-.013-5.964-5.086-10.641-11.337-10.627l-7.7.017c-6.224.014-11.3,4.687-11.29,10.678A1.157,1.157,0,0,0,219.91,203.618Z"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="53.065"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(207.368 212.181) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="53.065"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(207.45 248.871) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="53.065"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(207.423 236.641) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="53.065"
-                          height="6.065"
-                          rx="2.674"
-                          transform="translate(207.395 224.411) rotate(-0.127)"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M25.775,0A25.775,25.775,0,1,1,0,25.775,25.775,25.775,0,0,1,25.775,0Z"
-                          transform="translate(247.382 232.75)"
-                          fill="#ec652b"
-                        />
-                        <path
-                          d="M275.773,250.189l-8.434,2.722L261.7,268.075l6.75-6.78a3.493,3.493,0,1,1,1.731,1.736l-6.794,6.824,15.212-5.732,2.685-8.446Z"
-                          fill="#fff"
-                        />
-                        <path d="M279.553,247.2l-1.84,1.848,4.885,4.863,2.022-1.667Z" fill="#fff" />
-                      </g></svg></span
-                  >プロフィール編集
-                </a>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">経営企画室</a>
               </li>
-              <li class="mypageMainMenu__item">
-                <a href="/dist/mypage/password_change.html" class="mypageMainMenu__link">
-                  <span class="mypageMainMenu__icon"
-                    ><svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="113.796"
-                      height="130.126"
-                      viewBox="0 0 113.796 130.126"
-                    >
-                      <g transform="translate(-480.602 -153.712)">
-                        <rect
-                          width="72"
-                          height="59"
-                          rx="5"
-                          transform="translate(503.602 196.712)"
-                          fill="#0091d4"
-                          opacity="0.15"
-                        />
-                        <path
-                          d="M568.9,194.821a4.077,4.077,0,0,1,4.082,4.064l.107,47.951a4.078,4.078,0,0,1-4.065,4.082l-63.112.14a4.077,4.077,0,0,1-4.082-4.064l-.107-47.95a4.079,4.079,0,0,1,4.065-4.083l63.112-.14m-.014-6.065-63.112.14a10.138,10.138,0,0,0-10.115,10.161l.106,47.95a10.138,10.138,0,0,0,10.161,10.116l63.112-.14a10.138,10.138,0,0,0,10.115-10.161l-.106-47.95a10.14,10.14,0,0,0-10.161-10.116Z"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M558.993,192.261a3.033,3.033,0,0,1-3.039-3.026l-.024-10.877a18.623,18.623,0,1,0-37.245.083,3.033,3.033,0,0,1-6.065.014,24.687,24.687,0,1,1,49.374-.11l.025,10.877A3.034,3.034,0,0,1,558.993,192.261Z"
-                          fill="#0091d4"
-                        />
-                        <path
-                          d="M546.828,219.084a9.431,9.431,0,1,0-13.295,8.616l.016,7.558a3.884,3.884,0,1,0,7.768-.017l-.016-7.558A9.427,9.427,0,0,0,546.828,219.084Z"
-                          fill="#0091d4"
-                        />
-                        <rect
-                          width="113.712"
-                          height="37.904"
-                          rx="6.565"
-                          transform="translate(480.601 245.935) rotate(-0.127)"
-                          fill="#ec652b"
-                        />
-                        <g transform="translate(0 -2)">
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">医事課長<span>（候補含む）</span></a>
+              </li>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">総務</a>
+              </li>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">財務・経理</a>
+              </li>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">人事・労務</a>
+              </li>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">情報管理</a>
+              </li>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">広報</a>
+              </li>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">地域連携室</a>
+              </li>
+              <li class="searchButtonBlockJobList__item">
+                <a href="#" class="searchButtonBlockJobList__link">その他</a>
+              </li>
+            </ul>
+          </div>
+          <div class="searchButtonBlockContent">
+            <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title">
+              <span class="searchButtonBlockContent__icon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="17.284" height="25" viewBox="0 0 17.284 25">
+                  <g transform="translate(5.6 8.1)">
+                    <path
+                      d="M8.642,0A8.642,8.642,0,0,0,0,8.642C0,13.426,8.642,25,8.642,25s8.642-11.574,8.642-16.358A8.642,8.642,0,0,0,8.642,0Zm0,12.191a3.7,3.7,0,1,1,3.549-3.549A3.7,3.7,0,0,1,8.642,12.191Z"
+                      transform="translate(-5.6 -8.1)"
+                    />
+                  </g></svg></span
+              >勤務地から探す
+            </h3>
+            <div class="searchButtonBlockArea">
+              <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked />
+              <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
+              <ul class="searchButtonBlockAreaList">
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">茨城</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">栃木</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">群馬</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">埼玉</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">千葉</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">東京</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">神奈川</a>
+                </li>
+              </ul>
+            </div>
+            <div class="searchButtonBlockArea">
+              <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockArea__toggleTrigger" />
+              <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
+              <ul class="searchButtonBlockAreaList">
+                <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable">三重</li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">滋賀</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">京都</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">大阪</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">兵庫</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">奈良</a>
+                </li>
+                <li class="searchButtonBlockAreaList__item">
+                  <a href="#" class="searchButtonBlockAreaList__link">和歌山</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="breadcrumb">
+        <div class="breadcrumbInner">
+          <ul class="breadcrumbList js-breadcrumb-target" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="/" itemprop="item">
+                <span itemprop="name">HOME</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <span itemprop="name">マイページ</span><meta itemprop="position" content="2" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="globalFooter">
+        <div class="globalFooterInner">
+          <div class="globalFooterGuideBlock">
+            <p class="globalFooterGuide__text pc-view">ご不明点などお問い合わせはこちらから</p>
+            <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
+            <a
+              class="globalFooterGuide__contactButton"
+              href="/dist/contact.html"
+              onclick="gtag('event', 'click', {'event_category': 'mypage_footer_contact','event_label': 'footer_contact'});"
+              ><span class="globalFooterGuide__contactIcon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
+                  <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
+                  <path d="M8.3,7.836,0,14.971V.7Z" transform="translate(0 0.208)" />
+                  <path d="M8.93,7,12.5,10.113,16.067,7l8.03,7.135H.9Z" transform="translate(0.268 1.823)" />
+                  <path d="M13.6,7.836,21.9.7V14.971Z" transform="translate(3.63 0.208)" /></svg></span
+              >お問い合わせフォーム</a
+            >
+            <div class="globalFooterTelBox">
+              <a
+                href="tel:03-5437-2950"
+                class="globalFooterTelBoxInner"
+                onclick="gtag('event', 'click', {'event_category': 'mypage_footer_tel','event_label': 'footer_tel'});"
+              >
+                <p class="globalFooterTelBox__number">
+                  <span class="globalFooterTelBox__numberIcon"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.986" viewBox="0 0 25 24.986">
+                      <g transform="translate(12.5 12.493)">
+                        <g transform="translate(-12.5 -12.493)">
                           <path
-                            d="M508.762,263.223a2.183,2.183,0,0,0-2.617-.466l-1.991,1.023-.006-1.9a1.939,1.939,0,0,0-3.79.006l.005,1.9-2-1.015a2.18,2.18,0,0,0-2.615.475,1.364,1.364,0,0,0,.591,2.106l2.386,1.213-2.379,1.222a1.362,1.362,0,0,0-.579,2.108,2.039,2.039,0,0,0,1.6.706,2.234,2.234,0,0,0,1.012-.239l1.992-1.023.005,1.9a1.939,1.939,0,0,0,3.79-.007l-.005-1.9,2,1.015a2.236,2.236,0,0,0,1.014.236,2.036,2.036,0,0,0,1.6-.711,1.364,1.364,0,0,0-.59-2.107l-2.386-1.212,2.379-1.222A1.363,1.363,0,0,0,508.762,263.223Z"
-                            transform="translate(0.142 1)"
-                            fill="#fff"
+                            d="M15.522,11.371,17.4,11A8.62,8.62,0,0,0,10.15,4L9.9,5.874A6.621,6.621,0,0,1,15.522,11.371Z"
+                            transform="translate(2.482 0.997)"
                           />
                           <path
-                            d="M532.582,263.17a2.183,2.183,0,0,0-2.617-.466l-1.991,1.023-.005-1.9a1.939,1.939,0,0,0-3.79.006l.005,1.9-2-1.015a2.18,2.18,0,0,0-2.615.475,1.364,1.364,0,0,0,.591,2.106l2.386,1.213-2.379,1.222a1.363,1.363,0,0,0-.579,2.108,2.039,2.039,0,0,0,1.6.706,2.241,2.241,0,0,0,1.013-.239l1.991-1.023.005,1.9a1.94,1.94,0,0,0,3.791-.006l-.005-1.9,2,1.015a2.225,2.225,0,0,0,1.015.236,2.039,2.039,0,0,0,1.6-.711,1.365,1.365,0,0,0-.591-2.107l-2.386-1.212L532,265.278A1.362,1.362,0,0,0,532.582,263.17Z"
-                            transform="translate(0.322 1)"
-                            fill="#fff"
+                            d="M20.594,11.993l1.874-.25A14.242,14.242,0,0,0,10.35,0L10.1,1.874A12.368,12.368,0,0,1,20.594,11.993Z"
+                            transform="translate(2.532 0)"
                           />
                           <path
-                            d="M556.4,263.117a2.184,2.184,0,0,0-2.617-.466l-1.991,1.023-.005-1.9a1.94,1.94,0,0,0-3.791.007l.005,1.9-2-1.015a2.179,2.179,0,0,0-2.614.475,1.364,1.364,0,0,0,.591,2.107l2.385,1.212-2.379,1.222a1.363,1.363,0,0,0-.579,2.108,2.04,2.04,0,0,0,1.6.706,2.225,2.225,0,0,0,1.013-.239l1.992-1.023.005,1.9a1.939,1.939,0,0,0,3.79-.006l-.005-1.9,2,1.015a2.232,2.232,0,0,0,1.014.237,2.039,2.039,0,0,0,1.6-.712,1.364,1.364,0,0,0-.591-2.106l-2.385-1.213,2.379-1.222A1.363,1.363,0,0,0,556.4,263.117Z"
-                            transform="translate(-0.498 1)"
-                            fill="#fff"
-                          />
-                          <path
-                            d="M579.651,267.608l-2.386-1.213,2.379-1.222a1.361,1.361,0,0,0,.579-2.107,2.182,2.182,0,0,0-2.617-.467l-1.991,1.023-.005-1.9a1.94,1.94,0,0,0-3.791.007l.006,1.9-2-1.015a2.178,2.178,0,0,0-2.614.475,1.364,1.364,0,0,0,.59,2.106l2.386,1.212-2.379,1.222a1.363,1.363,0,0,0-.579,2.108,2.039,2.039,0,0,0,1.6.706,2.231,2.231,0,0,0,1.013-.239l1.991-1.023,0,1.9a1.94,1.94,0,0,0,3.79-.006l-.005-1.9,2,1.016a2.246,2.246,0,0,0,1.015.236,2.039,2.039,0,0,0,1.6-.712A1.364,1.364,0,0,0,579.651,267.608Z"
-                            transform="translate(-0.32 1)"
-                            fill="#fff"
+                            d="M23.615,18.365l-1-.5-1.124-.625-1-.5-.5-.25-.625-.375h-.5a1.5,1.5,0,0,0-.875.5l-1,1.124-1,1.124a1.374,1.374,0,0,1-.875.5h-.75l-.375-.25-.375-.25A18.615,18.615,0,0,1,9.5,15.741a18.614,18.614,0,0,1-2.873-4.622l-.25-.375-.25-.375V9.62a1.374,1.374,0,0,1,.5-.875L7.5,7.871l1.124-1A1.5,1.5,0,0,0,9.123,6,1.124,1.124,0,0,0,9,5.5l-.375-.625-.25-.5-.5-1L7.249,2.249l-.5-1Q6,.125,5.625,0H4L2.751.5A4.747,4.747,0,0,0,.877,2.748,6.871,6.871,0,0,0,0,6a6.871,6.871,0,0,0,0,.875l.25,1,.25.875.375,1,.375.875a16.116,16.116,0,0,0,1.5,3.123A26.36,26.36,0,0,0,6.624,18.49a26.36,26.36,0,0,0,4.622,3.748,16.116,16.116,0,0,0,3.123,1.5l.875.375,1,.375.875.25,1,.25h.875a6.871,6.871,0,0,0,3.248-.875,4.747,4.747,0,0,0,2.124-1.874,7,7,0,0,0,.375-1.249,5.872,5.872,0,0,0,.125-1.249,1,1,0,0,0,0-.375Q24.864,18.989,23.615,18.365Z"
+                            transform="translate(0.011 0)"
                           />
                         </g>
                       </g></svg></span
-                  >パスワード変更
-                </a>
-              </li>
-            </ul>
-            <ul class="mypageSubMenu">
-              <li class="mypageSubMenu__item"><a href="#" class="mypageSubMenu__link">ログアウト</a></li>
-              <li class="mypageSubMenu__item"><a href="#" class="mypageSubMenu__link">サービスの退会はこちら</a></li>
-            </ul>
-          </section>
-        </div>
-
-        <section class="searchButtonBlock">
-          <div class="searchButtonBlockInner">
-            <div class="searchButtonBlockContent">
-              <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title">
-                <span class="searchButtonBlockContent__icon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                    <g transform="translate(12 12)">
-                      <g transform="translate(-12 -12)">
-                        <path
-                          d="M21.647,145.5H2.353A2.358,2.358,0,0,0,0,147.858V152a.7.7,0,0,0,.534.684l8.709,2.175v-2a1.406,1.406,0,0,1,1.406-1.406h2.709a1.406,1.406,0,0,1,1.406,1.406v2l8.709-2.175A.7.7,0,0,0,24,152v-4.139a2.358,2.358,0,0,0-2.353-2.358Z"
-                          transform="translate(0 -138.68)"
-                        />
-                        <path
-                          d="M33.823,334.345a1.406,1.406,0,0,1-.6,1.158l-1.355.942a1.406,1.406,0,0,1-1.6,0l-1.355-.942a1.406,1.406,0,0,1-.6-1.158v-.473L20,331.8v6.089a2.358,2.358,0,0,0,2.353,2.358H39.772a2.358,2.358,0,0,0,2.353-2.358V331.8l-8.3,2.072Z"
-                          transform="translate(-19.062 -316.247)"
-                        />
-                        <path
-                          d="M229.809,306.323V302.4H227.1v3.923l1.355.938Z"
-                          transform="translate(-216.455 -288.225)"
-                        />
-                        <path
-                          d="M119.712,4.8a1.711,1.711,0,0,0-.994-1.552,2.03,2.03,0,0,1,2.016-1.833H125.3a2.03,2.03,0,0,1,2.016,1.833,1.711,1.711,0,0,0-.994,1.552v.572h3.412V4.8a1.711,1.711,0,0,0-1.008-1.561A3.441,3.441,0,0,0,125.3,0h-4.566a3.441,3.441,0,0,0-3.427,3.234A1.711,1.711,0,0,0,116.3,4.8v.572h3.413Z"
-                          transform="translate(-110.848)"
-                        />
-                      </g>
-                    </g></svg></span
-                >職種から探す
-              </h3>
-              <ul class="searchButtonBlockJobList">
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">事務長<span>（候補含む）</span></a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">経営企画室</a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">医事課長<span>（候補含む）</span></a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">総務</a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">財務・経理</a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">人事・労務</a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">情報管理</a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">広報</a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">地域連携室</a>
-                </li>
-                <li class="searchButtonBlockJobList__item">
-                  <a href="#" class="searchButtonBlockJobList__link">その他</a>
-                </li>
-              </ul>
-            </div>
-            <div class="searchButtonBlockContent">
-              <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title">
-                <span class="searchButtonBlockContent__icon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="17.284" height="25" viewBox="0 0 17.284 25">
-                    <g transform="translate(5.6 8.1)">
-                      <path
-                        d="M8.642,0A8.642,8.642,0,0,0,0,8.642C0,13.426,8.642,25,8.642,25s8.642-11.574,8.642-16.358A8.642,8.642,0,0,0,8.642,0Zm0,12.191a3.7,3.7,0,1,1,3.549-3.549A3.7,3.7,0,0,1,8.642,12.191Z"
-                        transform="translate(-5.6 -8.1)"
-                      />
-                    </g></svg></span
-                >勤務地から探す
-              </h3>
-              <div class="searchButtonBlockArea">
-                <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked />
-                <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
-                <ul class="searchButtonBlockAreaList">
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">茨城</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">栃木</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">群馬</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">埼玉</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">千葉</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">東京</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">神奈川</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="searchButtonBlockArea">
-                <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockArea__toggleTrigger" />
-                <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
-                <ul class="searchButtonBlockAreaList">
-                  <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable">三重</li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">滋賀</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">京都</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">大阪</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">兵庫</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">奈良</a>
-                  </li>
-                  <li class="searchButtonBlockAreaList__item">
-                    <a href="#" class="searchButtonBlockAreaList__link">和歌山</a>
-                  </li>
-                </ul>
-              </div>
+                  >03-5437-2950
+                </p>
+                <p class="globalFooterTelBox__reception">受付時間　平日9:00～18:00 （土日祝日を除く）</p>
+              </a>
             </div>
           </div>
-        </section>
-
-        <div class="breadcrumb">
-          <div class="breadcrumbInner">
-            <ul class="breadcrumbList js-breadcrumb-target" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <li
-                class="breadcrumbList__item"
-                itemprop="itemListElement"
-                itemscope
-                itemtype="http://schema.org/ListItem"
-              >
-                <a href="/" itemprop="item">
-                  <span itemprop="name">HOME</span>
-                </a>
-                <meta itemprop="position" content="1" />
+          <div class="globalFooterNavBlock">
+            <ul class="globalFooterNavList">
+              <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
+                <a href="/dist/forbeginner/">初めての方へ</a>
               </li>
-              <li
-                class="breadcrumbList__item"
-                itemprop="itemListElement"
-                itemscope
-                itemtype="http://schema.org/ListItem"
-              >
-                <span itemprop="name">マイページ</span><meta itemprop="position" content="2" />
+              <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
+                <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
               </li>
+              <li class="globalFooterNavList__item"><a href="/dist/company/">会社概要</a></li>
+              <li class="globalFooterNavList__item"><a href="#">個人情報保護方針</a></li>
+              <li class="globalFooterNavList__item"><a href="#">利用規約</a></li>
             </ul>
+            <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
           </div>
         </div>
-
-        <footer class="globalFooter">
-          <div class="globalFooterInner">
-            <div class="globalFooterGuideBlock">
-              <p class="globalFooterGuide__text pc-view">ご不明点などお問い合わせはこちらから</p>
-              <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
-              <a
-                class="globalFooterGuide__contactButton"
-                href="/dist/contact.html"
-                onclick="gtag('event', 'click', {'event_category': 'mypage_footer_contact','event_label': 'footer_contact'});"
-                ><span class="globalFooterGuide__contactIcon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
-                    <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
-                    <path d="M8.3,7.836,0,14.971V.7Z" transform="translate(0 0.208)" />
-                    <path d="M8.93,7,12.5,10.113,16.067,7l8.03,7.135H.9Z" transform="translate(0.268 1.823)" />
-                    <path d="M13.6,7.836,21.9.7V14.971Z" transform="translate(3.63 0.208)" /></svg></span
-                >お問い合わせフォーム</a
-              >
-              <div class="globalFooterTelBox">
-                <a
-                  href="tel:03-5437-2950"
-                  class="globalFooterTelBoxInner"
-                  onclick="gtag('event', 'click', {'event_category': 'mypage_footer_tel','event_label': 'footer_tel'});"
-                >
-                  <p class="globalFooterTelBox__number">
-                    <span class="globalFooterTelBox__numberIcon"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.986" viewBox="0 0 25 24.986">
-                        <g transform="translate(12.5 12.493)">
-                          <g transform="translate(-12.5 -12.493)">
-                            <path
-                              d="M15.522,11.371,17.4,11A8.62,8.62,0,0,0,10.15,4L9.9,5.874A6.621,6.621,0,0,1,15.522,11.371Z"
-                              transform="translate(2.482 0.997)"
-                            />
-                            <path
-                              d="M20.594,11.993l1.874-.25A14.242,14.242,0,0,0,10.35,0L10.1,1.874A12.368,12.368,0,0,1,20.594,11.993Z"
-                              transform="translate(2.532 0)"
-                            />
-                            <path
-                              d="M23.615,18.365l-1-.5-1.124-.625-1-.5-.5-.25-.625-.375h-.5a1.5,1.5,0,0,0-.875.5l-1,1.124-1,1.124a1.374,1.374,0,0,1-.875.5h-.75l-.375-.25-.375-.25A18.615,18.615,0,0,1,9.5,15.741a18.614,18.614,0,0,1-2.873-4.622l-.25-.375-.25-.375V9.62a1.374,1.374,0,0,1,.5-.875L7.5,7.871l1.124-1A1.5,1.5,0,0,0,9.123,6,1.124,1.124,0,0,0,9,5.5l-.375-.625-.25-.5-.5-1L7.249,2.249l-.5-1Q6,.125,5.625,0H4L2.751.5A4.747,4.747,0,0,0,.877,2.748,6.871,6.871,0,0,0,0,6a6.871,6.871,0,0,0,0,.875l.25,1,.25.875.375,1,.375.875a16.116,16.116,0,0,0,1.5,3.123A26.36,26.36,0,0,0,6.624,18.49a26.36,26.36,0,0,0,4.622,3.748,16.116,16.116,0,0,0,3.123,1.5l.875.375,1,.375.875.25,1,.25h.875a6.871,6.871,0,0,0,3.248-.875,4.747,4.747,0,0,0,2.124-1.874,7,7,0,0,0,.375-1.249,5.872,5.872,0,0,0,.125-1.249,1,1,0,0,0,0-.375Q24.864,18.989,23.615,18.365Z"
-                              transform="translate(0.011 0)"
-                            />
-                          </g>
-                        </g></svg></span
-                    >03-5437-2950
-                  </p>
-                  <p class="globalFooterTelBox__reception">受付時間　平日9:00～18:00 （土日祝日を除く）</p>
-                </a>
-              </div>
-            </div>
-            <div class="globalFooterNavBlock">
-              <ul class="globalFooterNavList">
-                <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                  <a href="/dist/forbeginner/">初めての方へ</a>
-                </li>
-                <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                  <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
-                </li>
-                <li class="globalFooterNavList__item"><a href="/dist/company/">会社概要</a></li>
-                <li class="globalFooterNavList__item"><a href="#">個人情報保護方針</a></li>
-                <li class="globalFooterNavList__item"><a href="#">利用規約</a></li>
-              </ul>
-              <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
-            </div>
-          </div>
-        </footer>
-      </form>
+      </footer>
     </div>
 
     <script src="/dist/js/common.js"></script>

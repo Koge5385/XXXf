@@ -15,19 +15,17 @@
   </head>
   <body>
     <div class="contentsWrap">
-      <form>
-        {% include '_modules/_header.njk' %}
+      {% include '_modules/_header.njk' %}
 
-        {%- if pageName !== 'job_detail' and pageName !== 'hoge' %}
-        {% include '_modules/_keyVisual.njk' %}
-        {% endif -%}
+      {%- if pageName !== 'job_detail' %}
+      {% include '_modules/_keyVisual.njk' %}
+      {% endif -%}
 
-        {% block content %}{% endblock %}
+      {% block content %}{% endblock %}
 
-        {% include '_modules/_breadcrumb.njk' %}
+      {% include '_modules/_breadcrumb.njk' %}
 
-        {% include '_modules/_footer.njk' %}
-      </form>
+      {% include '_modules/_footer.njk' %}
     </div>
 
     <script src="{{ basePath }}js/common.js"></script>
