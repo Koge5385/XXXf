@@ -17,7 +17,6 @@ class LoginCheck {
    */
   async doAxios() {
     const callToken = localStorage.getItem('access_token')
-    console.log(callToken)
     await new AxiosBase().getMethod(`/user/sessions/${callToken}?time=${new Date().getTime()}`, this.setDataToPage)
   }
 
@@ -27,9 +26,6 @@ class LoginCheck {
    * @param {Object} data コールバックで返却されたデータオブジェクト
    */
   async setDataToPage(status, data) {
-    if (status === 200) {
-      console.log(data)
-    }
     if (status === 400 || status === 401) {
       console.log('error')
     }

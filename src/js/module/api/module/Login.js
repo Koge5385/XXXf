@@ -29,7 +29,6 @@ class Login {
   async setDataToPage(status, data) {
     if (status === 200) {
       localStorage.setItem('access_token', data.data.access_token)
-      console.log(data)
       document.location.href = '../mypage/'
     }
     if (status === 400 || status === 401) {

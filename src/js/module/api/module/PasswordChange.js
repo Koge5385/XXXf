@@ -20,9 +20,6 @@ class PasswordChange {
     const newPassword = document.querySelector('.js-async-newPassword-target').value
     const password = JSON.stringify({ "current_password": currentPassword, "new_password": newPassword })
     const id = 1
-    console.log(currentPassword)
-    console.log(newPassword)
-    console.log(password)
     await new AxiosBase().postMethod(`/users/update_password/${id}`, password, this.setDataToPage)
   }
 
