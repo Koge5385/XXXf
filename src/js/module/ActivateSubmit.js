@@ -30,7 +30,9 @@ class ActivateSubmit {
           elem.classList.remove('is-error')
           checkList[i] = true
         }
-        checkList.filter(x => x === true).length !== targetInput.length ? this.checkResult.empty = false : this.checkResult.empty = true
+        checkList.filter(x => x === true).length !== targetInput.length
+          ? this.checkResult.empty = false
+          : this.checkResult.empty = true
       })
     })
   }
@@ -51,7 +53,9 @@ class ActivateSubmit {
           elem.classList.remove('is-error')
           checkList[i] = true
         }
-        checkList.filter(x => x === true).length !== targetCheckbox.length ? this.checkResult.checked = false : this.checkResult.checked = true
+        checkList.filter(x => x === true).length !== targetCheckbox.length
+          ? this.checkResult.checked = false
+          : this.checkResult.checked = true
       })
     })
   }
@@ -72,8 +76,9 @@ class ActivateSubmit {
         this.firstInput.classList.remove('is-error')
         this.confirmValidate()
       }
-
-      this.secondInput.value !== this.firstInput.value ? this.secondInput.classList.add('is-error') : this.secondInput.classList.remove('is-error')
+      this.secondInput.value !== this.firstInput.value
+        ? this.secondInput.classList.add('is-error')
+        : this.secondInput.classList.remove('is-error')
     })
   }
 
