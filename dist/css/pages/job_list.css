@@ -207,6 +207,9 @@ a {
 ul {
   list-style-type: none; }
 
+input:-webkit-autofill {
+  transition: background-color 315360000s; }
+
 select::-ms-expand {
   display: none; }
 
@@ -349,7 +352,7 @@ select::-ms-expand {
   padding: 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background-color: #fff; }
+  background-color: transparent; }
   .m-inputText::-webkit-input-placeholder {
     color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
@@ -1881,7 +1884,8 @@ select::-ms-expand {
   font-size: 0.875rem;
   line-height: 1.6;
   line-height: 1;
-  text-align: right; }
+  text-align: right;
+  white-space: nowrap; }
   .mobileSearch__resultText span {
     font-size: 28px;
     font-size: 1.75rem;
@@ -1898,7 +1902,7 @@ select::-ms-expand {
   line-height: 1.6;
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
@@ -1914,7 +1918,7 @@ select::-ms-expand {
   line-height: 1.6;
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;

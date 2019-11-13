@@ -385,6 +385,7 @@
   @include fontsize(14, 16);
   line-height: 1;
   text-align: right;
+  white-space: nowrap;
   span {
     @include fontsize(28, 16);
     font-weight: bold;
@@ -398,7 +399,7 @@
   @include fontsize(16, 16);
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
@@ -412,7 +413,7 @@
   @include fontsize(16, 16);
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;

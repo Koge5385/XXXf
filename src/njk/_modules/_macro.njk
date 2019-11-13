@@ -1,7 +1,7 @@
 {# ↓↓↓　input option macro　↓↓↓ #}
 
 {% macro optionOccupation() -%}
-<option value="">職種から探す</option>
+<option value="">職種で探す</option>
 <option value="">指定しない</option>
 {%- set selectJob = [
   {job: '事務長'},
@@ -29,7 +29,7 @@
 {%- endmacro %}
 
 {% macro optionArea() -%}
-<option value="">勤務地から探す</option>
+<option value="">勤務地で探す</option>
 <option value="">指定しない</option>
 {%- set selectArea = [
   {place: '茨城'},
@@ -53,15 +53,15 @@
 {%- endmacro %}
 
 {% macro optionSalary() -%}
-<option value="">年収から探す</option>
+<option value="">年収で探す</option>
 <option value="">指定しない</option>
 {%- set selectSalary = [
-  {salary: '300万〜', value: '3000000'},
-  {salary: '400万〜', value: '4000000'},
-  {salary: '500万〜', value: '5000000'},
-  {salary: '600万〜', value: '6000000'},
-  {salary: '700万〜', value: '7000000'},
-  {salary: '800万〜', value: '8000000'}
+  {salary: '300万〜', value: '300'},
+  {salary: '400万〜', value: '400'},
+  {salary: '500万〜', value: '500'},
+  {salary: '600万〜', value: '600'},
+  {salary: '700万〜', value: '700'},
+  {salary: '800万〜', value: '800'}
 ] -%}
 {%- for item in selectSalary %}
 <option value="{{ item.value }}">{{ item.salary }}</option>
