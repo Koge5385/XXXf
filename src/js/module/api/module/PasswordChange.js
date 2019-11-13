@@ -1,5 +1,11 @@
 import AxiosBase from '../AxiosBase'
 
+// 定数
+const ACCESS_TOKEN = 'access_token'
+const CURRENT_PASSWORD_CLASS = '.js-async-currentPassword-target'
+const NEW_PASSWORD_CLASS = '.js-async-newPassword-target'
+const PASSWORD_CHANGE_HREF = '../mypage/'
+
 /**
  * @class PasswordChange
  * @desc パスワード変更の処理
@@ -16,10 +22,20 @@ class PasswordChange {
    * @desc パラメーターを取得してAPI実行
    */
   async doAxios() {
-    const currentPassword = document.querySelector('.js-async-currentPassword-target').value
-    const newPassword = document.querySelector('.js-async-newPassword-target').value
+    const currentPassword = document.querySelector(CURRENT_PASSWORD_CLASS).value
+    const newPassword = document.querySelector(NEW_PASSWORD_CLASS).value
+
+    // APIリクエストヘッダーに追加するJSONの作成
     const password = JSON.stringify({ "current_password": currentPassword, "new_password": newPassword })
-    const id = 1
+
+    // ローカルストレージのアクセストークンをキーにしてIDを取得する
+    const callToken = localStorage.getItem(ACCESS_TOKEN)
+    await new AxiosBase().getMethod(`/user/sessions/${callToken}?time=${new Date().getTime()}`,
+      (status, data) => this.userId = data.data.user_id
+    )
+    const id = this.userId
+
+    // パスワード変更のAPIリクエスト
     await new AxiosBase().postMethod(`/users/update_password/${id}`, password, this.setDataToPage)
   }
 
@@ -30,7 +46,7 @@ class PasswordChange {
    */
   async setDataToPage(status, data) {
     if (status === 200) {
-      console.log(data)
+      document.location.href = PASSWORD_CHANGE_HREF
     }
     if (status === 400 || status === 401) {
       console.log('error')

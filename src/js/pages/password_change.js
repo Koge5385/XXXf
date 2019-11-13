@@ -11,6 +11,7 @@ new LoginCheck()
 
 window.addEventListener(LOAD_EVENT, () => {
   SUBMIT_TARGET.addEventListener(CLICK_EVENT, () => {
+    // パスワード変更のAPIリクエスト処理
     new PasswordChange()
   })
 })

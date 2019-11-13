@@ -1,6 +1,10 @@
 import AxiosBase from '../AxiosBase'
 import JsonConvert from './JsonConvert'
 
+// 定数
+const ACCESS_TOKEN = 'access_token'
+const LOGIN_HREF = '../mypage/'
+
 /**
  * @class Login
  * @desc ログイン時の処理
@@ -28,8 +32,8 @@ class Login {
    */
   async setDataToPage(status, data) {
     if (status === 200) {
-      localStorage.setItem('access_token', data.data.access_token)
-      document.location.href = '../mypage/'
+      localStorage.setItem(ACCESS_TOKEN, data.data.access_token)
+      document.location.href = LOGIN_HREF
     }
     if (status === 400 || status === 401) {
       console.log('error')
