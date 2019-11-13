@@ -15,39 +15,39 @@
       <section class="jobListWrap">
         <ul class="jobList js-async-origin-target">
           <li class="jobListItem">
-            <a href="" class="jobListItem__link js-async-jobListLink-target">
+            <a href="" class="jobListItem__link js-async-link-target">
               <div class="jobListItemHeader">
                 <div class="jobListItemHeaderCategory">
                   <span class="jobListItemHeaderCategory__icon">{{ macro.svg_code_hospital() }}</span>
-                  <p class="jobListItemHeaderCategory__name js-async-jobListCategory-target"></p>
+                  <p class="jobListItemHeaderCategory__name js-async-category-target"></p>
                 </div>
                 <div class="jobListItemHeaderStatus">
                   <span class="jobListItemHeaderStatus__new m-fontFamilyMontserrat">NEW</span>
-                  <p class="jobListItemHeaderStatus__date"><span class="js-async-jobListDate-target"></span> 公開</p>
+                  <p class="jobListItemHeaderStatus__date"><span class="js-async-date-target"></span> 公開</p>
                 </div>
               </div>
               <div class="jobListContent">
-                <h2 class="jobListContent__title js-async-jobListTitle-target"></h2>
-                <p class="jobListContent__buildingName">施設名：<span class="js-async-jobListBuildingName-target"></span></p>
+                <h2 class="jobListContent__title js-async-title-target"></h2>
+                <p class="jobListContent__buildingName">施設名：<span class="js-async-buildingName-target"></span></p>
                 <div class="jobListContentPickup">
                   <ul class="jobListContentPickup__list">
                     <li class="jobListContentPickup__item">
                       <div class="jobListContentPickup__itemLabel">
                         <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_bag() }}</span>職　種
                       </div>
-                      <p class="jobListContentPickup__itemContent js-async-jobListOccupation-target"></p>
+                      <p class="jobListContentPickup__itemContent js-async-occupation-target"></p>
                     </li>
                     <li class="jobListContentPickup__item">
                       <div class="jobListContentPickup__itemLabel">
                         <span class="jobListContentPickup__itemLabelIcon jobListContentPickup__itemLabelIcon--place">{{ macro.svg_code_place() }}</span>勤務地
                       </div>
-                      <p class="jobListContentPickup__itemContent js-async-jobListPlace-target"></p>
+                      <p class="jobListContentPickup__itemContent js-async-place-target"></p>
                     </li>
                     <li class="jobListContentPickup__item">
                       <div class="jobListContentPickup__itemLabel">
                         <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_money() }}</span>年　収
                       </div>
-                      <p class="jobListContentPickup__itemContent jobListContentPickup__itemContent--salary"><span><span class="js-async-jobListMinSalary-target"></span>～<span class="js-async-jobListMaxSalary-target"></span></span>万円</p>
+                      <p class="jobListContentPickup__itemContent jobListContentPickup__itemContent--salary"><span><span class="js-async-minSalary-target"></span>～<span class="js-async-maxSalary-target"></span></span>万円</p>
                     </li>
                   </ul>
                 </div>
@@ -56,7 +56,7 @@
                   <tbody>
                     <tr>
                       <th class="jobListContentTable__heading">仕事内容</th>
-                      <td class="js-async-jobListSumally-target"></td>
+                      <td class="js-async-sumally-target"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -68,9 +68,9 @@
       </section>
     </main>
     <aside class="container__side">
-      <form method="get">
-        <div class="searchSideBox">
-          <p class="searchResultText">絞り込みの結果：<span class="js-async-jobListResult-target"></span>件</p>
+      <div class="searchSideBox">
+        <form method="get">
+          <p class="searchResultText">絞り込みの結果：<span class="js-async-result-target"></span>件</p>
           <div class="searchInputArea">
             <ul class="searchInputList">
               <li class="searchInputList__item searchInputList__item--job">
@@ -94,19 +94,19 @@
             </ul>
           </div>
           <div class="searchSubmit"><button type="submit" class="searchSubmit__button">この条件で再検索</button></div>
-        </div>
-      </form>
+        </form>
+      </div>
     </aside>
   </div>
   <div class="jobListPagenationWrap">
-    <ul class="jobListPagenation js-async-jobListPagenation-target">
+    <ul class="jobListPagenation js-async-pagenation-target">
     </ul>
   </div>
 </div>
 <form method="get">
   <div class="mobileSearchWrap sp-view">
     <div class="mobileSearchInner">
-      <p class="mobileSearch__resultText">絞り込みの結果<br><span class="js-async-jobListResult-target"></span>件</p>
+      <p class="mobileSearch__resultText">絞り込みの結果<br><span class="js-async-result-target"></span>件</p>
       <input type="checkbox" id="jobList_search" class="mobileSearch__toggleTrigger">
       <label for="jobList_search" class="mobileSearch__openLabel">検索条件を確認・再検索</label>
       <label for="jobList_search" class="mobileSearch__closeLabel">検索を閉じる</label>
