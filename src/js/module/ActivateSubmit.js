@@ -1,5 +1,15 @@
+// 定数 -> イベント
 const BLUR_EVENT = 'blur'
 const CHANGE_EVENT = 'change'
+
+// 定数 -> 対象のクラス
+const SUBMIT_CLASS = '.js-formSubmit-target'
+const CHECK_EMPTY_CLASS = '.js-valueEmptyCheck-target'
+const CHECK_CHECKED_CLASS = '.js-hasChecked-target'
+const CHECK_MAIL_CLASS = '.js-mailValidation-target'
+const ERROR_CLASS = 'is-error'
+
+// 定数 -> バリデーションフォーマット {半角英数字}@{半角英数字}
 const VALIDATE_FORMAT = /^(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)(?:\.(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+))*)|(?:"(?:\\[^\r\n]|[^\\"])*")))\@(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)(?:\.(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+))*)|(?:\[(?:\\\S|[\x21-\x5a\x5e-\x7e])*\])))$/
 
 /**
@@ -15,70 +25,97 @@ class ActivateSubmit {
   }
 
   /**
+   * @desc 対象のNodeListをArrayに変換して返却（IE対応）
+   * @param {String} className 対象のクラス名
+   */
+  convertNode(className) {
+    const targetNode = document.querySelectorAll(className)
+    return Array.prototype.slice.call(targetNode,0)
+  }
+
+  /**
    * @desc 値が空の場合にis-errorのクラスを付与
    */
   isValueEmpty() {
-    const targetInput = document.querySelectorAll('.js-valueEmptyCheck-target')
-    const checkList = new Array(targetInput.length)
-    Array.prototype.slice.call(targetInput,0).forEach((elem, i) => {
+    const targetArray = this.convertNode(CHECK_EMPTY_CLASS)
+    const checkList = new Array(targetArray.length)
+    targetArray.forEach((elem, i) => {
       elem.addEventListener(BLUR_EVENT, () => {
-        if (elem.value === '') {
-          elem.classList.add('is-error')
-          checkList[i] = false
-        }
-        if (elem.value !== '') {
-          elem.classList.remove('is-error')
-          checkList[i] = true
-        }
-        checkList.filter(x => x === true).length !== targetInput.length
-          ? this.checkResult.empty = false
-          : this.checkResult.empty = true
+        this.checkEmpty(elem, checkList, i)
       })
     })
+  }
+
+  /**
+   * @desc 値が空の要素であるか判定する
+   * @param {Object} element 対象の要素
+   * @param {Array} list チェック状態を書き込む配列
+   * @param {Number} index 処理番号
+   */
+  checkEmpty(element, list, index) {
+    if (element.value === '') {
+      element.classList.add(ERROR_CLASS)
+      list[index] = false
+    }
+    if (element.value !== '') {
+      element.classList.remove(ERROR_CLASS)
+      list[index] = true
+    }
+    list.filter(x => x === true).length !== list.length
+      ? this.checkResult.empty = false
+      : this.checkResult.empty = true
   }
 
   /**
    * @desc checkedの場合にis-errorのクラスを付与
    */
   isChecked() {
-    const targetCheckbox = document.querySelectorAll('.js-hasChecked-target')
-    const checkList = new Array(targetCheckbox.length)
-    Array.prototype.slice.call(targetCheckbox,0).forEach((elem, i) => {
+    const targetArray = this.convertNode(CHECK_CHECKED_CLASS)
+    const checkList = new Array(targetArray.length)
+    targetArray.forEach((elem, i) => {
       elem.addEventListener(CHANGE_EVENT, () => {
-        if (elem.checked === false) {
-          elem.classList.add('is-error')
-          checkList[i] = false
-        }
-        if (elem.checked === true) {
-          elem.classList.remove('is-error')
-          checkList[i] = true
-        }
-        checkList.filter(x => x === true).length !== targetCheckbox.length
-          ? this.checkResult.checkbox = false
-          : this.checkResult.checkbox = true
+        this.hasCheck(elem, checkList, i)
       })
     })
+  }
+
+  /**
+   * @desc チェックが入っているか判定する
+   * @param {Object} element 対象の要素
+   * @param {Array} list チェック状態を書き込む配列
+   * @param {Number} index 処理番号
+   */
+  hasCheck(element, list, index) {
+    if (!element.checked) {
+      element.classList.add(ERROR_CLASS)
+      list[index] = false
+    }
+    if (element.checked) {
+      element.classList.remove(ERROR_CLASS)
+      list[index] = true
+    }
+    list.filter(x => x === true).length !== list.length
+      ? this.checkResult.checkbox = false
+      : this.checkResult.checkbox = true
   }
 
   /**
    * @desc 1つ目のメールアドレスをフォーマットを参照して検証
    */
   mailValidate() {
-    this.targetValue = document.querySelectorAll('.js-mailValidation-target')
-    this.firstInput = this.targetValue[0]
-    this.secondInput = this.targetValue[1]
+    const targetArray = this.convertNode(CHECK_MAIL_CLASS)
+    this.firstInput = targetArray[0]
+    this.secondInput = targetArray[1]
 
     this.firstInput.addEventListener(BLUR_EVENT, () => {
-      if (VALIDATE_FORMAT.test(this.firstInput.value) === false) {
-        this.firstInput.classList.add('is-error')
-      }
-      if (VALIDATE_FORMAT.test(this.firstInput.value) === true) {
-        this.firstInput.classList.remove('is-error')
+      if (!VALIDATE_FORMAT.test(this.firstInput.value)) this.firstInput.classList.add(ERROR_CLASS)
+      if (VALIDATE_FORMAT.test(this.firstInput.value)) {
+        this.firstInput.classList.remove(ERROR_CLASS)
         this.confirmValidate()
       }
       this.secondInput.value !== this.firstInput.value
-        ? this.secondInput.classList.add('is-error')
-        : this.secondInput.classList.remove('is-error')
+        ? this.secondInput.classList.add(ERROR_CLASS)
+        : this.secondInput.classList.remove(ERROR_CLASS)
     })
   }
 
@@ -87,12 +124,12 @@ class ActivateSubmit {
    */
   confirmValidate() {
     this.secondInput.addEventListener(BLUR_EVENT, () => {
-      if (VALIDATE_FORMAT.test(this.secondInput.value) === false || this.secondInput.value !== this.firstInput.value) {
-        this.secondInput.classList.add('is-error')
+      if (!VALIDATE_FORMAT.test(this.secondInput.value) || this.secondInput.value !== this.firstInput.value) {
+        this.secondInput.classList.add(ERROR_CLASS)
         this.checkResult.mail = false
       }
-      if (VALIDATE_FORMAT.test(this.secondInput.value) === true && this.secondInput.value === this.firstInput.value) {
-        this.secondInput.classList.remove('is-error')
+      if (VALIDATE_FORMAT.test(this.secondInput.value) && this.secondInput.value === this.firstInput.value) {
+        this.secondInput.classList.remove(ERROR_CLASS)
         this.checkResult.mail = true
       }
     })
@@ -102,8 +139,12 @@ class ActivateSubmit {
    * @desc checkを通過したときにsubmitをactiveにする
    */
   activeSubmit() {
-    const targetSubmit = document.querySelector('.js-formSubmit-target')
+    const targetSubmit = document.querySelector(SUBMIT_CLASS)
+
+    // アクティブ判定に必要なオブジェクトを作成（全てtrueだと活性化する）
     this.checkResult = { 'empty': false, 'checkbox': false, 'mail': false }
+
+    // それぞれのチェック処理を走らせる
     this.isValueEmpty()
     this.isChecked()
     this.mailValidate()
