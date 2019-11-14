@@ -1,6 +1,8 @@
 import 'regenerator-runtime'
 import 'es6-promise/auto'
 import 'url-search-params-polyfill'
+import 'formdata-polyfill'
+import 'array-from-polyfill'
 import axios from 'axios'
 
 /**
@@ -35,9 +37,8 @@ class AxiosBase {
    * @param {String} callback コールバック関数
    */
   getMethod(path, callback) {
-    const params = { timeout: 10000 }
     return this.axios
-      .get(`${path}?nocache=${new Date().getTime()}`, params)
+      .get(path)
       .then(response => callback(response.status, response.data))
       .catch(error => callback(error.message, error.type, error.code))
   }
@@ -45,12 +46,12 @@ class AxiosBase {
   /**
    * @desc POSTメソッドのaxios関数を返す
    * @param {String} path 対象のURLパラメーター
+   * @param {Object} sendData 送信するデータ
    * @param {String} callback コールバック関数
    */
-  postMethod(path, callback) {
-    const params = { timeout: 10000 }
+  postMethod(path, sendData, callback) {
     return this.axios
-      .post(path, params)
+      .post(path, sendData)
       .then(response => callback(response.status, response.data))
       .catch(error => callback(error.message, error.type, error.code))
   }

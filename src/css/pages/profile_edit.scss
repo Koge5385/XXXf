@@ -1,0 +1,14 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 20px 60px;
+  }
+}
+.editProfile {
+  @include _baseContentsWidth;
+}

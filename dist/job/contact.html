@@ -35,388 +35,342 @@
   </head>
   <body>
     <div class="contentsWrap">
-      <form>
-        <header class="globalHeader">
-          <div class="globalHeaderInner">
-            <div class="globalHeader__logo">
-              <a href="/dist/">
-                <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
-              </a>
-            </div>
-            <nav class="globalNav pc-view">
-              <ul class="globalNavList">
-                <li class="globalNavItem">
-                  <a href="/dist/job/" class="globalNavItem__link">
-                    <span class="globalNavItem__icon globalNavItem__icon--list"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
-                        <g transform="translate(11.603 10)">
-                          <g transform="translate(-11.603 -10)">
-                            <rect width="18.38" height="2.309" transform="translate(4.825)" />
-                            <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
-                            <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
-                            <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
-                            <rect width="2.298" height="2.309" />
-                            <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
-                            <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
-                            <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
-                          </g>
-                        </g></svg
-                    ></span>
-                    <p class="globalNavItem__label">求人一覧</p>
-                  </a>
-                </li>
-                <li class="globalNavItem">
-                  <a href="/dist/login/" class="globalNavItem__link">
-                    <span class="globalNavItem__icon globalNavItem__icon--login"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="19.2" height="24" viewBox="0 0 19.2 24">
-                        <g transform="translate(9.6 12)">
-                          <path
-                            d="M0,0V10.8H9.6L5.76,6.96,7.44,5.28l6.84,6.84L7.44,18.96,5.76,17.28,9.72,13.2H0V24H19.2V0Z"
-                            transform="translate(-9.6 -12)"
-                          />
-                        </g></svg
-                    ></span>
-                    <p class="globalNavItem__label">ログイン</p>
-                  </a>
-                </li>
-                <li class="globalNavItem">
-                  <a
-                    href="/dist/regist_mail/"
-                    class="globalNavItem__link globalNavItem__link--regist"
-                    onclick="gtag('event', 'click', {'event_category': 'job_contact_header_regist','event_label': 'header_regist'});"
-                  >
-                    <span class="globalNavItem__icon globalNavItem__icon--regist"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
-                        <g transform="translate(9.95 11)">
-                          <g transform="translate(-9.95 -11)">
-                            <path
-                              d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
-                              transform="translate(-0.62 -0.601)"
-                            />
-                            <path
-                              d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
-                              transform="translate(-1 0.761)"
-                            />
-                          </g>
-                        </g></svg
-                    ></span>
-                    <p class="globalNavItem__label">会員登録</p>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-            <nav class="globalMobileNav sp-view">
-              <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger" />
-              <label for="sp_nav" class="globalMobileNav__openLabel"
-                ><span class="globalMobileNav__menuIcon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12.188" viewBox="0 0 14 12.188">
-                    <g transform="translate(0)">
-                      <g transform="translate(0 0)">
-                        <rect width="14" height="1.99" />
-                        <rect width="14" height="1.99" transform="translate(0 5.05)" />
-                        <rect width="14" height="1.99" transform="translate(0 10.198)" />
-                      </g>
-                    </g></svg></span
-                >メニュー</label
-              >
-              <label for="sp_nav" class="globalMobileNav__closeLabel"
-                ><span class="globalMobileNav__closeIcon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="11.307" height="11.306" viewBox="0 0 11.307 11.306">
-                    <g transform="translate(-1.346 -0.391)">
-                      <path
-                        d="M-9203.6-9.384l-4.246,4.246-1.407-1.405L-9205-10.79l-4.246-4.246,1.407-1.408,4.246,4.247,4.245-4.247,1.408,1.408-4.247,4.246,4.247,4.247-1.408,1.405Z"
-                        transform="translate(9210.598 16.835)"
-                      />
-                    </g></svg></span
-                >閉じる</label
-              >
-              <div class="globalMobileNavBlock">
-                <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
-                <div class="globalMobileNavContents">
-                  <ul class="globalMobileNavCell">
-                    <li class="globalMobileNavCellItem">
-                      <a href="/dist/job/" class="globalMobileNavCellItem__link">
-                        <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
-                          ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
-                            <g transform="translate(20.304 17.5)">
-                              <g transform="translate(-20.304 -17.5)">
-                                <rect width="32.165" height="4.041" transform="translate(8.443)" />
-                                <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
-                                <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
-                                <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
-                                <rect width="4.021" height="4.041" />
-                                <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
-                                <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
-                                <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
-                              </g>
-                            </g></svg></span
-                        >求人一覧
-                      </a>
-                    </li>
-                    <li class="globalMobileNavCellItem">
-                      <a href="/dist/login/" class="globalMobileNavCellItem__link">
-                        <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--login"
-                          ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 28 35">
-                            <g transform="translate(14 17.5)">
-                              <path
-                                d="M0,0V15.75H14l-5.6-5.6L10.85,7.7l9.975,9.975L10.85,27.65,8.4,25.2l5.775-5.95H0V35H28V0Z"
-                                transform="translate(-14 -17.5)"
-                              />
-                            </g></svg></span
-                        >ログイン
-                      </a>
-                    </li>
-                    <li class="globalMobileNavCellItem">
-                      <a
-                        href="/dist/regist_mail/"
-                        class="globalMobileNavCellItem__link"
-                        onclick="gtag('event', 'click', {'event_category': 'job_contact_header_regist','event_label': 'header_regist'});"
-                      >
-                        <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
-                          ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
-                            <g transform="translate(9.95 11)">
-                              <g transform="translate(-9.95 -11)">
-                                <path
-                                  d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
-                                  transform="translate(1.739 -0.601)"
-                                />
-                                <path
-                                  d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
-                                  transform="translate(-1 9.171)"
-                                />
-                              </g>
-                            </g></svg></span
-                        >会員登録
-                      </a>
-                    </li>
-                  </ul>
-                  <ul class="globalMobileNavLink">
-                    <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                      <a href="/dist/forbeginner/">初めての方へ</a>
-                    </li>
-                    <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                      <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
-                    </li>
-                    <li class="globalMobileNavLink__item"><a href="/dist/company/">会社概要</a></li>
-                    <li class="globalMobileNavLink__item"><a href="#">個人情報保護方針</a></li>
-                    <li class="globalMobileNavLink__item"><a href="#">利用規約</a></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
+      <header class="globalHeader">
+        <div class="globalHeaderInner">
+          <div class="globalHeader__logo">
+            <a href="/dist/">
+              <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
+            </a>
           </div>
-        </header>
-        <div class="keyVisual">
-          <h1 class="keyVisual__title">求人問い合わせ</h1>
-          <small class="keyVisual__enTitle">JOB CONTACT</small>
-        </div>
-
-        <div class="container">
-          <section class="jobContact">
-            <div class="inputBlock">
-              <h3 class="inputBlock__heading">お名前<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-              <div class="inputBlockFlex">
-                <div class="inputBlockFlex__item">
-                  <input type="text" name="jobContact_lastName" class="m-inputText" placeholder="性" value="" />
-                  <p class="m-inputErrorText"></p>
-                </div>
-                <div class="inputBlockFlex__item">
-                  <input type="text" name="jobContact_firstName" class="m-inputText" placeholder="名" value="" />
-                  <p class="m-inputErrorText"></p>
-                </div>
-              </div>
-            </div>
-            <div class="inputBlock">
-              <h3 class="inputBlock__heading">連絡先電話番号<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-              <input
-                type="text"
-                name="jobContact_tel"
-                class="m-inputText inputBlock__inputHalf"
-                placeholder="03-5437-2950"
-                value=""
-              />
-              <p class="m-inputErrorText"></p>
-            </div>
-            <div class="inputBlock">
-              <h3 class="inputBlock__heading">メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-              <input
-                type="text"
-                name="jobContact_mail"
-                class="m-inputText"
-                placeholder="example@example.co.jp"
-                value=""
-              />
-              <p class="m-inputErrorText"></p>
-              <p class="inputBlock__note">※半角英数字</p>
-              <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
-              <input
-                type="text"
-                name="jobContact_mail_confirm"
-                class="m-inputText"
-                placeholder="example@example.co.jp"
-                value=""
-              />
-              <p class="m-inputErrorText"></p>
-              <p class="inputBlock__note">※半角英数字</p>
-            </div>
-            <div class="inputBlock">
-              <h3 class="inputBlock__heading">
-                お問い合わせ種別<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <div class="inputBlockFlex">
-                <div class="inputBlockFlex__item">
-                  <input
-                    type="radio"
-                    id="jobContact_type_job"
-                    name="jobContact_type"
-                    class="m-inputRadio"
-                    value="job"
-                  />
-                  <label for="jobContact_type_job" class="m-inputRadioLabel">対象求人への問い合わせ</label>
-                </div>
-                <div class="inputBlockFlex__item">
-                  <input
-                    type="radio"
-                    id="jobContact_type_service"
-                    name="jobContact_type"
-                    class="m-inputRadio"
-                    value="service"
-                  />
-                  <label for="jobContact_type_service" class="m-inputRadioLabel">サービスへの問い合わせ</label>
-                </div>
-              </div>
-              <p class="m-inputErrorText"></p>
-            </div>
-            <div class="inputBlock">
-              <h3 class="inputBlock__heading">
-                お問い合わせ内容<span class="m-inputIcon m-inputIcon--must">必須</span>
-              </h3>
-              <textarea
-                name="jobContact_detail"
-                class="m-inputTextArea"
-                placeholder="お問い合わせ内容を記入してください"
-                value=""
-              ></textarea>
-              <p class="m-inputErrorText"></p>
-            </div>
-
-            <button type="submit" name="jobContact_submit" class="inputBlock__submit" disabled>確認画面へ</button>
-          </section>
-        </div>
-
-        <div class="breadcrumb">
-          <div class="breadcrumbInner">
-            <ul class="breadcrumbList js-breadcrumb-target" itemscope itemtype="http://schema.org/BreadcrumbList">
-              <li
-                class="breadcrumbList__item"
-                itemprop="itemListElement"
-                itemscope
-                itemtype="http://schema.org/ListItem"
-              >
-                <a href="/" itemprop="item">
-                  <span itemprop="name">HOME</span>
+          <nav class="globalNav pc-view">
+            <ul class="globalNavList">
+              <li class="globalNavItem">
+                <a href="/dist/job/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--list"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
+                      <g transform="translate(11.603 10)">
+                        <g transform="translate(-11.603 -10)">
+                          <rect width="18.38" height="2.309" transform="translate(4.825)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
+                          <rect width="2.298" height="2.309" />
+                          <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">求人一覧</p>
                 </a>
-                <meta itemprop="position" content="1" />
               </li>
-              <li
-                class="breadcrumbList__item"
-                itemprop="itemListElement"
-                itemscope
-                itemtype="http://schema.org/ListItem"
-              >
-                <a href="/dist/job/" itemprop="item">
-                  <span itemprop="name">求人一覧</span>
+              <li class="globalNavItem">
+                <a href="/dist/login/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--login"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="19.2" height="24" viewBox="0 0 19.2 24">
+                      <g transform="translate(9.6 12)">
+                        <path
+                          d="M0,0V10.8H9.6L5.76,6.96,7.44,5.28l6.84,6.84L7.44,18.96,5.76,17.28,9.72,13.2H0V24H19.2V0Z"
+                          transform="translate(-9.6 -12)"
+                        />
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">ログイン</p>
                 </a>
-                <meta itemprop="position" content="2" />
               </li>
-              <li
-                class="breadcrumbList__item"
-                itemprop="itemListElement"
-                itemscope
-                itemtype="http://schema.org/ListItem"
-              >
-                <a href="/dist/job/detail.html" itemprop="item">
-                  <span itemprop="name">求人詳細</span>
+              <li class="globalNavItem">
+                <a
+                  href="/dist/regist_mail/"
+                  class="globalNavItem__link globalNavItem__link--regist"
+                  onclick="gtag('event', 'click', {'event_category': 'job_contact_header_regist','event_label': 'header_regist'});"
+                >
+                  <span class="globalNavItem__icon globalNavItem__icon--regist"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
+                      <g transform="translate(9.95 11)">
+                        <g transform="translate(-9.95 -11)">
+                          <path
+                            d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
+                            transform="translate(-0.62 -0.601)"
+                          />
+                          <path
+                            d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
+                            transform="translate(-1 0.761)"
+                          />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">会員登録</p>
                 </a>
-                <meta itemprop="position" content="3" />
-              </li>
-              <li
-                class="breadcrumbList__item"
-                itemprop="itemListElement"
-                itemscope
-                itemtype="http://schema.org/ListItem"
-              >
-                <span itemprop="name">求人問い合わせ</span><meta itemprop="position" content="4" />
               </li>
             </ul>
-          </div>
-        </div>
-
-        <footer class="globalFooter">
-          <div class="globalFooterInner">
-            <div class="globalFooterGuideBlock">
-              <p class="globalFooterGuide__text pc-view">ご不明点などお問い合わせはこちらから</p>
-              <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
-              <a
-                class="globalFooterGuide__contactButton"
-                href="/dist/contact/"
-                onclick="gtag('event', 'click', {'event_category': 'job_contact_footer_contact','event_label': 'footer_contact'});"
-                ><span class="globalFooterGuide__contactIcon"
-                  ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
-                    <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
-                    <path d="M8.3,7.836,0,14.971V.7Z" transform="translate(0 0.208)" />
-                    <path d="M8.93,7,12.5,10.113,16.067,7l8.03,7.135H.9Z" transform="translate(0.268 1.823)" />
-                    <path d="M13.6,7.836,21.9.7V14.971Z" transform="translate(3.63 0.208)" /></svg></span
-                >お問い合わせフォーム</a
-              >
-              <div class="globalFooterTelBox">
-                <a
-                  href="tel:03-5437-2950"
-                  class="globalFooterTelBoxInner"
-                  onclick="gtag('event', 'click', {'event_category': 'job_contact_footer_tel','event_label': 'footer_tel'});"
-                >
-                  <p class="globalFooterTelBox__number">
-                    <span class="globalFooterTelBox__numberIcon"
-                      ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.986" viewBox="0 0 25 24.986">
-                        <g transform="translate(12.5 12.493)">
-                          <g transform="translate(-12.5 -12.493)">
+          </nav>
+          <nav class="globalMobileNav sp-view">
+            <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger" />
+            <label for="sp_nav" class="globalMobileNav__openLabel"
+              ><span class="globalMobileNav__menuIcon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12.188" viewBox="0 0 14 12.188">
+                  <g transform="translate(0)">
+                    <g transform="translate(0 0)">
+                      <rect width="14" height="1.99" />
+                      <rect width="14" height="1.99" transform="translate(0 5.05)" />
+                      <rect width="14" height="1.99" transform="translate(0 10.198)" />
+                    </g>
+                  </g></svg></span
+              >メニュー</label
+            >
+            <label for="sp_nav" class="globalMobileNav__closeLabel"
+              ><span class="globalMobileNav__closeIcon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="11.307" height="11.306" viewBox="0 0 11.307 11.306">
+                  <g transform="translate(-1.346 -0.391)">
+                    <path
+                      d="M-9203.6-9.384l-4.246,4.246-1.407-1.405L-9205-10.79l-4.246-4.246,1.407-1.408,4.246,4.247,4.245-4.247,1.408,1.408-4.247,4.246,4.247,4.247-1.408,1.405Z"
+                      transform="translate(9210.598 16.835)"
+                    />
+                  </g></svg></span
+              >閉じる</label
+            >
+            <div class="globalMobileNavBlock">
+              <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
+              <div class="globalMobileNavContents">
+                <ul class="globalMobileNavCell">
+                  <li class="globalMobileNavCellItem">
+                    <a href="/dist/job/" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
+                          <g transform="translate(20.304 17.5)">
+                            <g transform="translate(-20.304 -17.5)">
+                              <rect width="32.165" height="4.041" transform="translate(8.443)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
+                              <rect width="4.021" height="4.041" />
+                              <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
+                            </g>
+                          </g></svg></span
+                      >求人一覧
+                    </a>
+                  </li>
+                  <li class="globalMobileNavCellItem">
+                    <a href="/dist/login/" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--login"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 28 35">
+                          <g transform="translate(14 17.5)">
                             <path
-                              d="M15.522,11.371,17.4,11A8.62,8.62,0,0,0,10.15,4L9.9,5.874A6.621,6.621,0,0,1,15.522,11.371Z"
-                              transform="translate(2.482 0.997)"
+                              d="M0,0V15.75H14l-5.6-5.6L10.85,7.7l9.975,9.975L10.85,27.65,8.4,25.2l5.775-5.95H0V35H28V0Z"
+                              transform="translate(-14 -17.5)"
                             />
-                            <path
-                              d="M20.594,11.993l1.874-.25A14.242,14.242,0,0,0,10.35,0L10.1,1.874A12.368,12.368,0,0,1,20.594,11.993Z"
-                              transform="translate(2.532 0)"
-                            />
-                            <path
-                              d="M23.615,18.365l-1-.5-1.124-.625-1-.5-.5-.25-.625-.375h-.5a1.5,1.5,0,0,0-.875.5l-1,1.124-1,1.124a1.374,1.374,0,0,1-.875.5h-.75l-.375-.25-.375-.25A18.615,18.615,0,0,1,9.5,15.741a18.614,18.614,0,0,1-2.873-4.622l-.25-.375-.25-.375V9.62a1.374,1.374,0,0,1,.5-.875L7.5,7.871l1.124-1A1.5,1.5,0,0,0,9.123,6,1.124,1.124,0,0,0,9,5.5l-.375-.625-.25-.5-.5-1L7.249,2.249l-.5-1Q6,.125,5.625,0H4L2.751.5A4.747,4.747,0,0,0,.877,2.748,6.871,6.871,0,0,0,0,6a6.871,6.871,0,0,0,0,.875l.25,1,.25.875.375,1,.375.875a16.116,16.116,0,0,0,1.5,3.123A26.36,26.36,0,0,0,6.624,18.49a26.36,26.36,0,0,0,4.622,3.748,16.116,16.116,0,0,0,3.123,1.5l.875.375,1,.375.875.25,1,.25h.875a6.871,6.871,0,0,0,3.248-.875,4.747,4.747,0,0,0,2.124-1.874,7,7,0,0,0,.375-1.249,5.872,5.872,0,0,0,.125-1.249,1,1,0,0,0,0-.375Q24.864,18.989,23.615,18.365Z"
-                              transform="translate(0.011 0)"
-                            />
-                          </g>
-                        </g></svg></span
-                    >03-5437-2950
-                  </p>
-                  <p class="globalFooterTelBox__reception">受付時間　平日9:00～18:00 （土日祝日を除く）</p>
-                </a>
+                          </g></svg></span
+                      >ログイン
+                    </a>
+                  </li>
+                  <li class="globalMobileNavCellItem">
+                    <a
+                      href="/dist/regist_mail/"
+                      class="globalMobileNavCellItem__link"
+                      onclick="gtag('event', 'click', {'event_category': 'job_contact_header_regist','event_label': 'header_regist'});"
+                    >
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
+                          <g transform="translate(9.95 11)">
+                            <g transform="translate(-9.95 -11)">
+                              <path
+                                d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
+                                transform="translate(1.739 -0.601)"
+                              />
+                              <path
+                                d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
+                                transform="translate(-1 9.171)"
+                              />
+                            </g>
+                          </g></svg></span
+                      >会員登録
+                    </a>
+                  </li>
+                </ul>
+                <ul class="globalMobileNavLink">
+                  <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
+                    <a href="/dist/forbeginner/">初めての方へ</a>
+                  </li>
+                  <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
+                    <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                  </li>
+                  <li class="globalMobileNavLink__item"><a href="/dist/company/">会社概要</a></li>
+                  <li class="globalMobileNavLink__item"><a href="#">個人情報保護方針</a></li>
+                  <li class="globalMobileNavLink__item"><a href="#">利用規約</a></li>
+                </ul>
               </div>
             </div>
-            <div class="globalFooterNavBlock">
-              <ul class="globalFooterNavList">
-                <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                  <a href="/dist/forbeginner/">初めての方へ</a>
-                </li>
-                <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                  <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
-                </li>
-                <li class="globalFooterNavList__item"><a href="/dist/company/">会社概要</a></li>
-                <li class="globalFooterNavList__item"><a href="#">個人情報保護方針</a></li>
-                <li class="globalFooterNavList__item"><a href="#">利用規約</a></li>
-              </ul>
-              <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
+          </nav>
+        </div>
+      </header>
+      <div class="keyVisual">
+        <h1 class="keyVisual__title">求人問い合わせ</h1>
+        <small class="keyVisual__enTitle">JOB CONTACT</small>
+      </div>
+
+      <div class="container">
+        <section class="jobContact">
+          <p class="jobContact__text">
+            求人についてのお問い合わせは、下記フォームより連絡先・質問等をお伝え下さい。<br />
+            弊社担当より折り返しご連絡さし上げます。以下の項目を入力して「規約に同意して次へ」ボタンを押して下さい。
+          </p>
+          <p class="jobContact__note">※<span>必須</span>は入力必須項目です。</p>
+          <div class="inputBlock">
+            <h3 class="inputBlock__heading">個人氏名<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+            <div class="inputBlockFlex">
+              <div class="inputBlockFlex__item">
+                <input type="text" name="lastName" class="m-inputText" placeholder="性" value="" />
+                <p class="m-inputErrorText"></p>
+              </div>
+              <div class="inputBlockFlex__item">
+                <input type="text" name="firstName" class="m-inputText" placeholder="名" value="" />
+                <p class="m-inputErrorText"></p>
+              </div>
             </div>
           </div>
-        </footer>
-      </form>
+          <div class="inputBlock">
+            <h3 class="inputBlock__heading">フリガナ<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+            <div class="inputBlockFlex">
+              <div class="inputBlockFlex__item">
+                <input type="text" name="lastName_kana" class="m-inputText" placeholder="セイ" value="" />
+                <p class="m-inputErrorText"></p>
+              </div>
+              <div class="inputBlockFlex__item">
+                <input type="text" name="firstName_kana" class="m-inputText" placeholder="メイ" value="" />
+                <p class="m-inputErrorText"></p>
+              </div>
+            </div>
+          </div>
+          <div class="inputBlock">
+            <h3 class="inputBlock__heading">メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+            <input type="text" name="mail" class="m-inputText" placeholder="example@example.co.jp" value="" />
+            <p class="m-inputErrorText"></p>
+            <p class="inputBlock__note">※半角英数字</p>
+            <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
+            <input type="text" name="mail_confirm" class="m-inputText" placeholder="example@example.co.jp" value="" />
+            <p class="m-inputErrorText"></p>
+            <p class="inputBlock__note">※半角英数字</p>
+          </div>
+          <div class="inputBlock">
+            <h3 class="inputBlock__heading">お問い合わせ内容<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
+            <textarea
+              name="detail"
+              class="m-inputTextArea"
+              placeholder="お問い合わせ内容を記入してください"
+              value=""
+            ></textarea>
+            <p class="m-inputErrorText"></p>
+          </div>
+
+          <div class="inputBlock inputBlock--center">
+            <p class="inputBlock__guideText">
+              個人情報の取扱いについてをよくお読みいただき、<br
+                class="pc-view"
+              />同意いただける場合は、下記にチェックを入れてください。
+            </p>
+            <input type="checkbox" name="termAgree" id="termAgree" class="m-inputCheck js-hasChecked-target" />
+            <label for="termAgree" class="m-inputCheckLabel"><a href="#">個人情報保護方針</a>に同意する</label>
+            <p class="m-inputErrorText">個人情報保護方針への同意にチェックをしてください。</p>
+          </div>
+
+          <button type="submit" name="submit" class="inputBlock__submit" disabled>確認画面へ</button>
+        </section>
+      </div>
+
+      <div class="breadcrumb">
+        <div class="breadcrumbInner">
+          <ul class="breadcrumbList js-breadcrumb-target" itemscope itemtype="http://schema.org/BreadcrumbList">
+            <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="/" itemprop="item">
+                <span itemprop="name">HOME</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="/dist/job/" itemprop="item">
+                <span itemprop="name">求人一覧</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a href="/dist/job/detail.html" itemprop="item">
+                <span itemprop="name">求人詳細</span>
+              </a>
+              <meta itemprop="position" content="3" />
+            </li>
+            <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <span itemprop="name">求人問い合わせ</span><meta itemprop="position" content="4" />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer class="globalFooter">
+        <div class="globalFooterInner">
+          <div class="globalFooterGuideBlock">
+            <p class="globalFooterGuide__text pc-view">ご不明点などお問い合わせはこちらから</p>
+            <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
+            <a
+              class="globalFooterGuide__contactButton"
+              href="/dist/contact/"
+              onclick="gtag('event', 'click', {'event_category': 'job_contact_footer_contact','event_label': 'footer_contact'});"
+              ><span class="globalFooterGuide__contactIcon"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
+                  <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
+                  <path d="M8.3,7.836,0,14.971V.7Z" transform="translate(0 0.208)" />
+                  <path d="M8.93,7,12.5,10.113,16.067,7l8.03,7.135H.9Z" transform="translate(0.268 1.823)" />
+                  <path d="M13.6,7.836,21.9.7V14.971Z" transform="translate(3.63 0.208)" /></svg></span
+              >お問い合わせフォーム</a
+            >
+            <div class="globalFooterTelBox">
+              <a
+                href="tel:03-5437-2950"
+                class="globalFooterTelBoxInner"
+                onclick="gtag('event', 'click', {'event_category': 'job_contact_footer_tel','event_label': 'footer_tel'});"
+              >
+                <p class="globalFooterTelBox__number">
+                  <span class="globalFooterTelBox__numberIcon"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="25" height="24.986" viewBox="0 0 25 24.986">
+                      <g transform="translate(12.5 12.493)">
+                        <g transform="translate(-12.5 -12.493)">
+                          <path
+                            d="M15.522,11.371,17.4,11A8.62,8.62,0,0,0,10.15,4L9.9,5.874A6.621,6.621,0,0,1,15.522,11.371Z"
+                            transform="translate(2.482 0.997)"
+                          />
+                          <path
+                            d="M20.594,11.993l1.874-.25A14.242,14.242,0,0,0,10.35,0L10.1,1.874A12.368,12.368,0,0,1,20.594,11.993Z"
+                            transform="translate(2.532 0)"
+                          />
+                          <path
+                            d="M23.615,18.365l-1-.5-1.124-.625-1-.5-.5-.25-.625-.375h-.5a1.5,1.5,0,0,0-.875.5l-1,1.124-1,1.124a1.374,1.374,0,0,1-.875.5h-.75l-.375-.25-.375-.25A18.615,18.615,0,0,1,9.5,15.741a18.614,18.614,0,0,1-2.873-4.622l-.25-.375-.25-.375V9.62a1.374,1.374,0,0,1,.5-.875L7.5,7.871l1.124-1A1.5,1.5,0,0,0,9.123,6,1.124,1.124,0,0,0,9,5.5l-.375-.625-.25-.5-.5-1L7.249,2.249l-.5-1Q6,.125,5.625,0H4L2.751.5A4.747,4.747,0,0,0,.877,2.748,6.871,6.871,0,0,0,0,6a6.871,6.871,0,0,0,0,.875l.25,1,.25.875.375,1,.375.875a16.116,16.116,0,0,0,1.5,3.123A26.36,26.36,0,0,0,6.624,18.49a26.36,26.36,0,0,0,4.622,3.748,16.116,16.116,0,0,0,3.123,1.5l.875.375,1,.375.875.25,1,.25h.875a6.871,6.871,0,0,0,3.248-.875,4.747,4.747,0,0,0,2.124-1.874,7,7,0,0,0,.375-1.249,5.872,5.872,0,0,0,.125-1.249,1,1,0,0,0,0-.375Q24.864,18.989,23.615,18.365Z"
+                            transform="translate(0.011 0)"
+                          />
+                        </g>
+                      </g></svg></span
+                  >03-5437-2950
+                </p>
+                <p class="globalFooterTelBox__reception">受付時間　平日9:00～18:00 （土日祝日を除く）</p>
+              </a>
+            </div>
+          </div>
+          <div class="globalFooterNavBlock">
+            <ul class="globalFooterNavList">
+              <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
+                <a href="/dist/forbeginner/">初めての方へ</a>
+              </li>
+              <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
+                <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+              </li>
+              <li class="globalFooterNavList__item"><a href="/dist/company/">会社概要</a></li>
+              <li class="globalFooterNavList__item"><a href="#">個人情報保護方針</a></li>
+              <li class="globalFooterNavList__item"><a href="#">利用規約</a></li>
+            </ul>
+            <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="/dist/js/common.js"></script>
