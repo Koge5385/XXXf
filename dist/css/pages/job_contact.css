@@ -1435,6 +1435,12 @@ ul {
       display: block; } }
   .inputBlockFlex--always {
     display: flex; }
+  .inputBlockFlex--multi {
+    flex-wrap: wrap; }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      .inputBlockFlex--multi {
+        display: flex;
+        justify-content: space-between; } }
 
 .inputBlockFlex__item {
   width: 50%;
@@ -1448,6 +1454,22 @@ ul {
       margin-bottom: 15px; }
       .inputBlockFlex__item:last-child {
         margin-bottom: 0; } }
+  .inputBlockFlex__item--multi {
+    width: 45%;
+    margin-right: 30px;
+    margin-bottom: 10px; }
+    @media screen and (max-width: 768px) {
+      .inputBlockFlex__item--multi {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px; }
+        .inputBlockFlex__item--multi:last-child {
+          margin-bottom: 0; } }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      .inputBlockFlex__item--multi {
+        width: 48%; }
+        .inputBlockFlex__item--multi:last-child {
+          margin-bottom: 15px; } }
 
 .inputBlockNotice {
   display: block;

@@ -1,5 +1,158 @@
 {# ↓↓↓　input option macro　↓↓↓ #}
 
+{% macro checkboxHopeJob() -%}
+{%- set checkHopeJob = [
+  {job: '事務長'},
+  {job: '事務長候補'},
+  {job: '経営企画'},
+  {job: '医事課員'},
+  {job: '医事課長（候補含む）'},
+  {job: '総務課員'},
+  {job: '総務課長（候補含む）'},
+  {job: '人事課員'},
+  {job: '人事課長（候補含む）'},
+  {job: '財務・経理'},
+  {job: '地域連携室・渉外'},
+  {job: '広報'},
+  {job: '情報管理室'},
+  {job: '事務総合職'},
+  {job: '健診総合職'},
+  {job: '診療情報管理士'},
+  {job: '社会福祉士'},
+  {job: 'その他'}
+] -%}
+{%- for item in checkHopeJob %}
+<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+  <input type="checkbox" name="hope_job" id="hope_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.job }}">
+  <label for="hope_job_{{ loop.index }}" class="m-inputCheckLabel">{{ item.job }}</label>
+</div>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro checkboxHopePosition() -%}
+{%- set checkHopePosition = [
+  {position: '正社員'},
+  {position: '契約社員'},
+  {position: '派遣社員'},
+  {position: 'その他'}
+] -%}
+{%- for item in checkHopePosition %}
+<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+  <input type="checkbox" name="hope_position" id="hope_position_{{ loop.index }}" class="m-inputCheck" value="{{ item.position }}">
+  <label for="hope_position_{{ loop.index }}" class="m-inputCheckLabel">{{ item.position }}</label>
+</div>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro checkboxExpJob() -%}
+{%- set checkExpJob = [
+  {job: '経営企画・事業企画'},
+  {job: '人事・労務'},
+  {job: '総務'},
+  {job: '経理'},
+  {job: '医療事務'},
+  {job: '広報'},
+  {job: 'マーケティング'},
+  {job: '営業'},
+  {job: '地域連携室・渉外'},
+  {job: '情報管理・システム設計・開発'},
+  {job: 'コンサルタント'},
+  {job: 'その他'}
+] -%}
+{%- for item in checkExpJob %}
+<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+  <input type="checkbox" name="exp_job" id="exp_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.job }}">
+  <label for="exp_job_{{ loop.index }}" class="m-inputCheckLabel">{{ item.job }}</label>
+</div>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro checkboxExpIndustry() -%}
+{%- set checkExpIndustry = [
+  {industry: '医療機関（病院）'},
+  {industry: '医療機関（診療所）'},
+  {industry: '介護施設'},
+  {industry: '医療系メーカー'},
+  {industry: 'IT・通信・インターネット'},
+  {industry: '金融・保険'},
+  {industry: '商社・流通・小売'},
+  {industry: 'サービス'},
+  {industry: '広告・マスコミ・出版・放送・印刷'},
+  {industry: '教育・保育・公務員'},
+  {industry: 'コンサルティング・会計・法律関係'},
+  {industry: 'その他'}
+] -%}
+{%- for item in checkExpIndustry %}
+<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+  <input type="checkbox" name="exp_industry" id="exp_industry_{{ loop.index }}" class="m-inputCheck" value="{{ item.industry }}">
+  <label for="exp_industry_{{ loop.index }}" class="m-inputCheckLabel">{{ item.industry }}</label>
+</div>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionMotivation() -%}
+<option value="">転職に対する意欲を選択してください</option>
+<option value="">指定しない</option>
+{%- set selectMotivation = [
+  {motivation: '転職に興味がある程度'},
+  {motivation: 'ゆくゆくは転職したい'},
+  {motivation: '今すぐに転職したい'}
+] -%}
+{%- for item in selectMotivation %}
+<option value="{{ item.motivation }}">{{ item.motivation }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionJobChange() -%}
+<option value="">転職回数を選択してください</option>
+<option value="">指定しない</option>
+{%- set selectJobChange = [
+  {count: '1回'},
+  {count: '2回'},
+  {count: '3回以上'}
+] -%}
+{%- for item in selectJobChange %}
+<option value="{{ item.count }}">{{ item.count }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionSchoolCareer() -%}
+<option value="">最終学歴を選択してください</option>
+<option value="">指定しない</option>
+{%- set selectSchoolCareer = [
+  {career: '専門学校卒'},
+  {career: '大学卒'},
+  {career: '大学院卒'}
+] -%}
+{%- for item in selectSchoolCareer %}
+<option value="{{ item.career }}">{{ item.career }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionSkillEnglish() -%}
+<option value="">英語スキルを選択してください</option>
+<option value="">指定しない</option>
+{%- set selectSkillEnglish = [
+  {skill: '日常会話'},
+  {skill: 'ビジネス英語'}
+] -%}
+{%- for item in selectSkillEnglish %}
+<option value="{{ item.skill }}">{{ item.skill }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionSkillChinese() -%}
+<option value="">中国語スキルを選択してください</option>
+<option value="">指定しない</option>
+{%- set selectSkillChinese = [
+  {skill: '日常会話'},
+  {skill: 'ビジネス英語'}
+] -%}
+{%- for item in selectSkillChinese %}
+<option value="{{ item.skill }}">{{ item.skill }}</option>
+{%- endfor %}
+{%- endmacro %}
+
 {% macro optionYear() -%}
 <option value="">年</option>
 {%- set selectYear = [

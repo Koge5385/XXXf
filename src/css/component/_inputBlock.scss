@@ -61,6 +61,13 @@
   &--always {
     display: flex;
   }
+  &--multi {
+    flex-wrap: wrap;
+    @include landscape(sp) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 .inputBlockFlex__item {
   width: 50%;
@@ -74,6 +81,25 @@
     margin-bottom: 15px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  &--multi {
+    width: 45%;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    @include media(sp) {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @include landscape(sp) {
+      width: 48%;
+      &:last-child {
+        margin-bottom: 15px;
+      }
     }
   }
 }
