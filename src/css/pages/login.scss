@@ -34,11 +34,15 @@
     text-decoration: none;
   }
 }
-.login__submit {
+.loginSubmit {
+  width: 320px;
+  margin: 40px auto 0;
+}
+.loginSubmit__button {
   @extend .m-button;
   @extend .m-button--blue;
   @include fontsize(26, 16);
-  width: 320px;
-  margin: 40px auto 0;
+  width: 100%;
   padding: 13px 0 12px;
+  cursor: pointer;
 }

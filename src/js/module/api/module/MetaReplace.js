@@ -9,16 +9,16 @@ class MetaReplace {
    * @param {string} description 変更するディスクリプションの文字列
    */
   constructor(title, description) {
-    this.titleReplace(title)
-    this.descriptionReplace(description)
-    this.ogpReplace(title, description)
+    this.replaceTitle(title)
+    this.replaceDescription(description)
+    this.replaceOgp(title, description)
   }
 
   /**
    * @desc タイトルタグを変更する
    * @param {string} title 変更するタイトルの文字列
    */
-  titleReplace(title) {
+  replaceTitle(title) {
     document.title = `${title}｜医療事務職の求人サービスなら【M.PLAT 求職支援】`
   }
 
@@ -26,7 +26,7 @@ class MetaReplace {
    * @desc ページディスクリプションを変更する
    * @param {string} description 変更するディスクリプションの文字列
    */
-  descriptionReplace(description) {
+  replaceDescription(description) {
     document.getElementsByName('description')[0].content = description
   }
 
@@ -35,7 +35,7 @@ class MetaReplace {
    * @param {string} title 変更するタイトルの文字列
    * @param {string} description 変更するディスクリプションの文字列
    */
-  ogpReplace(title, description) {
+  replaceOgp(title, description) {
     const headTagList = document.head.children
     const current = location.pathname + location.search
     Array.prototype.forEach.call(headTagList, elem => {

@@ -102,13 +102,13 @@ class JobListPagenation {
         }
       }
     })
-    this.paramHold()
+    this.holdParam()
   }
 
   /**
    * @desc ページネーションクリック時、パラメーターを維持する処理
    */
-  paramHold() {
+  holdParam() {
     const params = new URLSearchParams(window.location.search)
     const pagenationNode = document.querySelectorAll('.js-async-pagenationItem-target')
     const pagenationArray = Array.prototype.slice.call(pagenationNode, 0)

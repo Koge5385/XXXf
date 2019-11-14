@@ -15,10 +15,9 @@ class JobList {
   }
 
   /**
-   * @desc パラメーターのIDを取得してAPI実行
+   * @desc APIリクエストに必要なパラメーターを取得して返却する
    */
-  async doAxios() {
-    // URLパラメーター取得
+  getParameter() {
     const params = new URLSearchParams(window.location.search)
 
     // パラメーターがnullの場合は空に変換する処理
@@ -31,30 +30,42 @@ class JobList {
     this.jobSearch = paramCheck('keywords')
     this.jobStart = paramCheck('start')
 
-    // 検索された値の引き継ぎ
+    // 検索された値の引き継ぎ処理を実行
     JobList.inputValueTransfer('formOccupation', this.jobOccupation)
     JobList.inputValueTransfer('formArea', this.jobArea)
     JobList.inputValueTransfer('formSalary', this.jobSalary)
     JobList.inputValueTransfer('formKeywords', this.jobSearch)
 
-    // APIリクエスト
-    await new AxiosBase().getMethod(`/jobs/list?job_p_job_category=${encodeURI(this.jobOccupation)}&job_p_area=${encodeURI(this.jobArea)}&job_p_min_salary=${this.jobSalary}&keywords=${encodeURI(this.jobSearch)}&start=${this.jobStart}&count=10&time=${new Date().getTime()}`, this.setDataToPage)
+    // パラメーターのURIエンコード
+    const category = `job_p_job_category=${encodeURI(this.jobOccupation)}`
+    const area = `job_p_area=${encodeURI(this.jobArea)}`
+    const salary = `job_p_min_salary=${this.jobSalary}`
+    const keyword = `keywords=${encodeURI(this.jobSearch)}`
+
+    return `/jobs/list?${category}&${area}&${salary}&${keyword}&start=${this.jobStart}&count=10&time=${new Date().getTime()}`
+  }
+
+  /**
+   * @desc API実行
+   */
+  async doAxios() {
+    await new AxiosBase().getMethod(this.getParameter(), this.setDataToPage)
   }
 
   /**
    * @desc 画面反映処理
    * @param {Number} status コールバックで返却されたステータスコード
-   * @param {Object} data コールバックで返却されたデータオブジェクト
+   * @param {Object} response コールバックで返却されたデータオブジェクト
    */
-  async setDataToPage(status, data) {
+  async setDataToPage(status, response) {
     if (status === 200) {
-      const jobListArray = data.data.jobs
+      const jobListArray = response.data.jobs
 
       // 検索結果件数の反映
-      JobList.setSearchResult(data.attributes.total)
+      JobList.setSearchResult(response.attributes.total)
 
       // ページネーションの生成
-      new JobListPagenation(data.attributes.total, data.attributes.start)
+      new JobListPagenation(response.attributes.total, response.attributes.start)
 
       // 求人一覧の生成
       const targetOrigin = document.querySelector('.js-async-origin-target')
@@ -145,7 +156,7 @@ class JobList {
 
   /**
    * @desc 検索結果件数の反映処理
-   * @param {Number} result APIレスポンス「data.attributes.total」のデータ
+   * @param {Number} result APIレスポンス「response.attributes.total」のデータ
    */
   static setSearchResult(result) {
     // PCとSPで要素が別のためquerySelectorAllで対象要素を取得して処理

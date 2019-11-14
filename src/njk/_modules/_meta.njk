@@ -8,6 +8,9 @@
 {% endif %}
 <meta name="description" content="{{ pageDescription }}">
 <meta name="format-detection" content="email=no,telephone=no,address=no">
+{% if pageName === 'mypage' or pageName === 'password_change' %}
+<meta name="robots" content="noindex,nofollow">
+{% endif %}
 
 <meta property="og:url" content="https://job.mplat.jp/{%- for breadcrumb in breadcrumbs %}{%- if loop.last %}{{ '' if fileName === 'index' else fileName + '.html' }}{%- else %}{{ breadcrumb.href }}{%- endif %}{%- endfor %}">
 <meta property="og:title" content="{{ pageTitle | striptags(false) }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】">
