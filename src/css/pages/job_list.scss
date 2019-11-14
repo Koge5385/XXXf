@@ -78,7 +78,7 @@
 .jobListItemHeaderCategory__icon {
   margin: 0 8px 0 10px;
   svg {
-    width: auto;
+    width: 17.91px;
     height: 18px;
   }
 }
@@ -203,13 +203,13 @@
   }
   svg {
     fill: #8da2bf;
-    width: auto;
+    width: 24px;
     height: 24px;
     vertical-align: middle;
   }
   &--place {
     svg {
-      width: auto;
+      width: 20.73px;
       height: 30px;
     }
   }
@@ -385,6 +385,7 @@
   @include fontsize(14, 16);
   line-height: 1;
   text-align: right;
+  white-space: nowrap;
   span {
     @include fontsize(28, 16);
     font-weight: bold;
@@ -398,7 +399,7 @@
   @include fontsize(16, 16);
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
@@ -412,7 +413,7 @@
   @include fontsize(16, 16);
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;

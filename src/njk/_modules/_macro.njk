@@ -1,7 +1,7 @@
 {# ↓↓↓　input option macro　↓↓↓ #}
 
 {% macro optionOccupation() -%}
-<option value="">職種から探す</option>
+<option value="">職種で探す</option>
 <option value="">指定しない</option>
 {%- set selectJob = [
   {job: '事務長'},
@@ -29,8 +29,121 @@
 {%- endmacro %}
 
 {% macro optionArea() -%}
-<option value="">勤務地から探す</option>
+<option value="">勤務地で探す</option>
 <option value="">指定しない</option>
+{%- set selectArea = [
+  {place: '茨城'},
+  {place: '栃木'},
+  {place: '群馬'},
+  {place: '埼玉'},
+  {place: '千葉'},
+  {place: '東京'},
+  {place: '神奈川'},
+  {place: '三重'},
+  {place: '滋賀'},
+  {place: '京都'},
+  {place: '大阪'},
+  {place: '兵庫'},
+  {place: '奈良'},
+  {place: '和歌山'}
+] -%}
+{%- for item in selectArea %}
+<option value="{{ item.place }}">{{ item.place }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionSalary() -%}
+<option value="">年収で探す</option>
+<option value="">指定しない</option>
+{%- set selectSalary = [
+  {salary: '300万〜', value: '300'},
+  {salary: '400万〜', value: '400'},
+  {salary: '500万〜', value: '500'},
+  {salary: '600万〜', value: '600'},
+  {salary: '700万〜', value: '700'},
+  {salary: '800万〜', value: '800'}
+] -%}
+{%- for item in selectSalary %}
+<option value="{{ item.value }}">{{ item.salary }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+
+{% macro optionYear() -%}
+<option value="">年</option>
+{%- set selectYear = [
+  {year: '1999'},
+  {year: '1998'},
+  {year: '1997'}
+] -%}
+{%- for item in selectYear %}
+<option value="{{ item.year }}">{{ item.year }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionMonth() -%}
+<option value="">月</option>
+{%- set selectMonth = [
+  {month: '1'},
+  {month: '2'},
+  {month: '3'},
+  {month: '4'},
+  {month: '5'},
+  {month: '6'},
+  {month: '7'},
+  {month: '8'},
+  {month: '9'},
+  {month: '10'},
+  {month: '11'},
+  {month: '12'}
+] -%}
+{%- for item in selectMonth %}
+<option value="{{ item.month }}">{{ item.month }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionDay() -%}
+<option value="">日</option>
+{%- set selectDay = [
+  {day: '1'},
+  {day: '2'},
+  {day: '3'},
+  {day: '4'},
+  {day: '5'},
+  {day: '6'},
+  {day: '7'},
+  {day: '8'},
+  {day: '9'},
+  {day: '10'},
+  {day: '11'},
+  {day: '12'},
+  {day: '13'},
+  {day: '14'},
+  {day: '15'},
+  {day: '16'},
+  {day: '17'},
+  {day: '18'},
+  {day: '19'},
+  {day: '20'},
+  {day: '21'},
+  {day: '22'},
+  {day: '23'},
+  {day: '24'},
+  {day: '25'},
+  {day: '26'},
+  {day: '27'},
+  {day: '28'},
+  {day: '29'},
+  {day: '30'},
+  {day: '31'}
+] -%}
+{%- for item in selectDay %}
+<option value="{{ item.day }}">{{ item.day }}</option>
+{%- endfor %}
+{%- endmacro %}
+
+{% macro optionPlace() -%}
+<option value="">都道府県を選択してください</option>
 {%- set selectPlace = [
   {place: '茨城'},
   {place: '栃木'},
@@ -49,22 +162,6 @@
 ] -%}
 {%- for item in selectPlace %}
 <option value="{{ item.place }}">{{ item.place }}</option>
-{%- endfor %}
-{%- endmacro %}
-
-{% macro optionSalary() -%}
-<option value="">年収から探す</option>
-<option value="">指定しない</option>
-{%- set selectSalary = [
-  {salary: '300万〜', value: '3000000'},
-  {salary: '400万〜', value: '4000000'},
-  {salary: '500万〜', value: '5000000'},
-  {salary: '600万〜', value: '6000000'},
-  {salary: '700万〜', value: '7000000'},
-  {salary: '800万〜', value: '8000000'}
-] -%}
-{%- for item in selectSalary %}
-<option value="{{ item.value }}">{{ item.salary }}</option>
 {%- endfor %}
 {%- endmacro %}
 

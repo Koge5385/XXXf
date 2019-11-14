@@ -18,7 +18,7 @@
         </a>
       </li>
       <li class="mypageMainMenu__item">
-        <a href="#" class="mypageMainMenu__link">
+        <a href="{{ basePath }}mypage/profile_edit.html" class="mypageMainMenu__link">
           <span class="mypageMainMenu__icon">{{ macro.svg_code_profile() }}</span>プロフィール編集
         </a>
       </li>
@@ -30,7 +30,7 @@
     </ul>
     <ul class="mypageSubMenu">
       <li class="mypageSubMenu__item"><a href="javascript:void(0)" class="mypageSubMenu__link js-async-logout-target">ログアウト</a></li>
-      <li class="mypageSubMenu__item"><a href="#" class="mypageSubMenu__link">サービスの退会はこちら</a></li>
+      <li class="mypageSubMenu__item"><a href="{{ basePath }}mypage/cancel_membership.html" class="mypageSubMenu__link">サービスの退会はこちら</a></li>
     </ul>
   </section>
 </div>

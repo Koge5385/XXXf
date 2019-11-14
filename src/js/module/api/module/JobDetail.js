@@ -1,5 +1,4 @@
 import AxiosBase from '../AxiosBase'
-import DataReflect from './DataReflect'
 import MetaReplace from './MetaReplace'
 
 /**
@@ -34,41 +33,96 @@ class JobDetail {
       document.querySelector('.js-error-target').style.display = 'none'
 
       const jobData = data.data.job
-      const createElement = new DataReflect()
-      const pageName = 'jobDetail'
 
+      // 指定した名前の要素取得する処理
+      const targetElement = elementName => document.querySelector(`.js-async-${elementName}-target`)
+
+      // 指定した名前の要素に対してinnerHTMLでデータを反映する処理
+      const setElement = (name, value) => targetElement(name).innerHTML = value.replace(/\r?\n/g, '<br>')
+
+      // APIレスポンスデータを指定の箇所に反映する
       Object.keys(jobData).forEach(key => {
-        // APIからの返却データをそのまま反映
-        createElement.reflect(key, 'job_p_position', `${pageName}Category`, jobData[key])
-        createElement.reflect(key, 'job_p_phasedate', `${pageName}Date`, jobData[key])
-        createElement.reflect(key, 'job_u_kyuujinnnoosusumepointo', `${pageName}Title`, jobData[key])
-        createElement.reflect(key, 'job_p_publish', `${pageName}BuildingName`, jobData['job_p_publish'].option_p_nondisclosure.option_p_name)
-        createElement.reflect(key, 'job_p_job_category', `${pageName}Occupation`, jobData['job_p_job_category'].option_u_010895.option_p_name)
-        createElement.reflect(key, 'job_p_area', `${pageName}Place`, jobData[key])
-        createElement.reflect(key, 'job_p_job_category_summary', `${pageName}Sumally`, jobData[key])
-        createElement.reflect(key, 'job_p_employment_type', `${pageName}Position`, jobData['job_p_employment_type'].option_p_fullTime.option_p_name)
-        createElement.reflect(key, 'job_p_woking_hours', `${pageName}WorkTime`, jobData[key])
-        createElement.reflect(key, 'job_p_holidays', `${pageName}Holiday`, jobData[key])
-        createElement.reflect(key, 'job_u_shiyoukikannoumu', `${pageName}Overtime`, jobData[key])
-        createElement.reflect(key, 'job_u_siyoukikanshousai', `${pageName}Trial`, jobData[key])
-        createElement.reflect(key, 'job_p_benefits', `${pageName}Benefit`, jobData[key])
-        createElement.reflect(key, 'job_u_sonotabikou', `${pageName}Other`, jobData[key])
+        switch (key) {
+          case 'job_p_position':
+            setElement('category', jobData[key])
+            break
 
-        // パンくずリストに求人件名を反映
-        createElement.reflect(key, 'job_u_kyuujinnnoosusumepointo', 'breadcrumbText', jobData[key])
+          case 'job_p_phasedate':
+            setElement('date', jobData[key])
+            break
 
-        // 年収のみ「万円」の単位に変換する処理を追加
-        createElement.reflect(key, 'job_p_max_salary', `${pageName}MaxSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString())
-        createElement.reflect(key, 'job_p_min_salary', `${pageName}MinSalary`, Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+          case 'job_u_kyuujinnnoosusumepointo':
+            setElement('title', jobData[key])
+
+            // パンくずリストにも求人件名を反映
+            setElement('breadcrumbText', jobData[key])
+            break
+
+          case 'job_p_publish':
+            setElement('buildingName', jobData[key].option_p_nondisclosure.option_p_name)
+            break
+
+          case 'job_p_job_category':
+            setElement('occupation', jobData[key].option_u_010895.option_p_name)
+            break
+
+          case 'job_p_area':
+            setElement('place', jobData[key])
+            break
+
+          case 'job_p_min_salary':
+            setElement('minSalary', Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+            break
+
+          case 'job_p_max_salary':
+            setElement('maxSalary', Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+            break
+
+          case 'job_p_job_category_summary':
+            setElement('sumally', jobData[key])
+            break
+
+          case 'job_u_boshuushikaku':
+            setElement('conditions', jobData[key])
+            break
+
+          case 'job_p_employment_type':
+            setElement('position', jobData[key].option_p_fullTime.option_p_name)
+            break
+
+          case 'job_p_woking_hours':
+            setElement('workTime', jobData[key])
+            break
+
+          case 'job_p_holidays':
+            setElement('holiday', jobData[key])
+            break
+
+          case 'job_u_shiyoukikannoumu':
+            setElement('overtime', jobData[key])
+            break
+
+          case 'job_u_siyoukikanshousai':
+            setElement('trial', jobData[key])
+            break
+
+          case 'job_p_benefits':
+            setElement('benefit', jobData[key])
+            break
+
+          case 'job_u_sonotabikou':
+            setElement('other', jobData[key])
+            break
+
+          default:
+            break
+        }
       })
 
       // meta情報の変更
       const pageTitle = jobData['job_u_kyuujinnnoosusumepointo']
       const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary']}`
-      const metaChange = new MetaReplace(pageTitle, pageDescription)
-      metaChange.titleReplace()
-      metaChange.descriptionReplace()
-      metaChange.ogpReplace()
+      new MetaReplace(pageTitle, pageDescription)
     }
     if (status === 400 || status === 401) {
       document.querySelector('.js-success-target').style.display = 'none'

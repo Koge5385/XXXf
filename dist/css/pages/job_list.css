@@ -207,6 +207,12 @@ a {
 ul {
   list-style-type: none; }
 
+input:-webkit-autofill {
+  transition: background-color 315360000s; }
+
+select::-ms-expand {
+  display: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -346,7 +352,7 @@ ul {
   padding: 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background-color: #fff; }
+  background-color: transparent; }
   .m-inputText::-webkit-input-placeholder {
     color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
@@ -1450,6 +1456,40 @@ ul {
       .inputBlockFlex__item:last-child {
         margin-bottom: 0; } }
 
+.inputBlockNotice {
+  display: block;
+  border: 1px solid #5d687c;
+  padding: 20px; }
+
+.inputBlockNotice__heading {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  font-weight: bold;
+  margin-bottom: 5px; }
+
+.inputBlockNotice__text {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6; }
+
+.inputBlockNoticeList {
+  display: block; }
+
+.inputBlockNoticeList__item {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  position: relative;
+  margin-bottom: 2px;
+  margin-left: 15px;
+  padding-left: 2px; }
+  .inputBlockNoticeList__item::before {
+    display: block;
+    position: absolute;
+    left: -1em;
+    content: "・"; }
+
 .keyVisual {
   margin-bottom: 0; }
 
@@ -1529,7 +1569,7 @@ ul {
 .jobListItemHeaderCategory__icon {
   margin: 0 8px 0 10px; }
   .jobListItemHeaderCategory__icon svg {
-    width: auto;
+    width: 17.91px;
     height: 18px; }
 
 .jobListItemHeaderCategory__name {
@@ -1661,11 +1701,11 @@ ul {
       margin-right: 12px; } }
   .jobListContentPickup__itemLabelIcon svg {
     fill: #8da2bf;
-    width: auto;
+    width: 24px;
     height: 24px;
     vertical-align: middle; }
   .jobListContentPickup__itemLabelIcon--place svg {
-    width: auto;
+    width: 20.73px;
     height: 30px; }
 
 .jobListContentPickup__itemContent {
@@ -1844,7 +1884,8 @@ ul {
   font-size: 0.875rem;
   line-height: 1.6;
   line-height: 1;
-  text-align: right; }
+  text-align: right;
+  white-space: nowrap; }
   .mobileSearch__resultText span {
     font-size: 28px;
     font-size: 1.75rem;
@@ -1861,7 +1902,7 @@ ul {
   line-height: 1.6;
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
@@ -1877,7 +1918,7 @@ ul {
   line-height: 1.6;
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
