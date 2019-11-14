@@ -54,7 +54,6 @@
 .inputBlockFlex {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   @include media(sp) {
     display: block;
   }

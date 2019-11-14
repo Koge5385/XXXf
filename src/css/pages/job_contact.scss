@@ -11,4 +11,17 @@
 }
 .jobContact {
   @include _baseContentsWidth;
+  width: 720px;
+}
+.jobContact__text {
+  @include fontsize(16, 16);
+  margin-bottom: 20px;
+}
+.jobContact__note {
+  @include fontsize(16, 16);
+  margin-bottom: 30px;
+  span {
+    color: #f03f3f;
+    font-weight: bold;
+  }
 }

@@ -3,6 +3,8 @@
   text-align: center;
   font-weight: bold;
   line-height: 1;
+  cursor: pointer;
+  pointer-events: auto;
   &--blue {
     background-color: #1b457e;
     color: #fff;
@@ -17,6 +19,7 @@
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3;
+      pointer-events: none;
       &:hover {
         color: #fff;
         border: 2px solid #333;

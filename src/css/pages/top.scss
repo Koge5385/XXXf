@@ -166,10 +166,13 @@
   }
 }
 .topSearchBox__submit {
+  @extend .m-button;
+  @extend .m-button--blue;
   @include fontsize(16, 16);
   width: 140px;
   margin-left: 10px;
   padding: 24px 0 23px;
+  cursor: pointer;
   @include media(sp) {
     @include fontsize(18, 16);
     width: 64.78873239%;

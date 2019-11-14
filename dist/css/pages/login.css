@@ -207,6 +207,12 @@ a {
 ul {
   list-style-type: none; }
 
+input:-webkit-autofill {
+  transition: background-color 315360000s; }
+
+select::-ms-expand {
+  display: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -231,25 +237,28 @@ ul {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .login__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .loginSubmit__button {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
-  line-height: 1; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .login__submit {
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto; }
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .loginSubmit__button {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover, .login__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover, .loginSubmit__button:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled, .login__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled, .loginSubmit__button:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
-      opacity: 0.3; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .login__submit:disabled:hover {
+      opacity: 0.3;
+      pointer-events: none; }
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .loginSubmit__button:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -346,7 +355,7 @@ ul {
   padding: 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background-color: #fff; }
+  background-color: transparent; }
   .m-inputText::-webkit-input-placeholder {
     color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
@@ -358,11 +367,11 @@ ul {
     border: 1px solid #ff0000;
     background-color: #fff2f2; }
     .m-inputText.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
 
 .m-inputSelect {
   -webkit-appearance: none;
@@ -448,11 +457,11 @@ ul {
     border: 1px solid #ff0000;
     background: #fff2f2; }
     .m-inputTextArea.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
   @media screen and (max-width: 768px) {
     .m-inputTextArea {
       resize: none; } }
@@ -481,7 +490,7 @@ ul {
 
 .m-inputText.is-error + .m-inputErrorText,
 .m-inputSelect.is-error + .m-inputErrorText,
-.m-inputCheckLabel.is-error + .m-inputErrorText,
+.m-inputCheck.is-error ~ .m-inputErrorText,
 .m-inputTextArea.is-error + .m-inputErrorText {
   display: block; }
 
@@ -1060,9 +1069,10 @@ ul {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
+      justify-content: space-between;
       padding: 0 10px; } }
 
 .searchButtonBlockJobList__item {
@@ -1428,8 +1438,7 @@ ul {
 
 .inputBlockFlex {
   display: flex;
-  justify-content: flex-start;
-  align-items: center; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .inputBlockFlex {
       display: block; } }
@@ -1546,10 +1555,14 @@ ul {
   .login__textLink:hover {
     text-decoration: none; }
 
-.login__submit {
+.loginSubmit {
+  width: 320px;
+  margin: 40px auto 0; }
+
+.loginSubmit__button {
   font-size: 26px;
   font-size: 1.625rem;
   line-height: 1.6;
-  width: 320px;
-  margin: 40px auto 0;
-  padding: 13px 0 12px; }
+  width: 100%;
+  padding: 13px 0 12px;
+  cursor: pointer; }

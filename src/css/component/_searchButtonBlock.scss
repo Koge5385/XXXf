@@ -36,8 +36,9 @@
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   @include media(sp) {
+    justify-content: space-between;
     padding: 0 10px;
   }
 }

@@ -12,16 +12,29 @@
     <div class="searchButtonBlockContent">
       <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title"><span class="searchButtonBlockContent__icon">{{ macro.svg_code_bag() }}</span>職種から探す</h3>
       <ul class="searchButtonBlockJobList">
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">事務長<span>（候補含む）</span></a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">経営企画室</a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">医事課長<span>（候補含む）</span></a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">総務</a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">財務・経理</a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">人事・労務</a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">情報管理</a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">広報</a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">地域連携室</a></li>
-        <li class="searchButtonBlockJobList__item"><a href="#" class="searchButtonBlockJobList__link">その他</a></li>
+        {%- set searchButtonJob = [
+          {job: '事務長'},
+          {job: '事務長候補'},
+          {job: '経営企画'},
+          {job: '医事課長<span>（候補含む）</span>'},
+          {job: '医事課員'},
+          {job: '総務課長<span>（候補含む）</span>'},
+          {job: '総務課員'},
+          {job: '人事課長<span>（候補含む）</span>'},
+          {job: '人事課員'},
+          {job: '財務・経理'},
+          {job: '地域連携室・渉外'},
+          {job: '広報'},
+          {job: '情報管理室'},
+          {job: '事務総合職'},
+          {job: '健診総合職'},
+          {job: '診療情報管理士'},
+          {job: '社会福祉士'},
+          {job: 'その他'}
+        ] -%}
+        {%- for item in searchButtonJob %}
+        <li class="searchButtonBlockJobList__item"><a href="{{ basePath }}job/?job_p_job_category={{ item.job | striptags(false) | urlencode }}" class="searchButtonBlockJobList__link">{{ item.job | safe }}</a></li>
+        {%- endfor %}
       </ul>
     </div>
     <div class="searchButtonBlockContent">
@@ -30,26 +43,36 @@
         <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked>
         <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
         <ul class="searchButtonBlockAreaList">
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">茨城</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">栃木</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">群馬</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">埼玉</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">千葉</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">東京</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">神奈川</a></li>
+          {%- set searchButtonKanto = [
+            {area: '茨城'},
+            {area: '栃木'},
+            {area: '群馬'},
+            {area: '埼玉'},
+            {area: '千葉'},
+            {area: '東京'},
+            {area: '神奈川'}
+          ] -%}
+          {%- for item in searchButtonKanto %}
+          <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_p_area={{ item.area | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
+          {%- endfor %}
         </ul>
       </div>
       <div class="searchButtonBlockArea">
         <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockArea__toggleTrigger">
         <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
         <ul class="searchButtonBlockAreaList">
-          <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable">三重</li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">滋賀</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">京都</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">大阪</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">兵庫</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">奈良</a></li>
-          <li class="searchButtonBlockAreaList__item"><a href="#" class="searchButtonBlockAreaList__link">和歌山</a></li>
+          {%- set searchButtonKanto = [
+            {area: '三重'},
+            {area: '滋賀'},
+            {area: '京都'},
+            {area: '大阪'},
+            {area: '兵庫'},
+            {area: '奈良'},
+            {area: '和歌山'}
+          ] -%}
+          {%- for item in searchButtonKanto %}
+          <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_p_area={{ item.area | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
+          {%- endfor %}
         </ul>
       </div>
     </div>
