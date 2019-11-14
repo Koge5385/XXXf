@@ -1494,7 +1494,23 @@ ul {
 
 .jobContact {
   width: 980px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 720px; }
   @media screen and (max-width: 768px) {
     .jobContact {
       width: 100%; } }
+
+.jobContact__text {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px; }
+
+.jobContact__note {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px; }
+  .jobContact__note span {
+    color: #f03f3f;
+    font-weight: bold; }
