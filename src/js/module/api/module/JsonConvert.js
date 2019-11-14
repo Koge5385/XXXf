@@ -14,7 +14,7 @@ class JsonConvert {
   /**
    * @desc FormDataのオブジェクトをJSONに変換・返却する
    */
-  objectConvert() {
+  convertObject() {
     const jsonObject = {}
     const formData = new FormData(document.querySelector(this.targetFormClass))
     formData.forEach((value, key) => {

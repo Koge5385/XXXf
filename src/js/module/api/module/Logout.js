@@ -1,6 +1,7 @@
 // 定数
 const ACCESS_TOKEN = 'access_token'
-const LOGOUT_HREF = 'access_token'
+const LOGOUT_HREF = '../'
+const LOGOUT_MESSAGE = 'ログアウトします。よろしいですか？'
 
 /**
  * @class Logout
@@ -15,11 +16,14 @@ class Logout {
   }
 
   /**
-   * @desc ローカルストレージ上のaccess_tokenを削除してTOPページに移動
+   * @desc confirmがtrueならlocalStorageのaccess_tokenを削除してTOPページに移動
    */
   goTop() {
-    localStorage.removeItem(ACCESS_TOKEN)
-    document.location.href = LOGOUT_HREF
+    const confirm = window.confirm(LOGOUT_MESSAGE)
+    if(confirm) {
+      localStorage.removeItem(ACCESS_TOKEN)
+      document.location.href = LOGOUT_HREF
+    }
   }
 }
 

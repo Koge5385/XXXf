@@ -1,6 +1,10 @@
 import AxiosBase from '../AxiosBase'
 import MetaReplace from './MetaReplace'
 
+// 定数
+const SUCCESS_TARGET = document.querySelector('.js-success-target')
+const ERROR_TARGET = document.querySelector('.js-success-target')
+
 /**
  * @class JobDetail
  * @desc 求人詳細データの呼び出し⇒反映処理
@@ -14,30 +18,37 @@ class JobDetail {
   }
 
   /**
-   * @desc パラメーターのIDを取得してAPI実行
+   * @desc APIリクエストに必要なパラメーターを取得して返却する
    */
-  async doAxios() {
+  getParameter() {
     const params = new URLSearchParams(window.location.search)
     this.jobId = params.get('id')
-    await new AxiosBase().getMethod(`/jobs/${this.jobId}?time=${new Date().getTime()}`, this.setDataToPage)
+    return `/jobs/${this.jobId}?time=${new Date().getTime()}`
+  }
+
+  /**
+   * @desc API実行
+   */
+  async doAxios() {
+    await new AxiosBase().getMethod(this.getParameter(), this.setDataToPage)
   }
 
   /**
    * @desc 画面反映処理
    * @param {Number} status コールバックで返却されたステータスコード
-   * @param {Object} data コールバックで返却されたデータオブジェクト
+   * @param {Object} response コールバックで返却されたデータオブジェクト
    */
-  async setDataToPage(status, data) {
+  async setDataToPage(status, response) {
     if (status === 200) {
-      document.querySelector('.js-success-target').style.display = 'block'
-      document.querySelector('.js-error-target').style.display = 'none'
+      SUCCESS_TARGET.style.display = 'block'
+      ERROR_TARGET.style.display = 'none'
 
-      const jobData = data.data.job
+      const jobData = response.data.job
 
-      // 指定した名前の要素取得する処理
+      // 指定した名前の要素取得する
       const targetElement = elementName => document.querySelector(`.js-async-${elementName}-target`)
 
-      // 指定した名前の要素に対してinnerHTMLでデータを反映する処理
+      // 指定した名前の要素に対してinnerHTMLでデータを反映する
       const setElement = (name, value) => targetElement(name).innerHTML = value.replace(/\r?\n/g, '<br>')
 
       // APIレスポンスデータを指定の箇所に反映する
@@ -120,13 +131,13 @@ class JobDetail {
       })
 
       // meta情報の変更
-      const pageTitle = jobData['job_u_kyuujinnnoosusumepointo']
-      const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary']}`
+      const pageTitle = jobData['job_u_kyuujinnnoosusumepointo'].replace(/\r?\n/g, '')
+      const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary'].replace(/\r?\n/g, '')}`
       new MetaReplace(pageTitle, pageDescription)
     }
     if (status === 400 || status === 401) {
-      document.querySelector('.js-success-target').style.display = 'none'
-      document.querySelector('.js-error-target').style.display = 'block'
+      SUCCESS_TARGET.style.display = 'none'
+      ERROR_TARGET.style.display = 'block'
     }
   }
 }

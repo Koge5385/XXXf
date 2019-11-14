@@ -11,6 +11,7 @@ new LoginCheck()
 
 window.addEventListener(LOAD_EVENT, () => {
   LOGOUT_TARGET.addEventListener(CLICK_EVENT, () => {
+    // ログアウトのconfirmを出現させる
     new Logout()
   })
 })
