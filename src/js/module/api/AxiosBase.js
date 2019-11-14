@@ -1,6 +1,7 @@
 import 'regenerator-runtime'
 import 'es6-promise/auto'
 import 'url-search-params-polyfill'
+import 'array-from-polyfill'
 import axios from 'axios'
 
 /**
@@ -37,7 +38,7 @@ class AxiosBase {
   getMethod(path, callback) {
     const params = { timeout: 10000 }
     return this.axios
-      .get(`${path}?nocache=${new Date().getTime()}`, params)
+      .get(path, params)
       .then(response => callback(response.status, response.data))
       .catch(error => callback(error.message, error.type, error.code))
   }
