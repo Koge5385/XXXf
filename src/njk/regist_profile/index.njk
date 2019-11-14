@@ -49,7 +49,7 @@
         </div>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">生年月日{{ macro.inputWant() }}</h3>
+        <h3 class="inputBlock__heading">生年月日{{ macro.inputMust() }}</h3>
         <div class="inputBlockFlex inputBlockFlex--always">
           <select name="registProfile_birthYear" class="m-inputSelect inputBlock__inputSmall">
             {{ macro.optionYear() }}
@@ -64,7 +64,7 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">性別{{ macro.inputWant() }}</h3>
+        <h3 class="inputBlock__heading">性別{{ macro.inputMust() }}</h3>
         <div class="inputBlockFlex">
           <div class="inputBlockFlex__item">
             <input type="radio" id="registProfile_sex_man" name="registProfile_sex" class="m-inputRadio" value="man">
