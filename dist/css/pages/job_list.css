@@ -207,6 +207,12 @@ a {
 ul {
   list-style-type: none; }
 
+input:-webkit-autofill {
+  transition: background-color 315360000s; }
+
+select::-ms-expand {
+  display: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -231,25 +237,28 @@ ul {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .searchSubmit__button, .mobileSearchSubmit__button {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
-  line-height: 1; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit {
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto; }
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .searchSubmit__button, .mobileSearchSubmit__button {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover, .searchSubmit__button:hover, .mobileSearchSubmit__button:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled, .searchSubmit__button:disabled, .mobileSearchSubmit__button:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
-      opacity: 0.3; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover {
+      opacity: 0.3;
+      pointer-events: none; }
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .searchSubmit__button:disabled:hover, .mobileSearchSubmit__button:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -346,7 +355,7 @@ ul {
   padding: 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background-color: #fff; }
+  background-color: transparent; }
   .m-inputText::-webkit-input-placeholder {
     color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
@@ -358,11 +367,11 @@ ul {
     border: 1px solid #ff0000;
     background-color: #fff2f2; }
     .m-inputText.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
 
 .m-inputSelect {
   -webkit-appearance: none;
@@ -448,11 +457,11 @@ ul {
     border: 1px solid #ff0000;
     background: #fff2f2; }
     .m-inputTextArea.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
   @media screen and (max-width: 768px) {
     .m-inputTextArea {
       resize: none; } }
@@ -481,7 +490,7 @@ ul {
 
 .m-inputText.is-error + .m-inputErrorText,
 .m-inputSelect.is-error + .m-inputErrorText,
-.m-inputCheckLabel.is-error + .m-inputErrorText,
+.m-inputCheck.is-error ~ .m-inputErrorText,
 .m-inputTextArea.is-error + .m-inputErrorText {
   display: block; }
 
@@ -1060,9 +1069,10 @@ ul {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
+      justify-content: space-between;
       padding: 0 10px; } }
 
 .searchButtonBlockJobList__item {
@@ -1428,8 +1438,7 @@ ul {
 
 .inputBlockFlex {
   display: flex;
-  justify-content: flex-start;
-  align-items: center; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .inputBlockFlex {
       display: block; } }
@@ -1562,7 +1571,7 @@ ul {
 .jobListItemHeaderCategory__icon {
   margin: 0 8px 0 10px; }
   .jobListItemHeaderCategory__icon svg {
-    width: auto;
+    width: 17.91px;
     height: 18px; }
 
 .jobListItemHeaderCategory__name {
@@ -1694,11 +1703,11 @@ ul {
       margin-right: 12px; } }
   .jobListContentPickup__itemLabelIcon svg {
     fill: #8da2bf;
-    width: auto;
+    width: 24px;
     height: 24px;
     vertical-align: middle; }
   .jobListContentPickup__itemLabelIcon--place svg {
-    width: auto;
+    width: 20.73px;
     height: 30px; }
 
 .jobListContentPickup__itemContent {
@@ -1706,20 +1715,15 @@ ul {
   font-size: 0.875rem;
   line-height: 1.6; }
   .jobListContentPickup__itemContent--salary {
-    font-size: 22px;
-    font-size: 1.375rem;
+    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     font-weight: bold;
     color: #ec652b; }
     .jobListContentPickup__itemContent--salary span {
-      font-size: 16px;
-      font-size: 1rem;
+      font-size: 22px;
+      font-size: 1.375rem;
       line-height: 1.6; }
-      @media screen and (max-width: 768px) {
-        .jobListContentPickup__itemContent--salary span {
-          font-size: 22px;
-          font-size: 1.375rem;
-          line-height: 1.6; } }
 
 .jobListContentTable {
   margin-bottom: 25px; }
@@ -1786,13 +1790,17 @@ ul {
   .searchInputList__input--freeWord {
     padding: 0 16.5px 0 50px; }
 
-.search__submit {
+.searchSubmit {
+  width: 200px;
+  margin: 0 auto; }
+
+.searchSubmit__button {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
-  width: 200px;
-  margin: 0 auto;
-  padding: 11px 0 10px; }
+  width: 100%;
+  padding: 11px 0 10px;
+  cursor: pointer; }
 
 .pagenationWrap {
   width: 980px;
@@ -1813,8 +1821,6 @@ ul {
       justify-content: center; } }
 
 .jobListPagenation__item {
-  border: 1px solid #b3c1d3;
-  border-radius: 6px;
   margin-right: 5px; }
   @media screen and (max-width: 768px) {
     .jobListPagenation__item {
@@ -1827,22 +1833,31 @@ ul {
   .jobListPagenation__item--dot {
     border: none;
     width: auto; }
+  .jobListPagenation__item.is-active .jobListPagenation__link {
+    background-color: #b3c1d3;
+    color: #fff; }
 
 .jobListPagenation__link {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.6;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   color: #1b457e;
   text-align: center;
   width: 40px;
-  padding: 9px 0; }
+  padding: 9px 0;
+  border: 1px solid #b3c1d3;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer; }
   @media screen and (max-width: 768px) {
     .jobListPagenation__link {
       width: 50px;
       padding: 14px 0; } }
   .jobListPagenation__link:hover {
-    text-decoration: none; }
-  .jobListPagenation__link--active {
+    text-decoration: none;
     background-color: #b3c1d3;
     color: #fff; }
 
@@ -1871,7 +1886,8 @@ ul {
   font-size: 0.875rem;
   line-height: 1.6;
   line-height: 1;
-  text-align: right; }
+  text-align: right;
+  white-space: nowrap; }
   .mobileSearch__resultText span {
     font-size: 28px;
     font-size: 1.75rem;
@@ -1888,7 +1904,7 @@ ul {
   line-height: 1.6;
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
@@ -1904,7 +1920,7 @@ ul {
   line-height: 1.6;
   color: #1b457e;
   text-align: center;
-  width: 61.33%;
+  width: 60%;
   padding: 12px 0 11px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
@@ -1978,10 +1994,13 @@ ul {
   .mobileSearchList__input--freeWord {
     padding: 0 16.5px 0 50px; }
 
-.mobileSearch__submit {
+.mobileSearchSubmit {
+  width: 230px;
+  margin: 0 auto; }
+
+.mobileSearchSubmit__button {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6;
-  width: 230px;
-  margin: 0 auto;
+  width: 100%;
   padding: 14px 0; }

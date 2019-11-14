@@ -207,6 +207,12 @@ a {
 ul {
   list-style-type: none; }
 
+input:-webkit-autofill {
+  transition: background-color 315360000s; }
+
+select::-ms-expand {
+  display: none; }
+
 @media screen and (min-width: 769px) {
   .sp-view {
     display: none; } }
@@ -235,7 +241,9 @@ ul {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
-  line-height: 1; }
+  line-height: 1;
+  cursor: pointer;
+  pointer-events: auto; }
   .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .cancelMembership__submit {
     background-color: #1b457e;
     color: #fff;
@@ -248,7 +256,8 @@ ul {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
-      opacity: 0.3; }
+      opacity: 0.3;
+      pointer-events: none; }
       .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .cancelMembership__submit:disabled:hover {
         color: #fff;
         border: 2px solid #333;
@@ -346,7 +355,7 @@ ul {
   padding: 0 12px;
   border: 1px solid #b3c1d3;
   border-radius: 6px;
-  background-color: #fff; }
+  background-color: transparent; }
   .m-inputText::-webkit-input-placeholder {
     color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
@@ -358,11 +367,11 @@ ul {
     border: 1px solid #ff0000;
     background-color: #fff2f2; }
     .m-inputText.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputText.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
 
 .m-inputSelect {
   -webkit-appearance: none;
@@ -448,11 +457,11 @@ ul {
     border: 1px solid #ff0000;
     background: #fff2f2; }
     .m-inputTextArea.is-error::-webkit-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::-ms-input-placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
     .m-inputTextArea.is-error::placeholder {
-      visibility: hidden; }
+      color: #ffa2a2; }
   @media screen and (max-width: 768px) {
     .m-inputTextArea {
       resize: none; } }
@@ -481,7 +490,7 @@ ul {
 
 .m-inputText.is-error + .m-inputErrorText,
 .m-inputSelect.is-error + .m-inputErrorText,
-.m-inputCheckLabel.is-error + .m-inputErrorText,
+.m-inputCheck.is-error ~ .m-inputErrorText,
 .m-inputTextArea.is-error + .m-inputErrorText {
   display: block; }
 
@@ -1060,9 +1069,10 @@ ul {
 .searchButtonBlockJobList {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .searchButtonBlockJobList {
+      justify-content: space-between;
       padding: 0 10px; } }
 
 .searchButtonBlockJobList__item {
@@ -1428,8 +1438,7 @@ ul {
 
 .inputBlockFlex {
   display: flex;
-  justify-content: flex-start;
-  align-items: center; }
+  justify-content: flex-start; }
   @media screen and (max-width: 768px) {
     .inputBlockFlex {
       display: block; } }

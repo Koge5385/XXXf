@@ -15,35 +15,35 @@
       <div class="jobDetailHeader">
         <div class="jobDetailHeaderCategory">
           <span class="jobDetailHeaderCategory__icon">{{ macro.svg_code_hospital() }}</span>
-          <p class="jobDetailHeaderCategory__name js-async-jobDetailCategory-target"></p>
+          <p class="jobDetailHeaderCategory__name js-async-category-target"></p>
         </div>
         <div class="jobDetailHeaderStatus">
           <span class="jobDetailHeaderStatus__new m-fontFamilyMontserrat">NEW</span>
-          <p class="jobDetailHeaderStatus__date"><span class="js-async-jobDetailDate-target"></span> 公開</p>
+          <p class="jobDetailHeaderStatus__date"><span class="js-async-date-target"></span> 公開</p>
         </div>
       </div>
       <div class="jobDetailContent">
-        <h1 class="jobDetailContent__title js-async-jobDetailTitle-target"></h1>
-        <p class="jobDetailContent__buildingName">施設名：<span class="js-async-jobDetailBuildingName-target"></span></p>
+        <h1 class="jobDetailContent__title js-async-title-target"></h1>
+        <p class="jobDetailContent__buildingName">施設名：<span class="js-async-buildingName-target"></span></p>
         <div class="jobDetailContentPickup">
           <ul class="jobDetailContentPickup__list">
             <li class="jobDetailContentPickup__item">
               <div class="jobDetailContentPickup__itemLabel">
                 <span class="jobDetailContentPickup__itemLabelIcon">{{ macro.svg_code_bag() }}</span>職　種
               </div>
-              <p class="jobDetailContentPickup__itemContent js-async-jobDetailOccupation-target"></p>
+              <p class="jobDetailContentPickup__itemContent js-async-occupation-target"></p>
             </li>
             <li class="jobDetailContentPickup__item">
               <div class="jobDetailContentPickup__itemLabel">
                 <span class="jobDetailContentPickup__itemLabelIcon jobDetailContentPickup__itemLabelIcon--place">{{ macro.svg_code_place() }}</span>勤務地
               </div>
-              <p class="jobDetailContentPickup__itemContent js-async-jobDetailPlace-target"></p>
+              <p class="jobDetailContentPickup__itemContent js-async-place-target"></p>
             </li>
             <li class="jobDetailContentPickup__item">
               <div class="jobDetailContentPickup__itemLabel">
                 <span class="jobDetailContentPickup__itemLabelIcon">{{ macro.svg_code_money() }}</span>年　収
               </div>
-              <p class="jobDetailContentPickup__itemContent jobDetailContentPickup__itemContent--salary"><span><span class="js-async-jobDetailMinSalary-target"></span>～<span class="js-async-jobDetailMaxSalary-target"></span></span>万円</p>
+              <p class="jobDetailContentPickup__itemContent jobDetailContentPickup__itemContent--salary"><span><span class="js-async-minSalary-target"></span>～<span class="js-async-maxSalary-target"></span></span>万円</p>
             </li>
           </ul>
         </div>
@@ -51,48 +51,43 @@
         <table class="flexTable jobDetailContentTable">
           <tbody>
             <tr>
-              <th class="jobDetailContentTable__heading">仕事内容</th>
-              <td class="js-async-jobDetailSumally-target"></td>
+              <th class="jobDetailContentTable__heading">業務内容</th>
+              <td class="js-async-sumally-target"></td>
+            </tr>
+
+            <tr>
+              <th class="jobDetailContentTable__heading">応募条件</th>
+              <td class="js-async-conditions-target"></td>
             </tr>
 
             <tr>
               <th class="jobDetailContentTable__heading">雇用形態</th>
-              <td class="js-async-jobDetailPosition-target"></td>
+              <td class="js-async-position-target"></td>
             </tr>
 
             <tr>
               <th class="jobDetailContentTable__heading">勤務時間</th>
-              <td class="js-async-jobDetailWorkTime-target"></td>
+              <td class="js-async-workTime-target"></td>
             </tr>
 
             <tr>
-              <th class="jobDetailContentTable__heading">休日</th>
-              <td class="js-async-jobDetailHoliday-target"></td>
-            </tr>
-
-            <tr>
-              <th class="jobDetailContentTable__heading">休暇</th>
-              <td class="js-async-jobDetailDayOff-target"></td>
-            </tr>
-
-            <tr>
-              <th class="jobDetailContentTable__heading">固定残業</th>
-              <td class="js-async-jobDetailOvertime-target"></td>
+              <th class="jobDetailContentTable__heading">休日・休暇</th>
+              <td class="js-async-holiday-target"></td>
             </tr>
 
             <tr>
               <th class="jobDetailContentTable__heading">試用期間</th>
-              <td class="js-async-jobDetailTrial-target"></td>
+              <td class="js-async-trial-target"></td>
             </tr>
 
             <tr>
               <th class="jobDetailContentTable__heading">福利厚生</th>
-              <td class="js-async-jobDetailBenefit-target"></td>
+              <td class="js-async-benefit-target"></td>
             </tr>
 
             <tr>
-              <th class="jobDetailContentTable__heading">その他備考</th>
-              <td class="js-async-jobDetailOther-target"></td>
+              <th class="jobDetailContentTable__heading">備考</th>
+              <td class="js-async-other-target"></td>
             </tr>
           </tbody>
         </table>
@@ -105,7 +100,7 @@
     </div>
   </section>
   <div class="jobDetailBackLink">
-    <a href="#" class="m-backLink m-button m-button--white jobDetailBackLink__item">求人一覧に戻る</a>
+    <a href="{{ basePath }}job/" class="m-backLink m-button m-button--white jobDetailBackLink__item">求人一覧に戻る</a>
   </div>
 </div>
 
