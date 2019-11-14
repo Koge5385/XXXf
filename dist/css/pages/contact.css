@@ -1501,27 +1501,25 @@ select::-ms-expand {
       min-width: auto;
       padding: 0 20px 60px; } }
 
-.registMail {
+.contact {
   width: 980px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 720px; }
   @media screen and (max-width: 768px) {
-    .registMail {
+    .contact {
       width: 100%; } }
 
-.registMailCaution {
-  width: 720px;
-  margin: 0 auto 33px; }
-  @media screen and (max-width: 768px) {
-    .registMailCaution {
-      width: 100%; } }
-
-.registMailCaution__item {
-  font-size: 14px;
-  font-size: 0.875rem;
+.contact__text {
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 2px;
-  padding-left: 1em;
-  text-indent: -1em;
-  color: #666; }
-  .registMailCaution__item a {
-    display: inline; }
+  margin-bottom: 20px; }
+
+.contact__note {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px; }
+  .contact__note span {
+    color: #f03f3f;
+    font-weight: bold; }
