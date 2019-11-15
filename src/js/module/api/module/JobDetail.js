@@ -3,7 +3,7 @@ import MetaReplace from './MetaReplace'
 
 // 定数
 const SUCCESS_TARGET = document.querySelector('.js-success-target')
-const ERROR_TARGET = document.querySelector('.js-success-target')
+const ERROR_TARGET = document.querySelector('.js-error-target')
 
 /**
  * @class JobDetail
