@@ -13,36 +13,10 @@
   @include _baseContentsWidth;
   width: 720px;
 }
-.loginInputRow {
-  margin-bottom: 40px;
-}
-.login__input {
-  @include fontsize(16, 16);
-  height: 50px;
-  padding: 0 12px;
-  &::placeholder {
-    color: #c9c9c9;
-  }
-  &--password {
-    margin-bottom: 8px;
-  }
-}
 .login__textLink {
   display: inline;
   text-decoration: underline;
   &:hover {
     text-decoration: none;
   }
-}
-.loginSubmit {
-  width: 320px;
-  margin: 40px auto 0;
-}
-.loginSubmit__button {
-  @extend .m-button;
-  @extend .m-button--blue;
-  @include fontsize(26, 16);
-  width: 100%;
-  padding: 13px 0 12px;
-  cursor: pointer;
 }

@@ -212,10 +212,10 @@
 
       <div class="container">
         <section class="editResume">
-          <form method="post">
+          <form method="post" action="">
             <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">最終学歴<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">最終学歴<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <select name="schoolCareer" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">最終学歴を選択してください</option>
                 <option value="">指定しない</option
@@ -226,7 +226,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <textarea
                 name="career"
                 class="m-inputTextArea"
@@ -236,7 +236,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">英語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">英語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <select name="skillEnglish" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">英語スキルを選択してください</option>
                 <option value="">指定しない</option
@@ -246,7 +246,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">中国語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">中国語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <select name="skillChinese" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">中国語スキルを選択してください</option>
                 <option value="">指定しない</option
@@ -256,9 +256,9 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">
+              <p class="inputBlock__heading">
                 その他の言語・備考<span class="m-inputIcon m-inputIcon--want">任意</span>
-              </h3>
+              </p>
               <textarea
                 name="other_skill"
                 class="m-inputTextArea"
@@ -268,9 +268,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">
-                保有資格・スキル<span class="m-inputIcon m-inputIcon--want">任意</span>
-              </h3>
+              <p class="inputBlock__heading">保有資格・スキル<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <textarea
                 name="certified"
                 class="m-inputTextArea"
@@ -282,7 +280,7 @@
 
             <h2 class="m-heading--lv2">職務経歴</h2>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <div class="inputBlockFlex">
                 <div class="inputBlockFlex__item">
                   <input type="radio" id="working" name="employment_status" class="m-inputRadio" value="working" />
@@ -300,7 +298,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">転職回数<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">転職回数<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <select name="jobChange" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">転職回数を選択してください</option>
                 <option value="">指定しない</option
@@ -311,7 +309,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">転職理由<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">転職理由<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <textarea
                 name="changeReason"
                 class="m-inputTextArea"
@@ -321,13 +319,13 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <p class="m-inputErrorText"></p>
             </div>
 
             <h2 class="m-heading--lv2">経験及び希望条件</h2>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">現在の年収<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">現在の年収<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <div class="inputBlockFlex inputBlockFlex--always">
                 <input
                   type="text"
@@ -341,7 +339,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">希望の年収<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">希望の年収<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <div class="inputBlockFlex inputBlockFlex--always">
                 <input
                   type="text"
@@ -355,9 +353,9 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">
+              <p class="inputBlock__heading">
                 現在(直近)の勤務先<span class="m-inputIcon m-inputIcon--want">任意</span>
-              </h3>
+              </p>
               <input
                 type="text"
                 name="nowCompany"
@@ -368,7 +366,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">希望勤務地<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">希望勤務地<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <select name="hopeArea" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">都道府県を選択してください</option
                 ><option value="茨城">茨城</option
@@ -389,9 +387,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">
-                希望勤務地(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span>
-              </h3>
+              <p class="inputBlock__heading">希望勤務地(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <input
                 type="text"
                 name="hopePlace"
@@ -402,7 +398,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
@@ -522,7 +518,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
@@ -588,7 +584,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
@@ -634,7 +630,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input type="checkbox" name="hope_job" id="hope_job_1" class="m-inputCheck" value="事務長" />
@@ -736,7 +732,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">希望条件(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">希望条件(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <textarea
                 name="hopeConditions"
                 class="m-inputTextArea"
@@ -746,9 +742,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">
-                転職に対する意欲<span class="m-inputIcon m-inputIcon--want">任意</span>
-              </h3>
+              <p class="inputBlock__heading">転職に対する意欲<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <select name="motivation" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">転職に対する意欲を選択してください</option>
                 <option value="">指定しない</option
@@ -759,7 +753,7 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h3 class="inputBlock__heading">自己PR<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="inputBlock__heading">自己PR<span class="m-inputIcon m-inputIcon--want">任意</span></p>
               <textarea
                 name="selfIntroduction"
                 class="m-inputTextArea"

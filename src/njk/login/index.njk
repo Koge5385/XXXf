@@ -10,21 +10,26 @@
 {% block content %}
 
 <div class="container">
+
   <section class="login">
     <form method="post" class="js-async-loginForm-target">
-      <div class="loginInputRow">
-        <p class="m-heading m-heading--lv4">メールアドレス</p>
-        <input type="text" name="email" class="m-inputText login__input js-async-loginEmail-target" placeholder="example@example.co.jp" value="">
+      <div class="inputBlock">
+        <p class="inputBlock__heading">メールアドレス</p>
+        <input type="text" name="email" class="m-inputText js-async-loginEmail-target" placeholder="example@example.co.jp" value="">
+        <p class="m-inputErrorText">メールアドレスが正しくありません。</p>
       </div>
-      <div class="loginInputRow">
-        <p class="m-heading m-heading--lv4">パスワード</p>
-        <input type="password" name="password" class="m-inputText login__input login__input--password js-async-loginPassword-target" value="">
+      <div class="inputBlock">
+        <p class="inputBlock__heading">パスワード</p>
+        <input type="password" name="password" class="m-inputText js-async-loginPassword-target" value="">
+        <p class="m-inputErrorText">パスワードが正しくありません。</p>
       </div>
       <p class="m-note">※パスワードを忘れた方は<a href="{{ basePath }}login/password_reminder.html" class="login__textLink">こちら</a></p>
       <p class="m-note">※会員登録がまだお済みでない場合は、まず<a href="{{ basePath }}regist_mail/" class="login__textLink">会員登録</a>を行ってください</p>
-      <div class="loginSubmit"><button type="button" class="loginSubmit__button js-async-loginSubmit-target">ログイン</button></div>
+
+      <button type="button" class="inputBlock__submit js-async-loginSubmit-target">ログイン</button>
     </form>
   </section>
+
 </div>
 
 {% endblock %}
