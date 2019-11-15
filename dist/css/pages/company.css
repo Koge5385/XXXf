@@ -1443,7 +1443,8 @@ select::-ms-expand {
     .inputBlockFlex {
       display: block; } }
   .inputBlockFlex--always {
-    display: flex; }
+    display: flex;
+    align-items: center; }
   .inputBlockFlex--multi {
     flex-wrap: wrap; }
     @media screen and (max-width: 768px) and (orientation: landscape) {

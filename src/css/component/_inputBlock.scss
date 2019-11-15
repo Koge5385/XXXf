@@ -59,6 +59,7 @@
   }
   &--always {
     display: flex;
+    align-items: center;
   }
   &--multi {
     flex-wrap: wrap;

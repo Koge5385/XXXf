@@ -212,521 +212,565 @@
 
       <div class="container">
         <section class="editResume">
-          <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">最終学歴<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <select name="schoolCareer" class="m-inputSelect inputBlock__inputHalf">
-              <option value="">最終学歴を選択してください</option>
-              <option value="">指定しない</option
-              ><option value="専門学校卒">専門学校卒</option
-              ><option value="大学卒">大学卒</option
-              ><option value="大学院卒">大学院卒</option>
-            </select>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <textarea
-              name="career"
-              class="m-inputTextArea"
-              placeholder="学歴(詳細)を記入してください"
-              value=""
-            ></textarea>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">英語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <select name="skillEnglish" class="m-inputSelect inputBlock__inputHalf">
-              <option value="">英語スキルを選択してください</option>
-              <option value="">指定しない</option
-              ><option value="日常会話">日常会話</option
-              ><option value="ビジネス英語">ビジネス英語</option>
-            </select>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">中国語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <select name="skillChinese" class="m-inputSelect inputBlock__inputHalf">
-              <option value="">中国語スキルを選択してください</option>
-              <option value="">指定しない</option
-              ><option value="日常会話">日常会話</option
-              ><option value="ビジネス英語">ビジネス英語</option>
-            </select>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">
-              その他の言語・備考<span class="m-inputIcon m-inputIcon--want">任意</span>
-            </h3>
-            <textarea
-              name="other_skill"
-              class="m-inputTextArea"
-              placeholder="その他の言語・備考を記入してください"
-              value=""
-            ></textarea>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">保有資格・スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <textarea
-              name="certified"
-              class="m-inputTextArea"
-              placeholder="保有資格・スキルを記入してください"
-              value=""
-            ></textarea>
-            <p class="m-inputErrorText"></p>
-          </div>
-
-          <h2 class="m-heading--lv2">職務経歴</h2>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <div class="inputBlockFlex">
-              <div class="inputBlockFlex__item">
-                <input type="radio" id="working" name="employment_status" class="m-inputRadio" value="working" />
-                <label for="working" class="m-inputRadioLabel">就業中</label>
-              </div>
-              <div class="inputBlockFlex__item">
-                <input type="radio" id="turnover" name="employment_status" class="m-inputRadio" value="turnover" />
-                <label for="turnover" class="m-inputRadioLabel">離職中</label>
-              </div>
-              <div class="inputBlockFlex__item">
-                <input type="radio" id="no" name="employment_status" class="m-inputRadio" value="no" />
-                <label for="no" class="m-inputRadioLabel">就業経験なし</label>
-              </div>
+          <form method="post">
+            <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">最終学歴<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <select name="schoolCareer" class="m-inputSelect inputBlock__inputHalf">
+                <option value="">最終学歴を選択してください</option>
+                <option value="">指定しない</option
+                ><option value="専門学校卒">専門学校卒</option
+                ><option value="大学卒">大学卒</option
+                ><option value="大学院卒">大学院卒</option>
+              </select>
+              <p class="m-inputErrorText"></p>
             </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">転職回数<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <select name="jobChange" class="m-inputSelect inputBlock__inputHalf">
-              <option value="">転職回数を選択してください</option>
-              <option value="">指定しない</option
-              ><option value="1回">1回</option
-              ><option value="2回">2回</option
-              ><option value="3回以上">3回以上</option>
-            </select>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">転職理由<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <textarea
-              name="changeReason"
-              class="m-inputTextArea"
-              placeholder="転職理由を記入してください"
-              value=""
-            ></textarea>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <p class="m-inputErrorText"></p>
-          </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <textarea
+                name="career"
+                class="m-inputTextArea"
+                placeholder="学歴(詳細)を記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">英語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <select name="skillEnglish" class="m-inputSelect inputBlock__inputHalf">
+                <option value="">英語スキルを選択してください</option>
+                <option value="">指定しない</option
+                ><option value="日常会話">日常会話</option
+                ><option value="ビジネス英語">ビジネス英語</option>
+              </select>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">中国語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <select name="skillChinese" class="m-inputSelect inputBlock__inputHalf">
+                <option value="">中国語スキルを選択してください</option>
+                <option value="">指定しない</option
+                ><option value="日常会話">日常会話</option
+                ><option value="ビジネス英語">ビジネス英語</option>
+              </select>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">
+                その他の言語・備考<span class="m-inputIcon m-inputIcon--want">任意</span>
+              </h3>
+              <textarea
+                name="other_skill"
+                class="m-inputTextArea"
+                placeholder="その他の言語・備考を記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">
+                保有資格・スキル<span class="m-inputIcon m-inputIcon--want">任意</span>
+              </h3>
+              <textarea
+                name="certified"
+                class="m-inputTextArea"
+                placeholder="保有資格・スキルを記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
 
-          <h2 class="m-heading--lv2">経験及び希望条件</h2>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">現在の年収<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <div class="inputBlockFlex inputBlockFlex--always">
+            <h2 class="m-heading--lv2">職務経歴</h2>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <div class="inputBlockFlex">
+                <div class="inputBlockFlex__item">
+                  <input type="radio" id="working" name="employment_status" class="m-inputRadio" value="working" />
+                  <label for="working" class="m-inputRadioLabel">就業中</label>
+                </div>
+                <div class="inputBlockFlex__item">
+                  <input type="radio" id="turnover" name="employment_status" class="m-inputRadio" value="turnover" />
+                  <label for="turnover" class="m-inputRadioLabel">離職中</label>
+                </div>
+                <div class="inputBlockFlex__item">
+                  <input type="radio" id="no" name="employment_status" class="m-inputRadio" value="no" />
+                  <label for="no" class="m-inputRadioLabel">就業経験なし</label>
+                </div>
+              </div>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">転職回数<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <select name="jobChange" class="m-inputSelect inputBlock__inputHalf">
+                <option value="">転職回数を選択してください</option>
+                <option value="">指定しない</option
+                ><option value="1回">1回</option
+                ><option value="2回">2回</option
+                ><option value="3回以上">3回以上</option>
+              </select>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">転職理由<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <textarea
+                name="changeReason"
+                class="m-inputTextArea"
+                placeholder="転職理由を記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <p class="m-inputErrorText"></p>
+            </div>
+
+            <h2 class="m-heading--lv2">経験及び希望条件</h2>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">現在の年収<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <div class="inputBlockFlex inputBlockFlex--always">
+                <input
+                  type="text"
+                  name="nowSalary"
+                  class="m-inputText inputBlock__inputSmall"
+                  placeholder="400"
+                  value=""
+                />
+                <p class="inputBlock__supportText">万円</p>
+              </div>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">希望の年収<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <div class="inputBlockFlex inputBlockFlex--always">
+                <input
+                  type="text"
+                  name="hopeSalary"
+                  class="m-inputText inputBlock__inputSmall"
+                  placeholder="500"
+                  value=""
+                />
+                <p class="inputBlock__supportText">万円</p>
+              </div>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">
+                現在(直近)の勤務先<span class="m-inputIcon m-inputIcon--want">任意</span>
+              </h3>
               <input
                 type="text"
-                name="nowSalary"
-                class="m-inputText inputBlock__inputSmall"
-                placeholder="400"
+                name="nowCompany"
+                class="m-inputText"
+                placeholder="現在(直近)の勤務先を記入してください"
                 value=""
               />
-              <p class="inputBlock__supportText">万円</p>
+              <p class="m-inputErrorText"></p>
             </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">希望の年収<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <div class="inputBlockFlex inputBlockFlex--always">
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">希望勤務地<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <select name="hopeArea" class="m-inputSelect inputBlock__inputHalf">
+                <option value="">都道府県を選択してください</option
+                ><option value="茨城">茨城</option
+                ><option value="栃木">栃木</option
+                ><option value="群馬">群馬</option
+                ><option value="埼玉">埼玉</option
+                ><option value="千葉">千葉</option
+                ><option value="東京">東京</option
+                ><option value="神奈川">神奈川</option
+                ><option value="三重">三重</option
+                ><option value="滋賀">滋賀</option
+                ><option value="京都">京都</option
+                ><option value="大阪">大阪</option
+                ><option value="兵庫">兵庫</option
+                ><option value="奈良">奈良</option
+                ><option value="和歌山">和歌山</option>
+              </select>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">
+                希望勤務地(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span>
+              </h3>
               <input
                 type="text"
-                name="hopeSalary"
-                class="m-inputText inputBlock__inputSmall"
-                placeholder="500"
+                name="hopePlace"
+                class="m-inputText"
+                placeholder="希望勤務地(詳細)を記入してください"
                 value=""
               />
-              <p class="inputBlock__supportText">万円</p>
+              <p class="m-inputErrorText"></p>
             </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">
-              現在(直近)の勤務先<span class="m-inputIcon m-inputIcon--want">任意</span>
-            </h3>
-            <input
-              type="text"
-              name="nowCompany"
-              class="m-inputText"
-              placeholder="現在(直近)の勤務先を記入してください"
-              value=""
-            />
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">希望勤務地<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <select name="hopeArea" class="m-inputSelect inputBlock__inputHalf">
-              <option value="">都道府県を選択してください</option
-              ><option value="茨城">茨城</option
-              ><option value="栃木">栃木</option
-              ><option value="群馬">群馬</option
-              ><option value="埼玉">埼玉</option
-              ><option value="千葉">千葉</option
-              ><option value="東京">東京</option
-              ><option value="神奈川">神奈川</option
-              ><option value="三重">三重</option
-              ><option value="滋賀">滋賀</option
-              ><option value="京都">京都</option
-              ><option value="大阪">大阪</option
-              ><option value="兵庫">兵庫</option
-              ><option value="奈良">奈良</option
-              ><option value="和歌山">和歌山</option>
-            </select>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">希望勤務地(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <input
-              type="text"
-              name="hopePlace"
-              class="m-inputText"
-              placeholder="希望勤務地(詳細)を記入してください"
-              value=""
-            />
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <div class="inputBlockFlex inputBlockFlex--multi">
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_1"
-                  class="m-inputCheck"
-                  value="医療機関（病院）"
-                />
-                <label for="exp_industry_1" class="m-inputCheckLabel">医療機関（病院）</label>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <div class="inputBlockFlex inputBlockFlex--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_1"
+                    class="m-inputCheck"
+                    value="医療機関（病院）"
+                  />
+                  <label for="exp_industry_1" class="m-inputCheckLabel">医療機関（病院）</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_2"
+                    class="m-inputCheck"
+                    value="医療機関（診療所）"
+                  />
+                  <label for="exp_industry_2" class="m-inputCheckLabel">医療機関（診療所）</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_3"
+                    class="m-inputCheck"
+                    value="介護施設"
+                  />
+                  <label for="exp_industry_3" class="m-inputCheckLabel">介護施設</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_4"
+                    class="m-inputCheck"
+                    value="医療系メーカー"
+                  />
+                  <label for="exp_industry_4" class="m-inputCheckLabel">医療系メーカー</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_5"
+                    class="m-inputCheck"
+                    value="IT・通信・インターネット"
+                  />
+                  <label for="exp_industry_5" class="m-inputCheckLabel">IT・通信・インターネット</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_6"
+                    class="m-inputCheck"
+                    value="金融・保険"
+                  />
+                  <label for="exp_industry_6" class="m-inputCheckLabel">金融・保険</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_7"
+                    class="m-inputCheck"
+                    value="商社・流通・小売"
+                  />
+                  <label for="exp_industry_7" class="m-inputCheckLabel">商社・流通・小売</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_8"
+                    class="m-inputCheck"
+                    value="サービス"
+                  />
+                  <label for="exp_industry_8" class="m-inputCheckLabel">サービス</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_9"
+                    class="m-inputCheck"
+                    value="広告・マスコミ・出版・放送・印刷"
+                  />
+                  <label for="exp_industry_9" class="m-inputCheckLabel">広告・マスコミ・出版・放送・印刷</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_10"
+                    class="m-inputCheck"
+                    value="教育・保育・公務員"
+                  />
+                  <label for="exp_industry_10" class="m-inputCheckLabel">教育・保育・公務員</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_industry"
+                    id="exp_industry_11"
+                    class="m-inputCheck"
+                    value="コンサルティング・会計・法律関係"
+                  />
+                  <label for="exp_industry_11" class="m-inputCheckLabel">コンサルティング・会計・法律関係</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_industry" id="exp_industry_12" class="m-inputCheck" value="その他" />
+                  <label for="exp_industry_12" class="m-inputCheckLabel">その他</label>
+                </div>
               </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_2"
-                  class="m-inputCheck"
-                  value="医療機関（診療所）"
-                />
-                <label for="exp_industry_2" class="m-inputCheckLabel">医療機関（診療所）</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_industry" id="exp_industry_3" class="m-inputCheck" value="介護施設" />
-                <label for="exp_industry_3" class="m-inputCheckLabel">介護施設</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_4"
-                  class="m-inputCheck"
-                  value="医療系メーカー"
-                />
-                <label for="exp_industry_4" class="m-inputCheckLabel">医療系メーカー</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_5"
-                  class="m-inputCheck"
-                  value="IT・通信・インターネット"
-                />
-                <label for="exp_industry_5" class="m-inputCheckLabel">IT・通信・インターネット</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_6"
-                  class="m-inputCheck"
-                  value="金融・保険"
-                />
-                <label for="exp_industry_6" class="m-inputCheckLabel">金融・保険</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_7"
-                  class="m-inputCheck"
-                  value="商社・流通・小売"
-                />
-                <label for="exp_industry_7" class="m-inputCheckLabel">商社・流通・小売</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_industry" id="exp_industry_8" class="m-inputCheck" value="サービス" />
-                <label for="exp_industry_8" class="m-inputCheckLabel">サービス</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_9"
-                  class="m-inputCheck"
-                  value="広告・マスコミ・出版・放送・印刷"
-                />
-                <label for="exp_industry_9" class="m-inputCheckLabel">広告・マスコミ・出版・放送・印刷</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_10"
-                  class="m-inputCheck"
-                  value="教育・保育・公務員"
-                />
-                <label for="exp_industry_10" class="m-inputCheckLabel">教育・保育・公務員</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_industry"
-                  id="exp_industry_11"
-                  class="m-inputCheck"
-                  value="コンサルティング・会計・法律関係"
-                />
-                <label for="exp_industry_11" class="m-inputCheckLabel">コンサルティング・会計・法律関係</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_industry" id="exp_industry_12" class="m-inputCheck" value="その他" />
-                <label for="exp_industry_12" class="m-inputCheckLabel">その他</label>
-              </div>
+              <p class="m-inputErrorText"></p>
             </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <div class="inputBlockFlex inputBlockFlex--multi">
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_1" class="m-inputCheck" value="経営企画・事業企画" />
-                <label for="exp_job_1" class="m-inputCheckLabel">経営企画・事業企画</label>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <div class="inputBlockFlex inputBlockFlex--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_job"
+                    id="exp_job_1"
+                    class="m-inputCheck"
+                    value="経営企画・事業企画"
+                  />
+                  <label for="exp_job_1" class="m-inputCheckLabel">経営企画・事業企画</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_2" class="m-inputCheck" value="人事・労務" />
+                  <label for="exp_job_2" class="m-inputCheckLabel">人事・労務</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_3" class="m-inputCheck" value="総務" />
+                  <label for="exp_job_3" class="m-inputCheckLabel">総務</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_4" class="m-inputCheck" value="経理" />
+                  <label for="exp_job_4" class="m-inputCheckLabel">経理</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_5" class="m-inputCheck" value="医療事務" />
+                  <label for="exp_job_5" class="m-inputCheckLabel">医療事務</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_6" class="m-inputCheck" value="広報" />
+                  <label for="exp_job_6" class="m-inputCheckLabel">広報</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_7" class="m-inputCheck" value="マーケティング" />
+                  <label for="exp_job_7" class="m-inputCheckLabel">マーケティング</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_8" class="m-inputCheck" value="営業" />
+                  <label for="exp_job_8" class="m-inputCheckLabel">営業</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_9" class="m-inputCheck" value="地域連携室・渉外" />
+                  <label for="exp_job_9" class="m-inputCheckLabel">地域連携室・渉外</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="exp_job"
+                    id="exp_job_10"
+                    class="m-inputCheck"
+                    value="情報管理・システム設計・開発"
+                  />
+                  <label for="exp_job_10" class="m-inputCheckLabel">情報管理・システム設計・開発</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_11" class="m-inputCheck" value="コンサルタント" />
+                  <label for="exp_job_11" class="m-inputCheckLabel">コンサルタント</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="exp_job" id="exp_job_12" class="m-inputCheck" value="その他" />
+                  <label for="exp_job_12" class="m-inputCheckLabel">その他</label>
+                </div>
               </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_2" class="m-inputCheck" value="人事・労務" />
-                <label for="exp_job_2" class="m-inputCheckLabel">人事・労務</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_3" class="m-inputCheck" value="総務" />
-                <label for="exp_job_3" class="m-inputCheckLabel">総務</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_4" class="m-inputCheck" value="経理" />
-                <label for="exp_job_4" class="m-inputCheckLabel">経理</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_5" class="m-inputCheck" value="医療事務" />
-                <label for="exp_job_5" class="m-inputCheckLabel">医療事務</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_6" class="m-inputCheck" value="広報" />
-                <label for="exp_job_6" class="m-inputCheckLabel">広報</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_7" class="m-inputCheck" value="マーケティング" />
-                <label for="exp_job_7" class="m-inputCheckLabel">マーケティング</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_8" class="m-inputCheck" value="営業" />
-                <label for="exp_job_8" class="m-inputCheckLabel">営業</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_9" class="m-inputCheck" value="地域連携室・渉外" />
-                <label for="exp_job_9" class="m-inputCheckLabel">地域連携室・渉外</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="exp_job"
-                  id="exp_job_10"
-                  class="m-inputCheck"
-                  value="情報管理・システム設計・開発"
-                />
-                <label for="exp_job_10" class="m-inputCheckLabel">情報管理・システム設計・開発</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_11" class="m-inputCheck" value="コンサルタント" />
-                <label for="exp_job_11" class="m-inputCheckLabel">コンサルタント</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="exp_job" id="exp_job_12" class="m-inputCheck" value="その他" />
-                <label for="exp_job_12" class="m-inputCheckLabel">その他</label>
-              </div>
+              <p class="m-inputErrorText"></p>
             </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <div class="inputBlockFlex inputBlockFlex--multi">
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_position" id="hope_position_1" class="m-inputCheck" value="正社員" />
-                <label for="hope_position_1" class="m-inputCheckLabel">正社員</label>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <div class="inputBlockFlex inputBlockFlex--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_position"
+                    id="hope_position_1"
+                    class="m-inputCheck"
+                    value="正社員"
+                  />
+                  <label for="hope_position_1" class="m-inputCheckLabel">正社員</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_position"
+                    id="hope_position_2"
+                    class="m-inputCheck"
+                    value="契約社員"
+                  />
+                  <label for="hope_position_2" class="m-inputCheckLabel">契約社員</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_position"
+                    id="hope_position_3"
+                    class="m-inputCheck"
+                    value="派遣社員"
+                  />
+                  <label for="hope_position_3" class="m-inputCheckLabel">派遣社員</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_position"
+                    id="hope_position_4"
+                    class="m-inputCheck"
+                    value="その他"
+                  />
+                  <label for="hope_position_4" class="m-inputCheckLabel">その他</label>
+                </div>
               </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="hope_position"
-                  id="hope_position_2"
-                  class="m-inputCheck"
-                  value="契約社員"
-                />
-                <label for="hope_position_2" class="m-inputCheckLabel">契約社員</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="hope_position"
-                  id="hope_position_3"
-                  class="m-inputCheck"
-                  value="派遣社員"
-                />
-                <label for="hope_position_3" class="m-inputCheckLabel">派遣社員</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_position" id="hope_position_4" class="m-inputCheck" value="その他" />
-                <label for="hope_position_4" class="m-inputCheckLabel">その他</label>
-              </div>
+              <p class="m-inputErrorText"></p>
             </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <div class="inputBlockFlex inputBlockFlex--multi">
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_1" class="m-inputCheck" value="事務長" />
-                <label for="hope_job_1" class="m-inputCheckLabel">事務長</label>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <div class="inputBlockFlex inputBlockFlex--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_1" class="m-inputCheck" value="事務長" />
+                  <label for="hope_job_1" class="m-inputCheckLabel">事務長</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_2" class="m-inputCheck" value="事務長候補" />
+                  <label for="hope_job_2" class="m-inputCheckLabel">事務長候補</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_3" class="m-inputCheck" value="経営企画" />
+                  <label for="hope_job_3" class="m-inputCheckLabel">経営企画</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_4" class="m-inputCheck" value="医事課員" />
+                  <label for="hope_job_4" class="m-inputCheckLabel">医事課員</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_job"
+                    id="hope_job_5"
+                    class="m-inputCheck"
+                    value="医事課長（候補含む）"
+                  />
+                  <label for="hope_job_5" class="m-inputCheckLabel">医事課長（候補含む）</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_6" class="m-inputCheck" value="総務課員" />
+                  <label for="hope_job_6" class="m-inputCheckLabel">総務課員</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_job"
+                    id="hope_job_7"
+                    class="m-inputCheck"
+                    value="総務課長（候補含む）"
+                  />
+                  <label for="hope_job_7" class="m-inputCheckLabel">総務課長（候補含む）</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_8" class="m-inputCheck" value="人事課員" />
+                  <label for="hope_job_8" class="m-inputCheckLabel">人事課員</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_job"
+                    id="hope_job_9"
+                    class="m-inputCheck"
+                    value="人事課長（候補含む）"
+                  />
+                  <label for="hope_job_9" class="m-inputCheckLabel">人事課長（候補含む）</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_10" class="m-inputCheck" value="財務・経理" />
+                  <label for="hope_job_10" class="m-inputCheckLabel">財務・経理</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input
+                    type="checkbox"
+                    name="hope_job"
+                    id="hope_job_11"
+                    class="m-inputCheck"
+                    value="地域連携室・渉外"
+                  />
+                  <label for="hope_job_11" class="m-inputCheckLabel">地域連携室・渉外</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_12" class="m-inputCheck" value="広報" />
+                  <label for="hope_job_12" class="m-inputCheckLabel">広報</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_13" class="m-inputCheck" value="情報管理室" />
+                  <label for="hope_job_13" class="m-inputCheckLabel">情報管理室</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_14" class="m-inputCheck" value="事務総合職" />
+                  <label for="hope_job_14" class="m-inputCheckLabel">事務総合職</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_15" class="m-inputCheck" value="健診総合職" />
+                  <label for="hope_job_15" class="m-inputCheckLabel">健診総合職</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_16" class="m-inputCheck" value="診療情報管理士" />
+                  <label for="hope_job_16" class="m-inputCheckLabel">診療情報管理士</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_17" class="m-inputCheck" value="社会福祉士" />
+                  <label for="hope_job_17" class="m-inputCheckLabel">社会福祉士</label>
+                </div>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                  <input type="checkbox" name="hope_job" id="hope_job_18" class="m-inputCheck" value="その他" />
+                  <label for="hope_job_18" class="m-inputCheckLabel">その他</label>
+                </div>
               </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_2" class="m-inputCheck" value="事務長候補" />
-                <label for="hope_job_2" class="m-inputCheckLabel">事務長候補</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_3" class="m-inputCheck" value="経営企画" />
-                <label for="hope_job_3" class="m-inputCheckLabel">経営企画</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_4" class="m-inputCheck" value="医事課員" />
-                <label for="hope_job_4" class="m-inputCheckLabel">医事課員</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="hope_job"
-                  id="hope_job_5"
-                  class="m-inputCheck"
-                  value="医事課長（候補含む）"
-                />
-                <label for="hope_job_5" class="m-inputCheckLabel">医事課長（候補含む）</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_6" class="m-inputCheck" value="総務課員" />
-                <label for="hope_job_6" class="m-inputCheckLabel">総務課員</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="hope_job"
-                  id="hope_job_7"
-                  class="m-inputCheck"
-                  value="総務課長（候補含む）"
-                />
-                <label for="hope_job_7" class="m-inputCheckLabel">総務課長（候補含む）</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_8" class="m-inputCheck" value="人事課員" />
-                <label for="hope_job_8" class="m-inputCheckLabel">人事課員</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input
-                  type="checkbox"
-                  name="hope_job"
-                  id="hope_job_9"
-                  class="m-inputCheck"
-                  value="人事課長（候補含む）"
-                />
-                <label for="hope_job_9" class="m-inputCheckLabel">人事課長（候補含む）</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_10" class="m-inputCheck" value="財務・経理" />
-                <label for="hope_job_10" class="m-inputCheckLabel">財務・経理</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_11" class="m-inputCheck" value="地域連携室・渉外" />
-                <label for="hope_job_11" class="m-inputCheckLabel">地域連携室・渉外</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_12" class="m-inputCheck" value="広報" />
-                <label for="hope_job_12" class="m-inputCheckLabel">広報</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_13" class="m-inputCheck" value="情報管理室" />
-                <label for="hope_job_13" class="m-inputCheckLabel">情報管理室</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_14" class="m-inputCheck" value="事務総合職" />
-                <label for="hope_job_14" class="m-inputCheckLabel">事務総合職</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_15" class="m-inputCheck" value="健診総合職" />
-                <label for="hope_job_15" class="m-inputCheckLabel">健診総合職</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_16" class="m-inputCheck" value="診療情報管理士" />
-                <label for="hope_job_16" class="m-inputCheckLabel">診療情報管理士</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_17" class="m-inputCheck" value="社会福祉士" />
-                <label for="hope_job_17" class="m-inputCheckLabel">社会福祉士</label>
-              </div>
-              <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                <input type="checkbox" name="hope_job" id="hope_job_18" class="m-inputCheck" value="その他" />
-                <label for="hope_job_18" class="m-inputCheckLabel">その他</label>
-              </div>
+              <p class="m-inputErrorText"></p>
             </div>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">希望条件(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <textarea
-              name="hopeConditions"
-              class="m-inputTextArea"
-              placeholder="希望条件(詳細)を記入してください"
-              value=""
-            ></textarea>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">転職に対する意欲<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <select name="motivation" class="m-inputSelect inputBlock__inputHalf">
-              <option value="">転職に対する意欲を選択してください</option>
-              <option value="">指定しない</option
-              ><option value="転職に興味がある程度">転職に興味がある程度</option
-              ><option value="ゆくゆくは転職したい">ゆくゆくは転職したい</option
-              ><option value="今すぐに転職したい">今すぐに転職したい</option>
-            </select>
-            <p class="m-inputErrorText"></p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">自己PR<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
-            <textarea
-              name="selfIntroduction"
-              class="m-inputTextArea"
-              placeholder="自己PRを記入してください"
-              value=""
-            ></textarea>
-            <p class="m-inputErrorText"></p>
-          </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">希望条件(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <textarea
+                name="hopeConditions"
+                class="m-inputTextArea"
+                placeholder="希望条件(詳細)を記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">
+                転職に対する意欲<span class="m-inputIcon m-inputIcon--want">任意</span>
+              </h3>
+              <select name="motivation" class="m-inputSelect inputBlock__inputHalf">
+                <option value="">転職に対する意欲を選択してください</option>
+                <option value="">指定しない</option
+                ><option value="転職に興味がある程度">転職に興味がある程度</option
+                ><option value="ゆくゆくは転職したい">ゆくゆくは転職したい</option
+                ><option value="今すぐに転職したい">今すぐに転職したい</option>
+              </select>
+              <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <h3 class="inputBlock__heading">自己PR<span class="m-inputIcon m-inputIcon--want">任意</span></h3>
+              <textarea
+                name="selfIntroduction"
+                class="m-inputTextArea"
+                placeholder="自己PRを記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
 
-          <button type="submit" class="inputBlock__submit">確認画面へ</button>
+            <button type="submit" class="inputBlock__submit">確認画面へ</button>
+          </form>
         </section>
       </div>
 
