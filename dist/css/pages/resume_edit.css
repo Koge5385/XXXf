@@ -1524,9 +1524,10 @@ select::-ms-expand {
       min-width: auto;
       padding: 0 20px 60px; } }
 
-.registProfile {
+.editResume {
   width: 980px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 720px; }
   @media screen and (max-width: 768px) {
-    .registProfile {
+    .editResume {
       width: 100%; } }

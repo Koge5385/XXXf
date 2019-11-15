@@ -1,0 +1,178 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'resume_edit' -%}
+{%- set pageName = 'resume_edit' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = 'レジュメ編集' -%}
+{%- set en_pageTitle = 'EDIT RESUME' -%}
+{%- set pageDescription = 'レジュメ編集ディスクリプション' -%}
+{%- set breadcrumbs = [{item: 'レジュメ編集'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <section class="editResume">
+
+    <form method="post">
+      <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">最終学歴{{ macro.inputWant() }}</h3>
+        <select name="schoolCareer" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionSchoolCareer() }}
+        </select>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">学歴(詳細){{ macro.inputWant() }}</h3>
+        <textarea name="career" class="m-inputTextArea" placeholder="学歴(詳細)を記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">英語スキル{{ macro.inputWant() }}</h3>
+        <select name="skillEnglish" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionSkillEnglish() }}
+        </select>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">中国語スキル{{ macro.inputWant() }}</h3>
+        <select name="skillChinese" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionSkillChinese() }}
+        </select>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">その他の言語・備考{{ macro.inputWant() }}</h3>
+        <textarea name="other_skill" class="m-inputTextArea" placeholder="その他の言語・備考を記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">保有資格・スキル{{ macro.inputWant() }}</h3>
+        <textarea name="certified" class="m-inputTextArea" placeholder="保有資格・スキルを記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+
+
+      <h2 class="m-heading--lv2">職務経歴</h2>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">現在の就業状況{{ macro.inputWant() }}</h3>
+        <div class="inputBlockFlex">
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="working" name="employment_status" class="m-inputRadio" value="working">
+            <label for="working" class="m-inputRadioLabel">就業中</label>
+          </div>
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="turnover" name="employment_status" class="m-inputRadio" value="turnover">
+            <label for="turnover" class="m-inputRadioLabel">離職中</label>
+          </div>
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="no" name="employment_status" class="m-inputRadio" value="no">
+            <label for="no" class="m-inputRadioLabel">就業経験なし</label>
+          </div>
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">転職回数{{ macro.inputWant() }}</h3>
+        <select name="jobChange" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionJobChange() }}
+        </select>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">転職理由{{ macro.inputWant() }}</h3>
+        <textarea name="changeReason" class="m-inputTextArea" placeholder="転職理由を記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">職務経歴(詳細){{ macro.inputWant() }}</h3>
+        <p class="m-inputErrorText"></p>
+      </div>
+
+
+      <h2 class="m-heading--lv2">経験及び希望条件</h2>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">現在の年収{{ macro.inputWant() }}</h3>
+        <div class="inputBlockFlex inputBlockFlex--always">
+          <input type="text" name="nowSalary" class="m-inputText inputBlock__inputSmall" placeholder="400" value="">
+          <p class="inputBlock__supportText">万円</p>
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">希望の年収{{ macro.inputWant() }}</h3>
+        <div class="inputBlockFlex inputBlockFlex--always">
+          <input type="text" name="hopeSalary" class="m-inputText inputBlock__inputSmall" placeholder="500" value="">
+          <p class="inputBlock__supportText">万円</p>
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">現在(直近)の勤務先{{ macro.inputWant() }}</h3>
+        <input type="text" name="nowCompany" class="m-inputText" placeholder="現在(直近)の勤務先を記入してください" value="">
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">希望勤務地{{ macro.inputWant() }}</h3>
+        <select name="hopeArea" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionPlace() }}
+        </select>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">希望勤務地(詳細){{ macro.inputWant() }}</h3>
+        <input type="text" name="hopePlace" class="m-inputText" placeholder="希望勤務地(詳細)を記入してください" value="">
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">経験業種{{ macro.inputWant() }}</h3>
+        <div class="inputBlockFlex inputBlockFlex--multi">
+          {{ macro.checkboxExpIndustry() }}
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">経験職種{{ macro.inputWant() }}</h3>
+        <div class="inputBlockFlex inputBlockFlex--multi">
+          {{ macro.checkboxExpJob() }}
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">希望雇用形態{{ macro.inputWant() }}</h3>
+        <div class="inputBlockFlex inputBlockFlex--multi">
+          {{ macro.checkboxHopePosition() }}
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">希望職種{{ macro.inputWant() }}</h3>
+        <div class="inputBlockFlex inputBlockFlex--multi">
+          {{ macro.checkboxHopeJob() }}
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">希望条件(詳細){{ macro.inputWant() }}</h3>
+        <textarea name="hopeConditions" class="m-inputTextArea" placeholder="希望条件(詳細)を記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">転職に対する意欲{{ macro.inputWant() }}</h3>
+        <select name="motivation" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionMotivation() }}
+        </select>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h3 class="inputBlock__heading">自己PR{{ macro.inputWant() }}</h3>
+        <textarea name="selfIntroduction" class="m-inputTextArea" placeholder="自己PRを記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+
+      <button type="submit" class="inputBlock__submit">確認画面へ</button>
+    </form>
+
+  </section>
+</div>
+
+{% endblock %}
