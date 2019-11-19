@@ -8,10 +8,11 @@
 {% endif %}
 <meta name="description" content="{{ pageDescription }}">
 <meta name="format-detection" content="email=no,telephone=no,address=no">
-{% if pageName === 'mypage' or pageName === 'password_change' %}
+{% if pageName === 'mypage' or pageName === 'password_change' or pageName === '404' %}
 <meta name="robots" content="noindex,nofollow">
 {% endif %}
 
+{% if pageName !== '404' %}
 <meta property="og:url" content="https://job.mplat.jp/{%- for breadcrumb in breadcrumbs %}{%- if loop.last %}{{ '' if fileName === 'index' else fileName + '.html' }}{%- else %}{{ breadcrumb.href }}{%- endif %}{%- endfor %}">
 <meta property="og:title" content="{{ pageTitle | striptags(false) }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】">
 <meta property="og:type" content="{{ 'website' if pageName === 'top' else 'article' }}">
@@ -22,3 +23,4 @@
 <link rel="icon" href="{{ basePath }}img/common/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="{{ basePath }}img/common/apple_icon.png">
 <link rel="icon" type="image/png" href="{{ basePath }}img/common/android_icon.png">
+{% endif %}
