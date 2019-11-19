@@ -37,19 +37,19 @@ class JobList {
     JobList.inputValueTransfer('formKeywords', this.jobSearch)
 
     // パラメーターのURIエンコード
-    const category = `job_p_job_category=${encodeURI(this.jobOccupation)}`
-    const area = `job_p_area=${encodeURI(this.jobArea)}`
-    const salary = `job_p_min_salary=${this.jobSalary}`
-    const keyword = `keywords=${encodeURI(this.jobSearch)}`
+    this.category = `job_p_job_category=${encodeURI(this.jobOccupation)}`
+    this.area = `job_p_area=${encodeURI(this.jobArea)}`
+    this.salary = `job_p_min_salary=${this.jobSalary}`
+    this.keyword = `keywords=${encodeURI(this.jobSearch)}`
 
-    return `/jobs/list?${category}&${area}&${salary}&${keyword}&start=${this.jobStart}&count=10&time=${new Date().getTime()}`
+    return `/jobs/list?${this.category}&${this.area}&${this.salary}&${this.keyword}&start=${this.jobStart}&count=10&time=${new Date().getTime()}`
   }
 
   /**
    * @desc API実行
    */
   async doAxios() {
-    await new AxiosBase().getMethod(this.getParameter(), this.setDataToPage)
+    await new AxiosBase().getMethod(this.getParameter(), this.setDataToPage.bind(this))
   }
 
   /**
@@ -85,7 +85,8 @@ class JobList {
         Object.keys(jobListData).forEach(key => {
           switch (key) {
             case 'id':
-              targetElement('link').setAttribute('href', `./detail.html?id=${jobListData[key]}`)
+              const searchParam = `${this.category}&${this.area}&${this.salary}&${this.keyword}&start=${this.jobStart}`
+              targetElement('link').setAttribute('href', `./detail.html?id=${jobListData[key]}&${searchParam}`)
               break
 
             case 'job_p_position':

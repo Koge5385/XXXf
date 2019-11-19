@@ -1,4 +1,4 @@
-@import "../_index";
+@import '../_index';
 
 .container {
   width: 100%;
@@ -58,7 +58,7 @@
   background-color: #1b457e;
   border-radius: 0 6px 0 0 / 0 6px 0 0;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -214,6 +214,9 @@
   @include _baseContentsWidth;
 }
 .jobDetailBackLink__item {
+  @extend .m-backLink;
+  @extend .m-button;
+  @extend .m-button--white;
   @include fontsize(16, 16);
   font-weight: normal;
   width: 200px;
@@ -279,7 +282,7 @@
   &::before,
   &::after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -360,7 +363,7 @@
   &::before,
   &::after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;

@@ -36,8 +36,8 @@ class JobDetailApply {
    * @desc ユーザーIDとレジュメIDの取得
    */
   async getUserAndResumeId() {
-    const callToken = localStorage.getItem(ACCESS_TOKEN)
-    await new AxiosBase().getMethod(`/user/sessions/${callToken}?time=${new Date().getTime()}`, (status, response) => {
+    this.token = localStorage.getItem(ACCESS_TOKEN)
+    await new AxiosBase().getMethod(`/user/sessions/${this.token}?time=${new Date().getTime()}`, (status, response) => {
       this.applyUserId = response.data.user_id
     })
     await new AxiosBase().getMethod(`/users/${this.applyUserId}?resume=1&time=${new Date().getTime()}`, (status, response) => {
@@ -50,7 +50,9 @@ class JobDetailApply {
    */
   clickButton() {
     DIALOG_OPEN_TRIGGER_CLASS.addEventListener(CLICK_EVENT, () => {
-      DIALOG_TARGET_CLASS.style.display = 'block'
+      const noTokenUrl = `../login/?jobId=${this.applyJobId}`
+      if(this.token === null) document.location.href = noTokenUrl
+      if(this.token !== null) DIALOG_TARGET_CLASS.style.display = 'block'
     })
     Array.prototype.slice.call(DIALOG_CLOSE_TRIGGER_CLASS, 0).forEach(elem => {
       elem.addEventListener(CLICK_EVENT, () => {

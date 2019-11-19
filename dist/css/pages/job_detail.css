@@ -237,7 +237,7 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .jobDetailDialog__button--cancel, .jobDetailDialog__button--submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .jobDetailBackLink__item, .jobDetailDialog__button--cancel, .jobDetailDialog__button--submit {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
@@ -262,11 +262,11 @@ select::-ms-expand {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
-  .m-button--white, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .jobDetailDialog__button--cancel {
+  .m-button--white, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .jobDetailBackLink__item, .jobDetailDialog__button--cancel {
     background-color: #fff;
     color: #1b457e;
     border: 1px solid #b3c1d3; }
-    .m-button--white:hover, .searchButtonBlockJobList__link:hover, .searchButtonBlockAreaList__link:hover, .jobDetailDialog__button--cancel:hover {
+    .m-button--white:hover, .searchButtonBlockJobList__link:hover, .searchButtonBlockAreaList__link:hover, .jobDetailBackLink__item:hover, .jobDetailDialog__button--cancel:hover {
       background-color: #d3d9e0;
       border: 1px solid #d3d9e0;
       text-decoration: none; }
@@ -327,9 +327,9 @@ select::-ms-expand {
     border-bottom: 2px solid #1b457e;
     transform: rotate(-135deg); }
 
-.m-backLink {
+.m-backLink, .jobDetailBackLink__item {
   position: relative; }
-  .m-backLink::before {
+  .m-backLink::before, .jobDetailBackLink__item::before {
     content: "";
     position: absolute;
     top: 4px;
@@ -1578,7 +1578,7 @@ select::-ms-expand {
   background-color: #1b457e;
   border-radius: 0 6px 0 0 / 0 6px 0 0; }
   .jobDetailHeaderStatus::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
@@ -1816,7 +1816,7 @@ select::-ms-expand {
   cursor: pointer; }
   .jobDetailDialog__close::before, .jobDetailDialog__close::after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1891,7 +1891,7 @@ select::-ms-expand {
   cursor: pointer; }
   .jobDetailDialogDone__close::before, .jobDetailDialogDone__close::after {
     display: block;
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;

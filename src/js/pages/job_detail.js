@@ -1,5 +1,6 @@
 import JobDetail from '../module/api/module/JobDetail'
 import JobDetailApply from '../module/api/module/JobDetailApply'
+import JobDetailContact from '../module/api/module/JobDetailContact'
 
 // 定数
 const LOAD_EVENT = 'DOMContentLoaded'
@@ -13,6 +14,9 @@ window.addEventListener(LOAD_EVENT, () => {
 
   // 求人応募処理
   new JobDetailApply()
+
+  // 求人問い合わせ処理
+  new JobDetailContact()
 })
 
 // ブラウザバック時のイベント処理

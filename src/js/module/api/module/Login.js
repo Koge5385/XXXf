@@ -32,9 +32,15 @@ class Login {
    * @param {Object} response コールバックで返却されたデータオブジェクト
    */
   async setDataToPage(status, response) {
+    const params = new URLSearchParams(window.location.search)
+    const fromjobDetail = params.get('jobId')
+
     if (status === 200) {
       localStorage.setItem(ACCESS_TOKEN, response.data.access_token)
-      document.location.href = LOGIN_HREF
+
+      // 求人詳細からログインしたユーザーは該当のページに戻す
+      if(fromjobDetail !== null) document.location.href = `../job/detail.html?id=${fromjobDetail}`
+      if(fromjobDetail === null) document.location.href = LOGIN_HREF
     }
     if (status === 400 || status === 401) {
       console.log('error')

@@ -4,6 +4,7 @@ import MetaReplace from './MetaReplace'
 // 定数
 const SUCCESS_TARGET = document.querySelector('.js-success-target')
 const ERROR_TARGET = document.querySelector('.js-error-target')
+const BACK_LINK_TARGET_CLASS = document.querySelector('.js-jobListBackLink-target')
 
 /**
  * @class JobDetail
@@ -129,6 +130,22 @@ class JobDetail {
             break
         }
       })
+
+      // 求人一覧に戻るボタンのリンク設定
+      const params = new URLSearchParams(window.location.search)
+      const paramCheck = name => params.get(name) === null ? '' : params.get(name)
+      const searchOccupation = paramCheck('job_p_job_category')
+      const searchArea = paramCheck('job_p_area')
+      const searchSalary = paramCheck('job_p_min_salary')
+      const searchKeyword = paramCheck('keywords')
+      const searchStart = paramCheck('start')
+
+      const paramCategory = `job_p_job_category=${encodeURI(searchOccupation)}`
+      const paramArea = `job_p_area=${encodeURI(searchArea)}`
+      const paramSalary = `job_p_min_salary=${searchSalary}`
+      const paramKeyword = `keywords=${encodeURI(searchKeyword)}`
+
+      BACK_LINK_TARGET_CLASS.setAttribute('href', `./?${paramCategory}&${paramArea}&${paramSalary}&${paramKeyword}&start=${searchStart}`)
 
       // meta情報の変更
       const pageTitle = jobData['job_u_kyuujinnnoosusumepointo'].replace(/\r?\n/g, '')
