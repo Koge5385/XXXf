@@ -10,10 +10,11 @@
 {% block content %}
 
 <div class="container">
+
   <section class="editProfile">
     <form method="post" action="">
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
           <div class="inputBlockFlex__item">
             <input type="text" name="lastName" class="m-inputText" placeholder="性" value="">
@@ -26,7 +27,7 @@
         </div>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
           <div class="inputBlockFlex__item">
             <input type="text" name="lastName_kana" class="m-inputText" placeholder="セイ" value="">
@@ -39,7 +40,7 @@
         </div>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">生年月日{{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">生年月日{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex inputBlockFlex--always">
           <select name="birthYear" class="m-inputSelect inputBlock__inputSmall">
             {{ macro.optionYear() }}
@@ -54,7 +55,7 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">性別{{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">性別{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
           <div class="inputBlockFlex__item">
             <input type="radio" id="sex_man" name="sex" class="m-inputRadio" value="man">
@@ -68,19 +69,19 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">住所(都道府県){{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">住所(都道府県){{ macro.inputMust() }}</h2>
         <select name="place" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionPlace() }}
         </select>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">電話番号{{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">電話番号{{ macro.inputMust() }}</h2>
         <input type="text" name="tel" class="m-inputText inputBlock__inputHalf" placeholder="03-5437-2950" value="">
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">メールアドレス{{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">メールアドレス{{ macro.inputMust() }}</h2>
         <input type="text" name="mail" class="m-inputText" placeholder="example@example.co.jp" value="">
         <p class="m-inputErrorText"></p>
         <p class="inputBlock__note">※半角英数字</p>
@@ -90,7 +91,7 @@
         <p class="inputBlock__note">※半角英数字</p>
       </div>
       <div class="inputBlock">
-        <h3 class="inputBlock__heading">パスワード{{ macro.inputMust() }}</h3>
+        <h2 class="inputBlock__heading">パスワード{{ macro.inputMust() }}</h2>
         <input type="password" name="mobileMail" class="m-inputText" value="">
         <p class="m-inputErrorText"></p>
         <p class="inputBlock__note">※半角英数●文字以上を使用してください</p>
@@ -111,9 +112,10 @@
         </div>
       </div>
 
-      <button type="submit" class="inputBlock__submit" disabled>確認画面へ</button>
+      <button type="button" class="inputBlock__submit" disabled>確認画面へ</button>
     </form>
   </section>
+
 </div>
 
 {% endblock %}
