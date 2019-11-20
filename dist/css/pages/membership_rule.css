@@ -237,28 +237,28 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .serviceFlowRegistForm__button {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
   pointer-events: auto; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .serviceFlowRegistForm__button {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover, .serviceFlowRegistForm__button:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled, .serviceFlowRegistForm__button:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3;
       pointer-events: none; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .serviceFlowRegistForm__button:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -287,16 +287,16 @@ select::-ms-expand {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading, .forbeginner__heading {
+.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading {
   font-weight: bold;
   color: #5d687c; }
-  .m-heading--lv2, .searchButtonBlock__heading, .forbeginner__heading {
+  .m-heading--lv2, .searchButtonBlock__heading {
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.6;
     margin-bottom: 40px; }
     @media screen and (max-width: 768px) {
-      .m-heading--lv2, .searchButtonBlock__heading, .forbeginner__heading {
+      .m-heading--lv2, .searchButtonBlock__heading {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
@@ -311,7 +311,7 @@ select::-ms-expand {
     line-height: 1.6;
     margin-bottom: 10px; }
 
-.m-fontFamilyMontserrat, .keyVisual__enTitle, .serviceFlowTitle__step {
+.m-fontFamilyMontserrat, .keyVisual__enTitle {
   font-family: "Montserrat"; }
 
 .m-frontLink {
@@ -1604,225 +1604,18 @@ select::-ms-expand {
     .termsArticleList__item {
       padding-left: 0; } }
 
-.keyVisual {
-  margin-bottom: 0; }
-
 .container {
   width: 100%;
-  min-width: 980px; }
+  min-width: 980px;
+  padding: 0 0 100px; }
   @media screen and (max-width: 768px) {
     .container {
-      min-width: auto; } }
+      min-width: auto;
+      padding: 0 20px 60px; } }
 
-.forbeginner__heading {
-  text-align: center; }
-
-.serviceStructure {
-  width: 980px;
-  margin: 0 auto;
-  padding: 80px 0; }
-  @media screen and (max-width: 768px) {
-    .serviceStructure {
-      width: 100%; } }
-  @media screen and (max-width: 768px) {
-    .serviceStructure {
-      padding: 60px 20px; } }
-
-.serviceStructure__text {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 40px; }
-  @media screen and (max-width: 768px) {
-    .serviceStructure__text {
-      text-align: left; } }
-
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .serviceStructure__img {
-    width: 70%;
-    margin: 0 auto; } }
-
-.serviceFlow {
-  background-color: #f7f8f9;
-  padding: 80px 0; }
-  @media screen and (max-width: 768px) {
-    .serviceFlow {
-      padding: 60px 10px; } }
-
-.serviceFlowInner {
+.membershipRule {
   width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .serviceFlowInner {
+    .membershipRule {
       width: 100%; } }
-
-.serviceFlowBox {
-  background-color: #fff;
-  border-top: 2px solid #5d687c;
-  margin-bottom: 15px;
-  display: flex;
-  align-items: center; }
-  .serviceFlowBox:last-child {
-    margin-bottom: 0; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowBox {
-      display: block;
-      padding: 18px;
-      position: relative; } }
-
-.serviceFlowBoxLeft {
-  width: 330px;
-  margin-right: 55px; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowBoxLeft {
-      position: absolute;
-      margin-right: 0;
-      width: 130px;
-      top: 20px;
-      left: 18px; } }
-
-.serviceFlowBoxRight {
-  padding-right: 55px; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowBoxRight {
-      padding-right: 0; } }
-
-.serviceFlowTitle {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 22px; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowTitle {
-      display: block;
-      margin-left: 150px; } }
-
-.serviceFlowTitle__step {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: #0091d4;
-  padding-right: 40px;
-  position: relative;
-  font-weight: 500; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowTitle__step {
-      padding-right: 0; } }
-  .serviceFlowTitle__step::after {
-    content: "";
-    position: absolute;
-    top: -38px;
-    right: 8px;
-    width: 74px;
-    height: 74px;
-    border: 1px solid transparent;
-    border-right: 1px solid #0091d4;
-    transform: rotate(42deg); }
-    @media screen and (max-width: 768px) {
-      .serviceFlowTitle__step::after {
-        display: none; } }
-
-.serviceFlowTitle__number {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1.6;
-  font-weight: 400; }
-
-.serviceFlowTitle__titile {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: #5d687c;
-  font-weight: bold; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowTitle__titile {
-      height: 80px; } }
-
-.serviceFlow__text {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6; }
-
-.serviceFlowRegist {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 40px; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowRegist {
-      display: block;
-      margin-top: 30px; } }
-
-.serviceFlowRegistForm {
-  width: 240px;
-  text-align: center; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowRegistForm {
-      width: 100%;
-      margin-bottom: 30px; } }
-
-.serviceFlowRegistForm__text {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: bold;
-  margin-bottom: 15px; }
-
-.serviceFlowRegistForm__button {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.6;
-  display: block;
-  padding: 17px 0; }
-  @media screen and (max-width: 768px) and (orientation: landscape) {
-    .serviceFlowRegistForm__button {
-      width: 60%;
-      margin: 0 auto; } }
-
-.serviceFlowRegistTel {
-  width: 275px;
-  text-align: center; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowRegistTel {
-      width: 100%; } }
-
-.serviceFlowRegistTel__text {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: bold;
-  margin-bottom: 15px; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowRegistTel__text {
-      margin-bottom: 5px; } }
-
-.serviceFlowRegistTelBoxInner {
-  pointer-events: none; }
-  @media screen and (max-width: 768px) {
-    .serviceFlowRegistTelBoxInner {
-      pointer-events: auto; } }
-  .serviceFlowRegistTelBoxInner:hover {
-    text-decoration: none; }
-
-.serviceFlowRegistTelBox__number {
-  font-size: 28px;
-  font-size: 1.75rem;
-  line-height: 1.6;
-  color: #1b457e;
-  text-align: center;
-  font-weight: bold; }
-
-.serviceFlowRegistTelBox__numberIcon {
-  margin-right: 15px; }
-  .serviceFlowRegistTelBox__numberIcon svg {
-    fill: rgba(27, 69, 126, 0.5);
-    vertical-align: baseline; }
-    @media screen and (max-width: 768px) {
-      .serviceFlowRegistTelBox__numberIcon svg {
-        width: auto; } }
-
-.serviceFlowRegistTelBox__reception {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.6;
-  color: #333;
-  text-align: center; }
