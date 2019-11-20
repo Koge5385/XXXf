@@ -287,7 +287,7 @@ select::-ms-expand {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading {
+.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading {
   font-weight: bold;
   color: #5d687c; }
   .m-heading--lv2, .searchButtonBlock__heading {
@@ -300,12 +300,12 @@ select::-ms-expand {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
-  .m-heading--lv3, .searchButtonBlockRegist__text {
+  .m-heading--lv3, .searchButtonBlockRegist__text, .terms__heading {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 30px; }
-  .m-heading--lv4, .inputBlock__heading {
+  .m-heading--lv4, .inputBlock__heading, .termsArticle__heading {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6;
@@ -1513,6 +1513,95 @@ select::-ms-expand {
     position: absolute;
     left: -1em;
     content: "・"; }
+
+.terms__heading {
+  text-align: center; }
+
+.termsLog {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: right;
+  margin: 0 0 25px; }
+
+.termsLog__item {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2px; }
+
+.terms__preface {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px; }
+
+.terms__sign {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6; }
+
+.terms__signTel {
+  color: #333;
+  display: inline;
+  pointer-events: none; }
+  @media screen and (max-width: 768px) {
+    .terms__signTel {
+      color: #1b457e;
+      pointer-events: auto; } }
+
+.termsArticle {
+  width: 100%;
+  margin-bottom: 40px; }
+  .termsArticle:last-child {
+    margin-bottom: 0; }
+
+.termsArticle__heading {
+  margin-bottom: 10px; }
+
+.termsArticle__subHeading {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding-left: 0.5em; }
+  @media screen and (max-width: 768px) {
+    .termsArticle__subHeading {
+      padding-left: 0; } }
+
+.termsArticle__text {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding-left: 0.5em; }
+  @media screen and (max-width: 768px) {
+    .termsArticle__text {
+      padding-left: 0; } }
+
+.termsArticle__important {
+  color: #f03f3f; }
+
+.termsArticleList {
+  padding-left: 0.5em; }
+  @media screen and (max-width: 768px) {
+    .termsArticleList {
+      padding-left: 0; } }
+  .termsArticleList--lv2 {
+    padding-left: 0;
+    margin-top: 20px; }
+
+.termsArticleList__item {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-left: 2px; }
+  @media screen and (max-width: 768px) {
+    .termsArticleList__item {
+      padding-left: 0; } }
 
 .keyVisual {
   margin-bottom: 0; }

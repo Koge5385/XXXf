@@ -1,5 +1,5 @@
 {%- import '_modules/_macro.njk' as macro -%}
-{%- set basePath = '/dist/' -%}
+{%- set basePath = '/' -%}
 
 <!DOCTYPE html>
 {% if pageName === 'pagelist' %}
@@ -29,7 +29,7 @@
     </div>
 
     <script src="{{ basePath }}js/common.js"></script>
-    {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' and pageName !== 'password_reminder' %}
+    {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' and pageName !== 'password_reminder' and pageName !== 'membership_rule' and pageName !== 'privacy_policy' and pageName !== 'regist_complete' %}
     <script src="{{ basePath }}js/pages/{{ pageName }}.js"></script>
     {% endif -%}
   </body>

@@ -37,14 +37,14 @@
       </div>
 
       <ul class="registMailCaution">
-        <li class="registMailCaution__item">※ご登録前には、<a href="#">利用規約</a>をご確認ください。</li>
+        <li class="registMailCaution__item">※ご登録前には、<a href="{{ basePath }}membership_rule/">会員規約</a>をご確認ください。</li>
         <li class="registMailCaution__item">※ご登録いただいた個人情報については、エムステージの個人情報保護方針に則り、厳重に管理させていただきます。</li>
         <li class="registMailCaution__item">※会員登録済みの方は、ログインを行ってください。</li>
       </ul>
 
       <div class="inputBlock inputBlock--center">
         <input type="checkbox" name="termAgree" id="termAgree" class="m-inputCheck">
-        <label for="termAgree" class="m-inputCheckLabel"><a href="#">個人情報保護方針</a>に同意する</label>
+        <label for="termAgree" class="m-inputCheckLabel"><a href="{{ basePath }}privacy_policy/">個人情報保護方針</a>に同意する</label>
         <p class="m-inputErrorText"></p>
       </div>
 
