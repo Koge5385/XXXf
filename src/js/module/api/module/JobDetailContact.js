@@ -1,6 +1,6 @@
 // 定数
 const CLICK_EVENT = 'click'
-const JOB_CONTACT_TRIGGER_CLASS = document.querySelector('.js-jobContact-trigger')
+const JOB_CONTACT_TRIGGER_CLASS = '.js-jobContact-trigger'
 
 /**
  * @class JobDetailContact
@@ -18,9 +18,9 @@ class JobDetailContact {
    * @desc 求人IDをパラメーターに渡してページ移動させる
    */
   goJobContact() {
-    JOB_CONTACT_TRIGGER_CLASS.addEventListener(CLICK_EVENT, () => {
-      const params = new URLSearchParams(window.location.search)
-      const jobId = params.get('id')
+    const params = new URLSearchParams(window.location.search)
+    const jobId = params.get('id')
+    document.querySelector(JOB_CONTACT_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       document.location.href = `./contact.html?jobId=${jobId}`
     })
   }
