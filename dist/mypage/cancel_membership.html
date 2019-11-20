@@ -196,12 +196,34 @@
                     一度退会されたメールアドレスでの再登録が可能ですが、プロフィール、レジュメの登録データを新しいアカウントに引き継ぐことはできません。
                   </li>
                   <li class="inputBlockNoticeList__item">
-                    求人情報は引き続きご覧いただけますが、お問い合わせ時や応募時には再度会員登録が必要になります。
+                    本サービスを通して応募される際は、再度会員登録が必要になります。
                   </li>
                 </ul>
               </div>
             </div>
-
+            <div class="inputBlock">
+              <h2 class="inputBlock__heading">退会理由<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <div class="inputBlockFlex">
+                <div class="inputBlockFlex__item">
+                  <input type="radio" id="a" name="cancelReason" class="m-inputRadio" value="a" />
+                  <label for="a" class="m-inputRadioLabel">あああ</label>
+                </div>
+                <div class="inputBlockFlex__item">
+                  <input type="radio" id="b" name="cancelReason" class="m-inputRadio" value="b" />
+                  <label for="b" class="m-inputRadioLabel">いいい</label>
+                </div>
+                <div class="inputBlockFlex__item">
+                  <input type="radio" id="other" name="cancelReason" class="m-inputRadio" value="other" />
+                  <label for="other" class="m-inputRadioLabel">その他</label>
+                </div>
+              </div>
+              <textarea
+                name="changeReason"
+                class="m-inputTextArea cancelMembership__otherInput"
+                placeholder="その他理由を記入してください"
+                value=""
+              ></textarea>
+            </div>
             <button type="button" class="inputBlock__submit">退会する</button>
           </form>
         </section>

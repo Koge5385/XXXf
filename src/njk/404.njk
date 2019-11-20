@@ -1,0 +1,21 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = '404' -%}
+{%- set pageName = '404' -%}
+{%- set pageLevel = '1' -%}
+{%- set pageTitle = 'お探しのページは見つかりませんでした' -%}
+{%- set en_pageTitle = 'error' -%}
+{%- set pageDescription = 'お探しのページは見つかりませんでした。' -%}
+{%- set breadcrumbs = [{item: 'エラー'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <div class="error">
+    <p class="error_guide">お探しのページは<br class="sp-view">見つかりませんでした。</p>
+    <a href="{{ basePath }}" class="error_button">TOPへ</a>
+  </div>
+</div>
+
+{% include '_modules/_searchButtonBlock.njk' %}
+
+{% endblock %}

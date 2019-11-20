@@ -3,17 +3,23 @@
 .container {
   width: 100%;
   min-width: 980px;
-  padding: 0 0 100px;
+  padding: 80px 0 100px;
+  background-color: #f7f8f9;
   @include media(sp) {
     min-width: auto;
-    padding: 0 20px 60px;
+    padding: 60px 20px;
   }
 }
-.cancelMembership {
+.error {
   @include _baseContentsWidth;
-  width: 720px;
 }
-.cancelMembership__submit {
+.error_guide {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.error_button {
   @extend .m-button;
   @extend .m-button--blue;
   @include fontsize(26, 16);
@@ -21,8 +27,4 @@
   width: 320px;
   margin: 40px auto 0;
   padding: 13px 0 12px;
-}
-.cancelMembership__otherInput {
-  display: none;
-  margin-top: 15px;
 }
