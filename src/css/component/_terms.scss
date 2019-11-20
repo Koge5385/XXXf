@@ -1,0 +1,81 @@
+.terms__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  text-align: center;
+}
+.termsLog {
+  @include fontsize(16, 16);
+  text-align: right;
+  margin: 0 0 25px;
+}
+.termsLog__item {
+  @include fontsize(16, 16);
+  margin-bottom: 2px;
+}
+.terms__preface {
+  @include fontsize(16, 16);
+  margin-bottom: 30px;
+}
+.terms__sign {
+  @include fontsize(16, 16);
+}
+.terms__signTel {
+  color: #333;
+  display: inline;
+  pointer-events: none;
+  @include media(sp) {
+    color: #1b457e;
+    pointer-events: auto;
+  }
+}
+.termsArticle {
+  width: 100%;
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.termsArticle__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv4;
+  margin-bottom: 10px;
+}
+.termsArticle__subHeading {
+  @include fontsize(16, 16);
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding-left: 0.5em;
+  @include media(sp) {
+    padding-left: 0;
+  }
+}
+.termsArticle__text {
+  @include fontsize(16, 16);
+  margin-bottom: 20px;
+  padding-left: 0.5em;
+  @include media(sp) {
+    padding-left: 0;
+  }
+}
+.termsArticle__important {
+  color: #f03f3f;
+}
+.termsArticleList {
+  padding-left: 0.5em;
+  @include media(sp) {
+    padding-left: 0;
+  }
+  &--lv2 {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+}
+.termsArticleList__item {
+  @include fontsize(16, 16);
+  margin-bottom: 20px;
+  margin-left: 20px;
+  padding-left: 2px;
+  @include media(sp) {
+    padding-left: 0;
+  }
+}
