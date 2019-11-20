@@ -10,19 +10,41 @@
 {% block content %}
 
 <div class="container">
+
   <section class="cancelMembership">
-    <div class="inputBlock">
-      <p class="inputBlock__guideText">退会にあたり以下の注意事項にご了承ください。</p>
-      <div class="inputBlockNotice">
-        <ul class="inputBlockNoticeList">
-          <li class="inputBlockNoticeList__item">退会処理を実行すると、今までに登録したプロフィール、レジュメが全て削除されます。</li>
-          <li class="inputBlockNoticeList__item">一度退会されたメールアドレスでの再登録が可能ですが、プロフィール、レジュメの登録データを新しいアカウントに引き継ぐことはできません。</li>
-          <li class="inputBlockNoticeList__item">求人情報は引き続きご覧いただけますが、お問い合わせ時や応募時には再度会員登録が必要になります。</li>
-        </ul>
+    <form method="post" action="">
+      <div class="inputBlock">
+        <p class="inputBlock__guideText">退会にあたり以下の注意事項にご了承ください。</p>
+        <div class="inputBlockNotice">
+          <ul class="inputBlockNoticeList">
+            <li class="inputBlockNoticeList__item">退会処理を実行すると、今までに登録したプロフィール、レジュメが全て削除されます。</li>
+            <li class="inputBlockNoticeList__item">一度退会されたメールアドレスでの再登録が可能ですが、プロフィール、レジュメの登録データを新しいアカウントに引き継ぐことはできません。</li>
+            <li class="inputBlockNoticeList__item">本サービスを通して応募される際は、再度会員登録が必要になります。</li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <button type="submit" class="cancelMembership__submit">退会する</button>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">退会理由{{ macro.inputWant() }}</h2>
+        <div class="inputBlockFlex">
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="a" name="cancelReason" class="m-inputRadio" value="a">
+            <label for="a" class="m-inputRadioLabel">あああ</label>
+          </div>
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="b" name="cancelReason" class="m-inputRadio" value="b">
+            <label for="b" class="m-inputRadioLabel">いいい</label>
+          </div>
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="other" name="cancelReason" class="m-inputRadio" value="other">
+            <label for="other" class="m-inputRadioLabel">その他</label>
+          </div>
+        </div>
+        <textarea name="changeReason" class="m-inputTextArea cancelMembership__otherInput" placeholder="その他理由を記入してください" value=""></textarea>
+      </div>
+      <button type="button" class="inputBlock__submit">退会する</button>
+    </form>
   </section>
+
 </div>
 
 {% endblock %}

@@ -437,7 +437,6 @@ select::-ms-expand {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
-  line-height: 1;
   color: #333;
   width: 100%;
   height: 180px;
@@ -1433,7 +1432,7 @@ select::-ms-expand {
   line-height: 1.6;
   display: block;
   width: 320px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   padding: 13px 0 12px; }
 
 .inputBlockFlex {
@@ -1629,3 +1628,7 @@ select::-ms-expand {
   width: 320px;
   margin: 40px auto 0;
   padding: 13px 0 12px; }
+
+.cancelMembership__otherInput {
+  display: none;
+  margin-top: 15px; }

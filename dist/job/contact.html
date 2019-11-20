@@ -212,72 +212,76 @@
 
       <div class="container">
         <section class="jobContact">
-          <p class="jobContact__text">
-            求人についてのお問い合わせは、下記フォームより連絡先・質問等をお伝え下さい。<br />
-            弊社担当より折り返しご連絡さし上げます。以下の項目を入力して「規約に同意して次へ」ボタンを押して下さい。
-          </p>
-          <p class="jobContact__note">※<span>必須</span>は入力必須項目です。</p>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">個人氏名<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-            <div class="inputBlockFlex">
-              <div class="inputBlockFlex__item">
-                <input type="text" name="lastName" class="m-inputText" placeholder="性" value="" />
-                <p class="m-inputErrorText"></p>
-              </div>
-              <div class="inputBlockFlex__item">
-                <input type="text" name="firstName" class="m-inputText" placeholder="名" value="" />
-                <p class="m-inputErrorText"></p>
-              </div>
-            </div>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">フリガナ<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-            <div class="inputBlockFlex">
-              <div class="inputBlockFlex__item">
-                <input type="text" name="lastName_kana" class="m-inputText" placeholder="セイ" value="" />
-                <p class="m-inputErrorText"></p>
-              </div>
-              <div class="inputBlockFlex__item">
-                <input type="text" name="firstName_kana" class="m-inputText" placeholder="メイ" value="" />
-                <p class="m-inputErrorText"></p>
-              </div>
-            </div>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-            <input type="text" name="mail" class="m-inputText" placeholder="example@example.co.jp" value="" />
-            <p class="m-inputErrorText"></p>
-            <p class="inputBlock__note">※半角英数字</p>
-            <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
-            <input type="text" name="mail_confirm" class="m-inputText" placeholder="example@example.co.jp" value="" />
-            <p class="m-inputErrorText"></p>
-            <p class="inputBlock__note">※半角英数字</p>
-          </div>
-          <div class="inputBlock">
-            <h3 class="inputBlock__heading">お問い合わせ内容<span class="m-inputIcon m-inputIcon--must">必須</span></h3>
-            <textarea
-              name="detail"
-              class="m-inputTextArea"
-              placeholder="お問い合わせ内容を記入してください"
-              value=""
-            ></textarea>
-            <p class="m-inputErrorText"></p>
-          </div>
-
-          <div class="inputBlock inputBlock--center">
-            <p class="inputBlock__guideText">
-              個人情報の取扱いについてをよくお読みいただき、<br
-                class="pc-view"
-              />同意いただける場合は、下記にチェックを入れてください。
+          <form method="post" action="">
+            <p class="jobContact__text">
+              求人についてのお問い合わせは、下記フォームより連絡先・質問等をお伝え下さい。<br />
+              弊社担当より折り返しご連絡さし上げます。以下の項目を入力して「規約に同意して次へ」ボタンを押して下さい。
             </p>
-            <input type="checkbox" name="termAgree" id="termAgree" class="m-inputCheck js-hasChecked-target" />
-            <label for="termAgree" class="m-inputCheckLabel"
-              ><a href="/dist/privacy_policy/">個人情報保護方針</a>に同意する</label
-            >
-            <p class="m-inputErrorText">個人情報保護方針への同意にチェックをしてください。</p>
-          </div>
+            <p class="jobContact__note">※<span>必須</span>は入力必須項目です。</p>
+            <div class="inputBlock">
+              <h2 class="inputBlock__heading">個人氏名<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
+              <div class="inputBlockFlex">
+                <div class="inputBlockFlex__item">
+                  <input type="text" name="lastName" class="m-inputText" placeholder="性" value="" />
+                  <p class="m-inputErrorText"></p>
+                </div>
+                <div class="inputBlockFlex__item">
+                  <input type="text" name="firstName" class="m-inputText" placeholder="名" value="" />
+                  <p class="m-inputErrorText"></p>
+                </div>
+              </div>
+            </div>
+            <div class="inputBlock">
+              <h2 class="inputBlock__heading">フリガナ<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
+              <div class="inputBlockFlex">
+                <div class="inputBlockFlex__item">
+                  <input type="text" name="lastName_kana" class="m-inputText" placeholder="セイ" value="" />
+                  <p class="m-inputErrorText"></p>
+                </div>
+                <div class="inputBlockFlex__item">
+                  <input type="text" name="firstName_kana" class="m-inputText" placeholder="メイ" value="" />
+                  <p class="m-inputErrorText"></p>
+                </div>
+              </div>
+            </div>
+            <div class="inputBlock">
+              <h2 class="inputBlock__heading">メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
+              <input type="text" name="mail" class="m-inputText" placeholder="example@example.co.jp" value="" />
+              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__note">※半角英数字</p>
+              <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
+              <input type="text" name="mail_confirm" class="m-inputText" placeholder="example@example.co.jp" value="" />
+              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__note">※半角英数字</p>
+            </div>
+            <div class="inputBlock">
+              <h2 class="inputBlock__heading">
+                お問い合わせ内容<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h2>
+              <textarea
+                name="detail"
+                class="m-inputTextArea"
+                placeholder="お問い合わせ内容を記入してください"
+                value=""
+              ></textarea>
+              <p class="m-inputErrorText"></p>
+            </div>
 
-          <button type="submit" name="submit" class="inputBlock__submit" disabled>確認画面へ</button>
+            <div class="inputBlock inputBlock--center">
+              <p class="inputBlock__guideText">
+                個人情報の取扱いについてをよくお読みいただき、<br
+                  class="pc-view"
+                />同意いただける場合は、下記にチェックを入れてください。
+              </p>
+              <input type="checkbox" name="termAgree" id="termAgree" class="m-inputCheck js-hasChecked-target" />
+              <label for="termAgree" class="m-inputCheckLabel"
+                ><a href="/dist/privacy_policy/">個人情報保護方針</a>に同意する</label
+              >
+              <p class="m-inputErrorText">個人情報保護方針への同意にチェックをしてください。</p>
+            </div>
+
+            <button type="button" class="inputBlock__submit" disabled>確認画面へ</button>
+          </form>
         </section>
       </div>
 

@@ -17,7 +17,7 @@
     <div class="contentsWrap">
       {% include '_modules/_header.njk' %}
 
-      {%- if pageName !== 'job_detail' %}
+      {%- if pageName !== 'job_detail' and pageName !== '404' %}
       {% include '_modules/_keyVisual.njk' %}
       {% endif -%}
 
@@ -29,7 +29,7 @@
     </div>
 
     <script src="{{ basePath }}js/common.js"></script>
-    {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' and pageName !== 'password_reminder' and pageName !== 'membership_rule' and pageName !== 'privacy_policy' and pageName !== 'regist_complete' %}
+    {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' and pageName !== 'password_reminder' and pageName !== 'membership_rule' and pageName !== 'privacy_policy' and pageName !== 'regist_complete' and pageName !== '404' %}
     <script src="{{ basePath }}js/pages/{{ pageName }}.js"></script>
     {% endif -%}
   </body>

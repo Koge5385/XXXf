@@ -237,28 +237,28 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .error_button {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
   pointer-events: auto; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .error_button {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover, .error_button:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled, .error_button:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3;
       pointer-events: none; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .error_button:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -287,7 +287,7 @@ select::-ms-expand {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading {
+.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading, .error_guide {
   font-weight: bold;
   color: #5d687c; }
   .m-heading--lv2, .searchButtonBlock__heading {
@@ -300,7 +300,7 @@ select::-ms-expand {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
-  .m-heading--lv3, .searchButtonBlockRegist__text, .terms__heading {
+  .m-heading--lv3, .searchButtonBlockRegist__text, .terms__heading, .error_guide {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -1606,15 +1606,29 @@ select::-ms-expand {
 .container {
   width: 100%;
   min-width: 980px;
-  padding: 0 0 100px; }
+  padding: 80px 0 100px;
+  background-color: #f7f8f9; }
   @media screen and (max-width: 768px) {
     .container {
       min-width: auto;
-      padding: 0 20px 60px; } }
+      padding: 60px 20px; } }
 
-.registResume {
+.error {
   width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .registResume {
+    .error {
       width: 100%; } }
+
+.error_guide {
+  text-align: center;
+  margin-bottom: 12px; }
+
+.error_button {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: block;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px; }
