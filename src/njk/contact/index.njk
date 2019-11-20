@@ -17,7 +17,7 @@
       弊社担当より折り返しご連絡さし上げます。以下の項目を入力して「規約に同意して次へ」ボタンを押して下さい。</p>
       <p class="contact__note">※<span>必須</span>は入力必須項目です。</p>
       <div class="inputBlock">
-        <p class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</p>
+        <h2 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
           <div class="inputBlockFlex__item">
             <input type="text" name="lastName" class="m-inputText js-valueEmptyCheck-target" placeholder="性" value="">
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="inputBlock">
-        <p class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</p>
+        <h2 class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
           <div class="inputBlockFlex__item">
             <input type="text" name="lastName_kana" class="m-inputText js-valueEmptyCheck-target" placeholder="セイ" value="">
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="inputBlock">
-        <p class="inputBlock__heading">メールアドレス{{ macro.inputMust() }}</p>
+        <h2 class="inputBlock__heading">メールアドレス{{ macro.inputMust() }}</h2>
         <input type="text" name="mail" class="m-inputText js-valueEmptyCheck-target js-mailValidation-target" placeholder="example@example.co.jp" value="">
         <p class="m-inputErrorText">メールアドレスを正しく入力してください。</p>
         <p class="inputBlock__note">※半角英数字</p>
@@ -53,7 +53,7 @@
         <p class="inputBlock__note">※半角英数字</p>
       </div>
       <div class="inputBlock">
-        <p class="inputBlock__heading">お問い合わせ内容{{ macro.inputMust() }}</p>
+        <h2 class="inputBlock__heading">お問い合わせ内容{{ macro.inputMust() }}</h2>
         <textarea name="detail" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="お問い合わせ内容を記入してください" value=""></textarea>
         <p class="m-inputErrorText">お問い合わせ内容が入力されていません。</p>
       </div>
