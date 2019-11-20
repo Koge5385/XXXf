@@ -10,7 +10,7 @@
 {% block content %}
 
 <div class="container">
-  <section class="mypage">
+  <div class="mypage">
     <ul class="mypageMainMenu">
       <li class="mypageMainMenu__item">
         <a href="{{ basePath }}mypage/resume_edit.html" class="mypageMainMenu__link">
@@ -32,7 +32,7 @@
       <li class="mypageSubMenu__item"><a href="javascript:void(0)" class="mypageSubMenu__link js-async-logout-target">ログアウト</a></li>
       <li class="mypageSubMenu__item"><a href="{{ basePath }}mypage/cancel_membership.html" class="mypageSubMenu__link">サービスの退会はこちら</a></li>
     </ul>
-  </section>
+  </div>
 </div>
 
 {% include '_modules/_searchButtonBlock.njk' %}
