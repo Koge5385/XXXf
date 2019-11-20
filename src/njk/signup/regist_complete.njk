@@ -1,0 +1,29 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'regist_complete' -%}
+{%- set pageName = 'regist_complete' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '会員登録完了' -%}
+{%- set en_pageTitle = 'COMPLETE' -%}
+{%- set pageDescription = '会員登録完了ディスクリプション' -%}
+{%- set breadcrumbs = [{item: '会員登録完了'}]-%}
+
+{% block content %}
+
+<div class="container">
+
+  {%- set registSteps = [
+    {number: '1', text: 'メールアドレス登録', class: ' is-done'},
+    {number: '2', text: 'メール認証', class: ' is-done'},
+    {number: '3', text: 'プロフィール登録', class: ' is-done'},
+    {number: '4', text: 'レジュメ登録', class: ' is-done'},
+    {number: '5', text: '完了', class: ' is-active'}
+  ] -%}
+  {% include '_modules/_registStep.njk' %}
+
+  <section class="registComplete">
+    <p class="registComplete__guide">会員登録のお手続きが<br class="sp-view">完了しました。</p>
+    <a href="{{ basePath }}job/" class="registComplete__button">求人検索へ</a>
+  </section>
+</div>
+
+{% endblock %}

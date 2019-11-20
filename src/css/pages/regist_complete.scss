@@ -1,0 +1,32 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 20px 60px;
+  }
+}
+.registComplete {
+  @include _baseContentsWidth;
+}
+.registComplete__guide {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  text-align: center;
+  margin-bottom: 60px;
+  @include media(sp) {
+    margin-bottom: 40px;
+  }
+}
+.registComplete__button {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(26, 16);
+  display: block;
+  width: 320px;
+  margin: 0 auto;
+  padding: 13px 0 12px;
+}
