@@ -37,13 +37,17 @@ class ActivateSubmit {
    * @desc 値が空の場合にis-errorのクラスを付与
    */
   isValueEmpty() {
-    const targetArray = this.convertNode(CHECK_EMPTY_CLASS)
-    const checkList = new Array(targetArray.length)
-    targetArray.forEach((elem, i) => {
-      elem.addEventListener(BLUR_EVENT, () => {
-        this.checkEmpty(elem, checkList, i)
+    if (document.querySelector(CHECK_EMPTY_CLASS) === null) this.checkResult.empty = true
+
+    if(document.querySelector(CHECK_EMPTY_CLASS) !== null) {
+      const targetArray = this.convertNode(CHECK_EMPTY_CLASS)
+      const checkList = new Array(targetArray.length)
+      targetArray.forEach((elem, i) => {
+        elem.addEventListener(BLUR_EVENT, () => {
+          this.checkEmpty(elem, checkList, i)
+        })
       })
-    })
+    }
   }
 
   /**
@@ -70,13 +74,17 @@ class ActivateSubmit {
    * @desc checkedの場合にis-errorのクラスを付与
    */
   isChecked() {
-    const targetArray = this.convertNode(CHECK_CHECKED_CLASS)
-    const checkList = new Array(targetArray.length)
-    targetArray.forEach((elem, i) => {
-      elem.addEventListener(CHANGE_EVENT, () => {
-        this.hasCheck(elem, checkList, i)
+    if (document.querySelector(CHECK_CHECKED_CLASS) === null) this.checkResult.checkbox = true
+
+    if (document.querySelector(CHECK_CHECKED_CLASS) !== null) {
+      const targetArray = this.convertNode(CHECK_CHECKED_CLASS)
+      const checkList = new Array(targetArray.length)
+      targetArray.forEach((elem, i) => {
+        elem.addEventListener(CHANGE_EVENT, () => {
+          this.hasCheck(elem, checkList, i)
+        })
       })
-    })
+    }
   }
 
   /**
@@ -103,20 +111,24 @@ class ActivateSubmit {
    * @desc 1つ目のメールアドレスをフォーマットを参照して検証
    */
   mailValidate() {
-    const targetArray = this.convertNode(CHECK_MAIL_CLASS)
-    this.firstInput = targetArray[0]
-    this.secondInput = targetArray[1]
+    if (document.querySelector(CHECK_MAIL_CLASS) === null) this.checkResult.mail = true
 
-    this.firstInput.addEventListener(BLUR_EVENT, () => {
-      if (!VALIDATE_FORMAT.test(this.firstInput.value)) this.firstInput.classList.add(ERROR_CLASS)
-      if (VALIDATE_FORMAT.test(this.firstInput.value)) {
-        this.firstInput.classList.remove(ERROR_CLASS)
-        this.confirmValidate()
-      }
-      this.secondInput.value !== this.firstInput.value
-        ? this.secondInput.classList.add(ERROR_CLASS)
-        : this.secondInput.classList.remove(ERROR_CLASS)
-    })
+    if (document.querySelector(CHECK_MAIL_CLASS) !== null) {
+      const targetArray = this.convertNode(CHECK_MAIL_CLASS)
+      this.firstInput = targetArray[0]
+      this.secondInput = targetArray[1]
+
+      this.firstInput.addEventListener(BLUR_EVENT, () => {
+        if (!VALIDATE_FORMAT.test(this.firstInput.value)) this.firstInput.classList.add(ERROR_CLASS)
+        if (VALIDATE_FORMAT.test(this.firstInput.value)) {
+          this.firstInput.classList.remove(ERROR_CLASS)
+          this.confirmValidate()
+        }
+        this.secondInput.value !== this.firstInput.value
+          ? this.secondInput.classList.add(ERROR_CLASS)
+          : this.secondInput.classList.remove(ERROR_CLASS)
+      })
+    }
   }
 
   /**
@@ -149,12 +161,15 @@ class ActivateSubmit {
     this.isChecked()
     this.mailValidate()
 
+    if (this.checkResult.empty === true && this.checkResult.checkbox === true && this.checkResult.mail === true) targetSubmit.disabled = false
+
     const checkObject = this.checkResult
     Object.keys(checkObject).forEach(key => {
+      let oldValue = checkObject[key]
       Object.defineProperty(checkObject, key, {
-        get: () => this[key],
+        get: () => oldValue,
         set: (newValue) => {
-          this[key] = newValue
+          oldValue = newValue
           checkObject.empty === true && checkObject.checkbox === true && checkObject.mail === true
             ? targetSubmit.disabled = false
             : targetSubmit.disabled = true

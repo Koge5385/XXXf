@@ -25,13 +25,13 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">メールアドレスを登録してください。</h2>
 
-        <input type="text" name="mail" class="m-inputText" placeholder="example@example.co.jp" value="">
+        <input type="text" name="mail" class="m-inputText js-mailValidation-target" placeholder="example@example.co.jp" value="">
         <p class="m-inputErrorText"></p>
         <p class="inputBlock__note">※半角英数字</p>
 
         <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
 
-        <input type="text" name="mail_confirm" class="m-inputText" placeholder="example@example.co.jp" value="">
+        <input type="text" name="mail_confirm" class="m-inputText js-mailValidation-target" placeholder="example@example.co.jp" value="">
         <p class="m-inputErrorText"></p>
         <p class="inputBlock__note">※半角英数字</p>
       </div>
@@ -43,12 +43,12 @@
       </ul>
 
       <div class="inputBlock inputBlock--center">
-        <input type="checkbox" name="termAgree" id="termAgree" class="m-inputCheck">
-        <label for="termAgree" class="m-inputCheckLabel"><a href="{{ basePath }}privacy_policy/">個人情報保護方針</a>に同意する</label>
+        <input type="checkbox" id="agree" class="m-inputCheck js-hasChecked-target">
+        <label for="agree" class="m-inputCheckLabel"><a href="{{ basePath }}privacy_policy/">個人情報保護方針</a>に同意する</label>
         <p class="m-inputErrorText"></p>
       </div>
 
-      <button type="button" class="inputBlock__submit" disabled>登録する</button>
+      <button type="button" class="inputBlock__submit js-formSubmit-target" disabled>登録する</button>
     </form>
   </section>
 
