@@ -2,9 +2,9 @@ import AxiosBase from '../AxiosBase'
 
 // 定数
 const ACCESS_TOKEN = 'access_token'
-const CURRENT_PASSWORD_TARGET = document.querySelector('.js-async-currentPassword-target')
-const NEW_PASSWORD_TARGET = document.querySelector('.js-async-newPassword-target')
-const PASSWORD_CHANGE_HREF = '../ '
+const CURRENT_PASSWORD_TARGET_CLASS = '.js-async-currentPassword-target'
+const NEW_PASSWORD_TARGET_CLASS = '.js-async-newPassword-target'
+const PASSWORD_CHANGE_HREF = '../'
 
 /**
  * @class PasswordChange
@@ -22,8 +22,8 @@ class PasswordChange {
    * @desc パラメーターを取得してAPI実行
    */
   async doAxios() {
-    const currentPassword = CURRENT_PASSWORD_TARGET.value
-    const newPassword = NEW_PASSWORD_TARGET.value
+    const currentPassword = document.querySelector(CURRENT_PASSWORD_TARGET_CLASS).value
+    const newPassword = document.querySelector(NEW_PASSWORD_TARGET_CLASS).value
 
     // APIリクエストヘッダーに追加するJSONの作成
     const password = JSON.stringify({ "current_password": currentPassword, "new_password": newPassword })

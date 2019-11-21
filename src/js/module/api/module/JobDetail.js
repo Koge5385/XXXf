@@ -2,8 +2,9 @@ import AxiosBase from '../AxiosBase'
 import MetaReplace from './MetaReplace'
 
 // 定数
-const SUCCESS_TARGET = document.querySelector('.js-success-target')
-const ERROR_TARGET = document.querySelector('.js-error-target')
+const SUCCESS_TARGET_CLASS = '.js-success-target'
+const ERROR_TARGET_CLASS = '.js-error-target'
+const BACK_LINK_TARGET_CLASS = '.js-jobListBackLink-target'
 
 /**
  * @class JobDetail
@@ -40,8 +41,8 @@ class JobDetail {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
-      SUCCESS_TARGET.style.display = 'block'
-      ERROR_TARGET.style.display = 'none'
+      document.querySelector(SUCCESS_TARGET_CLASS).style.display = 'block'
+      document.querySelector(ERROR_TARGET_CLASS).style.display = 'none'
 
       const jobData = response.data.job
 
@@ -130,14 +131,30 @@ class JobDetail {
         }
       })
 
+      // 求人一覧に戻るボタンのリンク設定
+      const params = new URLSearchParams(window.location.search)
+      const paramCheck = name => params.get(name) === null ? '' : params.get(name)
+      const searchOccupation = paramCheck('job_p_job_category')
+      const searchArea = paramCheck('job_p_area')
+      const searchSalary = paramCheck('job_p_min_salary')
+      const searchKeyword = paramCheck('keywords')
+      const searchStart = paramCheck('start')
+
+      const paramCategory = `job_p_job_category=${encodeURI(searchOccupation)}`
+      const paramArea = `job_p_area=${encodeURI(searchArea)}`
+      const paramSalary = `job_p_min_salary=${searchSalary}`
+      const paramKeyword = `keywords=${encodeURI(searchKeyword)}`
+
+      document.querySelector(BACK_LINK_TARGET_CLASS).setAttribute('href', `./?${paramCategory}&${paramArea}&${paramSalary}&${paramKeyword}&start=${searchStart}`)
+
       // meta情報の変更
       const pageTitle = jobData['job_u_kyuujinnnoosusumepointo'].replace(/\r?\n/g, '')
       const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary'].replace(/\r?\n/g, '')}`
       new MetaReplace(pageTitle, pageDescription)
     }
     if (status === 400 || status === 401) {
-      SUCCESS_TARGET.style.display = 'none'
-      ERROR_TARGET.style.display = 'block'
+      document.querySelector(SUCCESS_TARGET_CLASS).style.display = 'none'
+      document.querySelector(ERROR_TARGET_CLASS).style.display = 'block'
     }
   }
 }

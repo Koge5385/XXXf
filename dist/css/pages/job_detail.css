@@ -237,7 +237,7 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .jobDetailDialog__button--cancel, .jobDetailDialog__button--submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .jobDetailBackLink__item, .jobDetailDialog__button--cancel, .jobDetailDialog__button--submit {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
@@ -262,11 +262,11 @@ select::-ms-expand {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
-  .m-button--white, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .jobDetailDialog__button--cancel {
+  .m-button--white, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .jobDetailBackLink__item, .jobDetailDialog__button--cancel {
     background-color: #fff;
     color: #1b457e;
     border: 1px solid #b3c1d3; }
-    .m-button--white:hover, .searchButtonBlockJobList__link:hover, .searchButtonBlockAreaList__link:hover, .jobDetailDialog__button--cancel:hover {
+    .m-button--white:hover, .searchButtonBlockJobList__link:hover, .searchButtonBlockAreaList__link:hover, .jobDetailBackLink__item:hover, .jobDetailDialog__button--cancel:hover {
       background-color: #d3d9e0;
       border: 1px solid #d3d9e0;
       text-decoration: none; }
@@ -327,9 +327,9 @@ select::-ms-expand {
     border-bottom: 2px solid #1b457e;
     transform: rotate(-135deg); }
 
-.m-backLink {
+.m-backLink, .jobDetailBackLink__item {
   position: relative; }
-  .m-backLink::before {
+  .m-backLink::before, .jobDetailBackLink__item::before {
     content: "";
     position: absolute;
     top: 4px;
@@ -1865,7 +1865,7 @@ select::-ms-expand {
 
 .jobDetailDialogWrap {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
@@ -1886,10 +1886,21 @@ select::-ms-expand {
   @media screen and (max-width: 768px) {
     .jobDetailDialog {
       width: 90%;
-      height: 260px; } }
+      height: 260px;
+      top: 45vh; } }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .jobDetailDialog {
-      width: 75%; } }
+      width: 75%;
+      top: 50vh; } }
+  .jobDetailDialog--done {
+    width: 500px;
+    height: auto; }
+    @media screen and (max-width: 768px) {
+      .jobDetailDialog--done {
+        width: 90%; } }
+    @media screen and (max-width: 768px) and (orientation: landscape) {
+      .jobDetailDialog--done {
+        width: 75%; } }
 
 .jobDetailDialogInner {
   position: relative; }
@@ -1950,47 +1961,6 @@ select::-ms-expand {
       font-size: 1.25rem;
       line-height: 1.6;
       width: 45%; } }
-
-.jobDetailDialogDone {
-  display: none;
-  position: absolute;
-  z-index: 99999;
-  top: 40vh;
-  left: 50%;
-  width: 500px;
-  background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
-  transform: translate(-50%, -50%); }
-  @media screen and (max-width: 768px) {
-    .jobDetailDialogDone {
-      width: 90%;
-      height: 260px; } }
-  @media screen and (max-width: 768px) and (orientation: landscape) {
-    .jobDetailDialogDone {
-      width: 75%; } }
-
-.jobDetailDialogDone__close {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer; }
-  .jobDetailDialogDone__close::before, .jobDetailDialogDone__close::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 84%;
-    height: 3px;
-    margin: -8% 0 0 -42%;
-    background: #333333; }
-  .jobDetailDialogDone__close::before {
-    transform: rotate(-45deg); }
-  .jobDetailDialogDone__close::after {
-    transform: rotate(45deg); }
 
 .jobDetailDialogDone__text {
   text-align: center;

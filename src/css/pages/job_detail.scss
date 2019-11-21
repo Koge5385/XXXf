@@ -214,6 +214,9 @@
   @include _baseContentsWidth;
 }
 .jobDetailBackLink__item {
+  @extend .m-backLink;
+  @extend .m-button;
+  @extend .m-button--white;
   @include fontsize(16, 16);
   font-weight: normal;
   width: 200px;
@@ -239,7 +242,7 @@
 }
 .jobDetailDialogWrap {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
@@ -260,9 +263,21 @@
   @include media(sp) {
     width: 90%;
     height: 260px;
+    top: 45vh;
   }
   @include landscape(sp) {
     width: 75%;
+    top: 50vh;
+  }
+  &--done {
+    width: 500px;
+    height: auto;
+    @include media(sp) {
+      width: 90%;
+    }
+    @include landscape(sp) {
+      width: 75%;
+    }
   }
 }
 .jobDetailDialogInner {
@@ -329,51 +344,6 @@
   @include media(sp) {
     @include fontsize(20, 16);
     width: 45%;
-  }
-}
-.jobDetailDialogDone {
-  display: none;
-  position: absolute;
-  z-index: 99999;
-  top: 40vh;
-  left: 50%;
-  width: 500px;
-  background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
-  transform: translate(-50%, -50%);
-  @include media(sp) {
-    width: 90%;
-    height: 260px;
-  }
-  @include landscape(sp) {
-    width: 75%;
-  }
-}
-.jobDetailDialogDone__close {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  &::before,
-  &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 84%;
-    height: 3px;
-    margin: -8% 0 0 -42%;
-    background: rgb(51, 51, 51);
-  }
-  &::before {
-    transform: rotate(-45deg);
-  }
-  &::after {
-    transform: rotate(45deg);
   }
 }
 .jobDetailDialogDone__text {
