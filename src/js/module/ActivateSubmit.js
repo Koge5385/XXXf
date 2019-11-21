@@ -5,12 +5,17 @@ const CHANGE_EVENT = 'change'
 // 定数 -> 対象のクラス
 const SUBMIT_CLASS = '.js-formSubmit-target'
 const CHECK_EMPTY_CLASS = '.js-valueEmptyCheck-target'
+const CHECK_SELECTED_CLASS = '.js-isSelected-target'
 const CHECK_CHECKED_CLASS = '.js-hasChecked-target'
 const CHECK_MAIL_CLASS = '.js-mailValidation-target'
+const CHECK_PASSWORD_CLASS = '.js-passwordValidation-target'
 const ERROR_CLASS = 'is-error'
 
-// 定数 -> バリデーションフォーマット {半角英数字}@{半角英数字}
-const VALIDATE_FORMAT = /^(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)(?:\.(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+))*)|(?:"(?:\\[^\r\n]|[^\\"])*")))\@(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)(?:\.(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+))*)|(?:\[(?:\\\S|[\x21-\x5a\x5e-\x7e])*\])))$/
+// 定数 -> メールアドレス　バリデーションフォーマット {半角英数字}@{半角英数字}
+const MAIL_VALIDATE_FORMAT = /^(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)(?:\.(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+))*)|(?:"(?:\\[^\r\n]|[^\\"])*")))\@(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)(?:\.(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+))*)|(?:\[(?:\\\S|[\x21-\x5a\x5e-\x7e])*\])))$/
+
+// 定数 -> パスワード　バリデーションフォーマット {半角[アルファベット大文字][アルファベット小文字][数字][8文字以上]}
+const PASSWORD_VALIDATE_FORMAT = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,}$/
 
 /**
  * @class ActivateSubmit
@@ -71,6 +76,43 @@ class ActivateSubmit {
   }
 
   /**
+   * @desc radioボタンが選択されていない場合にis-errorのクラスを付与
+   */
+  isSelected() {
+    if (document.querySelector(CHECK_SELECTED_CLASS) === null) this.checkResult.radio = true
+
+    if (document.querySelector(CHECK_SELECTED_CLASS) !== null) {
+      const targetArray = this.convertNode(CHECK_SELECTED_CLASS)
+      const checkList = new Array(targetArray.length)
+      targetArray.forEach((elem, i) => {
+        elem.addEventListener(CHANGE_EVENT, () => {
+          this.checkSelected(elem, checkList, i)
+        })
+      })
+    }
+  }
+
+  /**
+   * @desc ラジオボタンが選択されているか判定する
+   * @param {Object} element 対象の要素
+   * @param {Array} list チェック状態を書き込む配列
+   * @param {Number} index 処理番号
+   */
+  checkSelected(element, list, index) {
+    if (!element.checked) {
+      element.classList.add(ERROR_CLASS)
+      list[index] = false
+    }
+    if (element.checked) {
+      element.classList.remove(ERROR_CLASS)
+      list[index] = true
+    }
+    list.filter(x => x === true).length > 0
+      ? this.checkResult.radio = true
+      : this.checkResult.radio = false
+  }
+
+  /**
    * @desc checkedの場合にis-errorのクラスを付与
    */
   isChecked() {
@@ -115,18 +157,18 @@ class ActivateSubmit {
 
     if (document.querySelector(CHECK_MAIL_CLASS) !== null) {
       const targetArray = this.convertNode(CHECK_MAIL_CLASS)
-      this.firstInput = targetArray[0]
-      this.secondInput = targetArray[1]
+      this.mailFirstInput = targetArray[0]
+      this.mailSecondInput = targetArray[1]
 
-      this.firstInput.addEventListener(BLUR_EVENT, () => {
-        if (!VALIDATE_FORMAT.test(this.firstInput.value)) this.firstInput.classList.add(ERROR_CLASS)
-        if (VALIDATE_FORMAT.test(this.firstInput.value)) {
-          this.firstInput.classList.remove(ERROR_CLASS)
-          this.confirmValidate()
+      this.mailFirstInput.addEventListener(BLUR_EVENT, () => {
+        if (!MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) this.mailFirstInput.classList.add(ERROR_CLASS)
+        if (MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) {
+          this.mailFirstInput.classList.remove(ERROR_CLASS)
+          this.mailConfirmValidate()
         }
-        this.secondInput.value !== this.firstInput.value
-          ? this.secondInput.classList.add(ERROR_CLASS)
-          : this.secondInput.classList.remove(ERROR_CLASS)
+        this.mailSecondInput.value !== this.mailFirstInput.value
+          ? this.mailSecondInput.classList.add(ERROR_CLASS)
+          : this.mailSecondInput.classList.remove(ERROR_CLASS)
       })
     }
   }
@@ -134,15 +176,55 @@ class ActivateSubmit {
   /**
    * @desc 2つ目のメールアドレスを1つ目同様に検証し、1つ目と一致するか検証
    */
-  confirmValidate() {
-    this.secondInput.addEventListener(BLUR_EVENT, () => {
-      if (!VALIDATE_FORMAT.test(this.secondInput.value) || this.secondInput.value !== this.firstInput.value) {
-        this.secondInput.classList.add(ERROR_CLASS)
+  mailConfirmValidate() {
+    this.mailSecondInput.addEventListener(BLUR_EVENT, () => {
+      if (!MAIL_VALIDATE_FORMAT.test(this.mailSecondInput.value) || this.mailSecondInput.value !== this.mailFirstInput.value) {
+        this.mailSecondInput.classList.add(ERROR_CLASS)
         this.checkResult.mail = false
       }
-      if (VALIDATE_FORMAT.test(this.secondInput.value) && this.secondInput.value === this.firstInput.value) {
-        this.secondInput.classList.remove(ERROR_CLASS)
+      if (MAIL_VALIDATE_FORMAT.test(this.mailSecondInput.value) && this.mailSecondInput.value === this.mailFirstInput.value) {
+        this.mailSecondInput.classList.remove(ERROR_CLASS)
         this.checkResult.mail = true
+      }
+    })
+  }
+
+  /**
+   * @desc 1つ目のパスワードをフォーマットを参照して検証
+   */
+  passwordValidate() {
+    if (document.querySelector(CHECK_PASSWORD_CLASS) === null) this.checkResult.password = true
+
+    if (document.querySelector(CHECK_PASSWORD_CLASS) !== null) {
+      const targetArray = this.convertNode(CHECK_PASSWORD_CLASS)
+      this.passwordFirstInput = targetArray[0]
+      this.passwordSecondInput = targetArray[1]
+
+      this.passwordFirstInput.addEventListener(BLUR_EVENT, () => {
+        if (!PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) this.passwordFirstInput.classList.add(ERROR_CLASS)
+        if (PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) {
+          this.passwordFirstInput.classList.remove(ERROR_CLASS)
+          this.passwordConfirmValidate()
+        }
+        this.passwordSecondInput.value !== this.passwordFirstInput.value
+          ? this.passwordSecondInput.classList.add(ERROR_CLASS)
+          : this.passwordSecondInput.classList.remove(ERROR_CLASS)
+      })
+    }
+  }
+
+  /**
+   * @desc 2つ目のパスワードを1つ目同様に検証し、1つ目と一致するか検証
+   */
+  passwordConfirmValidate() {
+    this.passwordSecondInput.addEventListener(BLUR_EVENT, () => {
+      if (!PASSWORD_VALIDATE_FORMAT.test(this.passwordSecondInput.value) || this.passwordSecondInput.value !== this.passwordFirstInput.value) {
+        this.passwordSecondInput.classList.add(ERROR_CLASS)
+        this.checkResult.password = false
+      }
+      if (PASSWORD_VALIDATE_FORMAT.test(this.passwordSecondInput.value) && this.passwordSecondInput.value === this.passwordFirstInput.value) {
+        this.passwordSecondInput.classList.remove(ERROR_CLASS)
+        this.checkResult.password = true
       }
     })
   }
@@ -154,14 +236,16 @@ class ActivateSubmit {
     const targetSubmit = document.querySelector(SUBMIT_CLASS)
 
     // アクティブ判定に必要なオブジェクトを作成（全てtrueだと活性化する）
-    this.checkResult = { 'empty': false, 'checkbox': false, 'mail': false }
+    this.checkResult = { 'empty': false, 'radio': false, 'checkbox': false, 'mail': false, 'password': false }
 
     // それぞれのチェック処理を走らせる
     this.isValueEmpty()
+    this.isSelected()
     this.isChecked()
     this.mailValidate()
+    this.passwordValidate()
 
-    if (this.checkResult.empty === true && this.checkResult.checkbox === true && this.checkResult.mail === true) targetSubmit.disabled = false
+    if (this.checkResult.empty === true && this.checkResult.radio === true && this.checkResult.checkbox === true && this.checkResult.mail === true && this.checkResult.password === true) targetSubmit.disabled = false
 
     const checkObject = this.checkResult
     Object.keys(checkObject).forEach(key => {
@@ -170,7 +254,7 @@ class ActivateSubmit {
         get: () => oldValue,
         set: (newValue) => {
           oldValue = newValue
-          checkObject.empty === true && checkObject.checkbox === true && checkObject.mail === true
+          checkObject.empty === true && checkObject.radio === true && checkObject.checkbox === true && checkObject.mail === true && checkObject.password === true
             ? targetSubmit.disabled = false
             : targetSubmit.disabled = true
         }

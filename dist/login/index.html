@@ -218,7 +218,7 @@
               <input
                 type="text"
                 name="email"
-                class="m-inputText js-async-loginEmail-target"
+                class="m-inputText js-async-loginEmail-target js-valueEmptyCheck-target"
                 placeholder="example@example.co.jp"
                 value=""
               />
@@ -226,7 +226,12 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">パスワード</h2>
-              <input type="password" name="password" class="m-inputText js-async-loginPassword-target" value="" />
+              <input
+                type="password"
+                name="password"
+                class="m-inputText js-async-loginPassword-target js-valueEmptyCheck-target"
+                value=""
+              />
               <p class="m-inputErrorText">パスワードが正しくありません。</p>
             </div>
             <p class="m-note">
@@ -238,7 +243,9 @@
               >を行ってください
             </p>
 
-            <button type="button" class="inputBlock__submit js-async-loginSubmit-target" disabled>ログイン</button>
+            <button type="button" class="inputBlock__submit js-async-loginSubmit-target js-formSubmit-target" disabled>
+              ログイン
+            </button>
           </form>
         </section>
       </div>

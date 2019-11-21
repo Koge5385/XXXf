@@ -4,7 +4,7 @@ import JsonConvert from './JsonConvert'
 // 定数
 const ACCESS_TOKEN = 'access_token'
 const LOGIN_HREF = '../mypage/'
-const FORM_CLASS_NAME = '.js-async-loginForm-target'
+const FORM_TARGET_CLASS = '.js-async-loginForm-target'
 
 /**
  * @class Login
@@ -22,7 +22,7 @@ class Login {
    * @desc パラメーターを取得してAPI実行
    */
   async doAxios() {
-    const sendObject = new JsonConvert(FORM_CLASS_NAME)
+    const sendObject = new JsonConvert(FORM_TARGET_CLASS)
     await new AxiosBase().postMethod('/user/sessions/login', sendObject.convertObject(), this.setDataToPage)
   }
 

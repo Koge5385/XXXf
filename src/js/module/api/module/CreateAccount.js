@@ -1,5 +1,10 @@
 import AxiosBase from '../AxiosBase'
-import ActivateSubmit from '../../ActivateSubmit'
+
+// 定数
+const MAIL_TARGET_CLASS = '.js-async-sendMailData-target'
+const NEXT_STEP_URL = 'http://http://develop.medicaloffice-job-hon.pv.bita.jp/dist/signup/regist_profile.html'
+const ENTRY_MAIL = 'entry_mail'
+const ENTRY_HREF = './confirm_email.html'
 
 /**
  * @class CreateAccount
@@ -17,8 +22,10 @@ class CreateAccount {
    * @desc パラメーターを取得してAPI実行
    */
   async doAxios() {
-    new ActivateSubmit()
-    await new AxiosBase().postMethod('/user/sessions/login', sendObject.convertObject(), this.setDataToPage)
+    this.entryMail = document.querySelector(MAIL_TARGET_CLASS).value
+    const entryData = { 'email': this.entryMail, 'url': NEXT_STEP_URL }
+    const sendData = JSON.stringify(entryData)
+    await new AxiosBase().postMethod('/user/verifies/entry', sendData, this.setDataToPage.bind(this))
   }
 
   /**
@@ -28,7 +35,8 @@ class CreateAccount {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
-      console.log('success')
+      localStorage.setItem(ENTRY_MAIL, this.entryMail)
+      document.location.href = ENTRY_HREF
     }
     if (status === 400 || status === 401) {
       console.log('error')

@@ -280,7 +280,7 @@
         </div>
 
         <section class="registMail">
-          <form method="post" action="">
+          <form method="post" class="js-async-entryForm-target">
             <div class="inputBlock">
               <h2 class="inputBlock__heading">メールアドレスを登録してください。</h2>
 
@@ -299,7 +299,7 @@
               <input
                 type="text"
                 name="mail_confirm"
-                class="m-inputText js-mailValidation-target"
+                class="m-inputText js-mailValidation-target js-async-sendMailData-target"
                 placeholder="example@example.co.jp"
                 value=""
               />
@@ -320,12 +320,15 @@
             <div class="inputBlock inputBlock--center">
               <input type="checkbox" id="agree" class="m-inputCheck js-hasChecked-target" />
               <label for="agree" class="m-inputCheckLabel"
-                ><a href="/dist/privacy_policy/">個人情報保護方針</a>に同意する</label
+                ><a href="/dist/membership_rule/">会員規約</a>および<a href="/dist/privacy_policy/">個人情報保護方針</a
+                >に同意する</label
               >
               <p class="m-inputErrorText"></p>
             </div>
 
-            <button type="button" class="inputBlock__submit js-formSubmit-target" disabled>登録する</button>
+            <button type="button" class="inputBlock__submit js-formSubmit-target js-async-entrySubmit-target" disabled>
+              登録する
+            </button>
           </form>
         </section>
       </div>
