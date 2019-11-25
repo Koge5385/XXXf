@@ -81,7 +81,7 @@ class JobDetailApply {
         JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'hide')
         JobDetailApply.isShow(DIALOG_COMPLETE_TARGET_CLASS, 'show')
       }
-      if (status === 400 || status === 401) {
+      if (status.status === 400 || status.status === 401) {
         console.log('error!')
       }
     })

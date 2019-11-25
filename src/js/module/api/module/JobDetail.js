@@ -148,7 +148,7 @@ class JobDetail {
       const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary'].replace(/\r?\n/g, '')}`
       new MetaReplace(pageTitle, pageDescription)
     }
-    if (status === 400 || status === 401) {
+    if (status.status === 400 || status.status === 401) {
       document.querySelector(SUCCESS_TARGET_CLASS).style.display = 'none'
       document.querySelector(ERROR_TARGET_CLASS).style.display = 'block'
     }

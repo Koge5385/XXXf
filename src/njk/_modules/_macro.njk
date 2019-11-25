@@ -287,61 +287,61 @@
 {% macro optionMonth() -%}
 <option value="">月</option>
 {%- set selectMonth = [
-  {month: '1'},
-  {month: '2'},
-  {month: '3'},
-  {month: '4'},
-  {month: '5'},
-  {month: '6'},
-  {month: '7'},
-  {month: '8'},
-  {month: '9'},
-  {month: '10'},
-  {month: '11'},
-  {month: '12'}
+  {month: '1', value: '01'},
+  {month: '2', value: '02'},
+  {month: '3', value: '03'},
+  {month: '4', value: '04'},
+  {month: '5', value: '05'},
+  {month: '6', value: '06'},
+  {month: '7', value: '07'},
+  {month: '8', value: '08'},
+  {month: '9', value: '09'},
+  {month: '10', value: '10'},
+  {month: '11', value: '11'},
+  {month: '12', value: '12'}
 ] -%}
 {%- for item in selectMonth %}
-<option value="{{ item.month }}">{{ item.month }}</option>
+<option value="{{ item.value }}">{{ item.month }}</option>
 {%- endfor %}
 {%- endmacro %}
 
 {% macro optionDay() -%}
 <option value="">日</option>
 {%- set selectDay = [
-  {day: '1'},
-  {day: '2'},
-  {day: '3'},
-  {day: '4'},
-  {day: '5'},
-  {day: '6'},
-  {day: '7'},
-  {day: '8'},
-  {day: '9'},
-  {day: '10'},
-  {day: '11'},
-  {day: '12'},
-  {day: '13'},
-  {day: '14'},
-  {day: '15'},
-  {day: '16'},
-  {day: '17'},
-  {day: '18'},
-  {day: '19'},
-  {day: '20'},
-  {day: '21'},
-  {day: '22'},
-  {day: '23'},
-  {day: '24'},
-  {day: '25'},
-  {day: '26'},
-  {day: '27'},
-  {day: '28'},
-  {day: '29'},
-  {day: '30'},
-  {day: '31'}
+  {day: '1', value: '01'},
+  {day: '2', value: '02'},
+  {day: '3', value: '03'},
+  {day: '4', value: '04'},
+  {day: '5', value: '05'},
+  {day: '6', value: '06'},
+  {day: '7', value: '07'},
+  {day: '8', value: '08'},
+  {day: '9', value: '09'},
+  {day: '10', value: '10'},
+  {day: '11', value: '11'},
+  {day: '12', value: '12'},
+  {day: '13', value: '13'},
+  {day: '14', value: '14'},
+  {day: '15', value: '15'},
+  {day: '16', value: '16'},
+  {day: '17', value: '17'},
+  {day: '18', value: '18'},
+  {day: '19', value: '19'},
+  {day: '20', value: '20'},
+  {day: '21', value: '21'},
+  {day: '22', value: '22'},
+  {day: '23', value: '23'},
+  {day: '24', value: '24'},
+  {day: '25', value: '25'},
+  {day: '26', value: '26'},
+  {day: '27', value: '27'},
+  {day: '28', value: '28'},
+  {day: '29', value: '29'},
+  {day: '30', value: '30'},
+  {day: '31', value: '31'}
 ] -%}
 {%- for item in selectDay %}
-<option value="{{ item.day }}">{{ item.day }}</option>
+<option value="{{ item.value }}">{{ item.day }}</option>
 {%- endfor %}
 {%- endmacro %}
 

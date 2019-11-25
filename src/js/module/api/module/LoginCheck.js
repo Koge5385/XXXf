@@ -40,7 +40,7 @@ class LoginCheck {
     if (status === 200) {
       console.log('login!')
     }
-    if (status === 400 || status === 401) {
+    if (status.status === 400 || status.status === 401) {
       document.location.href = LOGIN_HREF
     }
   }

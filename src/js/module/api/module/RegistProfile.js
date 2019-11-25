@@ -24,6 +24,7 @@ class RegistProfile {
   async doAxios() {
     const params = new URLSearchParams(window.location.search)
     const tokenData = params.get('token')
+    console.log(tokenData)
     const optionObject = { 'token': tokenData }
     const sendObject = new JsonConvert(FORM_TARGET_CLASS, optionObject)
     await new AxiosBase().postMethod('/users/create', sendObject.convertObject(), this.setDataToPage)
@@ -39,7 +40,7 @@ class RegistProfile {
       localStorage.setItem(ACCESS_TOKEN, response.data.access_token)
       document.location.href = RESUME_HREF
     }
-    if (status === 400 || status === 401) {
+    if (status.status === 400 || status.status === 401) {
       console.log('error')
     }
   }

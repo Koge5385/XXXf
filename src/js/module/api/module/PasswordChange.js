@@ -48,7 +48,7 @@ class PasswordChange {
     if (status === 200) {
       document.location.href = PASSWORD_CHANGE_HREF
     }
-    if (status === 400 || status === 401) {
+    if (status.status === 400 || status.status === 401) {
       console.log('error')
     }
   }

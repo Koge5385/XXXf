@@ -135,7 +135,7 @@ class JobList {
       // 「仕事内容」の3点リーダー処理
       new AutoTextOmit('.js-async-sumally-target', 69)
     }
-    if (status === 400 || status === 401) {
+    if (status.status === 400 || status.status === 401) {
       console.log('error')
     }
   }
