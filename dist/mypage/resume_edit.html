@@ -7,6 +7,7 @@
     <title>レジュメ編集｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
     <meta name="description" content="レジュメ編集ディスクリプション" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <meta name="robots" content="noindex,nofollow" />
 
     <meta property="og:url" content="https://job.mplat.jp/resume_edit.html" />
     <meta property="og:title" content="レジュメ編集｜医療事務職の求人サービスなら【M.PLAT 求職支援】" />
@@ -15,11 +16,11 @@
     <meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
-    <link rel="icon" href="/dist/img/common/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="/dist/img/common/apple_icon.png" />
-    <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
+    <link rel="icon" href="/img/common/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/img/common/apple_icon.png" />
+    <link rel="icon" type="image/png" href="/img/common/android_icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="/dist/css/pages/resume_edit.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pages/resume_edit.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150115128-1"></script>
@@ -38,14 +39,60 @@
       <header class="globalHeader">
         <div class="globalHeaderInner">
           <div class="globalHeader__logo">
-            <a href="/dist/">
-              <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
+            <a href="/">
+              <img src="/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
             </a>
           </div>
           <nav class="globalNav pc-view">
-            <ul class="globalNavList">
+            <ul class="globalNavList js-async-loginNavigation-target">
               <li class="globalNavItem">
-                <a href="/dist/job/" class="globalNavItem__link">
+                <a href="/job/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
+                      <g transform="translate(11.603 10)">
+                        <g transform="translate(-11.603 -10)">
+                          <rect width="18.38" height="2.309" transform="translate(4.825)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
+                          <rect width="2.298" height="2.309" />
+                          <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">求人一覧</p>
+                </a>
+              </li>
+              <li class="globalNavItem">
+                <a
+                  href="/mypage/"
+                  class="globalNavItem__link"
+                  onclick="gtag('event', 'click', {'event_category': 'resume_edit_header_regist','event_label': 'header_regist'});"
+                >
+                  <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
+                      <g transform="translate(9.95 11)">
+                        <g transform="translate(-9.95 -11)">
+                          <path
+                            d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
+                            transform="translate(-0.62 -0.601)"
+                          />
+                          <path
+                            d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
+                            transform="translate(-1 0.761)"
+                          />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">マイページ</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="globalNavList js-async-logoutNavigation-target">
+              <li class="globalNavItem">
+                <a href="/job/" class="globalNavItem__link">
                   <span class="globalNavItem__icon globalNavItem__icon--list"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
                       <g transform="translate(11.603 10)">
@@ -65,7 +112,7 @@
                 </a>
               </li>
               <li class="globalNavItem">
-                <a href="/dist/login/" class="globalNavItem__link">
+                <a href="/login/" class="globalNavItem__link">
                   <span class="globalNavItem__icon globalNavItem__icon--login"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.2" height="24" viewBox="0 0 19.2 24">
                       <g transform="translate(9.6 12)">
@@ -80,7 +127,7 @@
               </li>
               <li class="globalNavItem">
                 <a
-                  href="/dist/signup/create_account.html"
+                  href="/signup/create_account.html"
                   class="globalNavItem__link globalNavItem__link--regist"
                   onclick="gtag('event', 'click', {'event_category': 'resume_edit_header_regist','event_label': 'header_regist'});"
                 >
@@ -132,9 +179,9 @@
             <div class="globalMobileNavBlock">
               <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
               <div class="globalMobileNavContents">
-                <ul class="globalMobileNavCell">
+                <ul class="globalMobileNavCell js-async-loginNavigation-target">
                   <li class="globalMobileNavCellItem">
-                    <a href="/dist/job/" class="globalMobileNavCellItem__link">
+                    <a href="/job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
                           <g transform="translate(20.304 17.5)">
@@ -153,7 +200,47 @@
                     </a>
                   </li>
                   <li class="globalMobileNavCellItem">
-                    <a href="/dist/login/" class="globalMobileNavCellItem__link">
+                    <a href="/mypage/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
+                          <g transform="translate(9.95 11)">
+                            <g transform="translate(-9.95 -11)">
+                              <path
+                                d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
+                                transform="translate(1.739 -0.601)"
+                              />
+                              <path
+                                d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
+                                transform="translate(-1 9.171)"
+                              />
+                            </g>
+                          </g></svg></span
+                      >マイページ
+                    </a>
+                  </li>
+                </ul>
+                <ul class="globalMobileNavCell js-async-logoutNavigation-target">
+                  <li class="globalMobileNavCellItem">
+                    <a href="/job/" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
+                          <g transform="translate(20.304 17.5)">
+                            <g transform="translate(-20.304 -17.5)">
+                              <rect width="32.165" height="4.041" transform="translate(8.443)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
+                              <rect width="4.021" height="4.041" />
+                              <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
+                            </g>
+                          </g></svg></span
+                      >求人一覧
+                    </a>
+                  </li>
+                  <li class="globalMobileNavCellItem">
+                    <a href="/login/" class="globalMobileNavCellItem__link">
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--login"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 28 35">
                           <g transform="translate(14 17.5)">
@@ -167,7 +254,7 @@
                   </li>
                   <li class="globalMobileNavCellItem">
                     <a
-                      href="/dist/signup/create_account.html"
+                      href="/signup/create_account.html"
                       class="globalMobileNavCellItem__link"
                       onclick="gtag('event', 'click', {'event_category': 'resume_edit_header_regist','event_label': 'header_regist'});"
                     >
@@ -191,14 +278,14 @@
                 </ul>
                 <ul class="globalMobileNavLink">
                   <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                    <a href="/dist/forbeginner/">初めての方へ</a>
+                    <a href="/forbeginner/">初めての方へ</a>
                   </li>
                   <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                    <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                    <a href="/forrecruiter/">医療機関採用担当者の方へ</a>
                   </li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/company/">会社概要</a></li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/privacy_policy/">個人情報保護方針</a></li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/membership_rule/">会員規約</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/company/">会社概要</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/privacy_policy/">個人情報保護方針</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/membership_rule/">会員規約</a></li>
                 </ul>
               </div>
             </div>
@@ -215,21 +302,29 @@
           <form method="post">
             <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">最終学歴<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
-              <select name="schoolCareer" class="m-inputSelect inputBlock__inputHalf">
-                <option value="">最終学歴を選択してください</option>
-                <option value="">指定しない</option
-                ><option value="専門学校卒">専門学校卒</option
-                ><option value="大学卒">大学卒</option
-                ><option value="大学院卒">大学院卒</option>
+              <h2 class="inputBlock__heading">最終学歴<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
+              <select
+                name="resume_u_saisyugakureki"
+                class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target"
+              >
+                <option value="">最終学歴を選択してください</option
+                ><option value="option_u_000174">不問</option
+                ><option value="option_u_000172">高校卒</option
+                ><option value="option_u_000169">高専卒</option
+                ><option value="option_u_000171">専門各種学校卒</option
+                ><option value="option_u_000170">短大卒</option
+                ><option value="option_u_000168">大学卒</option
+                ><option value="option_u_000167">大学院卒（修士）</option
+                ><option value="option_u_000166">大学院卒（博士）</option
+                ><option value="option_u_000173">その他</option>
               </select>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">学歴(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <textarea
-                name="career"
-                class="m-inputTextArea"
+                name="resume_p_education"
+                class="m-inputTextArea js-valueEmptyCheck-target"
                 placeholder="学歴(詳細)を記入してください"
                 value=""
               ></textarea>
@@ -237,44 +332,48 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">英語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
-              <select name="skillEnglish" class="m-inputSelect inputBlock__inputHalf">
+              <select name="resume_u_eigosukiru" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">英語スキルを選択してください</option>
                 <option value="">指定しない</option
-                ><option value="日常会話">日常会話</option
-                ><option value="ビジネス英語">ビジネス英語</option>
+                ><option value="option_u_000548">なし</option
+                ><option value="option_u_000278">初級(簡単な挨拶、辞書を使っての読み書き)</option
+                ><option value="option_u_000279">中級(日常会話、簡単な読み書き可能)</option
+                ><option value="option_u_000280">上級(ビジネスレベルの会話、読み書き)</option
+                ><option value="option_u_000281">ネイティブレベル</option>
               </select>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">中国語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
-              <select name="skillChinese" class="m-inputSelect inputBlock__inputHalf">
+              <select name="resume_u_tyuugoukugosukiru" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">中国語スキルを選択してください</option>
                 <option value="">指定しない</option
-                ><option value="日常会話">日常会話</option
-                ><option value="ビジネス英語">ビジネス英語</option>
+                ><option value="option_u_000548">なし</option
+                ><option value="option_u_000278">初級(簡単な挨拶、辞書を使っての読み書き)</option
+                ><option value="option_u_000279">中級(日常会話、簡単な読み書き可能)</option
+                ><option value="option_u_000280">上級(ビジネスレベルの会話、読み書き)</option
+                ><option value="option_u_000281">ネイティブレベル</option>
               </select>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">
-                その他の言語・備考<span class="m-inputIcon m-inputIcon--want">任意</span>
+                その他の言語スキル<span class="m-inputIcon m-inputIcon--want">任意</span>
               </h2>
               <textarea
-                name="other_skill"
+                name="resume_u_sonohokanogengobikou"
                 class="m-inputTextArea"
-                placeholder="その他の言語・備考を記入してください"
+                placeholder="その他の言語スキルを記入してください"
                 value=""
               ></textarea>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">
-                保有資格・スキル<span class="m-inputIcon m-inputIcon--want">任意</span>
-              </h2>
+              <h2 class="inputBlock__heading">保有資格<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
               <textarea
-                name="certified"
+                name="resume_u_hoyuushikakusukiru"
                 class="m-inputTextArea"
-                placeholder="保有資格・スキルを記入してください"
+                placeholder="保有資格を記入してください"
                 value=""
               ></textarea>
               <p class="m-inputErrorText"></p>
@@ -282,18 +381,36 @@
 
             <h2 class="m-heading--lv2">職務経歴</h2>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex">
                 <div class="inputBlockFlex__item">
-                  <input type="radio" id="working" name="employment_status" class="m-inputRadio" value="working" />
+                  <input
+                    type="radio"
+                    id="working"
+                    name="resume_p_current_status"
+                    class="m-inputRadio js-isSelected-target"
+                    value="option_p_working"
+                  />
                   <label for="working" class="m-inputRadioLabel">就業中</label>
                 </div>
                 <div class="inputBlockFlex__item">
-                  <input type="radio" id="turnover" name="employment_status" class="m-inputRadio" value="turnover" />
+                  <input
+                    type="radio"
+                    id="turnover"
+                    name="resume_p_current_status"
+                    class="m-inputRadio js-isSelected-target"
+                    value="option_p_leaving"
+                  />
                   <label for="turnover" class="m-inputRadioLabel">離職中</label>
                 </div>
                 <div class="inputBlockFlex__item">
-                  <input type="radio" id="no" name="employment_status" class="m-inputRadio" value="no" />
+                  <input
+                    type="radio"
+                    id="no"
+                    name="resume_p_current_status"
+                    class="m-inputRadio js-isSelected-target"
+                    value="option_p_no_experience"
+                  />
                   <label for="no" class="m-inputRadioLabel">就業経験なし</label>
                 </div>
               </div>
@@ -301,19 +418,23 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">転職回数<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
-              <select name="jobChange" class="m-inputSelect inputBlock__inputHalf">
+              <select name="resume_u_tenshokukaisuu" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">転職回数を選択してください</option>
                 <option value="">指定しない</option
-                ><option value="1回">1回</option
-                ><option value="2回">2回</option
-                ><option value="3回以上">3回以上</option>
+                ><option value="option_u_000253">0回</option
+                ><option value="option_u_000254">1回</option
+                ><option value="option_u_000255">2回</option
+                ><option value="option_u_000256">3回</option
+                ><option value="option_u_000257">4回</option
+                ><option value="option_u_000258">5回</option
+                ><option value="option_u_000259">6回以上</option>
               </select>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">転職理由<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
               <textarea
-                name="changeReason"
+                name="resume_u_tenshokuriyuu"
                 class="m-inputTextArea"
                 placeholder="転職理由を記入してください"
                 value=""
@@ -321,8 +442,39 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">職務経歴(詳細)<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
+              <p class="inputBlock__confirmText">1社目</p>
+              <textarea
+                name="resume_p_carrier_summary"
+                class="m-inputTextArea js-valueEmptyCheck-target"
+                placeholder="職務経歴(詳細)を記入してください"
+                value=""
+              >
+医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea
+              >
               <p class="m-inputErrorText"></p>
+            </div>
+            <div class="inputBlock">
+              <p class="inputBlock__confirmText">2社目</p>
+              <textarea
+                name="resume_p_carrier_summary"
+                class="m-inputTextArea"
+                placeholder="職務経歴(詳細)を記入してください"
+                value=""
+              >
+医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea
+              >
+            </div>
+            <div class="inputBlock">
+              <p class="inputBlock__confirmText">3社目以降</p>
+              <textarea
+                name="resume_p_carrier_summary"
+                class="m-inputTextArea"
+                placeholder="職務経歴(詳細)を記入してください"
+                value=""
+              >
+医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea
+              >
             </div>
 
             <h2 class="m-heading--lv2">経験及び希望条件</h2>
@@ -331,7 +483,7 @@
               <div class="inputBlockFlex inputBlockFlex--always">
                 <input
                   type="text"
-                  name="nowSalary"
+                  name="resume_p_current_salary"
                   class="m-inputText inputBlock__inputSmall"
                   placeholder="400"
                   value=""
@@ -341,12 +493,12 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">希望の年収<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">希望の年収<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--always">
                 <input
                   type="text"
-                  name="hopeSalary"
-                  class="m-inputText inputBlock__inputSmall"
+                  name="resume_u_kibounenshuu"
+                  class="m-inputText inputBlock__inputSmall js-valueEmptyCheck-target"
                   placeholder="500"
                   value=""
                 />
@@ -356,11 +508,11 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">
-                現在(直近)の勤務先<span class="m-inputIcon m-inputIcon--want">任意</span>
+                現在(直近)の勤務先<span class="m-inputIcon m-inputIcon--must">必須</span>
               </h2>
               <input
                 type="text"
-                name="nowCompany"
+                name="resume_u_genzainokinmusaki js-valueEmptyCheck-target"
                 class="m-inputText"
                 placeholder="現在(直近)の勤務先を記入してください"
                 value=""
@@ -368,23 +520,59 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">希望勤務地<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
-              <select name="hopeArea" class="m-inputSelect inputBlock__inputHalf">
+              <h2 class="inputBlock__heading">
+                希望勤務地(都道府県)<span class="m-inputIcon m-inputIcon--must">必須</span>
+              </h2>
+              <select name="resume_p_expect_area" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
                 <option value="">都道府県を選択してください</option
-                ><option value="茨城">茨城</option
-                ><option value="栃木">栃木</option
-                ><option value="群馬">群馬</option
-                ><option value="埼玉">埼玉</option
-                ><option value="千葉">千葉</option
-                ><option value="東京">東京</option
-                ><option value="神奈川">神奈川</option
-                ><option value="三重">三重</option
-                ><option value="滋賀">滋賀</option
-                ><option value="京都">京都</option
-                ><option value="大阪">大阪</option
-                ><option value="兵庫">兵庫</option
-                ><option value="奈良">奈良</option
-                ><option value="和歌山">和歌山</option>
+                ><option value="option_p_foreign">海外</option
+                ><option value="option_p_hokkaido">北海道</option
+                ><option value="option_p_aomori">青森県</option
+                ><option value="option_p_iwate">岩手県</option
+                ><option value="option_p_miyagi">宮城県</option
+                ><option value="option_p_akita">秋田県</option
+                ><option value="option_p_yamagata">山形県</option
+                ><option value="option_p_fukushima">福島県</option
+                ><option value="option_p_ibaraki">茨城県</option
+                ><option value="option_p_tochigi">栃木県</option
+                ><option value="option_p_gunma">群馬県</option
+                ><option value="option_p_saitama">埼玉県</option
+                ><option value="option_p_chiba">千葉県</option
+                ><option value="option_p_tokyo">東京都</option
+                ><option value="option_p_kanagawa">神奈川県</option
+                ><option value="option_p_niigata">新潟県</option
+                ><option value="option_p_toyama">富山県</option
+                ><option value="option_p_ishikawa">石川県</option
+                ><option value="option_p_fukui">福井県</option
+                ><option value="option_p_yamanashi">山梨県</option
+                ><option value="option_p_nagano">長野県</option
+                ><option value="option_p_gifu">岐阜県</option
+                ><option value="option_p_shizuoka">静岡県</option
+                ><option value="option_p_aichi">愛知県</option
+                ><option value="option_p_mie">三重県</option
+                ><option value="option_p_shiga">滋賀県</option
+                ><option value="option_p_kyoto">京都府</option
+                ><option value="option_p_osaka">大阪府</option
+                ><option value="option_p_hyogo">兵庫県</option
+                ><option value="option_p_nara">奈良県</option
+                ><option value="option_p_wakayama">和歌山県</option
+                ><option value="option_p_tottori">鳥取県</option
+                ><option value="option_p_shimane">島根県</option
+                ><option value="option_p_okayama">岡山県</option
+                ><option value="option_p_hiroshima">広島県</option
+                ><option value="option_p_yamaguchi">山口県</option
+                ><option value="option_p_tokushima">徳島県</option
+                ><option value="option_p_kagawa">香川県</option
+                ><option value="option_p_ehime">愛媛県</option
+                ><option value="option_p_kochi">高知県</option
+                ><option value="option_p_fukuoka">福岡県</option
+                ><option value="option_p_saga">佐賀県</option
+                ><option value="option_p_nagasaki">長崎県</option
+                ><option value="option_p_kumamoto">熊本県</option
+                ><option value="option_p_oita">大分県</option
+                ><option value="option_p_miyazaki">宮崎県</option
+                ><option value="option_p_kagoshima">鹿児島県</option
+                ><option value="option_p_okinawa">沖縄県</option>
               </select>
               <p class="m-inputErrorText"></p>
             </div>
@@ -394,7 +582,7 @@
               </h2>
               <input
                 type="text"
-                name="hopePlace"
+                name="resume_u_kiboukinmutisyousai"
                 class="m-inputText"
                 placeholder="希望勤務地(詳細)を記入してください"
                 value=""
@@ -402,231 +590,297 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_1"
                     class="m-inputCheck"
-                    value="医療機関（病院）"
+                    value="option_u_010593"
                   />
                   <label for="exp_industry_1" class="m-inputCheckLabel">医療機関（病院）</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_2"
                     class="m-inputCheck"
-                    value="医療機関（診療所）"
+                    value="option_u_shinryouzyo"
                   />
                   <label for="exp_industry_2" class="m-inputCheckLabel">医療機関（診療所）</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_3"
                     class="m-inputCheck"
-                    value="介護施設"
+                    value="option_u_000537"
                   />
                   <label for="exp_industry_3" class="m-inputCheckLabel">介護施設</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_4"
                     class="m-inputCheck"
-                    value="医療系メーカー"
+                    value="option_u_000536"
                   />
                   <label for="exp_industry_4" class="m-inputCheckLabel">医療系メーカー</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_5"
                     class="m-inputCheck"
-                    value="IT・通信・インターネット"
+                    value="option_u_000540"
                   />
                   <label for="exp_industry_5" class="m-inputCheckLabel">IT・通信・インターネット</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_6"
                     class="m-inputCheck"
-                    value="金融・保険"
+                    value="option_u_000539"
                   />
                   <label for="exp_industry_6" class="m-inputCheckLabel">金融・保険</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_7"
                     class="m-inputCheck"
-                    value="商社・流通・小売"
+                    value="option_u_syousya"
                   />
                   <label for="exp_industry_7" class="m-inputCheckLabel">商社・流通・小売</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_8"
                     class="m-inputCheck"
-                    value="サービス"
+                    value="option_u_service"
                   />
                   <label for="exp_industry_8" class="m-inputCheckLabel">サービス</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_9"
                     class="m-inputCheck"
-                    value="広告・マスコミ・出版・放送・印刷"
+                    value="option_u_koukokumasukomi"
                   />
                   <label for="exp_industry_9" class="m-inputCheckLabel">広告・マスコミ・出版・放送・印刷</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_10"
                     class="m-inputCheck"
-                    value="教育・保育・公務員"
+                    value="option_u_koumuin"
                   />
                   <label for="exp_industry_10" class="m-inputCheckLabel">教育・保育・公務員</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_industry"
+                    name="resume_p_experienced_industry"
                     id="exp_industry_11"
                     class="m-inputCheck"
-                    value="コンサルティング・会計・法律関係"
+                    value="option_u_consarutying"
                   />
                   <label for="exp_industry_11" class="m-inputCheckLabel">コンサルティング・会計・法律関係</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_industry" id="exp_industry_12" class="m-inputCheck" value="その他" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_industry"
+                    id="exp_industry_12"
+                    class="m-inputCheck"
+                    value="option_u_000546"
+                  />
                   <label for="exp_industry_12" class="m-inputCheckLabel">その他</label>
                 </div>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_job"
+                    name="resume_p_experienced_job_category"
                     id="exp_job_1"
                     class="m-inputCheck"
-                    value="経営企画・事業企画"
+                    value="option_u_keieikikaku2"
                   />
                   <label for="exp_job_1" class="m-inputCheckLabel">経営企画・事業企画</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_2" class="m-inputCheck" value="人事・労務" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_2"
+                    class="m-inputCheck"
+                    value="option_u_zinziroumu"
+                  />
                   <label for="exp_job_2" class="m-inputCheckLabel">人事・労務</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_3" class="m-inputCheck" value="総務" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_3"
+                    class="m-inputCheck"
+                    value="option_u_soumu"
+                  />
                   <label for="exp_job_3" class="m-inputCheckLabel">総務</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_4" class="m-inputCheck" value="経理" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_4"
+                    class="m-inputCheck"
+                    value="option_u_keiri"
+                  />
                   <label for="exp_job_4" class="m-inputCheckLabel">経理</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_5" class="m-inputCheck" value="医療事務" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_5"
+                    class="m-inputCheck"
+                    value="option_u_iryouzimu"
+                  />
                   <label for="exp_job_5" class="m-inputCheckLabel">医療事務</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_6" class="m-inputCheck" value="広報" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_6"
+                    class="m-inputCheck"
+                    value="option_u_kouhou2"
+                  />
                   <label for="exp_job_6" class="m-inputCheckLabel">広報</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_7" class="m-inputCheck" value="マーケティング" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_7"
+                    class="m-inputCheck"
+                    value="option_u_marketing"
+                  />
                   <label for="exp_job_7" class="m-inputCheckLabel">マーケティング</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_8" class="m-inputCheck" value="営業" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_8"
+                    class="m-inputCheck"
+                    value="option_u_eigyou"
+                  />
                   <label for="exp_job_8" class="m-inputCheckLabel">営業</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_9" class="m-inputCheck" value="地域連携室・渉外" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_9"
+                    class="m-inputCheck"
+                    value="option_u_tiikirenkeishitsu"
+                  />
                   <label for="exp_job_9" class="m-inputCheckLabel">地域連携室・渉外</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="exp_job"
+                    name="resume_p_experienced_job_category"
                     id="exp_job_10"
                     class="m-inputCheck"
-                    value="情報管理・システム設計・開発"
+                    value="option_u_zyouhoukanri"
                   />
                   <label for="exp_job_10" class="m-inputCheckLabel">情報管理・システム設計・開発</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_11" class="m-inputCheck" value="コンサルタント" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_11"
+                    class="m-inputCheck"
+                    value="option_u_cosarutanto"
+                  />
                   <label for="exp_job_11" class="m-inputCheckLabel">コンサルタント</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="exp_job" id="exp_job_12" class="m-inputCheck" value="その他" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_experienced_job_category"
+                    id="exp_job_12"
+                    class="m-inputCheck"
+                    value="option_u_sonota"
+                  />
                   <label for="exp_job_12" class="m-inputCheckLabel">その他</label>
                 </div>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_position"
+                    name="resume_p_expect_employment_type"
                     id="hope_position_1"
                     class="m-inputCheck"
-                    value="正社員"
+                    value="option_p_full_time"
                   />
                   <label for="hope_position_1" class="m-inputCheckLabel">正社員</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_position"
+                    name="resume_p_expect_employment_type"
                     id="hope_position_2"
                     class="m-inputCheck"
-                    value="契約社員"
+                    value="option_p_contractor"
                   />
                   <label for="hope_position_2" class="m-inputCheckLabel">契約社員</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_position"
+                    name="resume_p_expect_employment_type"
                     id="hope_position_3"
                     class="m-inputCheck"
-                    value="派遣社員"
+                    value="option_p_temporary_staff"
                   />
                   <label for="hope_position_3" class="m-inputCheckLabel">派遣社員</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_position"
+                    name="resume_p_expect_employment_type"
                     id="hope_position_4"
                     class="m-inputCheck"
-                    value="その他"
+                    value="option_u_000514"
                   />
                   <label for="hope_position_4" class="m-inputCheckLabel">その他</label>
                 </div>
@@ -634,102 +888,186 @@
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_1" class="m-inputCheck" value="事務長" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_1"
+                    class="m-inputCheck"
+                    value="option_u_jimutyou"
+                  />
                   <label for="hope_job_1" class="m-inputCheckLabel">事務長</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_2" class="m-inputCheck" value="事務長候補" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_2"
+                    class="m-inputCheck"
+                    value="option_u_jimutyoukouho"
+                  />
                   <label for="hope_job_2" class="m-inputCheckLabel">事務長候補</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_3" class="m-inputCheck" value="経営企画" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_3"
+                    class="m-inputCheck"
+                    value="option_u_keieikikaku"
+                  />
                   <label for="hope_job_3" class="m-inputCheckLabel">経営企画</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_4" class="m-inputCheck" value="医事課員" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_4"
+                    class="m-inputCheck"
+                    value="option_u_ijikain"
+                  />
                   <label for="hope_job_4" class="m-inputCheckLabel">医事課員</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_job"
+                    name="resume_p_expect_job_category"
                     id="hope_job_5"
                     class="m-inputCheck"
-                    value="医事課長（候補含む）"
+                    value="option_u_ijikatyoukouhohukumu"
                   />
                   <label for="hope_job_5" class="m-inputCheckLabel">医事課長（候補含む）</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_6" class="m-inputCheck" value="総務課員" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_6"
+                    class="m-inputCheck"
+                    value="option_u_soumukain"
+                  />
                   <label for="hope_job_6" class="m-inputCheckLabel">総務課員</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_job"
+                    name="resume_p_expect_job_category"
                     id="hope_job_7"
                     class="m-inputCheck"
-                    value="総務課長（候補含む）"
+                    value="option_u_soumukatyoukouhohukumu"
                   />
                   <label for="hope_job_7" class="m-inputCheckLabel">総務課長（候補含む）</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_8" class="m-inputCheck" value="人事課員" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_8"
+                    class="m-inputCheck"
+                    value="option_u_jinjikain"
+                  />
                   <label for="hope_job_8" class="m-inputCheckLabel">人事課員</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_job"
+                    name="resume_p_expect_job_category"
                     id="hope_job_9"
                     class="m-inputCheck"
-                    value="人事課長（候補含む）"
+                    value="option_u_jinjikatyoukouhohukumu"
                   />
                   <label for="hope_job_9" class="m-inputCheckLabel">人事課長（候補含む）</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_10" class="m-inputCheck" value="財務・経理" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_10"
+                    class="m-inputCheck"
+                    value="option_u_zaimukeiri2"
+                  />
                   <label for="hope_job_10" class="m-inputCheckLabel">財務・経理</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
-                    name="hope_job"
+                    name="resume_p_expect_job_category"
                     id="hope_job_11"
                     class="m-inputCheck"
-                    value="地域連携室・渉外"
+                    value="option_u_tiikirenkeishitsushitsugai"
                   />
                   <label for="hope_job_11" class="m-inputCheckLabel">地域連携室・渉外</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_12" class="m-inputCheck" value="広報" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_12"
+                    class="m-inputCheck"
+                    value="option_u_kouhou"
+                  />
                   <label for="hope_job_12" class="m-inputCheckLabel">広報</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_13" class="m-inputCheck" value="情報管理室" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_13"
+                    class="m-inputCheck"
+                    value="option_u_jouhoukanrishitsu"
+                  />
                   <label for="hope_job_13" class="m-inputCheckLabel">情報管理室</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_14" class="m-inputCheck" value="事務総合職" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_14"
+                    class="m-inputCheck"
+                    value="option_u_jimusougoushoku"
+                  />
                   <label for="hope_job_14" class="m-inputCheckLabel">事務総合職</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_15" class="m-inputCheck" value="健診総合職" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_15"
+                    class="m-inputCheck"
+                    value="option_u_kenshinsougoushoku"
+                  />
                   <label for="hope_job_15" class="m-inputCheckLabel">健診総合職</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_16" class="m-inputCheck" value="診療情報管理士" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_16"
+                    class="m-inputCheck"
+                    value="option_u_shinryoujouhoukanrishi"
+                  />
                   <label for="hope_job_16" class="m-inputCheckLabel">診療情報管理士</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_17" class="m-inputCheck" value="社会福祉士" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_17"
+                    class="m-inputCheck"
+                    value="option_u_syakaihukushishi"
+                  />
                   <label for="hope_job_17" class="m-inputCheckLabel">社会福祉士</label>
                 </div>
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-                  <input type="checkbox" name="hope_job" id="hope_job_18" class="m-inputCheck" value="その他" />
+                  <input
+                    type="checkbox"
+                    name="resume_p_expect_job_category"
+                    id="hope_job_18"
+                    class="m-inputCheck"
+                    value="option_u_sonohoka"
+                  />
                   <label for="hope_job_18" class="m-inputCheckLabel">その他</label>
                 </div>
               </div>
@@ -738,7 +1076,7 @@
             <div class="inputBlock">
               <h2 class="inputBlock__heading">希望条件(詳細)<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
               <textarea
-                name="hopeConditions"
+                name="resume_p_expect_condition"
                 class="m-inputTextArea"
                 placeholder="希望条件(詳細)を記入してください"
                 value=""
@@ -749,27 +1087,28 @@
               <h2 class="inputBlock__heading">
                 転職に対する意欲<span class="m-inputIcon m-inputIcon--want">任意</span>
               </h2>
-              <select name="motivation" class="m-inputSelect inputBlock__inputHalf">
+              <select name="resume_u_tenshokunitaisuruiyoku" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">転職に対する意欲を選択してください</option>
                 <option value="">指定しない</option
-                ><option value="転職に興味がある程度">転職に興味がある程度</option
-                ><option value="ゆくゆくは転職したい">ゆくゆくは転職したい</option
-                ><option value="今すぐに転職したい">今すぐに転職したい</option>
+                ><option value="option_u_000328">即転職希望</option
+                ><option value="option_u_000329">3ヶ月～半年(本格的に転職先を検討)</option
+                ><option value="option_u_000330">1年以内(いい転職先があれば)</option
+                ><option value="option_u_000331">未定(情報収集中)</option>
               </select>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
-              <h2 class="inputBlock__heading">自己PR<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <h2 class="inputBlock__heading">自己PR<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <textarea
-                name="selfIntroduction"
-                class="m-inputTextArea"
+                name="resume_u_jikopr"
+                class="m-inputTextArea js-valueEmptyCheck-target"
                 placeholder="自己PRを記入してください"
                 value=""
               ></textarea>
               <p class="m-inputErrorText"></p>
             </div>
 
-            <button type="button" class="inputBlock__submit">確認画面へ</button>
+            <button type="button" class="inputBlock__submit js-formSubmit-target" disabled>確認画面へ</button>
           </form>
         </section>
       </div>
@@ -797,7 +1136,7 @@
             <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
             <a
               class="globalFooterGuide__contactButton"
-              href="/dist/contact/"
+              href="/contact/"
               onclick="gtag('event', 'click', {'event_category': 'resume_edit_footer_contact','event_label': 'footer_contact'});"
               ><span class="globalFooterGuide__contactIcon"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
@@ -841,14 +1180,14 @@
           <div class="globalFooterNavBlock">
             <ul class="globalFooterNavList">
               <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                <a href="/dist/forbeginner/">初めての方へ</a>
+                <a href="/forbeginner/">初めての方へ</a>
               </li>
               <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                <a href="/forrecruiter/">医療機関採用担当者の方へ</a>
               </li>
-              <li class="globalFooterNavList__item"><a href="/dist/company/">会社概要</a></li>
-              <li class="globalFooterNavList__item"><a href="/dist/privacy_policy/">個人情報保護方針</a></li>
-              <li class="globalFooterNavList__item"><a href="/dist/membership_rule/">会員規約</a></li>
+              <li class="globalFooterNavList__item"><a href="/company/">会社概要</a></li>
+              <li class="globalFooterNavList__item"><a href="/privacy_policy/">個人情報保護方針</a></li>
+              <li class="globalFooterNavList__item"><a href="/membership_rule/">会員規約</a></li>
             </ul>
             <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
           </div>
@@ -856,7 +1195,7 @@
       </footer>
     </div>
 
-    <script src="/dist/js/common.js"></script>
-    <script src="/dist/js/pages/resume_edit.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pages/resume_edit.js"></script>
   </body>
 </html>

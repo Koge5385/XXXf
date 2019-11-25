@@ -7,6 +7,7 @@
     <title>プロフィール登録｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
     <meta name="description" content="プロフィール登録ディスクリプション" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
+    <meta name="robots" content="noindex,nofollow" />
 
     <meta property="og:url" content="https://job.mplat.jp/regist_profile.html" />
     <meta property="og:title" content="プロフィール登録｜医療事務職の求人サービスなら【M.PLAT 求職支援】" />
@@ -15,11 +16,11 @@
     <meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
-    <link rel="icon" href="/dist/img/common/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="/dist/img/common/apple_icon.png" />
-    <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
+    <link rel="icon" href="/img/common/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/img/common/apple_icon.png" />
+    <link rel="icon" type="image/png" href="/img/common/android_icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="/dist/css/pages/regist_profile.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pages/regist_profile.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150115128-1"></script>
@@ -38,14 +39,60 @@
       <header class="globalHeader">
         <div class="globalHeaderInner">
           <div class="globalHeader__logo">
-            <a href="/dist/">
-              <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
+            <a href="/">
+              <img src="/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
             </a>
           </div>
           <nav class="globalNav pc-view">
-            <ul class="globalNavList">
+            <ul class="globalNavList js-async-loginNavigation-target">
               <li class="globalNavItem">
-                <a href="/dist/job/" class="globalNavItem__link">
+                <a href="/job/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
+                      <g transform="translate(11.603 10)">
+                        <g transform="translate(-11.603 -10)">
+                          <rect width="18.38" height="2.309" transform="translate(4.825)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
+                          <rect width="2.298" height="2.309" />
+                          <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">求人一覧</p>
+                </a>
+              </li>
+              <li class="globalNavItem">
+                <a
+                  href="/mypage/"
+                  class="globalNavItem__link"
+                  onclick="gtag('event', 'click', {'event_category': 'regist_profile_header_regist','event_label': 'header_regist'});"
+                >
+                  <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
+                      <g transform="translate(9.95 11)">
+                        <g transform="translate(-9.95 -11)">
+                          <path
+                            d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
+                            transform="translate(-0.62 -0.601)"
+                          />
+                          <path
+                            d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
+                            transform="translate(-1 0.761)"
+                          />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">マイページ</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="globalNavList js-async-logoutNavigation-target">
+              <li class="globalNavItem">
+                <a href="/job/" class="globalNavItem__link">
                   <span class="globalNavItem__icon globalNavItem__icon--list"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
                       <g transform="translate(11.603 10)">
@@ -65,7 +112,7 @@
                 </a>
               </li>
               <li class="globalNavItem">
-                <a href="/dist/login/" class="globalNavItem__link">
+                <a href="/login/" class="globalNavItem__link">
                   <span class="globalNavItem__icon globalNavItem__icon--login"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.2" height="24" viewBox="0 0 19.2 24">
                       <g transform="translate(9.6 12)">
@@ -80,7 +127,7 @@
               </li>
               <li class="globalNavItem">
                 <a
-                  href="/dist/signup/create_account.html"
+                  href="/signup/create_account.html"
                   class="globalNavItem__link globalNavItem__link--regist"
                   onclick="gtag('event', 'click', {'event_category': 'regist_profile_header_regist','event_label': 'header_regist'});"
                 >
@@ -132,9 +179,9 @@
             <div class="globalMobileNavBlock">
               <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
               <div class="globalMobileNavContents">
-                <ul class="globalMobileNavCell">
+                <ul class="globalMobileNavCell js-async-loginNavigation-target">
                   <li class="globalMobileNavCellItem">
-                    <a href="/dist/job/" class="globalMobileNavCellItem__link">
+                    <a href="/job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
                           <g transform="translate(20.304 17.5)">
@@ -153,7 +200,47 @@
                     </a>
                   </li>
                   <li class="globalMobileNavCellItem">
-                    <a href="/dist/login/" class="globalMobileNavCellItem__link">
+                    <a href="/mypage/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
+                          <g transform="translate(9.95 11)">
+                            <g transform="translate(-9.95 -11)">
+                              <path
+                                d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
+                                transform="translate(1.739 -0.601)"
+                              />
+                              <path
+                                d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
+                                transform="translate(-1 9.171)"
+                              />
+                            </g>
+                          </g></svg></span
+                      >マイページ
+                    </a>
+                  </li>
+                </ul>
+                <ul class="globalMobileNavCell js-async-logoutNavigation-target">
+                  <li class="globalMobileNavCellItem">
+                    <a href="/job/" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
+                          <g transform="translate(20.304 17.5)">
+                            <g transform="translate(-20.304 -17.5)">
+                              <rect width="32.165" height="4.041" transform="translate(8.443)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
+                              <rect width="4.021" height="4.041" />
+                              <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
+                            </g>
+                          </g></svg></span
+                      >求人一覧
+                    </a>
+                  </li>
+                  <li class="globalMobileNavCellItem">
+                    <a href="/login/" class="globalMobileNavCellItem__link">
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--login"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 28 35">
                           <g transform="translate(14 17.5)">
@@ -167,7 +254,7 @@
                   </li>
                   <li class="globalMobileNavCellItem">
                     <a
-                      href="/dist/signup/create_account.html"
+                      href="/signup/create_account.html"
                       class="globalMobileNavCellItem__link"
                       onclick="gtag('event', 'click', {'event_category': 'regist_profile_header_regist','event_label': 'header_regist'});"
                     >
@@ -191,14 +278,14 @@
                 </ul>
                 <ul class="globalMobileNavLink">
                   <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                    <a href="/dist/forbeginner/">初めての方へ</a>
+                    <a href="/forbeginner/">初めての方へ</a>
                   </li>
                   <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                    <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                    <a href="/forrecruiter/">医療機関採用担当者の方へ</a>
                   </li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/company/">会社概要</a></li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/privacy_policy/">個人情報保護方針</a></li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/membership_rule/">会員規約</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/company/">会社概要</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/privacy_policy/">個人情報保護方針</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/membership_rule/">会員規約</a></li>
                 </ul>
               </div>
             </div>
@@ -280,7 +367,7 @@
         </div>
 
         <section class="registProfile">
-          <form method="post">
+          <form method="post" class="js-async-registProfileForm-target h-adr">
             <div class="inputBlock">
               <h2 class="inputBlock__heading">個人氏名<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <input
@@ -290,7 +377,7 @@
                 placeholder="氏名を入力してください"
                 value=""
               />
-              <p class="m-inputErrorText"></p>
+              <p class="m-inputErrorText">個人氏名を入力してください。</p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">フリガナ<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
@@ -301,7 +388,7 @@
                 placeholder="フリガナを入力してください"
                 value=""
               />
-              <p class="m-inputErrorText"></p>
+              <p class="m-inputErrorText">フリガナを入力してください。</p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">生年月日<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
@@ -370,8 +457,8 @@
                   ><option value="30">30</option
                   ><option value="31">31</option>
                 </select>
+                <p class="m-inputErrorText">生年月日を選択してください。</p>
               </div>
-              <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">性別<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
@@ -397,77 +484,100 @@
                   <label for="woman" class="m-inputRadioLabel">女性</label>
                 </div>
               </div>
-              <p class="m-inputErrorText"></p>
+              <p class="m-inputErrorText">性別を選択してください。</p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">住所(都道府県)<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
-              <select name="registProfile_place" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
+              <select
+                name="person_u_zyusyotodoufuken"
+                class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target"
+              >
                 <option value="">都道府県を選択してください</option
-                ><option value="茨城">茨城</option
-                ><option value="栃木">栃木</option
-                ><option value="群馬">群馬</option
-                ><option value="埼玉">埼玉</option
-                ><option value="千葉">千葉</option
-                ><option value="東京">東京</option
-                ><option value="神奈川">神奈川</option
-                ><option value="三重">三重</option
-                ><option value="滋賀">滋賀</option
-                ><option value="京都">京都</option
-                ><option value="大阪">大阪</option
-                ><option value="兵庫">兵庫</option
-                ><option value="奈良">奈良</option
-                ><option value="和歌山">和歌山</option>
+                ><option value="option_p_foreign">海外</option
+                ><option value="option_p_hokkaido">北海道</option
+                ><option value="option_p_aomori">青森県</option
+                ><option value="option_p_iwate">岩手県</option
+                ><option value="option_p_miyagi">宮城県</option
+                ><option value="option_p_akita">秋田県</option
+                ><option value="option_p_yamagata">山形県</option
+                ><option value="option_p_fukushima">福島県</option
+                ><option value="option_p_ibaraki">茨城県</option
+                ><option value="option_p_tochigi">栃木県</option
+                ><option value="option_p_gunma">群馬県</option
+                ><option value="option_p_saitama">埼玉県</option
+                ><option value="option_p_chiba">千葉県</option
+                ><option value="option_p_tokyo">東京都</option
+                ><option value="option_p_kanagawa">神奈川県</option
+                ><option value="option_p_niigata">新潟県</option
+                ><option value="option_p_toyama">富山県</option
+                ><option value="option_p_ishikawa">石川県</option
+                ><option value="option_p_fukui">福井県</option
+                ><option value="option_p_yamanashi">山梨県</option
+                ><option value="option_p_nagano">長野県</option
+                ><option value="option_p_gifu">岐阜県</option
+                ><option value="option_p_shizuoka">静岡県</option
+                ><option value="option_p_aichi">愛知県</option
+                ><option value="option_p_mie">三重県</option
+                ><option value="option_p_shiga">滋賀県</option
+                ><option value="option_p_kyoto">京都府</option
+                ><option value="option_p_osaka">大阪府</option
+                ><option value="option_p_hyogo">兵庫県</option
+                ><option value="option_p_nara">奈良県</option
+                ><option value="option_p_wakayama">和歌山県</option
+                ><option value="option_p_tottori">鳥取県</option
+                ><option value="option_p_shimane">島根県</option
+                ><option value="option_p_okayama">岡山県</option
+                ><option value="option_p_hiroshima">広島県</option
+                ><option value="option_p_yamaguchi">山口県</option
+                ><option value="option_p_tokushima">徳島県</option
+                ><option value="option_p_kagawa">香川県</option
+                ><option value="option_p_ehime">愛媛県</option
+                ><option value="option_p_kochi">高知県</option
+                ><option value="option_p_fukuoka">福岡県</option
+                ><option value="option_p_saga">佐賀県</option
+                ><option value="option_p_nagasaki">長崎県</option
+                ><option value="option_p_kumamoto">熊本県</option
+                ><option value="option_p_oita">大分県</option
+                ><option value="option_p_miyazaki">宮崎県</option
+                ><option value="option_p_kagoshima">鹿児島県</option
+                ><option value="option_p_okinawa">沖縄県</option>
               </select>
-              <p class="m-inputErrorText"></p>
+              <p class="m-inputErrorText">都道府県を選択してください。</p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">郵便番号<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
+              <input type="hidden" class="p-country-name" value="Japan" />
               <input
                 type="text"
-                name="postal"
-                class="m-inputText inputBlock__inputHalf"
+                class="m-inputText inputBlock__inputHalf js-postalCode-trigger p-postal-code"
                 placeholder="141-6005"
+                maxlength="8"
                 value=""
               />
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">住所詳細<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
-              <input type="text" name="postal" class="m-inputText" placeholder="品川区大崎2-1-1" value="" />
+              <input
+                type="text"
+                name="person_u_zyusyosyousai"
+                class="m-inputText js-postalCode-target p-locality p-street-address"
+                placeholder="品川区大崎2-1-1"
+                value=""
+              />
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">電話番号<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <input
                 type="text"
-                name="registProfile_tel"
+                name="person_p_telephone"
                 class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target"
                 placeholder="03-5437-2950"
+                maxlength="13"
                 value=""
               />
-              <p class="m-inputErrorText"></p>
-            </div>
-            <div class="inputBlock">
-              <h2 class="inputBlock__heading">メールアドレス<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
-              <input
-                type="text"
-                name="registProfile_mail"
-                class="m-inputText js-valueEmptyCheck-target js-mailValidation-target"
-                placeholder="example@example.co.jp"
-                value=""
-              />
-              <p class="m-inputErrorText"></p>
-              <p class="inputBlock__note">※半角英数字</p>
-              <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
-              <input
-                type="text"
-                name="registProfile_mail_confirm"
-                class="m-inputText js-valueEmptyCheck-target js-mailValidation-target"
-                placeholder="example@example.co.jp"
-                value=""
-              />
-              <p class="m-inputErrorText"></p>
-              <p class="inputBlock__note">※半角英数字</p>
+              <p class="m-inputErrorText">電話番号を入力してください</p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">パスワード<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
@@ -477,18 +587,17 @@
                 class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target"
                 value=""
               />
-              <p class="m-inputErrorText"></p>
+              <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
               <p class="inputBlock__note">
                 ※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。
               </p>
               <p class="inputBlock__confirmText">確認のためもう一度パスワードを入力してください</p>
               <input
                 type="password"
-                name="password_confirm"
                 class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target"
                 value=""
               />
-              <p class="m-inputErrorText"></p>
+              <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
               <p class="inputBlock__note">
                 ※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。
               </p>
@@ -528,7 +637,7 @@
             <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
             <a
               class="globalFooterGuide__contactButton"
-              href="/dist/contact/"
+              href="/contact/"
               onclick="gtag('event', 'click', {'event_category': 'regist_profile_footer_contact','event_label': 'footer_contact'});"
               ><span class="globalFooterGuide__contactIcon"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
@@ -572,14 +681,14 @@
           <div class="globalFooterNavBlock">
             <ul class="globalFooterNavList">
               <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                <a href="/dist/forbeginner/">初めての方へ</a>
+                <a href="/forbeginner/">初めての方へ</a>
               </li>
               <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                <a href="/forrecruiter/">医療機関採用担当者の方へ</a>
               </li>
-              <li class="globalFooterNavList__item"><a href="/dist/company/">会社概要</a></li>
-              <li class="globalFooterNavList__item"><a href="/dist/privacy_policy/">個人情報保護方針</a></li>
-              <li class="globalFooterNavList__item"><a href="/dist/membership_rule/">会員規約</a></li>
+              <li class="globalFooterNavList__item"><a href="/company/">会社概要</a></li>
+              <li class="globalFooterNavList__item"><a href="/privacy_policy/">個人情報保護方針</a></li>
+              <li class="globalFooterNavList__item"><a href="/membership_rule/">会員規約</a></li>
             </ul>
             <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
           </div>
@@ -587,7 +696,8 @@
       </footer>
     </div>
 
-    <script src="/dist/js/common.js"></script>
-    <script src="/dist/js/pages/regist_profile.js"></script>
+    <script src="/js/common.js"></script>
+    <script src="/js/pages/regist_profile.js"></script>
+    <script src="/js/lib/vendor/yubinbango/yubinbango.js"></script>
   </body>
 </html>

@@ -2,8 +2,11 @@
   margin: 0;
 }
 .globalNavList {
-  display: flex;
+  display: none;
   justify-content: flex-end;
+  &.is-show {
+    display: flex;
+  }
 }
 .globalNavItem {
   display: flex;
@@ -134,10 +137,13 @@
   padding: 20px 0 30px;
 }
 .globalMobileNavCell {
-  display: flex;
+  display: none;
   justify-content: space-between;
   width: 100%;
   padding: 0 10px;
+  &.is-show {
+    display: flex;
+  }
   @include landscape(sp) {
     justify-content: space-around;
   }

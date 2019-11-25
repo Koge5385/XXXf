@@ -1,6 +1,6 @@
 // 定数
 const ACCESS_TOKEN = 'access_token'
-const LOGOUT_HREF = '../'
+const TOP_HREF = '../'
 const LOGOUT_MESSAGE = 'ログアウトします。よろしいですか？'
 
 /**
@@ -22,7 +22,7 @@ class Logout {
     const confirm = window.confirm(LOGOUT_MESSAGE)
     if(confirm) {
       localStorage.removeItem(ACCESS_TOKEN)
-      document.location.href = LOGOUT_HREF
+      document.location.href = TOP_HREF
     }
   }
 }

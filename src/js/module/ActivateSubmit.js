@@ -7,6 +7,7 @@ const SUBMIT_CLASS = '.js-formSubmit-target'
 const CHECK_EMPTY_CLASS = '.js-valueEmptyCheck-target'
 const CHECK_SELECTED_CLASS = '.js-isSelected-target'
 const CHECK_CHECKED_CLASS = '.js-hasChecked-target'
+const CHECK_ANYCHECKED_CLASS = '.js-anyChecked-target'
 const CHECK_MAIL_CLASS = '.js-mailValidation-target'
 const CHECK_PASSWORD_CLASS = '.js-passwordValidation-target'
 const ERROR_CLASS = 'is-error'
@@ -150,6 +151,49 @@ class ActivateSubmit {
   }
 
   /**
+   * @desc 子要素の何れもcheckedでない場合にis-errorのクラスを付与
+   */
+  anyChecked() {
+    if (document.querySelector(CHECK_ANYCHECKED_CLASS) === null) this.checkResult.anyCheck = true
+
+    if (document.querySelector(CHECK_ANYCHECKED_CLASS) !== null) {
+      const targetArray = this.convertNode(CHECK_ANYCHECKED_CLASS)
+      const checkList = new Array(targetArray.length)
+      targetArray.forEach((elem, i) => {
+        const checkboxArray = elem.querySelectorAll('input')
+        const checkChildList = new Array(checkboxArray.length)
+        Array.prototype.slice.call(checkboxArray, 0).forEach((input, n) => {
+          input.addEventListener(CHANGE_EVENT, () => {
+            this.hasAnyCheck(input, checkList, checkChildList, i, n)
+          })
+        })
+      })
+    }
+  }
+
+  /**
+   * @desc チェックが入っているか判定する
+   * @param {Object} element 対象の要素
+   * @param {Array} list チェック状態を書き込む配列
+   * @param {Number} index 処理番号
+   */
+  hasAnyCheck(element, parentList, childList, index, subindex) {
+    if (!element.checked) {
+      element.classList.add(ERROR_CLASS)
+      childList[subindex] = false
+    }
+    if (element.checked) {
+      element.classList.remove(ERROR_CLASS)
+      childList[subindex] = true
+    }
+    if (childList.filter(x => x === true).length === 0) parentList[index] = false
+    if (childList.filter(x => x === true).length > 0) parentList[index] = true
+    parentList.filter(x => x === true).length !== parentList.length
+      ? this.checkResult.anyCheck = false
+      : this.checkResult.anyCheck = true
+  }
+
+  /**
    * @desc 1つ目のメールアドレスをフォーマットを参照して検証
    */
   mailValidate() {
@@ -236,16 +280,17 @@ class ActivateSubmit {
     const targetSubmit = document.querySelector(SUBMIT_CLASS)
 
     // アクティブ判定に必要なオブジェクトを作成（全てtrueだと活性化する）
-    this.checkResult = { 'empty': false, 'radio': false, 'checkbox': false, 'mail': false, 'password': false }
+    this.checkResult = { 'empty': false, 'radio': false, 'checkbox': false, 'mail': false, 'password': false, 'anyCheck': false }
 
     // それぞれのチェック処理を走らせる
     this.isValueEmpty()
     this.isSelected()
     this.isChecked()
+    this.anyChecked()
     this.mailValidate()
     this.passwordValidate()
 
-    if (this.checkResult.empty === true && this.checkResult.radio === true && this.checkResult.checkbox === true && this.checkResult.mail === true && this.checkResult.password === true) targetSubmit.disabled = false
+    if (this.checkResult.empty === true && this.checkResult.radio === true && this.checkResult.checkbox === true && this.checkResult.mail === true && this.checkResult.password === true && this.checkResult.anyCheck === true) targetSubmit.disabled = false
 
     const checkObject = this.checkResult
     Object.keys(checkObject).forEach(key => {
@@ -254,7 +299,7 @@ class ActivateSubmit {
         get: () => oldValue,
         set: (newValue) => {
           oldValue = newValue
-          checkObject.empty === true && checkObject.radio === true && checkObject.checkbox === true && checkObject.mail === true && checkObject.password === true
+          checkObject.empty === true && checkObject.radio === true && checkObject.checkbox === true && checkObject.mail === true && checkObject.password === true && checkObject.anyCheck === true
             ? targetSubmit.disabled = false
             : targetSubmit.disabled = true
         }

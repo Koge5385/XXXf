@@ -43,7 +43,53 @@
             </a>
           </div>
           <nav class="globalNav pc-view">
-            <ul class="globalNavList">
+            <ul class="globalNavList js-async-loginNavigation-target">
+              <li class="globalNavItem">
+                <a href="/dist/job/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
+                      <g transform="translate(11.603 10)">
+                        <g transform="translate(-11.603 -10)">
+                          <rect width="18.38" height="2.309" transform="translate(4.825)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
+                          <rect width="2.298" height="2.309" />
+                          <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">求人一覧</p>
+                </a>
+              </li>
+              <li class="globalNavItem">
+                <a
+                  href="/dist/mypage/"
+                  class="globalNavItem__link"
+                  onclick="gtag('event', 'click', {'event_category': 'top_header_regist','event_label': 'header_regist'});"
+                >
+                  <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
+                      <g transform="translate(9.95 11)">
+                        <g transform="translate(-9.95 -11)">
+                          <path
+                            d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
+                            transform="translate(-0.62 -0.601)"
+                          />
+                          <path
+                            d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
+                            transform="translate(-1 0.761)"
+                          />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">マイページ</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="globalNavList js-async-logoutNavigation-target">
               <li class="globalNavItem">
                 <a href="/dist/job/" class="globalNavItem__link">
                   <span class="globalNavItem__icon globalNavItem__icon--list"
@@ -132,7 +178,50 @@
             <div class="globalMobileNavBlock">
               <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
               <div class="globalMobileNavContents">
-                <ul class="globalMobileNavCell">
+                <ul class="globalMobileNavCell js-async-loginNavigation-target">
+                  <li class="globalMobileNavCellItem">
+                    <a href="/dist/job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
+                          <g transform="translate(20.304 17.5)">
+                            <g transform="translate(-20.304 -17.5)">
+                              <rect width="32.165" height="4.041" transform="translate(8.443)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
+                              <rect width="4.021" height="4.041" />
+                              <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
+                            </g>
+                          </g></svg></span
+                      >求人一覧
+                    </a>
+                  </li>
+                  <li class="globalMobileNavCellItem">
+                    <a
+                      href="/dist/mypage/"
+                      class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin"
+                    >
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
+                          <g transform="translate(9.95 11)">
+                            <g transform="translate(-9.95 -11)">
+                              <path
+                                d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
+                                transform="translate(1.739 -0.601)"
+                              />
+                              <path
+                                d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
+                                transform="translate(-1 9.171)"
+                              />
+                            </g>
+                          </g></svg></span
+                      >マイページ
+                    </a>
+                  </li>
+                </ul>
+                <ul class="globalMobileNavCell js-async-logoutNavigation-target">
                   <li class="globalMobileNavCellItem">
                     <a href="/dist/job/" class="globalMobileNavCellItem__link">
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
@@ -234,44 +323,78 @@
                     <select name="job_p_job_category" class="m-inputSelect topSearchBoxList__input">
                       <option value="">職種で探す</option>
                       <option value="">指定しない</option
-                      ><option value="事務長">事務長</option
-                      ><option value="事務長候補">事務長候補</option
-                      ><option value="経営企画">経営企画</option
-                      ><option value="医事課長（候補含む）">医事課長（候補含む）</option
-                      ><option value="医事課員">医事課員</option
-                      ><option value="総務課長（候補含む）">総務課長（候補含む）</option
-                      ><option value="総務課員">総務課員</option
-                      ><option value="人事課長（候補含む）">人事課長（候補含む）</option
-                      ><option value="人事課員">人事課員</option
-                      ><option value="財務・経理">財務・経理</option
-                      ><option value="地域連携室・渉外">地域連携室・渉外</option
-                      ><option value="広報">広報</option
-                      ><option value="情報管理室">情報管理室</option
-                      ><option value="事務総合職">事務総合職</option
-                      ><option value="健診総合職">健診総合職</option
-                      ><option value="診療情報管理士">診療情報管理士</option
-                      ><option value="社会福祉士">社会福祉士</option
-                      ><option value="その他">その他</option>
+                      ><option value="option_u_jimutyou">事務長</option
+                      ><option value="option_u_jimutyoukouho">事務長候補</option
+                      ><option value="option_u_keieikikaku">経営企画</option
+                      ><option value="option_u_ijikain">医事課員</option
+                      ><option value="option_u_ijikatyoukouhohukumu">医事課長（候補含む）</option
+                      ><option value="option_u_soumukain">総務課員</option
+                      ><option value="option_u_soumukatyoukouhohukumu">総務課長（候補含む）</option
+                      ><option value="option_u_jinjikain">人事課員</option
+                      ><option value="option_u_jinjikatyoukouhohukumu">人事課長（候補含む）</option
+                      ><option value="option_u_zaimukeiri2">財務・経理</option
+                      ><option value="option_u_tiikirenkeishitsushitsugai">地域連携室・渉外</option
+                      ><option value="option_u_kouhou">広報</option
+                      ><option value="option_u_jouhoukanrishitsu">情報管理室</option
+                      ><option value="option_u_jimusougoushoku">事務総合職</option
+                      ><option value="option_u_kenshinsougoushoku">健診総合職</option
+                      ><option value="option_u_shinryoujouhoukanrishi">診療情報管理士</option
+                      ><option value="option_u_syakaihukushishi">社会福祉士</option
+                      ><option value="option_u_sonohoka">その他</option>
                     </select>
                   </li>
                   <li class="topSearchBoxList__item topSearchBoxList__item--place">
-                    <select name="job_p_area" class="m-inputSelect topSearchBoxList__input">
+                    <select name="job_u_kinmutitodoufuken" class="m-inputSelect topSearchBoxList__input">
                       <option value="">勤務地で探す</option>
                       <option value="">指定しない</option
-                      ><option value="茨城">茨城</option
-                      ><option value="栃木">栃木</option
-                      ><option value="群馬">群馬</option
-                      ><option value="埼玉">埼玉</option
-                      ><option value="千葉">千葉</option
-                      ><option value="東京">東京</option
-                      ><option value="神奈川">神奈川</option
-                      ><option value="三重">三重</option
-                      ><option value="滋賀">滋賀</option
-                      ><option value="京都">京都</option
-                      ><option value="大阪">大阪</option
-                      ><option value="兵庫">兵庫</option
-                      ><option value="奈良">奈良</option
-                      ><option value="和歌山">和歌山</option>
+                      ><option value="option_p_foreign">海外</option
+                      ><option value="option_p_hokkaido">北海道</option
+                      ><option value="option_p_aomori">青森県</option
+                      ><option value="option_p_iwate">岩手県</option
+                      ><option value="option_p_miyagi">宮城県</option
+                      ><option value="option_p_akita">秋田県</option
+                      ><option value="option_p_yamagata">山形県</option
+                      ><option value="option_p_fukushima">福島県</option
+                      ><option value="option_p_ibaraki">茨城県</option
+                      ><option value="option_p_tochigi">栃木県</option
+                      ><option value="option_p_gunma">群馬県</option
+                      ><option value="option_p_saitama">埼玉県</option
+                      ><option value="option_p_chiba">千葉県</option
+                      ><option value="option_p_tokyo">東京都</option
+                      ><option value="option_p_kanagawa">神奈川県</option
+                      ><option value="option_p_niigata">新潟県</option
+                      ><option value="option_p_toyama">富山県</option
+                      ><option value="option_p_ishikawa">石川県</option
+                      ><option value="option_p_fukui">福井県</option
+                      ><option value="option_p_yamanashi">山梨県</option
+                      ><option value="option_p_nagano">長野県</option
+                      ><option value="option_p_gifu">岐阜県</option
+                      ><option value="option_p_shizuoka">静岡県</option
+                      ><option value="option_p_aichi">愛知県</option
+                      ><option value="option_p_mie">三重県</option
+                      ><option value="option_p_shiga">滋賀県</option
+                      ><option value="option_p_kyoto">京都府</option
+                      ><option value="option_p_osaka">大阪府</option
+                      ><option value="option_p_hyogo">兵庫県</option
+                      ><option value="option_p_nara">奈良県</option
+                      ><option value="option_p_wakayama">和歌山県</option
+                      ><option value="option_p_tottori">鳥取県</option
+                      ><option value="option_p_shimane">島根県</option
+                      ><option value="option_p_okayama">岡山県</option
+                      ><option value="option_p_hiroshima">広島県</option
+                      ><option value="option_p_yamaguchi">山口県</option
+                      ><option value="option_p_tokushima">徳島県</option
+                      ><option value="option_p_kagawa">香川県</option
+                      ><option value="option_p_ehime">愛媛県</option
+                      ><option value="option_p_kochi">高知県</option
+                      ><option value="option_p_fukuoka">福岡県</option
+                      ><option value="option_p_saga">佐賀県</option
+                      ><option value="option_p_nagasaki">長崎県</option
+                      ><option value="option_p_kumamoto">熊本県</option
+                      ><option value="option_p_oita">大分県</option
+                      ><option value="option_p_miyazaki">宮崎県</option
+                      ><option value="option_p_kagoshima">鹿児島県</option
+                      ><option value="option_p_okinawa">沖縄県</option>
                     </select>
                   </li>
                   <li class="topSearchBoxList__item topSearchBoxList__item--salary">
@@ -659,38 +782,50 @@
                   <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
                   <ul class="searchButtonBlockAreaList">
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E8%8C%A8%E5%9F%8E" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E8%8C%A8%E5%9F%8E"
+                        class="searchButtonBlockAreaList__link"
                         >茨城</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E6%A0%83%E6%9C%A8" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E6%A0%83%E6%9C%A8"
+                        class="searchButtonBlockAreaList__link"
                         >栃木</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E7%BE%A4%E9%A6%AC" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E7%BE%A4%E9%A6%AC"
+                        class="searchButtonBlockAreaList__link"
                         >群馬</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E5%9F%BC%E7%8E%89" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E5%9F%BC%E7%8E%89"
+                        class="searchButtonBlockAreaList__link"
                         >埼玉</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E5%8D%83%E8%91%89" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E5%8D%83%E8%91%89"
+                        class="searchButtonBlockAreaList__link"
                         >千葉</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E6%9D%B1%E4%BA%AC" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E6%9D%B1%E4%BA%AC"
+                        class="searchButtonBlockAreaList__link"
                         >東京</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
                       <a
-                        href="/dist/job/?job_p_area=%E7%A5%9E%E5%A5%88%E5%B7%9D"
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E7%A5%9E%E5%A5%88%E5%B7%9D"
                         class="searchButtonBlockAreaList__link"
                         >神奈川</a
                       >
@@ -702,38 +837,50 @@
                   <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
                   <ul class="searchButtonBlockAreaList">
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E4%B8%89%E9%87%8D" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E4%B8%89%E9%87%8D"
+                        class="searchButtonBlockAreaList__link"
                         >三重</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E6%BB%8B%E8%B3%80" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E6%BB%8B%E8%B3%80"
+                        class="searchButtonBlockAreaList__link"
                         >滋賀</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E4%BA%AC%E9%83%BD" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E4%BA%AC%E9%83%BD"
+                        class="searchButtonBlockAreaList__link"
                         >京都</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E5%A4%A7%E9%98%AA" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E5%A4%A7%E9%98%AA"
+                        class="searchButtonBlockAreaList__link"
                         >大阪</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E5%85%B5%E5%BA%AB" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E5%85%B5%E5%BA%AB"
+                        class="searchButtonBlockAreaList__link"
                         >兵庫</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
-                      <a href="/dist/job/?job_p_area=%E5%A5%88%E8%89%AF" class="searchButtonBlockAreaList__link"
+                      <a
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E5%A5%88%E8%89%AF"
+                        class="searchButtonBlockAreaList__link"
                         >奈良</a
                       >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
                       <a
-                        href="/dist/job/?job_p_area=%E5%92%8C%E6%AD%8C%E5%B1%B1"
+                        href="/dist/job/?job_u_kinmutitodoufuken=%E5%92%8C%E6%AD%8C%E5%B1%B1"
                         class="searchButtonBlockAreaList__link"
                         >和歌山</a
                       >

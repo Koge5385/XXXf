@@ -2,28 +2,28 @@
 
 {% macro checkboxHopeJob() -%}
 {%- set checkHopeJob = [
-  {job: '事務長'},
-  {job: '事務長候補'},
-  {job: '経営企画'},
-  {job: '医事課員'},
-  {job: '医事課長（候補含む）'},
-  {job: '総務課員'},
-  {job: '総務課長（候補含む）'},
-  {job: '人事課員'},
-  {job: '人事課長（候補含む）'},
-  {job: '財務・経理'},
-  {job: '地域連携室・渉外'},
-  {job: '広報'},
-  {job: '情報管理室'},
-  {job: '事務総合職'},
-  {job: '健診総合職'},
-  {job: '診療情報管理士'},
-  {job: '社会福祉士'},
-  {job: 'その他'}
+  {job: '事務長', value: 'option_u_jimutyou'},
+  {job: '事務長候補', value: 'option_u_jimutyoukouho'},
+  {job: '経営企画', value: 'option_u_keieikikaku'},
+  {job: '医事課員', value: 'option_u_ijikain'},
+  {job: '医事課長（候補含む）', value: 'option_u_ijikatyoukouhohukumu'},
+  {job: '総務課員', value: 'option_u_soumukain'},
+  {job: '総務課長（候補含む）', value: 'option_u_soumukatyoukouhohukumu'},
+  {job: '人事課員', value: 'option_u_jinjikain'},
+  {job: '人事課長（候補含む）', value: 'option_u_jinjikatyoukouhohukumu'},
+  {job: '財務・経理', value: 'option_u_zaimukeiri2'},
+  {job: '地域連携室・渉外', value: 'option_u_tiikirenkeishitsushitsugai'},
+  {job: '広報', value: 'option_u_kouhou'},
+  {job: '情報管理室', value: 'option_u_jouhoukanrishitsu'},
+  {job: '事務総合職', value: 'option_u_jimusougoushoku'},
+  {job: '健診総合職', value: 'option_u_kenshinsougoushoku'},
+  {job: '診療情報管理士', value: 'option_u_shinryoujouhoukanrishi'},
+  {job: '社会福祉士', value: 'option_u_syakaihukushishi'},
+  {job: 'その他', value: 'option_u_sonohoka'}
 ] -%}
 {%- for item in checkHopeJob %}
 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-  <input type="checkbox" name="hope_job" id="hope_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.job }}">
+  <input type="checkbox" name="resume_p_expect_job_category" id="hope_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="hope_job_{{ loop.index }}" class="m-inputCheckLabel">{{ item.job }}</label>
 </div>
 {%- endfor %}
@@ -31,14 +31,14 @@
 
 {% macro checkboxHopePosition() -%}
 {%- set checkHopePosition = [
-  {position: '正社員'},
-  {position: '契約社員'},
-  {position: '派遣社員'},
-  {position: 'その他'}
+  {position: '正社員', value: 'option_p_full_time'},
+  {position: '契約社員', value: 'option_p_contractor'},
+  {position: '派遣社員', value: 'option_p_temporary_staff'},
+  {position: 'その他', value: 'option_u_000514'}
 ] -%}
 {%- for item in checkHopePosition %}
 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-  <input type="checkbox" name="hope_position" id="hope_position_{{ loop.index }}" class="m-inputCheck" value="{{ item.position }}">
+  <input type="checkbox" name="resume_p_expect_employment_type" id="hope_position_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="hope_position_{{ loop.index }}" class="m-inputCheckLabel">{{ item.position }}</label>
 </div>
 {%- endfor %}
@@ -46,22 +46,22 @@
 
 {% macro checkboxExpJob() -%}
 {%- set checkExpJob = [
-  {job: '経営企画・事業企画'},
-  {job: '人事・労務'},
-  {job: '総務'},
-  {job: '経理'},
-  {job: '医療事務'},
-  {job: '広報'},
-  {job: 'マーケティング'},
-  {job: '営業'},
-  {job: '地域連携室・渉外'},
-  {job: '情報管理・システム設計・開発'},
-  {job: 'コンサルタント'},
-  {job: 'その他'}
+  {job: '経営企画・事業企画', value: 'option_u_keieikikaku2'},
+  {job: '人事・労務', value: 'option_u_zinziroumu'},
+  {job: '総務', value: 'option_u_soumu'},
+  {job: '経理', value: 'option_u_keiri'},
+  {job: '医療事務', value: 'option_u_iryouzimu'},
+  {job: '広報', value: 'option_u_kouhou2'},
+  {job: 'マーケティング', value: 'option_u_marketing'},
+  {job: '営業', value: 'option_u_eigyou'},
+  {job: '地域連携室・渉外', value: 'option_u_tiikirenkeishitsu'},
+  {job: '情報管理・システム設計・開発', value: 'option_u_zyouhoukanri'},
+  {job: 'コンサルタント', value: 'option_u_cosarutanto'},
+  {job: 'その他', value: 'option_u_sonota'}
 ] -%}
 {%- for item in checkExpJob %}
 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-  <input type="checkbox" name="exp_job" id="exp_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.job }}">
+  <input type="checkbox" name="resume_p_experienced_job_category" id="exp_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="exp_job_{{ loop.index }}" class="m-inputCheckLabel">{{ item.job }}</label>
 </div>
 {%- endfor %}
@@ -69,22 +69,22 @@
 
 {% macro checkboxExpIndustry() -%}
 {%- set checkExpIndustry = [
-  {industry: '医療機関（病院）'},
-  {industry: '医療機関（診療所）'},
-  {industry: '介護施設'},
-  {industry: '医療系メーカー'},
-  {industry: 'IT・通信・インターネット'},
-  {industry: '金融・保険'},
-  {industry: '商社・流通・小売'},
-  {industry: 'サービス'},
-  {industry: '広告・マスコミ・出版・放送・印刷'},
-  {industry: '教育・保育・公務員'},
-  {industry: 'コンサルティング・会計・法律関係'},
-  {industry: 'その他'}
+  {industry: '医療機関（病院）', value: 'option_u_010593'},
+  {industry: '医療機関（診療所）', value: 'option_u_shinryouzyo'},
+  {industry: '介護施設', value: 'option_u_000537'},
+  {industry: '医療系メーカー', value: 'option_u_000536'},
+  {industry: 'IT・通信・インターネット', value: 'option_u_000540'},
+  {industry: '金融・保険', value: 'option_u_000539'},
+  {industry: '商社・流通・小売', value: 'option_u_syousya'},
+  {industry: 'サービス', value: 'option_u_service'},
+  {industry: '広告・マスコミ・出版・放送・印刷', value: 'option_u_koukokumasukomi'},
+  {industry: '教育・保育・公務員', value: 'option_u_koumuin'},
+  {industry: 'コンサルティング・会計・法律関係', value: 'option_u_consarutying'},
+  {industry: 'その他', value: 'option_u_000546'}
 ] -%}
 {%- for item in checkExpIndustry %}
 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
-  <input type="checkbox" name="exp_industry" id="exp_industry_{{ loop.index }}" class="m-inputCheck" value="{{ item.industry }}">
+  <input type="checkbox" name="resume_p_experienced_industry" id="exp_industry_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="exp_industry_{{ loop.index }}" class="m-inputCheckLabel">{{ item.industry }}</label>
 </div>
 {%- endfor %}
@@ -94,12 +94,13 @@
 <option value="">転職に対する意欲を選択してください</option>
 <option value="">指定しない</option>
 {%- set selectMotivation = [
-  {motivation: '転職に興味がある程度'},
-  {motivation: 'ゆくゆくは転職したい'},
-  {motivation: '今すぐに転職したい'}
+  {motivation: '即転職希望', value: 'option_u_000328'},
+  {motivation: '3ヶ月～半年(本格的に転職先を検討)', value: 'option_u_000329'},
+  {motivation: '1年以内(いい転職先があれば)', value: 'option_u_000330'},
+  {motivation: '未定(情報収集中)', value: 'option_u_000331'}
 ] -%}
 {%- for item in selectMotivation %}
-<option value="{{ item.motivation }}">{{ item.motivation }}</option>
+<option value="{{ item.value }}">{{ item.motivation }}</option>
 {%- endfor %}
 {%- endmacro %}
 
@@ -107,25 +108,34 @@
 <option value="">転職回数を選択してください</option>
 <option value="">指定しない</option>
 {%- set selectJobChange = [
-  {count: '1回'},
-  {count: '2回'},
-  {count: '3回以上'}
+  {count: '0回', value: 'option_u_000253'},
+  {count: '1回', value: 'option_u_000254'},
+  {count: '2回', value: 'option_u_000255'},
+  {count: '3回', value: 'option_u_000256'},
+  {count: '4回', value: 'option_u_000257'},
+  {count: '5回', value: 'option_u_000258'},
+  {count: '6回以上', value: 'option_u_000259'}
 ] -%}
 {%- for item in selectJobChange %}
-<option value="{{ item.count }}">{{ item.count }}</option>
+<option value="{{ item.value }}">{{ item.count }}</option>
 {%- endfor %}
 {%- endmacro %}
 
 {% macro optionSchoolCareer() -%}
 <option value="">最終学歴を選択してください</option>
-<option value="">指定しない</option>
 {%- set selectSchoolCareer = [
-  {career: '専門学校卒'},
-  {career: '大学卒'},
-  {career: '大学院卒'}
+  {career: '不問', value: 'option_u_000174'},
+  {career: '高校卒', value: 'option_u_000172'},
+  {career: '高専卒', value: 'option_u_000169'},
+  {career: '専門各種学校卒', value: 'option_u_000171'},
+  {career: '短大卒', value: 'option_u_000170'},
+  {career: '大学卒', value: 'option_u_000168'},
+  {career: '大学院卒（修士）', value: 'option_u_000167'},
+  {career: '大学院卒（博士）', value: 'option_u_000166'},
+  {career: 'その他', value: 'option_u_000173'}
 ] -%}
 {%- for item in selectSchoolCareer %}
-<option value="{{ item.career }}">{{ item.career }}</option>
+<option value="{{ item.value }}">{{ item.career }}</option>
 {%- endfor %}
 {%- endmacro %}
 
@@ -133,11 +143,14 @@
 <option value="">英語スキルを選択してください</option>
 <option value="">指定しない</option>
 {%- set selectSkillEnglish = [
-  {skill: '日常会話'},
-  {skill: 'ビジネス英語'}
+  {skill: 'なし', value: 'option_u_000548'},
+  {skill: '初級(簡単な挨拶、辞書を使っての読み書き)', value: 'option_u_000278'},
+  {skill: '中級(日常会話、簡単な読み書き可能)', value: 'option_u_000279'},
+  {skill: '上級(ビジネスレベルの会話、読み書き)', value: 'option_u_000280'},
+  {skill: 'ネイティブレベル', value: 'option_u_000281'}
 ] -%}
 {%- for item in selectSkillEnglish %}
-<option value="{{ item.skill }}">{{ item.skill }}</option>
+<option value="{{ item.value }}">{{ item.skill }}</option>
 {%- endfor %}
 {%- endmacro %}
 
@@ -145,11 +158,14 @@
 <option value="">中国語スキルを選択してください</option>
 <option value="">指定しない</option>
 {%- set selectSkillChinese = [
-  {skill: '日常会話'},
-  {skill: 'ビジネス英語'}
+  {skill: 'なし', value: 'option_u_000548'},
+  {skill: '初級(簡単な挨拶、辞書を使っての読み書き)', value: 'option_u_000278'},
+  {skill: '中級(日常会話、簡単な読み書き可能)', value: 'option_u_000279'},
+  {skill: '上級(ビジネスレベルの会話、読み書き)', value: 'option_u_000280'},
+  {skill: 'ネイティブレベル', value: 'option_u_000281'}
 ] -%}
 {%- for item in selectSkillChinese %}
-<option value="{{ item.skill }}">{{ item.skill }}</option>
+<option value="{{ item.value }}">{{ item.skill }}</option>
 {%- endfor %}
 {%- endmacro %}
 
@@ -157,27 +173,27 @@
 <option value="">職種で探す</option>
 <option value="">指定しない</option>
 {%- set selectJob = [
-  {job: '事務長'},
-  {job: '事務長候補'},
-  {job: '経営企画'},
-  {job: '医事課長（候補含む）'},
-  {job: '医事課員'},
-  {job: '総務課長（候補含む）'},
-  {job: '総務課員'},
-  {job: '人事課長（候補含む）'},
-  {job: '人事課員'},
-  {job: '財務・経理'},
-  {job: '地域連携室・渉外'},
-  {job: '広報'},
-  {job: '情報管理室'},
-  {job: '事務総合職'},
-  {job: '健診総合職'},
-  {job: '診療情報管理士'},
-  {job: '社会福祉士'},
-  {job: 'その他'}
+  {job: '事務長', value: 'option_u_jimutyou'},
+  {job: '事務長候補', value: 'option_u_jimutyoukouho'},
+  {job: '経営企画', value: 'option_u_keieikikaku'},
+  {job: '医事課員', value: 'option_u_ijikain'},
+  {job: '医事課長（候補含む）', value: 'option_u_ijikatyoukouhohukumu'},
+  {job: '総務課員', value: 'option_u_soumukain'},
+  {job: '総務課長（候補含む）', value: 'option_u_soumukatyoukouhohukumu'},
+  {job: '人事課員', value: 'option_u_jinjikain'},
+  {job: '人事課長（候補含む）', value: 'option_u_jinjikatyoukouhohukumu'},
+  {job: '財務・経理', value: 'option_u_zaimukeiri2'},
+  {job: '地域連携室・渉外', value: 'option_u_tiikirenkeishitsushitsugai'},
+  {job: '広報', value: 'option_u_kouhou'},
+  {job: '情報管理室', value: 'option_u_jouhoukanrishitsu'},
+  {job: '事務総合職', value: 'option_u_jimusougoushoku'},
+  {job: '健診総合職', value: 'option_u_kenshinsougoushoku'},
+  {job: '診療情報管理士', value: 'option_u_shinryoujouhoukanrishi'},
+  {job: '社会福祉士', value: 'option_u_syakaihukushishi'},
+  {job: 'その他', value: 'option_u_sonohoka'}
 ] -%}
 {%- for item in selectJob %}
-<option value="{{ item.job }}">{{ item.job }}</option>
+<option value="{{ item.value }}">{{ item.job }}</option>
 {%- endfor %}
 {%- endmacro %}
 
@@ -185,23 +201,57 @@
 <option value="">勤務地で探す</option>
 <option value="">指定しない</option>
 {%- set selectArea = [
-  {place: '茨城'},
-  {place: '栃木'},
-  {place: '群馬'},
-  {place: '埼玉'},
-  {place: '千葉'},
-  {place: '東京'},
-  {place: '神奈川'},
-  {place: '三重'},
-  {place: '滋賀'},
-  {place: '京都'},
-  {place: '大阪'},
-  {place: '兵庫'},
-  {place: '奈良'},
-  {place: '和歌山'}
+  {place: '海外', value: 'option_p_foreign'},
+  {place: '北海道', value: 'option_p_hokkaido'},
+  {place: '青森県', value: 'option_p_aomori'},
+  {place: '岩手県', value: 'option_p_iwate'},
+  {place: '宮城県', value: 'option_p_miyagi'},
+  {place: '秋田県', value: 'option_p_akita'},
+  {place: '山形県', value: 'option_p_yamagata'},
+  {place: '福島県', value: 'option_p_fukushima'},
+  {place: '茨城県', value: 'option_p_ibaraki'},
+  {place: '栃木県', value: 'option_p_tochigi'},
+  {place: '群馬県', value: 'option_p_gunma'},
+  {place: '埼玉県', value: 'option_p_saitama'},
+  {place: '千葉県', value: 'option_p_chiba'},
+  {place: '東京都', value: 'option_p_tokyo'},
+  {place: '神奈川県', value: 'option_p_kanagawa'},
+  {place: '新潟県', value: 'option_p_niigata'},
+  {place: '富山県', value: 'option_p_toyama'},
+  {place: '石川県', value: 'option_p_ishikawa'},
+  {place: '福井県', value: 'option_p_fukui'},
+  {place: '山梨県', value: 'option_p_yamanashi'},
+  {place: '長野県', value: 'option_p_nagano'},
+  {place: '岐阜県', value: 'option_p_gifu'},
+  {place: '静岡県', value: 'option_p_shizuoka'},
+  {place: '愛知県', value: 'option_p_aichi'},
+  {place: '三重県', value: 'option_p_mie'},
+  {place: '滋賀県', value: 'option_p_shiga'},
+  {place: '京都府', value: 'option_p_kyoto'},
+  {place: '大阪府', value: 'option_p_osaka'},
+  {place: '兵庫県', value: 'option_p_hyogo'},
+  {place: '奈良県', value: 'option_p_nara'},
+  {place: '和歌山県', value: 'option_p_wakayama'},
+  {place: '鳥取県', value: 'option_p_tottori'},
+  {place: '島根県', value: 'option_p_shimane'},
+  {place: '岡山県', value: 'option_p_okayama'},
+  {place: '広島県', value: 'option_p_hiroshima'},
+  {place: '山口県', value: 'option_p_yamaguchi'},
+  {place: '徳島県', value: 'option_p_tokushima'},
+  {place: '香川県', value: 'option_p_kagawa'},
+  {place: '愛媛県', value: 'option_p_ehime'},
+  {place: '高知県', value: 'option_p_kochi'},
+  {place: '福岡県', value: 'option_p_fukuoka'},
+  {place: '佐賀県', value: 'option_p_saga'},
+  {place: '長崎県', value: 'option_p_nagasaki'},
+  {place: '熊本県', value: 'option_p_kumamoto'},
+  {place: '大分県', value: 'option_p_oita'},
+  {place: '宮崎県', value: 'option_p_miyazaki'},
+  {place: '鹿児島県', value: 'option_p_kagoshima'},
+  {place: '沖縄県', value: 'option_p_okinawa'}
 ] -%}
 {%- for item in selectArea %}
-<option value="{{ item.place }}">{{ item.place }}</option>
+<option value="{{ item.value }}">{{ item.place }}</option>
 {%- endfor %}
 {%- endmacro %}
 
@@ -298,23 +348,57 @@
 {% macro optionPlace() -%}
 <option value="">都道府県を選択してください</option>
 {%- set selectPlace = [
-  {place: '茨城'},
-  {place: '栃木'},
-  {place: '群馬'},
-  {place: '埼玉'},
-  {place: '千葉'},
-  {place: '東京'},
-  {place: '神奈川'},
-  {place: '三重'},
-  {place: '滋賀'},
-  {place: '京都'},
-  {place: '大阪'},
-  {place: '兵庫'},
-  {place: '奈良'},
-  {place: '和歌山'}
+  {place: '海外', value: 'option_p_foreign'},
+  {place: '北海道', value: 'option_p_hokkaido'},
+  {place: '青森県', value: 'option_p_aomori'},
+  {place: '岩手県', value: 'option_p_iwate'},
+  {place: '宮城県', value: 'option_p_miyagi'},
+  {place: '秋田県', value: 'option_p_akita'},
+  {place: '山形県', value: 'option_p_yamagata'},
+  {place: '福島県', value: 'option_p_fukushima'},
+  {place: '茨城県', value: 'option_p_ibaraki'},
+  {place: '栃木県', value: 'option_p_tochigi'},
+  {place: '群馬県', value: 'option_p_gunma'},
+  {place: '埼玉県', value: 'option_p_saitama'},
+  {place: '千葉県', value: 'option_p_chiba'},
+  {place: '東京都', value: 'option_p_tokyo'},
+  {place: '神奈川県', value: 'option_p_kanagawa'},
+  {place: '新潟県', value: 'option_p_niigata'},
+  {place: '富山県', value: 'option_p_toyama'},
+  {place: '石川県', value: 'option_p_ishikawa'},
+  {place: '福井県', value: 'option_p_fukui'},
+  {place: '山梨県', value: 'option_p_yamanashi'},
+  {place: '長野県', value: 'option_p_nagano'},
+  {place: '岐阜県', value: 'option_p_gifu'},
+  {place: '静岡県', value: 'option_p_shizuoka'},
+  {place: '愛知県', value: 'option_p_aichi'},
+  {place: '三重県', value: 'option_p_mie'},
+  {place: '滋賀県', value: 'option_p_shiga'},
+  {place: '京都府', value: 'option_p_kyoto'},
+  {place: '大阪府', value: 'option_p_osaka'},
+  {place: '兵庫県', value: 'option_p_hyogo'},
+  {place: '奈良県', value: 'option_p_nara'},
+  {place: '和歌山県', value: 'option_p_wakayama'},
+  {place: '鳥取県', value: 'option_p_tottori'},
+  {place: '島根県', value: 'option_p_shimane'},
+  {place: '岡山県', value: 'option_p_okayama'},
+  {place: '広島県', value: 'option_p_hiroshima'},
+  {place: '山口県', value: 'option_p_yamaguchi'},
+  {place: '徳島県', value: 'option_p_tokushima'},
+  {place: '香川県', value: 'option_p_kagawa'},
+  {place: '愛媛県', value: 'option_p_ehime'},
+  {place: '高知県', value: 'option_p_kochi'},
+  {place: '福岡県', value: 'option_p_fukuoka'},
+  {place: '佐賀県', value: 'option_p_saga'},
+  {place: '長崎県', value: 'option_p_nagasaki'},
+  {place: '熊本県', value: 'option_p_kumamoto'},
+  {place: '大分県', value: 'option_p_oita'},
+  {place: '宮崎県', value: 'option_p_miyazaki'},
+  {place: '鹿児島県', value: 'option_p_kagoshima'},
+  {place: '沖縄県', value: 'option_p_okinawa'}
 ] -%}
 {%- for item in selectPlace %}
-<option value="{{ item.place }}">{{ item.place }}</option>
+<option value="{{ item.value }}">{{ item.place }}</option>
 {%- endfor %}
 {%- endmacro %}
 

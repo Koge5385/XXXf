@@ -2,10 +2,11 @@ import AxiosBase from '../AxiosBase'
 
 // 定数
 const ACCESS_TOKEN = 'access_token'
+const LOGIN_HREF = '../login/'
 
 /**
  * @class LoginCheck
- * @desc ログイン状態を判定する
+ * @desc 非ログインの場合はログイン画面に戻す
  */
 class LoginCheck {
   /**
@@ -40,7 +41,7 @@ class LoginCheck {
       console.log('login!')
     }
     if (status === 400 || status === 401) {
-      console.log('error')
+      document.location.href = LOGIN_HREF
     }
   }
 }

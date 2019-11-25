@@ -1,8 +1,14 @@
 import AxiosBase from '../AxiosBase'
+import JsonConvert from './JsonConvert'
+
+// 定数
+const FORM_TARGET_CLASS = '.js-async-registProfileForm-target'
+const ACCESS_TOKEN = 'access_token'
+const RESUME_HREF = './regist_resume.html'
 
 /**
  * @class RegistProfile
- * @desc ログイン状態を判定する
+ * @desc ユーザープロフィールの新規登録処理
  */
 class RegistProfile {
   /**
@@ -13,18 +19,14 @@ class RegistProfile {
   }
 
   /**
-   * @desc APIリクエストに必要なパラメーターを取得して返却する
-   */
-  getParameter() {
-    const callToken = localStorage.getItem(ACCESS_TOKEN)
-    return `/user/sessions/${callToken}?time=${new Date().getTime()}`
-  }
-
-  /**
-   * @desc API実行
+   * @desc パラメーターを取得してAPI実行
    */
   async doAxios() {
-    await new AxiosBase().getMethod(this.getParameter(), this.setDataToPage)
+    const params = new URLSearchParams(window.location.search)
+    const tokenData = params.get('token')
+    const optionObject = { 'token': tokenData }
+    const sendObject = new JsonConvert(FORM_TARGET_CLASS, optionObject)
+    await new AxiosBase().postMethod('/users/create', sendObject.convertObject(), this.setDataToPage)
   }
 
   /**
@@ -34,7 +36,8 @@ class RegistProfile {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
-      console.log('login!')
+      localStorage.setItem(ACCESS_TOKEN, response.data.access_token)
+      document.location.href = RESUME_HREF
     }
     if (status === 400 || status === 401) {
       console.log('error')

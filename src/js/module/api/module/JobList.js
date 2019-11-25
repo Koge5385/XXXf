@@ -25,7 +25,7 @@ class JobList {
 
     // APIリクエストに必要なパラメーターの取得
     this.jobOccupation = paramCheck('job_p_job_category')
-    this.jobArea = paramCheck('job_p_area')
+    this.jobArea = paramCheck('job_u_kinmutitodoufuken')
     this.jobSalary = paramCheck('job_p_min_salary')
     this.jobSearch = paramCheck('keywords')
     this.jobStart = paramCheck('start')
@@ -38,7 +38,7 @@ class JobList {
 
     // パラメーターのURIエンコード
     this.category = `job_p_job_category=${encodeURI(this.jobOccupation)}`
-    this.area = `job_p_area=${encodeURI(this.jobArea)}`
+    this.area = `job_u_kinmutitodoufuken=${encodeURI(this.jobArea)}`
     this.salary = `job_p_min_salary=${this.jobSalary}`
     this.keyword = `keywords=${encodeURI(this.jobSearch)}`
 
@@ -93,32 +93,32 @@ class JobList {
               setElement('category', jobListData[key])
               break
 
-            case 'job_p_phasedate':
-              setElement('date', jobListData[key])
+            case 'job_p_phase_date':
+              setElement('date', String(jobListData[key]).slice(0,10))
               break
 
-            case 'job_u_kyuujinnnoosusumepointo':
+            case 'job_u_kyuzintaitoru':
               setElement('title', jobListData[key])
               break
 
             case 'job_p_publish':
-              setElement('buildingName', jobListData[key].option_p_nondisclosure.option_p_name)
+              setElement('buildingName', jobListData[key].option_p_anonymous.option_p_name)
               break
 
             case 'job_p_job_category':
-              setElement('occupation', jobListData[key].option_u_010895.option_p_name)
+              setElement('occupation', jobListData[key].option_u_zaimukeiri2.option_p_name)
               break
 
-            case 'job_p_area':
+            case 'job_u_kinmutitodoufuken':
               setElement('place', jobListData[key])
               break
 
             case 'job_p_min_salary':
-              setElement('minSalary', Number(String(jobListData[key]).slice(0, -4)).toLocaleString())
+              setElement('minSalary', jobListData[key])
               break
 
             case 'job_p_max_salary':
-              setElement('maxSalary', Number(String(jobListData[key]).slice(0, -4)).toLocaleString())
+              setElement('maxSalary', jobListData[key])
               break
 
             case 'job_p_job_category_summary':

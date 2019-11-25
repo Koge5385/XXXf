@@ -15,11 +15,11 @@
     <meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
-    <link rel="icon" href="/dist/img/common/favicon.ico" />
-    <link rel="apple-touch-icon-precomposed" href="/dist/img/common/apple_icon.png" />
-    <link rel="icon" type="image/png" href="/dist/img/common/android_icon.png" />
+    <link rel="icon" href="/img/common/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" href="/img/common/apple_icon.png" />
+    <link rel="icon" type="image/png" href="/img/common/android_icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="/dist/css/pages/forbeginner.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pages/forbeginner.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150115128-1"></script>
@@ -38,14 +38,60 @@
       <header class="globalHeader">
         <div class="globalHeaderInner">
           <div class="globalHeader__logo">
-            <a href="/dist/">
-              <img src="/dist/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
+            <a href="/">
+              <img src="/img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT" />
             </a>
           </div>
           <nav class="globalNav pc-view">
-            <ul class="globalNavList">
+            <ul class="globalNavList js-async-loginNavigation-target">
               <li class="globalNavItem">
-                <a href="/dist/job/" class="globalNavItem__link">
+                <a href="/job/" class="globalNavItem__link">
+                  <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
+                      <g transform="translate(11.603 10)">
+                        <g transform="translate(-11.603 -10)">
+                          <rect width="18.38" height="2.309" transform="translate(4.825)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 5.859)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 11.832)" />
+                          <rect width="18.38" height="2.309" transform="translate(4.825 17.691)" />
+                          <rect width="2.298" height="2.309" />
+                          <rect width="2.298" height="2.309" transform="translate(0 5.859)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 11.832)" />
+                          <rect width="2.298" height="2.309" transform="translate(0 17.691)" />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">求人一覧</p>
+                </a>
+              </li>
+              <li class="globalNavItem">
+                <a
+                  href="/mypage/"
+                  class="globalNavItem__link"
+                  onclick="gtag('event', 'click', {'event_category': 'forbeginner_header_regist','event_label': 'header_regist'});"
+                >
+                  <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
+                      <g transform="translate(9.95 11)">
+                        <g transform="translate(-9.95 -11)">
+                          <path
+                            d="M10.57,12.319A5.86,5.86,0,1,0,4.6,6.349a5.97,5.97,0,0,0,5.97,5.97Z"
+                            transform="translate(-0.62 -0.601)"
+                          />
+                          <path
+                            d="M1.774,21.239H20.127a.774.774,0,0,0,.774-.774A7.186,7.186,0,0,0,13.493,13.5H8.407A7.186,7.186,0,0,0,1,20.465.774.774,0,0,0,1.774,21.239Z"
+                            transform="translate(-1 0.761)"
+                          />
+                        </g>
+                      </g></svg
+                  ></span>
+                  <p class="globalNavItem__label">マイページ</p>
+                </a>
+              </li>
+            </ul>
+            <ul class="globalNavList js-async-logoutNavigation-target">
+              <li class="globalNavItem">
+                <a href="/job/" class="globalNavItem__link">
                   <span class="globalNavItem__icon globalNavItem__icon--list"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="23.205" height="20" viewBox="0 0 23.205 20">
                       <g transform="translate(11.603 10)">
@@ -65,7 +111,7 @@
                 </a>
               </li>
               <li class="globalNavItem">
-                <a href="/dist/login/" class="globalNavItem__link">
+                <a href="/login/" class="globalNavItem__link">
                   <span class="globalNavItem__icon globalNavItem__icon--login"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.2" height="24" viewBox="0 0 19.2 24">
                       <g transform="translate(9.6 12)">
@@ -80,7 +126,7 @@
               </li>
               <li class="globalNavItem">
                 <a
-                  href="/dist/signup/create_account.html"
+                  href="/signup/create_account.html"
                   class="globalNavItem__link globalNavItem__link--regist"
                   onclick="gtag('event', 'click', {'event_category': 'forbeginner_header_regist','event_label': 'header_regist'});"
                 >
@@ -132,9 +178,9 @@
             <div class="globalMobileNavBlock">
               <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
               <div class="globalMobileNavContents">
-                <ul class="globalMobileNavCell">
+                <ul class="globalMobileNavCell js-async-loginNavigation-target">
                   <li class="globalMobileNavCellItem">
-                    <a href="/dist/job/" class="globalMobileNavCellItem__link">
+                    <a href="/job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
                           <g transform="translate(20.304 17.5)">
@@ -153,7 +199,47 @@
                     </a>
                   </li>
                   <li class="globalMobileNavCellItem">
-                    <a href="/dist/login/" class="globalMobileNavCellItem__link">
+                    <a href="/mypage/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
+                          <g transform="translate(9.95 11)">
+                            <g transform="translate(-9.95 -11)">
+                              <path
+                                d="M14.09,19.265A9.332,9.332,0,1,0,4.6,9.756a9.5,9.5,0,0,0,9.49,9.509Z"
+                                transform="translate(1.739 -0.601)"
+                              />
+                              <path
+                                d="M2.231,25.829h29.2A1.232,1.232,0,0,0,32.66,24.6,11.438,11.438,0,0,0,20.875,13.5H12.784A11.438,11.438,0,0,0,1,24.6,1.232,1.232,0,0,0,2.231,25.829Z"
+                                transform="translate(-1 9.171)"
+                              />
+                            </g>
+                          </g></svg></span
+                      >マイページ
+                    </a>
+                  </li>
+                </ul>
+                <ul class="globalMobileNavCell js-async-logoutNavigation-target">
+                  <li class="globalMobileNavCellItem">
+                    <a href="/job/" class="globalMobileNavCellItem__link">
+                      <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list"
+                        ><svg xmlns="http://www.w3.org/2000/svg" width="40.609" height="35" viewBox="0 0 40.609 35">
+                          <g transform="translate(20.304 17.5)">
+                            <g transform="translate(-20.304 -17.5)">
+                              <rect width="32.165" height="4.041" transform="translate(8.443)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 10.253)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 20.706)" />
+                              <rect width="32.165" height="4.041" transform="translate(8.443 30.959)" />
+                              <rect width="4.021" height="4.041" />
+                              <rect width="4.021" height="4.041" transform="translate(0 10.253)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 20.706)" />
+                              <rect width="4.021" height="4.041" transform="translate(0 30.959)" />
+                            </g>
+                          </g></svg></span
+                      >求人一覧
+                    </a>
+                  </li>
+                  <li class="globalMobileNavCellItem">
+                    <a href="/login/" class="globalMobileNavCellItem__link">
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--login"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="28" height="35" viewBox="0 0 28 35">
                           <g transform="translate(14 17.5)">
@@ -167,7 +253,7 @@
                   </li>
                   <li class="globalMobileNavCellItem">
                     <a
-                      href="/dist/signup/create_account.html"
+                      href="/signup/create_account.html"
                       class="globalMobileNavCellItem__link"
                       onclick="gtag('event', 'click', {'event_category': 'forbeginner_header_regist','event_label': 'header_regist'});"
                     >
@@ -191,14 +277,14 @@
                 </ul>
                 <ul class="globalMobileNavLink">
                   <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                    <a href="/dist/forbeginner/">初めての方へ</a>
+                    <a href="/forbeginner/">初めての方へ</a>
                   </li>
                   <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink">
-                    <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                    <a href="/forrecruiter/">医療機関採用担当者の方へ</a>
                   </li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/company/">会社概要</a></li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/privacy_policy/">個人情報保護方針</a></li>
-                  <li class="globalMobileNavLink__item"><a href="/dist/membership_rule/">会員規約</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/company/">会社概要</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/privacy_policy/">個人情報保護方針</a></li>
+                  <li class="globalMobileNavLink__item"><a href="/membership_rule/">会員規約</a></li>
                 </ul>
               </div>
             </div>
@@ -221,8 +307,8 @@
               相談料や使用料など、本サービスを利用された求職者の方が負担する費用は一切発生しませんので、安心してご利用ください。
             </p>
             <div class="serviceStructure__img">
-              <img src="/dist/img/forbeginner/forbeginner_img01.png" alt="M.PLATサービスの仕組み" class="pc-view" />
-              <img src="/dist/img/forbeginner/sp/forbeginner_img01.png" alt="M.PLATサービスの仕組み" class="sp-view" />
+              <img src="/img/forbeginner/forbeginner_img01.png" alt="M.PLATサービスの仕組み" class="pc-view" />
+              <img src="/img/forbeginner/sp/forbeginner_img01.png" alt="M.PLATサービスの仕組み" class="sp-view" />
             </div>
           </section>
           <section class="serviceFlow">
@@ -230,16 +316,8 @@
             <div class="serviceFlowInner">
               <div class="serviceFlowBox">
                 <div class="serviceFlowBoxLeft">
-                  <img
-                    src="/dist/img/forbeginner/img_serviceflow_01.jpg"
-                    alt="STEP.1　サービスの登録"
-                    class="pc-view"
-                  />
-                  <img
-                    src="/dist/img/forbeginner/sp/img_serviceflow_01.jpg"
-                    alt="STEP.1　サービスの登録"
-                    class="sp-view"
-                  />
+                  <img src="/img/forbeginner/img_serviceflow_01.jpg" alt="STEP.1　サービスの登録" class="pc-view" />
+                  <img src="/img/forbeginner/sp/img_serviceflow_01.jpg" alt="STEP.1　サービスの登録" class="sp-view" />
                 </div>
                 <div class="serviceFlowBoxRight">
                   <div class="serviceFlowTitle">
@@ -254,7 +332,7 @@
                     <div class="serviceFlowRegistForm">
                       <p class="serviceFlowRegistForm__text">フォームからのご登録はこちら</p>
                       <a
-                        href="/dist/signup/create_account.html"
+                        href="/signup/create_account.html"
                         class="serviceFlowRegistForm__button"
                         onclick="gtag('event', 'click', {'event_category': 'forbeginner_content_regist','event_label': 'content_regist'});"
                         >無料会員登録</a
@@ -306,12 +384,12 @@
               <div class="serviceFlowBox">
                 <div class="serviceFlowBoxLeft">
                   <img
-                    src="/dist/img/forbeginner/img_serviceflow_02.jpg"
+                    src="/img/forbeginner/img_serviceflow_02.jpg"
                     alt="STEP.2　キャリアカウンセリング"
                     class="pc-view"
                   />
                   <img
-                    src="/dist/img/forbeginner/sp/img_serviceflow_02.jpg"
+                    src="/img/forbeginner/sp/img_serviceflow_02.jpg"
                     alt="STEP.2　キャリアカウンセリング"
                     class="sp-view"
                   />
@@ -328,13 +406,9 @@
               </div>
               <div class="serviceFlowBox">
                 <div class="serviceFlowBoxLeft">
+                  <img src="/img/forbeginner/img_serviceflow_03.jpg" alt="STEP.3　情報提供・求人紹介" class="pc-view" />
                   <img
-                    src="/dist/img/forbeginner/img_serviceflow_03.jpg"
-                    alt="STEP.3　情報提供・求人紹介"
-                    class="pc-view"
-                  />
-                  <img
-                    src="/dist/img/forbeginner/sp/img_serviceflow_03.jpg"
+                    src="/img/forbeginner/sp/img_serviceflow_03.jpg"
                     alt="STEP.3　情報提供・求人紹介"
                     class="sp-view"
                   />
@@ -351,8 +425,8 @@
               </div>
               <div class="serviceFlowBox">
                 <div class="serviceFlowBoxLeft">
-                  <img src="/dist/img/forbeginner/img_serviceflow_04.jpg" alt="STEP.4　応募・面接" class="pc-view" />
-                  <img src="/dist/img/forbeginner/sp/img_serviceflow_04.jpg" alt="STEP.4　応募・面接" class="sp-view" />
+                  <img src="/img/forbeginner/img_serviceflow_04.jpg" alt="STEP.4　応募・面接" class="pc-view" />
+                  <img src="/img/forbeginner/sp/img_serviceflow_04.jpg" alt="STEP.4　応募・面接" class="sp-view" />
                 </div>
                 <div class="serviceFlowBoxRight">
                   <div class="serviceFlowTitle">
@@ -369,12 +443,12 @@
               <div class="serviceFlowBox">
                 <div class="serviceFlowBoxLeft">
                   <img
-                    src="/dist/img/forbeginner/img_serviceflow_05.jpg"
+                    src="/img/forbeginner/img_serviceflow_05.jpg"
                     alt="STEP.5　内定・入職後フォロー"
                     class="pc-view"
                   />
                   <img
-                    src="/dist/img/forbeginner/sp/img_serviceflow_05.jpg"
+                    src="/img/forbeginner/sp/img_serviceflow_05.jpg"
                     alt="STEP.5　内定・入職後フォロー"
                     class="sp-view"
                   />
@@ -425,126 +499,120 @@
             </h3>
             <ul class="searchButtonBlockJobList">
               <li class="searchButtonBlockJobList__item">
-                <a
-                  href="/dist/job/?job_p_job_category=%E4%BA%8B%E5%8B%99%E9%95%B7"
-                  class="searchButtonBlockJobList__link"
+                <a href="/job/?job_p_job_category=%E4%BA%8B%E5%8B%99%E9%95%B7" class="searchButtonBlockJobList__link"
                   >事務長</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E4%BA%8B%E5%8B%99%E9%95%B7%E5%80%99%E8%A3%9C"
+                  href="/job/?job_p_job_category=%E4%BA%8B%E5%8B%99%E9%95%B7%E5%80%99%E8%A3%9C"
                   class="searchButtonBlockJobList__link"
                   >事務長候補</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E7%B5%8C%E5%96%B6%E4%BC%81%E7%94%BB"
+                  href="/job/?job_p_job_category=%E7%B5%8C%E5%96%B6%E4%BC%81%E7%94%BB"
                   class="searchButtonBlockJobList__link"
                   >経営企画</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E5%8C%BB%E4%BA%8B%E8%AA%B2%E9%95%B7%EF%BC%88%E5%80%99%E8%A3%9C%E5%90%AB%E3%82%80%EF%BC%89"
+                  href="/job/?job_p_job_category=%E5%8C%BB%E4%BA%8B%E8%AA%B2%E9%95%B7%EF%BC%88%E5%80%99%E8%A3%9C%E5%90%AB%E3%82%80%EF%BC%89"
                   class="searchButtonBlockJobList__link"
                   >医事課長<span>（候補含む）</span></a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E5%8C%BB%E4%BA%8B%E8%AA%B2%E5%93%A1"
+                  href="/job/?job_p_job_category=%E5%8C%BB%E4%BA%8B%E8%AA%B2%E5%93%A1"
                   class="searchButtonBlockJobList__link"
                   >医事課員</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E7%B7%8F%E5%8B%99%E8%AA%B2%E9%95%B7%EF%BC%88%E5%80%99%E8%A3%9C%E5%90%AB%E3%82%80%EF%BC%89"
+                  href="/job/?job_p_job_category=%E7%B7%8F%E5%8B%99%E8%AA%B2%E9%95%B7%EF%BC%88%E5%80%99%E8%A3%9C%E5%90%AB%E3%82%80%EF%BC%89"
                   class="searchButtonBlockJobList__link"
                   >総務課長<span>（候補含む）</span></a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E7%B7%8F%E5%8B%99%E8%AA%B2%E5%93%A1"
+                  href="/job/?job_p_job_category=%E7%B7%8F%E5%8B%99%E8%AA%B2%E5%93%A1"
                   class="searchButtonBlockJobList__link"
                   >総務課員</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E4%BA%BA%E4%BA%8B%E8%AA%B2%E9%95%B7%EF%BC%88%E5%80%99%E8%A3%9C%E5%90%AB%E3%82%80%EF%BC%89"
+                  href="/job/?job_p_job_category=%E4%BA%BA%E4%BA%8B%E8%AA%B2%E9%95%B7%EF%BC%88%E5%80%99%E8%A3%9C%E5%90%AB%E3%82%80%EF%BC%89"
                   class="searchButtonBlockJobList__link"
                   >人事課長<span>（候補含む）</span></a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E4%BA%BA%E4%BA%8B%E8%AA%B2%E5%93%A1"
+                  href="/job/?job_p_job_category=%E4%BA%BA%E4%BA%8B%E8%AA%B2%E5%93%A1"
                   class="searchButtonBlockJobList__link"
                   >人事課員</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E8%B2%A1%E5%8B%99%E3%83%BB%E7%B5%8C%E7%90%86"
+                  href="/job/?job_p_job_category=%E8%B2%A1%E5%8B%99%E3%83%BB%E7%B5%8C%E7%90%86"
                   class="searchButtonBlockJobList__link"
                   >財務・経理</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E5%9C%B0%E5%9F%9F%E9%80%A3%E6%90%BA%E5%AE%A4%E3%83%BB%E6%B8%89%E5%A4%96"
+                  href="/job/?job_p_job_category=%E5%9C%B0%E5%9F%9F%E9%80%A3%E6%90%BA%E5%AE%A4%E3%83%BB%E6%B8%89%E5%A4%96"
                   class="searchButtonBlockJobList__link"
                   >地域連携室・渉外</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
-                <a href="/dist/job/?job_p_job_category=%E5%BA%83%E5%A0%B1" class="searchButtonBlockJobList__link"
-                  >広報</a
-                >
+                <a href="/job/?job_p_job_category=%E5%BA%83%E5%A0%B1" class="searchButtonBlockJobList__link">広報</a>
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E6%83%85%E5%A0%B1%E7%AE%A1%E7%90%86%E5%AE%A4"
+                  href="/job/?job_p_job_category=%E6%83%85%E5%A0%B1%E7%AE%A1%E7%90%86%E5%AE%A4"
                   class="searchButtonBlockJobList__link"
                   >情報管理室</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E4%BA%8B%E5%8B%99%E7%B7%8F%E5%90%88%E8%81%B7"
+                  href="/job/?job_p_job_category=%E4%BA%8B%E5%8B%99%E7%B7%8F%E5%90%88%E8%81%B7"
                   class="searchButtonBlockJobList__link"
                   >事務総合職</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E5%81%A5%E8%A8%BA%E7%B7%8F%E5%90%88%E8%81%B7"
+                  href="/job/?job_p_job_category=%E5%81%A5%E8%A8%BA%E7%B7%8F%E5%90%88%E8%81%B7"
                   class="searchButtonBlockJobList__link"
                   >健診総合職</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E8%A8%BA%E7%99%82%E6%83%85%E5%A0%B1%E7%AE%A1%E7%90%86%E5%A3%AB"
+                  href="/job/?job_p_job_category=%E8%A8%BA%E7%99%82%E6%83%85%E5%A0%B1%E7%AE%A1%E7%90%86%E5%A3%AB"
                   class="searchButtonBlockJobList__link"
                   >診療情報管理士</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
                 <a
-                  href="/dist/job/?job_p_job_category=%E7%A4%BE%E4%BC%9A%E7%A6%8F%E7%A5%89%E5%A3%AB"
+                  href="/job/?job_p_job_category=%E7%A4%BE%E4%BC%9A%E7%A6%8F%E7%A5%89%E5%A3%AB"
                   class="searchButtonBlockJobList__link"
                   >社会福祉士</a
                 >
               </li>
               <li class="searchButtonBlockJobList__item">
-                <a
-                  href="/dist/job/?job_p_job_category=%E3%81%9D%E3%81%AE%E4%BB%96"
-                  class="searchButtonBlockJobList__link"
+                <a href="/job/?job_p_job_category=%E3%81%9D%E3%81%AE%E4%BB%96" class="searchButtonBlockJobList__link"
                   >その他</a
                 >
               </li>
@@ -567,25 +635,39 @@
               <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
               <ul class="searchButtonBlockAreaList">
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E8%8C%A8%E5%9F%8E" class="searchButtonBlockAreaList__link">茨城</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E8%8C%A8%E5%9F%8E" class="searchButtonBlockAreaList__link"
+                    >茨城</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E6%A0%83%E6%9C%A8" class="searchButtonBlockAreaList__link">栃木</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E6%A0%83%E6%9C%A8" class="searchButtonBlockAreaList__link"
+                    >栃木</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E7%BE%A4%E9%A6%AC" class="searchButtonBlockAreaList__link">群馬</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E7%BE%A4%E9%A6%AC" class="searchButtonBlockAreaList__link"
+                    >群馬</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E5%9F%BC%E7%8E%89" class="searchButtonBlockAreaList__link">埼玉</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E5%9F%BC%E7%8E%89" class="searchButtonBlockAreaList__link"
+                    >埼玉</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E5%8D%83%E8%91%89" class="searchButtonBlockAreaList__link">千葉</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E5%8D%83%E8%91%89" class="searchButtonBlockAreaList__link"
+                    >千葉</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E6%9D%B1%E4%BA%AC" class="searchButtonBlockAreaList__link">東京</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E6%9D%B1%E4%BA%AC" class="searchButtonBlockAreaList__link"
+                    >東京</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E7%A5%9E%E5%A5%88%E5%B7%9D" class="searchButtonBlockAreaList__link"
+                  <a
+                    href="/job/?job_u_kinmutitodoufuken=%E7%A5%9E%E5%A5%88%E5%B7%9D"
+                    class="searchButtonBlockAreaList__link"
                     >神奈川</a
                   >
                 </li>
@@ -596,25 +678,39 @@
               <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
               <ul class="searchButtonBlockAreaList">
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E4%B8%89%E9%87%8D" class="searchButtonBlockAreaList__link">三重</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E4%B8%89%E9%87%8D" class="searchButtonBlockAreaList__link"
+                    >三重</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E6%BB%8B%E8%B3%80" class="searchButtonBlockAreaList__link">滋賀</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E6%BB%8B%E8%B3%80" class="searchButtonBlockAreaList__link"
+                    >滋賀</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E4%BA%AC%E9%83%BD" class="searchButtonBlockAreaList__link">京都</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E4%BA%AC%E9%83%BD" class="searchButtonBlockAreaList__link"
+                    >京都</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E5%A4%A7%E9%98%AA" class="searchButtonBlockAreaList__link">大阪</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E5%A4%A7%E9%98%AA" class="searchButtonBlockAreaList__link"
+                    >大阪</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E5%85%B5%E5%BA%AB" class="searchButtonBlockAreaList__link">兵庫</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E5%85%B5%E5%BA%AB" class="searchButtonBlockAreaList__link"
+                    >兵庫</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E5%A5%88%E8%89%AF" class="searchButtonBlockAreaList__link">奈良</a>
+                  <a href="/job/?job_u_kinmutitodoufuken=%E5%A5%88%E8%89%AF" class="searchButtonBlockAreaList__link"
+                    >奈良</a
+                  >
                 </li>
                 <li class="searchButtonBlockAreaList__item">
-                  <a href="/dist/job/?job_p_area=%E5%92%8C%E6%AD%8C%E5%B1%B1" class="searchButtonBlockAreaList__link"
+                  <a
+                    href="/job/?job_u_kinmutitodoufuken=%E5%92%8C%E6%AD%8C%E5%B1%B1"
+                    class="searchButtonBlockAreaList__link"
                     >和歌山</a
                   >
                 </li>
@@ -625,7 +721,7 @@
         <div class="searchButtonBlockRegist">
           <p class="searchButtonBlockRegist__text">会員登録が<br class="sp-view" />お済みでない方はこちら</p>
           <a
-            href="/dist/signup/create_account.html"
+            href="/signup/create_account.html"
             class="searchButtonBlockRegist__button"
             onclick="gtag('event', 'click', {'event_category': 'forbeginner_searchBlock_regist','event_label': 'searchBlock_regist'});"
             >無料会員登録</a
@@ -656,7 +752,7 @@
             <p class="globalFooterGuide__text sp-view">お問い合わせはこちらから</p>
             <a
               class="globalFooterGuide__contactButton"
-              href="/dist/contact/"
+              href="/contact/"
               onclick="gtag('event', 'click', {'event_category': 'forbeginner_footer_contact','event_label': 'footer_contact'});"
               ><span class="globalFooterGuide__contactIcon"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
@@ -700,14 +796,14 @@
           <div class="globalFooterNavBlock">
             <ul class="globalFooterNavList">
               <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                <a href="/dist/forbeginner/">初めての方へ</a>
+                <a href="/forbeginner/">初めての方へ</a>
               </li>
               <li class="globalFooterNavList__item globalFooterNavList__item--bold m-frontLink">
-                <a href="/dist/forrecruiter/">医療機関採用担当者の方へ</a>
+                <a href="/forrecruiter/">医療機関採用担当者の方へ</a>
               </li>
-              <li class="globalFooterNavList__item"><a href="/dist/company/">会社概要</a></li>
-              <li class="globalFooterNavList__item"><a href="/dist/privacy_policy/">個人情報保護方針</a></li>
-              <li class="globalFooterNavList__item"><a href="/dist/membership_rule/">会員規約</a></li>
+              <li class="globalFooterNavList__item"><a href="/company/">会社概要</a></li>
+              <li class="globalFooterNavList__item"><a href="/privacy_policy/">個人情報保護方針</a></li>
+              <li class="globalFooterNavList__item"><a href="/membership_rule/">会員規約</a></li>
             </ul>
             <div class="globalFooterNav__copyright"><small>COPYRIGHT &copy; M.STAGE CO.,LTD.</small></div>
           </div>
@@ -715,6 +811,6 @@
       </footer>
     </div>
 
-    <script src="/dist/js/common.js"></script>
+    <script src="/js/common.js"></script>
   </body>
 </html>

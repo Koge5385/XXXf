@@ -490,7 +490,10 @@ select::-ms-expand {
 .m-inputText.is-error + .m-inputErrorText,
 .m-inputSelect.is-error + .m-inputErrorText,
 .m-inputCheck.is-error ~ .m-inputErrorText,
-.m-inputTextArea.is-error + .m-inputErrorText {
+.m-inputTextArea.is-error + .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .m-inputErrorText {
   display: block; }
 
 .globalHeader {
@@ -525,8 +528,10 @@ select::-ms-expand {
   margin: 0; }
 
 .globalNavList {
-  display: flex;
+  display: none;
   justify-content: flex-end; }
+  .globalNavList.is-show {
+    display: flex; }
 
 .globalNavItem {
   display: flex;
@@ -651,10 +656,12 @@ select::-ms-expand {
   padding: 20px 0 30px; }
 
 .globalMobileNavCell {
-  display: flex;
+  display: none;
   justify-content: space-between;
   width: 100%;
   padding: 0 10px; }
+  .globalMobileNavCell.is-show {
+    display: flex; }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .globalMobileNavCell {
       justify-content: space-around; } }
@@ -1614,7 +1621,8 @@ select::-ms-expand {
 
 .registResume {
   width: 980px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 720px; }
   @media screen and (max-width: 768px) {
     .registResume {
       width: 100%; } }

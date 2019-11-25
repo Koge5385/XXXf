@@ -128,6 +128,9 @@
 .m-inputText.is-error + .m-inputErrorText,
 .m-inputSelect.is-error + .m-inputErrorText,
 .m-inputCheck.is-error ~ .m-inputErrorText,
-.m-inputTextArea.is-error + .m-inputErrorText {
+.m-inputTextArea.is-error + .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .m-inputErrorText {
   display: block;
 }

@@ -22,7 +22,7 @@ class AxiosBase {
    */
   setBase() {
     this.axios = axios.create({
-      baseURL: 'http://54.168.137.34:3001/v1',
+      baseURL: 'http://api.mplat.jp/v1',
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
@@ -40,7 +40,7 @@ class AxiosBase {
     return this.axios
       .get(path)
       .then(response => callback(response.status, response.data))
-      .catch(error => callback(error.message, error.type, error.code))
+      .catch(error => callback(error.response))
   }
 
   /**
@@ -53,7 +53,7 @@ class AxiosBase {
     return this.axios
       .post(path, sendData)
       .then(response => callback(response.status, response.data))
-      .catch(error => callback(error.message, error.type, error.code))
+      .catch(error => callback(error.response))
   }
 }
 

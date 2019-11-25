@@ -6,8 +6,7 @@
       </a>
     </div>
     <nav class="globalNav pc-view">
-      {%- if pageName === 'mypage' or pageName === 'password_change' or pageName === 'profile_edit' or pageName === 'cancel_membership' -%}
-      <ul class="globalNavList">
+      <ul class="globalNavList js-async-loginNavigation-target">
         <li class="globalNavItem">
           <a href="{{ basePath }}job/" class="globalNavItem__link">
             <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin">{{ macro.svg_code_list() }}</span>
@@ -21,8 +20,7 @@
           </a>
         </li>
       </ul>
-      {%- else -%}
-      <ul class="globalNavList">
+      <ul class="globalNavList js-async-logoutNavigation-target">
         <li class="globalNavItem">
           <a href="{{ basePath }}job/" class="globalNavItem__link">
             <span class="globalNavItem__icon globalNavItem__icon--list">{{ macro.svg_code_list() }}</span>
@@ -42,7 +40,6 @@
           </a>
         </li>
       </ul>
-      {%- endif -%}
     </nav>
     <nav class="globalMobileNav sp-view">
       <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger">
@@ -51,8 +48,7 @@
       <div class="globalMobileNavBlock">
         <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
         <div class="globalMobileNavContents">
-          {%- if pageName === 'mypage' or pageName === 'password_change' or pageName === 'profile_edit' or pageName === 'cancel_membership' -%}
-          <ul class="globalMobileNavCell">
+          <ul class="globalMobileNavCell js-async-loginNavigation-target">
             <li class="globalMobileNavCellItem">
               <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
                 <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧
@@ -64,8 +60,7 @@
               </a>
             </li>
           </ul>
-          {%- else -%}
-          <ul class="globalMobileNavCell">
+          <ul class="globalMobileNavCell js-async-logoutNavigation-target">
             <li class="globalMobileNavCellItem">
               <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link">
                 <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧
@@ -82,7 +77,6 @@
               </a>
             </li>
           </ul>
-          {%- endif -%}
           <ul class="globalMobileNavLink">
             <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="{{ basePath }}forbeginner/">初めての方へ</a></li>
             <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="{{ basePath }}forrecruiter/">医療機関採用担当者の方へ</a></li>

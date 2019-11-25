@@ -3,7 +3,7 @@ import JsonConvert from './JsonConvert'
 
 // 定数
 const ACCESS_TOKEN = 'access_token'
-const LOGIN_HREF = '../mypage/'
+const MYPAGE_HREF = '../mypage/'
 const FORM_TARGET_CLASS = '.js-async-loginForm-target'
 
 /**
@@ -40,7 +40,7 @@ class Login {
 
       // 求人詳細からログインしたユーザーは該当のページに戻す
       if(fromjobDetail !== null) document.location.href = `../job/detail.html?id=${fromjobDetail}`
-      if(fromjobDetail === null) document.location.href = LOGIN_HREF
+      if(fromjobDetail === null) document.location.href = MYPAGE_HREF
     }
     if (status === 400 || status === 401) {
       console.log('error')

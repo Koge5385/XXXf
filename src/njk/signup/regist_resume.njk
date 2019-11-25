@@ -21,229 +21,174 @@
   {% include '_modules/_registStep.njk' %}
 
   <section class="registResume">
-    <form method="post">
+    <form method="post" class="js-async-registResumeForm-target">
+      <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">学歴(詳細){{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_schoolCareer" class="m-inputText" placeholder="学歴を記入してください" value="">
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">職務経歴(詳細){{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_career" class="m-inputText" placeholder="職務経歴を記入してください" value="">
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">現在の勤務先{{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_now" class="m-inputText" placeholder="現在の就業状況を記入してください" value="">
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">現在の役職{{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_nowPosition" class="m-inputText" placeholder="現在の役職を記入してください" value="">
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">現在の年収{{ macro.inputWant() }}</h2>
-        <select name="registResume_income" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">現在の年収を選択してください</option>
-            {%- set selectIncome = [
-              {income: '400万円〜'},
-              {income: '500万円〜'},
-              {income: '600万円〜'},
-              {income: '700万円〜'},
-              {income: '800万円〜'}
-            ] -%}
-            {%- for item in selectIncome %}
-            <option value="{{ loop.index }}">{{ item.income }}</option>
-            {%- endfor %}
+        <h2 class="inputBlock__heading">最終学歴{{ macro.inputMust() }}</h2>
+        <select name="resume_u_saisyugakureki" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
+          {{ macro.optionSchoolCareer() }}
         </select>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">経験職種{{ macro.inputWant() }}</h2>
-        <select name="registResume_occupation" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">経験職種を選択してください</option>
-            {%- set selectOccupation = [
-              {occupation: '事務'},
-              {occupation: '医事課長'}
-            ] -%}
-            {%- for item in selectOccupation %}
-            <option value="{{ loop.index }}">{{ item.occupation }}</option>
-            {%- endfor %}
-        </select>
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">経験業種{{ macro.inputWant() }}</h2>
-        <select name="registResume_industry" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">経験業種を選択してください</option>
-            {%- set selectIndustry = [
-              {industry: '医療'},
-              {industry: 'IT'}
-            ] -%}
-            {%- for item in selectIndustry %}
-            <option value="{{ loop.index }}">{{ item.industry }}</option>
-            {%- endfor %}
-        </select>
+        <h2 class="inputBlock__heading">学歴(詳細){{ macro.inputMust() }}</h2>
+        <textarea name="resume_p_education" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="学歴(詳細)を記入してください" value=""></textarea>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">英語スキル{{ macro.inputWant() }}</h2>
-        <select name="registResume_english" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">英語スキルを選択してください</option>
-            {%- set selectEnglish = [
-              {english: '日常会話'},
-              {english: 'ビジネス英語'}
-            ] -%}
-            {%- for item in selectEnglish %}
-            <option value="{{ loop.index }}">{{ item.english }}</option>
-            {%- endfor %}
+        <select name="resume_u_eigosukiru" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionSkillEnglish() }}
         </select>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">TOEIC{{ macro.inputWant() }}</h2>
-        <div class="inputBlockFlex inputBlockFlex--always">
-          <input type="text" name="registResume_toeic" class="m-inputText inputBlock__inputSmall" placeholder="400" value="">
-          <p class="inputBlock__supportText">点</p>
+        <h2 class="inputBlock__heading">中国語スキル{{ macro.inputWant() }}</h2>
+        <select name="resume_u_tyuugoukugosukiru" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionSkillChinese() }}
+        </select>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">その他の言語スキル{{ macro.inputWant() }}</h2>
+        <textarea name="resume_u_sonohokanogengobikou" class="m-inputTextArea" placeholder="その他の言語スキルを記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">保有資格{{ macro.inputWant() }}</h2>
+        <textarea name="resume_u_hoyuushikakusukiru" class="m-inputTextArea" placeholder="保有資格を記入してください" value=""></textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+
+
+      <h2 class="m-heading--lv2">職務経歴</h2>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">現在の就業状況{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex">
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="working" name="resume_p_current_status" class="m-inputRadio js-isSelected-target" value="option_p_working">
+            <label for="working" class="m-inputRadioLabel">就業中</label>
+          </div>
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="turnover" name="resume_p_current_status" class="m-inputRadio js-isSelected-target" value="option_p_leaving">
+            <label for="turnover" class="m-inputRadioLabel">離職中</label>
+          </div>
+          <div class="inputBlockFlex__item">
+            <input type="radio" id="no" name="resume_p_current_status" class="m-inputRadio js-isSelected-target" value="option_p_no_experience">
+            <label for="no" class="m-inputRadioLabel">就業経験なし</label>
+          </div>
         </div>
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">TOEFL{{ macro.inputWant() }}</h2>
-        <div class="inputBlockFlex inputBlockFlex--always">
-          <input type="text" name="registResume_toefl" class="m-inputText inputBlock__inputSmall" placeholder="350" value="">
-          <p class="inputBlock__supportText">点</p>
-        </div>
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">その他の言語・備考{{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_otherLanguage" class="m-inputText inputBlock__inputHalf" placeholder="ドイツ語、フランス語" value="">
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">保有資格・スキル{{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_qualification" class="m-inputText" placeholder="普通自動車運転免許" value="">
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">転職回数{{ macro.inputWant() }}</h2>
-        <div class="inputBlockFlex inputBlockFlex--always">
-          <input type="text" name="registResume_changeNumber" class="m-inputText inputBlock__inputSmall" placeholder="1" value="">
-          <p class="inputBlock__supportText">回</p>
-        </div>
+        <select name="resume_u_tenshokukaisuu" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionJobChange() }}
+        </select>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">転職理由{{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_reason" class="m-inputText" placeholder="転職理由を記入してください" value="">
+        <textarea name="resume_u_tenshokuriyuu" class="m-inputTextArea" placeholder="転職理由を記入してください" value=""></textarea>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">配偶者{{ macro.inputWant() }}</h2>
-        <div class="inputBlockFlex">
-          <div class="inputBlockFlex__item">
-            <input type="radio" id="registResume_spouse_yes" name="registResume_spouse" class="m-inputRadio" value="yes">
-            <label for="registResume_spouse_yes" class="m-inputRadioLabel">有</label>
-          </div>
-          <div class="inputBlockFlex__item">
-            <input type="radio" id="registResume_spouse_no" name="registResume_spouse" class="m-inputRadio" value="no">
-            <label for="registResume_spouse_no" class="m-inputRadioLabel">無</label>
-          </div>
+        <h2 class="inputBlock__heading">職務経歴(詳細){{ macro.inputMust() }}</h2>
+        <p class="inputBlock__confirmText">1社目</p>
+        <textarea name="resume_p_carrier_summary" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="職務経歴(詳細)を記入してください" value="">医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <p class="inputBlock__confirmText">2社目</p>
+        <textarea name="resume_p_carrier_summary_2" class="m-inputTextArea" placeholder="職務経歴(詳細)を記入してください" value="">医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea>
+      </div>
+      <div class="inputBlock">
+        <p class="inputBlock__confirmText">3社目以降</p>
+        <textarea name="resume_p_carrier_summary_3" class="m-inputTextArea" placeholder="職務経歴(詳細)を記入してください" value="">医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea>
+      </div>
+
+
+      <h2 class="m-heading--lv2">経験及び希望条件</h2>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">現在の年収{{ macro.inputWant() }}</h2>
+        <div class="inputBlockFlex inputBlockFlex--always">
+          <input type="text" name="resume_p_current_salary" class="m-inputText inputBlock__inputSmall" placeholder="400" value="">
+          <p class="inputBlock__supportText">万円</p>
         </div>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">最寄り駅{{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_station" class="m-inputText inputBlock__inputHalf" placeholder="最寄り駅を記入してください" value="">
+        <h2 class="inputBlock__heading">希望の年収{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex inputBlockFlex--always">
+          <input type="text" name="resume_u_kibounenshuu" class="m-inputText inputBlock__inputSmall js-valueEmptyCheck-target" placeholder="500" value="">
+          <p class="inputBlock__supportText">万円</p>
+        </div>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">希望雇用形態{{ macro.inputWant() }}</h2>
-        <select name="registResume_hopeStatus" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">希望雇用形態を選択してください</option>
-            {%- set selectHopeStatus = [
-              {hopeStatus: '正社員'},
-              {hopeStatus: '契約社員'}
-            ] -%}
-            {%- for item in selectHopeStatus %}
-            <option value="{{ loop.index }}">{{ item.hopeStatus }}</option>
-            {%- endfor %}
+        <h2 class="inputBlock__heading">現在(直近)の勤務先{{ macro.inputMust() }}</h2>
+        <input type="text" name="resume_u_genzainokinmusaki" class="m-inputText js-valueEmptyCheck-target" placeholder="現在(直近)の勤務先を記入してください" value="">
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">希望勤務地(都道府県){{ macro.inputMust() }}</h2>
+        <select name="resume_p_expect_area" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
+          {{ macro.optionPlace() }}
         </select>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">希望勤務地{{ macro.inputWant() }}</h2>
-        <select name="registResume_hopePlace" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">希望勤務地を選択してください</option>
-            {%- set selectHopePlace = [
-              {hopePlace: '東京都'},
-              {hopePlace: '神奈川県'}
-            ] -%}
-            {%- for item in selectHopePlace %}
-            <option value="{{ loop.index }}">{{ item.hopePlace }}</option>
-            {%- endfor %}
-        </select>
+        <h2 class="inputBlock__heading">希望勤務地(詳細){{ macro.inputWant() }}</h2>
+        <input type="text" name="resume_u_kiboukinmutisyousai" class="m-inputText" placeholder="希望勤務地(詳細)を記入してください" value="">
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">希望職種{{ macro.inputWant() }}</h2>
-        <select name="registResume_hopeOccupation" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">希望職種を選択してください</option>
-            {%- set selectHopeOccupation = [
-              {hopeOccupation: '事務'},
-              {hopeOccupation: '医事課長'}
-            ] -%}
-            {%- for item in selectHopeOccupation %}
-            <option value="{{ loop.index }}">{{ item.hopeOccupation }}</option>
-            {%- endfor %}
-        </select>
+        <h2 class="inputBlock__heading">経験業種{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
+          {{ macro.checkboxExpIndustry() }}
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">経験職種{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
+          {{ macro.checkboxExpJob() }}
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">希望雇用形態{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
+          {{ macro.checkboxHopePosition() }}
+        </div>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">希望職種{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
+          {{ macro.checkboxHopeJob() }}
+        </div>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">希望条件(詳細){{ macro.inputWant() }}</h2>
-        <input type="text" name="registResume_hopeContract" class="m-inputText" placeholder="希望条件(詳細)を記入してください" value="">
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">希望の年収{{ macro.inputWant() }}</h2>
-        <select name="registResume_hopeIncome" class="m-inputSelect inputBlock__inputHalf">
-          <option value="">希望の年収を選択してください</option>
-            {%- set selectHopeIncome = [
-              {hopeIncome: '400万円〜'},
-              {hopeIncome: '500万円〜'},
-              {hopeIncome: '600万円〜'},
-              {hopeIncome: '700万円〜'},
-              {hopeIncome: '800万円〜'}
-            ] -%}
-            {%- for item in selectHopeIncome %}
-            <option value="{{ loop.index }}">{{ item.hopeIncome }}</option>
-            {%- endfor %}
-        </select>
+        <textarea name="resume_p_expect_condition" class="m-inputTextArea" placeholder="希望条件(詳細)を記入してください" value=""></textarea>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">転職に対する意欲{{ macro.inputWant() }}</h2>
-        <textarea name="registResume_motivation" class="m-inputTextArea" placeholder="お問い合わせ内容を記入してください" value=""></textarea>
+        <select name="resume_u_tenshokunitaisuruiyoku" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionMotivation() }}
+        </select>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">連絡方法に関する希望{{ macro.inputWant() }}</h2>
-        <div class="inputBlockFlex">
-          <div class="inputBlockFlex__item">
-            <input type="radio" id="registResume_contact_tel" name="registResume_contact" class="m-inputRadio" value="tel">
-            <label for="registResume_contact_tel" class="m-inputRadioLabel">電話</label>
-          </div>
-          <div class="inputBlockFlex__item">
-            <input type="radio" id="registResume_contact_mail" name="registResume_contact" class="m-inputRadio" value="mail">
-            <label for="registResume_contact_mail" class="m-inputRadioLabel">メール</label>
-          </div>
-        </div>
+        <h2 class="inputBlock__heading">自己PR{{ macro.inputMust() }}</h2>
+        <textarea name="resume_u_jikopr" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="自己PRを記入してください" value=""></textarea>
         <p class="m-inputErrorText"></p>
       </div>
 
-      <button type="button" class="inputBlock__submit" disabled>確認画面へ</button>
+      <button type="button" class="inputBlock__submit js-async-registResumeSubmit-target js-formSubmit-target" disabled>確認画面へ</button>
     </form>
   </section>
 
