@@ -30,7 +30,7 @@ class AxiosBase {
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
-        'Authentication': callToken,
+        'Authorization': callToken,
       },
       responseType: 'json',
     })
