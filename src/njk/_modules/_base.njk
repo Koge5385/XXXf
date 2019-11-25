@@ -28,7 +28,9 @@
       {% include '_modules/_footer.njk' %}
     </div>
 
+    {%- if pageName !== 'create_account' and pageName !== 'confirm_email' and pageName !== 'regist_profile' and pageName !== 'regist_resume' and pageName !== 'regist_complete' %}
     <script src="{{ basePath }}js/common.js"></script>
+    {% endif -%}
     {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' and pageName !== 'membership_rule' and pageName !== 'privacy_policy' and pageName !== '404' %}
     <script src="{{ basePath }}js/pages/{{ pageName }}.js"></script>
     {% endif -%}

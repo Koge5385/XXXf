@@ -41,7 +41,7 @@ class JobDetailApply {
       this.applyUserId = response.data.user_id
     })
     await new AxiosBase().getMethod(`/users/${this.applyUserId}?resume=1&time=${new Date().getTime()}`, (status, response) => {
-      this.applyResumeId = response.data.user.resume.resume_p_id
+      this.applyResumeId = response.data.user.resume.id
     })
   }
 

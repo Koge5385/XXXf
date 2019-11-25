@@ -102,11 +102,15 @@ class JobList {
               break
 
             case 'job_p_publish':
-              setElement('buildingName', jobListData[key].option_p_anonymous.option_p_name)
+              for (const name in jobListData[key]) {
+                setElement('buildingName', jobListData[key][name].option_p_name)
+              }
               break
 
             case 'job_p_job_category':
-              setElement('occupation', jobListData[key].option_u_zaimukeiri2.option_p_name)
+              for (const name in jobListData[key]) {
+                setElement('occupation', jobListData[key][name].option_p_name)
+              }
               break
 
             case 'job_u_kinmutitodoufuken':

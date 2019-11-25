@@ -71,11 +71,15 @@ class JobDetail {
             break
 
           case 'job_p_publish':
-            setElement('buildingName', jobData[key].option_p_anonymous.option_p_name)
+            for (const name in jobData[key]) {
+              setElement('buildingName', jobData[key][name].option_p_name)
+            }
             break
 
           case 'job_p_job_category':
-            setElement('occupation', jobData[key].option_u_zaimukeiri2.option_p_name)
+            for (const name in jobData[key]) {
+              setElement('occupation', jobData[key][name].option_p_name)
+            }
             break
 
           case 'job_u_kinmutitodoufuken':
@@ -99,7 +103,9 @@ class JobDetail {
             break
 
           case 'job_p_employment_type':
-            setElement('position', jobData[key].job_p_employment_type.option_p_name)
+            for (const name in jobData[key]) {
+              setElement('position', jobData[key][name].option_p_name)
+            }
             break
 
           case 'job_p_woking_hours':

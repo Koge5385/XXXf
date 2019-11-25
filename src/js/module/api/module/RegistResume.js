@@ -28,7 +28,6 @@ class RegistResume {
     })
     const optionObject = { 'user_id': this.userId }
     const sendObject = new JsonConvert(FORM_TARGET_CLASS, optionObject)
-    console.log(sendObject.convertObject())
     await new AxiosBase().postMethod('/resumes/create', sendObject.convertObject(), this.setDataToPage)
   }
 
