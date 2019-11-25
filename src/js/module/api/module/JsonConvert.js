@@ -33,19 +33,27 @@ class JsonConvert {
           break
 
         case 'resume_p_experienced_industry':
-          jsonObject[key] += `${value},`
+          jsonObject[key] === undefined
+            ? jsonObject[key] = `${value},`
+            : jsonObject[key] += `${value},`
           break
 
         case 'resume_p_experienced_job_category':
-          jsonObject[key] += `${value},`
+            jsonObject[key] === undefined
+              ? jsonObject[key] = `${value},`
+              : jsonObject[key] += `${value},`
           break
 
         case 'resume_p_expect_employment_type':
-          jsonObject[key] += `${value},`
+            jsonObject[key] === undefined
+              ? jsonObject[key] = `${value},`
+              : jsonObject[key] += `${value},`
           break
 
         case 'resume_p_expect_job_category':
-          jsonObject[key] += `${value},`
+            jsonObject[key] === undefined
+              ? jsonObject[key] = `${value},`
+              : jsonObject[key] += `${value},`
           break
 
         case 'resume_p_carrier_summary_2':
