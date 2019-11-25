@@ -5,6 +5,9 @@ import 'formdata-polyfill'
 import 'array-from-polyfill'
 import axios from 'axios'
 
+// 定数
+const ACCESS_TOKEN = 'access_token'
+
 /**
  * @class AxiosBase
  * @desc API連携のベースファイル
@@ -21,11 +24,13 @@ class AxiosBase {
    * @desc プロパティを定義する
    */
   setBase() {
+    const callToken = localStorage.getItem(ACCESS_TOKEN)
     this.axios = axios.create({
       baseURL: 'http://api.mplat.jp/v1',
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
+        'Authentication': callToken,
       },
       responseType: 'json',
     })
