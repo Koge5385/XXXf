@@ -13,27 +13,27 @@
       <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title"><span class="searchButtonBlockContent__icon">{{ macro.svg_code_bag() }}</span>職種から探す</h3>
       <ul class="searchButtonBlockJobList">
         {%- set searchButtonJob = [
-          {job: '事務長'},
-          {job: '事務長候補'},
-          {job: '経営企画'},
-          {job: '医事課長<span>（候補含む）</span>'},
-          {job: '医事課員'},
-          {job: '総務課長<span>（候補含む）</span>'},
-          {job: '総務課員'},
-          {job: '人事課長<span>（候補含む）</span>'},
-          {job: '人事課員'},
-          {job: '財務・経理'},
-          {job: '地域連携室・渉外'},
-          {job: '広報'},
-          {job: '情報管理室'},
-          {job: '事務総合職'},
-          {job: '健診総合職'},
-          {job: '診療情報管理士'},
-          {job: '社会福祉士'},
-          {job: 'その他'}
+          {job: '事務長', value: 'option_u_jimutyou'},
+          {job: '事務長候補', value: 'option_u_jimutyoukouho'},
+          {job: '経営企画', value: 'option_u_keieikikaku'},
+          {job: '医事課長<span>（候補含む）</span>', value: 'option_u_ijikatyoukouhohukumu'},
+          {job: '医事課員', value: 'option_u_ijikain'},
+          {job: '総務課長<span>（候補含む）</span>', value: 'option_u_soumukatyoukouhohukumu'},
+          {job: '総務課員', value: 'option_u_soumukain'},
+          {job: '人事課長<span>（候補含む）</span>', value: 'option_u_jinjikatyoukouhohukumu'},
+          {job: '人事課員', value: 'option_u_jinjikain'},
+          {job: '財務・経理', value: 'option_u_zaimukeiri2'},
+          {job: '地域連携室・渉外', value: 'option_u_tiikirenkeishitsushitsugai'},
+          {job: '広報', value: 'option_u_kouhou'},
+          {job: '情報管理室', value: 'option_u_jouhoukanrishitsu'},
+          {job: '事務総合職', value: 'option_u_jimusougoushoku'},
+          {job: '健診総合職', value: 'option_u_kenshinsougoushoku'},
+          {job: '診療情報管理士', value: 'option_u_shinryoujouhoukanrishi'},
+          {job: '社会福祉士', value: 'option_u_syakaihukushishi'},
+          {job: 'その他', value: 'option_u_sonohoka'}
         ] -%}
         {%- for item in searchButtonJob %}
-        <li class="searchButtonBlockJobList__item"><a href="{{ basePath }}job/?job_p_job_category={{ item.job | striptags(false) | urlencode }}" class="searchButtonBlockJobList__link">{{ item.job | safe }}</a></li>
+        <li class="searchButtonBlockJobList__item"><a href="{{ basePath }}job/?job_p_job_category={{ item.value }}" class="searchButtonBlockJobList__link">{{ item.job | safe }}</a></li>
         {%- endfor %}
       </ul>
     </div>
@@ -44,13 +44,13 @@
         <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
         <ul class="searchButtonBlockAreaList">
           {%- set searchButtonKanto = [
-            {area: '茨城'},
-            {area: '栃木'},
-            {area: '群馬'},
-            {area: '埼玉'},
-            {area: '千葉'},
-            {area: '東京'},
-            {area: '神奈川'}
+            {area: '茨城県', value: 'option_p_ibaraki'},
+            {area: '栃木県', value: 'option_p_tochigi'},
+            {area: '群馬県', value: 'option_p_gunma'},
+            {area: '埼玉県', value: 'option_p_saitama'},
+            {area: '千葉県', value: 'option_p_chiba'},
+            {area: '東京都', value: 'option_p_tokyo'},
+            {area: '神奈川県', value: 'option_p_kanagawa'}
           ] -%}
           {%- for item in searchButtonKanto %}
           <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.area | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
@@ -62,13 +62,13 @@
         <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
         <ul class="searchButtonBlockAreaList">
           {%- set searchButtonKanto = [
-            {area: '三重'},
-            {area: '滋賀'},
-            {area: '京都'},
-            {area: '大阪'},
-            {area: '兵庫'},
-            {area: '奈良'},
-            {area: '和歌山'}
+            {area: '三重県', value: 'option_p_mie'},
+            {area: '滋賀県', value: 'option_p_shiga'},
+            {area: '京都府', value: 'option_p_kyoto'},
+            {area: '大阪府', value: 'option_p_osaka'},
+            {area: '兵庫県', value: 'option_p_hyogo'},
+            {area: '奈良県', value: 'option_p_nara'},
+            {area: '和歌山県', value: 'option_p_wakayama'}
           ] -%}
           {%- for item in searchButtonKanto %}
           <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.area | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
