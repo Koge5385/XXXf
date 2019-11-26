@@ -302,14 +302,11 @@
 
       <div class="container">
         <section class="editResume">
-          <form method="post">
+          <form method="post" class="js-async-editResumeForm-target">
             <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">最終学歴<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
-              <select
-                name="resume_u_saisyugakureki"
-                class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target"
-              >
+              <select name="resume_u_saisyugakureki" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">最終学歴を選択してください</option
                 ><option value="option_u_000174">不問</option
                 ><option value="option_u_000172">高校卒</option
@@ -391,7 +388,7 @@
                     type="radio"
                     id="working"
                     name="resume_p_current_status"
-                    class="m-inputRadio js-isSelected-target"
+                    class="m-inputRadio"
                     value="option_p_working"
                   />
                   <label for="working" class="m-inputRadioLabel">就業中</label>
@@ -401,7 +398,7 @@
                     type="radio"
                     id="turnover"
                     name="resume_p_current_status"
-                    class="m-inputRadio js-isSelected-target"
+                    class="m-inputRadio"
                     value="option_p_leaving"
                   />
                   <label for="turnover" class="m-inputRadioLabel">離職中</label>
@@ -411,7 +408,7 @@
                     type="radio"
                     id="no"
                     name="resume_p_current_status"
-                    class="m-inputRadio js-isSelected-target"
+                    class="m-inputRadio"
                     value="option_p_no_experience"
                   />
                   <label for="no" class="m-inputRadioLabel">就業経験なし</label>
@@ -460,7 +457,7 @@
             <div class="inputBlock">
               <p class="inputBlock__confirmText">2社目</p>
               <textarea
-                name="resume_p_carrier_summary"
+                name="resume_p_carrier_summary_2"
                 class="m-inputTextArea"
                 placeholder="職務経歴(詳細)を記入してください"
                 value=""
@@ -471,7 +468,7 @@
             <div class="inputBlock">
               <p class="inputBlock__confirmText">3社目以降</p>
               <textarea
-                name="resume_p_carrier_summary"
+                name="resume_p_carrier_summary_3"
                 class="m-inputTextArea"
                 placeholder="職務経歴(詳細)を記入してください"
                 value=""
@@ -515,8 +512,8 @@
               </h2>
               <input
                 type="text"
-                name="resume_u_genzainokinmusaki js-valueEmptyCheck-target"
-                class="m-inputText"
+                name="resume_u_genzainokinmusaki"
+                class="m-inputText js-valueEmptyCheck-target"
                 placeholder="現在(直近)の勤務先を記入してください"
                 value=""
               />
@@ -526,7 +523,7 @@
               <h2 class="inputBlock__heading">
                 希望勤務地(都道府県)<span class="m-inputIcon m-inputIcon--must">必須</span>
               </h2>
-              <select name="resume_p_expect_area" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
+              <select name="resume_p_expect_area" class="m-inputSelect inputBlock__inputHalf">
                 <option value="">都道府県を選択してください</option
                 ><option value="option_p_foreign">海外</option
                 ><option value="option_p_hokkaido">北海道</option
@@ -594,7 +591,7 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
-              <div class="inputBlockFlex inputBlockFlex--multi">
+              <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
@@ -720,7 +717,7 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
-              <div class="inputBlockFlex inputBlockFlex--multi">
+              <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
@@ -846,7 +843,7 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
-              <div class="inputBlockFlex inputBlockFlex--multi">
+              <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
@@ -892,7 +889,7 @@
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
-              <div class="inputBlockFlex inputBlockFlex--multi">
+              <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
                 <div class="inputBlockFlex__item inputBlockFlex__item--multi">
                   <input
                     type="checkbox"
@@ -1111,7 +1108,13 @@
               <p class="m-inputErrorText"></p>
             </div>
 
-            <button type="button" class="inputBlock__submit js-formSubmit-target" disabled>確認画面へ</button>
+            <button
+              type="button"
+              class="inputBlock__submit js-formSubmit-target js-async-editResumeSubmit-target"
+              disabled
+            >
+              更新する
+            </button>
           </form>
         </section>
       </div>

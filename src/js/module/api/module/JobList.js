@@ -70,7 +70,7 @@ class JobList {
       // 求人一覧の生成
       const targetOrigin = document.querySelector('.js-async-origin-target')
       const listItemTemplate = targetOrigin.firstElementChild
-      listItemTemplate.parentNode.removeChild(listItemTemplate)
+      //listItemTemplate.parentNode.removeChild(listItemTemplate)
       Object.keys(jobListArray).forEach(item => {
         const jobListData = jobListArray[item]
         const _listItemTemplate = listItemTemplate.cloneNode(true)

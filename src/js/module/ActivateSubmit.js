@@ -49,6 +49,10 @@ class ActivateSubmit {
       const targetArray = this.convertNode(CHECK_EMPTY_CLASS)
       const checkList = new Array(targetArray.length)
       targetArray.forEach((elem, i) => {
+        if (elem.value !== '') checkList[i] = true
+        checkList.filter(x => x === true).length !== checkList.length
+          ? this.checkResult.empty = false
+          : this.checkResult.empty = true
         elem.addEventListener(BLUR_EVENT, () => {
           this.checkEmpty(elem, checkList, i)
         })
@@ -163,6 +167,11 @@ class ActivateSubmit {
         const checkboxArray = elem.querySelectorAll('input')
         const checkChildList = new Array(checkboxArray.length)
         Array.prototype.slice.call(checkboxArray, 0).forEach((input, n) => {
+          if (input.checked) checkChildList[n] = true
+          if (checkChildList.filter(x => x === true).length > 0) checkList[i] = true
+          checkList.filter(x => x === true).length !== checkList.length
+            ? this.checkResult.anyCheck = false
+            : this.checkResult.anyCheck = true
           input.addEventListener(CHANGE_EVENT, () => {
             this.hasAnyCheck(input, checkList, checkChildList, i, n)
           })

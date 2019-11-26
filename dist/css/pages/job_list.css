@@ -1659,6 +1659,8 @@ select::-ms-expand {
   margin-bottom: 10px;
   box-shadow: 0 0 7px 0 #d3d9e0;
   border-radius: 6px; }
+  .jobListItem:first-child {
+    display: none; }
   .jobListItem:last-child {
     margin-bottom: 0; }
 

@@ -34,7 +34,7 @@
     {%- if pageName !== 'pagelist' and pageName !== 'forbeginner' and pageName !== 'forrecruiter' and pageName !== 'company' and pageName !== 'membership_rule' and pageName !== 'privacy_policy' and pageName !== '404' %}
     <script src="{{ basePath }}js/pages/{{ pageName }}.js"></script>
     {% endif -%}
-    {%- if pageName === 'regist_profile' %}
+    {%- if pageName === 'regist_profile' or pageName === 'profile_edit' %}
     <script src="{{ basePath }}js/lib/vendor/yubinbango/yubinbango.js"></script>
     {% endif -%}
   </body>
