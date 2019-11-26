@@ -38,6 +38,15 @@
 .jobListWrap {
   width: 100%;
 }
+.jobList__emptyText {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  display: none;
+  text-align: center;
+  &.is-show {
+    display: block;
+  }
+}
 .jobListItem {
   width: 100%;
   background-color: #fff;

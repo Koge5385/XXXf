@@ -287,7 +287,7 @@ select::-ms-expand {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading {
+.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading, .jobList__emptyText {
   font-weight: bold;
   color: #5d687c; }
   .m-heading--lv2, .searchButtonBlock__heading {
@@ -300,7 +300,7 @@ select::-ms-expand {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
-  .m-heading--lv3, .searchButtonBlockRegist__text, .terms__heading {
+  .m-heading--lv3, .searchButtonBlockRegist__text, .terms__heading, .jobList__emptyText {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.6;
@@ -1651,6 +1651,12 @@ select::-ms-expand {
 
 .jobListWrap {
   width: 100%; }
+
+.jobList__emptyText {
+  display: none;
+  text-align: center; }
+  .jobList__emptyText.is-show {
+    display: block; }
 
 .jobListItem {
   width: 100%;

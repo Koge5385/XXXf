@@ -2,6 +2,9 @@ import AxiosBase from '../AxiosBase'
 import AutoTextOmit from '../../AutoTextOmit'
 import JobListPagenation from './JobListPagenation'
 
+// 定数
+const ADD_SHOW_CLASS = 'is-show'
+
 /**
  * @class JobList
  * @desc 求人一覧データの呼び出し⇒反映処理
@@ -63,6 +66,12 @@ class JobList {
 
       // 検索結果件数の反映
       JobList.setSearchResult(response.attributes.total)
+
+      // 検索結果が0件の場合の処理
+      if (response.attributes.total === 0) {
+        document.querySelector('.js-async-resultEmpty-target').classList.add(ADD_SHOW_CLASS)
+        return
+      }
 
       // ページネーションの生成
       new JobListPagenation(response.attributes.total, response.attributes.start)
@@ -140,7 +149,8 @@ class JobList {
       new AutoTextOmit('.js-async-sumally-target', 69)
     }
     if (status.status === 400 || status.status === 401) {
-      console.log('error')
+      document.querySelector('.js-async-resultEmpty-target').classList.add(ADD_SHOW_CLASS)
+      return
     }
   }
 
