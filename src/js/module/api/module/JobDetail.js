@@ -5,6 +5,7 @@ import MetaReplace from './MetaReplace'
 const SUCCESS_TARGET_CLASS = '.js-success-target'
 const ERROR_TARGET_CLASS = '.js-error-target'
 const BACK_LINK_TARGET_CLASS = '.js-jobListBackLink-target'
+const ADD_SHOW_CLASS = 'is-show'
 
 /**
  * @class JobDetail
@@ -57,6 +58,10 @@ class JobDetail {
         switch (key) {
           case 'job_p_position':
             setElement('category', jobData[key])
+            break
+
+          case 'job_u_newfuragu':
+            if (String(Object.keys(jobData[key])) === 'option_u_010927') targetElement('new').classList.add(ADD_SHOW_CLASS)
             break
 
           case 'job_p_phase_date':

@@ -28,6 +28,7 @@
         <select name="resume_u_saisyugakureki" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
           {{ macro.optionSchoolCareer() }}
         </select>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
@@ -40,14 +41,14 @@
         <select name="resume_u_eigosukiru" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionSkillEnglish() }}
         </select>
-        <p class="m-inputErrorText"></p>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">中国語スキル{{ macro.inputWant() }}</h2>
         <select name="resume_u_tyuugoukugosukiru" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionSkillChinese() }}
         </select>
-        <p class="m-inputErrorText"></p>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">その他の言語スキル{{ macro.inputWant() }}</h2>
@@ -65,18 +66,21 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">現在の就業状況{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
-          <div class="inputBlockFlex__item">
+          <div class="inputBlockFlex__item js-confirmHide-target">
             <input type="radio" id="working" name="resume_p_current_status" class="m-inputRadio js-isSelected-target" value="option_p_working">
             <label for="working" class="m-inputRadioLabel">就業中</label>
           </div>
-          <div class="inputBlockFlex__item">
+          <p class="inputBlock__confirmSetValue"></p>
+          <div class="inputBlockFlex__item js-confirmHide-target">
             <input type="radio" id="turnover" name="resume_p_current_status" class="m-inputRadio js-isSelected-target" value="option_p_leaving">
             <label for="turnover" class="m-inputRadioLabel">離職中</label>
           </div>
-          <div class="inputBlockFlex__item">
+          <p class="inputBlock__confirmSetValue"></p>
+          <div class="inputBlockFlex__item js-confirmHide-target">
             <input type="radio" id="no" name="resume_p_current_status" class="m-inputRadio js-isSelected-target" value="option_p_no_experience">
             <label for="no" class="m-inputRadioLabel">就業経験なし</label>
           </div>
+          <p class="inputBlock__confirmSetValue"></p>
         </div>
         <p class="m-inputErrorText"></p>
       </div>
@@ -85,7 +89,7 @@
         <select name="resume_u_tenshokukaisuu" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionJobChange() }}
         </select>
-        <p class="m-inputErrorText"></p>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">転職理由{{ macro.inputWant() }}</h2>
@@ -135,6 +139,7 @@
         <select name="resume_p_expect_area" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
           {{ macro.optionPlace() }}
         </select>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
@@ -180,7 +185,7 @@
         <select name="resume_u_tenshokunitaisuruiyoku" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionMotivation() }}
         </select>
-        <p class="m-inputErrorText"></p>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">自己PR{{ macro.inputMust() }}</h2>
@@ -188,7 +193,9 @@
         <p class="m-inputErrorText"></p>
       </div>
 
-      <button type="button" class="inputBlock__submit js-async-registResumeSubmit-target js-formSubmit-target" disabled>登録する</button>
+      <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>確認する</button>
+      <button type="button" class="inputBlock__submit js-async-registResumeSubmit-target js-submit-target is-hide">登録する</button>
+      <button type="button" class="inputBlock__confirmBack js-confirmBack-trigger">修正する</button>
     </form>
   </section>
 

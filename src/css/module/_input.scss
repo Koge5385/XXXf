@@ -13,6 +13,15 @@
   &::placeholder {
     color: #c9c9c9;
   }
+  &:read-only {
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+  }
+  &[readonly]::placeholder {
+    opacity: 0;
+  }
   &.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
@@ -40,6 +49,12 @@
       display: none;
     }
   }
+  &.is-show {
+    display: block;
+  }
+  &.is-hide {
+    display: none;
+  }
   &.is-error {
     border: 1px solid #ff0000;
     background: #fff2f2 url(../../img/common/icon/icon_arrow_down.svg) no-repeat
@@ -58,6 +73,12 @@
   a {
     display: inline;
   }
+  &.is-show {
+    display: block;
+  }
+  &.is-hide {
+    display: none;
+  }
 }
 .m-inputCheck:checked + .m-inputCheckLabel {
   background: url(../../img/common/icon/icon_checked.svg) no-repeat left center;
@@ -73,6 +94,12 @@
   border-radius: 6px;
   display: block;
   cursor: pointer;
+  &.is-show {
+    display: block;
+  }
+  &.is-hide {
+    display: none;
+  }
 }
 .m-inputRadio:checked + .m-inputRadioLabel {
   background: #f7f8f9 url(../../img/common/icon/icon_radioChecked.svg) no-repeat
@@ -92,6 +119,16 @@
   resize: vertical;
   &::placeholder {
     color: #c9c9c9;
+  }
+  &:read-only {
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    resize: none;
+  }
+  &[readonly]::placeholder {
+    opacity: 0;
   }
   &.is-error {
     color: #ff0000;

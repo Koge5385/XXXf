@@ -155,6 +155,7 @@
                   ><option value="1998">1998</option
                   ><option value="1997">1997</option>
                 </select>
+                <p class="inputBlock__confirmSetValue"></p>
                 <select
                   name="person_u_nenrei_month"
                   class="m-inputSelect inputBlock__inputSmall js-valueEmptyCheck-target"
@@ -173,6 +174,7 @@
                   ><option value="11">11</option
                   ><option value="12">12</option>
                 </select>
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--birthday"></p>
                 <select
                   name="person_u_nenrei_day"
                   class="m-inputSelect inputBlock__inputSmall js-valueEmptyCheck-target"
@@ -210,13 +212,14 @@
                   ><option value="30">30</option
                   ><option value="31">31</option>
                 </select>
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--birthday"></p>
                 <p class="m-inputErrorText">生年月日を選択してください。</p>
               </div>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">性別<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex">
-                <div class="inputBlockFlex__item">
+                <div class="inputBlockFlex__item js-confirmHide-target">
                   <input
                     type="radio"
                     id="man"
@@ -226,7 +229,8 @@
                   />
                   <label for="man" class="m-inputRadioLabel">男性</label>
                 </div>
-                <div class="inputBlockFlex__item">
+                <p class="inputBlock__confirmSetValue"></p>
+                <div class="inputBlockFlex__item js-confirmHide-target">
                   <input
                     type="radio"
                     id="woman"
@@ -236,6 +240,7 @@
                   />
                   <label for="woman" class="m-inputRadioLabel">女性</label>
                 </div>
+                <p class="inputBlock__confirmSetValue"></p>
               </div>
               <p class="m-inputErrorText">性別を選択してください。</p>
             </div>
@@ -295,6 +300,7 @@
                 ><option value="option_p_kagoshima">鹿児島県</option
                 ><option value="option_p_okinawa">沖縄県</option>
               </select>
+              <p class="inputBlock__confirmSetValue"></p>
               <p class="m-inputErrorText">都道府県を選択してください。</p>
             </div>
             <div class="inputBlock">
@@ -308,7 +314,7 @@
                 maxlength="8"
                 value=""
               />
-              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__confirmSetValue"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">住所詳細<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
@@ -319,7 +325,7 @@
                 placeholder="品川区大崎2-1-1"
                 value=""
               />
-              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__confirmSetValue"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">電話番号<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
@@ -331,6 +337,7 @@
                 maxlength="13"
                 value=""
               />
+              <p class="inputBlock__confirmSetValue"></p>
               <p class="m-inputErrorText">電話番号を入力してください</p>
             </div>
             <div class="inputBlock">
@@ -341,29 +348,34 @@
                 class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target"
                 value=""
               />
-              <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
-              <p class="inputBlock__note">
-                ※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。
-              </p>
-              <p class="inputBlock__confirmText">確認のためもう一度パスワードを入力してください</p>
-              <input
-                type="password"
-                class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target"
-                value=""
-              />
-              <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
-              <p class="inputBlock__note">
-                ※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。
-              </p>
+              <div class="js-confirmHide-target">
+                <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
+                <p class="inputBlock__note">
+                  ※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。
+                </p>
+                <p class="inputBlock__confirmText">確認のためもう一度パスワードを入力してください</p>
+                <input
+                  type="password"
+                  class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target"
+                  value=""
+                />
+                <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
+                <p class="inputBlock__note">
+                  ※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。
+                </p>
+              </div>
             </div>
 
+            <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>
+              確認する
+            </button>
             <button
               type="button"
-              class="inputBlock__submit js-formSubmit-target js-async-registProfileSubmit-target"
-              disabled
+              class="inputBlock__submit js-async-registProfileSubmit-target js-submit-target is-hide"
             >
               登録する
             </button>
+            <button type="button" class="inputBlock__confirmBack js-confirmBack-trigger">修正する</button>
           </form>
         </section>
       </div>

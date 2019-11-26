@@ -102,6 +102,10 @@ class JobList {
               setElement('category', jobListData[key])
               break
 
+            case 'job_u_newfuragu':
+              if (String(Object.keys(jobListData[key])) === 'option_u_010927') targetElement('new').classList.add(ADD_SHOW_CLASS)
+              break
+
             case 'job_p_phase_date':
               setElement('date', String(jobListData[key]).slice(0,10))
               break

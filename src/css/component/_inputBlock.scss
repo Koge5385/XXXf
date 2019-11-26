@@ -42,6 +42,67 @@
     margin-right: 0;
   }
 }
+.inputBlock__confirm {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(26, 16);
+  display: block;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px;
+  &.is-show {
+    display: block;
+  }
+  &.is-hide {
+    display: none;
+  }
+}
+.inputBlock__confirmBack {
+  @extend .m-button;
+  @extend .m-button--gray;
+  @include fontsize(26, 16);
+  display: none;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px;
+  &.is-show {
+    display: block;
+  }
+  &.is-hide {
+    display: none;
+  }
+}
+.inputBlock__confirmSetValue {
+  display: none;
+  height: 1em;
+  &.is-show {
+    display: block;
+  }
+  &.is-hide {
+    display: none;
+  }
+  &--multi {
+    height: auto;
+    margin-left: 7px;
+    &::before {
+      content: "、";
+    }
+    &:first-of-type {
+      margin-left: 0;
+      &::before {
+        content: none;
+      }
+    }
+  }
+  &--birthday {
+    height: auto;
+    margin-left: 10px;
+    &::before {
+      content: "/";
+      margin-right: 10px;
+    }
+  }
+}
 .inputBlock__submit {
   @extend .m-button;
   @extend .m-button--blue;
@@ -50,6 +111,12 @@
   width: 320px;
   margin: 40px auto 0;
   padding: 13px 0 12px;
+  &.is-show {
+    display: block;
+  }
+  &.is-hide {
+    display: none;
+  }
 }
 .inputBlockFlex {
   display: flex;

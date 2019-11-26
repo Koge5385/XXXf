@@ -27,25 +27,30 @@
           <select name="person_u_nenrei_year" class="m-inputSelect inputBlock__inputSmall">
             {{ macro.optionYear() }}
           </select>
+          <p class="inputBlock__confirmSetValue"></p>
           <select name="person_u_nenrei_month" class="m-inputSelect inputBlock__inputSmall">
             {{ macro.optionMonth() }}
           </select>
+          <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--birthday"></p>
           <select name="person_u_nenrei_day" class="m-inputSelect inputBlock__inputSmall">
             {{ macro.optionDay() }}
           </select>
+          <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--birthday"></p>
         </div>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">性別{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
-          <div class="inputBlockFlex__item">
+          <div class="inputBlockFlex__item js-confirmHide-target">
             <input type="radio" id="man" name="person_u_seibetsu" class="m-inputRadio" value="option_p_male">
             <label for="man" class="m-inputRadioLabel">男性</label>
           </div>
-          <div class="inputBlockFlex__item">
+          <p class="inputBlock__confirmSetValue"></p>
+          <div class="inputBlockFlex__item js-confirmHide-target">
             <input type="radio" id="woman" name="person_u_seibetsu" class="m-inputRadio" value="option_p_female">
             <label for="woman" class="m-inputRadioLabel">女性</label>
           </div>
+          <p class="inputBlock__confirmSetValue"></p>
         </div>
       </div>
       <div class="inputBlock">
@@ -53,6 +58,7 @@
         <select name="person_u_zyusyotodoufuken" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionPlace() }}
         </select>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">郵便番号{{ macro.inputWant() }}</h2>
@@ -70,26 +76,30 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">パスワード{{ macro.inputMust() }}</h2>
         <input type="password" name="password" class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target" value="">
-        <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
-        <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>
-        <p class="inputBlock__confirmText">確認のためもう一度パスワードを入力してください</p>
-        <input type="password" class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target" value="">
-        <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
-        <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>
+        <div class="js-confirmHide-target">
+          <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
+          <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>
+          <p class="inputBlock__confirmText">確認のためもう一度パスワードを入力してください</p>
+          <input type="password" class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target" value="">
+          <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
+          <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>
+        </div>
       </div>
 
-      <div class="inputBlock">
+      <div class="inputBlock js-confirmHide-target">
         <p class="inputBlock__guideText">※確認メールに記載されたURLをクリックするまで、メールアドレスは変更されていません。</p>
       </div>
 
-      <div class="inputBlock">
+      <div class="inputBlock js-confirmHide-target">
         <div class="inputBlockNotice">
           <p class="inputBlockNotice__heading">確認メールが届かない場合</p>
           <p class="inputBlockNotice__text">メール到着までに時間がかかる場合があります。数分後に再度受信してみてください。<br>メーラーによっては迷惑メールとして処理されている可能性もありますので、ご注意ください。</p>
         </div>
       </div>
 
-      <button type="button" class="inputBlock__submit js-formSubmit-target js-async-editProfileSubmit-target" disabled>更新する</button>
+      <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>確認する</button>
+      <button type="button" class="inputBlock__submit js-async-editProfileSubmit-target js-submit-target is-hide">更新する</button>
+      <button type="button" class="inputBlock__confirmBack js-confirmBack-trigger">修正する</button>
     </form>
   </section>
 

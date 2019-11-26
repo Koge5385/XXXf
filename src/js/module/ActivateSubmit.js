@@ -3,7 +3,7 @@ const BLUR_EVENT = 'blur'
 const CHANGE_EVENT = 'change'
 
 // 定数 -> 対象のクラス
-const SUBMIT_CLASS = '.js-formSubmit-target'
+const SUBMIT_CLASS = '.js-activate-target'
 const CHECK_EMPTY_CLASS = '.js-valueEmptyCheck-target'
 const CHECK_SELECTED_CLASS = '.js-isSelected-target'
 const CHECK_CHECKED_CLASS = '.js-hasChecked-target'

@@ -139,6 +139,7 @@
                 ><option value="option_u_000166">大学院卒（博士）</option
                 ><option value="option_u_000173">その他</option>
               </select>
+              <p class="inputBlock__confirmSetValue"></p>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
@@ -162,7 +163,7 @@
                 ><option value="option_u_000280">上級(ビジネスレベルの会話、読み書き)</option
                 ><option value="option_u_000281">ネイティブレベル</option>
               </select>
-              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__confirmSetValue"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">中国語スキル<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
@@ -175,7 +176,7 @@
                 ><option value="option_u_000280">上級(ビジネスレベルの会話、読み書き)</option
                 ><option value="option_u_000281">ネイティブレベル</option>
               </select>
-              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__confirmSetValue"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">
@@ -204,7 +205,7 @@
             <div class="inputBlock">
               <h2 class="inputBlock__heading">現在の就業状況<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex">
-                <div class="inputBlockFlex__item">
+                <div class="inputBlockFlex__item js-confirmHide-target">
                   <input
                     type="radio"
                     id="working"
@@ -214,7 +215,8 @@
                   />
                   <label for="working" class="m-inputRadioLabel">就業中</label>
                 </div>
-                <div class="inputBlockFlex__item">
+                <p class="inputBlock__confirmSetValue"></p>
+                <div class="inputBlockFlex__item js-confirmHide-target">
                   <input
                     type="radio"
                     id="turnover"
@@ -224,7 +226,8 @@
                   />
                   <label for="turnover" class="m-inputRadioLabel">離職中</label>
                 </div>
-                <div class="inputBlockFlex__item">
+                <p class="inputBlock__confirmSetValue"></p>
+                <div class="inputBlockFlex__item js-confirmHide-target">
                   <input
                     type="radio"
                     id="no"
@@ -234,6 +237,7 @@
                   />
                   <label for="no" class="m-inputRadioLabel">就業経験なし</label>
                 </div>
+                <p class="inputBlock__confirmSetValue"></p>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
@@ -250,7 +254,7 @@
                 ><option value="option_u_000258">5回</option
                 ><option value="option_u_000259">6回以上</option>
               </select>
-              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__confirmSetValue"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">転職理由<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
@@ -395,6 +399,7 @@
                 ><option value="option_p_kagoshima">鹿児島県</option
                 ><option value="option_p_okinawa">沖縄県</option>
               </select>
+              <p class="inputBlock__confirmSetValue"></p>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
@@ -413,7 +418,7 @@
             <div class="inputBlock">
               <h2 class="inputBlock__heading">経験業種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -423,7 +428,8 @@
                   />
                   <label for="exp_industry_1" class="m-inputCheckLabel">医療機関（病院）</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -433,7 +439,8 @@
                   />
                   <label for="exp_industry_2" class="m-inputCheckLabel">医療機関（診療所）</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -443,7 +450,8 @@
                   />
                   <label for="exp_industry_3" class="m-inputCheckLabel">介護施設</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -453,7 +461,8 @@
                   />
                   <label for="exp_industry_4" class="m-inputCheckLabel">医療系メーカー</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -463,7 +472,8 @@
                   />
                   <label for="exp_industry_5" class="m-inputCheckLabel">IT・通信・インターネット</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -473,7 +483,8 @@
                   />
                   <label for="exp_industry_6" class="m-inputCheckLabel">金融・保険</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -483,7 +494,8 @@
                   />
                   <label for="exp_industry_7" class="m-inputCheckLabel">商社・流通・小売</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -493,7 +505,8 @@
                   />
                   <label for="exp_industry_8" class="m-inputCheckLabel">サービス</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -503,7 +516,8 @@
                   />
                   <label for="exp_industry_9" class="m-inputCheckLabel">広告・マスコミ・出版・放送・印刷</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -513,7 +527,8 @@
                   />
                   <label for="exp_industry_10" class="m-inputCheckLabel">教育・保育・公務員</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -523,7 +538,8 @@
                   />
                   <label for="exp_industry_11" class="m-inputCheckLabel">コンサルティング・会計・法律関係</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_industry"
@@ -533,13 +549,14 @@
                   />
                   <label for="exp_industry_12" class="m-inputCheckLabel">その他</label>
                 </div>
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">経験職種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -549,7 +566,8 @@
                   />
                   <label for="exp_job_1" class="m-inputCheckLabel">経営企画・事業企画</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -559,7 +577,8 @@
                   />
                   <label for="exp_job_2" class="m-inputCheckLabel">人事・労務</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -569,7 +588,8 @@
                   />
                   <label for="exp_job_3" class="m-inputCheckLabel">総務</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -579,7 +599,8 @@
                   />
                   <label for="exp_job_4" class="m-inputCheckLabel">経理</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -589,7 +610,8 @@
                   />
                   <label for="exp_job_5" class="m-inputCheckLabel">医療事務</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -599,7 +621,8 @@
                   />
                   <label for="exp_job_6" class="m-inputCheckLabel">広報</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -609,7 +632,8 @@
                   />
                   <label for="exp_job_7" class="m-inputCheckLabel">マーケティング</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -619,7 +643,8 @@
                   />
                   <label for="exp_job_8" class="m-inputCheckLabel">営業</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -629,7 +654,8 @@
                   />
                   <label for="exp_job_9" class="m-inputCheckLabel">地域連携室・渉外</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -639,7 +665,8 @@
                   />
                   <label for="exp_job_10" class="m-inputCheckLabel">情報管理・システム設計・開発</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -649,7 +676,8 @@
                   />
                   <label for="exp_job_11" class="m-inputCheckLabel">コンサルタント</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_experienced_job_category"
@@ -659,13 +687,14 @@
                   />
                   <label for="exp_job_12" class="m-inputCheckLabel">その他</label>
                 </div>
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">希望雇用形態<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_employment_type"
@@ -675,7 +704,8 @@
                   />
                   <label for="hope_position_1" class="m-inputCheckLabel">正社員</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_employment_type"
@@ -685,7 +715,8 @@
                   />
                   <label for="hope_position_2" class="m-inputCheckLabel">契約社員</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_employment_type"
@@ -695,7 +726,8 @@
                   />
                   <label for="hope_position_3" class="m-inputCheckLabel">派遣社員</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_employment_type"
@@ -705,13 +737,14 @@
                   />
                   <label for="hope_position_4" class="m-inputCheckLabel">その他</label>
                 </div>
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">希望職種<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <div class="inputBlockFlex inputBlockFlex--multi js-anyChecked-target">
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -721,7 +754,8 @@
                   />
                   <label for="hope_job_1" class="m-inputCheckLabel">事務長</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -731,7 +765,8 @@
                   />
                   <label for="hope_job_2" class="m-inputCheckLabel">事務長候補</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -741,7 +776,8 @@
                   />
                   <label for="hope_job_3" class="m-inputCheckLabel">経営企画</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -751,7 +787,8 @@
                   />
                   <label for="hope_job_4" class="m-inputCheckLabel">医事課員</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -761,7 +798,8 @@
                   />
                   <label for="hope_job_5" class="m-inputCheckLabel">医事課長（候補含む）</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -771,7 +809,8 @@
                   />
                   <label for="hope_job_6" class="m-inputCheckLabel">総務課員</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -781,7 +820,8 @@
                   />
                   <label for="hope_job_7" class="m-inputCheckLabel">総務課長（候補含む）</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -791,7 +831,8 @@
                   />
                   <label for="hope_job_8" class="m-inputCheckLabel">人事課員</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -801,7 +842,8 @@
                   />
                   <label for="hope_job_9" class="m-inputCheckLabel">人事課長（候補含む）</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -811,7 +853,8 @@
                   />
                   <label for="hope_job_10" class="m-inputCheckLabel">財務・経理</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -821,7 +864,8 @@
                   />
                   <label for="hope_job_11" class="m-inputCheckLabel">地域連携室・渉外</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -831,7 +875,8 @@
                   />
                   <label for="hope_job_12" class="m-inputCheckLabel">広報</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -841,7 +886,8 @@
                   />
                   <label for="hope_job_13" class="m-inputCheckLabel">情報管理室</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -851,7 +897,8 @@
                   />
                   <label for="hope_job_14" class="m-inputCheckLabel">事務総合職</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -861,7 +908,8 @@
                   />
                   <label for="hope_job_15" class="m-inputCheckLabel">健診総合職</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -871,7 +919,8 @@
                   />
                   <label for="hope_job_16" class="m-inputCheckLabel">診療情報管理士</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -881,7 +930,8 @@
                   />
                   <label for="hope_job_17" class="m-inputCheckLabel">社会福祉士</label>
                 </div>
-                <div class="inputBlockFlex__item inputBlockFlex__item--multi">
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
+                <div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
                   <input
                     type="checkbox"
                     name="resume_p_expect_job_category"
@@ -891,6 +941,7 @@
                   />
                   <label for="hope_job_18" class="m-inputCheckLabel">その他</label>
                 </div>
+                <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
               </div>
               <p class="m-inputErrorText"></p>
             </div>
@@ -916,7 +967,7 @@
                 ><option value="option_u_000330">1年以内(いい転職先があれば)</option
                 ><option value="option_u_000331">未定(情報収集中)</option>
               </select>
-              <p class="m-inputErrorText"></p>
+              <p class="inputBlock__confirmSetValue"></p>
             </div>
             <div class="inputBlock">
               <h2 class="inputBlock__heading">自己PR<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
@@ -929,13 +980,16 @@
               <p class="m-inputErrorText"></p>
             </div>
 
+            <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>
+              確認する
+            </button>
             <button
               type="button"
-              class="inputBlock__submit js-async-registResumeSubmit-target js-formSubmit-target"
-              disabled
+              class="inputBlock__submit js-async-registResumeSubmit-target js-submit-target is-hide"
             >
               登録する
             </button>
+            <button type="button" class="inputBlock__confirmBack js-confirmBack-trigger">修正する</button>
           </form>
         </section>
       </div>

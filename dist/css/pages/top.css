@@ -237,28 +237,28 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit, .topSearchBox__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__confirmBack, .inputBlock__submit, .topSearchBox__submit {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
   pointer-events: auto; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit, .topSearchBox__submit {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__submit, .topSearchBox__submit {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover, .topSearchBox__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__confirm:hover, .inputBlock__submit:hover, .topSearchBox__submit:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled, .topSearchBox__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__confirm:disabled, .inputBlock__submit:disabled, .topSearchBox__submit:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3;
       pointer-events: none; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover, .topSearchBox__submit:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__confirm:disabled:hover, .inputBlock__submit:disabled:hover, .topSearchBox__submit:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -270,11 +270,11 @@ select::-ms-expand {
       background-color: #d3d9e0;
       border: 1px solid #d3d9e0;
       text-decoration: none; }
-  .m-button--gray, .globalFooterGuide__contactButton {
+  .m-button--gray, .globalFooterGuide__contactButton, .inputBlock__confirmBack {
     background-color: #5d687c;
     color: #fff;
     border: 1px solid #b3c1d3; }
-    .m-button--gray:hover, .globalFooterGuide__contactButton:hover {
+    .m-button--gray:hover, .globalFooterGuide__contactButton:hover, .inputBlock__confirmBack:hover {
       background-color: #fff;
       color: #5d687c;
       text-decoration: none; }
@@ -362,6 +362,22 @@ select::-ms-expand {
     color: #c9c9c9; }
   .m-inputText::placeholder {
     color: #c9c9c9; }
+  .m-inputText:-moz-read-only {
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto; }
+  .m-inputText:read-only {
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto; }
+  .m-inputText[readonly]::-webkit-input-placeholder {
+    opacity: 0; }
+  .m-inputText[readonly]::-ms-input-placeholder {
+    opacity: 0; }
+  .m-inputText[readonly]::placeholder {
+    opacity: 0; }
   .m-inputText.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
@@ -391,6 +407,10 @@ select::-ms-expand {
   background: url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
   .m-inputSelect option:first-child {
     display: none; }
+  .m-inputSelect.is-show {
+    display: block; }
+  .m-inputSelect.is-hide {
+    display: none; }
   .m-inputSelect.is-error {
     border: 1px solid #ff0000;
     background: #fff2f2 url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
@@ -408,6 +428,10 @@ select::-ms-expand {
   cursor: pointer; }
   .m-inputCheckLabel a {
     display: inline; }
+  .m-inputCheckLabel.is-show {
+    display: block; }
+  .m-inputCheckLabel.is-hide {
+    display: none; }
 
 .m-inputCheck:checked + .m-inputCheckLabel {
   background: url(../../img/common/icon/icon_checked.svg) no-repeat left center; }
@@ -425,6 +449,10 @@ select::-ms-expand {
   border-radius: 6px;
   display: block;
   cursor: pointer; }
+  .m-inputRadioLabel.is-show {
+    display: block; }
+  .m-inputRadioLabel.is-hide {
+    display: none; }
 
 .m-inputRadio:checked + .m-inputRadioLabel {
   background: #f7f8f9 url(../../img/common/icon/icon_radioChecked.svg) no-repeat 12px 15px;
@@ -451,6 +479,24 @@ select::-ms-expand {
     color: #c9c9c9; }
   .m-inputTextArea::placeholder {
     color: #c9c9c9; }
+  .m-inputTextArea:-moz-read-only {
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    resize: none; }
+  .m-inputTextArea:read-only {
+    border: none;
+    padding: 0;
+    width: auto;
+    height: auto;
+    resize: none; }
+  .m-inputTextArea[readonly]::-webkit-input-placeholder {
+    opacity: 0; }
+  .m-inputTextArea[readonly]::-ms-input-placeholder {
+    opacity: 0; }
+  .m-inputTextArea[readonly]::placeholder {
+    opacity: 0; }
   .m-inputTextArea.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
@@ -1433,6 +1479,55 @@ select::-ms-expand {
   .inputBlock__inputSmall:last-child {
     margin-right: 0; }
 
+.inputBlock__confirm {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: block;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px; }
+  .inputBlock__confirm.is-show {
+    display: block; }
+  .inputBlock__confirm.is-hide {
+    display: none; }
+
+.inputBlock__confirmBack {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: none;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px; }
+  .inputBlock__confirmBack.is-show {
+    display: block; }
+  .inputBlock__confirmBack.is-hide {
+    display: none; }
+
+.inputBlock__confirmSetValue {
+  display: none;
+  height: 1em; }
+  .inputBlock__confirmSetValue.is-show {
+    display: block; }
+  .inputBlock__confirmSetValue.is-hide {
+    display: none; }
+  .inputBlock__confirmSetValue--multi {
+    height: auto;
+    margin-left: 7px; }
+    .inputBlock__confirmSetValue--multi::before {
+      content: "、"; }
+    .inputBlock__confirmSetValue--multi:first-of-type {
+      margin-left: 0; }
+      .inputBlock__confirmSetValue--multi:first-of-type::before {
+        content: none; }
+  .inputBlock__confirmSetValue--birthday {
+    height: auto;
+    margin-left: 10px; }
+    .inputBlock__confirmSetValue--birthday::before {
+      content: "/";
+      margin-right: 10px; }
+
 .inputBlock__submit {
   font-size: 26px;
   font-size: 1.625rem;
@@ -1441,6 +1536,10 @@ select::-ms-expand {
   width: 320px;
   margin: 40px auto 0;
   padding: 13px 0 12px; }
+  .inputBlock__submit.is-show {
+    display: block; }
+  .inputBlock__submit.is-hide {
+    display: none; }
 
 .inputBlockFlex {
   display: flex;

@@ -22,10 +22,11 @@
   {job: 'その他', value: 'option_u_sonohoka'}
 ] -%}
 {%- for item in checkHopeJob %}
-<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+<div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
   <input type="checkbox" name="resume_p_expect_job_category" id="hope_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="hope_job_{{ loop.index }}" class="m-inputCheckLabel">{{ item.job }}</label>
 </div>
+<p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
 {%- endfor %}
 {%- endmacro %}
 
@@ -37,10 +38,11 @@
   {position: 'その他', value: 'option_u_000514'}
 ] -%}
 {%- for item in checkHopePosition %}
-<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+<div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
   <input type="checkbox" name="resume_p_expect_employment_type" id="hope_position_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="hope_position_{{ loop.index }}" class="m-inputCheckLabel">{{ item.position }}</label>
 </div>
+<p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
 {%- endfor %}
 {%- endmacro %}
 
@@ -60,10 +62,11 @@
   {job: 'その他', value: 'option_u_sonota'}
 ] -%}
 {%- for item in checkExpJob %}
-<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+<div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
   <input type="checkbox" name="resume_p_experienced_job_category" id="exp_job_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="exp_job_{{ loop.index }}" class="m-inputCheckLabel">{{ item.job }}</label>
 </div>
+<p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
 {%- endfor %}
 {%- endmacro %}
 
@@ -83,10 +86,11 @@
   {industry: 'その他', value: 'option_u_000546'}
 ] -%}
 {%- for item in checkExpIndustry %}
-<div class="inputBlockFlex__item inputBlockFlex__item--multi">
+<div class="inputBlockFlex__item inputBlockFlex__item--multi js-confirmHide-target">
   <input type="checkbox" name="resume_p_experienced_industry" id="exp_industry_{{ loop.index }}" class="m-inputCheck" value="{{ item.value }}">
   <label for="exp_industry_{{ loop.index }}" class="m-inputCheckLabel">{{ item.industry }}</label>
 </div>
+<p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--multi"></p>
 {%- endfor %}
 {%- endmacro %}
 

@@ -71,15 +71,18 @@
   }
 }
 .jobDetailHeaderStatus__new {
-  @include fontsize(10, 16);
-  color: #1b457e;
-  display: block;
-  width: 43px;
+  @include fontsize(11, 16);
+  color: #fff;
+  display: none;
+  width: 48px;
   height: 17px;
   text-align: center;
-  background-color: #fff;
+  background-color: #ec652b;
   border-radius: 100px;
   margin-right: 10px;
+  &.is-show {
+    display: block;
+  }
 }
 .jobDetailHeaderStatus__date {
   @include fontsize(12, 16);
