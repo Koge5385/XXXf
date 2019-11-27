@@ -287,16 +287,16 @@ select::-ms-expand {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading {
+.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading, .registResume__heading {
   font-weight: bold;
   color: #5d687c; }
-  .m-heading--lv2, .searchButtonBlock__heading {
+  .m-heading--lv2, .searchButtonBlock__heading, .registResume__heading {
     font-size: 36px;
     font-size: 2.25rem;
     line-height: 1.6;
     margin-bottom: 40px; }
     @media screen and (max-width: 768px) {
-      .m-heading--lv2, .searchButtonBlock__heading {
+      .m-heading--lv2, .searchButtonBlock__heading, .registResume__heading {
         font-size: 26px;
         font-size: 1.625rem;
         line-height: 1.6; } }
@@ -365,13 +365,11 @@ select::-ms-expand {
   .m-inputText:-moz-read-only {
     border: none;
     padding: 0;
-    width: auto;
-    height: auto; }
+    pointer-events: none; }
   .m-inputText:read-only {
     border: none;
     padding: 0;
-    width: auto;
-    height: auto; }
+    pointer-events: none; }
   .m-inputText[readonly]::-webkit-input-placeholder {
     opacity: 0; }
   .m-inputText[readonly]::-ms-input-placeholder {
@@ -482,15 +480,13 @@ select::-ms-expand {
   .m-inputTextArea:-moz-read-only {
     border: none;
     padding: 0;
-    width: auto;
-    height: auto;
-    resize: none; }
+    resize: none;
+    pointer-events: none; }
   .m-inputTextArea:read-only {
     border: none;
     padding: 0;
-    width: auto;
-    height: auto;
-    resize: none; }
+    resize: none;
+    pointer-events: none; }
   .m-inputTextArea[readonly]::-webkit-input-placeholder {
     opacity: 0; }
   .m-inputTextArea[readonly]::-ms-input-placeholder {
@@ -1510,6 +1506,8 @@ select::-ms-expand {
   height: 1em; }
   .inputBlock__confirmSetValue.is-show {
     display: block; }
+  .inputBlock__confirmSetValue--agree.is-show {
+    display: none; }
   .inputBlock__confirmSetValue.is-hide {
     display: none; }
   .inputBlock__confirmSetValue--multi {
@@ -1527,6 +1525,10 @@ select::-ms-expand {
     .inputBlock__confirmSetValue--birthday::before {
       content: "/";
       margin-right: 10px; }
+    .inputBlock__confirmSetValue--birthday:first-of-type {
+      margin-left: 0; }
+      .inputBlock__confirmSetValue--birthday:first-of-type::before {
+        content: none; }
 
 .inputBlock__submit {
   font-size: 26px;

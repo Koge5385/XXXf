@@ -16,8 +16,7 @@
   &:read-only {
     border: none;
     padding: 0;
-    width: auto;
-    height: auto;
+    pointer-events: none;
   }
   &[readonly]::placeholder {
     opacity: 0;
@@ -123,9 +122,8 @@
   &:read-only {
     border: none;
     padding: 0;
-    width: auto;
-    height: auto;
     resize: none;
+    pointer-events: none;
   }
   &[readonly]::placeholder {
     opacity: 0;

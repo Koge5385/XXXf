@@ -51,8 +51,9 @@ class FormConfirm {
       })
       if (boolean === true) {
         convertArray('textarea').forEach(elem => {
+          const lines = elem.value.split(/\r*\n/).length
           elem.readOnly = boolean
-          if (elem.value === '') elem.style.height = '1em'
+          elem.value === '' ? elem.style.height = '1em' : elem.style.height = `${lines * 1.6}em`
         })
         convertArray('select').forEach(elem => {
           const index = elem.selectedIndex
@@ -88,7 +89,7 @@ class FormConfirm {
       if (boolean === false) {
         convertArray('textarea').forEach(elem => {
           elem.readOnly = boolean
-          if (elem.value === '') elem.style.height = '180px'
+          elem.style.height = '180px'
         })
         convertArray('select').forEach(elem => {
           elem.classList.remove(ADD_HIDE_CLASS)

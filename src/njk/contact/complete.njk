@@ -1,0 +1,19 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'complete' -%}
+{%- set pageName = 'contact_complete' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = 'お問い合わせ完了' -%}
+{%- set en_pageTitle = 'COMPLETE' -%}
+{%- set pageDescription = 'お問い合わせ完了ディスクリプション' -%}
+{%- set breadcrumbs = [{item: 'お問い合わせ完了'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <div class="contactComplete">
+    <p class="contactComplete__guide">お問い合わせ完了いたしました。</p>
+    <a href="{{ basePath }}" class="contactComplete__button">TOPへ</a>
+  </div>
+</div>
+
+{% endblock %}

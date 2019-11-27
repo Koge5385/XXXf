@@ -13,7 +13,7 @@
 
   <section class="editResume">
     <form method="post" class="js-async-editResumeForm-target">
-      <h2 class="m-heading--lv2">学歴・言語・スキル</h2>
+      <h2 class="editResume__heading">学歴・スキル</h2>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">最終学歴{{ macro.inputMust() }}</h2>
         <select name="resume_u_saisyugakureki" class="m-inputSelect inputBlock__inputHalf">
@@ -27,32 +27,13 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">英語スキル{{ macro.inputWant() }}</h2>
-        <select name="resume_u_eigosukiru" class="m-inputSelect inputBlock__inputHalf">
-          {{ macro.optionSkillEnglish() }}
-        </select>
-        <p class="inputBlock__confirmSetValue"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">中国語スキル{{ macro.inputWant() }}</h2>
-        <select name="resume_u_tyuugoukugosukiru" class="m-inputSelect inputBlock__inputHalf">
-          {{ macro.optionSkillChinese() }}
-        </select>
-        <p class="inputBlock__confirmSetValue"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">その他の言語スキル{{ macro.inputWant() }}</h2>
-        <textarea name="resume_u_sonohokanogengobikou" class="m-inputTextArea" placeholder="その他の言語スキルを記入してください" value=""></textarea>
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
         <h2 class="inputBlock__heading">保有資格{{ macro.inputWant() }}</h2>
         <textarea name="resume_u_hoyuushikakusukiru" class="m-inputTextArea" placeholder="保有資格を記入してください" value=""></textarea>
         <p class="m-inputErrorText"></p>
       </div>
 
 
-      <h2 class="m-heading--lv2">職務経歴</h2>
+      <h2 class="editResume__heading">職務経歴</h2>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">現在の就業状況{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex">
@@ -102,7 +83,7 @@
       </div>
 
 
-      <h2 class="m-heading--lv2">経験及び希望条件</h2>
+      <h2 class="editResume__heading">経験及び希望条件</h2>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">現在の年収{{ macro.inputWant() }}</h2>
         <div class="inputBlockFlex inputBlockFlex--always">

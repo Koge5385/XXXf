@@ -78,6 +78,9 @@
   &.is-show {
     display: block;
   }
+  &--agree.is-show {
+    display: none;
+  }
   &.is-hide {
     display: none;
   }
@@ -100,6 +103,12 @@
     &::before {
       content: "/";
       margin-right: 10px;
+    }
+    &:first-of-type {
+      margin-left: 0;
+      &::before {
+        content: none;
+      }
     }
   }
 }

@@ -13,3 +13,7 @@
   @include _baseContentsWidth;
   width: 720px;
 }
+.editResume__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv2;
+}
