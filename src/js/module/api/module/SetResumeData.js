@@ -24,7 +24,10 @@ class SetResumeData {
     await new AxiosBase().getMethod(`/user/sessions/${token}?time=${new Date().getTime()}`, (status, response) => {
       this.userId = response.data.user_id
     })
-    await new AxiosBase().getMethod(`/resumes/${this.userId}`, this.setDataToPage)
+    await new AxiosBase().getMethod(`/users/${this.userId}?resume=1?time=${new Date().getTime()}`, (status, response) => {
+      this.resumeId = response.data.user.resume.id
+    })
+    await new AxiosBase().getMethod(`/resumes/${this.resumeId}`, this.setDataToPage)
   }
 
   /**
