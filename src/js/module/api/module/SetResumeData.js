@@ -33,6 +33,8 @@ class SetResumeData {
    * @param {Object} response コールバックで返却されたデータオブジェクト
    */
   async setDataToPage(status, response) {
+    console.log(status)
+    console.log(response)
     if (status === 200) {
       const resumeData = response.data.resume.hrbc_resume
 
