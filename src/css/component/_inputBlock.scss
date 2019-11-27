@@ -74,7 +74,8 @@
 }
 .inputBlock__confirmSetValue {
   display: none;
-  height: 1em;
+  min-height: 1em;
+  height: auto;
   &.is-show {
     display: block;
   }
@@ -85,7 +86,6 @@
     display: none;
   }
   &--multi {
-    height: auto;
     margin-left: 7px;
     &::before {
       content: "、";
@@ -98,7 +98,6 @@
     }
   }
   &--birthday {
-    height: auto;
     margin-left: 10px;
     &::before {
       content: "/";

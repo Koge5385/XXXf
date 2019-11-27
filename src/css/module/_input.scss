@@ -13,13 +13,11 @@
   &::placeholder {
     color: #c9c9c9;
   }
-  &:read-only {
-    border: none;
-    padding: 0;
-    pointer-events: none;
+  &.is-show {
+    display: block;
   }
-  &[readonly]::placeholder {
-    opacity: 0;
+  &.is-hide {
+    display: none;
   }
   &.is-error {
     color: #ff0000;
@@ -119,14 +117,11 @@
   &::placeholder {
     color: #c9c9c9;
   }
-  &:read-only {
-    border: none;
-    padding: 0;
-    resize: none;
-    pointer-events: none;
+  &.is-show {
+    display: block;
   }
-  &[readonly]::placeholder {
-    opacity: 0;
+  &.is-hide {
+    display: none;
   }
   &.is-error {
     color: #ff0000;
@@ -160,10 +155,10 @@
   margin-top: 4px;
   display: none;
 }
-.m-inputText.is-error + .m-inputErrorText,
-.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputText.is-error ~ .m-inputErrorText,
+.m-inputSelect.is-error ~ .m-inputErrorText,
 .m-inputCheck.is-error ~ .m-inputErrorText,
-.m-inputTextArea.is-error + .m-inputErrorText,
+.m-inputTextArea.is-error ~ .m-inputErrorText,
 .m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .m-inputErrorText,
 .m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .m-inputErrorText,
 .m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .m-inputErrorText {

@@ -61,18 +61,6 @@ class SetResumeData {
             setValue('textarea', key, resumeData[key])
             break
 
-          case 'resume_u_eigosukiru':
-            setValue('select', key, String(Object.keys(resumeData[key])))
-            break
-
-          case 'resume_u_tyuugoukugosukiru':
-            setValue('select', key, String(Object.keys(resumeData[key])))
-            break
-
-          case 'resume_u_sonohokanogengobikou':
-            setValue('textarea', key, resumeData[key])
-            break
-
           case 'resume_u_hoyuushikakusukiru':
             setValue('textarea', key, resumeData[key])
             break

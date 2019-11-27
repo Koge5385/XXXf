@@ -16,10 +16,14 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h2>
         <input type="text" name="person_p_name" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="氏名を入力してください" value="">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">個人氏名を入力してください。</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</h2>
         <input type="text" name="person_p_reading" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="フリガナを入力してください" value="">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">フリガナを入力してください。</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">生年月日{{ macro.inputMust() }}</h2>
@@ -64,18 +68,23 @@
         <h2 class="inputBlock__heading">郵便番号{{ macro.inputWant() }}</h2>
         <input type="hidden" class="p-country-name" value="Japan">
         <input type="text" name="person_u_yubinbangou" class="m-inputText inputBlock__inputHalf p-postal-code" placeholder="141-6005" maxlength="8" value="">
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">住所詳細{{ macro.inputWant() }}</h2>
         <input type="text" name="person_u_zyusyosyousai" class="m-inputText p-locality p-street-address" placeholder="品川区大崎2-1-1" value="">
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">電話番号{{ macro.inputMust() }}</h2>
         <input type="text" name="person_p_telephone" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="03-5437-2950" maxlength="13" value="">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">電話番号を入力してください</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">パスワード{{ macro.inputMust() }}</h2>
         <input type="password" name="password" class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target" value="">
+        <p class="inputBlock__confirmSetValue"></p>
         <div class="js-confirmHide-target">
           <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
           <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>

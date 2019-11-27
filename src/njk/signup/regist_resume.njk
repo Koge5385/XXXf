@@ -34,11 +34,13 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">学歴(詳細){{ macro.inputMust() }}</h2>
         <textarea name="resume_p_education" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="学歴(詳細)を記入してください" value=""></textarea>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">保有資格{{ macro.inputWant() }}</h2>
         <textarea name="resume_u_hoyuushikakusukiru" class="m-inputTextArea" placeholder="保有資格を記入してください" value=""></textarea>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
 
@@ -75,21 +77,25 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">転職理由{{ macro.inputWant() }}</h2>
         <textarea name="resume_u_tenshokuriyuu" class="m-inputTextArea" placeholder="転職理由を記入してください" value=""></textarea>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">職務経歴(詳細){{ macro.inputMust() }}</h2>
         <p class="inputBlock__confirmText">1社目</p>
         <textarea name="resume_p_carrier_summary" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="職務経歴(詳細)を記入してください" value="">医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
         <p class="inputBlock__confirmText">2社目</p>
         <textarea name="resume_p_carrier_summary_2" class="m-inputTextArea" placeholder="職務経歴(詳細)を記入してください" value="">医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <p class="inputBlock__confirmText">3社目以降</p>
         <textarea name="resume_p_carrier_summary_3" class="m-inputTextArea" placeholder="職務経歴(詳細)を記入してください" value="">医療機関名 / 企業名：&#13;期間：&#13;部署・役職：&#13;業務内容：</textarea>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
 
 
@@ -98,6 +104,7 @@
         <h2 class="inputBlock__heading">現在の年収{{ macro.inputWant() }}</h2>
         <div class="inputBlockFlex inputBlockFlex--always">
           <input type="text" name="resume_p_current_salary" class="m-inputText inputBlock__inputSmall" placeholder="400" value="">
+          <p class="inputBlock__confirmSetValue"></p>
           <p class="inputBlock__supportText">万円</p>
         </div>
         <p class="m-inputErrorText"></p>
@@ -106,6 +113,7 @@
         <h2 class="inputBlock__heading">希望の年収{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex inputBlockFlex--always">
           <input type="text" name="resume_u_kibounenshuu" class="m-inputText inputBlock__inputSmall js-valueEmptyCheck-target" placeholder="500" value="">
+          <p class="inputBlock__confirmSetValue"></p>
           <p class="inputBlock__supportText">万円</p>
         </div>
         <p class="m-inputErrorText"></p>
@@ -113,6 +121,7 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">現在(直近)の勤務先{{ macro.inputMust() }}</h2>
         <input type="text" name="resume_u_genzainokinmusaki" class="m-inputText js-valueEmptyCheck-target" placeholder="現在(直近)の勤務先を記入してください" value="">
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
@@ -126,6 +135,7 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">希望勤務地(詳細){{ macro.inputWant() }}</h2>
         <input type="text" name="resume_u_kiboukinmutisyousai" class="m-inputText" placeholder="希望勤務地(詳細)を記入してください" value="">
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
@@ -159,6 +169,7 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">希望条件(詳細){{ macro.inputWant() }}</h2>
         <textarea name="resume_p_expect_condition" class="m-inputTextArea" placeholder="希望条件(詳細)を記入してください" value=""></textarea>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
@@ -171,6 +182,7 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">自己PR{{ macro.inputMust() }}</h2>
         <textarea name="resume_u_jikopr" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="自己PRを記入してください" value=""></textarea>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
 

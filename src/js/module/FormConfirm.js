@@ -45,15 +45,25 @@ class FormConfirm {
     }
 
     // 対象フォーム内の要素をreadonlyにする処理
-    const readonlyAdd = boolean => {
-      convertArray('input').forEach(elem => {
-        elem.readOnly = boolean
-      })
-      if (boolean === true) {
+    const readonlyAdd = toggle => {
+      if (toggle === 'show') {
+        convertArray('input[type="text"]').forEach(elem => {
+          const value = elem.value
+          elem.classList.add(ADD_HIDE_CLASS)
+          elem.nextElementSibling.innerHTML = value
+          elem.nextElementSibling.classList.add(ADD_SHOW_CLASS)
+        })
+        convertArray('input[type="password"]').forEach(elem => {
+          const repeat = elem.value.length + 1
+          elem.classList.add(ADD_HIDE_CLASS)
+          elem.nextElementSibling.innerHTML = Array(repeat).join('●')
+          elem.nextElementSibling.classList.add(ADD_SHOW_CLASS)
+        })
         convertArray('textarea').forEach(elem => {
-          const lines = elem.value.split(/\r*\n/).length
-          elem.readOnly = boolean
-          elem.value === '' ? elem.style.height = '1em' : elem.style.height = `${lines * 1.6}em`
+          const value = elem.value.replace(/\r?\n/g, '<br>')
+          elem.classList.add(ADD_HIDE_CLASS)
+          elem.nextElementSibling.innerHTML = value
+          elem.nextElementSibling.classList.add(ADD_SHOW_CLASS)
         })
         convertArray('select').forEach(elem => {
           const index = elem.selectedIndex
@@ -86,10 +96,18 @@ class FormConfirm {
           elem.style.display = 'none'
         })
       }
-      if (boolean === false) {
+      if (toggle === 'hide') {
+        convertArray('input[type="text"]').forEach(elem => {
+          elem.classList.remove(ADD_HIDE_CLASS)
+          elem.nextElementSibling.classList.remove(ADD_SHOW_CLASS)
+        })
+        convertArray('input[type="password"]').forEach(elem => {
+          elem.classList.remove(ADD_HIDE_CLASS)
+          elem.nextElementSibling.classList.remove(ADD_SHOW_CLASS)
+        })
         convertArray('textarea').forEach(elem => {
-          elem.readOnly = boolean
-          elem.style.height = '180px'
+          elem.classList.remove(ADD_HIDE_CLASS)
+          elem.nextElementSibling.classList.remove(ADD_SHOW_CLASS)
         })
         convertArray('select').forEach(elem => {
           elem.classList.remove(ADD_HIDE_CLASS)
@@ -118,7 +136,7 @@ class FormConfirm {
     }
 
     document.querySelector(FORM_CONFIRM_TRIGGER).addEventListener(CLICK_EVENT, () => {
-      readonlyAdd(true)
+      readonlyAdd('show')
       hideElement(FORM_CONFIRM_TRIGGER)
       showElement(FORM_CONFIRM_BACK_TRIGGER)
       showElement(FORM_SUBMIT_TARGET)
@@ -126,7 +144,7 @@ class FormConfirm {
     })
 
     document.querySelector(FORM_CONFIRM_BACK_TRIGGER).addEventListener(CLICK_EVENT, () => {
-      readonlyAdd(false)
+      readonlyAdd('hide')
       showElement(FORM_CONFIRM_TRIGGER)
       hideElement(FORM_CONFIRM_BACK_TRIGGER)
       hideElement(FORM_SUBMIT_TARGET)
