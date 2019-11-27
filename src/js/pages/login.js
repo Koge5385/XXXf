@@ -8,7 +8,7 @@ const CLICK_EVENT = 'click'
 const SUBMIT_TARGET_CLASS = '.js-async-loginSubmit-target'
 
 // ログインページ用の状態判別
-//new GoMyPage()
+new GoMyPage()
 
 window.addEventListener(LOAD_EVENT, () => {
   // submitボタンの活性化処理

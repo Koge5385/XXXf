@@ -1,0 +1,29 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 100px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 60px 20px;
+  }
+}
+.jobContactComplete {
+  @include _baseContentsWidth;
+}
+.jobContactComplete__guide {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.jobContactComplete__button {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(26, 16);
+  display: block;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px;
+}

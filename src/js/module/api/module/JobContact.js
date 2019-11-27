@@ -3,7 +3,7 @@ import JsonConvert from './JsonConvert'
 
 // 定数
 const FORM_TARGET_CLASS = '.js-async-jobContactForm-target'
-const COMPLETE_HREF = './complete.html'
+const COMPLETE_HREF = './contact_complete.html'
 
 /**
  * @class JobContact
