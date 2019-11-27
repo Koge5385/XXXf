@@ -3,7 +3,6 @@ import JsonConvert from './JsonConvert'
 
 // 定数
 const FORM_TARGET_CLASS = '.js-async-jobContactForm-target'
-const COMPLETE_HREF = './contact_complete.html'
 
 /**
  * @class JobContact
@@ -36,7 +35,9 @@ class JobContact {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
-      document.location.href = COMPLETE_HREF
+      const params = new URLSearchParams(window.location.search)
+      const jobId = params.get('jobId')
+      document.location.href = `./contact_complete.html?id=${jobId}`
     }
     if (status.status === 400 || status.status === 401) {
       console.log('error')
