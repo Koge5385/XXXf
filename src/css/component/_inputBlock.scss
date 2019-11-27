@@ -87,6 +87,11 @@
   }
   &--multi {
     margin-left: 7px;
+    @include media(sp) {
+      &.is-show {
+        display: inline-block;
+      }
+    }
     &::before {
       content: "、";
     }
@@ -140,7 +145,6 @@
     flex-wrap: wrap;
     @include landscape(sp) {
       display: flex;
-      justify-content: space-between;
     }
   }
 }
@@ -172,6 +176,7 @@
     }
     @include landscape(sp) {
       width: 48%;
+      margin-right: 12px;
       &:last-child {
         margin-bottom: 15px;
       }
