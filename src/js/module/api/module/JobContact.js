@@ -37,7 +37,7 @@ class JobContact {
     if (status === 200) {
       const params = new URLSearchParams(window.location.search)
       const jobId = params.get('jobId')
-      document.location.href = `./contact_complete.html?id=${jobId}`
+      document.location.href = `./contact_complete.html?jobId=${jobId}`
     }
     if (status.status === 400 || status.status === 401) {
       console.log('error')
