@@ -1609,17 +1609,36 @@ select::-ms-expand {
   display: block; }
 
 .inputBlockAppend__button {
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   display: block;
-  width: 320px;
+  width: 276px;
   margin: 40px auto 35px;
-  padding: 13px 0 12px; }
+  padding: 11px 0 10px;
+  position: relative; }
+  .inputBlockAppend__button:hover svg {
+    fill: #1b457e; }
+  @media screen and (max-width: 768px) {
+    .inputBlockAppend__button:hover {
+      background-color: #1b457e;
+      color: #fff; }
+      .inputBlockAppend__button:hover svg {
+        fill: #8da2bf; } }
   .inputBlockAppend__button.is-show {
     display: block; }
   .inputBlockAppend__button.is-hidden {
     display: none; }
+
+.inputBlockAppend__icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translate(-50%, -50%); }
+  .inputBlockAppend__icon svg {
+    fill: #8da2bf; }
 
 .terms__heading {
   text-align: center; }
