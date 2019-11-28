@@ -2,6 +2,7 @@ import LoginCheck from '../module/api/module/LoginCheck'
 import SetResumeData from '../module/api/module/SetResumeData'
 import EditResume from '../module/api/module/EditResume'
 import FormConfirm from '../module/FormConfirm'
+import InputBoxAppend from '../module/InputBoxAppend'
 
 // 定数
 const LOAD_EVENT = 'DOMContentLoaded'
@@ -18,6 +19,9 @@ window.addEventListener(LOAD_EVENT, () => {
 
   // 確認画面の処理
   new FormConfirm()
+
+  // テキストエリアの追加処理
+  new InputBoxAppend()
 
   document.querySelector(FORM_SUBMIT_TARGET_CLASS).addEventListener(CLICK_EVENT, () => {
     // プロフィール更新のAPIの処理

@@ -46,6 +46,7 @@ class CancelMembership {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      localStorage.removeItem(ACCESS_TOKEN)
       document.location.href = COMPLETE_HREF
     }
     if (status.status === 400 || status.status === 401) {

@@ -237,28 +237,28 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__confirmBack, .inputBlock__submit, .jobContactComplete__button {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__confirmBack, .inputBlock__submit, .inputBlockAppend__button, .jobContactComplete__button {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
   pointer-events: auto; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__submit, .jobContactComplete__button {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__submit, .inputBlockAppend__button, .jobContactComplete__button {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__confirm:hover, .inputBlock__submit:hover, .jobContactComplete__button:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__confirm:hover, .inputBlock__submit:hover, .inputBlockAppend__button:hover, .jobContactComplete__button:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__confirm:disabled, .inputBlock__submit:disabled, .jobContactComplete__button:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__confirm:disabled, .inputBlock__submit:disabled, .inputBlockAppend__button:disabled, .jobContactComplete__button:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3;
       pointer-events: none; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__confirm:disabled:hover, .inputBlock__submit:disabled:hover, .jobContactComplete__button:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__confirm:disabled:hover, .inputBlock__submit:disabled:hover, .inputBlockAppend__button:disabled:hover, .jobContactComplete__button:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -1416,6 +1416,10 @@ select::-ms-expand {
   @media screen and (max-width: 768px) {
     .inputBlock {
       width: 100%; } }
+  .inputBlock.is-show {
+    display: block; }
+  .inputBlock.is-hidden {
+    display: none; }
 
 .inputBlock__heading {
   margin-bottom: 12px; }
@@ -1600,6 +1604,22 @@ select::-ms-expand {
     position: absolute;
     left: -1em;
     content: "・"; }
+
+.inputBlockAppend {
+  display: block; }
+
+.inputBlockAppend__button {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: block;
+  width: 320px;
+  margin: 40px auto 35px;
+  padding: 13px 0 12px; }
+  .inputBlockAppend__button.is-show {
+    display: block; }
+  .inputBlockAppend__button.is-hidden {
+    display: none; }
 
 .terms__heading {
   text-align: center; }
