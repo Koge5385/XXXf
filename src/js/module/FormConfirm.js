@@ -5,7 +5,7 @@ const FORM_CONFIRM_BACK_TRIGGER = '.js-confirmBack-trigger'
 const FORM_SUBMIT_TARGET = '.js-submit-target'
 const OTHER_HIDE_TARGET = '.js-confirmHide-target'
 const ADD_SHOW_CLASS = 'is-show'
-const ADD_HIDE_CLASS = 'is-hide'
+const ADD_HIDE_CLASS = 'is-hidden'
 
 /**
  * @class FormConfirm
@@ -48,6 +48,18 @@ class FormConfirm {
     const readonlyAdd = toggle => {
       if (toggle === 'show') {
         convertArray('input[type="text"]').forEach(elem => {
+          const value = elem.value
+          elem.classList.add(ADD_HIDE_CLASS)
+          elem.nextElementSibling.innerHTML = value
+          elem.nextElementSibling.classList.add(ADD_SHOW_CLASS)
+        })
+        convertArray('input[type="number"]').forEach(elem => {
+          const value = elem.value
+          elem.classList.add(ADD_HIDE_CLASS)
+          elem.nextElementSibling.innerHTML = value
+          elem.nextElementSibling.classList.add(ADD_SHOW_CLASS)
+        })
+        convertArray('input[type="tel"]').forEach(elem => {
           const value = elem.value
           elem.classList.add(ADD_HIDE_CLASS)
           elem.nextElementSibling.innerHTML = value
@@ -98,6 +110,14 @@ class FormConfirm {
       }
       if (toggle === 'hide') {
         convertArray('input[type="text"]').forEach(elem => {
+          elem.classList.remove(ADD_HIDE_CLASS)
+          elem.nextElementSibling.classList.remove(ADD_SHOW_CLASS)
+        })
+        convertArray('input[type="number"]').forEach(elem => {
+          elem.classList.remove(ADD_HIDE_CLASS)
+          elem.nextElementSibling.classList.remove(ADD_SHOW_CLASS)
+        })
+        convertArray('input[type="tel"]').forEach(elem => {
           elem.classList.remove(ADD_HIDE_CLASS)
           elem.nextElementSibling.classList.remove(ADD_SHOW_CLASS)
         })

@@ -103,7 +103,7 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">現在の年収{{ macro.inputWant() }}</h2>
         <div class="inputBlockFlex inputBlockFlex--always">
-          <input type="text" name="resume_p_current_salary" class="m-inputText inputBlock__inputSmall" placeholder="400" value="">
+          <input type="number" name="resume_p_current_salary" class="m-inputText inputBlock__inputSmall" placeholder="400" value="" oninput="if(value.length>7)value=value.slice(0,7)">
           <p class="inputBlock__confirmSetValue"></p>
           <p class="inputBlock__supportText">万円</p>
         </div>
@@ -112,7 +112,7 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">希望の年収{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex inputBlockFlex--always">
-          <input type="text" name="resume_u_kibounenshuu" class="m-inputText inputBlock__inputSmall js-valueEmptyCheck-target" placeholder="500" value="">
+          <input type="number" name="resume_u_kibounenshuu" class="m-inputText inputBlock__inputSmall js-valueEmptyCheck-target" placeholder="500" value="" oninput="if(value.length>7)value=value.slice(0,7)">
           <p class="inputBlock__confirmSetValue"></p>
           <p class="inputBlock__supportText">万円</p>
         </div>
@@ -187,7 +187,7 @@
       </div>
 
       <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>確認する</button>
-      <button type="button" class="inputBlock__submit js-async-registResumeSubmit-target js-submit-target is-hide">登録する</button>
+      <button type="button" class="inputBlock__submit js-async-registResumeSubmit-target js-submit-target is-hidden">登録する</button>
       <button type="button" class="inputBlock__confirmBack js-confirmBack-trigger">修正する</button>
     </form>
   </section>

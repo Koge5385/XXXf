@@ -4,7 +4,9 @@ import JsonConvert from './JsonConvert'
 // 定数
 const ACCESS_TOKEN = 'access_token'
 const MYPAGE_HREF = '../mypage/'
+const ADD_SHOW_CLASS = 'is-show'
 const FORM_TARGET_CLASS = '.js-async-loginForm-target'
+const REJECT_TARGET_CLASS = '.js-async-loginReject-target'
 
 /**
  * @class Login
@@ -36,6 +38,7 @@ class Login {
     const fromjobDetail = params.get('jobId')
 
     if (status === 200) {
+      document.querySelector(REJECT_TARGET_CLASS).classList.remove(ADD_SHOW_CLASS)
       localStorage.setItem(ACCESS_TOKEN, response.data.access_token)
 
       // 求人詳細からログインしたユーザーは該当のページに戻す
@@ -43,7 +46,7 @@ class Login {
       if(fromjobDetail === null) document.location.href = MYPAGE_HREF
     }
     if (status.status === 400 || status.status === 401) {
-      console.log('error')
+      document.querySelector(REJECT_TARGET_CLASS).classList.add(ADD_SHOW_CLASS)
     }
   }
 }

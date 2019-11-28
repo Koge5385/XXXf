@@ -364,7 +364,7 @@ select::-ms-expand {
     color: #c9c9c9; }
   .m-inputText.is-show {
     display: block; }
-  .m-inputText.is-hide {
+  .m-inputText.is-hidden {
     display: none; }
   .m-inputText.is-error {
     color: #ff0000;
@@ -397,7 +397,7 @@ select::-ms-expand {
     display: none; }
   .m-inputSelect.is-show {
     display: block; }
-  .m-inputSelect.is-hide {
+  .m-inputSelect.is-hidden {
     display: none; }
   .m-inputSelect.is-error {
     border: 1px solid #ff0000;
@@ -418,7 +418,7 @@ select::-ms-expand {
     display: inline; }
   .m-inputCheckLabel.is-show {
     display: block; }
-  .m-inputCheckLabel.is-hide {
+  .m-inputCheckLabel.is-hidden {
     display: none; }
 
 .m-inputCheck:checked + .m-inputCheckLabel {
@@ -439,7 +439,7 @@ select::-ms-expand {
   cursor: pointer; }
   .m-inputRadioLabel.is-show {
     display: block; }
-  .m-inputRadioLabel.is-hide {
+  .m-inputRadioLabel.is-hidden {
     display: none; }
 
 .m-inputRadio:checked + .m-inputRadioLabel {
@@ -469,7 +469,7 @@ select::-ms-expand {
     color: #c9c9c9; }
   .m-inputTextArea.is-show {
     display: block; }
-  .m-inputTextArea.is-hide {
+  .m-inputTextArea.is-hidden {
     display: none; }
   .m-inputTextArea.is-error {
     color: #ff0000;
@@ -1463,7 +1463,7 @@ select::-ms-expand {
   padding: 13px 0 12px; }
   .inputBlock__confirm.is-show {
     display: block; }
-  .inputBlock__confirm.is-hide {
+  .inputBlock__confirm.is-hidden {
     display: none; }
 
 .inputBlock__confirmBack {
@@ -1476,7 +1476,7 @@ select::-ms-expand {
   padding: 13px 0 12px; }
   .inputBlock__confirmBack.is-show {
     display: block; }
-  .inputBlock__confirmBack.is-hide {
+  .inputBlock__confirmBack.is-hidden {
     display: none; }
 
 .inputBlock__confirmSetValue {
@@ -1487,7 +1487,7 @@ select::-ms-expand {
     display: block; }
   .inputBlock__confirmSetValue--agree.is-show {
     display: none; }
-  .inputBlock__confirmSetValue.is-hide {
+  .inputBlock__confirmSetValue.is-hidden {
     display: none; }
   .inputBlock__confirmSetValue--multi {
     margin-left: 7px; }
@@ -1520,7 +1520,7 @@ select::-ms-expand {
   padding: 13px 0 12px; }
   .inputBlock__submit.is-show {
     display: block; }
-  .inputBlock__submit.is-hide {
+  .inputBlock__submit.is-hidden {
     display: none; }
 
 .inputBlockFlex {

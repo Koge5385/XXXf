@@ -85,6 +85,10 @@ class SetProfileData {
             setValue('input', key, userData[key])
             break
 
+          case 'person_p_mail':
+            setValue('input', key, userData[key])
+            break
+
           default:
             break
         }

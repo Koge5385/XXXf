@@ -223,6 +223,9 @@ class ActivateSubmit {
           ? this.mailSecondInput.classList.add(ERROR_CLASS)
           : this.mailSecondInput.classList.remove(ERROR_CLASS)
       })
+
+      // 初期値がある場合の処理
+      if (MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) this.checkResult.mail = true
     }
   }
 

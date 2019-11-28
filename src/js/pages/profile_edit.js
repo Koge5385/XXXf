@@ -1,6 +1,7 @@
 import LoginCheck from '../module/api/module/LoginCheck'
 import SetProfileData from '../module/api/module/SetProfileData'
 import EditProfile from '../module/api/module/EditProfile'
+import MailUpdate from '../module/api/module/MailUpdate'
 import FormConfirm from '../module/FormConfirm'
 
 // 定数
@@ -12,6 +13,9 @@ const FORM_SUBMIT_TARGET_CLASS = '.js-async-editProfileSubmit-target'
 new LoginCheck()
 
 window.addEventListener(LOAD_EVENT, () => {
+  // メールアドレス更新時の処理
+  new MailUpdate()
+
   // プロフィール編集の初期値設定処理
   new SetProfileData()
 

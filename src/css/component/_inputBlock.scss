@@ -53,7 +53,7 @@
   &.is-show {
     display: block;
   }
-  &.is-hide {
+  &.is-hidden {
     display: none;
   }
 }
@@ -68,7 +68,7 @@
   &.is-show {
     display: block;
   }
-  &.is-hide {
+  &.is-hidden {
     display: none;
   }
 }
@@ -82,7 +82,7 @@
   &--agree.is-show {
     display: none;
   }
-  &.is-hide {
+  &.is-hidden {
     display: none;
   }
   &--multi {
@@ -127,7 +127,7 @@
   &.is-show {
     display: block;
   }
-  &.is-hide {
+  &.is-hidden {
     display: none;
   }
 }

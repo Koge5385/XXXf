@@ -30,8 +30,11 @@ class EditResume {
     await new AxiosBase().getMethod(`/user/sessions/${token}?time=${new Date().getTime()}`, (status, response) => {
       this.userId = response.data.user_id
     })
+    await new AxiosBase().getMethod(`/users/${this.userId}?resume=1?time=${new Date().getTime()}`, (status, response) => {
+      this.resumeId = response.data.user.resume.id
+    })
     if(confirm) {
-      await new AxiosBase().postMethod(`/resumes/update/${this.userId}`, sendObject.convertObject(), this.setDataToPage)
+      await new AxiosBase().postMethod(`/resumes/update/${this.resumeId}`, sendObject.convertObject(), this.setDataToPage)
     }
   }
 

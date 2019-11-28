@@ -437,11 +437,11 @@
               <h2 class="inputBlock__heading">郵便番号<span class="m-inputIcon m-inputIcon--want">任意</span></h2>
               <input type="hidden" class="p-country-name" value="Japan" />
               <input
-                type="text"
+                type="number"
                 name="person_u_yubinbangou"
                 class="m-inputText inputBlock__inputHalf p-postal-code"
-                placeholder="141-6005"
-                maxlength="8"
+                placeholder="1416005"
+                oninput="if(value.length>7)value=value.slice(0,7)"
                 value=""
               />
               <p class="inputBlock__confirmSetValue"></p>
@@ -460,11 +460,11 @@
             <div class="inputBlock">
               <h2 class="inputBlock__heading">電話番号<span class="m-inputIcon m-inputIcon--must">必須</span></h2>
               <input
-                type="text"
+                type="number"
                 name="person_p_telephone"
                 class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target"
-                placeholder="03-5437-2950"
-                maxlength="13"
+                placeholder="0354372950"
+                oninput="if(value.length>11)value=value.slice(0,11)"
                 value=""
               />
               <p class="inputBlock__confirmSetValue"></p>
@@ -502,7 +502,7 @@
             </button>
             <button
               type="button"
-              class="inputBlock__submit js-async-registProfileSubmit-target js-submit-target is-hide"
+              class="inputBlock__submit js-async-registProfileSubmit-target js-submit-target is-hidden"
             >
               登録する
             </button>
