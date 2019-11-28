@@ -92,11 +92,11 @@ class JobDetail {
             break
 
           case 'job_p_min_salary':
-            setElement('minSalary', Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+            setElement('minSalary', jobData[key])
             break
 
           case 'job_p_max_salary':
-            setElement('maxSalary', Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+            setElement('maxSalary', jobData[key])
             break
 
           case 'job_p_job_category_summary':

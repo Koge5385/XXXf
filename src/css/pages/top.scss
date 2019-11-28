@@ -285,7 +285,7 @@
       background-size: 20px;
     }
     dd {
-      @include fontsize(22, 16);
+      @include fontsize(16, 16);
       color: #ec652b;
       font-weight: bold;
       letter-spacing: -1px;
@@ -295,7 +295,7 @@
         letter-spacing: -2px;
       }
       span {
-        @include fontsize(16, 16);
+        @include fontsize(22, 16);
       }
     }
   }
