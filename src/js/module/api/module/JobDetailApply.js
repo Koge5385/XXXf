@@ -54,8 +54,8 @@ class JobDetailApply {
   clickButton() {
     document.querySelector(DIALOG_OPEN_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       const noTokenUrl = `../login/?jobId=${this.applyJobId}`
-      //if(this.token === null || this.errorStatus === 400 || this.errorStatus === 401) document.location.href = noTokenUrl
-      JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'show')
+      if(this.token === null || this.errorStatus === 400 || this.errorStatus === 401) document.location.href = noTokenUrl
+      if(this.token !== null && this.errorStatus !== 400 && this.errorStatus !== 401) JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'show')
     })
     Array.prototype.slice.call(document.querySelectorAll(DIALOG_CLOSE_TRIGGER_CLASS), 0).forEach(elem => {
       elem.addEventListener(CLICK_EVENT, () => {
