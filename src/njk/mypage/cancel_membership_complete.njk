@@ -1,0 +1,21 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'cancel_membership_complete' -%}
+{%- set pageName = 'cancel_membership_complete' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '退会完了' -%}
+{%- set en_pageTitle = 'COMPLETE' -%}
+{%- set pageDescription = '退会完了ディスクリプション' -%}
+{%- set breadcrumbs = [{item: '退会完了'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <div class="cancelMembershipComplete">
+    <p class="cancelMembershipComplete__guide">退会手続完了のメールをお送りしましたので、内容をご確認ください。</p>
+    <p class="cancelMembershipComplete__guide">ご利用ありがとうございました。</p>
+    <p class="cancelMembershipComplete__guide">またのご利用をお待ちしております。</p>
+    <a href="{{ basePath }}" class="cancelMembershipComplete__button">TOPへ</a>
+  </div>
+</div>
+
+{% endblock %}

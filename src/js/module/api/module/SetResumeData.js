@@ -95,6 +95,10 @@ class SetResumeData {
             setValue('input', key, resumeData[key])
             break
 
+          case 'resume_u_moyorieki':
+            setValue('input', key, resumeData[key])
+            break
+
           case 'resume_u_genzainokinmusaki':
             setValue('input', key, resumeData[key])
             break

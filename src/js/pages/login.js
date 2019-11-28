@@ -7,7 +7,7 @@ const LOAD_EVENT = 'DOMContentLoaded'
 const CLICK_EVENT = 'click'
 const SUBMIT_TARGET_CLASS = '.js-async-loginSubmit-target'
 
-// ログインページ用の状態判別
+// ログイン状態の場合はマイページに移動する処理
 new GoMyPage()
 
 window.addEventListener(LOAD_EVENT, () => {

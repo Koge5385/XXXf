@@ -237,28 +237,28 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__confirmBack, .inputBlock__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__confirmBack, .inputBlock__submit, .cancelMembershipComplete__button {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
   pointer-events: auto; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__submit {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__submit, .cancelMembershipComplete__button {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__confirm:hover, .inputBlock__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__confirm:hover, .inputBlock__submit:hover, .cancelMembershipComplete__button:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__confirm:disabled, .inputBlock__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__confirm:disabled, .inputBlock__submit:disabled, .cancelMembershipComplete__button:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3;
       pointer-events: none; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__confirm:disabled:hover, .inputBlock__submit:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__confirm:disabled:hover, .inputBlock__submit:disabled:hover, .cancelMembershipComplete__button:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -287,7 +287,7 @@ select::-ms-expand {
       color: #ec652b;
       text-decoration: none; }
 
-.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading {
+.m-heading, .searchButtonBlock__heading, .searchButtonBlockRegist__text, .inputBlock__heading, .terms__heading, .termsArticle__heading, .cancelMembershipComplete__guide {
   font-weight: bold;
   color: #5d687c; }
   .m-heading--lv2, .searchButtonBlock__heading {
@@ -305,7 +305,7 @@ select::-ms-expand {
     font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 30px; }
-  .m-heading--lv4, .inputBlock__heading, .termsArticle__heading {
+  .m-heading--lv4, .inputBlock__heading, .termsArticle__heading, .cancelMembershipComplete__guide {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 1.6;
@@ -1697,27 +1697,26 @@ select::-ms-expand {
   @media screen and (max-width: 768px) {
     .container {
       min-width: auto;
-      padding: 0 20px 60px; } }
+      padding: 60px 20px; } }
 
-.contact {
+.cancelMembershipComplete {
   width: 980px;
-  margin: 0 auto;
-  width: 720px; }
+  margin: 0 auto; }
   @media screen and (max-width: 768px) {
-    .contact {
+    .cancelMembershipComplete {
       width: 100%; } }
 
-.contact__text {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 20px; }
+.cancelMembershipComplete__guide {
+  text-align: center;
+  margin-bottom: 6px; }
+  .cancelMembershipComplete__guide:last-of-type {
+    margin-bottom: 12px; }
 
-.contact__note {
-  font-size: 16px;
-  font-size: 1rem;
+.cancelMembershipComplete__button {
+  font-size: 26px;
+  font-size: 1.625rem;
   line-height: 1.6;
-  margin-bottom: 30px; }
-  .contact__note span {
-    color: #f03f3f;
-    font-weight: bold; }
+  display: block;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px; }
