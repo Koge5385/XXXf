@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">退会理由{{ macro.inputWant() }}</h2>
+        <h2 class="inputBlock__heading">退会理由{{ macro.inputMust() }}</h2>
         <div class="inputBlockFlex inputBlockFlex--allowWrap">
           <div class="inputBlockFlex__item inputBlockFlex__item--wrap">
             <input type="radio" id="quit" name="resume_u_taikairiyu" class="m-inputRadio" value="転職活動をとりやめたため">
@@ -39,7 +39,10 @@
             <label for="other" class="m-inputRadioLabel">有益なサービスが受けられなかったため</label>
           </div>
         </div>
-        <textarea class="m-inputTextArea cancelMembership__otherInput js-async-otherInput-target" placeholder="その他理由がございましたら記入お願いいたします" value=""></textarea>
+        <div class="inputBlock">
+          <h2 class="inputBlock__heading">その他の理由{{ macro.inputWant() }}</h2>
+          <textarea class="m-inputTextArea js-async-otherInput-target" placeholder="その他理由がございましたら記入お願いいたします" value=""></textarea>
+        </div>
       </div>
       <button type="button" class="inputBlock__submit js-async-cancelSubmit-target">退会する</button>
     </form>
