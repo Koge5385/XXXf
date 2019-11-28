@@ -87,7 +87,7 @@ class TopSuggest {
                   break
 
                 case 'job_u_kinmutitodoufuken':
-                  setElement('place', topJobData[key])
+                  setElement('place', String(Object.keys(topJobData[key])))
                   break
 
                 case 'job_p_min_salary':

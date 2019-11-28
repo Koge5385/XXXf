@@ -88,7 +88,7 @@ class JobDetail {
             break
 
           case 'job_u_kinmutitodoufuken':
-            setElement('place', jobData[key])
+            setElement('place', String(Object.keys(jobData[key])))
             break
 
           case 'job_p_min_salary':

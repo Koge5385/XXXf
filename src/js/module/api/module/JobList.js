@@ -127,7 +127,7 @@ class JobList {
               break
 
             case 'job_u_kinmutitodoufuken':
-              setElement('place', jobListData[key])
+              setElement('place', String(Object.keys(jobListData[key])))
               break
 
             case 'job_p_min_salary':

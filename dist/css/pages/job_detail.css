@@ -1990,7 +1990,7 @@ select::-ms-expand {
 
 .jobDetailError__text {
   font-weight: normal;
-  color: #f00;
+  color: #f03f3f;
   text-align: center; }
 
 .jobDetailDialogWrap {

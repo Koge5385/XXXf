@@ -5,9 +5,11 @@ const CLICK_EVENT = 'click'
 const ACCESS_TOKEN = 'access_token'
 const DIALOG_TARGET_CLASS = '.js-jobDialog-target'
 const DIALOG_COMPLETE_TARGET_CLASS = '.js-jobDialogComplete-target'
+const DIALOG_ERROR_TARGET_CLASS = '.js-jobDialogError-target'
 const DIALOG_OPEN_TRIGGER_CLASS = '.js-jobDialog-trigger'
 const DIALOG_CLOSE_TRIGGER_CLASS = '.js-jobDialogClose-trigger'
 const DIALOG_COMPLETE_CLOSE_TRIGGER_CLASS = '.js-jobDialogCompleteClose-trigger'
+const DIALOG_ERROR_CLOSE_TRIGGER_CLASS = '.js-jobDialogErrorClose-trigger'
 const APPLY_TRIGGER_CLASS = '.js-jobApply-trigger'
 
 /**
@@ -52,8 +54,8 @@ class JobDetailApply {
   clickButton() {
     document.querySelector(DIALOG_OPEN_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       const noTokenUrl = `../login/?jobId=${this.applyJobId}`
-      if(this.token === null || this.errorStatus === 400 || this.errorStatus === 401) document.location.href = noTokenUrl
-      if(this.token !== null && this.errorStatus !== 400 && this.errorStatus !== 401) JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'show')
+      //if(this.token === null || this.errorStatus === 400 || this.errorStatus === 401) document.location.href = noTokenUrl
+      JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'show')
     })
     Array.prototype.slice.call(document.querySelectorAll(DIALOG_CLOSE_TRIGGER_CLASS), 0).forEach(elem => {
       elem.addEventListener(CLICK_EVENT, () => {
@@ -62,6 +64,9 @@ class JobDetailApply {
     })
     document.querySelector(DIALOG_COMPLETE_CLOSE_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       JobDetailApply.isShow(DIALOG_COMPLETE_TARGET_CLASS, 'hide')
+    })
+    document.querySelector(DIALOG_ERROR_CLOSE_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
+      JobDetailApply.isShow(DIALOG_ERROR_TARGET_CLASS, 'hide')
     })
     document.querySelector(APPLY_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       document.querySelector(APPLY_TRIGGER_CLASS).style.pointerEvents = "none"
@@ -83,7 +88,8 @@ class JobDetailApply {
         JobDetailApply.isShow(DIALOG_COMPLETE_TARGET_CLASS, 'show')
       }
       if (status.status === 400 || status.status === 401) {
-        console.log('error!')
+        JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'hide')
+        JobDetailApply.isShow(DIALOG_ERROR_TARGET_CLASS, 'show')
       }
     })
   }
