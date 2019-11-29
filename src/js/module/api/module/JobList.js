@@ -141,7 +141,7 @@ class JobList {
               break
 
             case 'job_p_job_category_summary':
-              setElement('sumally', jobListData[key])
+              targetElement('sumally').innerHTML = jobListData[key].replace(/\r?\n/g, '')
               break
 
             default:

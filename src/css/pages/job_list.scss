@@ -233,6 +233,12 @@
 }
 .jobListContentPickup__itemContent {
   @include fontsize(14, 16);
+  &--job {
+    min-width: 140px;
+    @include media(sp) {
+      min-width: auto;
+    }
+  }
   &--salary {
     @include fontsize(16, 16);
     font-weight: bold;

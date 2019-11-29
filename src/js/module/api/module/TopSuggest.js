@@ -54,10 +54,11 @@ class TopSuggest {
     if (status === 200) {
       const topJobListArray = response.data.jobs
 
-      // 求人一覧の生成
+      // おすすめ求人の生成
       const targetOrigin = document.querySelector(TEXT_ORIGIN_TARGET_CLASS)
       const cardItemTemplate = targetOrigin.firstElementChild
       cardItemTemplate.parentNode.removeChild(cardItemTemplate)
+      console.log(topJobListArray)
       Object.keys(topJobListArray).forEach(item => {
         const topJobData = topJobListArray[item]
         const _cardItemTemplate = cardItemTemplate.cloneNode(true)
