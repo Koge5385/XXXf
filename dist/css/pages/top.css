@@ -498,7 +498,7 @@ select::-ms-expand {
   .m-inputIcon--want {
     background-color: #5d687c; }
 
-.m-inputErrorText {
+.m-inputErrorText, .inputBlock__rejectText {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.6;
@@ -507,13 +507,19 @@ select::-ms-expand {
   margin-top: 4px;
   display: none; }
 
-.m-inputText.is-error ~ .m-inputErrorText,
+.m-inputText.is-error ~ .m-inputErrorText, .m-inputText.is-error ~ .inputBlock__rejectText,
 .m-inputSelect.is-error ~ .m-inputErrorText,
+.m-inputSelect.is-error ~ .inputBlock__rejectText,
 .m-inputCheck.is-error ~ .m-inputErrorText,
+.m-inputCheck.is-error ~ .inputBlock__rejectText,
 .m-inputTextArea.is-error ~ .m-inputErrorText,
+.m-inputTextArea.is-error ~ .inputBlock__rejectText,
 .m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .inputBlock__rejectText,
 .m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .m-inputErrorText,
-.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .m-inputErrorText {
+.m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .inputBlock__rejectText,
+.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .inputBlock__rejectText {
   display: block; }
 
 .globalHeader {
@@ -1639,6 +1645,15 @@ select::-ms-expand {
   transform: translate(-50%, -50%); }
   .inputBlockAppend__icon svg {
     fill: #8da2bf; }
+
+.inputBlock__rejectText {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 30px;
+  text-align: center; }
+  .inputBlock__rejectText.is-show {
+    display: block; }
 
 .terms__heading {
   text-align: center; }

@@ -213,16 +213,31 @@ class ActivateSubmit {
       this.mailFirstInput = targetArray[0]
       this.mailSecondInput = targetArray[1]
 
-      this.mailFirstInput.addEventListener(BLUR_EVENT, () => {
-        if (!MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) this.mailFirstInput.classList.add(ERROR_CLASS)
-        if (MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) {
-          this.mailFirstInput.classList.remove(ERROR_CLASS)
-          this.mailConfirmValidate()
-        }
-        this.mailSecondInput.value !== this.mailFirstInput.value
-          ? this.mailSecondInput.classList.add(ERROR_CLASS)
-          : this.mailSecondInput.classList.remove(ERROR_CLASS)
-      })
+      if (this.mailSecondInput !== undefined) {
+        this.mailFirstInput.addEventListener(BLUR_EVENT, () => {
+          if (!MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) this.mailFirstInput.classList.add(ERROR_CLASS)
+          if (MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) {
+            this.mailFirstInput.classList.remove(ERROR_CLASS)
+            this.mailConfirmValidate()
+          }
+          this.mailSecondInput.value !== this.mailFirstInput.value
+            ? this.mailSecondInput.classList.add(ERROR_CLASS)
+            : this.mailSecondInput.classList.remove(ERROR_CLASS)
+        })
+      }
+
+      if (this.mailSecondInput === undefined) {
+        this.mailFirstInput.addEventListener(BLUR_EVENT, () => {
+          if (!MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) {
+            this.mailFirstInput.classList.add(ERROR_CLASS)
+            this.checkResult.mail = false
+          }
+          if (MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) {
+            this.mailFirstInput.classList.remove(ERROR_CLASS)
+            this.checkResult.mail = true
+          }
+        })
+      }
 
       // 初期値がある場合の処理
       if (MAIL_VALIDATE_FORMAT.test(this.mailFirstInput.value)) this.checkResult.mail = true
@@ -256,16 +271,31 @@ class ActivateSubmit {
       this.passwordFirstInput = targetArray[0]
       this.passwordSecondInput = targetArray[1]
 
-      this.passwordFirstInput.addEventListener(BLUR_EVENT, () => {
-        if (!PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) this.passwordFirstInput.classList.add(ERROR_CLASS)
-        if (PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) {
-          this.passwordFirstInput.classList.remove(ERROR_CLASS)
-          this.passwordConfirmValidate()
-        }
-        this.passwordSecondInput.value !== this.passwordFirstInput.value
-          ? this.passwordSecondInput.classList.add(ERROR_CLASS)
-          : this.passwordSecondInput.classList.remove(ERROR_CLASS)
-      })
+      if (this.passwordSecondInput !== undefined) {
+        this.passwordFirstInput.addEventListener(BLUR_EVENT, () => {
+          if (!PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) this.passwordFirstInput.classList.add(ERROR_CLASS)
+          if (PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) {
+            this.passwordFirstInput.classList.remove(ERROR_CLASS)
+            this.passwordConfirmValidate()
+          }
+          this.passwordSecondInput.value !== this.passwordFirstInput.value
+            ? this.passwordSecondInput.classList.add(ERROR_CLASS)
+            : this.passwordSecondInput.classList.remove(ERROR_CLASS)
+        })
+      }
+
+      if (this.passwordSecondInput === undefined) {
+        this.passwordFirstInput.addEventListener(BLUR_EVENT, () => {
+          if (!PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) {
+            this.passwordFirstInput.classList.add(ERROR_CLASS)
+            this.checkResult.password = false
+          }
+          if (PASSWORD_VALIDATE_FORMAT.test(this.passwordFirstInput.value)) {
+            this.passwordFirstInput.classList.remove(ERROR_CLASS)
+            this.checkResult.password = true
+          }
+        })
+      }
     }
   }
 

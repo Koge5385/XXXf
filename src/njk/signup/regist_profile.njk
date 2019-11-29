@@ -24,13 +24,13 @@
     <form method="post" class="js-async-registProfileForm-target h-adr">
       <div class="inputBlock">
         <h2 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h2>
-        <input type="text" name="person_p_name" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="氏名を入力してください" value="">
+        <input type="text" name="person_p_name" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="氏名を入力してください" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText">個人氏名を入力してください。</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</h2>
-        <input type="text" name="person_p_reading" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="フリガナを入力してください" value="">
+        <input type="text" name="person_p_reading" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="フリガナを入力してください" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText">フリガナを入力してください。</p>
       </div>
@@ -84,7 +84,7 @@
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">住所詳細{{ macro.inputWant() }}</h2>
-        <input type="text" name="person_u_zyusyosyousai" class="m-inputText p-locality p-street-address" placeholder="品川区大崎2-1-1" value="">
+        <input type="text" name="person_u_zyusyosyousai" class="m-inputText p-locality p-street-address" placeholder="品川区大崎2-1-1" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">

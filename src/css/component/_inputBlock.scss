@@ -260,3 +260,12 @@
     fill: #8da2bf;
   }
 }
+.inputBlock__rejectText {
+  @extend .m-inputErrorText;
+  @include fontsize(16, 16);
+  margin-top: 30px;
+  text-align: center;
+  &.is-show {
+    display: block;
+  }
+}

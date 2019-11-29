@@ -307,9 +307,10 @@
               <input
                 type="text"
                 name="email"
-                class="m-inputText js-async-loginEmail-target js-valueEmptyCheck-target"
+                class="m-inputText js-async-loginEmail-target js-mailValidation-target"
                 placeholder="example@example.co.jp"
                 value=""
+                maxlength="250"
               />
               <p class="m-inputErrorText">メールアドレスが正しくありません。</p>
             </div>
@@ -318,8 +319,9 @@
               <input
                 type="password"
                 name="password"
-                class="m-inputText js-async-loginPassword-target js-valueEmptyCheck-target"
+                class="m-inputText js-async-loginPassword-target js-passwordValidation-target"
                 value=""
+                maxlength="250"
               />
               <p class="m-inputErrorText">パスワードが正しくありません。</p>
             </div>
@@ -332,7 +334,7 @@
               >を行ってください
             </p>
 
-            <p class="login__rejectText js-async-loginReject-target">ログイン出来ませんでした。</p>
+            <p class="inputBlock__rejectText js-async-loginReject-target">メールアドレスまたはパスワードが違います</p>
             <button type="button" class="inputBlock__submit js-async-loginSubmit-target js-activate-target" disabled>
               ログイン
             </button>
