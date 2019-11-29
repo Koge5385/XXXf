@@ -198,6 +198,9 @@
 .jobDetailContentButtonWrap {
   display: flex;
   justify-content: center;
+  &.is-hidden {
+    display: none;
+  }
 }
 .jobDetailContent__actionButton {
   @include fontsize(18, 16);

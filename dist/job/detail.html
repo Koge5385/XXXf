@@ -427,7 +427,7 @@
                 </tbody>
               </table>
 
-              <div class="jobDetailContentButtonWrap">
+              <div class="jobDetailContentButtonWrap is-hidden js-jobSubmitGroup-target">
                 <a
                   href="javascript:void(0)"
                   class="m-button m-button--blue jobDetailContent__actionButton js-jobContact-trigger"
@@ -490,7 +490,7 @@
           <div class="jobDetailDialogInner">
             <div class="jobDetailDialog__close js-jobDialogNoResumeErrorClose-trigger"></div>
             <div class="jobDetailDialogContent">
-              <p class="jobDetailDialog__text">レジュメが未登録です。登録をお願いいたします。</p>
+              <p class="jobDetailDialog__text">レジュメが未登録です。<br class="sp-view" />登録をお願いいたします。</p>
               <div class="jobDetailDialogConfirm jobDetailDialogConfirm--noResume">
                 <button
                   type="button"
@@ -510,9 +510,18 @@
             <div class="jobDetailDialog__close js-jobDialogAlreadyErrorClose-trigger"></div>
             <p class="jobDetailDialogDone__text">
               この求人は応募が完了しています。<br />
-              3営業日以内に担当者からご連絡がない場合は、<br />
-              お手数ですがお電話にて直接ご連絡をお願い申し上げます。
+              3営業日以内に担当者から<br class="sp-view" />ご連絡がない場合は、<br />
+              お手数ですがお電話にて<br class="sp-view" />直接ご連絡をお願い申し上げます。
             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="jobDetailDialogWrap js-jobDialogRejectError-target">
+        <div class="jobDetailDialog jobDetailDialog--done">
+          <div class="jobDetailDialogInner">
+            <div class="jobDetailDialog__close js-jobDialogRejectErrorClose-trigger"></div>
+            <p class="jobDetailDialogDone__text">この求人は現在公開されていません。</p>
           </div>
         </div>
       </div>

@@ -2,14 +2,14 @@ import AxiosBase from '../AxiosBase'
 import JsonConvert from './JsonConvert'
 
 // 定数
-const FORM_TARGET_CLASS = '.js-async-contactForm-target'
+const FORM_TARGET_CLASS = '.js-async-serviceContactForm-target'
 const COMPLETE_HREF = './complete.html'
 
 /**
- * @class Contact
- * @desc お問い合わせ送信の処理
+ * @class ServiceContact
+ * @desc 医療機関採用担当者の方へお問い合わせ送信の処理
  */
-class Contact {
+class ServiceContact {
   /**
    * @constructor
    */
@@ -22,7 +22,7 @@ class Contact {
    */
   async doAxios() {
     const sendObject = new JsonConvert(FORM_TARGET_CLASS)
-    await new AxiosBase().postMethod('/contacts/send', sendObject.convertObject(), this.setDataToPage)
+    await new AxiosBase().postMethod('/contacts/recruiter_send', sendObject.convertObject(), this.setDataToPage)
   }
 
   /**
@@ -40,4 +40,4 @@ class Contact {
   }
 }
 
-export default Contact
+export default ServiceContact
