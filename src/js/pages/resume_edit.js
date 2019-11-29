@@ -20,7 +20,7 @@ window.addEventListener(LOAD_EVENT, () => {
   new FormConfirm()
 
   document.querySelector(FORM_SUBMIT_TARGET_CLASS).addEventListener(CLICK_EVENT, () => {
-    // プロフィール更新のAPIの処理
+    // レジュメ更新のAPIの処理
     new EditResume()
   })
 })

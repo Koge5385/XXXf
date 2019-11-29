@@ -485,10 +485,29 @@
         </div>
       </div>
 
-      <div class="jobDetailDialogWrap js-jobDialogError-target">
+      <div class="jobDetailDialogWrap js-jobDialogNoResumeError-target">
+        <div class="jobDetailDialog">
+          <div class="jobDetailDialogInner">
+            <div class="jobDetailDialog__close js-jobDialogNoResumeError-trigger"></div>
+            <div class="jobDetailDialogContent">
+              <p class="jobDetailDialog__text">レジュメが未登録です。登録をお願いいたします。</p>
+              <div class="jobDetailDialogConfirm jobDetailDialogConfirm--noResume">
+                <button
+                  type="button"
+                  class="jobDetailDialog__button jobDetailDialog__button--submit js-resumeEdit-trigger"
+                >
+                  登録する
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="jobDetailDialogWrap js-jobDialogAlreadyError-target">
         <div class="jobDetailDialog jobDetailDialog--done">
           <div class="jobDetailDialogInner">
-            <div class="jobDetailDialog__close js-jobDialogErrorClose-trigger"></div>
+            <div class="jobDetailDialog__close js-jobDialogAlreadyErrorClose-trigger"></div>
             <p class="jobDetailDialogDone__text">
               この求人は応募が完了しています。<br />
               3営業日以内に担当者からご連絡がない場合は、<br />

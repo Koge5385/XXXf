@@ -1,8 +1,11 @@
 import AxiosBase from '../AxiosBase'
 import ActivateSubmit from '../../ActivateSubmit'
+import RegistResume from './RegistResume'
 
 // 定数
 const ACCESS_TOKEN = 'access_token'
+const CLICK_EVENT = 'click'
+const FORM_SUBMIT_TARGET_CLASS = '.js-async-editResumeSubmit-target'
 
 /**
  * @class SetResumeData
@@ -27,7 +30,9 @@ class SetResumeData {
     await new AxiosBase().getMethod(`/users/${this.userId}?resume=1?time=${new Date().getTime()}`, (status, response) => {
       this.resumeId = response.data.user.resume.id
     })
-    await new AxiosBase().getMethod(`/resumes/${this.resumeId}`, this.setDataToPage)
+    this.resumeId !== undefined
+      ? await new AxiosBase().getMethod(`/resumes/${this.resumeId}`, this.setDataToPage)
+      : this.createResume()
   }
 
   /**
@@ -150,9 +155,21 @@ class SetResumeData {
       new ActivateSubmit()
     }
     if (status.status === 400 || status.status === 401) {
-      // submitボタンの活性化処理
-      new ActivateSubmit()
+      console.log('error')
     }
+  }
+
+  /**
+   * @desc 【例外処理】レジュメ登録を無視したユーザーの処理
+   */
+  createResume() {
+    // submitボタンの活性化処理
+    new ActivateSubmit()
+
+    document.querySelector(FORM_SUBMIT_TARGET_CLASS).addEventListener(CLICK_EVENT, () => {
+      // レジュメ登録時のAPI処理
+      new RegistResume()
+    })
   }
 }
 

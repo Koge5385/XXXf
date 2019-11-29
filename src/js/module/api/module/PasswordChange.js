@@ -2,9 +2,8 @@ import AxiosBase from '../AxiosBase'
 
 // 定数
 const ACCESS_TOKEN = 'access_token'
-const CURRENT_PASSWORD_TARGET_CLASS = '.js-async-currentPassword-target'
 const NEW_PASSWORD_TARGET_CLASS = '.js-async-newPassword-target'
-const PASSWORD_CHANGE_HREF = '../'
+const COMPLETE_HREF = './password_change_complete.html'
 
 /**
  * @class PasswordChange
@@ -22,21 +21,31 @@ class PasswordChange {
    * @desc パラメーターを取得してAPI実行
    */
   async doAxios() {
-    const currentPassword = document.querySelector(CURRENT_PASSWORD_TARGET_CLASS).value
     const newPassword = document.querySelector(NEW_PASSWORD_TARGET_CLASS).value
+    const params = new URLSearchParams(window.location.search)
+    this.paramToken = params.get('token')
 
-    // APIリクエストヘッダーに追加するJSONの作成
-    const password = JSON.stringify({ "current_password": currentPassword, "new_password": newPassword })
+    if (this.paramToken === null) {
+      const localToken = localStorage.getItem(ACCESS_TOKEN)
+      await new AxiosBase().getMethod(`/user/sessions/${localToken}?time=${new Date().getTime()}`, (status, response) => {
+        this.userId = response.data.user_id
+      })
+      // APIリクエストヘッダーに追加するJSONの作成
+      const sendObject = { 'password': newPassword }
+      const sendData = JSON.stringify(sendObject)
 
-    // ローカルストレージのアクセストークンをキーにしてユーザーIDを取得する
-    const callToken = localStorage.getItem(ACCESS_TOKEN)
-    await new AxiosBase().getMethod(`/user/sessions/${callToken}?time=${new Date().getTime()}`,
-      (status, response) => this.userId = response.data.user_id
-    )
-    const id = this.userId
+      // パスワード変更のAPIリクエスト
+      await new AxiosBase().postMethod(`/users/update_password/${this.userId}`, sendData, this.setDataToPage.bind(this))
+    }
 
-    // パスワード変更のAPIリクエスト
-    await new AxiosBase().postMethod(`/users/update_password/${id}`, password, this.setDataToPage)
+    if (this.paramToken !== null) {
+      // APIリクエストヘッダーに追加するJSONの作成
+      const sendObject = { 'password': newPassword, 'token': this.paramToken }
+      const sendData = JSON.stringify(sendObject)
+
+      // パスワード変更のAPIリクエスト
+      await new AxiosBase().postMethod('/user/verifies/update_password', sendData, this.setDataToPage.bind(this))
+    }
   }
 
   /**
@@ -46,7 +55,7 @@ class PasswordChange {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
-      document.location.href = PASSWORD_CHANGE_HREF
+      this.paramToken === null ? document.location.href = COMPLETE_HREF : document.location.href = `${COMPLETE_HREF}?token=${this.paramToken}`
     }
     if (status.status === 400 || status.status === 401) {
       console.log('error')
