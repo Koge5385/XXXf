@@ -57,8 +57,15 @@ class JobDetailApply {
    */
   clickButton() {
     document.querySelector(DIALOG_OPEN_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
-      if(this.token === null || this.errorStatus === 400 || this.errorStatus === 401) document.location.href = `../login/?jobId=${this.applyJobId}`
-      if(this.token !== null && this.errorStatus !== 400 && this.errorStatus !== 401) JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'show')
+      if (this.token === null || this.errorStatus === 400 || this.errorStatus === 401) document.location.href = `../login/?jobId=${this.applyJobId}`
+      if (this.token !== null && this.errorStatus !== 400 && this.errorStatus !== 401) {
+        if (this.applyResumeId === undefined) {
+          JobDetailApply.isShow(DIALOG_NO_RESUME_ERROR_TARGET_CLASS, 'show')
+        }
+        if (this.applyResumeId !== undefined) {
+          JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'show')
+        }
+      }
     })
     Array.prototype.slice.call(document.querySelectorAll(DIALOG_CLOSE_TRIGGER_CLASS), 0).forEach(elem => {
       elem.addEventListener(CLICK_EVENT, () => {
@@ -75,13 +82,8 @@ class JobDetailApply {
       JobDetailApply.isShow(DIALOG_ALREADY_ERROR_TARGET_CLASS, 'hide')
     })
     document.querySelector(APPLY_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
-      if (this.applyResumeId === undefined) {
-        JobDetailApply.isShow(DIALOG_NO_RESUME_ERROR_TARGET_CLASS, 'show')
-      }
-      if (this.applyResumeId !== undefined) {
-        document.querySelector(APPLY_TRIGGER_CLASS).style.pointerEvents = "none"
-        this.doAxios()
-      }
+      document.querySelector(APPLY_TRIGGER_CLASS).style.pointerEvents = "none"
+      this.doAxios()
     })
     document.querySelector(RESUME_EDIT_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       document.location.href = RESUME_EDIT_URL
