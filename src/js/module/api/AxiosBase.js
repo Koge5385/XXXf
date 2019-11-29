@@ -3,7 +3,7 @@ import 'es6-promise/auto'
 import 'url-search-params-polyfill'
 import 'formdata-polyfill'
 import 'array-from-polyfill'
-import 'es6-object-assign'
+import 'es6-object-assign/auto'
 import axios from 'axios'
 
 // 定数

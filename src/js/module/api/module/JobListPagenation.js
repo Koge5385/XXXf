@@ -1,3 +1,6 @@
+// 定数
+const PAGENATION_TARGET_CLASS = '.js-async-pagenation-target'
+
 /**
  * @class JobListPagenation
  * @desc 求人一覧のページネーション作成
@@ -18,7 +21,7 @@ class JobListPagenation {
    * @desc 対象となる親要素の取得
    */
   getElement() {
-    this.pagenationTarget = document.querySelector('.js-async-pagenation-target')
+    this.pagenationTarget = document.querySelector(PAGENATION_TARGET_CLASS)
   }
 
   /**
