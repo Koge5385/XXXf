@@ -69,42 +69,44 @@ class TopSuggest {
         const setElement = (name, value) => targetElement(name).innerHTML = value.replace(/\r?\n/g, '<br>')
 
         // APIレスポンスデータを指定の箇所に反映する
-        if (String(Object.keys(topJobData['job_u_topgamenhyouji'])) === 'option_u_010927') {
-          Object.keys(topJobData).forEach(key => {
-              switch (key) {
-                case 'id':
-                  targetElement('link').setAttribute('href', `./job/detail.html?id=${topJobData[key]}`)
-                  break
+        for (const name in topJobData['job_u_topgamenhyouji']) {
+          if (name === 'option_u_010927') {
+            Object.keys(topJobData).forEach(key => {
+                switch (key) {
+                  case 'id':
+                    targetElement('link').setAttribute('href', `./job/detail.html?id=${topJobData[key]}`)
+                    break
 
-                case 'job_u_kyuzintaitoru':
-                  setElement('title', topJobData[key])
-                  break
+                  case 'job_u_kyuzintaitoru':
+                    setElement('title', topJobData[key])
+                    break
 
-                case 'job_p_job_category':
-                  for (const name in topJobData[key]) {
-                    setElement('occupation', topJobData[key][name].option_p_name)
-                  }
-                  break
+                  case 'job_p_job_category':
+                    for (const name in topJobData[key]) {
+                      setElement('occupation', topJobData[key][name].option_p_name)
+                    }
+                    break
 
-                case 'job_u_kinmutitodoufuken':
-                  for (const name in topJobData[key]) {
-                    setElement('place', topJobData[key][name].option_p_name)
-                  }
-                  break
+                  case 'job_u_kinmutitodoufuken':
+                    for (const name in topJobData[key]) {
+                      setElement('place', topJobData[key][name].option_p_name)
+                    }
+                    break
 
-                case 'job_p_min_salary':
-                  setElement('minSalary', topJobData[key])
-                  break
+                  case 'job_p_min_salary':
+                    setElement('minSalary', topJobData[key])
+                    break
 
-                case 'job_p_max_salary':
-                  setElement('maxSalary', topJobData[key])
-                  break
+                  case 'job_p_max_salary':
+                    setElement('maxSalary', topJobData[key])
+                    break
 
-                default:
-                  break
-            }
-          })
-          targetOrigin.appendChild(_cardItemTemplate)
+                  default:
+                    break
+              }
+            })
+            targetOrigin.appendChild(_cardItemTemplate)
+          }
         }
       })
 

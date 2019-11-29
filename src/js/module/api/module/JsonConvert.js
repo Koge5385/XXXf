@@ -69,8 +69,12 @@ class JsonConvert {
           break
       }
     })
-    Object.assign(jsonObject, this.optionObject)
+    console.log(jsonObject)
+    console.log(this.optionObject)
+    if (this.optionObject !== undefined) Object.assign(jsonObject, this.optionObject)
+    console.log(jsonObject)
     const convertData = JSON.stringify(jsonObject)
+    console.log(convertData)
     return convertData
   }
 }

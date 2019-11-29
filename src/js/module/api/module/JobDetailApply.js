@@ -53,7 +53,6 @@ class JobDetailApply {
     })
     await new AxiosBase().getMethod(`/users/${this.applyUserId}?resume=1&time=${new Date().getTime()}`, (status, response) => {
       this.applyResumeId = response.data.user.resume.id
-      document.querySelector(SUBMIT_GROUP_TARGET_CLASS).classList.remove(ADD_HIDE_CLASS)
     })
   }
 
@@ -61,6 +60,7 @@ class JobDetailApply {
    * @desc 各ボタンクリック時の挙動
    */
   clickButton() {
+    document.querySelector(SUBMIT_GROUP_TARGET_CLASS).classList.remove(ADD_HIDE_CLASS)
     document.querySelector(DIALOG_OPEN_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       if (this.token === null || this.errorStatus === 400 || this.errorStatus === 401) document.location.href = `../login/?jobId=${this.applyJobId}`
       if (this.token !== null && this.errorStatus !== 400 && this.errorStatus !== 401) {

@@ -234,7 +234,7 @@
 .jobListContentPickup__itemContent {
   @include fontsize(14, 16);
   &--job {
-    min-width: 140px;
+    min-width: 170px;
     @include media(sp) {
       min-width: auto;
     }

@@ -1979,7 +1979,7 @@ select::-ms-expand {
   font-size: 0.875rem;
   line-height: 1.6; }
   .jobListContentPickup__itemContent--job {
-    min-width: 140px; }
+    min-width: 170px; }
     @media screen and (max-width: 768px) {
       .jobListContentPickup__itemContent--job {
         min-width: auto; } }

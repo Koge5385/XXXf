@@ -103,7 +103,11 @@ class JobList {
               break
 
             case 'job_u_newfuragu':
-              if (String(Object.keys(jobListData[key])) === 'option_u_010927') targetElement('new').classList.add(ADD_SHOW_CLASS)
+              for (const name in jobListData[key]) {
+                if (name === 'option_u_010927') {
+                  targetElement('new').classList.add(ADD_SHOW_CLASS)
+                }
+              }
               break
 
             case 'job_p_phase_date':

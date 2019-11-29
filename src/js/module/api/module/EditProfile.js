@@ -60,9 +60,11 @@ class EditProfile {
       if (this.currentMail !== this.updateMail) {
         const sendObject = {'user_id': this.userId, 'email': this.updateMail, 'url': EMAIL_UPDATE_URL}
         const sendData = JSON.stringify(sendObject)
-        await new AxiosBase().postMethod('/user/verifies/confirm_email', sendData, (status, response) => {})
+        await new AxiosBase().postMethod('/user/verifies/confirm_email', sendData, (status, response) => {
+          document.location.href = MYPAGE_HREF
+        })
       }
-      document.location.href = MYPAGE_HREF
+      if (this.currentMail === this.updateMail) document.location.href = MYPAGE_HREF
     }
     if (status.status === 400 || status.status === 401) {
       console.log('error')
