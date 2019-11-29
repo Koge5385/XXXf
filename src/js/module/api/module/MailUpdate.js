@@ -32,9 +32,6 @@ class MailUpdate {
    * @param {Object} response コールバックで返却されたデータオブジェクト
    */
   async setDataToPage(status, response) {
-    if (status === 200) {
-      console.log(response)
-    }
     if (status.status === 400 || status.status === 401) {
       console.log('error')
     }

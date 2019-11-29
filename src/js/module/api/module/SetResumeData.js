@@ -45,9 +45,7 @@ class SetResumeData {
       const resumeData = response.data.resume.hrbc_resume
 
       // 登録済みデータの反映処理
-      console.log(resumeData)
       Object.keys(resumeData).forEach(key => {
-        console.log(key)
         // 画面反映の基本処理
         const setValue = (type, name, value) => {
           document.querySelector(`${type}[name='${name}']`).value = value

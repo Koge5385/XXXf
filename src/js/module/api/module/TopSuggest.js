@@ -58,7 +58,6 @@ class TopSuggest {
       const targetOrigin = document.querySelector(TEXT_ORIGIN_TARGET_CLASS)
       const cardItemTemplate = targetOrigin.firstElementChild
       cardItemTemplate.parentNode.removeChild(cardItemTemplate)
-      console.log(topJobListArray)
       Object.keys(topJobListArray).forEach(item => {
         const topJobData = topJobListArray[item]
         const _cardItemTemplate = cardItemTemplate.cloneNode(true)

@@ -24,7 +24,6 @@ class JobContact {
     const jobId = params.get('jobId')
     const optionObject = { 'job_id': jobId }
     const sendObject = new JsonConvert(FORM_TARGET_CLASS, optionObject)
-    console.log(sendObject.convertObject())
     await new AxiosBase().postMethod('/contacts/job_send', sendObject.convertObject(), this.setDataToPage)
   }
 

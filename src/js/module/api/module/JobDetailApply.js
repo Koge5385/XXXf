@@ -106,7 +106,6 @@ class JobDetailApply {
     const sendData = JSON.stringify(applyData)
 
     new AxiosBase().postMethod('/processes/create', sendData, (status, response) => {
-      console.log(status)
       if (status === 200) {
         document.querySelector(APPLY_TRIGGER_CLASS).style.pointerEvents = "auto"
         JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'hide')

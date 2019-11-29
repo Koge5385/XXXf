@@ -35,7 +35,6 @@ class CancelMembership {
       this.userId = response.data.user_id
     })
 
-    console.log(sendData)
     await new AxiosBase().postMethod(`/users/delete/${this.userId}`, sendData, this.setDataToPage)
   }
 

@@ -26,7 +26,6 @@ class PasswordReminder {
   async doAxios() {
     const optionObject = { 'url': LOGIN_URL }
     const sendObject = new JsonConvert(FORM_TARGET_CLASS, optionObject)
-    console.log(sendObject.convertObject())
     await new AxiosBase().postMethod('/user/verifies/forgot_password', sendObject.convertObject(), this.setDataToPage)
   }
 
@@ -37,7 +36,6 @@ class PasswordReminder {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
-      console.log(response)
       document.location.href = COMPLETE_HREF
     }
     if (status.status === 400 || status.status === 401) {
