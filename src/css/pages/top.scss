@@ -173,6 +173,7 @@
   margin-left: 10px;
   padding: 24px 0 23px;
   cursor: pointer;
+  display: block;
   @include media(sp) {
     @include fontsize(18, 16);
     width: 64.78873239%;

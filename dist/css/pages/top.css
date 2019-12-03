@@ -2310,7 +2310,8 @@ button.swiper-pagination-bullet {
   width: 140px;
   margin-left: 10px;
   padding: 24px 0 23px;
-  cursor: pointer; }
+  cursor: pointer;
+  display: block; }
   @media screen and (max-width: 768px) {
     .topSearchBox__submit {
       font-size: 18px;
