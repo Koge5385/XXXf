@@ -93,6 +93,12 @@
           <p class="m-inputErrorText">法人・施設・会社名を入力してください。</p>
         </div>
         <div class="inputBlock">
+          <h2 class="inputBlock__heading">部署・役職{{ macro.inputMust() }}</h2>
+          <input type="text" name="position" class="m-inputText js-valueEmptyCheck-target" placeholder="部署・役職を入力してください" value="" maxlength="250">
+          <p class="inputBlock__confirmSetValue"></p>
+          <p class="m-inputErrorText">部署・役職を入力してください。</p>
+        </div>
+        <div class="inputBlock">
           <h2 class="inputBlock__heading">電話番号{{ macro.inputMust() }}</h2>
           <input type="number" name="telephone" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="0354372950" oninput="if(value.length>11)value=value.slice(0,11)" value="">
           <p class="inputBlock__confirmSetValue"></p>
