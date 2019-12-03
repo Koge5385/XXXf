@@ -38,6 +38,15 @@
 .jobListWrap {
   width: 100%;
 }
+.jobList__emptyText {
+  @extend .m-heading;
+  @extend .m-heading--lv3;
+  display: none;
+  text-align: center;
+  &.is-show {
+    display: block;
+  }
+}
 .jobListItem {
   width: 100%;
   background-color: #fff;
@@ -45,6 +54,9 @@
   margin-bottom: 10px;
   box-shadow: 0 0 7px 0 #d3d9e0;
   border-radius: 6px;
+  &:first-child {
+    display: none;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -71,9 +83,22 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 121px;
+  position: relative;
+  min-width: 121px;
   background-color: #0091d3;
   border-radius: 6px 0 0 0 / 6px 0 0 0;
+  &::after {
+    content: "";
+    position: absolute;
+    right: -36px;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 18px solid #0091d3;
+    border-left: 18px solid #0091d3;
+    border-right: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+  }
 }
 .jobListItemHeaderCategory__icon {
   margin: 0 8px 0 10px;
@@ -85,38 +110,30 @@
 .jobListItemHeaderCategory__name {
   @include fontsize(14, 16);
   color: #fff;
+  white-space: nowrap;
 }
 .jobListItemHeaderStatus {
-  position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex: 1;
   width: calc(100% - 121px);
   background-color: #1b457e;
   border-radius: 0 6px 0 0 / 0 6px 0 0;
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-top: 18px solid #0091d3;
-    border-left: 18px solid #0091d3;
-    border-right: 18px solid transparent;
-    border-bottom: 18px solid transparent;
-  }
 }
 .jobListItemHeaderStatus__new {
-  @include fontsize(10, 16);
-  color: #1b457e;
-  display: block;
-  width: 43px;
+  @include fontsize(11, 16);
+  color: #fff;
+  display: none;
+  width: 48px;
   height: 17px;
   text-align: center;
-  background-color: #fff;
+  background-color: #ec652b;
   border-radius: 100px;
   margin-right: 10px;
+  &.is-show {
+    display: block;
+  }
 }
 .jobListItemHeaderStatus__date {
   @include fontsize(12, 16);
@@ -216,6 +233,12 @@
 }
 .jobListContentPickup__itemContent {
   @include fontsize(14, 16);
+  &--job {
+    min-width: 170px;
+    @include media(sp) {
+      min-width: auto;
+    }
+  }
   &--salary {
     @include fontsize(16, 16);
     font-weight: bold;

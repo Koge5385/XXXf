@@ -5,9 +5,9 @@
         <img src="{{ basePath }}img/common/header_logo.png" alt="医療経営を一つ上のステージへ M.PLAT">
       </a>
     </div>
+    {%- if pageName !== 'confirm_email' and pageName !== 'regist_profile' and pageName !== 'regist_resume' and pageName !== 'regist_complete' %}
     <nav class="globalNav pc-view">
-      {%- if pageName === 'mypage' or pageName === 'password_change' or pageName === 'profile_edit' or pageName === 'cancel_membership' -%}
-      <ul class="globalNavList">
+      <ul class="globalNavList js-async-loginNavigation-target">
         <li class="globalNavItem">
           <a href="{{ basePath }}job/" class="globalNavItem__link">
             <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin">{{ macro.svg_code_list() }}</span>
@@ -21,8 +21,7 @@
           </a>
         </li>
       </ul>
-      {%- else -%}
-      <ul class="globalNavList">
+      <ul class="globalNavList js-async-logoutNavigation-target">
         <li class="globalNavItem">
           <a href="{{ basePath }}job/" class="globalNavItem__link">
             <span class="globalNavItem__icon globalNavItem__icon--list">{{ macro.svg_code_list() }}</span>
@@ -36,13 +35,12 @@
           </a>
         </li>
         <li class="globalNavItem">
-          <a href="{{ basePath }}regist_mail/" class="globalNavItem__link globalNavItem__link--regist" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
+          <a href="{{ basePath }}signup/create_account.html" class="globalNavItem__link globalNavItem__link--regist" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
             <span class="globalNavItem__icon globalNavItem__icon--regist">{{ macro.svg_code_human() }}</span>
             <p class="globalNavItem__label">会員登録</p>
           </a>
         </li>
       </ul>
-      {%- endif -%}
     </nav>
     <nav class="globalMobileNav sp-view">
       <input type="checkbox" id="sp_nav" class="globalMobileNav__toggleTrigger js-navigation-trigger">
@@ -51,8 +49,7 @@
       <div class="globalMobileNavBlock">
         <label for="sp_nav" class="globalMobileNav__closeBackground"></label>
         <div class="globalMobileNavContents">
-          {%- if pageName === 'mypage' or pageName === 'password_change' or pageName === 'profile_edit' or pageName === 'cancel_membership' -%}
-          <ul class="globalMobileNavCell">
+          <ul class="globalMobileNavCell js-async-loginNavigation-target">
             <li class="globalMobileNavCellItem">
               <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
                 <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧
@@ -64,8 +61,7 @@
               </a>
             </li>
           </ul>
-          {%- else -%}
-          <ul class="globalMobileNavCell">
+          <ul class="globalMobileNavCell js-async-logoutNavigation-target">
             <li class="globalMobileNavCellItem">
               <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link">
                 <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧
@@ -77,14 +73,13 @@
               </a>
             </li>
             <li class="globalMobileNavCellItem">
-              <a href="{{ basePath }}regist_mail/" class="globalMobileNavCellItem__link" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
+              <a href="{{ basePath }}signup/create_account.html" class="globalMobileNavCellItem__link" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
                 <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist">{{ macro.svg_code_human_sp() }}</span>会員登録
               </a>
             </li>
           </ul>
-          {%- endif -%}
           <ul class="globalMobileNavLink">
-            <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="{{ basePath }}forbeginner/">初めての方へ</a></li>
+            <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="{{ basePath }}forbeginner/">はじめての方へ</a></li>
             <li class="globalMobileNavLink__item globalMobileNavLink__item--bold m-frontLink"><a href="{{ basePath }}forrecruiter/">医療機関採用担当者の方へ</a></li>
             <li class="globalMobileNavLink__item"><a href="{{ basePath }}company/">会社概要</a></li>
             <li class="globalMobileNavLink__item"><a href="{{ basePath }}privacy_policy/">個人情報保護方針</a></li>
@@ -93,5 +88,6 @@
         </div>
       </div>
     </nav>
+    {% endif -%}
   </div>
 </header>

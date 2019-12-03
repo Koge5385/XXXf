@@ -237,28 +237,28 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
-.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__submit {
+.m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__confirmBack, .inputBlock__submit, .inputBlockAppend__button {
   border-radius: 6px;
   text-align: center;
   font-weight: bold;
   line-height: 1;
   cursor: pointer;
   pointer-events: auto; }
-  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__submit {
+  .m-button--blue, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__submit, .inputBlockAppend__button {
     background-color: #1b457e;
     color: #fff;
     border: 2px solid #1b457e; }
-    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__submit:hover {
+    .m-button--blue:hover, .searchButtonBlockRegist__button:hover, .inputBlock__confirm:hover, .inputBlock__submit:hover, .inputBlockAppend__button:hover {
       background-color: #fff;
       color: #1b457e;
       text-decoration: none; }
-    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__submit:disabled {
+    .m-button--blue:disabled, .searchButtonBlockRegist__button:disabled, .inputBlock__confirm:disabled, .inputBlock__submit:disabled, .inputBlockAppend__button:disabled {
       color: #fff;
       border: 2px solid #333;
       background-color: #333;
       opacity: 0.3;
       pointer-events: none; }
-      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__submit:disabled:hover {
+      .m-button--blue:disabled:hover, .searchButtonBlockRegist__button:disabled:hover, .inputBlock__confirm:disabled:hover, .inputBlock__submit:disabled:hover, .inputBlockAppend__button:disabled:hover {
         color: #fff;
         border: 2px solid #333;
         background-color: #333; }
@@ -270,11 +270,11 @@ select::-ms-expand {
       background-color: #d3d9e0;
       border: 1px solid #d3d9e0;
       text-decoration: none; }
-  .m-button--gray, .globalFooterGuide__contactButton {
+  .m-button--gray, .globalFooterGuide__contactButton, .inputBlock__confirmBack {
     background-color: #5d687c;
     color: #fff;
     border: 1px solid #b3c1d3; }
-    .m-button--gray:hover, .globalFooterGuide__contactButton:hover {
+    .m-button--gray:hover, .globalFooterGuide__contactButton:hover, .inputBlock__confirmBack:hover {
       background-color: #fff;
       color: #5d687c;
       text-decoration: none; }
@@ -362,6 +362,10 @@ select::-ms-expand {
     color: #c9c9c9; }
   .m-inputText::placeholder {
     color: #c9c9c9; }
+  .m-inputText.is-show {
+    display: block; }
+  .m-inputText.is-hidden {
+    display: none; }
   .m-inputText.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
@@ -391,6 +395,10 @@ select::-ms-expand {
   background: url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
   .m-inputSelect option:first-child {
     display: none; }
+  .m-inputSelect.is-show {
+    display: block; }
+  .m-inputSelect.is-hidden {
+    display: none; }
   .m-inputSelect.is-error {
     border: 1px solid #ff0000;
     background: #fff2f2 url(../../img/common/icon/icon_arrow_down.svg) no-repeat right 11.5px center; }
@@ -408,6 +416,10 @@ select::-ms-expand {
   cursor: pointer; }
   .m-inputCheckLabel a {
     display: inline; }
+  .m-inputCheckLabel.is-show {
+    display: block; }
+  .m-inputCheckLabel.is-hidden {
+    display: none; }
 
 .m-inputCheck:checked + .m-inputCheckLabel {
   background: url(../../img/common/icon/icon_checked.svg) no-repeat left center; }
@@ -425,6 +437,10 @@ select::-ms-expand {
   border-radius: 6px;
   display: block;
   cursor: pointer; }
+  .m-inputRadioLabel.is-show {
+    display: block; }
+  .m-inputRadioLabel.is-hidden {
+    display: none; }
 
 .m-inputRadio:checked + .m-inputRadioLabel {
   background: #f7f8f9 url(../../img/common/icon/icon_radioChecked.svg) no-repeat 12px 15px;
@@ -451,6 +467,10 @@ select::-ms-expand {
     color: #c9c9c9; }
   .m-inputTextArea::placeholder {
     color: #c9c9c9; }
+  .m-inputTextArea.is-show {
+    display: block; }
+  .m-inputTextArea.is-hidden {
+    display: none; }
   .m-inputTextArea.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
@@ -478,7 +498,7 @@ select::-ms-expand {
   .m-inputIcon--want {
     background-color: #5d687c; }
 
-.m-inputErrorText {
+.m-inputErrorText, .inputBlock__rejectText {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.6;
@@ -487,10 +507,19 @@ select::-ms-expand {
   margin-top: 4px;
   display: none; }
 
-.m-inputText.is-error + .m-inputErrorText,
-.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputText.is-error ~ .m-inputErrorText, .m-inputText.is-error ~ .inputBlock__rejectText,
+.m-inputSelect.is-error ~ .m-inputErrorText,
+.m-inputSelect.is-error ~ .inputBlock__rejectText,
 .m-inputCheck.is-error ~ .m-inputErrorText,
-.m-inputTextArea.is-error + .m-inputErrorText {
+.m-inputCheck.is-error ~ .inputBlock__rejectText,
+.m-inputTextArea.is-error ~ .m-inputErrorText,
+.m-inputTextArea.is-error ~ .inputBlock__rejectText,
+.m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .inputBlock__rejectText,
+.m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .inputBlock__rejectText,
+.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .inputBlock__rejectText {
   display: block; }
 
 .globalHeader {
@@ -525,8 +554,10 @@ select::-ms-expand {
   margin: 0; }
 
 .globalNavList {
-  display: flex;
+  display: none;
   justify-content: flex-end; }
+  .globalNavList.is-show {
+    display: flex; }
 
 .globalNavItem {
   display: flex;
@@ -651,10 +682,12 @@ select::-ms-expand {
   padding: 20px 0 30px; }
 
 .globalMobileNavCell {
-  display: flex;
+  display: none;
   justify-content: space-between;
   width: 100%;
   padding: 0 10px; }
+  .globalMobileNavCell.is-show {
+    display: flex; }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .globalMobileNavCell {
       justify-content: space-around; } }
@@ -1389,6 +1422,10 @@ select::-ms-expand {
   @media screen and (max-width: 768px) {
     .inputBlock {
       width: 100%; } }
+  .inputBlock.is-show {
+    display: block; }
+  .inputBlock.is-hidden {
+    display: none; }
 
 .inputBlock__heading {
   margin-bottom: 12px; }
@@ -1426,6 +1463,57 @@ select::-ms-expand {
   .inputBlock__inputSmall:last-child {
     margin-right: 0; }
 
+.inputBlock__confirm {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: block;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px; }
+  .inputBlock__confirm.is-show {
+    display: block; }
+  .inputBlock__confirm.is-hidden {
+    display: none; }
+
+.inputBlock__confirmBack {
+  font-size: 26px;
+  font-size: 1.625rem;
+  line-height: 1.6;
+  display: none;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px; }
+  .inputBlock__confirmBack.is-show {
+    display: block; }
+  .inputBlock__confirmBack.is-hidden {
+    display: none; }
+
+.inputBlock__confirmSetValue {
+  display: none;
+  min-height: 1em;
+  height: auto; }
+  .inputBlock__confirmSetValue.is-show {
+    display: block; }
+  .inputBlock__confirmSetValue--agree.is-show {
+    display: none; }
+  .inputBlock__confirmSetValue.is-hidden {
+    display: none; }
+  .inputBlock__confirmSetValue--multi {
+    width: 100%; }
+    @media screen and (max-width: 768px) {
+      .inputBlock__confirmSetValue--multi.is-show {
+        display: inline-block; } }
+  .inputBlock__confirmSetValue--birthday {
+    margin-left: 10px; }
+    .inputBlock__confirmSetValue--birthday::before {
+      content: "/";
+      margin-right: 10px; }
+    .inputBlock__confirmSetValue--birthday:first-of-type {
+      margin-left: 0; }
+      .inputBlock__confirmSetValue--birthday:first-of-type::before {
+        content: none; }
+
 .inputBlock__submit {
   font-size: 26px;
   font-size: 1.625rem;
@@ -1434,10 +1522,16 @@ select::-ms-expand {
   width: 320px;
   margin: 40px auto 0;
   padding: 13px 0 12px; }
+  .inputBlock__submit.is-show {
+    display: block; }
+  .inputBlock__submit.is-hidden {
+    display: none; }
 
 .inputBlockFlex {
   display: flex;
   justify-content: flex-start; }
+  .inputBlockFlex--allowWrap {
+    flex-wrap: wrap; }
   @media screen and (max-width: 768px) {
     .inputBlockFlex {
       display: block; } }
@@ -1448,14 +1542,16 @@ select::-ms-expand {
     flex-wrap: wrap; }
     @media screen and (max-width: 768px) and (orientation: landscape) {
       .inputBlockFlex--multi {
-        display: flex;
-        justify-content: space-between; } }
+        display: flex; } }
 
 .inputBlockFlex__item {
   width: 50%;
   margin-right: 10px; }
   .inputBlockFlex__item:last-child {
     margin-right: 0; }
+  .inputBlockFlex__item--wrap {
+    width: 48%;
+    margin-bottom: 15px; }
   @media screen and (max-width: 768px) {
     .inputBlockFlex__item {
       width: 100%;
@@ -1476,7 +1572,8 @@ select::-ms-expand {
           margin-bottom: 0; } }
     @media screen and (max-width: 768px) and (orientation: landscape) {
       .inputBlockFlex__item--multi {
-        width: 48%; }
+        width: 48%;
+        margin-right: 12px; }
         .inputBlockFlex__item--multi:last-child {
           margin-bottom: 15px; } }
 
@@ -1513,6 +1610,50 @@ select::-ms-expand {
     position: absolute;
     left: -1em;
     content: "・"; }
+
+.inputBlockAppend {
+  display: block; }
+
+.inputBlockAppend__button {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: block;
+  width: 276px;
+  margin: 40px auto 35px;
+  padding: 11px 0 10px;
+  position: relative; }
+  .inputBlockAppend__button:hover svg {
+    fill: #1b457e; }
+  @media screen and (max-width: 768px) {
+    .inputBlockAppend__button:hover {
+      background-color: #1b457e;
+      color: #fff; }
+      .inputBlockAppend__button:hover svg {
+        fill: #8da2bf; } }
+  .inputBlockAppend__button.is-show {
+    display: block; }
+  .inputBlockAppend__button.is-hidden {
+    display: none; }
+
+.inputBlockAppend__icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translate(-50%, -50%); }
+  .inputBlockAppend__icon svg {
+    fill: #8da2bf; }
+
+.inputBlock__rejectText {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 30px;
+  text-align: center; }
+  .inputBlock__rejectText.is-show {
+    display: block; }
 
 .terms__heading {
   text-align: center; }
@@ -1618,3 +1759,6 @@ select::-ms-expand {
   @media screen and (max-width: 768px) {
     .editProfile {
       width: 100%; } }
+
+.editProfile__attentionText {
+  color: #f03f3f; }

@@ -33,7 +33,7 @@
                     </select>
                   </li>
                   <li class="topSearchBoxList__item topSearchBoxList__item--place">
-                    <select name="job_p_area" class="m-inputSelect topSearchBoxList__input">
+                    <select name="job_u_kinmutitodoufuken" class="m-inputSelect topSearchBoxList__input">
                       {{ macro.optionArea() }}
                     </select>
                   </li>
@@ -58,39 +58,26 @@
           </div>
           <div class="jobcardWrap">
             <div class="jobcardInner swiper-container">
-              <div class="jobcardList swiper-wrapper">
+              <div class="jobcardList swiper-wrapper js-async-origin-target">
 
-                {%- set jobcarditems = [
-                  {heading: '500床規模の総合病院／DPC経験者優遇', place: '埼玉県', job: '医事課長・医事課長候補', money: '400～700'},
-                  {heading: '医事課のマネジメント業務／ケアミックス', place: '神奈川県', job: '医事課長・医事課長候補', money: '450～550'},
-                  {heading: '小規模病院（100床規模）でのマネジメント職', place: '東京都', job: '医事課長・医事課主任', money: '420～550'},
-                  {heading: 'DPC経験者優遇／プロジェクトリーダーの募集', place: '神奈川県', job: '医事課長・医事課長候補', money: '600～700'},
-                  {heading: 'マネジメント経験のある方歓迎／年収600万円以上', place: '神奈川県', job: '総務課長', money: '600～700'},
-                  {heading: '公立病院／世代交代／若手幹部候補の求人', place: '千葉県', job: '医事課長', money: '400～500'},
-                  {heading: '運営戦略の立案・実行／経営分析・経営会議の企画運営', place: '千葉県', job: '事務長（候補）', money: '450～550'},
-                  {heading: '100床規模の小規模病院／医事課員のマネジメント業務', place: '埼玉県', job: '医事課長', money: '500～550'},
-                  {heading: '300床規模のケアミックス／総務課業務全般', place: '埼玉県', job: '総務課長（候補）', money: '400～450'}
-                ] -%}
-                {%- for item in jobcarditems %}
                 <div class="jobcard__item swiper-slide">
-                  <a href="" class="jobcard__link">
-                    <p class="jobcard__title js-autoTextOmit-target">{{ item.heading }}</p>
+                  <a href="" class="jobcard__link js-async-link-target">
+                    <p class="jobcard__title js-adjustHeight-title-target js-autoTextOmit-target js-async-title-target"></p>
                     <dl class="jobcard__line jobcard__line--location">
                       <dt>勤務地</dt>
-                      <dd>{{ item.place }}</dd>
+                      <dd class="js-async-place-target"></dd>
                     </dl>
                     <dl class="jobcard__line jobcard__line--work">
                       <dt><span class="jobcard__firstText">職</span>種</dt>
-                      <dd class="js-adjustHeight-work-target">{{ item.job }}</dd>
+                      <dd class="js-adjustHeight-work-target js-async-occupation-target"></dd>
                     </dl>
                     <dl class="jobcard__line jobcard__line--income">
                       <dt><span class="jobcard__firstText">年</span>収</dt>
-                      <dd>{{ item.money }}<span>万円</span></dd>
+                      <dd><span><span class="js-async-minSalary-target"></span>～<span class="js-async-maxSalary-target"></span></span>万円</dd>
                     </dl>
-                    <p href="#" class="jobcard__linkText">この求人の詳細を見る</p>
+                    <p class="jobcard__linkText">この求人の詳細を見る</p>
                   </a>
                 </div>
-                {%- endfor %}
 
               </div>
               <div class="jobcardList__control jobcardList__control--prev swiper-button-prev"></div>

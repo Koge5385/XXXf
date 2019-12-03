@@ -1,0 +1,118 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'regist_profile' -%}
+{%- set pageName = 'regist_profile' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = 'プロフィール登録' -%}
+{%- set en_pageTitle = 'SIGN UP' -%}
+{%- set pageDescription = 'プロフィール登録ディスクリプション' -%}
+{%- set breadcrumbs = [{item: 'プロフィール登録'}]-%}
+
+{% block content %}
+
+<div class="container">
+
+  {%- set registSteps = [
+    {number: '1', text: 'メールアドレス登録', class: ' is-done'},
+    {number: '2', text: 'メール認証', class: ' is-done'},
+    {number: '3', text: 'プロフィール登録', class: ' is-active'},
+    {number: '4', text: 'レジュメ登録', class: ''},
+    {number: '5', text: '完了', class: ''}
+  ] -%}
+  {% include '_modules/_registStep.njk' %}
+
+  <section class="registProfile">
+    <form method="post" class="js-async-registProfileForm-target h-adr">
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h2>
+        <input type="text" name="person_p_name" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="氏名を入力してください" value="" maxlength="250">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">個人氏名を入力してください。</p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</h2>
+        <input type="text" name="person_p_reading" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="フリガナを入力してください" value="" maxlength="250">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">フリガナを入力してください。</p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">生年月日{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex inputBlockFlex--always">
+          <select name="person_u_nenrei_year" class="m-inputSelect inputBlock__inputSmall js-valueEmptyCheck-target">
+            {{ macro.optionYear() }}
+          </select>
+          <p class="inputBlock__confirmSetValue"></p>
+          <select name="person_u_nenrei_month" class="m-inputSelect inputBlock__inputSmall js-valueEmptyCheck-target">
+            {{ macro.optionMonth() }}
+          </select>
+          <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--birthday"></p>
+          <select name="person_u_nenrei_day" class="m-inputSelect inputBlock__inputSmall js-valueEmptyCheck-target">
+            {{ macro.optionDay() }}
+          </select>
+          <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--birthday"></p>
+          <p class="m-inputErrorText">生年月日を選択してください。</p>
+        </div>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">性別{{ macro.inputMust() }}</h2>
+        <div class="inputBlockFlex">
+          <div class="inputBlockFlex__item js-confirmHide-target">
+            <input type="radio" id="man" name="person_u_seibetsu" class="m-inputRadio js-isSelected-target" value="option_p_male">
+            <label for="man" class="m-inputRadioLabel">男性</label>
+          </div>
+          <p class="inputBlock__confirmSetValue"></p>
+          <div class="inputBlockFlex__item js-confirmHide-target">
+            <input type="radio" id="woman" name="person_u_seibetsu" class="m-inputRadio js-isSelected-target" value="option_p_female">
+            <label for="woman" class="m-inputRadioLabel">女性</label>
+          </div>
+          <p class="inputBlock__confirmSetValue"></p>
+        </div>
+        <p class="m-inputErrorText">性別を選択してください。</p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">住所(都道府県){{ macro.inputMust() }}</h2>
+        <select name="person_u_zyusyotodoufuken" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
+          {{ macro.optionPlace() }}
+        </select>
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">都道府県を選択してください。</p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">郵便番号{{ macro.inputWant() }}</h2>
+        <input type="hidden" class="p-country-name" value="Japan">
+        <input type="number" name="person_u_yubinbangou" class="m-inputText inputBlock__inputHalf p-postal-code" placeholder="1416005" oninput="if(value.length>7)value=value.slice(0,7)" value="">
+        <p class="inputBlock__confirmSetValue"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">住所詳細{{ macro.inputWant() }}</h2>
+        <input type="text" name="person_u_zyusyosyousai" class="m-inputText p-locality p-street-address" placeholder="品川区大崎2-1-1" value="" maxlength="250">
+        <p class="inputBlock__confirmSetValue"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">電話番号{{ macro.inputMust() }}</h2>
+        <input type="number" name="person_p_telephone" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="0354372950" oninput="if(value.length>11)value=value.slice(0,11)" value="">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">電話番号を入力してください</p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">パスワード{{ macro.inputMust() }}</h2>
+        <input type="password" name="password" class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target" value="">
+        <p class="inputBlock__confirmSetValue"></p>
+        <div class="js-confirmHide-target">
+          <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
+          <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>
+          <p class="inputBlock__confirmText">確認のためもう一度パスワードを入力してください</p>
+          <input type="password" class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target" value="">
+          <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
+          <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>
+        </div>
+      </div>
+
+      <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>確認する</button>
+      <button type="button" class="inputBlock__submit js-async-registProfileSubmit-target js-submit-target is-hidden">登録する</button>
+      <button type="button" class="inputBlock__confirmBack js-confirmBack-trigger">修正する</button>
+    </form>
+  </section>
+
+</div>
+
+{% endblock %}

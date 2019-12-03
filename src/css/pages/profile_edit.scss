@@ -12,3 +12,6 @@
 .editProfile {
   @include _baseContentsWidth;
 }
+.editProfile__attentionText {
+  color: #f03f3f;
+}

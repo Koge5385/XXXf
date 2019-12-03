@@ -5,6 +5,7 @@ import MetaReplace from './MetaReplace'
 const SUCCESS_TARGET_CLASS = '.js-success-target'
 const ERROR_TARGET_CLASS = '.js-error-target'
 const BACK_LINK_TARGET_CLASS = '.js-jobListBackLink-target'
+const ADD_SHOW_CLASS = 'is-show'
 
 /**
  * @class JobDetail
@@ -59,11 +60,19 @@ class JobDetail {
             setElement('category', jobData[key])
             break
 
-          case 'job_p_phasedate':
-            setElement('date', jobData[key])
+          case 'job_u_newfuragu':
+            for (const name in jobData[key]) {
+              if (name === 'option_u_010927') {
+                targetElement('new').classList.add(ADD_SHOW_CLASS)
+              }
+            }
             break
 
-          case 'job_u_kyuujinnnoosusumepointo':
+          case 'job_p_phase_date':
+            setElement('date', String(jobData[key]).slice(0,10))
+            break
+
+          case 'job_u_kyuzintaitoru':
             setElement('title', jobData[key])
 
             // パンくずリストにも求人件名を反映
@@ -71,35 +80,43 @@ class JobDetail {
             break
 
           case 'job_p_publish':
-            setElement('buildingName', jobData[key].option_p_nondisclosure.option_p_name)
+            for (const name in jobData[key]) {
+              setElement('buildingName', jobData[key][name].option_p_name)
+            }
             break
 
           case 'job_p_job_category':
-            setElement('occupation', jobData[key].option_u_010895.option_p_name)
+            for (const name in jobData[key]) {
+              setElement('occupation', jobData[key][name].option_p_name)
+            }
             break
 
-          case 'job_p_area':
-            setElement('place', jobData[key])
+          case 'job_u_kinmutitodoufuken':
+            for (const name in jobData[key]) {
+              setElement('place', jobData[key][name].option_p_name)
+            }
             break
 
           case 'job_p_min_salary':
-            setElement('minSalary', Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+            setElement('minSalary', jobData[key])
             break
 
           case 'job_p_max_salary':
-            setElement('maxSalary', Number(String(jobData[key]).slice(0, -4)).toLocaleString())
+            setElement('maxSalary', jobData[key])
             break
 
           case 'job_p_job_category_summary':
             setElement('sumally', jobData[key])
             break
 
-          case 'job_u_boshuushikaku':
+          case 'job_u_oubozyouken':
             setElement('conditions', jobData[key])
             break
 
           case 'job_p_employment_type':
-            setElement('position', jobData[key].option_p_fullTime.option_p_name)
+            for (const name in jobData[key]) {
+              setElement('position', jobData[key][name].option_p_name)
+            }
             break
 
           case 'job_p_woking_hours':
@@ -110,11 +127,7 @@ class JobDetail {
             setElement('holiday', jobData[key])
             break
 
-          case 'job_u_shiyoukikannoumu':
-            setElement('overtime', jobData[key])
-            break
-
-          case 'job_u_siyoukikanshousai':
+          case 'job_u_shiyoukikan':
             setElement('trial', jobData[key])
             break
 
@@ -122,7 +135,7 @@ class JobDetail {
             setElement('benefit', jobData[key])
             break
 
-          case 'job_u_sonotabikou':
+          case 'job_u_bikou':
             setElement('other', jobData[key])
             break
 
@@ -135,24 +148,24 @@ class JobDetail {
       const params = new URLSearchParams(window.location.search)
       const paramCheck = name => params.get(name) === null ? '' : params.get(name)
       const searchOccupation = paramCheck('job_p_job_category')
-      const searchArea = paramCheck('job_p_area')
+      const searchArea = paramCheck('job_u_kinmutitodoufuken')
       const searchSalary = paramCheck('job_p_min_salary')
       const searchKeyword = paramCheck('keywords')
       const searchStart = paramCheck('start')
 
       const paramCategory = `job_p_job_category=${encodeURI(searchOccupation)}`
-      const paramArea = `job_p_area=${encodeURI(searchArea)}`
+      const paramArea = `job_u_kinmutitodoufuken=${encodeURI(searchArea)}`
       const paramSalary = `job_p_min_salary=${searchSalary}`
       const paramKeyword = `keywords=${encodeURI(searchKeyword)}`
 
       document.querySelector(BACK_LINK_TARGET_CLASS).setAttribute('href', `./?${paramCategory}&${paramArea}&${paramSalary}&${paramKeyword}&start=${searchStart}`)
 
       // meta情報の変更
-      const pageTitle = jobData['job_u_kyuujinnnoosusumepointo'].replace(/\r?\n/g, '')
+      const pageTitle = jobData['job_u_kyuzintaitoru'].replace(/\r?\n/g, '')
       const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary'].replace(/\r?\n/g, '')}`
       new MetaReplace(pageTitle, pageDescription)
     }
-    if (status === 400 || status === 401) {
+    if (status.status === 400 || status.status === 401) {
       document.querySelector(SUCCESS_TARGET_CLASS).style.display = 'none'
       document.querySelector(ERROR_TARGET_CLASS).style.display = 'block'
     }

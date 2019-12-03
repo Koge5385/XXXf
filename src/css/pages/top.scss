@@ -173,6 +173,7 @@
   margin-left: 10px;
   padding: 24px 0 23px;
   cursor: pointer;
+  display: block;
   @include media(sp) {
     @include fontsize(18, 16);
     width: 64.78873239%;
@@ -285,7 +286,7 @@
       background-size: 20px;
     }
     dd {
-      @include fontsize(22, 16);
+      @include fontsize(16, 16);
       color: #ec652b;
       font-weight: bold;
       letter-spacing: -1px;
@@ -295,7 +296,7 @@
         letter-spacing: -2px;
       }
       span {
-        @include fontsize(16, 16);
+        @include fontsize(22, 16);
       }
     }
   }

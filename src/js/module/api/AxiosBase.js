@@ -3,7 +3,11 @@ import 'es6-promise/auto'
 import 'url-search-params-polyfill'
 import 'formdata-polyfill'
 import 'array-from-polyfill'
+import 'es6-object-assign/auto'
 import axios from 'axios'
+
+// 定数
+const ACCESS_TOKEN = 'access_token'
 
 /**
  * @class AxiosBase
@@ -21,11 +25,13 @@ class AxiosBase {
    * @desc プロパティを定義する
    */
   setBase() {
+    const callToken = localStorage.getItem(ACCESS_TOKEN)
     this.axios = axios.create({
-      baseURL: 'http://54.168.137.34:3001/v1',
+      baseURL: 'http://api.mplat.jp/v1',
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
+        'Authorization': callToken,
       },
       responseType: 'json',
     })
@@ -40,7 +46,7 @@ class AxiosBase {
     return this.axios
       .get(path)
       .then(response => callback(response.status, response.data))
-      .catch(error => callback(error.message, error.type, error.code))
+      .catch(error => callback(error.response))
   }
 
   /**
@@ -53,7 +59,7 @@ class AxiosBase {
     return this.axios
       .post(path, sendData)
       .then(response => callback(response.status, response.data))
-      .catch(error => callback(error.message, error.type, error.code))
+      .catch(error => callback(error.response))
   }
 }
 

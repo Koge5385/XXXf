@@ -12,60 +12,53 @@
 <div class="container">
 
   <section class="contact">
-    <form method="post">
-      <p class="contact__text">サイトについてのお問い合わせは、下記フォームより連絡先・質問等をお伝え下さい。<br>
+    <form method="post" class="js-async-contactForm-target">
+      <p class="contact__text js-confirmHide-target">サイトについてのお問い合わせは、下記フォームより連絡先・質問等をお伝え下さい。<br>
       弊社担当より折り返しご連絡さし上げます。以下の項目を入力して「規約に同意して次へ」ボタンを押して下さい。</p>
-      <p class="contact__note">※<span>必須</span>は入力必須項目です。</p>
+      <p class="contact__note js-confirmHide-target">※<span>必須</span>は入力必須項目です。</p>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">個人氏名{{ macro.inputMust() }}</h2>
-        <div class="inputBlockFlex">
-          <div class="inputBlockFlex__item">
-            <input type="text" name="lastName" class="m-inputText js-valueEmptyCheck-target" placeholder="性" value="">
-            <p class="m-inputErrorText">個人氏名（性）を正しく入力してください。</p>
-          </div>
-          <div class="inputBlockFlex__item">
-            <input type="text" name="firstName" class="m-inputText js-valueEmptyCheck-target" placeholder="名" value="">
-            <p class="m-inputErrorText">個人氏名（名）を正しく入力してください。</p>
-          </div>
-        </div>
+        <input type="text" name="name" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="氏名を入力してください" value="" maxlength="250">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">個人氏名を入力してください。</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">フリガナ{{ macro.inputMust() }}</h2>
-        <div class="inputBlockFlex">
-          <div class="inputBlockFlex__item">
-            <input type="text" name="lastName_kana" class="m-inputText js-valueEmptyCheck-target" placeholder="セイ" value="">
-            <p class="m-inputErrorText">フリガナ（セイ）を正しく入力してください。</p>
-          </div>
-          <div class="inputBlockFlex__item">
-            <input type="text" name="firstName_kana" class="m-inputText js-valueEmptyCheck-target" placeholder="メイ" value="">
-            <p class="m-inputErrorText">フリガナ（メイ）を正しく入力してください。</p>
-          </div>
-        </div>
+        <input type="text" name="reading" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="フリガナを入力してください" value="" maxlength="250">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">フリガナを入力してください。</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">メールアドレス{{ macro.inputMust() }}</h2>
-        <input type="text" name="mail" class="m-inputText js-valueEmptyCheck-target js-mailValidation-target" placeholder="example@example.co.jp" value="">
+        <input type="text" name="email" class="m-inputText js-mailValidation-target" placeholder="example@example.co.jp" value="" maxlength="250">
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText">メールアドレスを正しく入力してください。</p>
-        <p class="inputBlock__note">※半角英数字</p>
-        <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
-        <input type="text" name="mail_confirm" class="m-inputText js-valueEmptyCheck-target js-mailValidation-target" placeholder="example@example.co.jp" value="">
-        <p class="m-inputErrorText">メールアドレスを正しく入力してください。</p>
-        <p class="inputBlock__note">※半角英数字</p>
+        <p class="inputBlock__note js-confirmHide-target">※半角英数字</p>
+        <div class="js-confirmHide-target">
+          <p class="inputBlock__confirmText">確認のためもう一度メールアドレスを入力してください</p>
+          <input type="text" class="m-inputText js-mailValidation-target" placeholder="example@example.co.jp" value="" maxlength="250">
+          <p class="m-inputErrorText">メールアドレスを正しく入力してください。</p>
+          <p class="inputBlock__note">※半角英数字</p>
+        </div>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">お問い合わせ内容{{ macro.inputMust() }}</h2>
-        <textarea name="detail" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="お問い合わせ内容を記入してください" value=""></textarea>
+        <textarea name="content" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="お問い合わせ内容を記入してください" value="" maxlength="9999"></textarea>
+        <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText">お問い合わせ内容が入力されていません。</p>
       </div>
 
-      <div class="inputBlock inputBlock--center">
+      <div class="inputBlock inputBlock--center js-confirmHide-target">
         <p class="inputBlock__guideText">個人情報の取扱いについてをよくお読みいただき、<br class="pc-view">同意いただける場合は、下記にチェックを入れてください。</p>
-        <input type="checkbox" name="termAgree" id="termAgree" class="m-inputCheck js-hasChecked-target">
-        <label for="termAgree" class="m-inputCheckLabel"><a href="{{ basePath }}privacy_policy/">個人情報保護方針</a>に同意する</label>
+        <input type="checkbox" id="termAgree" class="m-inputCheck js-hasChecked-target">
+        <label for="termAgree" class="m-inputCheckLabel"><a href="{{ basePath }}privacy_policy/" target="_blank">個人情報保護方針</a>に同意する</label>
         <p class="m-inputErrorText">個人情報保護方針への同意にチェックをしてください。</p>
       </div>
+      <p class="inputBlock__confirmSetValue inputBlock__confirmSetValue--agree"></p>
 
-      <button type="button" class="inputBlock__submit js-formSubmit-target" disabled>確認画面へ</button>
+      <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>確認する</button>
+      <button type="button" class="inputBlock__submit js-async-contactSubmit-target js-submit-target is-hidden">送信する</button>
+      <button type="button" class="inputBlock__confirmBack js-confirmBack-trigger">修正する</button>
     </form>
   </section>
 

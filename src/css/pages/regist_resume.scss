@@ -11,4 +11,9 @@
 }
 .registResume {
   @include _baseContentsWidth;
+  width: 720px;
+}
+.registResume__heading {
+  @extend .m-heading;
+  @extend .m-heading--lv2;
 }

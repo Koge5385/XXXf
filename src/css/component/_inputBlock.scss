@@ -7,6 +7,12 @@
   @include media(sp) {
     width: 100%;
   }
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
 }
 .inputBlock__heading {
   @extend .m-heading;
@@ -42,6 +48,71 @@
     margin-right: 0;
   }
 }
+.inputBlock__confirm {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(26, 16);
+  display: block;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px;
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
+}
+.inputBlock__confirmBack {
+  @extend .m-button;
+  @extend .m-button--gray;
+  @include fontsize(26, 16);
+  display: none;
+  width: 320px;
+  margin: 40px auto 0;
+  padding: 13px 0 12px;
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
+}
+.inputBlock__confirmSetValue {
+  display: none;
+  min-height: 1em;
+  height: auto;
+  &.is-show {
+    display: block;
+  }
+  &--agree.is-show {
+    display: none;
+  }
+  &.is-hidden {
+    display: none;
+  }
+  &--multi {
+    width: 100%;
+    @include media(sp) {
+      &.is-show {
+        display: inline-block;
+      }
+    }
+  }
+  &--birthday {
+    margin-left: 10px;
+    &::before {
+      content: "/";
+      margin-right: 10px;
+    }
+    &:first-of-type {
+      margin-left: 0;
+      &::before {
+        content: none;
+      }
+    }
+  }
+}
 .inputBlock__submit {
   @extend .m-button;
   @extend .m-button--blue;
@@ -50,10 +121,19 @@
   width: 320px;
   margin: 40px auto 0;
   padding: 13px 0 12px;
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
 }
 .inputBlockFlex {
   display: flex;
   justify-content: flex-start;
+  &--allowWrap {
+    flex-wrap: wrap;
+  }
   @include media(sp) {
     display: block;
   }
@@ -65,7 +145,6 @@
     flex-wrap: wrap;
     @include landscape(sp) {
       display: flex;
-      justify-content: space-between;
     }
   }
 }
@@ -74,6 +153,10 @@
   margin-right: 10px;
   &:last-child {
     margin-right: 0;
+  }
+  &--wrap {
+    width: 48%;
+    margin-bottom: 15px;
   }
   @include media(sp) {
     width: 100%;
@@ -97,6 +180,7 @@
     }
     @include landscape(sp) {
       width: 48%;
+      margin-right: 12px;
       &:last-child {
         margin-bottom: 15px;
       }
@@ -130,5 +214,58 @@
     position: absolute;
     left: -1em;
     content: "・";
+  }
+}
+.inputBlockAppend {
+  display: block;
+}
+.inputBlockAppend__button {
+  @extend .m-button;
+  @extend .m-button--blue;
+  @include fontsize(16, 16);
+  display: block;
+  width: 276px;
+  margin: 40px auto 35px;
+  padding: 11px 0 10px;
+  position: relative;
+  &:hover {
+    svg {
+      fill: #1b457e;
+    }
+  }
+  @include media(sp) {
+    &:hover {
+      background-color: #1b457e;
+      color: #fff;
+      svg {
+        fill: #8da2bf;
+      }
+    }
+  }
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
+}
+.inputBlockAppend__icon {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translate(-50%, -50%);
+  svg {
+    fill: #8da2bf;
+  }
+}
+.inputBlock__rejectText {
+  @extend .m-inputErrorText;
+  @include fontsize(16, 16);
+  margin-top: 30px;
+  text-align: center;
+  &.is-show {
+    display: block;
   }
 }

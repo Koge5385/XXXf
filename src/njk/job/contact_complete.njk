@@ -1,0 +1,20 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'complete' -%}
+{%- set pageName = 'job_contact_complete' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '求人問い合わせ完了' -%}
+{%- set en_pageTitle = 'COMPLETE' -%}
+{%- set pageDescription = '求人問い合わせ完了ディスクリプション' -%}
+{%- set breadcrumbs = [{item: '求人問い合わせ完了'}]-%}
+
+{% block content %}
+
+<div class="container">
+  <div class="jobContactComplete">
+    <p class="jobContactComplete__guide">求人問い合わせ完了いたしました。</p>
+    <a href="" class="jobContactComplete__button js-paramSet-target">求人詳細へ</a>
+    <a href="{{ basePath }}" class="jobContactComplete__button">TOPへ</a>
+  </div>
+</div>
+
+{% endblock %}

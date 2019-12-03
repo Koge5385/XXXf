@@ -2,6 +2,9 @@ import AxiosBase from '../AxiosBase'
 import AutoTextOmit from '../../AutoTextOmit'
 import JobListPagenation from './JobListPagenation'
 
+// 定数
+const ADD_SHOW_CLASS = 'is-show'
+
 /**
  * @class JobList
  * @desc 求人一覧データの呼び出し⇒反映処理
@@ -25,7 +28,7 @@ class JobList {
 
     // APIリクエストに必要なパラメーターの取得
     this.jobOccupation = paramCheck('job_p_job_category')
-    this.jobArea = paramCheck('job_p_area')
+    this.jobArea = paramCheck('job_u_kinmutitodoufuken')
     this.jobSalary = paramCheck('job_p_min_salary')
     this.jobSearch = paramCheck('keywords')
     this.jobStart = paramCheck('start')
@@ -38,7 +41,7 @@ class JobList {
 
     // パラメーターのURIエンコード
     this.category = `job_p_job_category=${encodeURI(this.jobOccupation)}`
-    this.area = `job_p_area=${encodeURI(this.jobArea)}`
+    this.area = `job_u_kinmutitodoufuken=${encodeURI(this.jobArea)}`
     this.salary = `job_p_min_salary=${this.jobSalary}`
     this.keyword = `keywords=${encodeURI(this.jobSearch)}`
 
@@ -64,13 +67,19 @@ class JobList {
       // 検索結果件数の反映
       JobList.setSearchResult(response.attributes.total)
 
+      // 検索結果が0件の場合の処理
+      if (response.attributes.total === 0) {
+        document.querySelector('.js-async-resultEmpty-target').classList.add(ADD_SHOW_CLASS)
+        return
+      }
+
       // ページネーションの生成
       new JobListPagenation(response.attributes.total, response.attributes.start)
 
       // 求人一覧の生成
       const targetOrigin = document.querySelector('.js-async-origin-target')
       const listItemTemplate = targetOrigin.firstElementChild
-      listItemTemplate.parentNode.removeChild(listItemTemplate)
+      //listItemTemplate.parentNode.removeChild(listItemTemplate)
       Object.keys(jobListArray).forEach(item => {
         const jobListData = jobListArray[item]
         const _listItemTemplate = listItemTemplate.cloneNode(true)
@@ -93,36 +102,50 @@ class JobList {
               setElement('category', jobListData[key])
               break
 
-            case 'job_p_phasedate':
-              setElement('date', jobListData[key])
+            case 'job_u_newfuragu':
+              for (const name in jobListData[key]) {
+                if (name === 'option_u_010927') {
+                  targetElement('new').classList.add(ADD_SHOW_CLASS)
+                }
+              }
               break
 
-            case 'job_u_kyuujinnnoosusumepointo':
+            case 'job_p_phase_date':
+              setElement('date', String(jobListData[key]).slice(0,10))
+              break
+
+            case 'job_u_kyuzintaitoru':
               setElement('title', jobListData[key])
               break
 
             case 'job_p_publish':
-              setElement('buildingName', jobListData[key].option_p_nondisclosure.option_p_name)
+              for (const name in jobListData[key]) {
+                setElement('buildingName', jobListData[key][name].option_p_name)
+              }
               break
 
             case 'job_p_job_category':
-              setElement('occupation', jobListData[key].option_u_010895.option_p_name)
+              for (const name in jobListData[key]) {
+                setElement('occupation', jobListData[key][name].option_p_name)
+              }
               break
 
-            case 'job_p_area':
-              setElement('place', jobListData[key])
+            case 'job_u_kinmutitodoufuken':
+              for (const name in jobListData[key]) {
+                setElement('place', jobListData[key][name].option_p_name)
+              }
               break
 
             case 'job_p_min_salary':
-              setElement('minSalary', Number(String(jobListData[key]).slice(0, -4)).toLocaleString())
+              setElement('minSalary', jobListData[key])
               break
 
             case 'job_p_max_salary':
-              setElement('maxSalary', Number(String(jobListData[key]).slice(0, -4)).toLocaleString())
+              setElement('maxSalary', jobListData[key])
               break
 
             case 'job_p_job_category_summary':
-              setElement('sumally', jobListData[key])
+              targetElement('sumally').innerHTML = jobListData[key].replace(/\r?\n/g, '')
               break
 
             default:
@@ -135,8 +158,9 @@ class JobList {
       // 「仕事内容」の3点リーダー処理
       new AutoTextOmit('.js-async-sumally-target', 69)
     }
-    if (status === 400 || status === 401) {
-      console.log('error')
+    if (status.status === 400 || status.status === 401) {
+      document.querySelector('.js-async-resultEmpty-target').classList.add(ADD_SHOW_CLASS)
+      return
     }
   }
 

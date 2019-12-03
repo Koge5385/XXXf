@@ -7,8 +7,9 @@ class JsonConvert {
    * @constructor
    * @param {string} targetFormClass 対象フォームのクラス名
    */
-  constructor(targetFormClass) {
+  constructor(targetFormClass, optionObject) {
     this.targetFormClass = targetFormClass
+    this.optionObject = optionObject
   }
 
   /**
@@ -18,8 +19,57 @@ class JsonConvert {
     const jsonObject = {}
     const formData = new FormData(document.querySelector(this.targetFormClass))
     formData.forEach((value, key) => {
-      jsonObject[key] = value
+      switch (key) {
+        case 'person_u_nenrei_year':
+          jsonObject['person_u_nenrei'] = value
+          break
+
+        case 'person_u_nenrei_month':
+          jsonObject['person_u_nenrei'] += `/${value}`
+          break
+
+        case 'person_u_nenrei_day':
+          jsonObject['person_u_nenrei'] += `/${value}`
+          break
+
+        case 'resume_p_experienced_industry':
+          jsonObject[key] === undefined
+            ? jsonObject[key] = `${value},`
+            : jsonObject[key] += `${value},`
+          break
+
+        case 'resume_p_experienced_job_category':
+            jsonObject[key] === undefined
+              ? jsonObject[key] = `${value},`
+              : jsonObject[key] += `${value},`
+          break
+
+        case 'resume_p_expect_employment_type':
+            jsonObject[key] === undefined
+              ? jsonObject[key] = `${value},`
+              : jsonObject[key] += `${value},`
+          break
+
+        case 'resume_p_expect_job_category':
+            jsonObject[key] === undefined
+              ? jsonObject[key] = `${value},`
+              : jsonObject[key] += `${value},`
+          break
+
+        case 'resume_p_carrier_summary_2':
+          jsonObject['resume_p_carrier_summary'] += `\r\n\r\n${value},`
+          break
+
+        case 'resume_p_carrier_summary_3':
+          jsonObject['resume_p_carrier_summary'] += `\r\n\r\n${value},`
+          break
+
+        default:
+          jsonObject[key] = value
+          break
+      }
     })
+    if (this.optionObject !== undefined) Object.assign(jsonObject, this.optionObject)
     const convertData = JSON.stringify(jsonObject)
     return convertData
   }

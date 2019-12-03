@@ -13,6 +13,12 @@
   &::placeholder {
     color: #c9c9c9;
   }
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
   &.is-error {
     color: #ff0000;
     border: 1px solid #ff0000;
@@ -40,6 +46,12 @@
       display: none;
     }
   }
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
   &.is-error {
     border: 1px solid #ff0000;
     background: #fff2f2 url(../../img/common/icon/icon_arrow_down.svg) no-repeat
@@ -58,6 +70,12 @@
   a {
     display: inline;
   }
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
 }
 .m-inputCheck:checked + .m-inputCheckLabel {
   background: url(../../img/common/icon/icon_checked.svg) no-repeat left center;
@@ -73,6 +91,12 @@
   border-radius: 6px;
   display: block;
   cursor: pointer;
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
+  }
 }
 .m-inputRadio:checked + .m-inputRadioLabel {
   background: #f7f8f9 url(../../img/common/icon/icon_radioChecked.svg) no-repeat
@@ -92,6 +116,12 @@
   resize: vertical;
   &::placeholder {
     color: #c9c9c9;
+  }
+  &.is-show {
+    display: block;
+  }
+  &.is-hidden {
+    display: none;
   }
   &.is-error {
     color: #ff0000;
@@ -125,9 +155,12 @@
   margin-top: 4px;
   display: none;
 }
-.m-inputText.is-error + .m-inputErrorText,
-.m-inputSelect.is-error + .m-inputErrorText,
+.m-inputText.is-error ~ .m-inputErrorText,
+.m-inputSelect.is-error ~ .m-inputErrorText,
 .m-inputCheck.is-error ~ .m-inputErrorText,
-.m-inputTextArea.is-error + .m-inputErrorText {
+.m-inputTextArea.is-error ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_year"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_month"] ~ .m-inputErrorText,
+.m-inputSelect.is-error[name="person_u_nenrei_day"] ~ .m-inputErrorText {
   display: block;
 }
