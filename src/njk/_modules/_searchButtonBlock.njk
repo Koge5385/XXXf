@@ -71,7 +71,7 @@
             {area: '和歌山県', value: 'option_p_wakayama'}
           ] -%}
           {%- for item in searchButtonKanto %}
-          <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.area | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
+          <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.value | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
           {%- endfor %}
         </ul>
       </div>
