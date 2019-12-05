@@ -8,6 +8,7 @@ const FORM_TARGET_CLASS = '.js-async-editProfileForm-target'
 const FORM_MAIL_UPDATE_TARGET = '.js-async-mailUpdate-target'
 const PROFILE_UPDATE_MESSAGE = 'プロフィールを更新します。よろしいですか？'
 const EMAIL_UPDATE_URL = 'http://feature-medicaloffice-67.medicaloffice-job-hon.pv.bita.jp/dist/mypage/profile_edit.html'
+const SUBMIT_TARGET_CLASS = '.js-async-editProfileSubmit-target'
 
 /**
  * @class EditProfile
@@ -18,6 +19,8 @@ class EditProfile {
    * @constructor
    */
   constructor() {
+    document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(SUBMIT_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
