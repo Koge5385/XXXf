@@ -67,9 +67,13 @@ class EditProfile {
           document.location.href = MYPAGE_HREF
         })
       }
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       if (this.currentMail === this.updateMail) document.location.href = MYPAGE_HREF
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       console.log('error')
     }
   }
