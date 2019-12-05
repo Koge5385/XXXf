@@ -17,6 +17,8 @@ class Login {
    * @constructor
    */
   constructor() {
+    document.querySelector(FORM_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(FORM_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
@@ -38,6 +40,8 @@ class Login {
     const fromjobDetail = params.get('jobId')
 
     if (status === 200) {
+      document.querySelector(FORM_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(FORM_TARGET_CLASS).disabled = false
       document.querySelector(REJECT_TARGET_CLASS).classList.remove(ADD_SHOW_CLASS)
       localStorage.setItem(ACCESS_TOKEN, response.data.access_token)
 
@@ -46,6 +50,8 @@ class Login {
       if(fromjobDetail === null) document.location.href = MYPAGE_HREF
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(FORM_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(FORM_TARGET_CLASS).disabled = false
       document.querySelector(REJECT_TARGET_CLASS).classList.add(ADD_SHOW_CLASS)
     }
   }

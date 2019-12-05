@@ -2,6 +2,7 @@ import AxiosBase from '../AxiosBase'
 
 // 定数
 const MAIL_TARGET_CLASS = '.js-async-sendMailData-target'
+const SUBMIT_TARGET_CLASS = '.js-async-entrySubmit-target'
 const NEXT_STEP_URL = 'http://feature-medicaloffice-67.medicaloffice-job-hon.pv.bita.jp/dist/signup/regist_profile.html'
 const ENTRY_MAIL = 'entry_mail'
 const ENTRY_HREF = './confirm_email.html'
@@ -15,6 +16,8 @@ class CreateAccount {
    * @constructor
    */
   constructor() {
+    document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(SUBMIT_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
@@ -39,6 +42,8 @@ class CreateAccount {
       document.location.href = ENTRY_HREF
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       console.log('error')
     }
   }
