@@ -38,6 +38,7 @@ class CreateAccount {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       localStorage.setItem(ENTRY_MAIL, this.entryMail)
       document.location.href = ENTRY_HREF
     }

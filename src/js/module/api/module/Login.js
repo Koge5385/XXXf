@@ -42,7 +42,6 @@ class Login {
 
     if (status === 200) {
       document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
-      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       document.querySelector(REJECT_TARGET_CLASS).classList.remove(ADD_SHOW_CLASS)
       localStorage.setItem(ACCESS_TOKEN, response.data.access_token)
 

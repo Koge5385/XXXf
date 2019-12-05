@@ -72,6 +72,7 @@ class EditProfile {
     }
     if (status.status === 400 || status.status === 401) {
       document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       console.log('error')
     }
   }
