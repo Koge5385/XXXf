@@ -6,6 +6,7 @@ const ACCESS_TOKEN = 'access_token'
 const MYPAGE_HREF = '../mypage/'
 const FORM_TARGET_CLASS = '.js-async-editResumeForm-target'
 const RESUME_UPDATE_MESSAGE = 'レジュメを更新します。よろしいですか？'
+const SUBMIT_TARGET_CLASS = '.js-async-editResumeSubmit-target'
 
 /**
  * @class EditResume
@@ -16,6 +17,8 @@ class EditResume {
    * @constructor
    */
   constructor() {
+    document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(SUBMIT_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
@@ -47,9 +50,11 @@ class EditResume {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       document.location.href = MYPAGE_HREF
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       console.log('error')
     }
   }
