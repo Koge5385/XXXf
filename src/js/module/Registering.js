@@ -19,7 +19,7 @@ class Registering {
    */
   isRegistering() {
     const registeringFlag = localStorage.getItem(REGISTERING_FLAG)
-    if (registeringFlag === null) document.location.href = REGIST_HREF
+    /**  if (registeringFlag === null) document.location.href = REGIST_HREF */
   }
 }
 
