@@ -36,9 +36,6 @@
     "value",
     "localStorage",
     "getItem",
-    "document",
-    "location",
-    "href",
     "default",
     "_Registering",
     "_Registering2",
@@ -47,11 +44,11 @@
     "window",
     "addEventListener"
   ],
-  "mappings": "CAAA,WAAA,QAAAA,GAAAC,EAAAC,EAAAC,GAAA,QAAAC,GAAAC,EAAAC,GAAA,IAAAJ,EAAAG,GAAA,CAAA,IAAAJ,EAAAI,GAAA,CAAA,GAAAE,GAAA,kBAAAC,UAAAA,OAAA,KAAAF,GAAAC,EAAA,MAAAA,GAAAF,GAAA,EAAA,IAAAI,EAAA,MAAAA,GAAAJ,GAAA,EAAA,IAAAK,GAAA,GAAAC,OAAA,uBAAAN,EAAA,IAAA,MAAAK,GAAAE,KAAA,mBAAAF,EAAA,GAAAG,GAAAX,EAAAG,IAAAS,WAAAb,GAAAI,GAAA,GAAAU,KAAAF,EAAAC,QAAA,SAAAd,GAAA,GAAAE,GAAAD,EAAAI,GAAA,GAAAL,EAAA,OAAAI,GAAAF,GAAAF,IAAAa,EAAAA,EAAAC,QAAAd,EAAAC,EAAAC,EAAAC,GAAA,MAAAD,GAAAG,GAAAS,QAAA,IAAA,GAAAL,GAAA,kBAAAD,UAAAA,QAAAH,EAAA,EAAAA,EAAAF,EAAAa,OAAAX,IAAAD,EAAAD,EAAAE,GAAA,OAAAD,GAAA,MAAAJ,QAAAiB,GAAA,SAAAT,QAAAU,OAAAJ,6bCCMK,iBAAN,aACMC,YAAN,wBAMMC,YAAA,WAIJ,QAAApB,KAAcqB,gBAAAC,KAAAtB,GACZsB,KAAAC,gBAAA,MAAAC,cAAAxB,IAAAyB,IAAA,gBAAAC,MAAA,WAQA,OADwBC,aAAAC,QAAxBV,oBAC8BW,SAAAC,SAAAC,KAAAZ,iBAAAnB,IAAAa,SAAAmB,QAInBZ,0ICzBf,GAAAa,cAAA1B,QAAA,yBAAA2B,cAAAC,uBAAAF,cAGMG,WAAN,kBAGA,IAAIF,eAAJF,QAEAK,OAAAC,iBAAAF,WAAoC",
+  "mappings": "CAAA,WAAA,QAAAA,GAAAC,EAAAC,EAAAC,GAAA,QAAAC,GAAAC,EAAAC,GAAA,IAAAJ,EAAAG,GAAA,CAAA,IAAAJ,EAAAI,GAAA,CAAA,GAAAE,GAAA,kBAAAC,UAAAA,OAAA,KAAAF,GAAAC,EAAA,MAAAA,GAAAF,GAAA,EAAA,IAAAI,EAAA,MAAAA,GAAAJ,GAAA,EAAA,IAAAK,GAAA,GAAAC,OAAA,uBAAAN,EAAA,IAAA,MAAAK,GAAAE,KAAA,mBAAAF,EAAA,GAAAG,GAAAX,EAAAG,IAAAS,WAAAb,GAAAI,GAAA,GAAAU,KAAAF,EAAAC,QAAA,SAAAd,GAAA,GAAAE,GAAAD,EAAAI,GAAA,GAAAL,EAAA,OAAAI,GAAAF,GAAAF,IAAAa,EAAAA,EAAAC,QAAAd,EAAAC,EAAAC,EAAAC,GAAA,MAAAD,GAAAG,GAAAS,QAAA,IAAA,GAAAL,GAAA,kBAAAD,UAAAA,QAAAH,EAAA,EAAAA,EAAAF,EAAAa,OAAAX,IAAAD,EAAAD,EAAAE,GAAA,OAAAD,GAAA,MAAAJ,QAAAiB,GAAA,SAAAT,QAAAU,OAAAJ,6bCCMK,iBAAN,aACMC,YAAN,wBAMMC,YAAA,WAIJ,QAAApB,KAAcqB,gBAAAC,KAAAtB,GACZsB,KAAAC,gBAAA,MAAAC,cAAAxB,IAAAyB,IAAA,gBAAAC,MAAA,WAOwBC,aAAAC,QAAxBV,sBAAAlB,IAAAa,SAAAgB,QAKWT,0ICzBf,GAAAU,cAAAvB,QAAA,yBAAAwB,cAAAC,uBAAAF,cAGMG,WAAN,kBAGA,IAAIF,eAAJF,QAEAK,OAAAC,iBAAAF,WAAoC",
   "file": "regist_complete.js",
   "sourcesContent": [
     "(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=\"function\"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error(\"Cannot find module '\"+i+\"'\");throw a.code=\"MODULE_NOT_FOUND\",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u=\"function\"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()",
-    "// 定数\nconst REGISTERING_FLAG = 'entry_mail'\nconst REGIST_HREF = './create_account.html'\n\n/**\n * @class Registering\n * @desc 会員登録フロー上にいるか判別する処理\n */\nclass Registering {\n  /**\n   * @constructor\n   */\n  constructor() {\n    this.isRegistering()\n  }\n\n  /**\n   * @desc 会員登録フロー上を示すフラグを参照して判別する\n   */\n  isRegistering() {\n    const registeringFlag = localStorage.getItem(REGISTERING_FLAG)\n    if (registeringFlag === null) document.location.href = REGIST_HREF\n  }\n}\n\nexport default Registering\n",
+    "// 定数\nconst REGISTERING_FLAG = 'entry_mail'\nconst REGIST_HREF = './create_account.html'\n\n/**\n * @class Registering\n * @desc 会員登録フロー上にいるか判別する処理\n */\nclass Registering {\n  /**\n   * @constructor\n   */\n  constructor() {\n    this.isRegistering()\n  }\n\n  /**\n   * @desc 会員登録フロー上を示すフラグを参照して判別する\n   */\n  isRegistering() {\n    const registeringFlag = localStorage.getItem(REGISTERING_FLAG)\n    /**  if (registeringFlag === null) document.location.href = REGIST_HREF */\n  }\n}\n\nexport default Registering\n",
     "import Registering from '../module/Registering'\n\n// 定数\nconst LOAD_EVENT = 'DOMContentLoaded'\n\n// 会員登録フロー上にいるか判別する\nnew Registering()\n\nwindow.addEventListener(LOAD_EVENT, () => {\n})\n"
   ]
 }
