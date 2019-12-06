@@ -2,7 +2,7 @@ import AxiosBase from '../AxiosBase'
 
 // 定数
 const MAIL_TARGET_CLASS = '.js-async-sendMailData-target'
-const NEXT_STEP_URL = 'http://feature-medicaloffice-67.medicaloffice-job-hon.pv.bita.jp/dist/signup/regist_profile.html'
+const NEXT_STEP_URL = 'http://develop.medicaloffice-job-hon.pv.bita.jp/dist/signup/regist_profile.html'
 const ENTRY_MAIL = 'entry_mail'
 const ENTRY_HREF = './confirm_email.html'
 

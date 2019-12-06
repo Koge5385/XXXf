@@ -27,7 +27,7 @@ class AxiosBase {
   setBase() {
     const callToken = localStorage.getItem(ACCESS_TOKEN)
     this.axios = axios.create({
-      baseURL: 'http://api.mplat.jp/v1',
+      baseURL: 'https://api.mplat.jp/v1',
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
