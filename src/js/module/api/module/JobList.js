@@ -29,7 +29,7 @@ class JobList {
     // APIリクエストに必要なパラメーターの取得
     this.jobOccupation = paramCheck('job_p_job_category')
     this.jobArea = paramCheck('job_u_kinmutitodoufuken')
-    this.jobSalary = paramCheck('job_p_min_salary')
+    this.jobSalary = paramCheck('job_p_max_salary')
     this.jobSearch = paramCheck('keywords')
     this.jobStart = paramCheck('start')
 
@@ -42,7 +42,7 @@ class JobList {
     // パラメーターのURIエンコード
     this.category = `job_p_job_category=${encodeURI(this.jobOccupation)}`
     this.area = `job_u_kinmutitodoufuken=${encodeURI(this.jobArea)}`
-    this.salary = `job_p_min_salary=${this.jobSalary}`
+    this.salary = `job_p_max_salary=${this.jobSalary}`
     this.keyword = `keywords=${encodeURI(this.jobSearch)}`
 
     return `/jobs/list?${this.category}&${this.area}&${this.salary}&${this.keyword}&start=${this.jobStart}&count=10&time=${new Date().getTime()}`
