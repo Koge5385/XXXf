@@ -91,6 +91,7 @@ class JobDetailApply {
     })
     document.querySelector(APPLY_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
       document.querySelector(APPLY_TRIGGER_CLASS).style.pointerEvents = "none"
+      document.querySelector(APPLY_TRIGGER_CLASS).disabled = true
       this.doAxios()
     })
     document.querySelector(RESUME_EDIT_TRIGGER_CLASS).addEventListener(CLICK_EVENT, () => {
@@ -112,6 +113,8 @@ class JobDetailApply {
         JobDetailApply.isShow(DIALOG_COMPLETE_TARGET_CLASS, 'show')
       }
       if (status.status === 400 || status.status === 401) {
+        document.querySelector(APPLY_TRIGGER_CLASS).style.pointerEvents = "auto"
+        document.querySelector(APPLY_TRIGGER_CLASS).disabled = false
         if (status.data.error.code === 107) {
           JobDetailApply.isShow(DIALOG_TARGET_CLASS, 'hide')
           JobDetailApply.isShow(DIALOG_ALREADY_ERROR_TARGET_CLASS, 'show')

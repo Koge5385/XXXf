@@ -6,6 +6,7 @@ const ACCESS_TOKEN = 'access_token'
 const COMPLETE_HREF = './cancel_membership_complete.html'
 const FORM_TARGET_CLASS = '.js-async-cancelForm-target'
 const CANCEL_OTHER_TARGET_CLASS = '.js-async-otherInput-target'
+const SUBMIT_TARGET_CLASS = '.js-async-cancelSubmit-target'
 
 /**
  * @class CancelMembership
@@ -16,6 +17,8 @@ class CancelMembership {
    * @constructor
    */
   constructor() {
+    document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(SUBMIT_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
@@ -45,10 +48,13 @@ class CancelMembership {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       localStorage.removeItem(ACCESS_TOKEN)
       document.location.href = COMPLETE_HREF
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       console.log('error')
     }
   }

@@ -5,12 +5,12 @@
   {job: '事務長', value: 'option_u_jimutyou'},
   {job: '事務長候補', value: 'option_u_jimutyoukouho'},
   {job: '経営企画', value: 'option_u_keieikikaku'},
-  {job: '医事課員', value: 'option_u_ijikain'},
   {job: '医事課長（候補含む）', value: 'option_u_ijikatyoukouhohukumu'},
-  {job: '総務課員', value: 'option_u_soumukain'},
+  {job: '医事課員', value: 'option_u_ijikain'},
   {job: '総務課長（候補含む）', value: 'option_u_soumukatyoukouhohukumu'},
-  {job: '人事課員', value: 'option_u_jinjikain'},
+  {job: '総務課員', value: 'option_u_soumukain'},
   {job: '人事課長（候補含む）', value: 'option_u_jinjikatyoukouhohukumu'},
+  {job: '人事課員', value: 'option_u_jinjikain'},
   {job: '財務・経理', value: 'option_u_zaimukeiri2'},
   {job: '地域連携室・渉外', value: 'option_u_tiikirenkeishitsushitsugai'},
   {job: '広報', value: 'option_u_kouhou'},
@@ -180,12 +180,12 @@
   {job: '事務長', value: 'option_u_jimutyou'},
   {job: '事務長候補', value: 'option_u_jimutyoukouho'},
   {job: '経営企画', value: 'option_u_keieikikaku'},
-  {job: '医事課員', value: 'option_u_ijikain'},
   {job: '医事課長（候補含む）', value: 'option_u_ijikatyoukouhohukumu'},
-  {job: '総務課員', value: 'option_u_soumukain'},
+  {job: '医事課員', value: 'option_u_ijikain'},
   {job: '総務課長（候補含む）', value: 'option_u_soumukatyoukouhohukumu'},
-  {job: '人事課員', value: 'option_u_jinjikain'},
+  {job: '総務課員', value: 'option_u_soumukain'},
   {job: '人事課長（候補含む）', value: 'option_u_jinjikatyoukouhohukumu'},
+  {job: '人事課員', value: 'option_u_jinjikain'},
   {job: '財務・経理', value: 'option_u_zaimukeiri2'},
   {job: '地域連携室・渉外', value: 'option_u_tiikirenkeishitsushitsugai'},
   {job: '広報', value: 'option_u_kouhou'},
@@ -204,7 +204,7 @@
 {% macro optionArea() -%}
 <option value="">勤務地で探す</option>
 <option value="">指定しない</option>
-{%- set selectArea = [
+{# {%- set selectArea = [
   {place: '海外', value: 'option_p_foreign'},
   {place: '北海道', value: 'option_p_hokkaido'},
   {place: '青森県', value: 'option_p_aomori'},
@@ -253,6 +253,21 @@
   {place: '宮崎県', value: 'option_p_miyazaki'},
   {place: '鹿児島県', value: 'option_p_kagoshima'},
   {place: '沖縄県', value: 'option_p_okinawa'}
+] -%} #}
+{%- set selectArea = [
+  {place: '茨城県', value: 'option_p_ibaraki'},
+  {place: '栃木県', value: 'option_p_tochigi'},
+  {place: '群馬県', value: 'option_p_gunma'},
+  {place: '埼玉県', value: 'option_p_saitama'},
+  {place: '千葉県', value: 'option_p_chiba'},
+  {place: '東京都', value: 'option_p_tokyo'},
+  {place: '神奈川県', value: 'option_p_kanagawa'},
+  {place: '滋賀県', value: 'option_p_shiga'},
+  {place: '京都府', value: 'option_p_kyoto'},
+  {place: '大阪府', value: 'option_p_osaka'},
+  {place: '兵庫県', value: 'option_p_hyogo'},
+  {place: '奈良県', value: 'option_p_nara'},
+  {place: '和歌山県', value: 'option_p_wakayama'}
 ] -%}
 {%- for item in selectArea %}
 <option value="{{ item.value }}">{{ item.place }}</option>
