@@ -158,12 +158,26 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">希望勤務地(都道府県){{ macro.inputMust() }}</h2>
+        <h2 class="inputBlock__heading">希望勤務地(都道府県)1{{ macro.inputMust() }}</h2>
         <select name="resume_p_expect_area" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
           {{ macro.optionPlace() }}
         </select>
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">希望勤務地(都道府県)2{{ macro.inputWant() }}</h2>
+        <select name="resume_u_kiboukinmuchi2" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionPlace() }}
+        </select>
+        <p class="inputBlock__confirmSetValue"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">希望勤務地(都道府県)3{{ macro.inputWant() }}</h2>
+        <select name="resume_u_kiboukinmuchi3" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionPlace() }}
+        </select>
+        <p class="inputBlock__confirmSetValue"></p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">希望勤務地(詳細){{ macro.inputWant() }}</h2>
