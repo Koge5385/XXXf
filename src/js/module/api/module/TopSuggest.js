@@ -42,7 +42,7 @@ class TopSuggest {
    * @desc API実行
    */
   async doAxios() {
-    await new AxiosBase().getMethod(`/jobs/list?count=-1&time=${new Date().getTime()}`, this.setDataToPage)
+    await new AxiosBase().getMethod(`/jobs/list?count=-1&job_u_topgamenhyouji=option_u_010927&time=${new Date().getTime()}`, this.setDataToPage)
   }
 
   /**
