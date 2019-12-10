@@ -4,6 +4,7 @@ import AxiosBase from '../AxiosBase'
 const ACCESS_TOKEN = 'access_token'
 const NEW_PASSWORD_TARGET_CLASS = '.js-async-newPassword-target'
 const COMPLETE_HREF = './password_change_complete.html'
+const SUBMIT_TARGET_CLASS = '.js-async-passwordChangeSubmit-target'
 
 /**
  * @class PasswordChange
@@ -14,6 +15,8 @@ class PasswordChange {
    * @constructor
    */
   constructor() {
+    document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(SUBMIT_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
@@ -55,9 +58,12 @@ class PasswordChange {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       this.paramToken === null ? document.location.href = COMPLETE_HREF : document.location.href = `${COMPLETE_HREF}?token=${this.paramToken}`
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       console.log('error')
     }
   }
