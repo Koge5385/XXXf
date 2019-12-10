@@ -87,9 +87,11 @@ class SetResumeData {
 
           case 'resume_p_carrier_summary':
             const separateData = resumeData[key].split(/\n\n/)
-            setValue('textarea', 'resume_p_carrier_summary', separateData[0])
-            setValue('textarea', 'resume_p_carrier_summary_2', separateData[1].slice(0, -1))
-            setValue('textarea', 'resume_p_carrier_summary_3', separateData[2].slice(0, -1))
+            if(separateData[0]) {
+              setValue('textarea', 'resume_p_carrier_summary', separateData[0])
+              setValue('textarea', 'resume_p_carrier_summary_2', separateData[1].slice(0, -1))
+              setValue('textarea', 'resume_p_carrier_summary_3', separateData[2].slice(0, -1))
+            }
             break
 
           case 'resume_p_current_salary':
