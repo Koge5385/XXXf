@@ -237,6 +237,9 @@ select::-ms-expand {
   line-height: 1.4;
   color: #666; }
 
+.m-noteBoldText {
+  font-weight: bold; }
+
 .m-button, .globalFooterGuide__contactButton, .searchButtonBlockJobList__link, .searchButtonBlockAreaList__link, .searchButtonBlockRegist__button, .inputBlock__confirm, .inputBlock__confirmBack, .inputBlock__submit, .inputBlockAppend__button, .registComplete__button {
   border-radius: 6px;
   text-align: center;
