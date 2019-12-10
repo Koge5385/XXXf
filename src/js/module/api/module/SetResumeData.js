@@ -113,6 +113,14 @@ class SetResumeData {
           case 'resume_p_expect_area':
             setValue('select', key, String(Object.keys(resumeData[key])))
             break
+          
+          case 'resume_u_kiboukinmuchi2':
+            setValue('select', key, String(Object.keys(resumeData[key])))
+            break
+
+          case 'resume_u_kiboukinmuchi3':
+            setValue('select', key, String(Object.keys(resumeData[key])))
+            break
 
           case 'resume_u_kiboukinmutisyousai':
             setValue('input', key, resumeData[key])
