@@ -79,8 +79,9 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">郵便番号{{ macro.inputWant() }}</h2>
         <input type="hidden" class="p-country-name" value="Japan">
-        <input type="number" name="person_u_yubinbangou" class="m-inputText inputBlock__inputHalf p-postal-code" placeholder="1416005" oninput="if(value.length>7)value=value.slice(0,7)" value="">
+        <input type="tel" name="person_u_yubinbangou" class="m-inputText inputBlock__inputHalf p-postal-code" placeholder="1416005" oninput="if(value.length>7)value=value.replace(/[^0-9]/g, '').slice(0,7)" onblur="value=value.replace(/[^0-9]/g, '')" value="">
         <p class="inputBlock__confirmSetValue"></p>
+        <p class="inputBlock__note js-confirmHide-target">※半角数字で入力してください</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">住所詳細{{ macro.inputWant() }}</h2>
@@ -92,6 +93,7 @@
         <input type="number" name="person_p_telephone" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="0354372950" oninput="if(value.length>11)value=value.slice(0,11)" value="">
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText">電話番号を入力してください</p>
+        <p class="inputBlock__note js-confirmHide-target">※半角数字で入力してください</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">パスワード{{ macro.inputMust() }}</h2>
