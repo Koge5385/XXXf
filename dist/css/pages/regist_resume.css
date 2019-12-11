@@ -1763,3 +1763,6 @@ select::-ms-expand {
   @media screen and (max-width: 768px) {
     .registResume {
       width: 100%; } }
+
+.inputBlockNotice {
+  background-color: #F7F8F9; }
