@@ -62,16 +62,20 @@
         <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
         <ul class="searchButtonBlockAreaList">
           {%- set searchButtonKanto = [
-            {area: '三重県', value: 'option_p_mie'},
-            {area: '滋賀県', value: 'option_p_shiga'},
-            {area: '京都府', value: 'option_p_kyoto'},
-            {area: '大阪府', value: 'option_p_osaka'},
-            {area: '兵庫県', value: 'option_p_hyogo'},
-            {area: '奈良県', value: 'option_p_nara'},
-            {area: '和歌山県', value: 'option_p_wakayama'}
+            {area: '三重県', value: 'option_p_mie', disabled: true },
+            {area: '滋賀県', value: 'option_p_shiga', disabled: false},
+            {area: '京都府', value: 'option_p_kyoto', disabled: false},
+            {area: '大阪府', value: 'option_p_osaka', disabled: false},
+            {area: '兵庫県', value: 'option_p_hyogo', disabled: false},
+            {area: '奈良県', value: 'option_p_nara', disabled: false},
+            {area: '和歌山県', value: 'option_p_wakayama', disabled: false}
           ] -%}
           {%- for item in searchButtonKanto %}
-          <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.value | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
+          {%- if item.disabled -%}
+            <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable"><span>{{ item.area }}</span></li>
+          {%- else -%}
+            <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.value | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
+          {%- endif -%}
           {%- endfor %}
         </ul>
       </div>

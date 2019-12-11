@@ -3,6 +3,7 @@ import JsonConvert from './JsonConvert'
 
 // 定数
 const FORM_TARGET_CLASS = '.js-async-jobContactForm-target'
+const SUBMIT_TARGET_CLASS = '.js-async-jobContactSubmit-target'
 
 /**
  * @class JobContact
@@ -13,6 +14,8 @@ class JobContact {
    * @constructor
    */
   constructor() {
+    document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(SUBMIT_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
@@ -34,11 +37,14 @@ class JobContact {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       const params = new URLSearchParams(window.location.search)
       const jobId = params.get('jobId')
       document.location.href = `./contact_complete.html?jobId=${jobId}`
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       console.log('error')
     }
   }

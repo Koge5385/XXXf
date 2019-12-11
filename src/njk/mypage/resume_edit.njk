@@ -135,8 +135,8 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">最寄り駅{{ macro.inputMust() }}</h2>
-        <input type="text" name="resume_u_moyorieki" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="JR大崎駅" value="" maxlength="250">
+        <h2 class="inputBlock__heading">最寄り駅{{ macro.inputWant() }}</h2>
+        <input type="text" name="resume_u_moyorieki" class="m-inputText inputBlock__inputHalf" placeholder="JR大崎駅" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
@@ -147,8 +147,22 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
-        <h2 class="inputBlock__heading">希望勤務地(都道府県){{ macro.inputMust() }}</h2>
+        <h2 class="inputBlock__heading">希望勤務地(都道府県)1{{ macro.inputMust() }}</h2>
         <select name="resume_p_expect_area" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionPlace() }}
+        </select>
+        <p class="inputBlock__confirmSetValue"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">希望勤務地(都道府県)2{{ macro.inputWant() }}</h2>
+        <select name="resume_u_kiboukinmuchi2" class="m-inputSelect inputBlock__inputHalf">
+          {{ macro.optionPlace() }}
+        </select>
+        <p class="inputBlock__confirmSetValue"></p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">希望勤務地(都道府県)3{{ macro.inputWant() }}</h2>
+        <select name="resume_u_kiboukinmuchi3" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionPlace() }}
         </select>
         <p class="inputBlock__confirmSetValue"></p>
@@ -158,6 +172,7 @@
         <input type="text" name="resume_u_kiboukinmutisyousai" class="m-inputText" placeholder="希望勤務地(詳細)を記入してください" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
+        <p class="inputBlock__note">記入例：「○○線の○○駅～○○駅区間内」「○○駅から徒歩○分以内」「○○から車で○分以内」など</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">経験業種{{ macro.inputMust() }}</h2>

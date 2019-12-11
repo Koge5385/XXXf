@@ -20,3 +20,6 @@
     text-decoration: none;
   }
 }
+.m-note {
+  @include fontsize(16, 16);
+}

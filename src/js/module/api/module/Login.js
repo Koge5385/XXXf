@@ -7,6 +7,7 @@ const MYPAGE_HREF = '../mypage/'
 const ADD_SHOW_CLASS = 'is-show'
 const FORM_TARGET_CLASS = '.js-async-loginForm-target'
 const REJECT_TARGET_CLASS = '.js-async-loginReject-target'
+const SUBMIT_TARGET_CLASS = '.js-async-loginSubmit-target'
 
 /**
  * @class Login
@@ -17,6 +18,8 @@ class Login {
    * @constructor
    */
   constructor() {
+    document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "none"
+    document.querySelector(SUBMIT_TARGET_CLASS).disabled = true
     this.doAxios()
   }
 
@@ -38,6 +41,7 @@ class Login {
     const fromjobDetail = params.get('jobId')
 
     if (status === 200) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       document.querySelector(REJECT_TARGET_CLASS).classList.remove(ADD_SHOW_CLASS)
       localStorage.setItem(ACCESS_TOKEN, response.data.access_token)
 
@@ -46,6 +50,8 @@ class Login {
       if(fromjobDetail === null) document.location.href = MYPAGE_HREF
     }
     if (status.status === 400 || status.status === 401) {
+      document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
+      document.querySelector(SUBMIT_TARGET_CLASS).disabled = false
       document.querySelector(REJECT_TARGET_CLASS).classList.add(ADD_SHOW_CLASS)
     }
   }
