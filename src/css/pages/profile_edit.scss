@@ -11,6 +11,13 @@
 }
 .editProfile {
   @include _baseContentsWidth;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.1s;
+
+  &.fadeInBox {
+    opacity: 100;
+  }
 }
 .editProfile__attentionText {
   color: #f03f3f;

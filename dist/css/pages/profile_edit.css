@@ -1758,10 +1758,15 @@ select::-ms-expand {
 
 .editProfile {
   width: 980px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.1s; }
   @media screen and (max-width: 768px) {
     .editProfile {
       width: 100%; } }
+  .editProfile.fadeInBox {
+    opacity: 100; }
 
 .editProfile__attentionText {
   color: #f03f3f; }

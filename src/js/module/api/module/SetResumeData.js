@@ -43,6 +43,7 @@ class SetResumeData {
   async setDataToPage(status, response) {
     if (status === 200) {
       const resumeData = response.data.resume.hrbc_resume
+      document.querySelector('.editResume').classList.add('fadeInBox')
 
       // 登録済みデータの反映処理
       Object.keys(resumeData).forEach(key => {

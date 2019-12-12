@@ -12,6 +12,13 @@
 .editResume {
   @include _baseContentsWidth;
   width: 720px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.1s;
+
+  &.fadeInBox {
+    opacity: 100;
+  }
 }
 .editResume__heading {
   @extend .m-heading;
