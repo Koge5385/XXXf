@@ -1761,7 +1761,7 @@ select::-ms-expand {
   margin: 0 auto;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 0.1s; }
+  transition-duration: 0.2s; }
   @media screen and (max-width: 768px) {
     .editProfile {
       width: 100%; } }

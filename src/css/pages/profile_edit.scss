@@ -13,7 +13,7 @@
   @include _baseContentsWidth;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
 
   &.fadeInBox {
     opacity: 100;
