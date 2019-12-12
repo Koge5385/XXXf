@@ -50,6 +50,8 @@ class JobDetailApply {
     await new AxiosBase().getMethod(`/user/sessions/${this.token}?time=${new Date().getTime()}`, (status, response) => {
       this.errorStatus = status.status
       this.applyUserId = response.data.user_id
+    })
+    await new AxiosBase().getMethod(`/users/${this.applyUserId}?resume=1&time=${new Date().getTime()}`, (status, response) => {
       this.applyResumeId = response.data.user.resume.id
     })
   }
