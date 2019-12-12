@@ -78,6 +78,12 @@
         <p class="m-inputErrorText"></p>
       </div>
       <div class="inputBlock">
+        <h2 class="inputBlock__heading">現在(直近)の勤務先{{ macro.inputMust() }}</h2>
+        <input type="text" name="resume_u_genzainokinmusaki" class="m-inputText js-valueEmptyCheck-target" placeholder="現在(直近)の勤務先を記入してください" value="" maxlength="250">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText"></p>
+      </div>
+      <div class="inputBlock">
         <h2 class="inputBlock__heading">転職回数{{ macro.inputWant() }}</h2>
         <select name="resume_u_tenshokukaisuu" class="m-inputSelect inputBlock__inputHalf">
           {{ macro.optionJobChange() }}
@@ -148,12 +154,6 @@
       <div class="inputBlock">
         <h2 class="inputBlock__heading">最寄り駅{{ macro.inputWant() }}</h2>
         <input type="text" name="resume_u_moyorieki" class="m-inputText inputBlock__inputHalf" placeholder="JR大崎駅" value="" maxlength="250">
-        <p class="inputBlock__confirmSetValue"></p>
-        <p class="m-inputErrorText"></p>
-      </div>
-      <div class="inputBlock">
-        <h2 class="inputBlock__heading">現在(直近)の勤務先{{ macro.inputMust() }}</h2>
-        <input type="text" name="resume_u_genzainokinmusaki" class="m-inputText js-valueEmptyCheck-target" placeholder="現在(直近)の勤務先を記入してください" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText"></p>
       </div>
