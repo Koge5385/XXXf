@@ -1759,10 +1759,15 @@ select::-ms-expand {
 .editResume {
   width: 980px;
   margin: 0 auto;
-  width: 720px; }
+  width: 720px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s; }
   @media screen and (max-width: 768px) {
     .editResume {
       width: 100%; } }
+  .editResume.fadeInBox {
+    opacity: 100; }
 
 .inputBlockNotice {
   background-color: #F7F8F9; }

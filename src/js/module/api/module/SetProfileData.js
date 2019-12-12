@@ -35,6 +35,7 @@ class SetProfileData {
   async setDataToPage(status, response) {
     if (status === 200) {
       const userData = response.data.user.hrbc_candidate
+      document.querySelector('.editProfile').classList.add('fadeInBox')
 
       // 登録済みデータの反映処理
       Object.keys(userData).forEach(key => {
