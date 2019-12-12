@@ -46,7 +46,8 @@ class JobDetailApply {
    * @desc ユーザーIDとレジュメIDの取得
    */
   async getUserAndResumeId() {
-    this.token = localStorage.getItem(response.data.access_token)
+    this.token = localStorage.getItem(ACCESS_TOKEN)
+    console.log(localStorage.getItem(ACCESS_TOKEN))
     await new AxiosBase().getMethod(`/user/sessions/${this.token}?time=${new Date().getTime()}`, (status, response) => {
       this.errorStatus = (status && status.status) ? status.status : 0
       this.applyUserId = (response && response.data) ? response.data.user_id || undefined : undefined
