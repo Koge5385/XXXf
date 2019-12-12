@@ -47,11 +47,12 @@ class JobDetailApply {
    */
   async getUserAndResumeId() {
     this.token = localStorage.getItem(ACCESS_TOKEN)
-    console.log(localStorage.getItem(ACCESS_TOKEN))
     await new AxiosBase().getMethod(`/user/sessions/${this.token}?time=${new Date().getTime()}`, (status, response) => {
-      this.errorStatus = (status && status.status) ? status.status : 0
-      this.applyUserId = (response && response.data) ? response.data.user_id || undefined : undefined
-      this.applyResumeId = (response && response.data) ? response.data.resume_id || undefined : undefined
+      this.errorStatus = (status.status) ? status.status : 0
+      if(response) {
+        this.applyUserId = response.data.user_id
+        this.applyResumeId = response.data.resume_id
+      }
     })
   }
 
