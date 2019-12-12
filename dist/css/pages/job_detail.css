@@ -1770,7 +1770,12 @@ select::-ms-expand {
   background-color: #fff;
   padding: 2px 2px 60px;
   box-shadow: 0 0 7px 0 #d3d9e0;
-  border-radius: 6px; }
+  border-radius: 6px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.3s; }
+  .jobDetailBox.fadeInBox {
+    opacity: 100; }
   @media screen and (max-width: 768px) {
     .jobDetailBox {
       padding-bottom: 40px; } }

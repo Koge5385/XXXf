@@ -42,6 +42,7 @@ class RegistResume {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      localStorage.setItem('access_token', response.data.access_token)
       document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       if(window.location.pathname === '/dist/signup/regist_resume.html') document.location.href = COMPLETE_REGIST_HREF
       if(window.location.pathname === '/dist/mypage/resume_edit.html') document.location.href = COMPLETE_EDIT_HREF

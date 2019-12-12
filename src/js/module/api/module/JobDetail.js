@@ -43,6 +43,7 @@ class JobDetail {
   async setDataToPage(status, response) {
     if (status === 200) {
       document.querySelector(SUCCESS_TARGET_CLASS).style.display = 'block'
+      document.querySelector('.jobDetailBox').classList.add('fadeInBox')
       document.querySelector(ERROR_TARGET_CLASS).style.display = 'none'
 
       const jobData = response.data.job
