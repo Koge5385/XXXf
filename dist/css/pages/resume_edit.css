@@ -1762,7 +1762,7 @@ select::-ms-expand {
   width: 720px;
   opacity: 0;
   transition-property: opacity;
-  transition-duration: 0.3s; }
+  transition-duration: 0.1s; }
   @media screen and (max-width: 768px) {
     .editResume {
       width: 100%; } }
