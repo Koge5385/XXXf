@@ -26,6 +26,9 @@
 .inputBlock__note {
   @extend .m-note;
   margin-top: 6px;
+  &--center {
+    text-align: center;
+  }
 }
 .inputBlock__confirmText {
   @include fontsize(16, 16);

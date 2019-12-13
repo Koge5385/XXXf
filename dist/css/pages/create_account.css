@@ -1441,6 +1441,8 @@ select::-ms-expand {
 
 .inputBlock__note {
   margin-top: 6px; }
+  .inputBlock__note--center {
+    text-align: center; }
 
 .inputBlock__confirmText {
   font-size: 16px;
