@@ -69,7 +69,7 @@ class JobDetail {
             }
             break
 
-          case 'job_p_phase_date':
+          case 'job_p_update_date':
             setElement('date', String(jobData[key]).slice(0,10))
             break
 
