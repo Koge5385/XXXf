@@ -26,13 +26,9 @@ class SetResumeData {
     const token = localStorage.getItem(ACCESS_TOKEN)
     await new AxiosBase().getMethod(`/user/sessions/${token}?time=${new Date().getTime()}`, (status, response) => {
       this.userId = response.data.user_id
+      this.resumeId = response.data.resume_id
     })
-    await new AxiosBase().getMethod(`/users/${this.userId}?resume=1?time=${new Date().getTime()}`, (status, response) => {
-      this.resumeId = response.data.user.resume.id
-    })
-    this.resumeId !== undefined
-      ? await new AxiosBase().getMethod(`/resumes/${this.resumeId}`, this.setDataToPage)
-      : this.createResume()
+    await new AxiosBase().getMethod(`/resumes/${this.resumeId}`, this.setDataToPage)
   }
 
   /**
