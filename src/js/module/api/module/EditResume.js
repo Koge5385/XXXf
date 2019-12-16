@@ -48,6 +48,7 @@ class EditResume {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      localStorage.setItem('access_token', response.data.access_token)
       document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       document.location.href = MYPAGE_HREF
     }

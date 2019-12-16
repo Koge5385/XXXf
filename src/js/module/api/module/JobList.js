@@ -98,7 +98,7 @@ class JobList {
               targetElement('link').setAttribute('href', `./detail.html?id=${jobListData[key]}&${searchParam}`)
               break
 
-            case 'job_p_position':
+            case 'job_p_id':
               setElement('category', jobListData[key])
               break
 
@@ -110,7 +110,7 @@ class JobList {
               }
               break
 
-            case 'job_p_phase_date':
+            case 'job_p_update_date':
               setElement('date', String(jobListData[key]).slice(0,10))
               break
 
