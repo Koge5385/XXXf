@@ -370,7 +370,7 @@
 .service {
   width: 100%;
   background-color: #f7f8f9;
-  padding: 80px 0 129px;
+  padding: 80px 0;
   @include media(sp) {
     padding-bottom: 90px;
   }
@@ -442,6 +442,12 @@
 }
 .serviceContent__outline {
   @include fontsize(16, 16);
+}
+.topButtonBlockRegist {
+  display: none;
+  &.is-show {
+    display: block;
+  }
 }
 
 // swiper CSS
