@@ -354,6 +354,7 @@
                       ><option value="option_p_chiba">千葉県</option
                       ><option value="option_p_tokyo">東京都</option
                       ><option value="option_p_kanagawa">神奈川県</option
+                      ><option value="option_p_mie">三重県</option
                       ><option value="option_p_shiga">滋賀県</option
                       ><option value="option_p_kyoto">京都府</option
                       ><option value="option_p_osaka">大阪府</option
@@ -430,6 +431,15 @@
             </div>
           </div>
         </section>
+        <div class="searchButtonBlockRegist topButtonBlockRegist js-async-logoutNavigation-target">
+          <p class="searchButtonBlockRegist__text">会員登録が<br class="sp-view" />お済みでない方はこちら</p>
+          <a
+            href="/dist/signup/create_account.html"
+            class="searchButtonBlockRegist__button"
+            onclick="gtag('event', 'click', {'event_category': 'top_searchBlock_regist','event_label': 'searchBlock_regist'});"
+            >無料会員登録</a
+          >
+        </div>
         <section class="searchJob">
           <section class="searchButtonBlock">
             <div class="sectionHeading">
@@ -647,8 +657,10 @@
                   <input type="checkbox" id="sp_areaList_kansai" class="searchButtonBlockArea__toggleTrigger" />
                   <label for="sp_areaList_kansai" class="searchButtonBlockArea__heading">関西</label>
                   <ul class="searchButtonBlockAreaList">
-                    <li class="searchButtonBlockAreaList__item searchButtonBlockAreaList__item--disable">
-                      <span>三重県</span>
+                    <li class="searchButtonBlockAreaList__item">
+                      <a href="/dist/job/?job_u_kinmutitodoufuken=option_p_mie" class="searchButtonBlockAreaList__link"
+                        >三重県</a
+                      >
                     </li>
                     <li class="searchButtonBlockAreaList__item">
                       <a
@@ -742,6 +754,15 @@
                 </p>
               </div>
             </div>
+          </div>
+          <div class="searchButtonBlockRegist topButtonBlockRegist js-async-logoutNavigation-target">
+            <p class="searchButtonBlockRegist__text">会員登録が<br class="sp-view" />お済みでない方はこちら</p>
+            <a
+              href="/dist/signup/create_account.html"
+              class="searchButtonBlockRegist__button"
+              onclick="gtag('event', 'click', {'event_category': 'top_searchBlock_regist','event_label': 'searchBlock_regist'});"
+              >無料会員登録</a
+            >
           </div>
         </section>
       </div>

@@ -120,7 +120,7 @@ class JobList {
 
             case 'job_p_publish':
               for (const name in jobListData[key]) {
-                setElement('buildingName', jobListData[key][name].option_p_name)
+                setElement('buildingName', jobListData.recruiter_p_name)
               }
               break
 
