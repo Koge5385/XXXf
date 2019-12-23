@@ -41,7 +41,7 @@ class MetaReplace {
     Array.prototype.forEach.call(headTagList, elem => {
       if (elem.getAttribute('property') === 'og:title') elem.content = `${title}｜医療事務職の求人サービスなら【M.PLAT 求職支援】`
       if (elem.getAttribute('property') === 'og:description') elem.content = description
-      if (elem.getAttribute('property') === 'og:url') elem.content = `http://develop.medicaloffice-job-hon.pv.bita.jp${current}`
+      if (elem.getAttribute('property') === 'og:url') elem.content = `http://job.mplat.jp${current}`
     })
   }
 }
