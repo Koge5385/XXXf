@@ -1,0 +1,11 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /data/www/mplat-app
+hooks:
+  AfterInstall:
+    - location: codedeploy_install.sh
+      timeout: 300
+    - location: codedeploy_fix.sh
+      timeout: 60
