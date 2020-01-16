@@ -7,6 +7,23 @@
         </a>
         <meta itemprop="position" content="1" />
       </li>
+      {%- if pageName === 'job_contact' -%}
+      <li class="breadcrumbList__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a href="/job/" itemprop="item">
+          <span itemprop="name">求人一覧</span>
+        </a>
+        <meta itemprop="position" content="2">
+      </li>
+      <li class="breadcrumbList__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <a href="/job/detail.html" class="js-async-jobContactHref-target" itemprop="item">
+          <span itemprop="name">求人詳細</span>
+        </a>
+        <meta itemprop="position" content="3">
+      </li>
+      <li class="breadcrumbList__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+        <span itemprop="name">求人問い合わせ</span><meta itemprop="position" content="4">
+      </li>
+      {%- else -%}
       {%- for breadcrumb in breadcrumbs %}
       <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
         {%- if loop.last -%}
@@ -24,6 +41,7 @@
         {%- endif -%}
       </li>
       {%- endfor -%}
+      {%- endif -%}
     </ul>
   </div>
 </div>
