@@ -11,7 +11,7 @@
 {% if pageName === 'mypage' or pageName === 'profile_edit' or pageName === 'resume_edit' or pageName === 'password_change' or pageName === 'cancel_membership' or pageName === 'confirm_email' or pageName === 'regist_complete' or pageName === 'regist_profile' or pageName === 'job_contact' or pageName === 'regist_resume' or pageName === 'mypage' or pageName === '404' %}
 <meta name="robots" content="noindex,nofollow">
 {% endif %}
-
+{% include '_modules/_gtm1.njk' %}
 {% if pageName !== '404' %}
 <meta property="og:url" content="https://job.mplat.jp/{%- for breadcrumb in breadcrumbs %}{%- if loop.last %}{{ '' if fileName === 'index' else fileName + '.html' }}{%- else %}{{ breadcrumb.href }}{%- endif %}{%- endfor %}">
 <meta property="og:title" content="{{ pageTitle | striptags(false) }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】">
