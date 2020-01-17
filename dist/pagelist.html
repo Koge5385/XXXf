@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+<!-- htmllint tag-bans="false" -->
 <html lang="ja">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>求人問い合わせ完了｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
-    <meta name="description" content="求人問い合わせ完了ディスクリプション" />
+    <title>画面一覧｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
+    <meta name="description" content="" />
     <meta name="format-detection" content="email=no,telephone=no,address=no" />
 
-    <meta property="og:url" content="https://job.mplat.jp/complete.html" />
-    <meta property="og:title" content="求人問い合わせ完了｜医療事務職の求人サービスなら【M.PLAT 求職支援】" />
+    <meta property="og:url" content="https://job.mplat.jp/pagelist.html" />
+    <meta property="og:title" content="画面一覧｜医療事務職の求人サービスなら【M.PLAT 求職支援】" />
     <meta property="og:type" content="article" />
-    <meta property="og:description" content="求人問い合わせ完了ディスクリプション" />
+    <meta property="og:description" content="" />
     <meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png" />
     <meta property="og:locale" content="ja_JP" />
 
@@ -19,7 +20,7 @@
     <link rel="apple-touch-icon-precomposed" href="/img/common/apple_icon.png" />
     <link rel="icon" type="image/png" href="/img/common/android_icon.png" />
 
-    <link rel="stylesheet" type="text/css" href="/css/pages/job_contact_complete.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pages/pagelist.css" />
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150115128-1"></script>
@@ -68,7 +69,7 @@
                 <a
                   href="/mypage/"
                   class="globalNavItem__link"
-                  onclick="gtag('event', 'click', {'event_category': 'job_contact_complete_header_regist','event_label': 'header_regist'});"
+                  onclick="gtag('event', 'click', {'event_category': 'pagelist_header_regist','event_label': 'header_regist'});"
                 >
                   <span class="globalNavItem__icon globalNavItem__icon--regist globalNavItem__icon--loggedin"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
@@ -128,7 +129,7 @@
                 <a
                   href="/signup/create_account.html"
                   class="globalNavItem__link globalNavItem__link--regist"
-                  onclick="gtag('event', 'click', {'event_category': 'job_contact_complete_header_regist','event_label': 'header_regist'});"
+                  onclick="gtag('event', 'click', {'event_category': 'pagelist_header_regist','event_label': 'header_regist'});"
                 >
                   <span class="globalNavItem__icon globalNavItem__icon--regist"
                     ><svg xmlns="http://www.w3.org/2000/svg" width="19.9" height="22" viewBox="0 0 19.9 22">
@@ -255,7 +256,7 @@
                     <a
                       href="/signup/create_account.html"
                       class="globalMobileNavCellItem__link"
-                      onclick="gtag('event', 'click', {'event_category': 'job_contact_complete_header_regist','event_label': 'header_regist'});"
+                      onclick="gtag('event', 'click', {'event_category': 'pagelist_header_regist','event_label': 'header_regist'});"
                     >
                       <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist"
                         ><svg xmlns="http://www.w3.org/2000/svg" width="31.66" height="35" viewBox="0 0 31.66 35">
@@ -292,16 +293,76 @@
         </div>
       </header>
       <div class="keyVisual">
-        <h1 class="keyVisual__title">求人問い合わせ完了</h1>
-        <small class="keyVisual__enTitle">COMPLETE</small>
+        <h1 class="keyVisual__title">画面一覧</h1>
+        <small class="keyVisual__enTitle">PAGE LIST</small>
       </div>
+      <style>
+        .pageList {
+          width: 500px;
+          margin: 0 auto;
+          padding-bottom: 80px;
+        }
+        .pageList a {
+          display: inline;
+        }
+        .lv1 {
+          margin-top: 1em;
+          list-style-type: disc;
+        }
+        .lv2 {
+          margin-top: 0.4em;
+          margin-left: 2em;
+          list-style-type: circle;
+        }
+        @media screen and (max-width: 768px) {
+          .pageList {
+            width: 90%;
+          }
+          .lv1 {
+            margin-left: 1em;
+          }
+          .lv2 {
+            margin-left: 3em;
+          }
+        }
+      </style>
 
       <div class="container">
-        <div class="jobContactComplete">
-          <p class="jobContactComplete__guide">求人問い合わせ完了いたしました。</p>
-          <a href="" class="jobContactComplete__button js-paramSet-target">求人詳細へ</a>
-          <a href="/" class="jobContactComplete__button">TOPへ</a>
-        </div>
+        <section class="pageList">
+          <ul>
+            <li class="lv1"><a href="./">トップ</a></li>
+
+            <li class="lv1"><a href="./job/">求人一覧</a></li>
+            <li class="lv2"><a href="./job/detail.html?id=1">求人詳細</a></li>
+            <li class="lv2"><a href="./job/contact.html?id=1">求人問い合わせ</a></li>
+
+            <li class="lv1">会員登録導線</li>
+            <li class="lv2"><a href="./signup/create_account.html">メールアドレス登録</a></li>
+            <li class="lv2"><a href="./signup/confirm_email.html">メール認証</a></li>
+            <li class="lv2"><a href="./signup/regist_profile.html?token=123456">プロフィール登録</a></li>
+            <li class="lv2"><a href="./signup/regist_resume.html">レジュメ登録</a></li>
+            <li class="lv2"><a href="./signup/regist_complete.html">会員登録完了</a></li>
+
+            <li class="lv1"><a href="./login/">ログイン</a></li>
+            <li class="lv2"><a href="./login/password_reminder.html">パスワードを忘れた方へ</a></li>
+
+            <li class="lv1"><a href="./mypage/">マイページ</a></li>
+            <li class="lv2"><a href="./mypage/resume_edit.html">レジュメ編集</a></li>
+            <li class="lv2"><a href="./mypage/profile_edit.html">プロフィール編集</a></li>
+            <li class="lv2"><a href="./mypage/password_change.html">パスワード変更</a></li>
+            <li class="lv2"><a href="./mypage/cancel_membership.html">退会</a></li>
+
+            <li class="lv1"><a href="./forbeginner/">はじめての方へ</a></li>
+
+            <li class="lv1"><a href="./forrecruiter/">医療機関採用担当者の方へ</a></li>
+
+            <li class="lv1"><a href="./privacy_policy/">個人情報保護方針</a></li>
+
+            <li class="lv1"><a href="./membership_rule/">会員規約</a></li>
+
+            <li class="lv1"><a href="./404.html">404エラーページ</a></li>
+          </ul>
+        </section>
       </div>
 
       <div class="breadcrumb">
@@ -314,7 +375,7 @@
               <meta itemprop="position" content="1" />
             </li>
             <li class="breadcrumbList__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-              <span itemprop="name">求人問い合わせ完了</span><meta itemprop="position" content="2" />
+              <span itemprop="name">画面一覧</span><meta itemprop="position" content="2" />
             </li>
           </ul>
         </div>
@@ -328,7 +389,7 @@
             <a
               class="globalFooterGuide__contactButton"
               href="/contact/"
-              onclick="gtag('event', 'click', {'event_category': 'job_contact_complete_footer_contact','event_label': 'footer_contact'});"
+              onclick="gtag('event', 'click', {'event_category': 'pagelist_footer_contact','event_label': 'footer_contact'});"
               ><span class="globalFooterGuide__contactIcon"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="25.532" height="15.958" viewBox="0 0 25.532 15.958">
                   <path d="M12.5,9.317.9,0H24.1Z" transform="translate(0.268)" />
@@ -341,7 +402,7 @@
               <a
                 href="tel:03-5437-2950"
                 class="globalFooterTelBoxInner"
-                onclick="gtag('event', 'click', {'event_category': 'job_contact_complete_footer_tel','event_label': 'footer_tel'});"
+                onclick="gtag('event', 'click', {'event_category': 'pagelist_footer_tel','event_label': 'footer_tel'});"
               >
                 <p class="globalFooterTelBox__number">
                   <span class="globalFooterTelBox__numberIcon"
@@ -386,6 +447,5 @@
       </footer>
     </div>
     <script src="/js/common.js"></script>
-    <script src="/js/pages/job_contact_complete.js"></script>
   </body>
 </html>
