@@ -37,6 +37,7 @@ class JobContact {
    */
   async setDataToPage(status, response) {
     if (status === 200) {
+      console.log(response)
       document.querySelector(SUBMIT_TARGET_CLASS).style.pointerEvents = "auto"
       const params = new URLSearchParams(window.location.search)
       const jobId = params.get('jobId')

@@ -162,8 +162,12 @@ class JobDetail {
       document.querySelector(BACK_LINK_TARGET_CLASS).setAttribute('href', `./?${paramCategory}&${paramArea}&${paramSalary}&${paramKeyword}&start=${searchStart}`)
 
       // meta情報の変更
-      const pageTitle = jobData['job_u_kyuzintaitoru'].replace(/\r?\n/g, '')
-      const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary'].replace(/\r?\n/g, '')}`
+      const offerTitle = jobData['job_u_kyuzintaitoru'].replace(/\r?\n/g, '')
+      const occupation = document.querySelector(`.js-async-occupation-target`).innerHTML
+      const area = document.querySelector(`.js-async-place-target`).innerHTML
+      const pageTitle = offerTitle + '｜' + occupation + '｜' + area
+      // const pageDescription = `＜求人件名＞${pageTitle}＜仕事内容＞${jobData['job_p_job_category_summary'].replace(/\r?\n/g, '')}`
+      const pageDescription = `${offerTitle}／医療経営士を取得したエージェントが転職支援を担当。専任担当者として、情報収集、職務経歴書の書き方から面接対策まで、求職活動を支援します。`
       new MetaReplace(pageTitle, pageDescription)
     }
     if (status.status === 400 || status.status === 401) {
