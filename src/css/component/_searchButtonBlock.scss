@@ -224,5 +224,8 @@
 
   &.topCV_button {
     margin: 40px auto 0;
+    @include media(sp) {
+      margin: 24px auto 0;
+    }
   }
 }
