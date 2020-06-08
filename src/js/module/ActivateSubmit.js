@@ -10,6 +10,7 @@ const CHECK_CHECKED_CLASS = '.js-hasChecked-target'
 const CHECK_ANYCHECKED_CLASS = '.js-anyChecked-target'
 const CHECK_MAIL_CLASS = '.js-mailValidation-target'
 const CHECK_PASSWORD_CLASS = '.js-passwordValidation-target'
+const CHECK_TEL_CLASS = '.js-telValidation-target'
 const ERROR_CLASS = 'is-error'
 
 // 定数 -> メールアドレス　バリデーションフォーマット {半角英数字}@{半角英数字}
@@ -17,6 +18,9 @@ const MAIL_VALIDATE_FORMAT = /^(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)
 
 // 定数 -> パスワード　バリデーションフォーマット {半角[アルファベット大文字][アルファベット小文字][数字][8文字以上]}
 const PASSWORD_VALIDATE_FORMAT = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,}$/
+
+// 定数 -> 電話番号　バリデーションフォーマット {半角[数字][7桁]}
+const TEL_VALIDATE_FORMAT = /^[0-9]+$/
 
 /**
  * @class ActivateSubmit
@@ -316,13 +320,37 @@ class ActivateSubmit {
   }
 
   /**
+   * @desc 1つ目の電話番号をフォーマットを参照して検証
+   */
+  telValidate() {
+    if (document.querySelector(CHECK_TEL_CLASS) === null) this.checkResult.tel = true
+
+    if (document.querySelector(CHECK_TEL_CLASS) !== null) {
+      const targetArray = this.convertNode(CHECK_TEL_CLASS)
+      this.telFirstInput = targetArray[0]
+      this.telSecondInput = targetArray[1]
+
+      this.telFirstInput.addEventListener(BLUR_EVENT, () => {
+        if (!TEL_VALIDATE_FORMAT.test(this.telFirstInput.value)) this.telFirstInput.classList.add(ERROR_CLASS)
+        if (TEL_VALIDATE_FORMAT.test(this.telFirstInput.value)) {
+          this.telFirstInput.classList.remove(ERROR_CLASS)
+          this.telConfirmValidate()
+        }
+      })
+
+      // 初期値がある場合の処理
+      if (TEL_VALIDATE_FORMAT.test(this.telFirstInput.value)) this.checkResult.tel = true
+    }
+  }
+
+  /**
    * @desc checkを通過したときにsubmitをactiveにする
    */
   activeSubmit() {
     const targetSubmit = document.querySelector(SUBMIT_CLASS)
 
     // アクティブ判定に必要なオブジェクトを作成（全てtrueだと活性化する）
-    this.checkResult = { 'empty': false, 'radio': false, 'checkbox': false, 'mail': false, 'password': false, 'anyCheck': false }
+    this.checkResult = { 'empty': false, 'radio': false, 'checkbox': false, 'mail': false, 'password': false, 'tel': false, 'anyCheck': false }
 
     // それぞれのチェック処理を走らせる
     this.isValueEmpty()
@@ -331,6 +359,7 @@ class ActivateSubmit {
     this.anyChecked()
     this.mailValidate()
     this.passwordValidate()
+    this.telValidate()
 
     if (this.checkResult.empty === true && this.checkResult.radio === true && this.checkResult.checkbox === true && this.checkResult.mail === true && this.checkResult.password === true && this.checkResult.anyCheck === true) targetSubmit.disabled = false
 
