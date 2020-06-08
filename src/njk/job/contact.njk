@@ -29,6 +29,13 @@
         <p class="m-inputErrorText">フリガナを入力してください。</p>
       </div>
       <div class="inputBlock">
+        <h2 class="inputBlock__heading">電話番号{{ macro.inputMust() }}</h2>
+        <input type="text" name="reading" class="m-inputText inputBlock__inputHalf js-telValidation-target" placeholder="0312345678" value="" maxlength="11">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">電話番号を入力してください。</p>
+        <p class="inputBlock__note js-confirmHide-target">※半角数字、ハイフンなし</p>
+      </div>
+      <div class="inputBlock">
         <h2 class="inputBlock__heading">メールアドレス{{ macro.inputMust() }}</h2>
         <input type="text" name="email" class="m-inputText js-mailValidation-target" placeholder="example@example.co.jp" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
