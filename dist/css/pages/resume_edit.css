@@ -1279,6 +1279,11 @@ select::-ms-expand {
   width: 280px;
   margin: 0 auto;
   padding: 17px 0; }
+  .searchButtonBlockRegist__button.topCV_button {
+    margin: 40px auto 0; }
+    @media screen and (max-width: 768px) {
+      .searchButtonBlockRegist__button.topCV_button {
+        margin: 24px auto 0; } }
 
 .flexTable {
   width: 100%;
