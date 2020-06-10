@@ -6,7 +6,7 @@ const COMPLETE_HREF = './password_reminder_complete.html'
 const FORM_TARGET_CLASS = '.js-async-reminderForm-target'
 const REJECT_TARGET_CLASS = '.js-async-passwordReminderReject-target'
 const ADD_SHOW_CLASS = 'is-show'
-const LOGIN_URL = 'http://develop.medicaloffice-job-hon.pv.bita.jp/dist/mypage/password_change.html'
+const LOGIN_URL = 'https://job.mplat.jp/mypage/password_change.html'
 
 /**
  * @class PasswordReminder

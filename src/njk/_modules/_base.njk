@@ -1,5 +1,5 @@
 {%- import '_modules/_macro.njk' as macro -%}
-{%- set basePath = '/dist/' -%}
+{%- set basePath = '/' -%}
 
 <!DOCTYPE html>
 {% if pageName === 'pagelist' %}
@@ -11,9 +11,10 @@
 
     <link rel="stylesheet" type="text/css" href="{{ basePath }}css/pages/{{ pageName }}.css">
 
-    {% include '_modules/_ga.njk' %}
+    {# {% include '_modules/_ga.njk' %} #}
   </head>
   <body>
+  {% include '_modules/_gtm2.njk' %}
     <div class="contentsWrap">
       {% include '_modules/_header.njk' %}
 

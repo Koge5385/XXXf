@@ -1,6 +1,7 @@
 import AxiosBase from '../AxiosBase'
 import AutoTextOmit from '../../AutoTextOmit'
 import JobListPagenation from './JobListPagenation'
+import MetaReplace from './MetaReplace'
 
 // 定数
 const ADD_SHOW_CLASS = 'is-show'
@@ -70,6 +71,28 @@ class JobList {
       // 検索結果が0件の場合の処理
       if (response.attributes.total === 0) {
         document.querySelector('.js-async-resultEmpty-target').classList.add(ADD_SHOW_CLASS)
+
+        // Meta情報の変更
+        // const pageTitle = '求人・転職情報 | MPLAT求職支援で転職！';
+        // const pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
+        // new MetaReplace(pageTitle, pageDescription);
+        // meta情報の変更
+      const occupation = document.querySelector('.js-async-formOccupation-target option[value="' + this.jobOccupation + '"]').text
+      const area = document.querySelector('.js-async-formArea-target option[value="' + this.jobArea + '"]').text
+      if (occupation == '職種で探す' && area == '勤務地で探す') {
+        var searchCond = ''
+      } else if(occupation == '職種で探す' && area !== '勤務地で探す') {
+        var searchCond = area + 'の'
+      } else if(occupation !== '職種で探す' && area == '勤務地で探す') {
+        var searchCond = occupation + 'の'
+      } else {
+        var searchCond = area + '・' + occupation + 'の';
+      }
+      const pageTitle = searchCond + '求人・転職情報 | MPLAT求職支援で転職！';
+      const pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
+
+      new MetaReplace(pageTitle, pageDescription);
+
         return
       }
 
@@ -157,6 +180,24 @@ class JobList {
 
       // 「仕事内容」の3点リーダー処理
       new AutoTextOmit('.js-async-sumally-target', 69)
+
+      // meta情報の変更
+      const occupation = document.querySelector('.js-async-formOccupation-target option[value="' + this.jobOccupation + '"]').text
+      const area = document.querySelector('.js-async-formArea-target option[value="' + this.jobArea + '"]').text
+      if (occupation == '職種で探す' && area == '勤務地で探す') {
+        var searchCond = ''
+      } else if(occupation == '職種で探す' && area !== '勤務地で探す') {
+        var searchCond = area + 'の'
+      } else if(occupation !== '職種で探す' && area == '勤務地で探す') {
+        var searchCond = occupation + 'の'
+      } else {
+        var searchCond = area + '・' + occupation + 'の';
+      }
+      const pageTitle = searchCond + '求人・転職情報 | MPLAT求職支援で転職！';
+      const pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
+
+      new MetaReplace(pageTitle, pageDescription);
+
     }
     if (status.status === 400 || status.status === 401) {
       document.querySelector('.js-async-resultEmpty-target').classList.add(ADD_SHOW_CLASS)

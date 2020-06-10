@@ -2,10 +2,10 @@
 {%- set fileName = 'contact' -%}
 {%- set pageName = 'job_contact' -%}
 {%- set pageLevel = '2' -%}
-{%- set pageTitle = '求人問い合わせ' -%}
+{%- set pageTitle = '求人お問い合わせ' -%}
 {%- set en_pageTitle = 'JOB CONTACT' -%}
 {%- set pageDescription = '求人問い合わせディスクリプション' -%}
-{%- set breadcrumbs = [{item: '求人一覧', href: 'job/'}, {item: '求人詳細', href: 'job/detail.html'}, {item: '求人問い合わせ'}]-%}
+{# {%- set breadcrumbs = [{item: '求人一覧', href: 'job/'}, {item: '求人詳細', href: 'job/detail.html'}, {item: '求人問い合わせ'}]-%} #}
 
 {% block content %}
 
@@ -27,6 +27,13 @@
         <input type="text" name="reading" class="m-inputText inputBlock__inputHalf js-valueEmptyCheck-target" placeholder="フリガナを入力してください" value="" maxlength="250">
         <p class="inputBlock__confirmSetValue"></p>
         <p class="m-inputErrorText">フリガナを入力してください。</p>
+      </div>
+      <div class="inputBlock">
+        <h2 class="inputBlock__heading">電話番号{{ macro.inputMust() }}</h2>
+        <input type="text" name="telephone" class="m-inputText inputBlock__inputHalf js-telValidation-target" placeholder="0312345678" value="" maxlength="11">
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">電話番号を入力してください。</p>
+        <p class="inputBlock__note js-confirmHide-target">※半角数字、ハイフンなし</p>
       </div>
       <div class="inputBlock">
         <h2 class="inputBlock__heading">メールアドレス{{ macro.inputMust() }}</h2>

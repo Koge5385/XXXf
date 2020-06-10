@@ -208,6 +208,7 @@ ul {
   list-style-type: none; }
 
 input:-webkit-autofill {
+  -webkit-transition: background-color 315360000s;
   transition: background-color 315360000s; }
 
 select::-ms-expand {
@@ -361,6 +362,8 @@ select::-ms-expand {
   background-color: transparent; }
   .m-inputText::-webkit-input-placeholder {
     color: #c9c9c9; }
+  .m-inputText:-ms-input-placeholder {
+    color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
     color: #c9c9c9; }
   .m-inputText::placeholder {
@@ -374,6 +377,8 @@ select::-ms-expand {
     border: 1px solid #ff0000;
     background-color: #fff2f2; }
     .m-inputText.is-error::-webkit-input-placeholder {
+      color: #ffa2a2; }
+    .m-inputText.is-error:-ms-input-placeholder {
       color: #ffa2a2; }
     .m-inputText.is-error::-ms-input-placeholder {
       color: #ffa2a2; }
@@ -466,6 +471,8 @@ select::-ms-expand {
   resize: vertical; }
   .m-inputTextArea::-webkit-input-placeholder {
     color: #c9c9c9; }
+  .m-inputTextArea:-ms-input-placeholder {
+    color: #c9c9c9; }
   .m-inputTextArea::-ms-input-placeholder {
     color: #c9c9c9; }
   .m-inputTextArea::placeholder {
@@ -479,6 +486,8 @@ select::-ms-expand {
     border: 1px solid #ff0000;
     background: #fff2f2; }
     .m-inputTextArea.is-error::-webkit-input-placeholder {
+      color: #ffa2a2; }
+    .m-inputTextArea.is-error:-ms-input-placeholder {
       color: #ffa2a2; }
     .m-inputTextArea.is-error::-ms-input-placeholder {
       color: #ffa2a2; }
@@ -1279,6 +1288,11 @@ select::-ms-expand {
   width: 280px;
   margin: 0 auto;
   padding: 17px 0; }
+  .searchButtonBlockRegist__button.topCV_button {
+    margin: 40px auto 0; }
+    @media screen and (max-width: 768px) {
+      .searchButtonBlockRegist__button.topCV_button {
+        margin: 24px auto 0; } }
 
 .flexTable {
   width: 100%;
@@ -2151,26 +2165,26 @@ button.swiper-pagination-bullet {
   @media screen and (max-width: 768px) {
     .mainVisual {
       min-width: auto;
-      height: 34.43113772vh; } }
+      height: 45.43113772vh; } }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .mainVisual {
       height: calc(100vh - 46px); } }
 
 .mainVisual__catchCopy {
-  font-size: 62px;
-  font-size: 3.875rem;
+  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 1.6;
   line-height: 1.2741935484;
   color: #fff;
   text-shadow: 0 0 14px #0091d3;
-  padding-top: calc(22.99089727vh - 71px); }
+  padding-top: calc(22.99089727vh - 100px); }
   @media screen and (max-width: 768px) {
     .mainVisual__catchCopy {
-      font-size: 34px;
-      font-size: 2.125rem;
+      font-size: 22px;
+      font-size: 1.375rem;
       line-height: 1.6;
       line-height: 1.2058823529;
-      padding-top: calc(12.69461078vh - 46px); } }
+      padding-top: calc(12.69461078vh - 30px); } }
   @media screen and (max-width: 768px) and (orientation: landscape) {
     .mainVisual__catchCopy {
       padding-top: 20vh; } }

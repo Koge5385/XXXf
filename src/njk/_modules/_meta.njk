@@ -2,19 +2,25 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 {% if pageName === 'top' %}
-<title>医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
+<title>医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】</title>
 {% else %}
-<title>{{ pageTitle | striptags(false) }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】</title>
+<title>{{ pageTitle | striptags(false) }}-医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】</title>
 {% endif %}
+<meta name="author" content="株式会社エムステージ">
 <meta name="description" content="{{ pageDescription }}">
+<meta name="keywords" content="全国,医療事務,病院事務,病院事務長,医事課,医事課長,求人,転職,募集">
 <meta name="format-detection" content="email=no,telephone=no,address=no">
 {% if pageName === 'mypage' or pageName === 'profile_edit' or pageName === 'resume_edit' or pageName === 'password_change' or pageName === 'cancel_membership' or pageName === 'confirm_email' or pageName === 'regist_complete' or pageName === 'regist_profile' or pageName === 'job_contact' or pageName === 'regist_resume' or pageName === 'mypage' or pageName === '404' %}
 <meta name="robots" content="noindex,nofollow">
 {% endif %}
-
+{% include '_modules/_gtm1.njk' %}
 {% if pageName !== '404' %}
 <meta property="og:url" content="https://job.mplat.jp/{%- for breadcrumb in breadcrumbs %}{%- if loop.last %}{{ '' if fileName === 'index' else fileName + '.html' }}{%- else %}{{ breadcrumb.href }}{%- endif %}{%- endfor %}">
-<meta property="og:title" content="{{ pageTitle | striptags(false) }}｜医療事務職の求人サービスなら【M.PLAT 求職支援】">
+{% if pageName === 'top' %}
+<meta property="og:title" content="医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】">
+{% else %}
+<meta property="og:title" content="{{ pageTitle | striptags(false) }}-医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】">
+{% endif %}
 <meta property="og:type" content="{{ 'website' if pageName === 'top' else 'article' }}">
 <meta property="og:description" content="{{ pageDescription }}">
 <meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png">
