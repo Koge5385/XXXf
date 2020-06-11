@@ -74,7 +74,7 @@
     "prettier": "^1.10.2",
     "prettier-eslint": "^8.8.1",
     "shx": "^0.2.2",
-    "simplifyify": "^3.2.4",
+    "simplifyify": "^8.0.1",
     "stylelint": "^8.1.1",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-order": "^0.7.0"
