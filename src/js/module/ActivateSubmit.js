@@ -20,7 +20,7 @@ const MAIL_VALIDATE_FORMAT = /^(?:(?:(?:(?:[a-zA-Z0-9_!#\$\%&'*+\/=?\^`{}~|\-]+)
 const PASSWORD_VALIDATE_FORMAT = /^(?=.*?[a-z])(?=.*?[A-Z])(?=.*?\d)[a-zA-Z\d]{8,}$/
 
 // 定数 -> 電話番号　バリデーションフォーマット {半角[数字][7桁]}
-const TEL_VALIDATE_FORMAT = /^[0-9]+$/
+const TEL_VALIDATE_FORMAT = /^[0-9]{7,}$/
 
 /**
  * @class ActivateSubmit
@@ -331,10 +331,13 @@ class ActivateSubmit {
       this.telSecondInput = targetArray[1]
 
       this.telFirstInput.addEventListener(BLUR_EVENT, () => {
-        if (!TEL_VALIDATE_FORMAT.test(this.telFirstInput.value)) this.telFirstInput.classList.add(ERROR_CLASS)
+        if (!TEL_VALIDATE_FORMAT.test(this.telFirstInput.value)) {
+          this.telFirstInput.classList.add(ERROR_CLASS)
+          this.checkResult.tel = false
+        }
         if (TEL_VALIDATE_FORMAT.test(this.telFirstInput.value)) {
           this.telFirstInput.classList.remove(ERROR_CLASS)
-          this.telConfirmValidate()
+          this.checkResult.tel = true
         }
       })
 
@@ -361,7 +364,7 @@ class ActivateSubmit {
     this.passwordValidate()
     this.telValidate()
 
-    if (this.checkResult.empty === true && this.checkResult.radio === true && this.checkResult.checkbox === true && this.checkResult.mail === true && this.checkResult.password === true && this.checkResult.anyCheck === true) targetSubmit.disabled = false
+    if (this.checkResult.empty === true && this.checkResult.radio === true && this.checkResult.checkbox === true && this.checkResult.mail === true && this.checkResult.password === true && this.checkResult.tel === true && this.checkResult.anyCheck === true) targetSubmit.disabled = false
 
     const checkObject = this.checkResult
     Object.keys(checkObject).forEach(key => {
@@ -370,7 +373,7 @@ class ActivateSubmit {
         get: () => oldValue,
         set: (newValue) => {
           oldValue = newValue
-          checkObject.empty === true && checkObject.radio === true && checkObject.checkbox === true && checkObject.mail === true && checkObject.password === true && checkObject.anyCheck === true
+          checkObject.empty === true && checkObject.radio === true && checkObject.checkbox === true && checkObject.mail === true && checkObject.password === true && checkObject.tel === true && checkObject.anyCheck === true
             ? targetSubmit.disabled = false
             : targetSubmit.disabled = true
         }
