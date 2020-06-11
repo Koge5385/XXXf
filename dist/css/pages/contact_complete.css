@@ -208,7 +208,6 @@ ul {
   list-style-type: none; }
 
 input:-webkit-autofill {
-  -webkit-transition: background-color 315360000s;
   transition: background-color 315360000s; }
 
 select::-ms-expand {
@@ -362,8 +361,6 @@ select::-ms-expand {
   background-color: transparent; }
   .m-inputText::-webkit-input-placeholder {
     color: #c9c9c9; }
-  .m-inputText:-ms-input-placeholder {
-    color: #c9c9c9; }
   .m-inputText::-ms-input-placeholder {
     color: #c9c9c9; }
   .m-inputText::placeholder {
@@ -377,8 +374,6 @@ select::-ms-expand {
     border: 1px solid #ff0000;
     background-color: #fff2f2; }
     .m-inputText.is-error::-webkit-input-placeholder {
-      color: #ffa2a2; }
-    .m-inputText.is-error:-ms-input-placeholder {
       color: #ffa2a2; }
     .m-inputText.is-error::-ms-input-placeholder {
       color: #ffa2a2; }
@@ -471,8 +466,6 @@ select::-ms-expand {
   resize: vertical; }
   .m-inputTextArea::-webkit-input-placeholder {
     color: #c9c9c9; }
-  .m-inputTextArea:-ms-input-placeholder {
-    color: #c9c9c9; }
   .m-inputTextArea::-ms-input-placeholder {
     color: #c9c9c9; }
   .m-inputTextArea::placeholder {
@@ -486,8 +479,6 @@ select::-ms-expand {
     border: 1px solid #ff0000;
     background: #fff2f2; }
     .m-inputTextArea.is-error::-webkit-input-placeholder {
-      color: #ffa2a2; }
-    .m-inputTextArea.is-error:-ms-input-placeholder {
       color: #ffa2a2; }
     .m-inputTextArea.is-error::-ms-input-placeholder {
       color: #ffa2a2; }
