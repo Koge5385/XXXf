@@ -99,10 +99,11 @@
         <ul class="searchButtonBlockAreaList">
           {%- set searchButtonKyushu = [
             {area: '福岡県', value: 'option_p_fukuoka'},
-            {area: '熊本県', value: 'option_p_kumamoto'}
+            {area: '熊本県', value: 'option_p_kumamoto'},
+            {area: '', value: '', style: 'visibility:hidden;'}
           ] -%}
           {%- for item in searchButtonKyushu %}
-          <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.value | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
+          <li class="searchButtonBlockAreaList__item" style="{{item.style}}"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.value | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
           {%- endfor %}
         </ul>
       </div>
