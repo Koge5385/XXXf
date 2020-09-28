@@ -40,7 +40,7 @@
     <div class="searchButtonBlockContent">
       <h3 class="m-heading m-heading--lv3 searchButtonBlockContent__title"><span class="searchButtonBlockContent__icon">{{ macro.svg_code_place() }}</span>勤務地から探す</h3>
       <div class="searchButtonBlockArea">
-        <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked>
+        <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger">
         <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">関東</label>
         <ul class="searchButtonBlockAreaList">
           {%- set searchButtonKanto = [
@@ -80,13 +80,13 @@
         </ul>
       </div>
       <div class="searchButtonBlockArea">
-        <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked>
-        <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">中部</label>
+        <input type="checkbox" id="sp_areaList_chubu" class="searchButtonBlockArea__toggleTrigger">
+        <label for="sp_areaList_chubu" class="searchButtonBlockArea__heading">中部</label>
         <ul class="searchButtonBlockAreaList">
           {%- set searchButtonChubu = [
-            {area: '岐阜県', value: 'option_p_gifu'},
+            {area: '愛知県', value: 'option_p_aichi'},
             {area: '静岡県', value: 'option_p_shizuoka'},
-            {area: '愛知県', value: 'option_p_aichi'}
+            {area: '岐阜県', value: 'option_p_gifu'}
           ] -%}
           {%- for item in searchButtonChubu %}
           <li class="searchButtonBlockAreaList__item"><a href="{{ basePath }}job/?job_u_kinmutitodoufuken={{ item.value | urlencode }}" class="searchButtonBlockAreaList__link">{{ item.area }}</a></li>
@@ -94,8 +94,8 @@
         </ul>
       </div>
       <div class="searchButtonBlockArea">
-        <input type="checkbox" id="sp_areaList_kanto" class="searchButtonBlockArea__toggleTrigger" checked>
-        <label for="sp_areaList_kanto" class="searchButtonBlockArea__heading">九州</label>
+        <input type="checkbox" id="sp_areaList_kyushu" class="searchButtonBlockArea__toggleTrigger">
+        <label for="sp_areaList_kyushu" class="searchButtonBlockArea__heading">九州</label>
         <ul class="searchButtonBlockAreaList">
           {%- set searchButtonKyushu = [
             {area: '福岡県', value: 'option_p_fukuoka'},
