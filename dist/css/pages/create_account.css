@@ -1213,7 +1213,8 @@ select::-ms-expand {
       justify-content: flex-start; } }
 
 .searchButtonBlockArea__toggleTrigger:checked ~ .searchButtonBlockAreaList {
-  display: flex; }
+  display: flex;
+  width: 100%; }
 
 @media screen and (max-width: 768px) {
   .searchButtonBlockArea__toggleTrigger:checked ~ .searchButtonBlockArea__heading::after {
