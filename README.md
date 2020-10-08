@@ -3,4 +3,3 @@
     2つのレポジトリ
     github:     githubはpushのみ
     codecommit: AWS動デプロイに利用
-
