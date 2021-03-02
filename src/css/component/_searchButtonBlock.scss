@@ -140,6 +140,7 @@
 }
 .searchButtonBlockArea__toggleTrigger:checked ~ .searchButtonBlockAreaList {
   display: flex;
+  width: 100%;
 }
 .searchButtonBlockArea__toggleTrigger:checked
   ~ .searchButtonBlockArea__heading {
@@ -221,4 +222,11 @@
   width: 280px;
   margin: 0 auto;
   padding: 17px 0;
+
+  &.topCV_button {
+    margin: 40px auto 0;
+    @include media(sp) {
+      margin: 24px auto 0;
+    }
+  }
 }

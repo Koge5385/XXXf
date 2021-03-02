@@ -17,22 +17,22 @@
   text-align: center;
   @include media(sp) {
     min-width: auto;
-    height: 34.43113772vh;
+    height: 45.43113772vh;
   }
   @include landscape(sp) {
     height: calc(100vh - 46px);
   }
 }
 .mainVisual__catchCopy {
-  @include fontsize(62, 16);
+  @include fontsize(40, 16);
   line-height: 1.2741935484;
   color: #fff;
   text-shadow: 0 0 14px #0091d3;
-  padding-top: calc(22.99089727vh - 71px);
+  padding-top: calc(22.99089727vh - 100px);
   @include media(sp) {
-    @include fontsize(34, 16);
+    @include fontsize(22, 16);
     line-height: 1.2058823529;
-    padding-top: calc(12.69461078vh - 46px);
+    padding-top: calc(12.69461078vh - 30px);
   }
   @include landscape(sp) {
     padding-top: 20vh;

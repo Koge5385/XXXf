@@ -1,8 +1,8 @@
 {%- import '_modules/_macro.njk' as macro -%}
-{%- set basePath = '/dist/' -%}
+{%- set basePath = '/' -%}
 {%- set pageName = 'top' -%}
-{%- set pageTitle = 'トップページ' -%}
-{%- set pageDescription = 'ディスクリプション' -%}
+{%- set pageTitle = '医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】' -%}
+{%- set pageDescription = 'M.PLAT求職支援は、病院事務職、医療事務職に特化した転職・求人情報サイトです。医療経営に精通したコンサルタントが、あなたの転職活動をフルサポートします。' -%}
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -11,14 +11,16 @@
 
     <link rel="stylesheet" type="text/css" href="./css/pages/top.css">
 
-    {% include '_modules/_ga.njk' %}
+    {# {% include '_modules/_ga.njk' %} #}
   </head>
   <body>
+    {% include '_modules/_gtm2.njk' %}
     <div class="contentsWrap testclass">
       {% include '_modules/_header.njk' %}
 
       <div class="mainVisual">
-        <h1 class="mainVisual__catchCopy">医療経営を<br>一つ上のステージへ</h1>
+        <h1 class="mainVisual__catchCopy">「M.PLAT 求職支援」は<br>医療機関における事務職に特化した<br>求人紹介サービスです</h1>
+        <a href="{{ basePath }}signup/create_account.html" class="searchButtonBlockRegist__button topCV_button" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_searchBlock_regist','event_label': 'searchBlock_regist'});">無料会員登録</a>
       </div>
       <div class="container">
         <section class="topSearchBox">
