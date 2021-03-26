@@ -1,3 +1,30 @@
+
+.sectionHeading {
+  width: 100%;
+  min-width: 980px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 36px;
+  @include media(sp) {
+    min-width: auto;
+    height: auto;
+    margin-bottom: 40px;
+  }
+}
+.sectionHeading__title {
+  @include fontsize(36, 16);
+  line-height: 1.4;
+  color: #5d687c;
+  font-weight: bold;
+}
+.sectionHeading__enTitle {
+  @extend .m-fontFamilyMontserrat;
+  @include fontsize(16, 16);
+  color: #0091d4;
+}
+
 .searchButtonBlock {
   width: 100%;
   min-width: 980px;

@@ -1,0 +1,110 @@
+@import "../_index";
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 80px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 10px 60px;
+  }
+}
+
+.contents {
+  @include _baseContentsWidth;
+}
+
+.contentsList {
+  display: -webkit-box;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  flex-wrap:         wrap;
+  &:after {
+    content: "";
+    width: 32%;
+  }
+  li {
+    width: 32%;
+    margin-bottom: 1em;
+  }
+}
+
+.contentsListItem__link {
+  width: 310px;
+  height: 324px;
+  background: transparent;
+  &:hover {
+    text-decoration: none;
+  }
+  .contentsListItem__parent {
+    position: relative;
+    .contentsListItem__category {
+      position: absolute;
+      margin-top: 154px;
+      .contentsListItem__parts {
+        display: inline-block;
+        width: 136px;
+        font-family: "Noto Sans CJK JP";
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        padding: .4em 1.2em .4em 1em;
+        position: relative;
+        color: #fff;
+        z-index: 1;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          z-index: -1;
+          background: #1b4482;
+          transform: scaleY(0.9) perspective(2em) rotateX(-185deg);
+          transform-origin: left;
+        }
+      }
+    }
+    .contentsListItem__thumbnail {
+      width: 310px;
+      height: 174px;
+    }
+    .contentsListItem__contents {
+      width: 310px;
+      height: 150px;
+      background: #5a697d;
+      .contentsListItem__title {
+        padding-top: 25px;
+        margin-left: 18px;
+        margin-right: 12px;
+        padding-bottom: 13.5px;
+        border-bottom: 1px solid #8d8989;
+        font-family: "Noto Sans CJK JP";
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 32px;
+        text-align: left;
+        color: #fff;
+      }
+      .contentsListItem__new {
+        margin-top: 5.5px;
+        margin-left: 209px;
+        margin-right: 15px;
+        padding-bottom: 10px;
+        width: 86px;
+        height: 28px;
+        font-family: "Noto Sans CJK JP";
+        font-weight: bold;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        line-height: 34px;
+        text-align: right;
+        color: #fff;
+      }
+    }
+  }
+}

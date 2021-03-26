@@ -314,7 +314,7 @@ select::-ms-expand {
     line-height: 1.6;
     margin-bottom: 10px; }
 
-.m-fontFamilyMontserrat, .keyVisual__enTitle {
+.m-fontFamilyMontserrat, .keyVisual__enTitle, .sectionHeading__enTitle {
   font-family: "Montserrat"; }
 
 .m-frontLink {
@@ -1065,6 +1065,34 @@ select::-ms-expand {
   @media screen and (max-width: 768px) {
     .globalFooterNav__copyright {
       text-align: center; } }
+
+.sectionHeading {
+  width: 100%;
+  min-width: 980px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 36px; }
+  @media screen and (max-width: 768px) {
+    .sectionHeading {
+      min-width: auto;
+      height: auto;
+      margin-bottom: 40px; } }
+
+.sectionHeading__title {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.6;
+  line-height: 1.4;
+  color: #5d687c;
+  font-weight: bold; }
+
+.sectionHeading__enTitle {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #0091d4; }
 
 .searchButtonBlock {
   width: 100%;
