@@ -223,6 +223,18 @@ select::-ms-expand {
   .pc-view {
     display: none; } }
 
+@media screen and (min-width: 769px) {
+  .br-pc {
+    display: block; }
+  .br-sp {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
+  .br-pc {
+    display: none; }
+  .br-sp {
+    display: block; } }
+
 .contentsWrap {
   background-color: #fff;
   position: relative;

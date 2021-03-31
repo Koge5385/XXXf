@@ -44,6 +44,24 @@ select::-ms-expand {
   }
 }
 
+
+@include media(pc){	
+  .br-pc {
+    display:block;
+  }
+  .br-sp {
+    display:none;
+  }
+}
+@include media(sp){	
+  .br-pc {
+    display:none;
+  }
+  .br-sp {
+    display:block;
+  }
+}
+
 .contentsWrap {
   background-color: #fff;
   position: relative;
