@@ -1,5 +1,9 @@
 @import "../_index";
 
+.keyVisual {
+  background-color: transparent;
+}
+
 .container {
   width: 100%;
   min-width: 980px;
@@ -37,6 +41,7 @@
   background: transparent;
   &:hover {
     text-decoration: none;
+    opacity: .8;
   }
   .contentsListItem__parent {
     position: relative;
