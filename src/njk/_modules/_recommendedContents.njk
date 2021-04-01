@@ -1,0 +1,53 @@
+<section class="recommendedContents">
+  <div class="sectionHeading">
+    <h1 class="sectionHeading__title">
+      おすすめコンテンツ
+    </h1>
+    <small class="sectionHeading__enTitle">
+      CONTENTS
+    </small>
+  </div>
+  <div class="recommendedContents__main">
+    <ul class="contentsList">
+      {%- set contentsArray = [
+        {category: '仕事解説', value: '医療事務（正社員）の仕事！仕事の種類や求人の探し方を解説', path: '/contents/commentary/job_type.html', image: 'img/contents/thumbnail/image_job_type.png', image2x: 'img/contents/thumbnail/image_job_type@2x.png'},
+        {category: '転職ノウハウ', value: '未経験から医療事務になるためのコツ！求人の見つけ方も解説', path: '/contents/know_how/inexperienced.html', image: 'img/contents/thumbnail/image_inexperienced.png', image2x: 'img/contents/thumbnail/image_inexperienced@2x.png'},
+        {category: '転職ノウハウ', value: '医療事務の面接はどんな質問をされる？対策や事前準備を解説', path: '/contents/know_how/interview.html', image: 'img/contents/thumbnail/image_interview.png', image2x: 'img/contents/thumbnail/image_interview@2x.png'},
+        {category: '転職ノウハウ', value: '医療事務の志望動機や自己PRはどう書くべき？書き方のポイントまとめ', path: '/contents/know_how/resume.html', image: 'img/contents/thumbnail/image_resume.png', image2x: 'img/contents/thumbnail/image_resume@2x.png'},
+        {category: '仕事解説', value: '医療事務ってどんな仕事内容？メリットデメリット、やりがいも解説', path: '/contents/commentary/merit.html', image: 'img/contents/thumbnail/image_merit.png', image2x: 'img/contents/thumbnail/image_merit@2x.png'},
+        {category: '仕事解説', value: '医療事務の資格って何がある？おすすめの種類や難易度など情報まとめ。', path: '/contents/commentary/qualification.html', image: 'img/contents/thumbnail/image_qualification.png', image2x: 'img/contents/thumbnail/image_qualification@2x.png'}
+      ] -%}
+      {%- for item in contentsArray -%}
+        <li class="contentsListItem">
+          <a href="{{ item.path }}" class="contentsListItem__link">
+            <div class="contentsListItem__parent">
+              <div class="contentsListItem__category">
+                <div class="contentsListItem__parts">
+                  {{ item.category }}
+                </div>
+              </div>
+              <img class="contentsListItem__thumbnail" src="{{ basePath }}{{ item.image }}" srcset="{{ basePath }}{{ item.image }} 1x, {{ basePath }}{{ item.image2x }} 2x"/>
+              <div class="contentsListItem__contents">
+                <div class="contentsListItem__title">
+                  {{ item.value }}
+                </div>
+                <div class="contentsListItem__new">
+                 NEW
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <div class="recommendedContents__link">
+    <a href="/contents/" class="recommendedContents__link__a">
+      <div class="recommendedContents__link__button">
+        <div class="recommendedContents__link__button__text">
+          コンテンツ一覧
+        </div>
+      </div>
+    </a>
+  </div>
+</section>

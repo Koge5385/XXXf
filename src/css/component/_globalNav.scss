@@ -148,6 +148,10 @@
     justify-content: space-around;
   }
 }
+.globalMobileNavCellOverThree {
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .globalMobileNavCellItem {
   margin: 0;
   @include landscape(sp) {
@@ -166,8 +170,27 @@
   height: 110px;
   border-radius: 6px;
   &--loggedin {
-    width: 170px;
+    width: 120px;
   }
+  &:hover {
+    text-decoration: none;
+  }
+  @include landscape(sp) {
+    width: 100%;
+  }
+}
+.globalMobileNavCellItem__link__overThree {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #1b457e;
+  background-color: #fff;
+  width: 170px;
+  height: 70px;
+  border-radius: 6px;
+  margin: 5px;
   &:hover {
     text-decoration: none;
   }
@@ -187,6 +210,12 @@
   &--regist {
     width: 31.66px;
   }
+  svg {
+    fill: #1b457e;
+  }
+}
+.globalMobileNavCellItem__icon__overThree {
+  margin-top: 10px;
   svg {
     fill: #1b457e;
   }
