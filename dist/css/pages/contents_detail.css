@@ -1952,7 +1952,10 @@ select::-ms-expand {
     text-align: center; }
     @media screen and (max-width: 768px) {
       .contentsDetail__share__button .contentsDetail__twitter__button {
+        flex-grow: 1;
+        flex-shrink: 1;
         width: initial;
+        max-width: 205px;
         min-width: 111px; } }
     .contentsDetail__share__button .contentsDetail__twitter__button i {
       position: relative;
@@ -1978,7 +1981,10 @@ select::-ms-expand {
     text-align: center; }
     @media screen and (max-width: 768px) {
       .contentsDetail__share__button .contentsDetail__facebook__button {
+        flex-grow: 1;
+        flex-shrink: 1;
         width: initial;
+        max-width: 205px;
         min-width: 111px; } }
     .contentsDetail__share__button .contentsDetail__facebook__button i {
       position: relative;
@@ -2005,7 +2011,10 @@ select::-ms-expand {
     text-align: center; }
     @media screen and (max-width: 768px) {
       .contentsDetail__share__button .contentsDetail__line__button {
+        flex-grow: 1;
+        flex-shrink: 1;
         width: initial;
+        max-width: 205px;
         min-width: 111px; } }
     .contentsDetail__share__button .contentsDetail__line__button i {
       position: relative;

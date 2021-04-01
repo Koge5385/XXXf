@@ -165,7 +165,10 @@
     padding-top: 2px;
     text-align: center;
     @include media(sp) {
+      flex-grow: 1;
+      flex-shrink: 1;
       width: initial;
+      max-width: 205px;
       min-width: 111px;
     }
     i {
@@ -194,7 +197,10 @@
     padding-top: 2px;
     text-align: center;
     @include media(sp) {
+      flex-grow: 1;
+      flex-shrink: 1;
       width: initial;
+      max-width: 205px;
       min-width: 111px;
     }
     i {
@@ -224,7 +230,10 @@
     padding-top: 2px;
     text-align: center;
     @include media(sp) {
+      flex-grow: 1;
+      flex-shrink: 1;
       width: initial;
+      max-width: 205px;
       min-width: 111px;
     }
     i {
