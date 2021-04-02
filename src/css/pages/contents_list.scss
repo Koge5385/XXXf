@@ -17,3 +17,11 @@
 .contents {
   @include _baseContentsWidth;
 }
+
+.section {
+  width: 980px;
+  margin: 0 auto;
+  @include media(sp) {
+    width: 100%;
+  }
+}
