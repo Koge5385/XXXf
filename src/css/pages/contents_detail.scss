@@ -54,6 +54,7 @@
   position: relative;
   color: #fff;
   z-index: 1;
+  transform: translateZ(1px);
   &:before {
     content: "";
     position: absolute;
@@ -63,7 +64,7 @@
     left: 0;
     z-index: -1;
     background: #1b4482;
-    transform: scaleY(0.9) perspective(2em) rotateX(-185deg);
+    transform: scaleY(0.9) perspective(2em) rotateX(-185deg) translateZ(1px);
     transform-origin: left;
   }
 }
