@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ pageTitle | striptags(false) }}-医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】</title>
+<meta name="author" content="株式会社エムステージ">
+<meta name="description" content="{{ pageDescription }}">
+<meta name="keywords" content="{{ pageKeywords }}">
+<meta name="format-detection" content="email=no,telephone=no,address=no">
+{% include '_modules/_gtm1.njk' %}
+{% if pageName !== '404' %}
+<meta property="og:url" content="{{ ogUrl }}">
+<meta property="og:title" content="{{ pageTitle | striptags(false) }}-医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】">
+<meta property="og:type" content="{{ 'website' if pageName === 'top' else 'article' }}">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:image" content="https://job.mplat.jp/img/common/ogp_image.png">
+<meta property="og:locale" content="ja_JP">
+{% endif %}
+
+<link rel="icon" href="{{ basePath }}img/common/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="{{ basePath }}img/common/apple_icon.png">
+<link rel="icon" type="image/png" href="{{ basePath }}img/common/android_icon.png">

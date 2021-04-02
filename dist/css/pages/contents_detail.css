@@ -2106,6 +2106,32 @@ select::-ms-expand {
   .contentsDetail__a:hover {
     text-decoration: none; }
 
+.contentsDetail__subheading {
+  margin-top: 32px;
+  display: block;
+  color: #5a697d;
+  font-size: 17px;
+  font-weight: bold; }
+  .contentsDetail__subheading:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    border: 1px solid #5a697d;
+    vertical-align: middle;
+    margin-right: 5px; }
+
+.contentsDetail__topic {
+  margin-top: 32px;
+  font-family: "Noto Sans JP";
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  color: #212529;
+  width: 105px;
+  height: 21px;
+  background: #f4efef;
+  margin-bottom: -12px; }
+
 .contentsDetail__quote {
   margin-top: 32px;
   width: 637px;
@@ -2130,6 +2156,18 @@ select::-ms-expand {
     font-family: "Noto Sans JP";
     font-weight: normal;
     font-size: 16px;
+    line-height: 32px;
+    text-align: left;
+    color: #212529; }
+  .contentsDetail__quote .contentsDetail__quote__text__no__icon {
+    padding-top: 31px;
+    padding-left: 42px;
+    padding-right: 39px;
+    padding-bottom: 26px;
+    font-family: "Noto Sans JP";
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 32px;
     text-align: left;
     color: #212529; }
 

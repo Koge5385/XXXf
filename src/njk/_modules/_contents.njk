@@ -2,9 +2,6 @@
 {%- set fileName = 'index' -%}
 {%- set pageName = 'contents_detail' -%}
 {%- set pageLevel = '2' -%}
-{%- set pageTitle = '' -%}
-{%- set en_pageTitle = '' -%}
-{%- set pageDescription = '' -%}
 {%- set breadcrumbs = [{item: 'コンテンツ'}]-%}
 
 {% block content %}
@@ -16,7 +13,7 @@
           {{ contentsCategory }}
         </div>
         <h1 class="contentsDetail__title">
-          {{ contentsTitle }}
+          {{ contentsTitle | safe }}
         </h1>
         <div class="contentsDetail__date">
           {{ contentsDate }}
