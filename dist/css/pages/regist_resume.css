@@ -702,7 +702,8 @@ select::-ms-expand {
   z-index: 999;
   background-color: #fff;
   border-bottom: 1px solid #d3d9e0;
-  top: 0; }
+  top: 0;
+  transform: translateZ(1px); }
   @media screen and (max-width: 768px) {
     .globalHeader {
       width: 100%;
