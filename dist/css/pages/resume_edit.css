@@ -576,6 +576,9 @@ select::-ms-expand {
     .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
       position: absolute;
       margin-top: 154px; }
+      @media all and (-ms-high-contrast: none) {
+        .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
+          margin-top: 162px; } }
       @media screen and (max-width: 768px) {
         .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
           margin-top: 52%; } }
@@ -694,6 +697,9 @@ select::-ms-expand {
           font-size: 20px;
           text-align: center;
           color: #5a697d; }
+          @media all and (-ms-high-contrast: none) {
+            .recommendedContents .recommendedContents__link .recommendedContents__link__a .recommendedContents__link__button .recommendedContents__link__button__text {
+              margin-top: 25px; } }
 
 .globalHeader {
   min-width: 980px;

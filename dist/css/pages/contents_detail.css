@@ -576,6 +576,9 @@ select::-ms-expand {
     .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
       position: absolute;
       margin-top: 154px; }
+      @media all and (-ms-high-contrast: none) {
+        .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
+          margin-top: 162px; } }
       @media screen and (max-width: 768px) {
         .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
           margin-top: 52%; } }
@@ -694,6 +697,9 @@ select::-ms-expand {
           font-size: 20px;
           text-align: center;
           color: #5a697d; }
+          @media all and (-ms-high-contrast: none) {
+            .recommendedContents .recommendedContents__link .recommendedContents__link__a .recommendedContents__link__button .recommendedContents__link__button__text {
+              margin-top: 25px; } }
 
 .globalHeader {
   min-width: 980px;
@@ -2274,6 +2280,9 @@ select::-ms-expand {
   border-radius: 11px;
   background: linear-gradient(#1b4482 0%, #204f96 1.21%, #19407b 100%);
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.2); }
+  @media all and (-ms-high-contrast: none) {
+    .contentsDetail__register__button {
+      height: 195px; } }
   @media screen and (max-width: 768px) {
     .contentsDetail__register__button {
       width: 100%;
@@ -2287,6 +2296,9 @@ select::-ms-expand {
     font-size: 20px;
     text-align: center;
     color: #fff; }
+    @media all and (-ms-high-contrast: none) {
+      .contentsDetail__register__button .contentsDetail__register__text {
+        line-height: 32px; } }
     @media screen and (max-width: 768px) {
       .contentsDetail__register__button .contentsDetail__register__text {
         font-size: 16px; } }
@@ -2296,6 +2308,9 @@ select::-ms-expand {
     font-size: 34px;
     text-align: center;
     color: #fff; }
+    @media all and (-ms-high-contrast: none) {
+      .contentsDetail__register__button .contentsDetail__register__leadline {
+        line-height: 44px; } }
     @media screen and (max-width: 768px) {
       .contentsDetail__register__button .contentsDetail__register__leadline {
         font-size: 30px;
@@ -2330,6 +2345,9 @@ select::-ms-expand {
     font-size: 20px;
     text-align: center;
     color: #5a697d; }
+    @media all and (-ms-high-contrast: none) {
+      .contentsDetail__link__button .contentsDetail__link__button__text {
+        margin-top: 25px; } }
 
 .margin-top-60 {
   margin-top: 60px; }

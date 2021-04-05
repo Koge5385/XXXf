@@ -47,6 +47,9 @@
     .contentsListItem__category {
       position: absolute;
       margin-top: 154px;
+      @media all and (-ms-high-contrast: none) {
+        margin-top: 162px;
+      }
       @include media(sp) {
         margin-top: 52%;
       }
@@ -173,6 +176,9 @@
           font-size: 20px;
           text-align: center;
           color: #5a697d;
+          @media all and (-ms-high-contrast: none) {
+            margin-top: 25px;
+          }
         }
       }
     }
