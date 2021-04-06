@@ -8,13 +8,14 @@
 <meta name="format-detection" content="email=no,telephone=no,address=no">
 {% include '_modules/_gtm1.njk' %}
 {% if pageName !== '404' %}
-  <meta property="og:url" content="{{ ogUrl }}">
+  <meta property="og:url" content="{{ pageUrl }}">
   <meta property="og:site_name" content="医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】">
   <meta property="og:title" content="{{ pageTitle | striptags(false) }}-医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】">
   <meta property="og:type" content="{{ 'website' if pageName === 'top' else 'article' }}">
   <meta property="og:description" content="{{ pageDescription }}">
   <meta property="og:image" content="{{ pageImage }}">
   <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:url" content="{{ pageUrl }}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ pageTitle | striptags(false) }}-医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】">
   <meta name="twitter:description" content="{{ pageDescription }}">
