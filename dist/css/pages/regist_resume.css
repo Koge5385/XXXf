@@ -583,9 +583,9 @@ select::-ms-expand {
         .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
           margin-top: 52%; } }
       .contentsListItem__link .contentsListItem__parent .contentsListItem__category .contentsListItem__parts {
+        font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         display: inline-block;
         width: 136px;
-        font-family: "Noto Sans JP";
         font-weight: 500;
         font-size: 14px;
         letter-spacing: 0.1em;
@@ -622,12 +622,12 @@ select::-ms-expand {
           width: 100%;
           height: 100%; } }
       .contentsListItem__link .contentsListItem__parent .contentsListItem__contents .contentsListItem__title {
+        font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         padding-top: 25px;
         margin-left: 18px;
         margin-right: 12px;
         padding-bottom: 13.5px;
         border-bottom: 1px solid #8d8989;
-        font-family: "Noto Sans JP";
         font-weight: bold;
         font-size: 16px;
         line-height: 32px;
@@ -638,13 +638,13 @@ select::-ms-expand {
             margin-right: 14px;
             font-size: 18px; } }
       .contentsListItem__link .contentsListItem__parent .contentsListItem__contents .contentsListItem__new {
+        font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         margin-top: 5.5px;
         margin-left: 209px;
         margin-right: 15px;
         padding-bottom: 10px;
         width: 86px;
         height: 28px;
-        font-family: "Noto Sans JP";
         font-weight: bold;
         font-size: 15px;
         letter-spacing: 0.05em;
@@ -691,8 +691,8 @@ select::-ms-expand {
           .recommendedContents .recommendedContents__link .recommendedContents__link__a .recommendedContents__link__button {
             width: inherit; } }
         .recommendedContents .recommendedContents__link .recommendedContents__link__a .recommendedContents__link__button .recommendedContents__link__button__text {
+          font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
           margin-top: 17px;
-          font-family: "Noto Sans JP";
           font-weight: 500;
           font-size: 20px;
           text-align: center;

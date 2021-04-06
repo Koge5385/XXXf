@@ -583,9 +583,9 @@ select::-ms-expand {
         .contentsListItem__link .contentsListItem__parent .contentsListItem__category {
           margin-top: 52%; } }
       .contentsListItem__link .contentsListItem__parent .contentsListItem__category .contentsListItem__parts {
+        font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         display: inline-block;
         width: 136px;
-        font-family: "Noto Sans JP";
         font-weight: 500;
         font-size: 14px;
         letter-spacing: 0.1em;
@@ -622,12 +622,12 @@ select::-ms-expand {
           width: 100%;
           height: 100%; } }
       .contentsListItem__link .contentsListItem__parent .contentsListItem__contents .contentsListItem__title {
+        font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         padding-top: 25px;
         margin-left: 18px;
         margin-right: 12px;
         padding-bottom: 13.5px;
         border-bottom: 1px solid #8d8989;
-        font-family: "Noto Sans JP";
         font-weight: bold;
         font-size: 16px;
         line-height: 32px;
@@ -638,13 +638,13 @@ select::-ms-expand {
             margin-right: 14px;
             font-size: 18px; } }
       .contentsListItem__link .contentsListItem__parent .contentsListItem__contents .contentsListItem__new {
+        font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         margin-top: 5.5px;
         margin-left: 209px;
         margin-right: 15px;
         padding-bottom: 10px;
         width: 86px;
         height: 28px;
-        font-family: "Noto Sans JP";
         font-weight: bold;
         font-size: 15px;
         letter-spacing: 0.05em;
@@ -691,8 +691,8 @@ select::-ms-expand {
           .recommendedContents .recommendedContents__link .recommendedContents__link__a .recommendedContents__link__button {
             width: inherit; } }
         .recommendedContents .recommendedContents__link .recommendedContents__link__a .recommendedContents__link__button .recommendedContents__link__button__text {
+          font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
           margin-top: 17px;
-          font-family: "Noto Sans JP";
           font-weight: 500;
           font-size: 20px;
           text-align: center;
@@ -2031,9 +2031,9 @@ select::-ms-expand {
     opacity: 0.8; }
 
 .contentsDetail__category {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   display: inline-block;
   width: 124px;
-  font-family: "Noto Sans JP";
   font-weight: 100;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -2056,16 +2056,16 @@ select::-ms-expand {
     transform-origin: left; }
 
 .contentsDetail__title {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin-top: 32px;
-  font-family: "Noto Sans JP";
   font-weight: bold;
   font-size: 28px;
   text-align: left;
   color: #5a697d; }
 
 .contentsDetail__date {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin-top: 68px;
-  font-family: "Noto Sans JP";
   font-weight: normal;
   font-size: 18px;
   text-align: left;
@@ -2081,10 +2081,10 @@ select::-ms-expand {
       height: 100%; } }
 
 .contentsDetail__block__title {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin-top: 44px;
   padding: 1px;
   padding-left: 16px;
-  font-family: "Noto Sans JP";
   font-weight: bold;
   font-size: 24px;
   line-height: 38px;
@@ -2093,9 +2093,9 @@ select::-ms-expand {
   border-left: 5px solid #5a697d; }
 
 .contentsDetail__text {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin-top: 32px;
   width: 645px;
-  font-family: "Noto Sans JP";
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
@@ -2130,8 +2130,8 @@ select::-ms-expand {
     margin-right: 5px; }
 
 .contentsDetail__topic {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin-top: 32px;
-  font-family: "Noto Sans JP";
   font-weight: normal;
   font-size: 14px;
   text-align: center;
@@ -2159,21 +2159,21 @@ select::-ms-expand {
     text-align: left;
     color: #5a697d; }
   .contentsDetail__quote .contentsDetail__quote__text {
+    font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     padding-left: 54px;
     padding-right: 40px;
     padding-bottom: 42px;
-    font-family: "Noto Sans JP";
     font-weight: normal;
     font-size: 16px;
     line-height: 32px;
     text-align: left;
     color: #212529; }
   .contentsDetail__quote .contentsDetail__quote__text__no__icon {
+    font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     padding-top: 31px;
     padding-left: 42px;
     padding-right: 39px;
     padding-bottom: 26px;
-    font-family: "Noto Sans JP";
     font-weight: normal;
     font-size: 16px;
     line-height: 32px;
@@ -2207,7 +2207,7 @@ select::-ms-expand {
       background: transparent 0 0 no-repeat;
       background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2072%2072%22%3E%3Cpath%20fill%3D%22none%22%20d%3D%22M0%200h72v72H0z%22%2F%3E%3Cpath%20class%3D%22icon%22%20fill%3D%22%23fff%22%20d%3D%22M68.812%2015.14c-2.348%201.04-4.87%201.744-7.52%202.06%202.704-1.62%204.78-4.186%205.757-7.243-2.53%201.5-5.33%202.592-8.314%203.176C56.35%2010.59%2052.948%209%2049.182%209c-7.23%200-13.092%205.86-13.092%2013.093%200%201.026.118%202.02.338%202.98C25.543%2024.527%2015.9%2019.318%209.44%2011.396c-1.125%201.936-1.77%204.184-1.77%206.58%200%204.543%202.312%208.552%205.824%2010.9-2.146-.07-4.165-.658-5.93-1.64-.002.056-.002.11-.002.163%200%206.345%204.513%2011.638%2010.504%2012.84-1.1.298-2.256.457-3.45.457-.845%200-1.666-.078-2.464-.23%201.667%205.2%206.5%208.985%2012.23%209.09-4.482%203.51-10.13%205.605-16.26%205.605-1.055%200-2.096-.06-3.122-.184%205.794%203.717%2012.676%205.882%2020.067%205.882%2024.083%200%2037.25-19.95%2037.25-37.25%200-.565-.013-1.133-.038-1.693%202.558-1.847%204.778-4.15%206.532-6.774z%22%2F%3E%3C%2Fsvg%3E); }
     .contentsDetail__share__button .contentsDetail__twitter__button span {
-      font-family: "Noto Sans JP";
+      font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
       font-weight: bold;
       font-size: 12px;
       line-height: 34px;
@@ -2237,7 +2237,7 @@ select::-ms-expand {
       background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/y4/r/ps3LEjFUMch.png);
       background-size: 14px auto; }
     .contentsDetail__share__button .contentsDetail__facebook__button span {
-      font-family: "Noto Sans JP";
+      font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
       font-weight: bold;
       font-size: 12px;
       line-height: 34px;
@@ -2267,7 +2267,7 @@ select::-ms-expand {
       background: url(https://www.line-website.com/social-plugins/img/common/line_v3@3x.png) 0 center no-repeat;
       background-size: 14px auto; }
     .contentsDetail__share__button .contentsDetail__line__button span {
-      font-family: "Noto Sans JP";
+      font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
       font-weight: bold;
       font-size: 12px;
       line-height: 34px;
@@ -2288,10 +2288,10 @@ select::-ms-expand {
       width: 100%;
       height: 100%; } }
   .contentsDetail__register__button .contentsDetail__register__text {
+    font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     padding-top: 27.4px;
     padding-left: 34px;
     padding-right: 30px;
-    font-family: "Noto Sans JP";
     font-weight: 500;
     font-size: 20px;
     text-align: center;
@@ -2303,7 +2303,7 @@ select::-ms-expand {
       .contentsDetail__register__button .contentsDetail__register__text {
         font-size: 16px; } }
   .contentsDetail__register__button .contentsDetail__register__leadline {
-    font-family: "Noto Sans JP";
+    font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     font-weight: bold;
     font-size: 34px;
     text-align: center;
@@ -2339,8 +2339,8 @@ select::-ms-expand {
     .contentsDetail__link__button {
       width: inherit; } }
   .contentsDetail__link__button .contentsDetail__link__button__text {
+    font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     margin-top: 17px;
-    font-family: "Noto Sans JP";
     font-weight: 500;
     font-size: 20px;
     text-align: center;
@@ -2356,7 +2356,7 @@ select::-ms-expand {
   margin-top: 100px; }
 
 .contentsDetail__subtitle {
-  font-family: "Noto Sans JP";
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-weight: 100;
   font-size: 16px;
   line-height: 30px;
@@ -2364,10 +2364,10 @@ select::-ms-expand {
   color: #5a697d; }
 
 .contentsDetail__category__menu .contentsDetail__category__menu__head {
+  font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   width: 307px;
   height: 33px;
   background: #5a697d;
-  font-family: "Noto Sans JP";
   font-weight: 500;
   font-size: 16px;
   line-height: 32px;
@@ -2394,9 +2394,9 @@ select::-ms-expand {
       .contentsDetail__category__menu .contentsDetail__category__menu__content .contentsDetail__category__menu__content__sentence {
         padding-left: 33%; } }
     .contentsDetail__category__menu .contentsDetail__category__menu__content .contentsDetail__category__menu__content__sentence .contentsDetail__category__menu__content__sentence__text {
+      font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
       width: 136px;
       height: 25px;
-      font-family: "Noto Sans JP";
       font-weight: 500;
       font-size: 16px;
       letter-spacing: 0.1em;
