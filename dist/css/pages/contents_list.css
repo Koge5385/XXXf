@@ -1988,7 +1988,8 @@ select::-ms-expand {
       padding-left: 0; } }
 
 .keyVisual {
-  background-color: transparent; }
+  background-color: transparent;
+  margin-bottom: 0; }
 
 .container {
   width: 100%;
