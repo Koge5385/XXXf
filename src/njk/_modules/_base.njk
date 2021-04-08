@@ -7,7 +7,12 @@
 {% endif %}
 <html lang="ja">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    {%- if pageName !== 'contents_detail' %}
     {% include '_modules/_meta.njk' %}
+    {% endif %}
+    {%- if pageName === 'contents_detail' %}
+    {% include '_modules/_contents_meta.njk' %}
+    {% endif %}
 
     <link rel="stylesheet" type="text/css" href="{{ basePath }}css/pages/{{ pageName }}.css">
 
@@ -18,7 +23,7 @@
     <div class="contentsWrap">
       {% include '_modules/_header.njk' %}
 
-      {%- if pageName !== 'job_detail' and pageName !== '404' %}
+      {%- if pageName !== 'job_detail' and pageName !== 'contents_detail' and pageName !== '404' %}
       {% include '_modules/_keyVisual.njk' %}
       {% endif -%}
 

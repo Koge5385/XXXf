@@ -1,0 +1,28 @@
+@import "../_index";
+
+.keyVisual {
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+.container {
+  width: 100%;
+  min-width: 980px;
+  padding: 0 0 80px;
+  @include media(sp) {
+    min-width: auto;
+    padding: 0 10px 60px;
+  }
+}
+
+.contents {
+  @include _baseContentsWidth;
+}
+
+.section {
+  width: 980px;
+  margin: 0 auto;
+  @include media(sp) {
+    width: 100%;
+  }
+}

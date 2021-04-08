@@ -5,6 +5,7 @@
   background-color: #fff;
   border-bottom: 1px solid #d3d9e0;
   top: 0;
+  transform: translateZ(1px);
   @include media(sp) {
     width: 100%;
     min-width: auto;

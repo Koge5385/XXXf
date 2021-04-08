@@ -1,0 +1,148 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'index' -%}
+{%- set pageName = 'contents_detail' -%}
+{%- set pageLevel = '2' -%}
+{%- set breadcrumbs = [{item: 'コンテンツ'}]-%}
+
+{% block content %}
+
+  <div class="container">
+    <div class="container__hasSide">
+      <main class="container__main">
+        <div class="contentsDetail__category">
+          {{ contentsCategory }}
+        </div>
+        <h1 class="contentsDetail__title">
+          {{ contentsTitle | safe }}
+        </h1>
+        <div class="contentsDetail__date">
+          {{ contentsDate }}
+        </div>
+
+        {% block contentsMain %}{% endblock %}
+
+        <div class="contentsDetail__subtitle margin-top-100">
+          シェアする
+        </div>
+
+        <div class="contentsDetail__share__button">
+          <a href="http://twitter.com/share?text={{ pageTitle }}-【M.PLAT求職支援】&url={{ pageUrl }}&via={{ twitterAccount }}&hashtags={{ twitterHashTag }}" rel="nofollow" target="_blank" class="contentsDetail__link">
+            <div class="contentsDetail__twitter__button">
+              <i></i>
+              <span>Twitter</span>
+            </div>
+          </a>
+          <a href="http://www.facebook.com/share.php?u={{ pageUrl }}" target="_blank" class="contentsDetail__link">
+            <div class="contentsDetail__facebook__button">
+              <i></i>
+              <span>facebook</span>
+            </div>
+          </a>
+          <a href="https://timeline.line.me/social-plugin/share?url={{ pageUrl }}" target="_blank" class="contentsDetail__link">
+            <div class="contentsDetail__line__button">
+              <i></i>
+              <span>LINE</span>
+            </div>
+          </a>
+        </div>
+
+        <a href="https://job.mplat.jp/lp2/" target="_blank" class="contentsDetail__link margin-top-60">
+          <div class="contentsDetail__register__button">
+            <div class="contentsDetail__register__text">
+              医療事務・病院事務に特化した<br class="br-sp">転職サイト『M.PLAT求職支援』<br>
+              求人数は業界トップクラス！<br>
+              無料登録で優先的に好条件求人を<br class="br-sp">ご紹介可能です。
+            </div>
+            <div class="contentsDetail__register__leadline">
+              <span>
+                <svg class="contentsDetail__register__leadline__icon" xmlns="http://www.w3.org/2000/svg" width="39.696" height="33.395" viewBox="0 0 39.696 33.395">
+                  <g id="right-arrow" transform="translate(0 -40.634)">
+                    <g id="グループ_16" data-name="グループ 16" transform="translate(0 40.634)">
+                      <path id="パス_69" data-name="パス 69" d="M38.866,55.06l-13.53-13.53a3.123,3.123,0,0,0-4.377,0l-2.786,2.786a3.13,3.13,0,0,0-.929,2.122,2.639,2.639,0,0,0,.929,2.122l3.714,3.714H3.184A3.228,3.228,0,0,0,0,55.457V59.3a3.1,3.1,0,0,0,3.184,2.918H21.755L18.173,65.8a3.2,3.2,0,0,0-.929,2.255,3.107,3.107,0,0,0,.929,2.255L20.959,73.1a3.13,3.13,0,0,0,2.122.929A2.639,2.639,0,0,0,25.2,73.1l13.53-13.53a3.107,3.107,0,0,0,.929-2.255A2.544,2.544,0,0,0,38.866,55.06Zm-1.857,2.653-13.53,13.53c-.265.265-.4.265-.663,0L20.03,68.457a.663.663,0,0,1,0-.8l5.837-5.837a1.211,1.211,0,0,0,.265-1.459,1.275,1.275,0,0,0-1.194-.8H3.184c-.265,0-.531-.133-.531-.265V55.458a.571.571,0,0,1,.531-.531H25.2a1.16,1.16,0,0,0,1.194-.8,1.445,1.445,0,0,0-.265-1.459L20.163,46.7a.411.411,0,0,1-.133-.265c0-.133,0-.133.133-.265l2.786-2.786a.438.438,0,0,1,.663,0l13.53,13.53a.487.487,0,0,1,.133.4C37.142,57.447,37.142,57.58,37.009,57.712Z" transform="translate(0 -40.634)" fill="#fff"/>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span>
+                会員登録はこちら
+              </span>
+            </div>
+          </div>
+        </a>
+
+      </main>
+      <aside class="container__side">
+        <a href="/forbeginner/" class="contentsDetail__link">
+          <div class="contentsDetail__link__button">
+            <div class="contentsDetail__link__button__text">
+              はじめての方へ
+            </div>
+          </div>
+        </a>
+        <a href="/forrecruiter/" class="contentsDetail__link margin-top-16">
+          <div class="contentsDetail__link__button">
+            <div class="contentsDetail__link__button__text">
+              採用担当者の方へ
+            </div>
+          </div>
+        </a>
+
+        <div class="contentsDetail__subtitle margin-top-60">
+          こんな記事も読まれています
+        </div>
+
+        {% include '_modules/_topicContents.njk' %}
+
+        <a href="/contents/" class="contentsDetail__link margin-top-16">
+          <div class="contentsDetail__link__button">
+            <div class="contentsDetail__link__button__text">
+              コンテンツ一覧
+            </div>
+          </div>
+        </a>
+
+        <div class="contentsDetail__category__menu margin-top-16">
+          <div class="contentsDetail__category__menu__head">
+            カテゴリー
+          </div>
+          <div class="contentsDetail__category__menu__content">
+            <div class="contentsDetail__category__menu__content__sentence">
+              <a href="/contents/commentary/" class="contentsDetail__link padding-top-20">
+                <div class="contentsDetail__category__menu__content__sentence__text">
+                  <span>
+                    <svg class="contentsDetail__category__menu__content__sentence__icon" xmlns="http://www.w3.org/2000/svg" width="8.369" height="14.681" viewBox="0 0 8.369 14.681">
+                      <g id="arrow-point-to-right" transform="translate(-97.138 0)">
+                        <path id="パス_70" data-name="パス 70" d="M105.206,8.067l-6.313,6.312a1.028,1.028,0,1,1-1.454-1.454l5.586-5.586L97.44,1.755A1.028,1.028,0,0,1,98.894.3l6.313,6.312a1.028,1.028,0,0,1,0,1.454Z" transform="translate(0 0)" fill="#6f7579"/>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="padding-left-6">
+                    仕事解説
+                  </span>
+                </div>
+              </a>
+              <a href="/contents/know_how/" class="contentsDetail__link padding-top-20">
+                <div class="contentsDetail__category__menu__content__sentence__text">
+                  <span>
+                    <svg class="contentsDetail__category__menu__content__sentence__icon" xmlns="http://www.w3.org/2000/svg" width="8.369" height="14.681" viewBox="0 0 8.369 14.681">
+                      <g id="arrow-point-to-right" transform="translate(-97.138 0)">
+                        <path id="パス_70" data-name="パス 70" d="M105.206,8.067l-6.313,6.312a1.028,1.028,0,1,1-1.454-1.454l5.586-5.586L97.44,1.755A1.028,1.028,0,0,1,98.894.3l6.313,6.312a1.028,1.028,0,0,1,0,1.454Z" transform="translate(0 0)" fill="#6f7579"/>
+                      </g>
+                    </svg>
+                  </span>
+                  <span class="padding-left-6">
+                    転職ノウハウ
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  {% include '_modules/_searchButtonBlock.njk' %}
+
+{% endblock %}
