@@ -9,6 +9,12 @@
     <nav class="globalNav pc-view">
       <ul class="globalNavList js-async-loginNavigation-target">
         <li class="globalNavItem">
+          <a href="{{ basePath }}contents/" class="globalNavItem__link">
+            <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin">{{ macro.svg_code_recommendedContents() }}</span>
+            <p class="globalNavItem__label">おすすめ記事</p>
+          </a>
+        </li>
+        <li class="globalNavItem">
           <a href="{{ basePath }}job/" class="globalNavItem__link">
             <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin">{{ macro.svg_code_list() }}</span>
             <p class="globalNavItem__label">求人一覧</p>
@@ -22,6 +28,12 @@
         </li>
       </ul>
       <ul class="globalNavList js-async-logoutNavigation-target">
+        <li class="globalNavItem">
+          <a href="{{ basePath }}contents/" class="globalNavItem__link">
+            <span class="globalNavItem__icon globalNavItem__icon--list globalNavItem__icon--loggedin">{{ macro.svg_code_recommendedContents() }}</span>
+            <p class="globalNavItem__label">おすすめ記事</p>
+          </a>
+        </li>
         <li class="globalNavItem">
           <a href="{{ basePath }}job/" class="globalNavItem__link">
             <span class="globalNavItem__icon globalNavItem__icon--list">{{ macro.svg_code_list() }}</span>
@@ -51,6 +63,11 @@
         <div class="globalMobileNavContents">
           <ul class="globalMobileNavCell js-async-loginNavigation-target">
             <li class="globalMobileNavCellItem">
+              <a href="{{ basePath }}contents/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
+                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list">{{ macro.svg_code_recommendedContents_sp() }}</span>おすすめ記事
+              </a>
+            </li>
+            <li class="globalMobileNavCellItem">
               <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link globalMobileNavCellItem__link--loggedin">
                 <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧
               </a>
@@ -61,20 +78,25 @@
               </a>
             </li>
           </ul>
-          <ul class="globalMobileNavCell js-async-logoutNavigation-target">
+          <ul class="globalMobileNavCell globalMobileNavCellOverThree js-async-logoutNavigation-target">
             <li class="globalMobileNavCellItem">
-              <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link">
-                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--list">{{ macro.svg_code_list_sp() }}</span>求人一覧
+              <a href="{{ basePath }}contents/" class="globalMobileNavCellItem__link__overThree">
+                <span class="globalMobileNavCellItem__icon__overThree">{{ macro.svg_code_recommendedContents() }}</span>おすすめ記事
               </a>
             </li>
             <li class="globalMobileNavCellItem">
-              <a href="{{ basePath }}login/" class="globalMobileNavCellItem__link">
-                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--login">{{ macro.svg_code_login_sp() }}</span>ログイン
+              <a href="{{ basePath }}job/" class="globalMobileNavCellItem__link__overThree">
+                <span class="globalMobileNavCellItem__icon__overThree">{{ macro.svg_code_list() }}</span>求人一覧
               </a>
             </li>
             <li class="globalMobileNavCellItem">
-              <a href="{{ basePath }}signup/create_account.html" class="globalMobileNavCellItem__link" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
-                <span class="globalMobileNavCellItem__icon globalMobileNavCellItem__icon--regist">{{ macro.svg_code_human_sp() }}</span>会員登録
+              <a href="{{ basePath }}login/" class="globalMobileNavCellItem__link__overThree">
+                <span class="globalMobileNavCellItem__icon__overThree">{{ macro.svg_code_login() }}</span>ログイン
+              </a>
+            </li>
+            <li class="globalMobileNavCellItem">
+              <a href="{{ basePath }}signup/create_account.html" class="globalMobileNavCellItem__link__overThree" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_header_regist','event_label': 'header_regist'});">
+                <span class="globalMobileNavCellItem__icon__overThree">{{ macro.svg_code_human() }}</span>会員登録
               </a>
             </li>
           </ul>

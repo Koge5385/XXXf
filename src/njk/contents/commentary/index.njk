@@ -1,0 +1,51 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'index' -%}
+{%- set pageName = 'contents_list' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '仕事解説' -%}
+{%- set en_pageTitle = 'CATEGORY' -%}
+{%- set pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援のコンテンツ情報-仕事解説-の一覧です。医療経営士を取得したエージェントが転職支援を担当します。' -%}
+{%- set breadcrumbs = [{item: '仕事解説'}]-%}
+
+{% block content %}
+
+  <div class="container">
+    <main class="contents">
+      <section class="section">
+        <ul class="contentsList">
+          {%- set contentsArray = [
+          {category: '仕事解説', value: '医療事務（正社員）の仕事！仕事の種類や求人の探し方を解説', path: '/contents/commentary/job_type.html', image: 'img/contents/thumbnail/image_job_type.png', image2x: 'img/contents/thumbnail/image_job_type@2x.png'},
+          {category: '仕事解説', value: '医療事務ってどんな仕事内容？メリットデメリット、やりがいも解説', path: '/contents/commentary/merit.html', image: 'img/contents/thumbnail/image_merit.png', image2x: 'img/contents/thumbnail/image_merit@2x.png'},
+          {category: '仕事解説', value: '医療事務の資格って何がある？おすすめの種類や難易度など情報まとめ。', path: '/contents/commentary/qualification.html', image: 'img/contents/thumbnail/image_qualification.png', image2x: 'img/contents/thumbnail/image_qualification@2x.png'},
+          {category: '仕事解説', value: '医療事務の平均年収や給料はいくら？仕事内容・転職事情も解説。', path: '/contents/commentary/salary.html', image: 'img/contents/thumbnail/image_salary.png', image2x: 'img/contents/thumbnail/image_salary@2x.png'}
+        ] -%}
+          {%- for item in contentsArray -%}
+            <li class="contentsListItem">
+              <a href="{{ item.path }}" class="contentsListItem__link">
+                <div class="contentsListItem__parent">
+                  <div class="contentsListItem__category">
+                    <div class="contentsListItem__parts">
+                      {{ item.category }}
+                    </div>
+                  </div>
+                  <img class="contentsListItem__thumbnail" src="{{ basePath }}{{ item.image }}" srcset="{{ basePath }}{{ item.image }} 1x, {{ basePath }}{{ item.image2x }} 2x"/>
+                  <div class="contentsListItem__contents">
+                    <div class="contentsListItem__title">
+                      {{ item.value }}
+                    </div>
+                    <div class="contentsListItem__new">
+                      NEW
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  {% include '_modules/_searchButtonBlock.njk' %}
+
+{% endblock %}

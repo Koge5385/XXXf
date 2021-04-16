@@ -1,0 +1,50 @@
+{% extends '_modules/_base.njk' %}
+{%- set fileName = 'index' -%}
+{%- set pageName = 'contents_list' -%}
+{%- set pageLevel = '2' -%}
+{%- set pageTitle = '転職ノウハウ' -%}
+{%- set en_pageTitle = 'CATEGORY' -%}
+{%- set pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援のコンテンツ情報-転職ノウハウ-の一覧です。医療経営士を取得したエージェントが転職支援を担当します。' -%}
+{%- set breadcrumbs = [{item: '転職ノウハウ'}]-%}
+
+{% block content %}
+
+  <div class="container">
+    <main class="contents">
+      <section class="section">
+        <ul class="contentsList">
+          {%- set contentsArray = [
+          {category: '転職ノウハウ', value: '未経験から医療事務になるためのコツ！求人の見つけ方も解説', path: '/contents/know_how/inexperienced.html', image: 'img/contents/thumbnail/image_inexperienced.png', image2x: 'img/contents/thumbnail/image_inexperienced@2x.png'},
+          {category: '転職ノウハウ', value: '医療事務の面接はどんな質問をされる？対策や事前準備を解説', path: '/contents/know_how/interview.html', image: 'img/contents/thumbnail/image_interview.png', image2x: 'img/contents/thumbnail/image_interview@2x.png'},
+          {category: '転職ノウハウ', value: '医療事務の志望動機や自己PRはどう書くべき？書き方のポイントまとめ', path: '/contents/know_how/resume.html', image: 'img/contents/thumbnail/image_resume.png', image2x: 'img/contents/thumbnail/image_resume@2x.png'}
+        ] -%}
+          {%- for item in contentsArray -%}
+            <li class="contentsListItem">
+              <a href="{{ item.path }}" class="contentsListItem__link">
+                <div class="contentsListItem__parent">
+                  <div class="contentsListItem__category">
+                    <div class="contentsListItem__parts">
+                      {{ item.category }}
+                    </div>
+                  </div>
+                  <img class="contentsListItem__thumbnail" src="{{ basePath }}{{ item.image }}" srcset="{{ basePath }}{{ item.image }} 1x, {{ basePath }}{{ item.image2x }} 2x"/>
+                  <div class="contentsListItem__contents">
+                    <div class="contentsListItem__title">
+                      {{ item.value }}
+                    </div>
+                    <div class="contentsListItem__new">
+                      NEW
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  {% include '_modules/_searchButtonBlock.njk' %}
+
+{% endblock %}

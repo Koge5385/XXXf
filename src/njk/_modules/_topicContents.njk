@@ -1,0 +1,24 @@
+<ul class="topicContents">
+  {%- for item in topicContentsArray -%}
+    <li class="contentsListItem {{ item.margin }}">
+      <a href="{{ item.path }}" class="contentsListItem__link">
+        <div class="contentsListItem__parent">
+          <div class="contentsListItem__category">
+            <div class="contentsListItem__parts">
+              {{ item.category }}
+            </div>
+          </div>
+          <img class="contentsListItem__thumbnail" src="{{ basePath }}{{ item.image }}" srcset="{{ basePath }}{{ item.image }} 1x, {{ basePath }}{{ item.image2x }} 2x"/>
+          <div class="contentsListItem__contents">
+            <div class="contentsListItem__title">
+              {{ item.value }}
+            </div>
+            <div class="contentsListItem__new">
+              NEW
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+  {%- endfor -%}
+</ul>
