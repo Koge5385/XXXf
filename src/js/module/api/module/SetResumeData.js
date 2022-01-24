@@ -87,7 +87,11 @@ class SetResumeData {
             if(separateData[0]) {
               setValue('textarea', 'resume_p_carrier_summary', separateData[0])
               setValue('textarea', 'resume_p_carrier_summary_2', separateData[1].slice(0, -1))
-              setValue('textarea', 'resume_p_carrier_summary_3', separateData[2].slice(0, -1))
+              if (separateData[2]) {
+                const restData = separateData.slice(2)
+                const rest = restData.join('\n\n').slice(0, -1)
+                setValue('textarea', 'resume_p_carrier_summary_3', rest)
+              }
             }
             break
 
