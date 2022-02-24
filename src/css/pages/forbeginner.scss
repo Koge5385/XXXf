@@ -14,6 +14,9 @@
   @extend .m-heading;
   @extend .m-heading--lv2;
   text-align: center;
+  @include media(sp) {
+    text-align: left;
+  }
 }
 .serviceStructure {
   @include _baseContentsWidth;
@@ -34,6 +37,9 @@
   @include landscape(sp) {
     width: 70%;
     margin: 0 auto;
+  }
+  img {
+    width: 100%;
   }
 }
 .serviceFlow {

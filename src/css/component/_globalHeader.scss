@@ -18,12 +18,17 @@
 }
 .globalHeader__logo {
   box-sizing: content-box;
-  padding: 15px 0 16px 18px;
+  padding: 17px 0 17px 20px;
   @include media(sp) {
-    width: 265px;
-    padding: 7px 0 13px 9px;
+    padding: 10px 0 9px 10px;
   }
   a:hover {
     opacity: 0.6;
+  }
+  img {
+    height: 36px;
+    @include media(sp) {
+      height: 26px;
+    }
   }
 }

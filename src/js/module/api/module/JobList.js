@@ -73,8 +73,8 @@ class JobList {
         document.querySelector('.js-async-resultEmpty-target').classList.add(ADD_SHOW_CLASS)
 
         // Meta情報の変更
-        // const pageTitle = '求人・転職情報 | MPLAT求職支援で転職！';
-        // const pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
+        // const pageTitle = '求人・転職情報 | MSTAGE病院事務職求職支援で転職！';
+        // const pageDescription = '病院事務職、医療事務職の求人サイトのMSTAGE病院事務職求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
         // new MetaReplace(pageTitle, pageDescription);
         // meta情報の変更
       const occupation = document.querySelector('.js-async-formOccupation-target option[value="' + this.jobOccupation + '"]').text
@@ -88,8 +88,8 @@ class JobList {
       } else {
         var searchCond = area + '・' + occupation + 'の';
       }
-      const pageTitle = searchCond + '求人・転職情報 | MPLAT求職支援で転職！';
-      const pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
+      const pageTitle = searchCond + '求人・転職情報 | MSTAGE病院事務職求職支援で転職！';
+      const pageDescription = '病院事務職、医療事務職の求人サイトのMSTAGE病院事務職求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
 
       new MetaReplace(pageTitle, pageDescription);
 
@@ -193,8 +193,8 @@ class JobList {
       } else {
         var searchCond = area + '・' + occupation + 'の';
       }
-      const pageTitle = searchCond + '求人・転職情報 | MPLAT求職支援で転職！';
-      const pageDescription = '病院事務職、医療事務職の求人サイトのM.PLAT求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
+      const pageTitle = searchCond + '求人・転職情報 | MSTAGE病院事務職求職支援で転職！';
+      const pageDescription = '病院事務職、医療事務職の求人サイトのMSTAGE病院事務職求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。'
 
       new MetaReplace(pageTitle, pageDescription);
 

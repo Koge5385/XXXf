@@ -45,7 +45,7 @@ class JobContactMetaReplace {
       // meta情報の変更
       const jobData = response.data.job
       const offerTitle = jobData['job_u_kyuzintaitoru'].replace(/\r?\n/g, '')
-      const pageTitle = '求人お問い合わせ -医療事務/病院事務職の求人・転職なら【M.PLAT求職支援】'
+      const pageTitle = '求人お問い合わせ -医療事務/病院事務職の求人・転職なら【MSTAGE病院事務職求職支援】'
       const pageDescription = `${offerTitle}／医療経営士を取得したエージェントが転職支援を担当。専任担当者として、情報収集、職務経歴書の書き方から面接対策まで、求職活動を支援します。`
       new MetaReplace(pageTitle, pageDescription)
     }

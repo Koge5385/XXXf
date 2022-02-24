@@ -722,13 +722,17 @@ select::-ms-expand {
 
 .globalHeader__logo {
   box-sizing: content-box;
-  padding: 15px 0 16px 18px; }
+  padding: 17px 0 17px 20px; }
   @media screen and (max-width: 768px) {
     .globalHeader__logo {
-      width: 265px;
-      padding: 7px 0 13px 9px; } }
+      padding: 10px 0 9px 10px; } }
   .globalHeader__logo a:hover {
     opacity: 0.6; }
+  .globalHeader__logo img {
+    height: 36px; }
+    @media screen and (max-width: 768px) {
+      .globalHeader__logo img {
+        height: 26px; } }
 
 .globalNav {
   margin: 0; }
@@ -1999,6 +2003,9 @@ select::-ms-expand {
 
 .forbeginner__heading {
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .forbeginner__heading {
+      text-align: left; } }
 
 .serviceStructure {
   width: 980px;
@@ -2025,6 +2032,9 @@ select::-ms-expand {
   .serviceStructure__img {
     width: 70%;
     margin: 0 auto; } }
+
+.serviceStructure__img img {
+  width: 100%; }
 
 .serviceFlow {
   background-color: #f7f8f9;
