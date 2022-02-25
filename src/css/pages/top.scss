@@ -30,7 +30,7 @@
   text-shadow: 0 0 14px #0091d3;
   padding-top: calc(22.99089727vh - 100px);
   @include media(sp) {
-    @include fontsize(22, 16);
+    @include fontsize(20, 16);
     line-height: 1.2058823529;
     padding-top: calc(12.69461078vh - 30px);
   }

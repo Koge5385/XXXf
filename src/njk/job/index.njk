@@ -4,145 +4,152 @@
 {%- set pageLevel = '2' -%}
 {%- set pageTitle = '求人一覧' -%}
 {%- set en_pageTitle = 'JOB LIST' -%}
-{%- set pageDescription = '病院事務職、医療事務職の求人サイトのMSTAGE病院事務職求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。' -%}
+{%- set pageDescription = '病院事務職、医療事務職の求人サイトのエムステージ病院事務職求職支援の求人情報の一覧です。医療経営士を取得したエージェントが転職支援を担当します。' -%}
 {%- set breadcrumbs = [{item: '求人一覧'}]-%}
 
 {% block content %}
 
-<div class="container">
-  <div class="container__hasSide">
-    <main class="container__main">
-      <section class="jobListWrap">
-        <ul class="jobList js-async-origin-target">
-          <li class="jobListItem">
-            <a href="" class="jobListItem__link js-async-link-target">
-              <div class="jobListItemHeader">
-                <div class="jobListItemHeaderCategory">
-                  <span class="jobListItemHeaderCategory__icon">{{ macro.svg_code_hospital() }}</span>
-                  <p class="jobListItemHeaderCategory__name">ID：<span class="js-async-category-target"></span></p>
+  <div class="container">
+    <div class="container__hasSide">
+      <main class="container__main">
+        <section class="jobListWrap">
+          <ul class="jobList js-async-origin-target">
+            <li class="jobListItem">
+              <a href="" class="jobListItem__link js-async-link-target">
+                <div class="jobListItemHeader">
+                  <div class="jobListItemHeaderCategory">
+                    <span class="jobListItemHeaderCategory__icon">{{ macro.svg_code_hospital() }}</span>
+                    <p class="jobListItemHeaderCategory__name">ID：<span class="js-async-category-target"></span></p>
+                  </div>
+                  <div class="jobListItemHeaderStatus">
+                    <span class="jobListItemHeaderStatus__new m-fontFamilyMontserrat js-async-new-target">NEW</span>
+                    <p class="jobListItemHeaderStatus__date">
+                      <span class="js-async-date-target"></span> 更新</p>
+                  </div>
                 </div>
-                <div class="jobListItemHeaderStatus">
-                  <span class="jobListItemHeaderStatus__new m-fontFamilyMontserrat js-async-new-target">NEW</span>
-                  <p class="jobListItemHeaderStatus__date"><span class="js-async-date-target"></span> 更新</p>
-                </div>
-              </div>
-              <div class="jobListContent">
-                <h2 class="jobListContent__title js-async-title-target"></h2>
-                <p class="jobListContent__buildingName">施設名：<span class="js-async-buildingName-target"></span></p>
-                <div class="jobListContentPickup">
-                  <ul class="jobListContentPickup__list">
-                    <li class="jobListContentPickup__item">
-                      <div class="jobListContentPickup__itemLabel">
-                        <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_bag() }}</span>職　種
+                <div class="jobListContent">
+                  <h2 class="jobListContent__title js-async-title-target"></h2>
+                  <p class="jobListContent__buildingName">施設名：<span class="js-async-buildingName-target"></span></p>
+                  <div class="jobListContentPickup">
+                    <ul class="jobListContentPickup__list">
+                      <li class="jobListContentPickup__item">
+                        <div class="jobListContentPickup__itemLabel">
+                          <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_bag() }}</span>職　種
                       </div>
-                      <p class="jobListContentPickup__itemContent jobListContentPickup__itemContent--job js-async-occupation-target"></p>
-                    </li>
-                    <li class="jobListContentPickup__item">
-                      <div class="jobListContentPickup__itemLabel">
-                        <span class="jobListContentPickup__itemLabelIcon jobListContentPickup__itemLabelIcon--place">{{ macro.svg_code_place() }}</span>勤務地
+                        <p class="jobListContentPickup__itemContent jobListContentPickup__itemContent--job js-async-occupation-target"></p>
+                      </li>
+                      <li class="jobListContentPickup__item">
+                        <div class="jobListContentPickup__itemLabel">
+                          <span class="jobListContentPickup__itemLabelIcon jobListContentPickup__itemLabelIcon--place">{{ macro.svg_code_place() }}</span>勤務地
                       </div>
-                      <p class="jobListContentPickup__itemContent js-async-place-target"></p>
-                    </li>
-                    <li class="jobListContentPickup__item">
-                      <div class="jobListContentPickup__itemLabel">
-                        <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_money() }}</span>年　収
+                        <p class="jobListContentPickup__itemContent js-async-place-target"></p>
+                      </li>
+                      <li class="jobListContentPickup__item">
+                        <div class="jobListContentPickup__itemLabel">
+                          <span class="jobListContentPickup__itemLabelIcon">{{ macro.svg_code_money() }}</span>年　収
                       </div>
-                      <p class="jobListContentPickup__itemContent jobListContentPickup__itemContent--salary"><span><span class="js-async-minSalary-target"></span>～<span class="js-async-maxSalary-target"></span></span>万円</p>
-                    </li>
-                  </ul>
-                </div>
+                        <p class="jobListContentPickup__itemContent jobListContentPickup__itemContent--salary">
+                          <span>
+                            <span class="js-async-minSalary-target"></span>～<span class="js-async-maxSalary-target"></span></span>万円</p>
+                      </li>
+                    </ul>
+                  </div>
 
-                <table class="flexTable jobListContentTable">
-                  <tbody>
-                    <tr>
-                      <th class="jobListContentTable__heading">仕事内容</th>
-                      <td class="js-async-sumally-target"></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p class="m-frontLink jobListContentLink">この求人の詳細を見る</p>
+                  <table class="flexTable jobListContentTable">
+                    <tbody>
+                      <tr>
+                        <th class="jobListContentTable__heading">仕事内容</th>
+                        <td class="js-async-sumally-target"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <p class="m-frontLink jobListContentLink">この求人の詳細を見る</p>
+                </div>
+              </a>
+            </li>
+            <li class="jobList__emptyText js-async-resultEmpty-target">お探しの条件では<br class="sp-view">求人が見つかりませんでした。</li>
+          </ul>
+        </section>
+      </main>
+      <aside class="container__side">
+        <div class="searchSideBox">
+          <form method="get">
+            <p class="searchResultText">絞り込みの結果：<span class="js-async-result-target"></span>件</p>
+            <div class="searchInputArea">
+              <ul class="searchInputList">
+                <li class="searchInputList__item searchInputList__item--job">
+                  <select name="job_p_job_category" class="m-inputSelect searchInputList__input js-async-formOccupation-target">
+                    {{ macro.optionOccupation() }}
+                  </select>
+                </li>
+                <li class="searchInputList__item searchInputList__item--place">
+                  <select name="job_u_kinmutitodoufuken" class="m-inputSelect searchInputList__input js-async-formArea-target">
+                    {{ macro.optionArea() }}
+                  </select>
+                </li>
+                <li class="searchInputList__item searchInputList__item--salary">
+                  <select name="job_p_max_salary" class="m-inputSelect searchInputList__input js-async-formSalary-target">
+                    {{ macro.optionSalary() }}
+                  </select>
+                </li>
+                <li class="searchInputList__item searchInputList__item--freeWord">
+                  <input name="keywords" type="text" class="m-inputText searchInputList__input searchInputList__input--freeWord js-async-formKeywords-target" placeholder="キーワードで探す">
+                </li>
+              </ul>
+            </div>
+            <div class="searchSubmit">
+              <button type="submit" class="searchSubmit__button">この条件で再検索</button>
+            </div>
+          </form>
+        </div>
+      </aside>
+    </div>
+    <div class="jobListPagenationWrap">
+      <ul class="jobListPagenation js-async-pagenation-target"></ul>
+    </div>
+  </div>
+  <form method="get">
+    <div class="mobileSearchWrap sp-view">
+      <div class="mobileSearchInner">
+        <p class="mobileSearch__resultText">絞り込みの結果<br>
+          <span class="js-async-result-target"></span>件</p>
+        <input type="checkbox" id="jobList_search" class="mobileSearch__toggleTrigger">
+        <label for="jobList_search" class="mobileSearch__openLabel">検索条件を確認・再検索</label>
+        <label for="jobList_search" class="mobileSearch__closeLabel">検索を閉じる</label>
+        <div class="mobileSearchBoxWrap">
+          <label for="jobList_search" class="mobileSearch__closeBackground"></label>
+          <div class="mobileSearchBox">
+            <div class="mobileSearchBoxInner">
+              <ul class="mobileSearchList">
+                <li class="mobileSearchList__item mobileSearchList__item--job">
+                  <select name="job_p_job_category" class="m-inputSelect mobileSearchList__input js-async-formOccupation-target">
+                    {{ macro.optionOccupation() }}
+                  </select>
+                </li>
+                <li class="mobileSearchList__item mobileSearchList__item--place">
+                  <select name="job_u_kinmutitodoufuken" class="m-inputSelect mobileSearchList__input js-async-formArea-target">
+                    {{ macro.optionArea() }}
+                  </select>
+                </li>
+                <li class="mobileSearchList__item mobileSearchList__item--salary">
+                  <select name="job_p_max_salary" class="m-inputSelect mobileSearchList__input js-async-formSalary-target">
+                    {{ macro.optionSalary() }}
+                  </select>
+                </li>
+                <li class="mobileSearchList__item mobileSearchList__item--freeWord">
+                  <input name="keywords" type="text" class="m-inputText mobileSearchList__input mobileSearchList__input--freeWord js-async-formKeywords-target" placeholder="キーワードで探す">
+                </li>
+              </ul>
+              <div class="mobileSearchSubmit">
+                <button type="submit" class="mobileSearchSubmit__button">この条件で再検索</button>
               </div>
-            </a>
-          </li>
-          <li class="jobList__emptyText js-async-resultEmpty-target">お探しの条件では<br class="sp-view">求人が見つかりませんでした。</li>
-        </ul>
-      </section>
-    </main>
-    <aside class="container__side">
-      <div class="searchSideBox">
-        <form method="get">
-          <p class="searchResultText">絞り込みの結果：<span class="js-async-result-target"></span>件</p>
-          <div class="searchInputArea">
-            <ul class="searchInputList">
-              <li class="searchInputList__item searchInputList__item--job">
-                <select name="job_p_job_category" class="m-inputSelect searchInputList__input js-async-formOccupation-target">
-                  {{ macro.optionOccupation() }}
-                </select>
-              </li>
-              <li class="searchInputList__item searchInputList__item--place">
-                <select name="job_u_kinmutitodoufuken" class="m-inputSelect searchInputList__input js-async-formArea-target">
-                  {{ macro.optionArea() }}
-                </select>
-              </li>
-              <li class="searchInputList__item searchInputList__item--salary">
-                <select name="job_p_max_salary" class="m-inputSelect searchInputList__input js-async-formSalary-target">
-                  {{ macro.optionSalary() }}
-                </select>
-              </li>
-              <li class="searchInputList__item searchInputList__item--freeWord">
-                <input name="keywords" type="text" class="m-inputText searchInputList__input searchInputList__input--freeWord js-async-formKeywords-target" placeholder="キーワードで探す">
-              </li>
-            </ul>
-          </div>
-          <div class="searchSubmit"><button type="submit" class="searchSubmit__button">この条件で再検索</button></div>
-        </form>
-      </div>
-    </aside>
-  </div>
-  <div class="jobListPagenationWrap">
-    <ul class="jobListPagenation js-async-pagenation-target">
-    </ul>
-  </div>
-</div>
-<form method="get">
-  <div class="mobileSearchWrap sp-view">
-    <div class="mobileSearchInner">
-      <p class="mobileSearch__resultText">絞り込みの結果<br><span class="js-async-result-target"></span>件</p>
-      <input type="checkbox" id="jobList_search" class="mobileSearch__toggleTrigger">
-      <label for="jobList_search" class="mobileSearch__openLabel">検索条件を確認・再検索</label>
-      <label for="jobList_search" class="mobileSearch__closeLabel">検索を閉じる</label>
-      <div class="mobileSearchBoxWrap">
-        <label for="jobList_search" class="mobileSearch__closeBackground"></label>
-        <div class="mobileSearchBox">
-          <div class="mobileSearchBoxInner">
-            <ul class="mobileSearchList">
-              <li class="mobileSearchList__item mobileSearchList__item--job">
-                <select name="job_p_job_category" class="m-inputSelect mobileSearchList__input js-async-formOccupation-target">
-                  {{ macro.optionOccupation() }}
-                </select>
-              </li>
-              <li class="mobileSearchList__item mobileSearchList__item--place">
-                <select name="job_u_kinmutitodoufuken" class="m-inputSelect mobileSearchList__input js-async-formArea-target">
-                  {{ macro.optionArea() }}
-                </select>
-              </li>
-              <li class="mobileSearchList__item mobileSearchList__item--salary">
-                <select name="job_p_max_salary" class="m-inputSelect mobileSearchList__input js-async-formSalary-target">
-                  {{ macro.optionSalary() }}
-                </select>
-              </li>
-              <li class="mobileSearchList__item mobileSearchList__item--freeWord">
-                <input name="keywords" type="text" class="m-inputText mobileSearchList__input mobileSearchList__input--freeWord js-async-formKeywords-target" placeholder="キーワードで探す">
-              </li>
-            </ul>
-            <div class="mobileSearchSubmit"><button type="submit" class="mobileSearchSubmit__button">この条件で再検索</button></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</form>
+  </form>
 
-{% include '_modules/_searchButtonBlock.njk' %}
+  {% include '_modules/_searchButtonBlock.njk' %}
 
 {% endblock %}

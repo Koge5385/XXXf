@@ -4,26 +4,26 @@
 {%- set pageLevel = '2' -%}
 {%- set pageTitle = '会員登録' -%}
 {%- set en_pageTitle = 'COMPLETE' -%}
-{%- set pageDescription = '会員としてMSTAGE病院事務職求職支援をご利用いただくための新規登録ページ。MSTAGE病院事務職求職支援は、病院事務職、医療事務職に特化した転職サイトです。' -%}
+{%- set pageDescription = '会員としてエムステージ病院事務職求職支援をご利用いただくための新規登録ページ。エムステージ病院事務職求職支援は、病院事務職、医療事務職に特化した転職サイトです。' -%}
 {%- set breadcrumbs = [{item: '会員登録完了'}]-%}
 
 {% block content %}
 
-<div class="container">
+  <div class="container">
 
-  {%- set registSteps = [
+    {%- set registSteps = [
     {number: '1', text: 'メールアドレス登録', class: ' is-done'},
     {number: '2', text: 'メール認証', class: ' is-done'},
     {number: '3', text: 'プロフィール登録', class: ' is-done'},
     {number: '4', text: 'レジュメ登録', class: ' is-done'},
     {number: '5', text: '完了', class: ' is-active'}
   ] -%}
-  {% include '_modules/_registStep.njk' %}
+    {% include '_modules/_registStep.njk' %}
 
-  <div class="registComplete">
-    <p class="registComplete__guide">会員登録のお手続きが<br class="sp-view">完了しました。</p>
-    <a href="{{ basePath }}job/" class="registComplete__button">求人検索へ</a>
+    <div class="registComplete">
+      <p class="registComplete__guide">会員登録のお手続きが<br class="sp-view">完了しました。</p>
+      <a href="{{ basePath }}job/" class="registComplete__button">求人検索へ</a>
+    </div>
   </div>
-</div>
 
 {% endblock %}

@@ -4,71 +4,72 @@
 {%- set pageLevel = '2' -%}
 {%- set pageTitle = 'はじめての方へ' -%}
 {%- set en_pageTitle = 'FOR BEGINNERS' -%}
-{%- set pageDescription = 'MSTAGE病院事務職求職支援のサービス説明ページ。MSTAGE病院事務職求職支援は、病院事務職、医療事務職に特化した転職サイトです。' -%}
+{%- set pageDescription = 'エムステージ病院事務職求職支援のサービス説明ページ。エムステージ病院事務職求職支援は、病院事務職、医療事務職に特化した転職サイトです。' -%}
 {%- set breadcrumbs = [{item: 'はじめての方へ'}]-%}
 
 {% block content %}
 
-<div class="container">
-  <div class="forbeginner">
-    <section class="serviceStructure">
-      <h2 class="forbeginner__heading">MSTAGE病院事務職求職支援サービスの仕組み</h2>
-      <p class="serviceStructure__text">「MSTAGE病院事務職求職支援」は、あなたと求人を募集している医療機関を仲介し、新しい雇用関係を作るサービスです。<br>
+  <div class="container">
+    <div class="forbeginner">
+      <section class="serviceStructure">
+        <h2 class="forbeginner__heading">エムステージ病院事務職求職支援サービスの仕組み</h2>
+        <p class="serviceStructure__text">「エムステージ病院事務職求職支援」は、あなたと求人を募集している医療機関を仲介し、新しい雇用関係を作るサービスです。<br>
       当社では、担当コンサルタントがヒアリングさせていただき、希望条件に沿う求人をご案内いたします。<br>
       入職後のフォローも行っており、皆様の求職活動を丁寧にサポートさせていただきます。<br>
       相談料や使用料など、本サービスを利用された求職者の方が負担する費用は一切発生しませんので、安心してご利用ください。</p>
-      <div class="serviceStructure__img">
-        <img src="{{ basePath }}img/forbeginner/forbeginners_explain_image.png" alt="MSTAGE病院事務職求職支援サービスの仕組み" class="pc-view">
-        <img src="{{ basePath }}img/forbeginner/sp/forbeginners_explain_image.png" alt="MSTAGE病院事務職求職支援サービスの仕組み" class="sp-view">
-      </div>
-    </section>
-    <section class="serviceFlow">
-      <h2 class="forbeginner__heading">サービスの流れ</h2>
-      <div class="serviceFlowInner">
-        {%- set serviceFlow = [
-          {number: '1', title: 'サービスの登録', description: '「MSTAGE病院事務職求職支援」のご利用は、登録から始まります。お申込みフォームにてサービスの前提となるいくつかの情報を記入していただき、お知らせください。速やかに担当コンサルタントからご連絡いたします。'},
+        <div class="serviceStructure__img">
+          <img src="{{ basePath }}img/forbeginner/forbeginners_explain_image.png" alt="エムステージ病院事務職求職支援サービスの仕組み" class="pc-view">
+          <img src="{{ basePath }}img/forbeginner/sp/forbeginners_explain_image.png" alt="エムステージ病院事務職求職支援サービスの仕組み" class="sp-view">
+        </div>
+      </section>
+      <section class="serviceFlow">
+        <h2 class="forbeginner__heading">サービスの流れ</h2>
+        <div class="serviceFlowInner">
+          {%- set serviceFlow = [
+          {number: '1', title: 'サービスの登録', description: '「エムステージ病院事務職求職支援」のご利用は、登録から始まります。お申込みフォームにてサービスの前提となるいくつかの情報を記入していただき、お知らせください。速やかに担当コンサルタントからご連絡いたします。'},
           {number: '2', title: 'キャリアカウンセリング', description: 'あなたのご都合の良い時間に担当コンサルタントがご希望条件やご経歴等に関するヒアリングをさせていただきます。また、市場の動向や今後の求職プラン等に関する情報を提供いたします。'},
           {number: '3', title: '情報提供・求人紹介', description: '担当コンサルタントがあなたの可能性を最大限に発揮できる勤務先をご紹介します。さらに、求人情報には載らない現場の雰囲気や、経営の方向性、成長性といった「生」の情報も併せてお届けいたします。'},
           {number: '4', title: '応募・面接', description: '応募したい医療機関をお選びいただき、希望先にあなたをご推薦します。<br class="pc-view">応募に必要な職務履歴書の作成や、一人では心配な交渉など、担当コンサルタントがしっかりサポートします。'},
           {number: '5', title: '内定・入職後フォロー', description: '入職後のサポートも行っています。仕事の開始にあたっては、戸惑うことや不安に感じることもあるかと思います。何か仕事に関するお悩みがありましたら、お気軽にご相談ください。'}
         ] -%}
-        {%- for item in serviceFlow -%}
-        <div class="serviceFlowBox">
-          <div class="serviceFlowBoxLeft">
-            <img src="{{ basePath }}img/forbeginner/img_serviceflow_0{{ item.number }}.jpg" alt="STEP.{{ item.number }}　{{ item.title }}" class="pc-view">
-            <img src="{{ basePath }}img/forbeginner/sp/img_serviceflow_0{{ item.number }}.jpg" alt="STEP.{{ item.number }}　{{ item.title }}" class="sp-view">
-          </div>
-          <div class="serviceFlowBoxRight">
-            <div class="serviceFlowTitle">
-              <div class="serviceFlowTitle__step">STEP.<span class="serviceFlowTitle__number">{{ item.number }}</span></div>
-              <div class="serviceFlowTitle__titile">{{ item.title }}</div>
-            </div>
-            <p class="serviceFlow__flowText">{{ item.description | safe }}</p>
-            {%- if loop.first -%}
-            <div class="serviceFlowRegist">
-              <div class="serviceFlowRegistForm">
-                <p class="serviceFlowRegistForm__text">フォームからのご登録はこちら</p>
-                <a href="{{ basePath }}signup/create_account.html" class="serviceFlowRegistForm__button" onclick="gtag('event', 'click', {'event_category': 'forbeginner_content_regist','event_label': 'content_regist'});">無料会員登録</a>
+          {%- for item in serviceFlow -%}
+            <div class="serviceFlowBox">
+              <div class="serviceFlowBoxLeft">
+                <img src="{{ basePath }}img/forbeginner/img_serviceflow_0{{ item.number }}.jpg" alt="STEP.{{ item.number }}　{{ item.title }}" class="pc-view">
+                <img src="{{ basePath }}img/forbeginner/sp/img_serviceflow_0{{ item.number }}.jpg" alt="STEP.{{ item.number }}　{{ item.title }}" class="sp-view">
               </div>
-              <div class="serviceFlowRegistTel">
-                <p class="serviceFlowRegistTel__text">お電話からのご登録はこちら</p>
-                <div class="serviceFlowRegistTelBox">
-                  <a href="tel:03-5437-2950" class="serviceFlowRegistTelBoxInner" onclick="gtag('event', 'click', {'event_category': 'forbeginner_content_tel','event_label': 'content_tel'});">
-                    <div class="serviceFlowRegistTelBox__number"><span class="serviceFlowRegistTelBox__numberIcon">{{ macro.svg_code_phone() }}</span>03-5437-2950</div>
-                    <div class="serviceFlowRegistTelBox__reception">受付時間　平日9:00～18:00 （土日祝日を除く）</div>
-                  </a>
+              <div class="serviceFlowBoxRight">
+                <div class="serviceFlowTitle">
+                  <div class="serviceFlowTitle__step">STEP.<span class="serviceFlowTitle__number">{{ item.number }}</span></div>
+                  <div class="serviceFlowTitle__titile">{{ item.title }}</div>
                 </div>
+                <p class="serviceFlow__flowText">{{ item.description | safe }}</p>
+                {%- if loop.first -%}
+                  <div class="serviceFlowRegist">
+                    <div class="serviceFlowRegistForm">
+                      <p class="serviceFlowRegistForm__text">フォームからのご登録はこちら</p>
+                      <a href="{{ basePath }}signup/create_account.html" class="serviceFlowRegistForm__button" onclick="gtag('event', 'click', {'event_category': 'forbeginner_content_regist','event_label': 'content_regist'});">無料会員登録</a>
+                    </div>
+                    <div class="serviceFlowRegistTel">
+                      <p class="serviceFlowRegistTel__text">お電話からのご登録はこちら</p>
+                      <div class="serviceFlowRegistTelBox">
+                        <a href="tel:03-5437-2950" class="serviceFlowRegistTelBoxInner" onclick="gtag('event', 'click', {'event_category': 'forbeginner_content_tel','event_label': 'content_tel'});">
+                          <div class="serviceFlowRegistTelBox__number">
+                            <span class="serviceFlowRegistTelBox__numberIcon">{{ macro.svg_code_phone() }}</span>03-5437-2950</div>
+                          <div class="serviceFlowRegistTelBox__reception">受付時間　平日9:00～18:00 （土日祝日を除く）</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                {%- endif -%}
               </div>
             </div>
-            {%- endif -%}
-          </div>
+          {%- endfor -%}
         </div>
-        {%- endfor -%}
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
-</div>
 
-{% include '_modules/_searchButtonBlock.njk' %}
+  {% include '_modules/_searchButtonBlock.njk' %}
 
 {% endblock %}

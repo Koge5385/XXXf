@@ -2408,8 +2408,8 @@ button.swiper-pagination-bullet {
   padding-top: calc(22.99089727vh - 100px); }
   @media screen and (max-width: 768px) {
     .mainVisual__catchCopy {
-      font-size: 22px;
-      font-size: 1.375rem;
+      font-size: 20px;
+      font-size: 1.25rem;
       line-height: 1.6;
       line-height: 1.2058823529;
       padding-top: calc(12.69461078vh - 30px); } }

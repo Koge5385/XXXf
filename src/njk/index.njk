@@ -1,8 +1,8 @@
 {%- import '_modules/_macro.njk' as macro -%}
 {%- set basePath = '/' -%}
 {%- set pageName = 'top' -%}
-{%- set pageTitle = '医療事務/病院事務職の求人・転職なら【MSTAGE病院事務職求職支援】' -%}
-{%- set pageDescription = 'MSTAGE病院事務職求職支援は、病院事務職、医療事務職に特化した転職・求人情報サイトです。医療経営に精通したコンサルタントが、あなたの転職活動をフルサポートします。' -%}
+{%- set pageTitle = '医療事務/病院事務職の求人・転職なら【エムステージ病院事務職求職支援】' -%}
+{%- set pageDescription = 'エムステージ病院事務職求職支援は、病院事務職、医療事務職に特化した転職・求人情報サイトです。医療経営に精通したコンサルタントが、あなたの転職活動をフルサポートします。' -%}
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -19,14 +19,15 @@
       {% include '_modules/_header.njk' %}
 
       <div class="mainVisual">
-        <h1 class="mainVisual__catchCopy">「MSTAGE病院事務職求職支援」は<br>医療機関における事務職に特化した<br>求人紹介サービスです</h1>
+        <h1 class="mainVisual__catchCopy">「エムステージ病院事務職求職支援」は<br>医療機関における事務職に特化した<br>求人紹介サービスです</h1>
         <a href="{{ basePath }}signup/create_account.html" class="searchButtonBlockRegist__button topCV_button" onclick="gtag('event', 'click', {'event_category': '{{ pageName }}_searchBlock_regist','event_label': 'searchBlock_regist'});">無料会員登録</a>
       </div>
       <div class="container">
         <section class="topSearchBox">
           <form method="get" action="{{ basePath }}job/">
             <div class="topSearchBoxInner">
-              <p class="topSearchBox__title"><span class="topSearchBox__titleIcon">{{ macro.svg_code_search() }}</span>希望条件から求人を探す</p>
+              <p class="topSearchBox__title">
+                <span class="topSearchBox__titleIcon">{{ macro.svg_code_search() }}</span>希望条件から求人を探す</p>
               <div class="topSearchBoxContent">
                 <ul class="topSearchBoxList">
                   <li class="topSearchBoxList__item topSearchBoxList__item--job">
@@ -48,7 +49,8 @@
                     <input name="keywords" type="text" class="m-inputText topSearchBoxList__input topSearchBoxList__input--freeWord" placeholder="キーワードで探す">
                   </li>
                 </ul>
-                <button type="submit" class="topSearchBox__submit">この条件で<br class="pc-view"><span>検索</span></button>
+                <button type="submit" class="topSearchBox__submit">この条件で<br class="pc-view">
+                  <span>検索</span></button>
               </div>
             </div>
           </form>
@@ -70,12 +72,16 @@
                       <dd class="js-async-place-target"></dd>
                     </dl>
                     <dl class="jobcard__line jobcard__line--work">
-                      <dt><span class="jobcard__firstText">職</span>種</dt>
+                      <dt>
+                        <span class="jobcard__firstText">職</span>種</dt>
                       <dd class="js-adjustHeight-work-target js-async-occupation-target"></dd>
                     </dl>
                     <dl class="jobcard__line jobcard__line--income">
-                      <dt><span class="jobcard__firstText">年</span>収</dt>
-                      <dd><span><span class="js-async-minSalary-target"></span>～<span class="js-async-maxSalary-target"></span></span>万円</dd>
+                      <dt>
+                        <span class="jobcard__firstText">年</span>収</dt>
+                      <dd>
+                        <span>
+                          <span class="js-async-minSalary-target"></span>～<span class="js-async-maxSalary-target"></span></span>万円</dd>
                     </dl>
                     <p class="jobcard__linkText">この求人の詳細を見る</p>
                   </a>
@@ -106,21 +112,24 @@
             <div class="serviceContent">
               <p class="serviceContent__image"><img src="./img/top/img_service_01.jpg" alt="マネジメント層の求人が豊富"></p>
               <div class="serviceContentText">
-                <p class="serviceContent__heading"><span class="serviceContent__step m-fontFamilyMontserrat">1</span>マネジメント層の<br>求人が豊富</p>
+                <p class="serviceContent__heading">
+                  <span class="serviceContent__step m-fontFamilyMontserrat">1</span>マネジメント層の<br>求人が豊富</p>
                 <p class="serviceContent__outline">医療機関経営に参画する管理職の求人を多数掲載しています。経営に関心のある方、キャリアアップを図りたい方等は必見です。</p>
               </div>
             </div>
             <div class="serviceContent">
               <p class="serviceContent__image"><img src="./img/top/img_service_02.jpg" alt="医療系の専門資格をもつコンサルタントがサポート"></p>
               <div class="serviceContentText">
-                <p class="serviceContent__heading"><span class="serviceContent__step m-fontFamilyMontserrat">2</span>医療系の専門資格をもつ<br>コンサルタントがサポート</p>
+                <p class="serviceContent__heading">
+                  <span class="serviceContent__step m-fontFamilyMontserrat">2</span>医療系の専門資格をもつ<br>コンサルタントがサポート</p>
                 <p class="serviceContent__outline">医療経営士や医療系専門職の資格をもつコンサルタントがあなたの求職活動を全面的にサポートいたします。</p>
               </div>
             </div>
             <div class="serviceContent">
               <p class="serviceContent__image"><img src="./img/top/img_service_03.jpg" alt="医療機関との豊富なネットワーク"></p>
               <div class="serviceContentText">
-                <p class="serviceContent__heading"><span class="serviceContent__step m-fontFamilyMontserrat">3</span>医療機関との<br>豊富なネットワーク</p>
+                <p class="serviceContent__heading">
+                  <span class="serviceContent__step m-fontFamilyMontserrat">3</span>医療機関との<br>豊富なネットワーク</p>
                 <p class="serviceContent__outline">当社エムステージは、16年の歴史と医師紹介事業で年間約30,000件のマッチング実績があり、医療機関との豊富なネットワークがあります。</p>
               </div>
             </div>

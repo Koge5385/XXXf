@@ -4,37 +4,41 @@
 {%- set pageLevel = '2' -%}
 {%- set pageTitle = 'マイページ' -%}
 {%- set en_pageTitle = 'MY PAGE' -%}
-{%- set pageDescription = 'MSTAGE病院事務職求職支援のマイページ。MSTAGE病院事務職求職支援は、病院事務職、医療事務職に特化した転職・求人情報サイトです。医療経営に精通したコンサルタントが、あなたの転職活動をフルサポートします。' -%}
+{%- set pageDescription = 'エムステージ病院事務職求職支援のマイページ。エムステージ病院事務職求職支援は、病院事務職、医療事務職に特化した転職・求人情報サイトです。医療経営に精通したコンサルタントが、あなたの転職活動をフルサポートします。' -%}
 {%- set breadcrumbs = [{item: 'マイページ'}]-%}
 
 {% block content %}
 
-<div class="container">
-  <div class="mypage">
-    <ul class="mypageMainMenu">
-      <li class="mypageMainMenu__item">
-        <a href="{{ basePath }}mypage/resume_edit.html" class="mypageMainMenu__link">
-          <span class="mypageMainMenu__icon">{{ macro.svg_code_resume() }}</span>レジュメ編集
+  <div class="container">
+    <div class="mypage">
+      <ul class="mypageMainMenu">
+        <li class="mypageMainMenu__item">
+          <a href="{{ basePath }}mypage/resume_edit.html" class="mypageMainMenu__link">
+            <span class="mypageMainMenu__icon">{{ macro.svg_code_resume() }}</span>レジュメ編集
         </a>
-      </li>
-      <li class="mypageMainMenu__item">
-        <a href="{{ basePath }}mypage/profile_edit.html" class="mypageMainMenu__link">
-          <span class="mypageMainMenu__icon">{{ macro.svg_code_profile() }}</span>プロフィール編集
+        </li>
+        <li class="mypageMainMenu__item">
+          <a href="{{ basePath }}mypage/profile_edit.html" class="mypageMainMenu__link">
+            <span class="mypageMainMenu__icon">{{ macro.svg_code_profile() }}</span>プロフィール編集
         </a>
-      </li>
-      <li class="mypageMainMenu__item">
-        <a href="{{ basePath }}mypage/password_change.html" class="mypageMainMenu__link">
-          <span class="mypageMainMenu__icon">{{ macro.svg_code_lock() }}</span>パスワード変更
+        </li>
+        <li class="mypageMainMenu__item">
+          <a href="{{ basePath }}mypage/password_change.html" class="mypageMainMenu__link">
+            <span class="mypageMainMenu__icon">{{ macro.svg_code_lock() }}</span>パスワード変更
         </a>
-      </li>
-    </ul>
-    <ul class="mypageSubMenu">
-      <li class="mypageSubMenu__item"><a href="javascript:void(0)" class="mypageSubMenu__link js-async-logout-target">ログアウト</a></li>
-      <li class="mypageSubMenu__item"><a href="{{ basePath }}mypage/cancel_membership.html" class="mypageSubMenu__link">サービスの退会はこちら</a></li>
-    </ul>
+        </li>
+      </ul>
+      <ul class="mypageSubMenu">
+        <li class="mypageSubMenu__item">
+          <a href="javascript:void(0)" class="mypageSubMenu__link js-async-logout-target">ログアウト</a>
+        </li>
+        <li class="mypageSubMenu__item">
+          <a href="{{ basePath }}mypage/cancel_membership.html" class="mypageSubMenu__link">サービスの退会はこちら</a>
+        </li>
+      </ul>
+    </div>
   </div>
-</div>
 
-{% include '_modules/_searchButtonBlock.njk' %}
+  {% include '_modules/_searchButtonBlock.njk' %}
 
 {% endblock %}
