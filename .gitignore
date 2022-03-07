@@ -83,3 +83,5 @@ node_modules
 
 # for npm safety updater
 /tmp
+
+dist/pagelist.html
