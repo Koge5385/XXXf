@@ -554,6 +554,17 @@
 {%- endfor %}
 {%- endmacro %}
 
+{% macro optionMedicalInstitution() -%}
+<option value="">選択してください</option>
+{%- set selectMedicalInstitution = [
+  {label: 'あり', value: 'あり'},
+  {label: 'なし', value: 'なし'}
+] -%}
+{%- for item in selectMedicalInstitution %}
+<option value="{{ item.value }}">{{ item.label }}</option>
+{%- endfor %}
+{%- endmacro %}
+
 {# ↓↓↓　input icon macro　↓↓↓ #}
 
 {% macro inputMust() -%}
