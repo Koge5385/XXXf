@@ -96,6 +96,14 @@
           <p class="inputBlock__note js-confirmHide-target">※半角数字で入力してください</p>
         </div>
         <div class="inputBlock">
+          <h2 class="inputBlock__heading">医療機関での勤務経験{{ macro.inputMust() }}</h2>
+          <select name="person_u_medical_insutitution" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
+            {{ macro.optionMedicalInstitution() }}
+          </select>
+          <p class="inputBlock__confirmSetValue"></p>
+          <p class="m-inputErrorText">医療機関での勤務経験を選択してください。</p>
+        </div>
+        <div class="inputBlock">
           <h2 class="inputBlock__heading">パスワード{{ macro.inputMust() }}</h2>
           <input type="password" name="password" class="m-inputText js-valueEmptyCheck-target js-passwordValidation-target" value="">
           <p class="inputBlock__confirmSetValue"></p>
@@ -107,14 +115,6 @@
             <p class="m-inputErrorText">パスワードを正しく入力してください。</p>
             <p class="inputBlock__note">※アルファベット小文字・大文字・数字の組み合わせで8文字以上を使用してください。</p>
           </div>
-        </div>
-        <div class="inputBlock">
-          <h2 class="inputBlock__heading">医療機関での勤務経験{{ macro.inputMust() }}</h2>
-          <select name="person_u_medical_insutitution" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
-            {{ macro.optionMedicalInstitution() }}
-          </select>
-          <p class="inputBlock__confirmSetValue"></p>
-          <p class="m-inputErrorText">医療機関での勤務経験を選択してください。</p>
         </div>
 
         <button type="button" class="inputBlock__confirm js-activate-target js-confirm-trigger" disabled>確認する</button>
