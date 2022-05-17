@@ -253,7 +253,7 @@
   {place: '鹿児島県', value: 'option_p_kagoshima'},
   {place: '沖縄県', value: 'option_p_okinawa'}
 ] -%} #}
-{%- set selectArea = [
+{# {%- set selectArea = [
   {place: '茨城県', value: 'option_p_ibaraki'},
   {place: '栃木県', value: 'option_p_tochigi'},
   {place: '群馬県', value: 'option_p_gunma'},
@@ -273,6 +273,55 @@
   {place: '和歌山県', value: 'option_p_wakayama'},
   {place: '福岡県', value: 'option_p_fukuoka'},
   {place: '熊本県', value: 'option_p_kumamoto'}
+] -%} #}
+{%- set selectArea = [
+  {place: '北海道', value: 'option_p_hokkaido'},
+  {place: '青森県', value: 'option_p_aomori'},
+  {place: '岩手県', value: 'option_p_iwate'},
+  {place: '宮城県', value: 'option_p_miyagi'},
+  {place: '秋田県', value: 'option_p_akita'},
+  {place: '山形県', value: 'option_p_yamagata'},
+  {place: '福島県', value: 'option_p_fukushima'},
+  {place: '茨城県', value: 'option_p_ibaraki'},
+  {place: '栃木県', value: 'option_p_tochigi'},
+  {place: '群馬県', value: 'option_p_gunma'},
+  {place: '埼玉県', value: 'option_p_saitama'},
+  {place: '千葉県', value: 'option_p_chiba'},
+  {place: '東京都', value: 'option_p_tokyo'},
+  {place: '神奈川県', value: 'option_p_kanagawa'},
+  {place: '新潟県', value: 'option_p_niigata'},
+  {place: '富山県', value: 'option_p_toyama'},
+  {place: '石川県', value: 'option_p_ishikawa'},
+  {place: '福井県', value: 'option_p_fukui'},
+  {place: '山梨県', value: 'option_p_yamanashi'},
+  {place: '長野県', value: 'option_p_nagano'},
+  {place: '岐阜県', value: 'option_p_gifu'},
+  {place: '静岡県', value: 'option_p_shizuoka'},
+  {place: '愛知県', value: 'option_p_aichi'},
+  {place: '三重県', value: 'option_p_mie'},
+  {place: '滋賀県', value: 'option_p_shiga'},
+  {place: '京都府', value: 'option_p_kyoto'},
+  {place: '大阪府', value: 'option_p_osaka'},
+  {place: '兵庫県', value: 'option_p_hyogo'},
+  {place: '奈良県', value: 'option_p_nara'},
+  {place: '和歌山県', value: 'option_p_wakayama'},
+  {place: '鳥取県', value: 'option_p_tottori'},
+  {place: '島根県', value: 'option_p_shimane'},
+  {place: '岡山県', value: 'option_p_okayama'},
+  {place: '広島県', value: 'option_p_hiroshima'},
+  {place: '山口県', value: 'option_p_yamaguchi'},
+  {place: '徳島県', value: 'option_p_tokushima'},
+  {place: '香川県', value: 'option_p_kagawa'},
+  {place: '愛媛県', value: 'option_p_ehime'},
+  {place: '高知県', value: 'option_p_kochi'},
+  {place: '福岡県', value: 'option_p_fukuoka'},
+  {place: '佐賀県', value: 'option_p_saga'},
+  {place: '長崎県', value: 'option_p_nagasaki'},
+  {place: '熊本県', value: 'option_p_kumamoto'},
+  {place: '大分県', value: 'option_p_oita'},
+  {place: '宮崎県', value: 'option_p_miyazaki'},
+  {place: '鹿児島県', value: 'option_p_kagoshima'},
+  {place: '沖縄県', value: 'option_p_okinawa'}
 ] -%}
 {%- for item in selectArea %}
 <option value="{{ item.value }}">{{ item.place }}</option>
