@@ -50,6 +50,14 @@
         </div>
       </div>
       <div class="inputBlock">
+        <h2 class="inputBlock__heading">医療機関での勤務経験{{ macro.inputMust() }}</h2>
+        <select name="medical_insutitution" class="m-inputSelect inputBlock__inputHalf js-valueEmptyCheck-target">
+          {{ macro.optionMedicalInstitution() }}
+        </select>
+        <p class="inputBlock__confirmSetValue"></p>
+        <p class="m-inputErrorText">医療機関での勤務経験を選択してください。</p>
+      </div>
+      <div class="inputBlock">
         <h2 class="inputBlock__heading">お問い合わせ内容{{ macro.inputMust() }}</h2>
         <textarea name="content" class="m-inputTextArea js-valueEmptyCheck-target" placeholder="お問い合わせ内容を記入してください" value="" maxlength="9999"></textarea>
         <p class="inputBlock__confirmSetValue"></p>
